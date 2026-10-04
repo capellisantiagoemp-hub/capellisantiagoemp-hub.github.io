@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Family Dentistry — Dra. Roxana Cabrera de Alonso</title>
+<meta name="description" content="Consultorio dental familiar en Doral, FL. 5.0 estrellas en Google. Dra. Roxana Cabrera de Alonso, D.M.D.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%238B2332'/><text x='50' y='70' text-anchor='middle' font-size='55' font-family='serif' fill='white' font-weight='700'>F</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pri:#8B2332;--pri-d:#6B1A26;--pri-l:#C64B5C;
+  --sec:#2B3D7A;--sec-l:#4A5FA0;
+  --bg:#FFF8F6;--bg-alt:#F3EBE8;--bg-dark:#1A1018;
+  --txt:#1A1A1A;--txt-light:#5A5252;--txt-inv:#fff;
+  --heading:'Outfit',system-ui,sans-serif;
+  --body:'DM Sans',system-ui,sans-serif;
+  --radius:12px;--transition:.3s ease;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--body);color:var(--txt);background:var(--bg);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+h1,h2,h3{font-family:var(--heading);font-weight:700;line-height:1.15}
+
+/* ===== NAV ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 24px;
+  transition:background var(--transition),box-shadow var(--transition)}
+.nav.scrolled{background:rgba(255,248,246,.95);backdrop-filter:blur(12px);
+  box-shadow:0 2px 20px rgba(0,0,0,.08)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{height:60px;object-fit:contain;border-radius:6px;transition:transform var(--transition)}
+.nav-logo:hover{transform:scale(1.05)}
+.nav-links{display:flex;align-items:center;gap:8px}
+.nav-links a{font-family:var(--heading);font-weight:500;font-size:14px;padding:8px 14px;
+  border-radius:999px;transition:all var(--transition);color:var(--txt-inv)}
+.nav.scrolled .nav-links a{color:var(--txt)}
+.nav-links a:hover{background:rgba(139,35,50,.1);color:var(--pri)}
+.lang-btn{font-family:var(--heading);font-weight:600;font-size:13px;padding:6px 14px;
+  border-radius:999px;border:2px solid var(--txt-inv);background:transparent;
+  color:var(--txt-inv);cursor:pointer;transition:all var(--transition)}
+.nav.scrolled .lang-btn{border-color:var(--pri);color:var(--pri)}
+.lang-btn:hover{background:var(--pri);color:#fff;border-color:var(--pri)}
+.nav-cta{font-family:var(--heading);font-weight:600;font-size:14px;padding:10px 22px;
+  border-radius:999px;border:none;background:var(--pri);color:#fff;cursor:pointer;
+  transition:all var(--transition)}
+.nav-cta:hover{background:var(--pri-d);transform:translateY(-1px);box-shadow:0 4px 12px rgba(139,35,50,.3)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{width:24px;height:2.5px;border-radius:2px;background:var(--txt-inv);transition:all var(--transition)}
+.nav.scrolled .hamburger span{background:var(--txt)}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(26,16,24,.97);z-index:99;
+  flex-direction:column;align-items:center;justify-content:center;gap:20px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:var(--heading);font-weight:600;font-size:1.4rem;color:#fff;
+  padding:12px 30px;border-radius:999px;transition:background var(--transition)}
+.mobile-menu a:hover{background:var(--pri)}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;
+  background:linear-gradient(135deg,var(--bg-dark) 0%,#2a1520 30%,var(--pri-d) 70%,var(--sec) 100%)}
+.hero-overlay{position:absolute;inset:0;background:url('images/hero.jpg') center/cover;opacity:.18}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.25;pointer-events:none}
+.hero-orb-1{width:400px;height:400px;background:var(--pri);top:-100px;right:-100px;animation:orbFloat 8s ease-in-out infinite}
+.hero-orb-2{width:300px;height:300px;background:var(--sec);bottom:-80px;left:-60px;animation:orbFloat 10s ease-in-out infinite reverse}
+.hero-orb-3{width:200px;height:200px;background:var(--pri-l);top:40%;left:50%;animation:orbFloat 12s ease-in-out infinite 2s}
+@keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-40px) scale(1.1)}}
+@media(prefers-reduced-motion:reduce){.hero-orb{animation:none!important}}
+.hero-content{position:relative;z-index:2;max-width:680px;padding:120px 32px 80px;margin:0 auto;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);
+  backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.2);padding:10px 20px;
+  border-radius:999px;font-family:var(--heading);font-size:14px;font-weight:600;
+  color:#ffd700;margin-bottom:24px;box-shadow:0 4px 24px rgba(139,35,50,.2);
+  animation:badgePulse 3s ease-in-out infinite}
+@keyframes badgePulse{0%,100%{box-shadow:0 4px 24px rgba(139,35,50,.2)}50%{box-shadow:0 4px 32px rgba(255,215,0,.3)}}
+@media(prefers-reduced-motion:reduce){.hero-badge{animation:none}}
+.hero-badge .stars{letter-spacing:2px}
+.hero h1{font-size:clamp(2.2rem,5.5vw,3.4rem);color:var(--txt-inv);margin-bottom:16px;
+  letter-spacing:-.02em;font-weight:800}
+.hero p{font-size:1.1rem;color:rgba(255,255,255,.8);margin-bottom:32px;line-height:1.7}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-primary{font-family:var(--heading);font-weight:700;font-size:16px;padding:16px 36px;
+  border-radius:999px;border:none;background:#fff;color:var(--pri);cursor:pointer;
+  display:inline-flex;align-items:center;gap:8px;transition:all var(--transition);
+  box-shadow:0 4px 20px rgba(0,0,0,.15)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.2)}
+.btn-outline{font-family:var(--heading);font-weight:600;font-size:16px;padding:16px 36px;
+  border-radius:999px;border:2px solid rgba(255,255,255,.4);background:transparent;
+  color:#fff;cursor:pointer;display:inline-flex;align-items:center;gap:8px;
+  transition:all var(--transition)}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.hero-trust{margin-top:40px;display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+.trust-item{text-align:center;color:rgba(255,255,255,.7);font-size:13px;font-weight:500}
+.trust-item strong{display:block;font-size:22px;color:#fff;font-family:var(--heading);font-weight:800}
+
+/* ===== SECTION HELPERS ===== */
+.section{padding:80px 24px}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-title{font-size:clamp(1.8rem,4vw,2.4rem);text-align:center;margin-bottom:16px}
+.section-sub{text-align:center;color:var(--txt-light);font-size:1.05rem;max-width:600px;margin:0 auto 48px}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ===== SERVICES ===== */
+.services{background:var(--bg)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.service-card{background:rgba(255,255,255,.7);backdrop-filter:blur(8px);border-radius:16px;
+  padding:32px 24px;text-align:center;border:1px solid rgba(139,35,50,.06);
+  transition:all .4s cubic-bezier(.25,.46,.45,.94);cursor:default;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--pri),var(--pri-l));transform:scaleX(0);
+  transition:transform .4s ease;transform-origin:left}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(139,35,50,.12);
+  border-color:var(--pri-l)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--pri),var(--pri-l));
+  display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.service-icon svg{width:28px;height:28px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.service-card h3{font-size:1.1rem;margin-bottom:8px;color:var(--pri-d)}
+.service-card p{font-size:.9rem;color:var(--txt-light);line-height:1.5}
+
+/* ===== ABOUT ===== */
+.about{background:var(--bg-alt)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-img{border-radius:var(--radius);overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.1)}
+.about-img img{width:100%;height:400px;object-fit:cover}
+.about-text h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:16px;color:var(--pri-d)}
+.about-text p{color:var(--txt-light);margin-bottom:16px;line-height:1.7}
+.about-highlight{display:flex;gap:24px;margin-top:24px}
+.highlight-box{flex:1;background:#fff;border-radius:var(--radius);padding:20px;text-align:center;
+  border:1px solid rgba(0,0,0,.05)}
+.highlight-box strong{font-family:var(--heading);font-size:1.5rem;color:var(--pri);display:block}
+.highlight-box span{font-size:.85rem;color:var(--txt-light)}
+
+/* ===== TESTIMONIALS / SOCIAL PROOF ===== */
+.proof{background:linear-gradient(135deg,var(--pri-d),var(--sec));color:#fff;padding:60px 24px;text-align:center}
+.proof-inner{max-width:700px;margin:0 auto}
+.proof h2{color:#fff;font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:12px}
+.proof p{color:rgba(255,255,255,.8);font-size:1rem;margin-bottom:24px}
+.proof-stars{font-size:2rem;letter-spacing:4px;color:#ffd700;margin-bottom:8px}
+.proof-rating{font-family:var(--heading);font-size:3rem;font-weight:900}
+.proof-count{font-size:1rem;opacity:.7;margin-top:4px}
+
+/* ===== LOCATION ===== */
+.location{background:var(--bg)}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.location-info h2{font-size:clamp(1.4rem,3vw,1.8rem);margin-bottom:20px;color:var(--pri-d)}
+.location-item{display:flex;align-items:flex-start;gap:12px;margin-bottom:20px}
+.location-item svg{width:24px;height:24px;flex-shrink:0;stroke:var(--pri);fill:none;stroke-width:2;
+  stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+.location-item p{font-size:.95rem;line-height:1.5}
+.location-item strong{display:block;font-family:var(--heading);font-weight:600;margin-bottom:2px}
+.map-wrap{border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.1);height:100%;min-height:320px}
+.map-wrap iframe{width:100%;height:100%;border:none}
+
+/* ===== FORM ===== */
+.form-section{background:var(--bg-alt)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.form-text h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:16px;color:var(--pri-d)}
+.form-text p{color:var(--txt-light);line-height:1.7;margin-bottom:16px}
+.form-card{background:#fff;border-radius:var(--radius);padding:36px 28px;
+  box-shadow:0 8px 32px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04)}
+.form-card h3{font-family:var(--heading);font-size:1.2rem;margin-bottom:20px;color:var(--pri-d);text-align:center}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.85rem;font-weight:600;margin-bottom:4px;color:var(--txt)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;
+  border:1.5px solid #ddd;border-radius:8px;font-family:var(--body);font-size:.95rem;
+  transition:border-color var(--transition);background:#fff}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;
+  border-color:var(--pri);box-shadow:0 0 0 3px rgba(139,35,50,.1)}
+.form-group textarea{height:80px;resize:vertical}
+.form-submit{width:100%;padding:14px;border:none;border-radius:999px;background:var(--pri);
+  color:#fff;font-family:var(--heading);font-weight:700;font-size:1rem;cursor:pointer;
+  transition:all var(--transition)}
+.form-submit:hover{background:var(--pri-d);transform:translateY(-1px);box-shadow:0 4px 16px rgba(139,35,50,.3)}
+
+/* ===== CTA ===== */
+.cta{background:linear-gradient(135deg,var(--sec),var(--pri-d));padding:64px 24px;text-align:center}
+.cta h2{color:#fff;font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:16px}
+.cta p{color:rgba(255,255,255,.8);font-size:1.05rem;margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto}
+.cta .btn-primary{font-size:17px;padding:18px 40px}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--bg-dark);color:rgba(255,255,255,.7);padding:48px 24px 24px;text-align:center}
+.footer-inner{max-width:800px;margin:0 auto}
+.footer-logo{height:48px;object-fit:contain;margin:0 auto 16px;border-radius:6px}
+.footer h3{color:#fff;font-family:var(--heading);font-size:1.1rem;margin-bottom:12px}
+.footer p{font-size:.9rem;line-height:1.6;margin-bottom:8px}
+.footer a{color:var(--pri-l);transition:color var(--transition)}
+.footer a:hover{color:#fff}
+.footer-bottom{margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:.8rem;opacity:.5}
+
+/* ===== MOBILE BOTTOM BAR ===== */
+.bottom-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;
+  background:var(--pri);padding:12px 16px;
+  box-shadow:0 -4px 20px rgba(0,0,0,.2)}
+.bottom-bar-inner{display:flex;gap:10px;max-width:500px;margin:0 auto}
+.bottom-bar a{flex:1;text-align:center;padding:12px;border-radius:999px;font-family:var(--heading);
+  font-weight:700;font-size:14px;transition:all var(--transition)}
+.bb-call{background:#fff;color:var(--pri)}
+.bb-cita{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3)}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .hero-content{padding:100px 20px 60px}
+  .hero-btns{flex-direction:column;align-items:center}
+  .hero-trust{flex-direction:column;gap:16px}
+  .about-grid,.location-grid,.form-grid{grid-template-columns:1fr}
+  .about-img img{height:280px}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .bottom-bar{display:block}
+  .footer{padding-bottom:80px}
+  .section{padding:60px 16px}
+}
+@media(max-width:480px){
+  .services-grid{grid-template-columns:1fr}
+  .about-highlight{flex-direction:column;gap:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#"><img src="images/logo.jpg" alt="Family Dentistry" class="nav-logo"></a>
+    <div class="nav-links">
+      <a href="#servicios" data-t="nav_services">Servicios</a>
+      <a href="#sobre" data-t="nav_about">Sobre Nosotros</a>
+      <a href="#ubicacion" data-t="nav_location">Ubicación</a>
+      <a href="#cita" data-t="nav_appointment">Pedir Cita</a>
+      <button class="lang-btn" id="langToggle" onclick="toggleLang()">EN</button>
+      <a href="tel:+13055918044" class="nav-cta" data-t="nav_call">Llamar</a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#servicios" data-t="nav_services" onclick="toggleMenu()">Servicios</a>
+  <a href="#sobre" data-t="nav_about" onclick="toggleMenu()">Sobre Nosotros</a>
+  <a href="#ubicacion" data-t="nav_location" onclick="toggleMenu()">Ubicación</a>
+  <a href="#cita" data-t="nav_appointment" onclick="toggleMenu()">Pedir Cita</a>
+  <button class="lang-btn" onclick="toggleLang();toggleMenu()">EN</button>
+  <a href="tel:+13055918044" class="nav-cta" data-t="nav_call" onclick="toggleMenu()">Llamar</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
+  <div class="hero-content reveal">
+    <div class="hero-badge">
+      <span class="stars">★★★★★</span>
+      <span>5.0 — 87 <span data-t="hero_reviews">reseñas en Google</span></span>
+    </div>
+    <h1 data-t="hero_title">Su Sonrisa en las Mejores Manos</h1>
+    <p data-t="hero_subtitle">Odontología general y familiar en Doral. Dra. Roxana Cabrera de Alonso, D.M.D. — atención personalizada en español e inglés.</p>
+    <div class="hero-btns">
+      <a href="#cita" class="btn-primary" data-t="hero_cta1">📞 Pedir Cita</a>
+      <a href="tel:+13055918044" class="btn-outline" data-t="hero_cta2">Llamar Ahora</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item"><strong>5.0 ★</strong><span data-t="trust_rating">Rating perfecto</span></div>
+      <div class="trust-item"><strong>87</strong><span data-t="trust_reviews">Reseñas en Google</span></div>
+      <div class="trust-item"><strong>Doral, FL</strong><span data-t="trust_location">NW 26th St</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="servicios">
+  <div class="section-inner">
+    <h2 class="section-title reveal" data-t="services_title">Nuestros Servicios</h2>
+    <p class="section-sub reveal" data-t="services_sub">Atención dental completa para toda la familia.</p>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 data-t="svc1_title">Exámenes Dentales</h3>
+        <p data-t="svc1_desc">Revisión completa para detectar problemas a tiempo y mantener su salud bucal.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/></svg>
+        </div>
+        <h3 data-t="svc2_title">Tratamiento de Caries</h3>
+        <p data-t="svc2_desc">Restauramos su sonrisa con tratamientos efectivos y sin dolor.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 9h6v6H9z"/></svg>
+        </div>
+        <h3 data-t="svc3_title">Rellenos y Reparaciones</h3>
+        <p data-t="svc3_desc">Reemplazo y reparación de rellenos dentales con materiales de calidad.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>
+        </div>
+        <h3 data-t="svc4_title">Limpieza Dental</h3>
+        <p data-t="svc4_desc">Limpieza profesional para prevenir enfermedades y mantener su sonrisa brillante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="sobre">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-img reveal">
+        <img src="images/sala.jpg" alt="Consultorio" loading="lazy">
+      </div>
+      <div class="about-text reveal">
+        <h2 data-t="about_title">Atención Familiar en Doral</h2>
+        <p data-t="about_p1">Family Dentistry es un consultorio dedicado a brindar atención dental de calidad en un ambiente cálido y familiar. La Dra. Roxana Cabrera de Alonso, D.M.D., atiende a cada paciente con dedicación y cuidado.</p>
+        <p data-t="about_p2">Hablamos español e inglés para que usted y su familia se sientan cómodos desde la primera cita.</p>
+        <div class="about-highlight">
+          <div class="highlight-box">
+            <strong>5.0 ★</strong>
+            <span data-t="about_h1">Google</span>
+          </div>
+          <div class="highlight-box">
+            <strong>87</strong>
+            <span data-t="about_h2">Reseñas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF BANNER -->
+<section class="proof reveal">
+  <div class="proof-inner">
+    <div class="proof-stars">★★★★★</div>
+    <div class="proof-rating">5.0</div>
+    <div class="proof-count">87 <span data-t="proof_reviews">reseñas en Google</span></div>
+    <p data-t="proof_text">Nuestros pacientes nos recomiendan. Su confianza es nuestra mayor satisfacción.</p>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="section location" id="ubicacion">
+  <div class="section-inner">
+    <div class="location-grid">
+      <div class="location-info reveal">
+        <h2 data-t="loc_title">Encuéntrenos en Doral</h2>
+        <div class="location-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <p><strong data-t="loc_address_label">Dirección</strong>8726 NW 26th St #10<br>Doral, FL 33172</p>
+        </div>
+        <div class="location-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <p><strong data-t="loc_phone_label">Teléfono</strong><a href="tel:+13055918044">(305) 591-8044</a></p>
+        </div>
+        <div class="location-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <p><strong data-t="loc_lang_label">Idiomas</strong><span data-t="loc_lang_text">Español e Inglés</span></p>
+        </div>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.5!2d-80.338!3d25.778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s8726+NW+26th+St+%2310+Doral+FL+33172!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" title="Mapa"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section form-section" id="cita">
+  <div class="section-inner">
+    <div class="form-grid">
+      <div class="form-text reveal">
+        <h2 data-t="form_title">Pida Su Cita Hoy</h2>
+        <p data-t="form_p1">Complete el formulario y nos comunicamos con usted para confirmar su cita. También puede llamarnos directamente al <a href="tel:+13055918044" style="color:var(--pri);font-weight:600">(305) 591-8044</a>.</p>
+        <p data-t="form_p2">Atendemos a toda la familia — niños y adultos — con el mismo cuidado y dedicación.</p>
+        <img src="images/revision.jpg" alt="Revisión dental" style="border-radius:var(--radius);margin-top:24px;box-shadow:0 8px 24px rgba(0,0,0,.08)" loading="lazy">
+      </div>
+      <div class="form-card reveal">
+        <h3 data-t="form_card_title">Solicitar Cita</h3>
+        <form id="citaForm">
+          <div class="form-group">
+            <label data-t="form_name">Nombre</label>
+            <input type="text" id="fname" required>
+          </div>
+          <div class="form-group">
+            <label data-t="form_phone">Teléfono</label>
+            <input type="tel" id="fphone" required>
+          </div>
+          <div class="form-group">
+            <label data-t="form_reason">Motivo de la cita</label>
+            <select id="freason">
+              <option value="Examen dental" data-t="form_opt1">Examen dental</option>
+              <option value="Limpieza" data-t="form_opt2">Limpieza</option>
+              <option value="Tratamiento de caries" data-t="form_opt3">Tratamiento de caries</option>
+              <option value="Rellenos" data-t="form_opt4">Rellenos y reparaciones</option>
+              <option value="Otro" data-t="form_opt5">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-t="form_day">Día preferido</label>
+            <input type="text" id="fday" placeholder="">
+          </div>
+          <button type="submit" class="form-submit" data-t="form_send">Enviar Solicitud</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta reveal">
+  <h2 data-t="cta_title">¿Lista para Sonreír?</h2>
+  <p data-t="cta_sub">Llámenos hoy y agende su primera cita con la Dra. Cabrera de Alonso.</p>
+  <a href="tel:+13055918044" class="btn-primary" data-t="cta_btn">📞 (305) 591-8044</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <img src="images/logo.jpg" alt="Family Dentistry" class="footer-logo">
+    <h3>Family Dentistry</h3>
+    <p>Dra. Roxana Cabrera de Alonso, D.M.D.</p>
+    <p>8726 NW 26th St #10, Doral, FL 33172</p>
+    <p><a href="tel:+13055918044">(305) 591-8044</a></p>
+    <div class="footer-bottom">
+      <p data-t="footer_copy">Consultorio dental familiar en Doral, Florida.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE BOTTOM BAR -->
+<div class="bottom-bar">
+  <div class="bottom-bar-inner">
+    <a href="tel:+13055918044" class="bb-call" data-t="bb_call">📞 Llamar</a>
+    <a href="#cita" class="bb-cita" data-t="bb_cita">Pedir Cita</a>
+  </div>
+</div>
+
+<script>
+// ===== TRANSLATIONS =====
+const T = {
+  es: {
+    nav_services:'Servicios',nav_about:'Sobre Nosotros',nav_location:'Ubicación',
+    nav_appointment:'Pedir Cita',nav_call:'Llamar',
+    hero_reviews:'reseñas en Google',
+    hero_title:'Su Sonrisa en las Mejores Manos',
+    hero_subtitle:'Odontología general y familiar en Doral. Dra. Roxana Cabrera de Alonso, D.M.D. — atención personalizada en español e inglés.',
+    hero_cta1:'📞 Pedir Cita',hero_cta2:'Llamar Ahora',
+    trust_rating:'Rating perfecto',trust_reviews:'Reseñas en Google',trust_location:'NW 26th St',
+    services_title:'Nuestros Servicios',services_sub:'Atención dental completa para toda la familia.',
+    svc1_title:'Exámenes Dentales',svc1_desc:'Revisión completa para detectar problemas a tiempo y mantener su salud bucal.',
+    svc2_title:'Tratamiento de Caries',svc2_desc:'Restauramos su sonrisa con tratamientos efectivos y sin dolor.',
+    svc3_title:'Rellenos y Reparaciones',svc3_desc:'Reemplazo y reparación de rellenos dentales con materiales de calidad.',
+    svc4_title:'Limpieza Dental',svc4_desc:'Limpieza profesional para prevenir enfermedades y mantener su sonrisa brillante.',
+    about_title:'Atención Familiar en Doral',
+    about_p1:'Family Dentistry es un consultorio dedicado a brindar atención dental de calidad en un ambiente cálido y familiar. La Dra. Roxana Cabrera de Alonso, D.M.D., atiende a cada paciente con dedicación y cuidado.',
+    about_p2:'Hablamos español e inglés para que usted y su familia se sientan cómodos desde la primera cita.',
+    about_h1:'Google',about_h2:'Reseñas',
+    proof_reviews:'reseñas en Google',proof_text:'Nuestros pacientes nos recomiendan. Su confianza es nuestra mayor satisfacción.',
+    loc_title:'Encuéntrenos en Doral',loc_address_label:'Dirección',loc_phone_label:'Teléfono',
+    loc_lang_label:'Idiomas',loc_lang_text:'Español e Inglés',
+    form_title:'Pida Su Cita Hoy',
+    form_p1:'Complete el formulario y nos comunicamos con usted para confirmar su cita. También puede llamarnos directamente al <a href="tel:+13055918044" style="color:var(--pri);font-weight:600">(305) 591-8044</a>.',
+    form_p2:'Atendemos a toda la familia — niños y adultos — con el mismo cuidado y dedicación.',
+    form_card_title:'Solicitar Cita',form_name:'Nombre',form_phone:'Teléfono',
+    form_reason:'Motivo de la cita',form_day:'Día preferido',form_send:'Enviar Solicitud',
+    form_opt1:'Examen dental',form_opt2:'Limpieza',form_opt3:'Tratamiento de caries',
+    form_opt4:'Rellenos y reparaciones',form_opt5:'Otro',
+    cta_title:'¿Lista para Sonreír?',cta_sub:'Llámenos hoy y agende su primera cita con la Dra. Cabrera de Alonso.',
+    cta_btn:'📞 (305) 591-8044',
+    footer_copy:'Consultorio dental familiar en Doral, Florida.',
+    bb_call:'📞 Llamar',bb_cita:'Pedir Cita'
+  },
+  en: {
+    nav_services:'Services',nav_about:'About Us',nav_location:'Location',
+    nav_appointment:'Book Now',nav_call:'Call',
+    hero_reviews:'Google reviews',
+    hero_title:'Your Smile in the Best Hands',
+    hero_subtitle:'General & family dentistry in Doral. Dr. Roxana Cabrera de Alonso, D.M.D. — personalized care in Spanish & English.',
+    hero_cta1:'📞 Book Now',hero_cta2:'Call Now',
+    trust_rating:'Perfect rating',trust_reviews:'Google Reviews',trust_location:'NW 26th St',
+    services_title:'Our Services',services_sub:'Complete dental care for the whole family.',
+    svc1_title:'Dental Exams',svc1_desc:'Comprehensive checkups to detect issues early and maintain your oral health.',
+    svc2_title:'Cavity Treatment',svc2_desc:'We restore your smile with effective, pain-free treatments.',
+    svc3_title:'Fillings & Repairs',svc3_desc:'Replacement and repair of dental fillings with quality materials.',
+    svc4_title:'Teeth Cleaning',svc4_desc:'Professional cleaning to prevent disease and keep your smile bright.',
+    about_title:'Family Care in Doral',
+    about_p1:'Family Dentistry is a practice dedicated to providing quality dental care in a warm, family-friendly environment. Dr. Roxana Cabrera de Alonso, D.M.D., treats every patient with dedication and care.',
+    about_p2:'We speak Spanish and English so you and your family feel comfortable from your very first visit.',
+    about_h1:'Google',about_h2:'Reviews',
+    proof_reviews:'Google reviews',proof_text:'Our patients recommend us. Your trust is our greatest reward.',
+    loc_title:'Find Us in Doral',loc_address_label:'Address',loc_phone_label:'Phone',
+    loc_lang_label:'Languages',loc_lang_text:'Spanish & English',
+    form_title:'Book Your Appointment',
+    form_p1:'Fill out the form and we\'ll contact you to confirm your appointment. You can also call us directly at <a href="tel:+13055918044" style="color:var(--pri);font-weight:600">(305) 591-8044</a>.',
+    form_p2:'We care for the whole family — children and adults — with the same dedication.',
+    form_card_title:'Request Appointment',form_name:'Name',form_phone:'Phone',
+    form_reason:'Reason for visit',form_day:'Preferred day',form_send:'Send Request',
+    form_opt1:'Dental exam',form_opt2:'Cleaning',form_opt3:'Cavity treatment',
+    form_opt4:'Fillings & repairs',form_opt5:'Other',
+    cta_title:'Ready to Smile?',cta_sub:'Call us today and schedule your first visit with Dr. Cabrera de Alonso.',
+    cta_btn:'📞 (305) 591-8044',
+    footer_copy:'Family dental practice in Doral, Florida.',
+    bb_call:'📞 Call',bb_cita:'Book Now'
+  }
+};
+
+let currentLang = 'es';
+
+function toggleLang(){
+  currentLang = currentLang === 'es' ? 'en' : 'es';
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const key = el.getAttribute('data-t');
+    if(T[currentLang][key]) el.innerHTML = T[currentLang][key];
+  });
+  document.querySelectorAll('.lang-btn').forEach(b => b.textContent = currentLang === 'es' ? 'EN' : 'ES');
+  document.documentElement.lang = currentLang;
+}
+
+// ===== NAV SCROLL =====
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// ===== MOBILE MENU =====
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ===== REVEAL =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.05 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+setTimeout(() => {
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => el.classList.add('visible'));
+}, 4000);
+
+// ===== FORM =====
+document.getElementById('citaForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('fname').value;
+  const phone = document.getElementById('fphone').value;
+  const reason = document.getElementById('freason').value;
+  const day = document.getElementById('fday').value;
+  const msg = `Hola, soy ${name}. Quisiera pedir una cita.\nTeléfono: ${phone}\nMotivo: ${reason}\nDía preferido: ${day || 'Flexible'}`;
+  window.location.href = 'tel:+13055918044';
+});
+
+// ===== SMOOTH SCROLL =====
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e){
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+
+// ===== COUNTER ANIMATION =====
+function animateCounter(el, target, suffix, isDecimal){
+  const duration = 1500;
+  const start = performance.now();
+  function tick(now){
+    const p = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    const val = ease * target;
+    el.textContent = isDecimal ? val.toFixed(1) : Math.round(val);
+    if(suffix) el.textContent += suffix;
+    if(p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting && !e.target.dataset.counted){
+      e.target.dataset.counted = '1';
+      const txt = e.target.textContent.trim();
+      if(txt.startsWith('5.0')){
+        animateCounter(e.target, 5.0, ' ★', true);
+      } else if(txt === '87'){
+        animateCounter(e.target, 87, '', false);
+      }
+    }
+  });
+}, {threshold: 0.3});
+document.querySelectorAll('.trust-item strong, .highlight-box strong, .proof-rating').forEach(el => {
+  counterObserver.observe(el);
+});
+
+// ===== TILT on SERVICE CARDS =====
+if(!window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+  document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - .5;
+      const y = (e.clientY - r.top) / r.height - .5;
+      card.style.transform = `translateY(-6px) perspective(600px) rotateY(${x*8}deg) rotateX(${-y*8}deg)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+}
+</script>
+</body>
+</html>
