@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Max Arocha DMD — Sedation Dentistry in Plantation, FL</title>
+<meta name="description" content="Max Arocha DMD & Karla Jaquez DMD. Sedation dentistry, dental implants, All-on-4 in Plantation, FL. 4.9 stars, 632 Google reviews. Call 954-432-7771.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect rx='8' width='32' height='32' fill='%230A2540'/><text x='16' y='23' text-anchor='middle' font-size='18' fill='%234AC8E8' font-weight='700'>M</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pri: #4AC8E8;
+  --pri-d: #2BA5C5;
+  --pri-l: #7DD9F0;
+  --pri-glow: rgba(74,200,232,.25);
+  --navy: #0A2540;
+  --navy-l: #0F3358;
+  --navy-xl: #1B4B6B;
+  --charcoal: #2D3436;
+  --bg: #F7FBFD;
+  --bg-alt: #EDF5F9;
+  --bg-dark: #071A2E;
+  --bg-dark2: #0C2844;
+  --surface: #FFFFFF;
+  --txt: #1A2A32;
+  --txt-light: #5A6F7A;
+  --txt-inv: #E8F4F8;
+  --heading: 'Sora', system-ui, sans-serif;
+  --body: 'Inter', system-ui, sans-serif;
+  --ease: cubic-bezier(.22,1,.36,1);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --nav-h: 72px;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { font-family: var(--body); color: var(--txt); background: var(--bg); line-height: 1.65;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width:100%; display:block; }
+a { text-decoration:none; color:inherit; }
+h1,h2,h3,h4 { font-family: var(--heading); font-weight: 700; line-height: 1.15; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+
+/* ══ SPLASH ══ */
+.splash { position:fixed; inset:0; z-index:9999; background:var(--navy);
+  display:flex; align-items:center; justify-content:center; flex-direction:column; gap:20px;
+  transition:opacity .7s var(--ease); }
+.splash.done { opacity:0; pointer-events:none; }
+.splash-logo { width:80px; height:80px; border-radius:50%; object-fit:contain; background:#fff; padding:8px;
+  animation:splashPulse 1.4s ease-in-out infinite alternate; }
+@keyframes splashPulse { from{opacity:.5;transform:scale(.92)} to{opacity:1;transform:scale(1.05)} }
+.splash-bar { width:140px; height:3px; background:rgba(255,255,255,.12); border-radius:3px; overflow:hidden; }
+.splash-bar::after { content:''; position:absolute; inset:0; width:0; background:var(--pri);
+  border-radius:3px; animation:splashLoad 1.6s var(--ease) forwards; }
+@keyframes splashLoad { to{width:100%} }
+
+/* ══ ANIMATED MESH BG ══ */
+.mesh-bg { position:fixed; inset:0; z-index:-1; pointer-events:none; overflow:hidden; }
+.mesh-bg .orb { position:absolute; border-radius:50%; filter:blur(100px); opacity:.08;
+  animation:orbFloat 20s ease-in-out infinite alternate; }
+.mesh-bg .orb:nth-child(1) { width:600px; height:600px; background:var(--pri); top:-200px; right:-200px; }
+.mesh-bg .orb:nth-child(2) { width:500px; height:500px; background:#6C63FF; bottom:-150px; left:-150px;
+  animation-delay:-7s; animation-duration:25s; }
+.mesh-bg .orb:nth-child(3) { width:400px; height:400px; background:var(--pri-l); top:50%; left:50%;
+  animation-delay:-12s; animation-duration:18s; }
+@keyframes orbFloat { 0%{transform:translate(0,0)} 50%{transform:translate(40px,-30px)} 100%{transform:translate(-20px,20px)} }
+
+/* ══ NAV ══ */
+.nav { position:fixed; top:0; left:0; right:0; height:var(--nav-h); z-index:100;
+  transition:background .4s, box-shadow .4s, backdrop-filter .4s; }
+.nav.scrolled { background:rgba(255,255,255,.92); backdrop-filter:blur(16px) saturate(180%);
+  box-shadow:0 1px 24px rgba(10,37,64,.08); }
+.nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; height:100%;
+  display:flex; align-items:center; justify-content:space-between; }
+.nav-logo { height:52px; object-fit:contain; border-radius:50%; transition:transform .3s var(--ease); background:#fff; padding:3px; }
+.nav-logo:hover { transform:scale(1.06); }
+.nav-brand { display:flex; align-items:center; gap:12px; }
+.nav-brand-txt { font-family:var(--heading); font-weight:700; font-size:15px; color:#fff; white-space:nowrap;
+  transition:color .4s; }
+.nav.scrolled .nav-brand-txt { color:var(--navy); }
+.nav-links { display:flex; align-items:center; gap:4px; }
+.nav-links a { font-family:var(--heading); font-weight:500; font-size:13.5px; padding:8px 14px;
+  border-radius:999px; transition:all .3s; color:rgba(255,255,255,.85); }
+.nav.scrolled .nav-links a { color:var(--txt); }
+.nav-links a:hover { background:rgba(74,200,232,.12); color:var(--pri-d); }
+.nav-right { display:flex; align-items:center; gap:10px; }
+.lang-btn { font-family:var(--heading); font-weight:600; font-size:13px; padding:6px 14px;
+  border-radius:999px; border:1.5px solid rgba(255,255,255,.3); background:transparent;
+  color:rgba(255,255,255,.9); cursor:pointer; transition:all .3s; }
+.nav.scrolled .lang-btn { border-color:var(--pri); color:var(--pri-d); }
+.lang-btn:hover { background:var(--pri); color:#fff; border-color:var(--pri); }
+.nav-phone { display:flex; align-items:center; gap:6px; font-family:var(--heading); font-weight:600;
+  font-size:13.5px; color:#fff; padding:8px 16px; border-radius:999px;
+  background:rgba(255,255,255,.1); backdrop-filter:blur(8px); transition:all .3s; }
+.nav.scrolled .nav-phone { background:var(--pri); color:#fff; }
+.nav-phone:hover { background:var(--pri); color:#fff; transform:scale(1.04); }
+.nav-phone svg { flex-shrink:0; }
+
+/* burger */
+.burger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px; }
+.burger span { display:block; width:22px; height:2px; background:#fff; border-radius:2px; transition:.3s; }
+.nav.scrolled .burger span { background:var(--navy); }
+.burger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+.burger.open span:nth-child(2) { opacity:0; }
+.burger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+
+/* mobile menu */
+.mobile-menu { display:none; position:fixed; top:var(--nav-h); left:0; right:0; background:rgba(255,255,255,.98);
+  backdrop-filter:blur(20px); padding:20px 24px 32px; box-shadow:0 20px 40px rgba(0,0,0,.1);
+  flex-direction:column; gap:4px; z-index:99; }
+.mobile-menu.open { display:flex; }
+.mobile-menu a { font-family:var(--heading); font-weight:500; font-size:16px; padding:14px 16px;
+  border-radius:var(--radius-sm); color:var(--navy); transition:background .2s; }
+.mobile-menu a:hover { background:var(--bg-alt); }
+.mobile-menu .mob-cta { margin-top:12px; display:flex; flex-direction:column; gap:10px; }
+
+@media(max-width:960px) {
+  .nav-links, .nav-right .nav-phone { display:none; }
+  .burger { display:flex; }
+  .nav-right .lang-btn { display:inline-flex; }
+}
+
+/* ══ BUTTONS ══ */
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  font-family:var(--heading); font-weight:600; font-size:15px; padding:14px 30px;
+  border-radius:999px; border:none; cursor:pointer; transition:all .35s var(--ease); }
+.btn-primary { background:var(--pri); color:var(--navy);
+  box-shadow:0 4px 20px var(--pri-glow), inset 0 1px 0 rgba(255,255,255,.3); }
+.btn-primary:hover { background:var(--pri-d); transform:translateY(-2px);
+  box-shadow:0 8px 30px var(--pri-glow); }
+.btn-ghost { background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.3);
+  backdrop-filter:blur(8px); }
+.btn-ghost:hover { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.5); }
+.btn-dark { background:var(--navy); color:var(--pri); }
+.btn-dark:hover { background:var(--navy-l); transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(10,37,64,.2); }
+
+/* ══ HERO ══ */
+.hero { position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden;
+  background:linear-gradient(165deg, var(--navy) 0%, var(--bg-dark2) 50%, var(--navy-xl) 100%); }
+.hero::before { content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 80% 60% at 75% 40%, rgba(74,200,232,.12) 0%, transparent 70%); }
+.hero::after { content:''; position:absolute; bottom:0; left:0; right:0; height:120px;
+  background:linear-gradient(to top, var(--bg), transparent); z-index:2; }
+.hero-inner { position:relative; z-index:3; max-width:1200px; margin:0 auto; padding:120px 24px 100px;
+  display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.hero-copy { color:var(--txt-inv); }
+.hero-eyebrow { display:inline-flex; align-items:center; gap:8px; font-family:var(--heading);
+  font-weight:500; font-size:13px; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--pri); margin-bottom:20px; padding:6px 16px; background:rgba(74,200,232,.1);
+  border-radius:999px; border:1px solid rgba(74,200,232,.15); }
+.hero-eyebrow .pulse-dot { width:8px; height:8px; background:var(--pri); border-radius:50%;
+  animation:pulseDot 2s ease-in-out infinite; }
+@keyframes pulseDot { 0%,100%{opacity:.4;transform:scale(.8)} 50%{opacity:1;transform:scale(1.2)} }
+.hero h1 { font-size:clamp(2.2rem, 4.5vw, 3.6rem); font-weight:800; line-height:1.08;
+  margin-bottom:20px; letter-spacing:-.02em; }
+.hero h1 em { font-style:normal; color:var(--pri);
+  background:linear-gradient(135deg, var(--pri) 0%, var(--pri-l) 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.hero-sub { font-size:17px; line-height:1.7; color:rgba(232,244,248,.75); max-width:480px; margin-bottom:32px; }
+.hero-actions { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:36px; }
+.hero-trust { display:flex; align-items:center; gap:12px; }
+.hero-stars { display:flex; gap:2px; }
+.hero-stars svg { width:18px; height:18px; fill:#F0A500; }
+.hero-trust-txt { font-size:14px; color:rgba(232,244,248,.7); }
+.hero-trust-txt strong { color:#F0A500; font-weight:700; }
+
+.hero-visual { position:relative; display:flex; justify-content:center; }
+.hero-photo { width:100%; max-width:440px; border-radius:24px; overflow:hidden; position:relative;
+  box-shadow:0 30px 80px rgba(0,0,0,.3), 0 0 0 1px rgba(255,255,255,.06); }
+.hero-photo img { width:100%; height:auto; display:block; }
+.hero-float { position:absolute; padding:14px 18px; border-radius:var(--radius);
+  background:rgba(255,255,255,.1); backdrop-filter:blur(16px) saturate(180%);
+  border:1px solid rgba(255,255,255,.15); color:#fff; font-family:var(--heading); }
+.hero-float-rating { bottom:24px; left:-30px; display:flex; align-items:center; gap:10px;
+  animation:floatY 4s ease-in-out infinite alternate; }
+@keyframes floatY { from{transform:translateY(0)} to{transform:translateY(-8px)} }
+.hero-float-rating .big { font-size:28px; font-weight:800; color:var(--pri); }
+.hero-float-rating .meta { font-size:12px; line-height:1.3; opacity:.85; }
+.hero-float-rating .meta strong { display:block; font-size:13px; }
+.hero-float-sedation { top:30px; right:-20px; display:flex; align-items:center; gap:10px; font-size:13px;
+  animation:floatY 5s ease-in-out infinite alternate-reverse; }
+.hero-float-sedation .ico { width:38px; height:38px; border-radius:50%; background:rgba(74,200,232,.2);
+  display:flex; align-items:center; justify-content:center; }
+.hero-float-sedation .ico svg { width:20px; height:20px; fill:var(--pri); }
+
+@media(max-width:768px) {
+  .hero-inner { grid-template-columns:1fr; gap:40px; padding:100px 24px 80px; text-align:center; }
+  .hero-sub { margin-left:auto; margin-right:auto; }
+  .hero-actions { justify-content:center; }
+  .hero-trust { justify-content:center; }
+  .hero-visual { order:-1; }
+  .hero-photo { max-width:280px; }
+  .hero-float-rating { left:10px; bottom:10px; padding:10px 14px; }
+  .hero-float-sedation { right:10px; top:10px; padding:10px 14px; }
+}
+
+/* ══ STATS ══ */
+.stats-section { padding:80px 0; background:var(--surface); }
+.stats-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:24px; }
+.stat-card { text-align:center; padding:32px 20px; border-radius:var(--radius);
+  background:var(--bg); border:1px solid rgba(74,200,232,.1);
+  transition:transform .4s var(--ease), box-shadow .4s; }
+.stat-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(74,200,232,.1); }
+.stat-num { font-family:var(--heading); font-weight:800; font-size:clamp(2rem, 4vw, 2.8rem);
+  color:var(--navy); line-height:1; margin-bottom:8px; }
+.stat-num .accent { color:var(--pri-d); }
+.stat-lbl { font-size:14px; color:var(--txt-light); line-height:1.4; }
+.stat-stars { display:flex; justify-content:center; gap:2px; margin-bottom:8px; }
+.stat-stars svg { width:20px; height:20px; fill:#F0A500; }
+@media(max-width:768px) { .stats-grid { grid-template-columns:repeat(2,1fr); gap:16px; } }
+@media(max-width:480px) { .stats-grid { grid-template-columns:1fr; } }
+
+/* ══ SECTIONS GENERAL ══ */
+.section-eyebrow { font-family:var(--heading); font-weight:600; font-size:13px; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--pri-d); margin-bottom:12px; }
+.section-title { font-size:clamp(1.8rem, 3.5vw, 2.6rem); color:var(--navy); margin-bottom:16px;
+  letter-spacing:-.01em; }
+.section-lead { font-size:17px; color:var(--txt-light); max-width:600px; line-height:1.7; margin-bottom:48px; }
+.section-center { text-align:center; }
+.section-center .section-lead { margin-left:auto; margin-right:auto; }
+
+/* ══ SEDATION (KEY DIFFERENTIATOR) ══ */
+.sedation { padding:100px 0; background:linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%); }
+.sedation-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.sedation-visual { position:relative; }
+.sedation-img { border-radius:var(--radius); overflow:hidden;
+  box-shadow:0 20px 50px rgba(10,37,64,.1); }
+.sedation-img img { width:100%; }
+.sedation-badge { position:absolute; bottom:-16px; right:-16px; background:var(--navy);
+  color:var(--pri); padding:16px 22px; border-radius:var(--radius);
+  font-family:var(--heading); font-weight:700; font-size:14px;
+  box-shadow:0 10px 30px rgba(10,37,64,.2); display:flex; align-items:center; gap:10px; }
+.sedation-badge svg { width:24px; height:24px; fill:var(--pri); }
+.sedation-features { display:flex; flex-direction:column; gap:16px; margin-top:32px; }
+.sed-feature { display:flex; gap:14px; align-items:flex-start; padding:16px; border-radius:var(--radius-sm);
+  background:var(--surface); border:1px solid rgba(74,200,232,.08);
+  transition:all .3s var(--ease); }
+.sed-feature:hover { border-color:var(--pri); box-shadow:0 4px 16px var(--pri-glow); transform:translateX(4px); }
+.sed-feature-ico { flex-shrink:0; width:40px; height:40px; border-radius:10px;
+  background:rgba(74,200,232,.1); display:flex; align-items:center; justify-content:center; }
+.sed-feature-ico svg { width:20px; height:20px; fill:var(--pri-d); }
+.sed-feature h4 { font-size:15px; font-weight:600; color:var(--navy); margin-bottom:4px; }
+.sed-feature p { font-size:14px; color:var(--txt-light); line-height:1.5; }
+@media(max-width:768px) { .sedation-grid { grid-template-columns:1fr; gap:40px; } }
+
+/* ══ SERVICES ══ */
+.services { padding:100px 0; background:var(--surface); }
+.services-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:20px; }
+.svc-card { padding:28px 24px; border-radius:var(--radius); background:var(--bg);
+  border:1px solid rgba(74,200,232,.06); transition:all .4s var(--ease); cursor:default; }
+.svc-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(74,200,232,.12);
+  border-color:var(--pri); }
+.svc-ico { width:48px; height:48px; border-radius:12px; background:rgba(74,200,232,.1);
+  display:flex; align-items:center; justify-content:center; margin-bottom:16px;
+  transition:background .3s; }
+.svc-card:hover .svc-ico { background:var(--pri); }
+.svc-ico svg { width:24px; height:24px; fill:var(--pri-d); transition:fill .3s; }
+.svc-card:hover .svc-ico svg { fill:#fff; }
+.svc-card h3 { font-size:16px; font-weight:600; color:var(--navy); margin-bottom:8px; }
+.svc-card p { font-size:14px; color:var(--txt-light); line-height:1.55; }
+
+/* ══ BEFORE-AFTER ══ */
+.ba { padding:100px 0; background:linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%); }
+.ba-container { display:flex; justify-content:center; }
+.ba-img { max-width:600px; border-radius:var(--radius); overflow:hidden;
+  box-shadow:0 20px 50px rgba(10,37,64,.1); }
+.ba-img img { width:100%; }
+
+/* ══ DOCTORS ══ */
+.doctors { padding:100px 0; background:var(--navy);
+  background:linear-gradient(170deg, var(--navy) 0%, var(--bg-dark) 100%); color:var(--txt-inv); }
+.doctors .section-eyebrow { color:var(--pri); }
+.doctors .section-title { color:#fff; }
+.doctors .section-lead { color:rgba(232,244,248,.6); }
+.doctors-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:32px; }
+.doc-card { border-radius:var(--radius); overflow:hidden;
+  background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08);
+  transition:all .4s var(--ease); }
+.doc-card:hover { transform:translateY(-4px); border-color:rgba(74,200,232,.3);
+  box-shadow:0 16px 40px rgba(0,0,0,.2); }
+.doc-card-img { width:100%; aspect-ratio:4/3; object-fit:cover; }
+.doc-card-body { padding:28px; }
+.doc-card h3 { font-size:20px; font-weight:700; margin-bottom:4px; }
+.doc-card .doc-title { font-size:14px; color:var(--pri); font-weight:500; margin-bottom:12px; }
+.doc-card p { font-size:14px; color:rgba(232,244,248,.65); line-height:1.6; }
+@media(max-width:640px) { .doctors-grid { grid-template-columns:1fr; } }
+
+/* ══ OFFICE ══ */
+.office { padding:100px 0; background:var(--surface); }
+.office-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.office-img { border-radius:var(--radius); overflow:hidden;
+  box-shadow:0 12px 32px rgba(10,37,64,.08); }
+.office-img img { width:100%; height:100%; object-fit:cover; }
+@media(max-width:640px) { .office-grid { grid-template-columns:1fr; } }
+
+/* ══ CTA BAND ══ */
+.cta-band { padding:80px 0;
+  background:linear-gradient(135deg, var(--navy) 0%, var(--navy-xl) 100%);
+  text-align:center; color:#fff; position:relative; overflow:hidden; }
+.cta-band::before { content:''; position:absolute; width:500px; height:500px;
+  border-radius:50%; filter:blur(120px); opacity:.15; background:var(--pri);
+  top:-200px; right:-100px; }
+.cta-band h2 { font-size:clamp(1.6rem, 3vw, 2.4rem); margin-bottom:16px; }
+.cta-band p { font-size:17px; color:rgba(255,255,255,.7); margin-bottom:32px; max-width:500px; margin-left:auto; margin-right:auto; }
+.cta-band .btn-primary { font-size:17px; padding:16px 36px; }
+
+/* ══ CONTACT / MAP ══ */
+.contact { padding:100px 0; background:var(--bg-alt); }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+.contact-info { display:flex; flex-direction:column; gap:24px; }
+.ci-item { display:flex; gap:14px; align-items:flex-start; }
+.ci-ico { flex-shrink:0; width:44px; height:44px; border-radius:12px; background:rgba(74,200,232,.1);
+  display:flex; align-items:center; justify-content:center; }
+.ci-ico svg { width:20px; height:20px; fill:var(--pri-d); }
+.ci-item h4 { font-family:var(--heading); font-weight:600; font-size:14px; color:var(--navy); margin-bottom:2px; }
+.ci-item p, .ci-item a { font-size:14px; color:var(--txt-light); }
+.ci-item a:hover { color:var(--pri-d); }
+.hours-grid { display:grid; grid-template-columns:auto 1fr; gap:4px 16px; font-size:14px; }
+.hours-grid .day { font-weight:600; color:var(--navy); }
+.hours-grid .time { color:var(--txt-light); }
+.contact-form { background:var(--surface); padding:36px; border-radius:var(--radius);
+  box-shadow:0 8px 32px rgba(10,37,64,.06); }
+.contact-form h3 { font-size:20px; color:var(--navy); margin-bottom:24px; }
+.form-group { margin-bottom:16px; }
+.form-group label { display:block; font-family:var(--heading); font-weight:500; font-size:13px;
+  color:var(--txt); margin-bottom:6px; }
+.form-group input, .form-group select, .form-group textarea { width:100%; padding:12px 16px;
+  border:1.5px solid #dde5e9; border-radius:var(--radius-sm); font-family:var(--body);
+  font-size:14px; transition:border-color .3s, box-shadow .3s; background:var(--bg); }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline:none; border-color:var(--pri); box-shadow:0 0 0 3px var(--pri-glow); }
+.form-group textarea { resize:vertical; min-height:80px; }
+.form-submit { width:100%; margin-top:8px; }
+@media(max-width:768px) { .contact-grid { grid-template-columns:1fr; } }
+
+/* ══ FOOTER ══ */
+.footer { background:var(--bg-dark); color:rgba(232,244,248,.6); padding:48px 0 24px; }
+.footer-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+  border-top:1px solid rgba(255,255,255,.06); padding-top:24px; margin-top:24px; }
+.footer-brand { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+.footer-brand img { height:44px; border-radius:50%; background:#fff; padding:3px; }
+.footer-brand span { font-family:var(--heading); font-weight:700; color:#fff; font-size:16px; }
+.footer p { font-size:13px; }
+.footer a { color:var(--pri); }
+.footer a:hover { text-decoration:underline; }
+
+/* ══ MOBILE STICKY CTA ══ */
+.mobile-bar { display:none; position:fixed; bottom:0; left:0; right:0; z-index:90;
+  padding:12px 16px; background:rgba(10,37,64,.95); backdrop-filter:blur(12px);
+  border-top:1px solid rgba(74,200,232,.15); }
+.mobile-bar-inner { display:flex; gap:10px; }
+.mobile-bar a { flex:1; text-align:center; font-family:var(--heading); font-weight:600;
+  font-size:14px; padding:12px; border-radius:999px; }
+.mobile-bar .mb-call { background:transparent; border:1.5px solid var(--pri); color:var(--pri); }
+.mobile-bar .mb-book { background:var(--pri); color:var(--navy); }
+@media(max-width:768px) { .mobile-bar { display:block; } body { padding-bottom:72px; } }
+
+/* ══ REVEAL ══ */
+.reveal { opacity:0; transform:translateY(28px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
+.reveal.visible { opacity:1; transform:translateY(0); }
+@media(prefers-reduced-motion:reduce) {
+  .reveal { opacity:1; transform:none; transition:none; }
+  .splash { display:none; }
+  .mesh-bg .orb { animation:none; }
+  .hero-float-rating, .hero-float-sedation { animation:none; }
+  .hero-eyebrow .pulse-dot { animation:none; }
+}
+</style>
+</head>
+<body>
+<!-- SPLASH -->
+<div class="splash" id="splash" aria-hidden="true">
+  <img class="splash-logo" src="images/Logo.png" alt="" width="80" height="80">
+  <div class="splash-bar" style="position:relative"></div>
+</div>
+
+<!-- MESH BG -->
+<div class="mesh-bg" aria-hidden="true"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">
+      <img class="nav-logo" src="images/Logo.png" alt="Max Arocha DMD" width="52" height="52">
+      <span class="nav-brand-txt">Max Arocha <strong>DMD</strong></span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#sedacion" data-t="nav_sedation">Sedación</a>
+      <a href="#servicios" data-t="nav_services">Servicios</a>
+      <a href="#equipo" data-t="nav_team">Equipo</a>
+      <a href="#consultorio" data-t="nav_office">Consultorio</a>
+      <a href="#contacto" data-t="nav_contact">Contacto</a>
+    </nav>
+    <div class="nav-right">
+      <button class="lang-btn" id="langToggle" aria-label="Cambiar idioma">EN</button>
+      <a class="nav-phone" href="tel:+19544327771">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+        954-432-7771
+      </a>
+    </div>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#sedacion" data-t="nav_sedation">Sedación</a>
+  <a href="#servicios" data-t="nav_services">Servicios</a>
+  <a href="#equipo" data-t="nav_team">Equipo</a>
+  <a href="#consultorio" data-t="nav_office">Consultorio</a>
+  <a href="#contacto" data-t="nav_contact">Contacto</a>
+  <div class="mob-cta">
+    <a class="btn btn-primary" href="tel:+19544327771" data-t="cta_call">Llamar ahora</a>
+  </div>
+</div>
+
+<main>
+<span id="top"></span>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy reveal">
+      <div class="hero-eyebrow">
+        <span class="pulse-dot"></span>
+        <span data-t="hero_eyebrow">Odontología con sedación · Plantation, FL</span>
+      </div>
+      <h1 data-t="hero_title">Olvídese del miedo.<br><em data-t="hero_em">Despierte con una sonrisa nueva.</em></h1>
+      <p class="hero-sub" data-t="hero_sub">El Dr. Max Arocha y la Dra. Karla Jaquez combinan sedación intravenosa con tecnología de última generación para que usted reciba el tratamiento que necesita sin ansiedad y sin dolor.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+19544327771" data-t="cta_schedule">Agendar consulta</a>
+        <a class="btn btn-ghost" href="#servicios" data-t="cta_services">Ver servicios</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.2L18 7l-4 3.8 1 5.7L10 13.7 4.9 16.5l1-5.7L2 7l5.5-.8z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.2L18 7l-4 3.8 1 5.7L10 13.7 4.9 16.5l1-5.7L2 7l5.5-.8z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.2L18 7l-4 3.8 1 5.7L10 13.7 4.9 16.5l1-5.7L2 7l5.5-.8z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.2L18 7l-4 3.8 1 5.7L10 13.7 4.9 16.5l1-5.7L2 7l5.5-.8z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.2L18 7l-4 3.8 1 5.7L10 13.7 4.9 16.5l1-5.7L2 7l5.5-.8z"/></svg>
+        </div>
+        <div class="hero-trust-txt">
+          <strong>4.9</strong> · <span data-t="hero_reviews">632 reseñas en Google</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-photo">
+        <img src="images/Dr arocha solo.png" alt="Dr. Max Arocha, DMD" width="440" height="440" loading="eager">
+      </div>
+      <div class="hero-float hero-float-rating">
+        <span class="big">4.9</span>
+        <div class="meta">
+          <svg viewBox="0 0 20 20" width="14" height="14" style="fill:#F0A500;vertical-align:middle"><path d="M10 1l2.5 5.2L18 7l-4 3.8 1 5.7L10 13.7 4.9 16.5l1-5.7L2 7l5.5-.8z"/></svg>
+          <strong>Google Reviews</strong>
+          <span data-t="float_reviews">632 reseñas</span>
+        </div>
+      </div>
+      <div class="hero-float hero-float-sedation">
+        <div class="ico">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <span data-t="float_sedation">Sedación IV certificada</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.2L18 7l-4 3.8 1 5.7L10 13.7 4.9 16.5l1-5.7L2 7l5.5-.8z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.2L18 7l-4 3.8 1 5.7L10 13.7 4.9 16.5l1-5.7L2 7l5.5-.8z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.2L18 7l-4 3.8 1 5.7L10 13.7 4.9 16.5l1-5.7L2 7l5.5-.8z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.2L18 7l-4 3.8 1 5.7L10 13.7 4.9 16.5l1-5.7L2 7l5.5-.8z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.2L18 7l-4 3.8 1 5.7L10 13.7 4.9 16.5l1-5.7L2 7l5.5-.8z"/></svg>
+        </div>
+        <div class="stat-num"><span data-count-to="4.9" data-decimals="1">0</span></div>
+        <div class="stat-lbl" data-t="stat_rating">Valoración en Google</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-num"><span data-count-to="632">0</span><span class="accent">+</span></div>
+        <div class="stat-lbl" data-t="stat_reviews">Reseñas de pacientes</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-num"><span data-count-to="12">0</span></div>
+        <div class="stat-lbl" data-t="stat_services">Tratamientos especializados</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-num">2</div>
+        <div class="stat-lbl" data-t="stat_doctors">Doctores dedicados a su sonrisa</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEDATION -->
+<section class="sedation" id="sedacion">
+  <div class="wrap">
+    <div class="sedation-grid">
+      <div class="sedation-visual reveal">
+        <div class="sedation-img">
+          <img src="images/Sala de estar.png" alt="Sala de espera acogedora del consultorio" width="560" height="400" loading="lazy">
+        </div>
+        <div class="sedation-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <span data-t="sed_badge">Sedación IV segura y supervisada</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="section-eyebrow" data-t="sed_eyebrow">Nuestro diferencial</p>
+        <h2 class="section-title" data-t="sed_title">Odontología con sedación: tratamiento sin miedo</h2>
+        <p class="section-lead" data-t="sed_lead">¿Evita ir al dentista por ansiedad? Usted no está solo. Con la sedación intravenosa (Twilight Sedation), recibirá su tratamiento en un estado de relajación profunda, sin dolor ni recuerdos desagradables.</p>
+        <div class="sedation-features">
+          <div class="sed-feature">
+            <div class="sed-feature-ico">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm-1-5h2v2h-2zm0-8h2v6h-2z"/></svg>
+            </div>
+            <div>
+              <h4 data-t="sed_f1_title">Sedación IV (Twilight Sedation)</h4>
+              <p data-t="sed_f1_desc">Relajación profunda administrada por vía intravenosa. Usted permanece en un estado de semisueño durante todo el procedimiento.</p>
+            </div>
+          </div>
+          <div class="sed-feature">
+            <div class="sed-feature-ico">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm4.3-12.7L10 13.6l-2.3-2.3-1.4 1.4L10 16.4l7.7-7.7z"/></svg>
+            </div>
+            <div>
+              <h4 data-t="sed_f2_title">Óxido nitroso</h4>
+              <p data-t="sed_f2_desc">Opción ligera de sedación inhalada para procedimientos menores. Efecto inmediato y recuperación rápida.</p>
+            </div>
+          </div>
+          <div class="sed-feature">
+            <div class="sed-feature-ico">
+              <svg viewBox="0 0 24 24"><path d="M17.7 7.7A8 8 0 0 0 4 12H1l3.9 3.9.1.2L9 12H6a6 6 0 0 1 10.2-4.2l1.5-1.5zM20 12a8 8 0 0 1-13.7 5.6l-1.5 1.5A9.9 9.9 0 0 0 12 22a10 10 0 0 0 10-10h-2z"/></svg>
+            </div>
+            <div>
+              <h4 data-t="sed_f3_title">Recuperación rápida</h4>
+              <p data-t="sed_f3_desc">La mayoría de los pacientes se recuperan en minutos. Sin efectos prolongados, vuelve a su rutina el mismo día.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="servicios">
+  <div class="wrap section-center">
+    <p class="section-eyebrow reveal" data-t="svc_eyebrow">Servicios</p>
+    <h2 class="section-title reveal" data-t="svc_title">Tratamientos avanzados, atención personalizada</h2>
+    <p class="section-lead reveal" data-t="svc_lead">Desde implantes dentales hasta estética, ofrecemos soluciones completas con tecnología de última generación y la tranquilidad de la sedación.</p>
+    <div class="services-grid">
+
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M12 2c2 0 3.2 1 4.4 1s2.1-.6 3-.2c1.4.7 1.4 3 1 5.4-.3 1.7-.6 2.3-1 4.6-.5 3-.9 8.4-2.6 8.4-1.3 0-1.2-3.6-2.8-3.6S11.3 21 10 21c-1.7 0-2-5.4-2.5-8.4-.4-2.3-.7-2.9-1-4.6-.4-2.4-.4-4.7 1-5.4.9-.4 1.8.2 3 .2S10 2 12 2z"/></svg></div>
+        <h3 data-t="svc1_title">Implantes dentales</h3>
+        <p data-t="svc1_desc">Reemplazo permanente de dientes perdidos con implantes de titanio aprobados por la FDA. Resultado natural y duradero.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg></div>
+        <h3>All-on-4 / Teeth in a Day</h3>
+        <p data-t="svc2_desc">Arco completo de dientes fijos sobre solo cuatro implantes. Una solución definitiva para reemplazar dentaduras removibles.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M7.5 5.6L10 7 8.6 4.5 10 2 7.5 3.4 5 2l1.4 2.5L5 7zm12 9.8L17 14l1.4 2.5L17 19l2.5-1.4L22 19l-1.4-2.5L22 14zM22 2l-2.5 1.4L17 2l1.4 2.5L17 7l2.5-1.4L22 7l-1.4-2.5zm-7.6 5.5a1 1 0 0 0-1.4 0L2.1 18.4a1 1 0 0 0 0 1.4l2.1 2.1a1 1 0 0 0 1.4 0l10.9-10.9a1 1 0 0 0 0-1.4z"/></svg></div>
+        <h3>Invisalign</h3>
+        <p data-t="svc3_desc">Alineadores transparentes y removibles para corregir su sonrisa sin brackets metálicos. Cómodos y prácticamente invisibles.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.95 8.95 0 0 0 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8z"/></svg></div>
+        <h3 data-t="svc4_title">LANAP (terapia láser)</h3>
+        <p data-t="svc4_desc">Tratamiento periodontal con láser. Elimina la enfermedad de las encías sin bisturí y con recuperación más rápida.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3z"/></svg></div>
+        <h3 data-t="svc5_title">Extracción de muelas del juicio</h3>
+        <p data-t="svc5_desc">Extracción segura con opción de sedación para mayor comodidad. Evaluación con radiografía digital incluida.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg></div>
+        <h3 data-t="svc6_title">Carillas y estética dental</h3>
+        <p data-t="svc6_desc">Carillas de porcelana (veneers) para transformar el color, la forma y la alineación de su sonrisa.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/></svg></div>
+        <h3 data-t="svc7_title">Blanqueamiento profesional</h3>
+        <p data-t="svc7_desc">Tratamiento profesional en consultorio para dientes más blancos de forma segura y con resultados inmediatos.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M19 8l-4 4h3c0 3.31-2.69 6-6 6-1.01 0-1.97-.25-2.8-.7l-1.46 1.46C8.97 19.54 10.43 20 12 20c4.42 0 8-3.58 8-8h3zM6 12c0-3.31 2.69-6 6-6 1.01 0 1.97.25 2.8.7l1.46-1.46C15.03 4.46 13.57 4 12 4c-4.42 0-8 3.58-8 8H1l4 4 4-4z"/></svg></div>
+        <h3 data-t="svc8_title">Odontología general</h3>
+        <p data-t="svc8_desc">Limpiezas, exámenes, emergencias y cuidado preventivo para toda la familia. Atención integral en un solo lugar.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE & AFTER -->
+<section class="ba" id="resultados">
+  <div class="wrap section-center">
+    <p class="section-eyebrow reveal" data-t="ba_eyebrow">Resultados reales</p>
+    <h2 class="section-title reveal" data-t="ba_title">Sonrisas transformadas</h2>
+    <p class="section-lead reveal" data-t="ba_lead">Cada caso es único. Estos son resultados reales de pacientes que confiaron en el Dr. Arocha.</p>
+    <div class="ba-container reveal">
+      <div class="ba-img">
+        <img src="images/antes y despues.png" alt="Antes y después de tratamiento dental — resultado real" width="600" height="200" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section class="doctors" id="equipo">
+  <div class="wrap section-center">
+    <p class="section-eyebrow reveal" data-t="doc_eyebrow">Conozca al equipo</p>
+    <h2 class="section-title reveal" data-t="doc_title">Profesionales comprometidos con su bienestar</h2>
+    <p class="section-lead reveal" data-t="doc_lead">Un equipo que combina experiencia clínica con un trato humano y cercano.</p>
+    <div class="doctors-grid">
+      <div class="doc-card reveal">
+        <img class="doc-card-img" src="images/Dr arocha solo.png" alt="Dr. Max Arocha, DMD" width="400" height="300" loading="lazy">
+        <div class="doc-card-body">
+          <h3>Dr. Max Arocha</h3>
+          <p class="doc-title">DMD — Sedation & Implant Dentistry</p>
+        </div>
+      </div>
+      <div class="doc-card reveal">
+        <img class="doc-card-img" src="images/Dr arocha y dra.png" alt="Dra. Karla Jaquez, DMD" width="400" height="300" loading="lazy">
+        <div class="doc-card-body">
+          <h3>Dra. Karla Jaquez</h3>
+          <p class="doc-title">DMD</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFICE -->
+<section class="office" id="consultorio">
+  <div class="wrap">
+    <div class="section-center" style="margin-bottom:48px">
+      <p class="section-eyebrow reveal" data-t="off_eyebrow">Nuestro consultorio</p>
+      <h2 class="section-title reveal" data-t="off_title">Un espacio diseñado para su tranquilidad</h2>
+      <p class="section-lead reveal" data-t="off_lead">Desde la sala de espera hasta el gabinete, cada detalle está pensado para que usted se sienta cómodo y seguro.</p>
+    </div>
+    <div class="office-grid reveal">
+      <div class="office-img">
+        <img src="images/Sala de estar.png" alt="Sala de espera del consultorio" width="560" height="400" loading="lazy">
+      </div>
+      <div class="office-img">
+        <img src="images/frente del consultorio.png" alt="Frente del consultorio en Plantation, FL" width="560" height="400" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="wrap reveal">
+    <h2 data-t="cta_title">¿Listo para una experiencia dental diferente?</h2>
+    <p data-t="cta_sub">Agende su consulta hoy y descubra cómo la sedación puede cambiar su visita al dentista.</p>
+    <a class="btn btn-primary" href="tel:+19544327771" data-t="cta_call_big">Llamar al 954-432-7771</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div class="section-center" style="margin-bottom:48px">
+      <p class="section-eyebrow reveal" data-t="ct_eyebrow">Contacto</p>
+      <h2 class="section-title reveal" data-t="ct_title">Estamos aquí para ayudarle</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="ci-item">
+          <div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></div>
+          <div>
+            <h4 data-t="ct_address_label">Dirección</h4>
+            <p>1125 S University Dr<br>Plantation, FL 33324</p>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1z"/></svg></div>
+          <div>
+            <h4 data-t="ct_phone_label">Teléfono</h4>
+            <a href="tel:+19544327771">954-432-7771</a>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg></div>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:dentist@drarocha.com">dentist@drarocha.com</a>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
+          <div>
+            <h4 data-t="ct_hours_label">Horario</h4>
+            <div class="hours-grid">
+              <span class="day" data-t="ct_mon">Lunes</span><span class="time">9:00 AM – 6:00 PM</span>
+              <span class="day" data-t="ct_tue">Martes</span><span class="time">9:00 AM – 6:00 PM</span>
+              <span class="day" data-t="ct_wed">Miércoles</span><span class="time">9:00 AM – 6:00 PM</span>
+              <span class="day" data-t="ct_thu">Jueves</span><span class="time">9:00 AM – 6:00 PM</span>
+              <span class="day" data-t="ct_fri">Viernes</span><span class="time">9:00 AM – 3:00 PM</span>
+              <span class="day" data-t="ct_sat">Sábado</span><span class="time" data-t="ct_closed">Cerrado</span>
+              <span class="day" data-t="ct_sun">Domingo</span><span class="time" data-t="ct_closed2">Cerrado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <h3 data-t="form_title">Solicite su consulta</h3>
+        <form id="contactForm" onsubmit="return false">
+          <div class="form-group">
+            <label for="fname" data-t="form_name">Nombre completo</label>
+            <input type="text" id="fname" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="fphone" data-t="form_phone">Teléfono</label>
+            <input type="tel" id="fphone" required autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="femail">Email</label>
+            <input type="email" id="femail" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="fservice" data-t="form_service">Servicio de interés</label>
+            <select id="fservice">
+              <option value="" data-t="form_select">Seleccione un servicio</option>
+              <option value="sedation" data-t="form_opt1">Sedación IV</option>
+              <option value="implants" data-t="form_opt2">Implantes dentales</option>
+              <option value="allon4">All-on-4 / Teeth in a Day</option>
+              <option value="invisalign">Invisalign</option>
+              <option value="lanap" data-t="form_opt5">LANAP (terapia láser)</option>
+              <option value="wisdom" data-t="form_opt6">Muelas del juicio</option>
+              <option value="veneers" data-t="form_opt7">Carillas / Veneers</option>
+              <option value="cleaning" data-t="form_opt8">Limpieza dental</option>
+              <option value="other" data-t="form_opt9">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fmsg" data-t="form_msg">Mensaje (opcional)</label>
+            <textarea id="fmsg" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit" data-t="form_submit">Enviar solicitud</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <img src="images/Logo.png" alt="Max Arocha DMD" width="44" height="44">
+      <span>Max Arocha DMD</span>
+    </div>
+    <p>1125 S University Dr, Plantation, FL 33324 · <a href="tel:+19544327771">954-432-7771</a> · <a href="mailto:dentist@drarocha.com">dentist@drarocha.com</a></p>
+    <div class="footer-inner">
+      <p data-t="footer_copy">&copy; 2026 Max Arocha DMD & Karla Jaquez DMD. Todos los derechos reservados.</p>
+      <p data-t="footer_lang">Hablamos español</p>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-bar">
+  <div class="mobile-bar-inner">
+    <a class="mb-call" href="tel:+19544327771" data-t="mob_call">Llamar</a>
+    <a class="mb-book" href="#contacto" data-t="mob_book">Agendar cita</a>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+/* ── Translations ── */
+const T = {
+  es: {
+    nav_sedation:'Sedación', nav_services:'Servicios', nav_team:'Equipo',
+    nav_office:'Consultorio', nav_contact:'Contacto',
+    hero_eyebrow:'Odontología con sedación · Plantation, FL',
+    hero_title:'Olvídese del miedo.',
+    hero_em:'Despierte con una sonrisa nueva.',
+    hero_sub:'El Dr. Max Arocha y la Dra. Karla Jaquez combinan sedación intravenosa con tecnología de última generación para que usted reciba el tratamiento que necesita sin ansiedad y sin dolor.',
+    cta_schedule:'Agendar consulta', cta_services:'Ver servicios',
+    hero_reviews:'632 reseñas en Google',
+    float_reviews:'632 reseñas', float_sedation:'Sedación IV certificada',
+    stat_rating:'Valoración en Google', stat_reviews:'Reseñas de pacientes',
+    stat_services:'Tratamientos especializados', stat_doctors:'Doctores dedicados a su sonrisa',
+    sed_eyebrow:'Nuestro diferencial',
+    sed_title:'Odontología con sedación: tratamiento sin miedo',
+    sed_lead:'¿Evita ir al dentista por ansiedad? Usted no está solo. Con la sedación intravenosa (Twilight Sedation), recibirá su tratamiento en un estado de relajación profunda, sin dolor ni recuerdos desagradables.',
+    sed_badge:'Sedación IV segura y supervisada',
+    sed_f1_title:'Sedación IV (Twilight Sedation)',
+    sed_f1_desc:'Relajación profunda administrada por vía intravenosa. Usted permanece en un estado de semisueño durante todo el procedimiento.',
+    sed_f2_title:'Óxido nitroso',
+    sed_f2_desc:'Opción ligera de sedación inhalada para procedimientos menores. Efecto inmediato y recuperación rápida.',
+    sed_f3_title:'Recuperación rápida',
+    sed_f3_desc:'La mayoría de los pacientes se recuperan en minutos. Sin efectos prolongados, vuelve a su rutina el mismo día.',
+    svc_eyebrow:'Servicios',
+    svc_title:'Tratamientos avanzados, atención personalizada',
+    svc_lead:'Desde implantes dentales hasta estética, ofrecemos soluciones completas con tecnología de última generación y la tranquilidad de la sedación.',
+    svc1_title:'Implantes dentales',
+    svc1_desc:'Reemplazo permanente de dientes perdidos con implantes de titanio aprobados por la FDA. Resultado natural y duradero.',
+    svc2_desc:'Arco completo de dientes fijos sobre solo cuatro implantes. Una solución definitiva para reemplazar dentaduras removibles.',
+    svc3_desc:'Alineadores transparentes y removibles para corregir su sonrisa sin brackets metálicos. Cómodos y prácticamente invisibles.',
+    svc4_title:'LANAP (terapia láser)',
+    svc4_desc:'Tratamiento periodontal con láser. Elimina la enfermedad de las encías sin bisturí y con recuperación más rápida.',
+    svc5_title:'Extracción de muelas del juicio',
+    svc5_desc:'Extracción segura con opción de sedación para mayor comodidad. Evaluación con radiografía digital incluida.',
+    svc6_title:'Carillas y estética dental',
+    svc6_desc:'Carillas de porcelana (veneers) para transformar el color, la forma y la alineación de su sonrisa.',
+    svc7_title:'Blanqueamiento profesional',
+    svc7_desc:'Tratamiento profesional en consultorio para dientes más blancos de forma segura y con resultados inmediatos.',
+    svc8_title:'Odontología general',
+    svc8_desc:'Limpiezas, exámenes, emergencias y cuidado preventivo para toda la familia. Atención integral en un solo lugar.',
+    ba_eyebrow:'Resultados reales', ba_title:'Sonrisas transformadas',
+    ba_lead:'Cada caso es único. Estos son resultados reales de pacientes que confiaron en el Dr. Arocha.',
+    doc_eyebrow:'Conozca al equipo',
+    doc_title:'Profesionales comprometidos con su bienestar',
+    doc_lead:'Un equipo que combina experiencia clínica con un trato humano y cercano.',
+    off_eyebrow:'Nuestro consultorio',
+    off_title:'Un espacio diseñado para su tranquilidad',
+    off_lead:'Desde la sala de espera hasta el gabinete, cada detalle está pensado para que usted se sienta cómodo y seguro.',
+    cta_title:'¿Listo para una experiencia dental diferente?',
+    cta_sub:'Agende su consulta hoy y descubra cómo la sedación puede cambiar su visita al dentista.',
+    cta_call_big:'Llamar al 954-432-7771',
+    ct_eyebrow:'Contacto', ct_title:'Estamos aquí para ayudarle',
+    ct_address_label:'Dirección', ct_phone_label:'Teléfono', ct_hours_label:'Horario',
+    ct_mon:'Lunes', ct_tue:'Martes', ct_wed:'Miércoles', ct_thu:'Jueves',
+    ct_fri:'Viernes', ct_sat:'Sábado', ct_sun:'Domingo',
+    ct_closed:'Cerrado', ct_closed2:'Cerrado',
+    form_title:'Solicite su consulta', form_name:'Nombre completo', form_phone:'Teléfono',
+    form_service:'Servicio de interés', form_select:'Seleccione un servicio',
+    form_opt1:'Sedación IV', form_opt2:'Implantes dentales',
+    form_opt5:'LANAP (terapia láser)', form_opt6:'Muelas del juicio',
+    form_opt7:'Carillas / Veneers', form_opt8:'Limpieza dental', form_opt9:'Otro',
+    form_msg:'Mensaje (opcional)', form_submit:'Enviar solicitud',
+    footer_copy:'© 2026 Max Arocha DMD & Karla Jaquez DMD. Todos los derechos reservados.',
+    footer_lang:'Hablamos español',
+    cta_call:'Llamar ahora',
+    mob_call:'Llamar', mob_book:'Agendar cita'
+  },
+  en: {
+    nav_sedation:'Sedation', nav_services:'Services', nav_team:'Team',
+    nav_office:'Office', nav_contact:'Contact',
+    hero_eyebrow:'Sedation Dentistry · Plantation, FL',
+    hero_title:'Forget the fear.',
+    hero_em:'Wake up with a brand-new smile.',
+    hero_sub:'Dr. Max Arocha and Dr. Karla Jaquez combine IV sedation with cutting-edge technology so you can receive the treatment you need—anxiety-free and pain-free.',
+    cta_schedule:'Schedule consultation', cta_services:'View services',
+    hero_reviews:'632 Google reviews',
+    float_reviews:'632 reviews', float_sedation:'Certified IV Sedation',
+    stat_rating:'Google rating', stat_reviews:'Patient reviews',
+    stat_services:'Specialized treatments', stat_doctors:'Doctors dedicated to your smile',
+    sed_eyebrow:'Our difference',
+    sed_title:'Sedation dentistry: treatment without fear',
+    sed_lead:'Do you avoid going to the dentist because of anxiety? You are not alone. With IV sedation (Twilight Sedation), you will receive your treatment in a state of deep relaxation—no pain, no unpleasant memories.',
+    sed_badge:'Safe & supervised IV Sedation',
+    sed_f1_title:'IV Sedation (Twilight Sedation)',
+    sed_f1_desc:'Deep relaxation administered intravenously. You remain in a twilight state throughout the entire procedure.',
+    sed_f2_title:'Nitrous oxide',
+    sed_f2_desc:'A light inhaled sedation option for minor procedures. Immediate effect and quick recovery.',
+    sed_f3_title:'Quick recovery',
+    sed_f3_desc:'Most patients recover within minutes. No prolonged effects—you return to your routine the same day.',
+    svc_eyebrow:'Services',
+    svc_title:'Advanced treatments, personalized care',
+    svc_lead:'From dental implants to cosmetic dentistry, we offer comprehensive solutions with cutting-edge technology and the comfort of sedation.',
+    svc1_title:'Dental implants',
+    svc1_desc:'Permanent replacement for missing teeth using FDA-approved titanium implants. Natural-looking, long-lasting results.',
+    svc2_desc:'A full arch of fixed teeth supported by just four implants. The definitive solution to replace removable dentures.',
+    svc3_desc:'Clear, removable aligners to straighten your smile without metal brackets. Comfortable and virtually invisible.',
+    svc4_title:'LANAP (laser therapy)',
+    svc4_desc:'Laser periodontal treatment. Eliminates gum disease without a scalpel, with faster recovery.',
+    svc5_title:'Wisdom teeth removal',
+    svc5_desc:'Safe extraction with sedation option for maximum comfort. Digital X-ray evaluation included.',
+    svc6_title:'Veneers & cosmetic dentistry',
+    svc6_desc:'Porcelain veneers to transform the color, shape, and alignment of your smile.',
+    svc7_title:'Professional whitening',
+    svc7_desc:'In-office professional treatment for whiter teeth—safely and with immediate results.',
+    svc8_title:'General dentistry',
+    svc8_desc:'Cleanings, exams, emergencies, and preventive care for the whole family. Comprehensive care in one place.',
+    ba_eyebrow:'Real results', ba_title:'Transformed smiles',
+    ba_lead:'Every case is unique. These are real results from patients who trusted Dr. Arocha.',
+    doc_eyebrow:'Meet the team',
+    doc_title:'Professionals committed to your well-being',
+    doc_lead:'A team that combines clinical expertise with a warm, personal approach.',
+    off_eyebrow:'Our office',
+    off_title:'A space designed for your comfort',
+    off_lead:'From the waiting room to the treatment area, every detail is designed to help you feel comfortable and safe.',
+    cta_title:'Ready for a different dental experience?',
+    cta_sub:'Schedule your consultation today and discover how sedation can change your visit to the dentist.',
+    cta_call_big:'Call 954-432-7771',
+    ct_eyebrow:'Contact', ct_title:'We are here to help',
+    ct_address_label:'Address', ct_phone_label:'Phone', ct_hours_label:'Hours',
+    ct_mon:'Monday', ct_tue:'Tuesday', ct_wed:'Wednesday', ct_thu:'Thursday',
+    ct_fri:'Friday', ct_sat:'Saturday', ct_sun:'Sunday',
+    ct_closed:'Closed', ct_closed2:'Closed',
+    form_title:'Request your consultation', form_name:'Full name', form_phone:'Phone',
+    form_service:'Service of interest', form_select:'Select a service',
+    form_opt1:'IV Sedation', form_opt2:'Dental implants',
+    form_opt5:'LANAP (laser therapy)', form_opt6:'Wisdom teeth',
+    form_opt7:'Veneers', form_opt8:'Dental cleaning', form_opt9:'Other',
+    form_msg:'Message (optional)', form_submit:'Submit request',
+    footer_copy:'© 2026 Max Arocha DMD & Karla Jaquez DMD. All rights reserved.',
+    footer_lang:'Se habla español',
+    cta_call:'Call now',
+    mob_call:'Call', mob_book:'Book appointment'
+  }
+};
+
+let lang = 'es';
+const btn = document.getElementById('langToggle');
+
+function setLang(l) {
+  lang = l;
+  document.documentElement.lang = l;
+  btn.textContent = l === 'es' ? 'EN' : 'ES';
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const key = el.getAttribute('data-t');
+    if (T[l][key]) {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT') return;
+      if (el.tagName === 'OPTION') { el.textContent = T[l][key]; return; }
+      el.textContent = T[l][key];
+    }
+  });
+}
+
+btn.addEventListener('click', () => setLang(lang === 'es' ? 'en' : 'es'));
+
+/* ── Splash ── */
+const splash = document.getElementById('splash');
+window.addEventListener('load', () => {
+  setTimeout(() => { splash.classList.add('done'); }, 1800);
+  setTimeout(() => { splash.style.display = 'none'; }, 2600);
+});
+
+/* ── Nav scroll ── */
+const nav = document.getElementById('nav');
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+  lastScroll = window.scrollY;
+}, { passive: true });
+
+/* ── Burger ── */
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+burger.addEventListener('click', () => {
+  const open = burger.classList.toggle('open');
+  mobileMenu.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', open);
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  burger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  burger.setAttribute('aria-expanded', 'false');
+}));
+
+/* ── Reveal ── */
+const motionOk = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (motionOk) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+}
+
+/* ── Animated counters ── */
+function animateCounters() {
+  document.querySelectorAll('[data-count-to]').forEach(el => {
+    if (el.dataset.counted) return;
+    const rect = el.getBoundingClientRect();
+    if (rect.top > window.innerHeight || rect.bottom < 0) return;
+    el.dataset.counted = '1';
+    const target = parseFloat(el.dataset.countTo);
+    const decimals = parseInt(el.dataset.decimals || '0');
+    const duration = 1800;
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = (target * ease).toFixed(decimals);
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = target.toFixed(decimals);
+    }
+    requestAnimationFrame(tick);
+  });
+}
+window.addEventListener('scroll', animateCounters, { passive: true });
+animateCounters();
+
+/* ── Smooth scroll ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+})();
+</script>
+</body>
+</html>
