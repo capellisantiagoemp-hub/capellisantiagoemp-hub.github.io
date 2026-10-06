@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marquez Lores Dental — Clínica Dental en Hialeah</title>
+<meta name="description" content="Marquez Lores Dental — odontología general, ortodoncia, endodoncia e implantes en Hialeah, FL. Todos los procedimientos en un solo lugar.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1E3A5F">
+<link rel="icon" href="images/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cyan:#3BBDD0;--cyan-dark:#2A95A8;--cyan-light:#7DD8E6;--cyan-pale:#D4F2F7;
+  --navy:#1E3A5F;--navy-dark:#132840;--navy-light:#2D5080;
+  --warm:#F5FAFB;--cream:#EDF6F8;--white:#FFFFFF;--text:#1A2A32;--text-light:#4A6A7A;
+  --font-d:'Poppins',system-ui,sans-serif;--font-b:'DM Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.4,0,.2,1);--shadow:0 4px 24px rgba(30,58,95,.08);
+  --shadow-lg:0 12px 40px rgba(30,58,95,.12);--radius:16px;--radius-sm:10px;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --cream:#0D1B24;--warm:#132A36;--white:#162D3A;--text:#E0EEF4;--text-light:#8AABB8;
+  --shadow:0 4px 24px rgba(0,0,0,.25);--shadow-lg:0 12px 40px rgba(0,0,0,.35);
+}}
+:root[data-theme="dark"]{
+  --cream:#0D1B24;--warm:#132A36;--white:#162D3A;--text:#E0EEF4;--text-light:#8AABB8;
+  --shadow:0 4px 24px rgba(0,0,0,.25);--shadow-lg:0 12px 40px rgba(0,0,0,.35);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--font-b);color:var(--text);background:var(--cream);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-d);font-weight:700;line-height:1.15}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+@media(min-width:768px){.container{padding:0 40px}}
+
+/* SPLASH */
+.splash{position:fixed;inset:0;z-index:9999;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;transition:opacity .6s var(--ease),visibility .6s}
+.splash.done{opacity:0;visibility:hidden;pointer-events:none}
+.splash-logo{width:90px;height:90px;object-fit:contain;animation:pulse-glow 1.2s ease-in-out infinite alternate}
+.splash-name{font-family:var(--font-d);font-weight:700;font-size:1.1rem;color:#fff;letter-spacing:.5px;opacity:.8}
+@keyframes pulse-glow{0%{filter:drop-shadow(0 0 12px rgba(59,189,208,.3));transform:scale(1)}100%{filter:drop-shadow(0 0 28px rgba(59,189,208,.7));transform:scale(1.06)}}
+
+/* MESH BG */
+.mesh-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.3}
+.mesh-bg::before,.mesh-bg::after{content:'';position:absolute;border-radius:50%;filter:blur(120px);animation:mesh-float 20s ease-in-out infinite alternate}
+.mesh-bg::before{width:500px;height:500px;background:radial-gradient(circle,rgba(59,189,208,.2),transparent 70%);top:-150px;right:-80px}
+.mesh-bg::after{width:400px;height:400px;background:radial-gradient(circle,rgba(30,58,95,.12),transparent 70%);bottom:-100px;left:-80px;animation-delay:-10s}
+@keyframes mesh-float{0%{transform:translate(0,0) scale(1)}100%{transform:translate(30px,25px) scale(1.08)}}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 0;transition:background .3s,box-shadow .3s,padding .3s}
+.nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(16px);box-shadow:var(--shadow);padding:8px 0}
+@media(prefers-color-scheme:dark){.nav.scrolled{background:rgba(13,27,36,.95)}}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:0 20px}
+@media(min-width:768px){.nav-inner{padding:0 40px}}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-logo{width:auto;height:48px;object-fit:contain;transition:transform .3s var(--ease)}
+.brand:hover .brand-logo{transform:scale(1.05)}
+.brand-name{font-family:var(--font-d);font-weight:700;font-size:1rem;color:#fff;letter-spacing:-.01em;transition:color .3s}
+.nav.scrolled .brand-name{color:var(--navy)}
+.nav.scrolled .brand-logo{filter:brightness(.35) contrast(1.2) saturate(1.3)}
+.nav-links{display:none;gap:6px;align-items:center}
+@media(min-width:992px){.nav-links{display:flex}}
+.nav-links a{font-size:.85rem;font-weight:500;padding:8px 14px;border-radius:999px;transition:background .2s,color .2s;color:rgba(255,255,255,.8)}
+.nav.scrolled .nav-links a{color:var(--text-light)}
+.nav-links a:hover{background:var(--cyan-pale);color:var(--navy)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.lang-toggle{display:flex;border:2px solid var(--cyan);border-radius:999px;overflow:hidden;font-size:.72rem;font-weight:700;font-family:var(--font-b)}
+.lang-opt{padding:4px 9px;cursor:pointer;transition:all .2s;color:var(--cyan);background:transparent;border:none;letter-spacing:.5px}
+.lang-opt.active{background:var(--cyan);color:#fff}
+.nav-cta-btn{display:none;padding:9px 18px;border-radius:999px;background:var(--cyan);color:#fff;font-weight:600;font-size:.82rem;font-family:var(--font-b);border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+@media(min-width:992px){.nav-cta-btn{display:inline-flex}}
+.nav-cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(59,189,208,.35)}
+.burger{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+@media(min-width:992px){.burger{display:none}}
+.burger span{display:block;width:22px;height:2.5px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s}
+.nav.scrolled .burger span{background:var(--navy)}
+.burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* MOBILE MENU */
+.mobile-menu{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99;background:rgba(30,58,95,.97);backdrop-filter:blur(20px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{font-family:var(--font-d);font-size:1.3rem;font-weight:600;color:#fff;padding:10px 24px;border-radius:999px;transition:background .2s}
+.mobile-menu a:hover{background:rgba(59,189,208,.2)}
+.mobile-menu .menu-cta{margin-top:10px;padding:14px 32px;background:var(--cyan);border-radius:999px;font-family:var(--font-b);font-weight:700;font-size:1rem;color:#fff;transition:transform .2s}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:120px 0 80px}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,var(--navy) 0%,#163050 40%,var(--cyan-dark) 100%);z-index:0}
+.hero-bg::after{content:'';position:absolute;inset:0;background:url('images/frente.jpg') center/cover no-repeat;opacity:.08;mix-blend-mode:luminosity}
+.hero-pattern{position:absolute;inset:0;z-index:1;opacity:.06;background-image:radial-gradient(circle at 25% 25%,rgba(255,255,255,.15) 1px,transparent 1px);background-size:40px 40px}
+.hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+@media(min-width:768px){.hero-content{grid-template-columns:1fr 1fr;gap:50px}}
+.hero-text{color:#fff}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:999px;background:rgba(59,189,208,.15);border:1px solid rgba(59,189,208,.3);font-size:.78rem;font-weight:600;color:var(--cyan-light);margin-bottom:20px;font-family:var(--font-b)}
+.hero-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--cyan);animation:badge-pulse 2s infinite}
+@keyframes badge-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:16px;line-height:1.1}
+.hero h1 em{font-style:italic;color:var(--cyan-light);font-weight:700}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.8);margin-bottom:32px;max-width:480px;line-height:1.7}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;background:var(--cyan);color:#fff;font-weight:700;font-size:.95rem;font-family:var(--font-b);border:none;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(59,189,208,.4)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.25);color:#fff;font-weight:600;font-size:.95rem;font-family:var(--font-b);cursor:pointer;transition:transform .25s var(--ease),background .2s}
+.btn-secondary:hover{transform:translateY(-3px);background:rgba(255,255,255,.18)}
+.hero-trust{display:flex;flex-wrap:wrap;gap:16px}
+.trust-item{display:flex;align-items:center;gap:6px;font-size:.82rem;color:rgba(255,255,255,.7);font-weight:500}
+.trust-item svg{width:18px;height:18px;color:var(--cyan-light);flex-shrink:0}
+
+/* HERO PHOTO */
+.hero-photo-wrap{position:relative;display:flex;justify-content:center}
+.hero-photo{width:280px;height:350px;object-fit:cover;object-position:top;border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,.3);border:4px solid rgba(255,255,255,.1)}
+@media(min-width:768px){.hero-photo{width:340px;height:420px}}
+.hero-float{position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.12);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:14px 24px;display:flex;align-items:center;gap:12px;white-space:nowrap}
+.hero-float-icon{width:36px;height:36px;background:var(--cyan);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.hero-float-icon svg{width:20px;height:20px;color:#fff}
+.hero-float-text{color:#fff;font-size:.82rem;line-height:1.3}
+.hero-float-text strong{display:block;font-size:1rem;font-family:var(--font-d)}
+
+/* TRUST STRIP */
+.trust-strip{background:var(--white);padding:28px 0;border-bottom:1px solid rgba(59,189,208,.1)}
+.trust-strip-inner{display:flex;flex-wrap:wrap;justify-content:center;gap:24px 40px}
+.trust-strip-item{display:flex;align-items:center;gap:10px;font-size:.88rem;font-weight:600;color:var(--navy)}
+.trust-strip-item svg{width:24px;height:24px;color:var(--cyan)}
+
+/* SECTION BASE */
+.section{padding:80px 0}
+@media(min-width:768px){.section{padding:100px 0}}
+.section-label{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--cyan);margin-bottom:10px;font-family:var(--font-b)}
+.section-title{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:16px;color:var(--text)}
+.section-sub{font-size:1rem;color:var(--text-light);max-width:560px;margin-bottom:40px}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* SERVICES */
+.services{background:var(--warm)}
+.services-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:600px){.services-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.services-grid{grid-template-columns:repeat(4,1fr)}}
+.service-card{background:var(--white);border-radius:var(--radius);padding:32px 24px;text-align:center;transition:transform .3s var(--ease),box-shadow .3s;cursor:default}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.service-icon{width:56px;height:56px;background:var(--cyan-pale);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;transition:background .3s}
+.service-card:hover .service-icon{background:var(--cyan)}
+.service-icon svg{width:28px;height:28px;color:var(--cyan);transition:color .3s}
+.service-card:hover .service-icon svg{color:#fff}
+.service-card h3{font-size:1rem;margin-bottom:8px;font-weight:600}
+.service-card p{font-size:.85rem;color:var(--text-light);line-height:1.5}
+
+/* ABOUT / DOCTORA */
+.about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+@media(min-width:768px){.about-grid{grid-template-columns:1fr 1fr;gap:50px}}
+.about-photo-wrap{position:relative}
+.about-photo{width:100%;max-width:400px;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:20px;box-shadow:var(--shadow-lg)}
+.about-accent{position:absolute;bottom:-12px;right:-12px;width:120px;height:120px;background:var(--cyan-pale);border-radius:20px;z-index:-1}
+.about-text h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:16px}
+.about-text p{color:var(--text-light);margin-bottom:16px;line-height:1.7}
+.about-features{display:flex;flex-direction:column;gap:12px;margin-top:20px}
+.about-feature{display:flex;align-items:flex-start;gap:12px;font-size:.9rem}
+.about-feature-icon{width:28px;height:28px;background:var(--cyan);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.about-feature-icon svg{width:16px;height:16px;color:#fff}
+
+/* GALLERY */
+.gallery{background:var(--white)}
+.gallery-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:600px){.gallery-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+.gallery-item{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.gallery-item:hover img{transform:scale(1.06)}
+.gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;font-size:.85rem;font-weight:500;opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s}
+.gallery-item:hover .gallery-caption{opacity:1;transform:none}
+
+/* HABLAMOS ESPAÑOL */
+.espanol-banner{background:linear-gradient(135deg,var(--cyan) 0%,var(--cyan-dark) 100%);padding:50px 0;text-align:center;color:#fff}
+.espanol-banner h2{font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:8px}
+.espanol-banner p{font-size:1rem;opacity:.9;max-width:500px;margin:0 auto}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%);padding:60px 0;text-align:center;color:#fff;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;top:-50%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(59,189,208,.12),transparent 70%);border-radius:50%}
+.cta-band h2{font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:12px;position:relative}
+.cta-band p{font-size:1rem;opacity:.8;margin-bottom:28px;position:relative}
+.cta-band-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;position:relative}
+
+/* CONTACT */
+.contact{background:var(--warm)}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:40px}
+@media(min-width:768px){.contact-grid{grid-template-columns:1fr 1fr;gap:50px}}
+.contact-info{display:flex;flex-direction:column;gap:20px}
+.contact-item{display:flex;align-items:flex-start;gap:14px}
+.contact-item-icon{width:44px;height:44px;background:var(--cyan-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-item-icon svg{width:22px;height:22px;color:var(--cyan)}
+.contact-item-text h4{font-size:.95rem;margin-bottom:2px;font-weight:600}
+.contact-item-text p,.contact-item-text a{font-size:.88rem;color:var(--text-light)}
+.contact-item-text a:hover{color:var(--cyan)}
+.contact-map{width:100%;height:200px;border-radius:var(--radius);border:0;margin-top:8px}
+
+/* FORM */
+.form-card{background:var(--white);border-radius:var(--radius);padding:32px 28px;box-shadow:var(--shadow)}
+.form-card h3{font-size:1.2rem;margin-bottom:4px}
+.form-card .form-sub{font-size:.85rem;color:var(--text-light);margin-bottom:20px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:.8rem;font-weight:600;margin-bottom:4px;color:var(--text)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 14px;border:2px solid var(--cream);border-radius:var(--radius-sm);font-family:var(--font-b);font-size:.88rem;background:var(--cream);color:var(--text);transition:border-color .2s,background .2s;outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--cyan);background:var(--white)}
+.form-group textarea{resize:vertical;min-height:80px}
+.form-submit{width:100%;padding:14px;border-radius:999px;background:var(--cyan);color:#fff;font-weight:700;font-size:.95rem;font-family:var(--font-b);border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;margin-top:4px}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(59,189,208,.35)}
+
+/* FOOTER */
+.footer{background:var(--navy-dark);color:rgba(255,255,255,.7);padding:48px 0 24px}
+.footer-inner{display:grid;grid-template-columns:1fr;gap:32px}
+@media(min-width:768px){.footer-inner{grid-template-columns:2fr 1fr 1fr}}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.footer-logo{height:40px;width:auto;object-fit:contain}
+.footer-brand-name{font-family:var(--font-d);font-weight:700;font-size:1rem;color:#fff}
+.footer p{font-size:.85rem;line-height:1.6}
+.footer h4{font-family:var(--font-d);font-weight:600;font-size:.95rem;color:#fff;margin-bottom:12px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:.85rem;transition:color .2s}
+.footer-links a:hover{color:var(--cyan-light)}
+.footer-contact-list{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:.85rem}
+.footer-contact-list a{transition:color .2s}
+.footer-contact-list a:hover{color:var(--cyan-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:32px;padding-top:16px;text-align:center;font-size:.75rem;color:rgba(255,255,255,.4)}
+
+/* MOBILE STICKY BAR */
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--navy);display:flex;box-shadow:0 -4px 20px rgba(0,0,0,.15)}
+@media(min-width:992px){.sticky-bar{display:none}}
+.sticky-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;font-weight:700;font-size:.88rem;font-family:var(--font-b);color:#fff;transition:background .2s}
+.sticky-bar a:first-child{background:var(--cyan)}
+.sticky-bar a:last-child{background:var(--navy)}
+.sticky-bar a:hover{filter:brightness(1.1)}
+.sticky-bar svg{width:18px;height:18px}
+body{padding-bottom:52px}
+@media(min-width:992px){body{padding-bottom:0}}
+</style>
+</head>
+<body>
+
+<!-- SPLASH -->
+<div class="splash" id="splash">
+  <img src="images/logo.png" alt="Marquez Lores Dental" class="splash-logo" width="90" height="90">
+  <span class="splash-name">Marquez Lores Dental</span>
+</div>
+
+<!-- MESH BG -->
+<div class="mesh-bg"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <img src="images/logo.png" alt="Marquez Lores Dental" class="brand-logo" width="48" height="48">
+      <span class="brand-name">Marquez Lores Dental</span>
+    </a>
+    <div class="nav-links">
+      <a href="#servicios" data-t="nav_services">Servicios</a>
+      <a href="#doctora" data-t="nav_doctor">Doctora</a>
+      <a href="#consultorio" data-t="nav_office">Consultorio</a>
+      <a href="#contacto" data-t="nav_contact">Contacto</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-opt" data-lang="en">EN</button>
+        <button class="lang-opt active" data-lang="es">ES</button>
+      </div>
+      <a href="tel:+13058260906" class="nav-cta-btn" data-t="nav_call">Llamar ahora</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#servicios" data-t="nav_services">Servicios</a>
+  <a href="#doctora" data-t="nav_doctor">Doctora</a>
+  <a href="#consultorio" data-t="nav_office">Consultorio</a>
+  <a href="#contacto" data-t="nav_contact">Contacto</a>
+  <a href="tel:+13058260906" class="menu-cta" data-t="nav_call">Llamar ahora</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content container">
+    <div class="hero-text">
+      <div class="hero-badge" data-t="hero_badge">Clínica Dental en Hialeah</div>
+      <h1 data-t="hero_h1">Todo lo que su sonrisa necesita, <em data-t="hero_em">en un solo lugar.</em></h1>
+      <p class="hero-sub" data-t="hero_sub">Odontología general, ortodoncia, endodoncia e implantes. Todos los procedimientos se realizan en nuestro consultorio.</p>
+      <div class="hero-ctas">
+        <a href="tel:+13058260906" class="btn-primary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span data-t="hero_cta_call">(305) 826-0906</span>
+        </a>
+        <a href="#contacto" class="btn-secondary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span data-t="hero_cta_appt">Agendar cita</span>
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span data-t="trust_all">Todos los procedimientos en consultorio</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          <span data-t="trust_esp">Hablamos Español</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <img src="images/dra.jpg" alt="Dra. Felicita Marquez Iglesias" class="hero-photo" width="340" height="420">
+      <div class="hero-float">
+        <div class="hero-float-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="hero-float-text">
+          <strong data-t="float_title">4 Especialidades</strong>
+          <span data-t="float_sub">Un solo consultorio</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip reveal">
+  <div class="trust-strip-inner container">
+    <div class="trust-strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span data-t="strip_1">Consultorio propio en Hialeah</span>
+    </div>
+    <div class="trust-strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+      <span data-t="strip_2">Se habla español</span>
+    </div>
+    <div class="trust-strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span data-t="strip_3">Todo en un solo lugar</span>
+    </div>
+    <div class="trust-strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span data-t="strip_4">Citas disponibles</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section services" id="servicios">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label" data-t="srv_label">Servicios</span>
+      <h2 class="section-title" data-t="srv_title">Cuidado dental completo</h2>
+      <p class="section-sub" data-t="srv_sub">Desde limpiezas de rutina hasta implantes, resolvemos todo en nuestro consultorio.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 4 6 4 10c0 4 3 8 5 11 .5.8 1.3 1 2 1h2c.7 0 1.5-.2 2-1 2-3 5-7 5-11 0-4-4-8-8-8z"/><line x1="10" y1="12" x2="10" y2="16"/><line x1="14" y1="12" x2="14" y2="16"/></svg>
+        </div>
+        <h3 data-t="srv1_t">Odontología General</h3>
+        <p data-t="srv1_p">Limpiezas, restauraciones, extracciones y cuidado preventivo para toda la familia.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        </div>
+        <h3 data-t="srv2_t">Ortodoncia</h3>
+        <p data-t="srv2_p">Brackets y tratamientos de alineación para una sonrisa recta y saludable.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3 data-t="srv3_t">Endodoncia</h3>
+        <p data-t="srv3_p">Tratamiento de conducto para aliviar el dolor y salvar su pieza dental.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 data-t="srv4_t">Implantes Dentales</h3>
+        <p data-t="srv4_p">Reemplazo de piezas perdidas con implantes que lucen y funcionan como dientes naturales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HABLAMOS ESPAÑOL -->
+<div class="espanol-banner reveal">
+  <div class="container">
+    <h2 data-t="esp_title">Hablamos Español</h2>
+    <p data-t="esp_sub">Nos comunicamos con usted en su idioma para que se sienta cómodo y confiado durante todo su tratamiento.</p>
+  </div>
+</div>
+
+<!-- ABOUT / DOCTORA -->
+<section class="section about" id="doctora">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal">
+        <img src="images/dra.jpg" alt="Dra. Felicita Marquez Iglesias" class="about-photo" width="400" height="533">
+        <div class="about-accent"></div>
+      </div>
+      <div class="about-text reveal">
+        <span class="section-label" data-t="doc_label">Su dentista</span>
+        <h2 data-t="doc_title">Dra. Felicita Marquez Iglesias</h2>
+        <p data-t="doc_p1">Odontóloga general con formación en ortodoncia, endodoncia e implantes. Realiza todos los procedimientos en su consultorio de Hialeah, brindando atención personalizada y cercana.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <span data-t="doc_f1">Todos los procedimientos en consultorio</span>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <span data-t="doc_f2">Atención bilingüe: español e inglés</span>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <span data-t="doc_f3">Cuidado para toda la familia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery" id="consultorio">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <span class="section-label" data-t="gal_label">Consultorio</span>
+      <h2 class="section-title" data-t="gal_title">Conozca nuestras instalaciones</h2>
+    </div>
+    <div class="gallery-grid" style="margin-top:40px">
+      <div class="gallery-item reveal">
+        <img src="images/frente.jpg" alt="Frente del consultorio" width="400" height="300">
+        <div class="gallery-caption" data-t="gal_c1">Frente del consultorio</div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="images/consultorio.png" alt="Consultorio" width="400" height="300">
+        <div class="gallery-caption" data-t="gal_c2">Consultorio dental</div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="images/sala-espera.png" alt="Sala de espera" width="400" height="300">
+        <div class="gallery-caption" data-t="gal_c3">Sala de espera</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band reveal">
+  <div class="container">
+    <h2 data-t="cta_title">Agende su cita hoy</h2>
+    <p data-t="cta_sub">Llámenos o complete el formulario. Responderemos a la brevedad.</p>
+    <div class="cta-band-btns">
+      <a href="tel:+13058260906" class="btn-primary">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <span data-t="cta_call">(305) 826-0906</span>
+      </a>
+      <a href="#contacto" class="btn-secondary" data-t="cta_form">Completar formulario</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="section contact" id="contacto">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="section-label" data-t="ct_label">Contacto</span>
+        <h2 class="section-title" data-t="ct_title">Estamos para ayudarle</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <h4 data-t="ct_addr_h">Dirección</h4>
+              <p>4890 W 3rd Ave, Hialeah, FL 33012</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <h4 data-t="ct_phone_h">Teléfono</h4>
+              <a href="tel:+13058260906">(305) 826-0906</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <h4>Email</h4>
+              <a href="mailto:marquezlores4@gmail.com">marquezlores4@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3591.2!2d-80.305!3d25.856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b9a2d8a8f16b%3A0x0!2s4890+W+3rd+Ave%2C+Hialeah%2C+FL+33012!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" title="Marquez Lores Dental location"></iframe>
+      </div>
+      <div class="reveal">
+        <div class="form-card">
+          <h3 data-t="form_title">Solicite su cita</h3>
+          <p class="form-sub" data-t="form_sub">Complete el formulario y nos comunicaremos con usted.</p>
+          <form id="contactForm" onsubmit="return false">
+            <div class="form-group">
+              <label for="fname" data-t="form_name">Nombre</label>
+              <input type="text" id="fname" required>
+            </div>
+            <div class="form-group">
+              <label for="fphone" data-t="form_phone">Teléfono</label>
+              <input type="tel" id="fphone" required>
+            </div>
+            <div class="form-group">
+              <label for="femail">Email</label>
+              <input type="email" id="femail">
+            </div>
+            <div class="form-group">
+              <label for="fservice" data-t="form_service">Servicio</label>
+              <select id="fservice">
+                <option value="" data-t="form_select">Seleccione un servicio</option>
+                <option value="general" data-t="srv1_t">Odontología General</option>
+                <option value="ortodoncia" data-t="srv2_t">Ortodoncia</option>
+                <option value="endodoncia" data-t="srv3_t">Endodoncia</option>
+                <option value="implantes" data-t="srv4_t">Implantes Dentales</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fmsg" data-t="form_msg">Mensaje (opcional)</label>
+              <textarea id="fmsg" rows="3"></textarea>
+            </div>
+            <button type="submit" class="form-submit" data-t="form_btn">Enviar solicitud</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Marquez Lores Dental" class="footer-logo" width="40" height="40">
+          <span class="footer-brand-name">Marquez Lores Dental</span>
+        </div>
+        <p data-t="footer_desc">Clínica dental en Hialeah, FL. Odontología general, ortodoncia, endodoncia e implantes — todos los procedimientos en un solo lugar.</p>
+      </div>
+      <div>
+        <h4 data-t="footer_nav">Navegación</h4>
+        <ul class="footer-links">
+          <li><a href="#servicios" data-t="nav_services">Servicios</a></li>
+          <li><a href="#doctora" data-t="nav_doctor">Doctora</a></li>
+          <li><a href="#consultorio" data-t="nav_office">Consultorio</a></li>
+          <li><a href="#contacto" data-t="nav_contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-t="ct_label">Contacto</h4>
+        <ul class="footer-contact-list">
+          <li>4890 W 3rd Ave, Hialeah, FL 33012</li>
+          <li><a href="tel:+13058260906">(305) 826-0906</a></li>
+          <li><a href="mailto:marquezlores4@gmail.com">marquezlores4@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2024 Marquez Lores Dental. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="sticky-bar">
+  <a href="tel:+13058260906">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <span data-t="sticky_call">Llamar</span>
+  </a>
+  <a href="#contacto">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <span data-t="sticky_appt">Agendar cita</span>
+  </a>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+/* --- TRANSLATIONS --- */
+var T={
+  es:{
+    nav_services:'Servicios',nav_doctor:'Doctora',nav_office:'Consultorio',nav_contact:'Contacto',
+    nav_call:'Llamar ahora',
+    hero_badge:'Clínica Dental en Hialeah',
+    hero_h1:'Todo lo que su sonrisa necesita, ',hero_em:'en un solo lugar.',
+    hero_sub:'Odontología general, ortodoncia, endodoncia e implantes. Todos los procedimientos se realizan en nuestro consultorio.',
+    hero_cta_call:'(305) 826-0906',hero_cta_appt:'Agendar cita',
+    trust_all:'Todos los procedimientos en consultorio',trust_esp:'Hablamos Español',
+    float_title:'4 Especialidades',float_sub:'Un solo consultorio',
+    strip_1:'Consultorio propio en Hialeah',strip_2:'Se habla español',strip_3:'Todo en un solo lugar',strip_4:'Citas disponibles',
+    srv_label:'Servicios',srv_title:'Cuidado dental completo',
+    srv_sub:'Desde limpiezas de rutina hasta implantes, resolvemos todo en nuestro consultorio.',
+    srv1_t:'Odontología General',srv1_p:'Limpiezas, restauraciones, extracciones y cuidado preventivo para toda la familia.',
+    srv2_t:'Ortodoncia',srv2_p:'Brackets y tratamientos de alineación para una sonrisa recta y saludable.',
+    srv3_t:'Endodoncia',srv3_p:'Tratamiento de conducto para aliviar el dolor y salvar su pieza dental.',
+    srv4_t:'Implantes Dentales',srv4_p:'Reemplazo de piezas perdidas con implantes que lucen y funcionan como dientes naturales.',
+    esp_title:'Hablamos Español',esp_sub:'Nos comunicamos con usted en su idioma para que se sienta cómodo y confiado durante todo su tratamiento.',
+    doc_label:'Su dentista',doc_title:'Dra. Felicita Marquez Iglesias',
+    doc_p1:'Odontóloga general con formación en ortodoncia, endodoncia e implantes. Realiza todos los procedimientos en su consultorio de Hialeah, brindando atención personalizada y cercana.',
+    doc_f1:'Todos los procedimientos en consultorio',doc_f2:'Atención bilingüe: español e inglés',doc_f3:'Cuidado para toda la familia',
+    gal_label:'Consultorio',gal_title:'Conozca nuestras instalaciones',
+    gal_c1:'Frente del consultorio',gal_c2:'Consultorio dental',gal_c3:'Sala de espera',
+    cta_title:'Agende su cita hoy',cta_sub:'Llámenos o complete el formulario. Responderemos a la brevedad.',
+    cta_call:'(305) 826-0906',cta_form:'Completar formulario',
+    ct_label:'Contacto',ct_title:'Estamos para ayudarle',ct_addr_h:'Dirección',ct_phone_h:'Teléfono',
+    form_title:'Solicite su cita',form_sub:'Complete el formulario y nos comunicaremos con usted.',
+    form_name:'Nombre',form_phone:'Teléfono',form_service:'Servicio',form_select:'Seleccione un servicio',
+    form_msg:'Mensaje (opcional)',form_btn:'Enviar solicitud',
+    footer_desc:'Clínica dental en Hialeah, FL. Odontología general, ortodoncia, endodoncia e implantes — todos los procedimientos en un solo lugar.',
+    footer_nav:'Navegación',
+    sticky_call:'Llamar',sticky_appt:'Agendar cita'
+  },
+  en:{
+    nav_services:'Services',nav_doctor:'Doctor',nav_office:'Office',nav_contact:'Contact',
+    nav_call:'Call Now',
+    hero_badge:'Dental Clinic in Hialeah',
+    hero_h1:'Everything your smile needs, ',hero_em:'in one place.',
+    hero_sub:'General dentistry, orthodontics, endodontics, and implants. All procedures performed in our office.',
+    hero_cta_call:'(305) 826-0906',hero_cta_appt:'Book Appointment',
+    trust_all:'All procedures in-office',trust_esp:'Se Habla Español',
+    float_title:'4 Specialties',float_sub:'One office',
+    strip_1:'Our own office in Hialeah',strip_2:'Se habla español',strip_3:'Everything in one place',strip_4:'Appointments available',
+    srv_label:'Services',srv_title:'Complete dental care',
+    srv_sub:'From routine cleanings to implants, we handle everything in our office.',
+    srv1_t:'General Dentistry',srv1_p:'Cleanings, restorations, extractions, and preventive care for the whole family.',
+    srv2_t:'Orthodontics',srv2_p:'Braces and alignment treatments for a straight, healthy smile.',
+    srv3_t:'Endodontics',srv3_p:'Root canal therapy to relieve pain and save your natural tooth.',
+    srv4_t:'Dental Implants',srv4_p:'Replacement of missing teeth with implants that look and function like natural teeth.',
+    esp_title:'We Speak Spanish',esp_sub:'We communicate with you in your language so you feel comfortable and confident throughout your treatment.',
+    doc_label:'Your dentist',doc_title:'Dr. Felicita Marquez Iglesias',
+    doc_p1:'General dentist with training in orthodontics, endodontics, and implants. All procedures are performed at her Hialeah office, providing personalized and attentive care.',
+    doc_f1:'All procedures in-office',doc_f2:'Bilingual care: Spanish & English',doc_f3:'Care for the whole family',
+    gal_label:'Office',gal_title:'Visit our facilities',
+    gal_c1:'Office entrance',gal_c2:'Dental office',gal_c3:'Waiting room',
+    cta_title:'Book your appointment today',cta_sub:'Call us or fill out the form. We\'ll get back to you promptly.',
+    cta_call:'(305) 826-0906',cta_form:'Fill out form',
+    ct_label:'Contact',ct_title:'We\'re here to help',ct_addr_h:'Address',ct_phone_h:'Phone',
+    form_title:'Request your appointment',form_sub:'Fill out the form and we\'ll contact you.',
+    form_name:'Name',form_phone:'Phone',form_service:'Service',form_select:'Select a service',
+    form_msg:'Message (optional)',form_btn:'Send request',
+    footer_desc:'Dental clinic in Hialeah, FL. General dentistry, orthodontics, endodontics, and implants — all procedures in one place.',
+    footer_nav:'Navigation',
+    sticky_call:'Call',sticky_appt:'Book Appointment'
+  }
+};
+var lang='es';
+
+function applyLang(l){
+  lang=l;
+  document.querySelectorAll('[data-t]').forEach(function(el){
+    var k=el.getAttribute('data-t');
+    if(T[l]&&T[l][k]){
+      if(el.tagName==='INPUT'||el.tagName==='TEXTAREA')el.placeholder=T[l][k];
+      else el.textContent=T[l][k];
+    }
+  });
+  document.documentElement.lang=l;
+  document.querySelectorAll('.lang-opt').forEach(function(b){
+    b.classList.toggle('active',b.getAttribute('data-lang')===l);
+  });
+}
+
+document.querySelectorAll('.lang-opt').forEach(function(b){
+  b.addEventListener('click',function(){applyLang(this.getAttribute('data-lang'));});
+});
+
+/* --- SPLASH --- */
+var splash=document.getElementById('splash');
+if(splash){
+  var t1=setTimeout(function(){splash.classList.add('done')},2200);
+  splash.addEventListener('click',function(){clearTimeout(t1);splash.classList.add('done')});
+}
+
+/* --- NAV SCROLL --- */
+var nav=document.getElementById('nav');
+function checkScroll(){if(nav)nav.classList.toggle('scrolled',window.scrollY>40)}
+window.addEventListener('scroll',checkScroll,{passive:true});
+checkScroll();
+
+/* --- BURGER --- */
+var burger=document.getElementById('burger'),mm=document.getElementById('mobileMenu');
+if(burger&&mm){
+  burger.addEventListener('click',function(){
+    burger.classList.toggle('open');mm.classList.toggle('open');
+    document.body.style.overflow=mm.classList.contains('open')?'hidden':'';
+  });
+  mm.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      burger.classList.remove('open');mm.classList.remove('open');
+      document.body.style.overflow='';
+    });
+  });
+}
+
+/* --- REVEAL --- */
+var mql=window.matchMedia('(prefers-reduced-motion: reduce)');
+if(!mql.matches){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+  },{threshold:0.04,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  setTimeout(function(){
+    document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){
+      var r=el.getBoundingClientRect();
+      if(r.top<window.innerHeight+100)el.classList.add('visible');
+    });
+  },2600);
+}else{
+  document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible')});
+}
+
+/* --- FORM --- */
+var form=document.getElementById('contactForm');
+if(form){
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=form.querySelector('.form-submit');
+    btn.textContent=lang==='es'?'¡Enviado!':'Sent!';
+    btn.style.background='#22c55e';
+    setTimeout(function(){
+      btn.textContent=T[lang].form_btn;
+      btn.style.background='';
+      form.reset();
+    },2500);
+  });
+}
+
+})();
+</script>
+</body>
+</html>
