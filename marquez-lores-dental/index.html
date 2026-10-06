@@ -20,14 +20,7 @@
   --ease:cubic-bezier(.4,0,.2,1);--shadow:0 4px 24px rgba(30,58,95,.08);
   --shadow-lg:0 12px 40px rgba(30,58,95,.12);--radius:16px;--radius-sm:10px;
 }
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --cream:#0D1B24;--warm:#132A36;--white:#162D3A;--text:#E0EEF4;--text-light:#8AABB8;
-  --shadow:0 4px 24px rgba(0,0,0,.25);--shadow-lg:0 12px 40px rgba(0,0,0,.35);
-}}
-:root[data-theme="dark"]{
-  --cream:#0D1B24;--warm:#132A36;--white:#162D3A;--text:#E0EEF4;--text-light:#8AABB8;
-  --shadow:0 4px 24px rgba(0,0,0,.25);--shadow-lg:0 12px 40px rgba(0,0,0,.35);
-}
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{font-family:var(--font-b);color:var(--text);background:var(--cream);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
@@ -54,7 +47,7 @@ a{color:inherit;text-decoration:none}
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 0;transition:background .3s,box-shadow .3s,padding .3s}
 .nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(16px);box-shadow:var(--shadow);padding:8px 0}
-@media(prefers-color-scheme:dark){.nav.scrolled{background:rgba(13,27,36,.95)}}
+
 .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:0 20px}
 @media(min-width:768px){.nav-inner{padding:0 40px}}
 .brand{display:flex;align-items:center;gap:10px}
@@ -329,7 +322,7 @@ body{padding-bottom:52px}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
         <div class="hero-float-text">
-          <strong data-t="float_title">4 Especialidades</strong>
+          <strong data-t="float_title">4 Servicios</strong>
           <span data-t="float_sub">Un solo consultorio</span>
         </div>
       </div>
@@ -365,7 +358,7 @@ body{padding-bottom:52px}
     <div class="reveal">
       <span class="section-label" data-t="srv_label">Servicios</span>
       <h2 class="section-title" data-t="srv_title">Cuidado dental completo</h2>
-      <p class="section-sub" data-t="srv_sub">Desde limpiezas de rutina hasta implantes, resolvemos todo en nuestro consultorio.</p>
+      <p class="section-sub" data-t="srv_sub">Resolvemos todo en nuestro consultorio.</p>
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
@@ -373,14 +366,14 @@ body{padding-bottom:52px}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 4 6 4 10c0 4 3 8 5 11 .5.8 1.3 1 2 1h2c.7 0 1.5-.2 2-1 2-3 5-7 5-11 0-4-4-8-8-8z"/><line x1="10" y1="12" x2="10" y2="16"/><line x1="14" y1="12" x2="14" y2="16"/></svg>
         </div>
         <h3 data-t="srv1_t">Odontología General</h3>
-        <p data-t="srv1_p">Limpiezas, restauraciones, extracciones y cuidado preventivo para toda la familia.</p>
+        <p data-t="srv1_p">Cuidado preventivo y restaurativo para toda la familia.</p>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
         </div>
         <h3 data-t="srv2_t">Ortodoncia</h3>
-        <p data-t="srv2_p">Brackets y tratamientos de alineación para una sonrisa recta y saludable.</p>
+        <p data-t="srv2_p">Tratamientos de alineación para una sonrisa recta y saludable.</p>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">
@@ -419,7 +412,7 @@ body{padding-bottom:52px}
       <div class="about-text reveal">
         <span class="section-label" data-t="doc_label">Su dentista</span>
         <h2 data-t="doc_title">Dra. Felicita Marquez Iglesias</h2>
-        <p data-t="doc_p1">Odontóloga general con formación en ortodoncia, endodoncia e implantes. Realiza todos los procedimientos en su consultorio de Hialeah, brindando atención personalizada y cercana.</p>
+        <p data-t="doc_p1">Odontóloga general. Realiza todos los procedimientos en su consultorio de Hialeah.</p>
         <div class="about-features">
           <div class="about-feature">
             <div class="about-feature-icon">
@@ -520,7 +513,7 @@ body{padding-bottom:52px}
             </div>
           </div>
         </div>
-        <iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3591.2!2d-80.305!3d25.856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b9a2d8a8f16b%3A0x0!2s4890+W+3rd+Ave%2C+Hialeah%2C+FL+33012!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" title="Marquez Lores Dental location"></iframe>
+        <iframe class="contact-map" src="https://www.google.com/maps?q=4890+W+3rd+Ave,+Hialeah,+FL+33012&output=embed" allowfullscreen loading="lazy" title="Marquez Lores Dental location"></iframe>
       </div>
       <div class="reveal">
         <div class="form-card">
@@ -591,7 +584,7 @@ body{padding-bottom:52px}
       </div>
     </div>
     <div class="footer-bottom">
-      &copy; 2024 Marquez Lores Dental. All rights reserved.
+      &copy; 2026 Marquez Lores Dental. All rights reserved.
     </div>
   </div>
 </footer>
@@ -622,17 +615,17 @@ var T={
     hero_sub:'Odontología general, ortodoncia, endodoncia e implantes. Todos los procedimientos se realizan en nuestro consultorio.',
     hero_cta_call:'(305) 826-0906',hero_cta_appt:'Agendar cita',
     trust_all:'Todos los procedimientos en consultorio',trust_esp:'Hablamos Español',
-    float_title:'4 Especialidades',float_sub:'Un solo consultorio',
+    float_title:'4 Servicios',float_sub:'Un solo consultorio',
     strip_1:'Consultorio propio en Hialeah',strip_2:'Se habla español',strip_3:'Todo en un solo lugar',strip_4:'Citas disponibles',
     srv_label:'Servicios',srv_title:'Cuidado dental completo',
-    srv_sub:'Desde limpiezas de rutina hasta implantes, resolvemos todo en nuestro consultorio.',
-    srv1_t:'Odontología General',srv1_p:'Limpiezas, restauraciones, extracciones y cuidado preventivo para toda la familia.',
-    srv2_t:'Ortodoncia',srv2_p:'Brackets y tratamientos de alineación para una sonrisa recta y saludable.',
+    srv_sub:'Resolvemos todo en nuestro consultorio.',
+    srv1_t:'Odontología General',srv1_p:'Cuidado preventivo y restaurativo para toda la familia.',
+    srv2_t:'Ortodoncia',srv2_p:'Tratamientos de alineación para una sonrisa recta y saludable.',
     srv3_t:'Endodoncia',srv3_p:'Tratamiento de conducto para aliviar el dolor y salvar su pieza dental.',
     srv4_t:'Implantes Dentales',srv4_p:'Reemplazo de piezas perdidas con implantes que lucen y funcionan como dientes naturales.',
     esp_title:'Hablamos Español',esp_sub:'Nos comunicamos con usted en su idioma para que se sienta cómodo y confiado durante todo su tratamiento.',
     doc_label:'Su dentista',doc_title:'Dra. Felicita Marquez Iglesias',
-    doc_p1:'Odontóloga general con formación en ortodoncia, endodoncia e implantes. Realiza todos los procedimientos en su consultorio de Hialeah, brindando atención personalizada y cercana.',
+    doc_p1:'Odontóloga general. Realiza todos los procedimientos en su consultorio de Hialeah.',
     doc_f1:'Todos los procedimientos en consultorio',doc_f2:'Atención bilingüe: español e inglés',doc_f3:'Cuidado para toda la familia',
     gal_label:'Consultorio',gal_title:'Conozca nuestras instalaciones',
     gal_c1:'Frente del consultorio',gal_c2:'Consultorio dental',gal_c3:'Sala de espera',
@@ -654,17 +647,17 @@ var T={
     hero_sub:'General dentistry, orthodontics, endodontics, and implants. All procedures performed in our office.',
     hero_cta_call:'(305) 826-0906',hero_cta_appt:'Book Appointment',
     trust_all:'All procedures in-office',trust_esp:'Se Habla Español',
-    float_title:'4 Specialties',float_sub:'One office',
+    float_title:'4 Services',float_sub:'One office',
     strip_1:'Our own office in Hialeah',strip_2:'Se habla español',strip_3:'Everything in one place',strip_4:'Appointments available',
     srv_label:'Services',srv_title:'Complete dental care',
-    srv_sub:'From routine cleanings to implants, we handle everything in our office.',
-    srv1_t:'General Dentistry',srv1_p:'Cleanings, restorations, extractions, and preventive care for the whole family.',
-    srv2_t:'Orthodontics',srv2_p:'Braces and alignment treatments for a straight, healthy smile.',
+    srv_sub:'We handle everything in our office.',
+    srv1_t:'General Dentistry',srv1_p:'Preventive and restorative care for the whole family.',
+    srv2_t:'Orthodontics',srv2_p:'Alignment treatments for a straight, healthy smile.',
     srv3_t:'Endodontics',srv3_p:'Root canal therapy to relieve pain and save your natural tooth.',
     srv4_t:'Dental Implants',srv4_p:'Replacement of missing teeth with implants that look and function like natural teeth.',
     esp_title:'We Speak Spanish',esp_sub:'We communicate with you in your language so you feel comfortable and confident throughout your treatment.',
     doc_label:'Your dentist',doc_title:'Dr. Felicita Marquez Iglesias',
-    doc_p1:'General dentist with training in orthodontics, endodontics, and implants. All procedures are performed at her Hialeah office, providing personalized and attentive care.',
+    doc_p1:'General dentist. All procedures are performed at her Hialeah office.',
     doc_f1:'All procedures in-office',doc_f2:'Bilingual care: Spanish & English',doc_f3:'Care for the whole family',
     gal_label:'Office',gal_title:'Visit our facilities',
     gal_c1:'Office entrance',gal_c2:'Dental office',gal_c3:'Waiting room',
@@ -703,7 +696,7 @@ document.querySelectorAll('.lang-opt').forEach(function(b){
 /* --- SPLASH --- */
 var splash=document.getElementById('splash');
 if(splash){
-  var t1=setTimeout(function(){splash.classList.add('done')},2200);
+  var t1=setTimeout(function(){splash.classList.add('done')},900);
   splash.addEventListener('click',function(){clearTimeout(t1);splash.classList.add('done')});
 }
 
