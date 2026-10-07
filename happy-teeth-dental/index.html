@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Teeth Dental — Friendly Dental Care in Miami</title>
+<meta name="description" content="Happy Teeth Dental — family dentistry, cosmetic dentistry, implants, Invisalign and more in Miami, FL. Dr. Alex Rodriguez, DDS. 4.9★ on Google.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1E3A5F">
+<link rel="icon" href="images/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cyan:#22C3E0;--cyan-dark:#1BA8C4;--cyan-glow:rgba(34,195,224,.25);--cyan-pale:#D6F4FA;
+  --navy:#1E3A5F;--navy-dark:#132840;--navy-light:#2D5080;
+  --warm:#F5FBFC;--cream:#EAF7FA;--white:#FFFFFF;--text:#1A2A32;--text-light:#4A6A7A;
+  --font-d:'Nunito',system-ui,sans-serif;--font-b:'DM Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.4,0,.2,1);--bounce:cubic-bezier(.34,1.56,.64,1);
+  --shadow:0 4px 24px rgba(30,58,95,.08);--shadow-lg:0 12px 40px rgba(30,58,95,.12);
+  --radius:18px;--radius-sm:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--font-b);color:var(--text);background:var(--warm);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-d);font-weight:800;line-height:1.15}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 20px}
+@media(min-width:768px){.container{padding:0 40px}}
+
+/* SPLASH */
+.splash{position:fixed;inset:0;z-index:9999;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;transition:opacity .5s var(--ease),visibility .5s}
+.splash.done{opacity:0;visibility:hidden;pointer-events:none}
+.splash-logo{width:80px;height:80px;object-fit:contain;animation:sp-pulse 1s ease-in-out infinite alternate}
+.splash-name{font-family:var(--font-d);font-weight:800;font-size:1.1rem;color:#fff;letter-spacing:.3px;opacity:.85}
+@keyframes sp-pulse{0%{filter:drop-shadow(0 0 10px var(--cyan-glow));transform:scale(1)}100%{filter:drop-shadow(0 0 24px rgba(34,195,224,.6));transform:scale(1.05)}}
+
+/* MESH BG */
+.mesh-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.25}
+.mesh-bg::before,.mesh-bg::after{content:'';position:absolute;border-radius:50%;filter:blur(120px);animation:mesh-f 22s ease-in-out infinite alternate}
+.mesh-bg::before{width:500px;height:500px;background:radial-gradient(circle,rgba(34,195,224,.18),transparent 70%);top:-120px;right:-60px}
+.mesh-bg::after{width:400px;height:400px;background:radial-gradient(circle,rgba(30,58,95,.1),transparent 70%);bottom:-80px;left:-60px;animation-delay:-11s}
+@keyframes mesh-f{0%{transform:translate(0,0) scale(1)}100%{transform:translate(25px,20px) scale(1.06)}}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 0;transition:background .3s,box-shadow .3s,padding .3s}
+.nav.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(16px);box-shadow:var(--shadow);padding:8px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1140px;margin:0 auto;padding:0 20px}
+@media(min-width:768px){.nav-inner{padding:0 40px}}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-logo{width:auto;height:52px;object-fit:contain;transition:transform .3s var(--ease)}
+.brand:hover .brand-logo{transform:scale(1.05)}
+.brand-name{font-family:var(--font-d);font-weight:800;font-size:.95rem;color:#fff;transition:color .3s}
+.nav.scrolled .brand-name{color:var(--navy)}
+.nav-links{display:none;gap:6px;align-items:center}
+@media(min-width:1024px){.nav-links{display:flex}}
+.nav-links a{font-size:.84rem;font-weight:600;padding:8px 14px;border-radius:999px;transition:background .2s,color .2s;color:rgba(255,255,255,.85)}
+.nav.scrolled .nav-links a{color:var(--text-light)}
+.nav-links a:hover{background:var(--cyan-pale);color:var(--navy)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.lang-toggle{display:flex;border:2px solid var(--cyan);border-radius:999px;overflow:hidden;font-size:.72rem;font-weight:700;font-family:var(--font-b)}
+.lang-opt{padding:4px 9px;cursor:pointer;transition:all .2s;color:var(--cyan);background:transparent;border:none;letter-spacing:.5px}
+.lang-opt.active{background:var(--cyan);color:#fff}
+.nav-cta-btn{display:none;padding:9px 18px;border-radius:999px;background:var(--cyan);color:#fff;font-weight:700;font-size:.82rem;font-family:var(--font-b);border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+@media(min-width:1024px){.nav-cta-btn{display:inline-flex}}
+.nav-cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px var(--cyan-glow)}
+.burger{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+@media(min-width:1024px){.burger{display:none}}
+.burger span{display:block;width:22px;height:2.5px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s}
+.nav.scrolled .burger span{background:var(--navy)}
+.burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* MOBILE MENU */
+.mobile-menu{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99;background:rgba(30,58,95,.97);backdrop-filter:blur(20px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{font-family:var(--font-d);font-size:1.3rem;font-weight:700;color:#fff;padding:10px 24px;border-radius:999px;transition:background .2s}
+.mobile-menu a:hover{background:rgba(34,195,224,.2)}
+.mobile-menu .menu-cta{margin-top:8px;padding:14px 32px;background:var(--cyan);border-radius:999px;font-family:var(--font-b);font-weight:700;font-size:1rem;color:#fff;transition:transform .2s}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:120px 0 80px}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(140deg,var(--navy) 0%,#163050 35%,var(--cyan-dark) 100%);z-index:0}
+.hero-bg::after{content:'';position:absolute;inset:0;background:url('images/equipo.jpg') center/cover no-repeat;opacity:.07;mix-blend-mode:luminosity}
+.hero-pattern{position:absolute;inset:0;z-index:1;opacity:.05;background-image:radial-gradient(circle at 20% 30%,rgba(255,255,255,.12) 1px,transparent 1px);background-size:36px 36px}
+.hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+@media(min-width:768px){.hero-content{grid-template-columns:1.1fr 1fr;gap:50px}}
+.hero-text{color:#fff}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:999px;background:rgba(34,195,224,.15);border:1px solid rgba(34,195,224,.3);font-size:.78rem;font-weight:700;color:var(--cyan);margin-bottom:18px;font-family:var(--font-b)}
+.hero-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--cyan);animation:badge-p 2s infinite}
+@keyframes badge-p{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;margin-bottom:16px;line-height:1.1}
+.hero h1 em{font-style:normal;color:var(--cyan);font-weight:800}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.8);margin-bottom:30px;max-width:480px;line-height:1.7}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.btn-p{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;background:var(--cyan);color:#fff;font-weight:700;font-size:.95rem;font-family:var(--font-b);border:none;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 8px 25px var(--cyan-glow)}
+.btn-s{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.25);color:#fff;font-weight:600;font-size:.95rem;font-family:var(--font-b);cursor:pointer;transition:transform .25s var(--ease),background .2s}
+.btn-s:hover{transform:translateY(-3px);background:rgba(255,255,255,.18)}
+.hero-stars{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.stars-badge{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:6px 14px}
+.stars-badge svg{width:16px;height:16px;fill:#FBBF24}
+.stars-text{font-size:.82rem;color:rgba(255,255,255,.85);font-weight:600}
+
+/* HERO PHOTO */
+.hero-photo-wrap{position:relative;display:flex;justify-content:center}
+.hero-photo{width:280px;height:350px;object-fit:cover;object-position:top;border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,.3);border:4px solid rgba(255,255,255,.1)}
+@media(min-width:768px){.hero-photo{width:340px;height:420px}}
+.hero-float{position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.12);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:12px 22px;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.hero-float-ico{width:36px;height:36px;background:var(--cyan);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.hero-float-ico svg{width:20px;height:20px;color:#fff}
+.hero-float-txt{color:#fff;font-size:.8rem;line-height:1.3}
+.hero-float-txt strong{display:block;font-size:1rem;font-family:var(--font-d)}
+
+/* TRUST STRIP */
+.trust-strip{background:var(--white);padding:26px 0;border-bottom:1px solid rgba(34,195,224,.1)}
+.trust-strip-inner{display:flex;flex-wrap:wrap;justify-content:center;gap:20px 36px}
+.trust-strip-item{display:flex;align-items:center;gap:10px;font-size:.86rem;font-weight:600;color:var(--navy)}
+.trust-strip-item svg{width:22px;height:22px;color:var(--cyan);flex-shrink:0}
+
+/* SECTION BASE */
+.section{padding:80px 0}
+@media(min-width:768px){.section{padding:100px 0}}
+.section-label{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--cyan);margin-bottom:10px;font-family:var(--font-b)}
+.section-title{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:14px;color:var(--text)}
+.section-sub{font-size:1rem;color:var(--text-light);max-width:560px;margin-bottom:40px}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* SERVICES */
+.services{background:var(--cream)}
+.services-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:600px){.services-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.services-grid{grid-template-columns:repeat(3,1fr)}}
+.svc-card{background:var(--white);border-radius:var(--radius);padding:28px 22px;text-align:center;transition:transform .3s var(--ease),box-shadow .3s;cursor:default;border:1px solid rgba(34,195,224,.06)}
+.svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.svc-ico{width:52px;height:52px;background:var(--cyan-pale);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;transition:background .3s,transform .3s}
+.svc-card:hover .svc-ico{background:var(--cyan);transform:scale(1.08)}
+.svc-ico svg{width:26px;height:26px;color:var(--cyan);transition:color .3s}
+.svc-card:hover .svc-ico svg{color:#fff}
+.svc-card h3{font-size:.95rem;margin-bottom:4px;font-weight:700}
+
+/* RATING SECTION */
+.rating-sec{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%);padding:50px 0;text-align:center;color:#fff;position:relative;overflow:hidden}
+.rating-sec::before{content:'';position:absolute;top:-40%;left:60%;width:350px;height:350px;background:radial-gradient(circle,rgba(34,195,224,.15),transparent 70%);border-radius:50%}
+.rating-big{font-size:clamp(3rem,6vw,4.5rem);font-weight:900;font-family:var(--font-d);position:relative;line-height:1}
+.rating-stars{display:flex;justify-content:center;gap:4px;margin:10px 0 6px}
+.rating-stars svg{width:28px;height:28px;fill:#FBBF24}
+.rating-count{font-size:1rem;opacity:.8;font-weight:500;position:relative}
+
+/* HABLAMOS ESPAÑOL */
+.esp-banner{background:linear-gradient(135deg,var(--cyan) 0%,var(--cyan-dark) 100%);padding:48px 0;text-align:center;color:#fff}
+.esp-banner h2{font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:8px}
+.esp-banner p{font-size:1rem;opacity:.9;max-width:500px;margin:0 auto}
+
+/* ABOUT / DOCTOR */
+.about{background:var(--warm)}
+.about-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+@media(min-width:768px){.about-grid{grid-template-columns:1fr 1.15fr;gap:50px}}
+.about-photo-wrap{position:relative}
+.about-photo{width:100%;max-width:380px;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:20px;box-shadow:var(--shadow-lg)}
+.about-accent{position:absolute;bottom:-14px;right:-14px;width:130px;height:130px;background:var(--cyan-pale);border-radius:20px;z-index:-1}
+.about-text h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:14px}
+.about-text p{color:var(--text-light);margin-bottom:14px;line-height:1.7;font-size:.95rem}
+.about-features{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.about-ft{display:flex;align-items:flex-start;gap:12px;font-size:.9rem}
+.about-ft-ico{width:28px;height:28px;background:var(--cyan);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.about-ft-ico svg{width:16px;height:16px;color:#fff}
+
+/* TEAM */
+.team{background:var(--cream)}
+.team-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:600px){.team-grid{grid-template-columns:1fr 1fr}}
+.team-img{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;position:relative}
+.team-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.team-img:hover img{transform:scale(1.04)}
+.team-caption{position:absolute;bottom:0;left:0;right:0;padding:14px;background:linear-gradient(transparent,rgba(0,0,0,.55));color:#fff;font-size:.85rem;font-weight:600;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.team-img:hover .team-caption{opacity:1;transform:none}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%);padding:60px 0;text-align:center;color:#fff;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;top:-50%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(34,195,224,.1),transparent 70%);border-radius:50%}
+.cta-band h2{font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:10px;position:relative}
+.cta-band p{font-size:1rem;opacity:.8;margin-bottom:26px;position:relative}
+.cta-band-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;position:relative}
+
+/* CONTACT */
+.contact{background:var(--warm)}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:40px}
+@media(min-width:768px){.contact-grid{grid-template-columns:1fr 1fr;gap:50px}}
+.contact-info{display:flex;flex-direction:column;gap:18px}
+.ct-item{display:flex;align-items:flex-start;gap:14px}
+.ct-ico{width:44px;height:44px;background:var(--cyan-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ct-ico svg{width:22px;height:22px;color:var(--cyan)}
+.ct-txt h4{font-size:.95rem;margin-bottom:2px;font-weight:700}
+.ct-txt p,.ct-txt a{font-size:.88rem;color:var(--text-light)}
+.ct-txt a:hover{color:var(--cyan)}
+.ct-map{width:100%;height:200px;border-radius:var(--radius);border:0;margin-top:8px}
+
+/* FORM */
+.form-card{background:var(--white);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow)}
+.form-card h3{font-size:1.15rem;margin-bottom:4px}
+.form-card .form-sub{font-size:.85rem;color:var(--text-light);margin-bottom:18px}
+.fg{margin-bottom:14px}
+.fg label{display:block;font-size:.8rem;font-weight:600;margin-bottom:4px;color:var(--text)}
+.fg input,.fg select,.fg textarea{width:100%;padding:10px 14px;border:2px solid var(--cream);border-radius:var(--radius-sm);font-family:var(--font-b);font-size:.88rem;background:var(--cream);color:var(--text);transition:border-color .2s,background .2s;outline:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--cyan);background:var(--white)}
+.fg textarea{resize:vertical;min-height:80px}
+.form-btn{width:100%;padding:14px;border-radius:999px;background:var(--cyan);color:#fff;font-weight:700;font-size:.95rem;font-family:var(--font-b);border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;margin-top:4px}
+.form-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px var(--cyan-glow)}
+
+/* FOOTER */
+.footer{background:var(--navy-dark);color:rgba(255,255,255,.7);padding:48px 0 22px}
+.footer-inner{display:grid;grid-template-columns:1fr;gap:30px}
+@media(min-width:768px){.footer-inner{grid-template-columns:2fr 1fr 1fr}}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.footer-logo{height:40px;width:auto;object-fit:contain}
+.footer-brand-name{font-family:var(--font-d);font-weight:800;font-size:1rem;color:#fff}
+.footer p{font-size:.85rem;line-height:1.6}
+.footer h4{font-family:var(--font-d);font-weight:700;font-size:.95rem;color:#fff;margin-bottom:12px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:.85rem;transition:color .2s}
+.footer-links a:hover{color:var(--cyan)}
+.footer-ct{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:.85rem}
+.footer-ct a{transition:color .2s}
+.footer-ct a:hover{color:var(--cyan)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:30px;padding-top:14px;text-align:center;font-size:.75rem;color:rgba(255,255,255,.4)}
+
+/* MOBILE STICKY BAR */
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--navy);display:flex;box-shadow:0 -4px 20px rgba(0,0,0,.15)}
+@media(min-width:1024px){.sticky-bar{display:none}}
+.sticky-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;font-weight:700;font-size:.88rem;font-family:var(--font-b);color:#fff;transition:background .2s}
+.sticky-bar a:first-child{background:var(--cyan)}
+.sticky-bar a:last-child{background:var(--navy)}
+.sticky-bar a:hover{filter:brightness(1.1)}
+.sticky-bar svg{width:18px;height:18px}
+body{padding-bottom:52px}
+@media(min-width:1024px){body{padding-bottom:0}}
+</style>
+</head>
+<body>
+
+<!-- SPLASH -->
+<div class="splash" id="splash">
+  <img src="images/logo.png" alt="Happy Teeth Dental" class="splash-logo" width="80" height="80">
+  <span class="splash-name">Happy Teeth Dental</span>
+</div>
+
+<!-- MESH BG -->
+<div class="mesh-bg"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <img src="images/logo.png" alt="Happy Teeth Dental" class="brand-logo" width="52" height="52">
+      <span class="brand-name">Happy Teeth Dental</span>
+    </a>
+    <div class="nav-links">
+      <a href="#services" data-t="nav_services">Services</a>
+      <a href="#doctor" data-t="nav_doctor">Doctor</a>
+      <a href="#team" data-t="nav_team">Team</a>
+      <a href="#contact" data-t="nav_contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-opt active" data-lang="en">EN</button>
+        <button class="lang-opt" data-lang="es">ES</button>
+      </div>
+      <a href="tel:+13052664544" class="nav-cta-btn" data-t="nav_call">Call Now</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" data-t="nav_services">Services</a>
+  <a href="#doctor" data-t="nav_doctor">Doctor</a>
+  <a href="#team" data-t="nav_team">Team</a>
+  <a href="#contact" data-t="nav_contact">Contact</a>
+  <a href="tel:+13052664544" class="menu-cta" data-t="nav_call">Call Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content container">
+    <div class="hero-text">
+      <div class="hero-badge" data-t="hero_badge">Friendly Dental Care in Miami</div>
+      <h1 data-t="hero_h1">Your family deserves a smile they <em data-t="hero_em">love.</em></h1>
+      <p class="hero-sub" data-t="hero_sub">General dentistry, cosmetic treatments, Invisalign, implants and more — all under one roof on SW 8th Street.</p>
+      <div class="hero-ctas">
+        <a href="tel:+13052664544" class="btn-p">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>(305) 266-4544</span>
+        </a>
+        <a href="#contact" class="btn-s">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span data-t="hero_cta_appt">Book Appointment</span>
+        </a>
+      </div>
+      <div class="hero-stars">
+        <div class="stars-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span class="stars-text" data-t="hero_stars">4.9 · 254 reviews on Google</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <img src="images/dr.png" alt="Dr. Alex Rodriguez, DDS" class="hero-photo" width="340" height="420">
+      <div class="hero-float">
+        <div class="hero-float-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="hero-float-txt">
+          <strong data-t="float_title">9 Services</strong>
+          <span data-t="float_sub">One office</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip reveal">
+  <div class="trust-strip-inner container">
+    <div class="trust-strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      <span data-t="strip_1">Family dentistry</span>
+    </div>
+    <div class="trust-strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+      <span data-t="strip_2">Se Habla Español</span>
+    </div>
+    <div class="trust-strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span data-t="strip_3">All services in one office</span>
+    </div>
+    <div class="trust-strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <span data-t="strip_4">4.9★ on Google</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <span class="section-label" data-t="srv_label">Services</span>
+      <h2 class="section-title" data-t="srv_title">Everything your smile needs</h2>
+      <p class="section-sub" style="margin-left:auto;margin-right:auto" data-t="srv_sub">From routine care to advanced treatments, all in one place.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3 data-t="s1">Family Dentistry</h3>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 4 6 4 10c0 4 3 8 5 11 .5.8 1.3 1 2 1h2c.7 0 1.5-.2 2-1 2-3 5-7 5-11 0-4-4-8-8-8z"/><line x1="10" y1="12" x2="10" y2="16"/><line x1="14" y1="12" x2="14" y2="16"/></svg></div>
+        <h3 data-t="s2">Cleanings</h3>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+        <h3 data-t="s3">Cosmetic Dentistry</h3>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3 data-t="s4">Oral Surgery</h3>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div>
+        <h3>Invisalign</h3>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 data-t="s6">Crowns</h3>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+        <h3 data-t="s7">Bridges</h3>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+        <h3 data-t="s8">Dentures</h3>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <h3 data-t="s9">Implants</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RATING -->
+<div class="rating-sec reveal">
+  <div class="container">
+    <div class="rating-big">4.9</div>
+    <div class="rating-stars">
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <p class="rating-count" data-t="rating_count">254 reviews on Google</p>
+  </div>
+</div>
+
+<!-- HABLAMOS ESPAÑOL -->
+<div class="esp-banner reveal">
+  <div class="container">
+    <h2 data-t="esp_title">Hablamos Español</h2>
+    <p data-t="esp_sub">We communicate with you in your language so you feel comfortable throughout your treatment.</p>
+  </div>
+</div>
+
+<!-- ABOUT / DOCTOR -->
+<section class="section about" id="doctor">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal">
+        <img src="images/dr.png" alt="Dr. Alex Rodriguez, DDS" class="about-photo" width="380" height="507">
+        <div class="about-accent"></div>
+      </div>
+      <div class="about-text reveal">
+        <span class="section-label" data-t="doc_label">Your dentist</span>
+        <h2 data-t="doc_title">Dr. Alex Rodriguez, DDS</h2>
+        <p data-t="doc_bio">Dr. Rodriguez is a general dentist that graduated from the University of Missouri-Kansas City in 2002. He has been practicing in Miami since he graduated and is proud of his hometown.</p>
+        <p data-t="doc_exp">He has extensive experience in cosmetic dentistry, oral surgery, Invisalign, crowns, bridges, dentures and implants.</p>
+        <div class="about-features">
+          <div class="about-ft">
+            <div class="about-ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <span data-t="doc_f1">All procedures in-office</span>
+          </div>
+          <div class="about-ft">
+            <div class="about-ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+            <span data-t="doc_f2">Bilingual care: English &amp; Spanish</span>
+          </div>
+          <div class="about-ft">
+            <div class="about-ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <span data-t="doc_f3">Care for the whole family</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section team" id="team">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <span class="section-label" data-t="team_label">Our Team</span>
+      <h2 class="section-title" data-t="team_title">Meet the Happy Teeth family</h2>
+    </div>
+    <div class="team-grid" style="margin-top:40px">
+      <div class="team-img reveal">
+        <img src="images/dr-equipo.png" alt="Dr. Rodriguez and team" width="600" height="450">
+        <div class="team-caption" data-t="team_c1">Dr. Rodriguez &amp; team</div>
+      </div>
+      <div class="team-img reveal">
+        <img src="images/equipo.jpg" alt="Happy Teeth Dental team" width="600" height="450">
+        <div class="team-caption" data-t="team_c2">Our team</div>
+      </div>
+      <div class="team-img reveal" style="grid-column:1/-1">
+        <img src="images/asistentes.png" alt="Dental assistants" width="800" height="450" style="max-height:350px;object-fit:cover;object-position:center">
+        <div class="team-caption" data-t="team_c3">Dental assistants</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band reveal">
+  <div class="container">
+    <h2 data-t="cta_title">Book your appointment today</h2>
+    <p data-t="cta_sub">Call us or fill out the form. We'll get back to you promptly.</p>
+    <div class="cta-band-btns">
+      <a href="tel:+13052664544" class="btn-p">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <span>(305) 266-4544</span>
+      </a>
+      <a href="#contact" class="btn-s" data-t="cta_form">Fill out form</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="section-label" data-t="ct_label">Contact</span>
+        <h2 class="section-title" data-t="ct_title">We're here for you</h2>
+        <div class="contact-info">
+          <div class="ct-item">
+            <div class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="ct-txt">
+              <h4 data-t="ct_addr_h">Address</h4>
+              <p>7976 SW 8th St, Miami, FL 33144</p>
+            </div>
+          </div>
+          <div class="ct-item">
+            <div class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div class="ct-txt">
+              <h4 data-t="ct_phone_h">Phone</h4>
+              <a href="tel:+13052664544">(305) 266-4544</a>
+            </div>
+          </div>
+          <div class="ct-item">
+            <div class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div class="ct-txt">
+              <h4>Email</h4>
+              <a href="mailto:happyteethdentalgroup@gmail.com">happyteethdentalgroup@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <iframe class="ct-map" src="https://www.google.com/maps?q=7976+SW+8th+St,+Miami,+FL+33144&output=embed" allowfullscreen loading="lazy" title="Happy Teeth Dental location"></iframe>
+      </div>
+      <div class="reveal">
+        <div class="form-card">
+          <h3 data-t="form_title">Request your appointment</h3>
+          <p class="form-sub" data-t="form_sub">Fill out the form and we'll contact you.</p>
+          <form id="contactForm" onsubmit="return false">
+            <div class="fg">
+              <label for="fname" data-t="form_name">Name</label>
+              <input type="text" id="fname" required>
+            </div>
+            <div class="fg">
+              <label for="fphone" data-t="form_phone">Phone</label>
+              <input type="tel" id="fphone" required>
+            </div>
+            <div class="fg">
+              <label for="femail">Email</label>
+              <input type="email" id="femail">
+            </div>
+            <div class="fg">
+              <label for="fservice" data-t="form_service">Service</label>
+              <select id="fservice">
+                <option value="" data-t="form_select">Select a service</option>
+                <option value="family" data-t="s1">Family Dentistry</option>
+                <option value="cleanings" data-t="s2">Cleanings</option>
+                <option value="cosmetic" data-t="s3">Cosmetic Dentistry</option>
+                <option value="surgery" data-t="s4">Oral Surgery</option>
+                <option value="invisalign">Invisalign</option>
+                <option value="crowns" data-t="s6">Crowns</option>
+                <option value="bridges" data-t="s7">Bridges</option>
+                <option value="dentures" data-t="s8">Dentures</option>
+                <option value="implants" data-t="s9">Implants</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="fmsg" data-t="form_msg">Message (optional)</label>
+              <textarea id="fmsg" rows="3"></textarea>
+            </div>
+            <button type="submit" class="form-btn" data-t="form_btn">Send request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Happy Teeth Dental" class="footer-logo" width="40" height="40">
+          <span class="footer-brand-name">Happy Teeth Dental</span>
+        </div>
+        <p data-t="footer_desc">Friendly dental care on SW 8th Street, Miami. General dentistry, cosmetic treatments, Invisalign, implants and more — all under one roof.</p>
+      </div>
+      <div>
+        <h4 data-t="footer_nav">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#services" data-t="nav_services">Services</a></li>
+          <li><a href="#doctor" data-t="nav_doctor">Doctor</a></li>
+          <li><a href="#team" data-t="nav_team">Team</a></li>
+          <li><a href="#contact" data-t="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-t="ct_label">Contact</h4>
+        <ul class="footer-ct">
+          <li>7976 SW 8th St, Miami, FL 33144</li>
+          <li><a href="tel:+13052664544">(305) 266-4544</a></li>
+          <li><a href="mailto:happyteethdentalgroup@gmail.com">happyteethdentalgroup@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Happy Teeth Dental. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="sticky-bar">
+  <a href="tel:+13052664544">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <span data-t="sticky_call">Call</span>
+  </a>
+  <a href="#contact">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <span data-t="sticky_appt">Book</span>
+  </a>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+var T={
+  en:{
+    nav_services:'Services',nav_doctor:'Doctor',nav_team:'Team',nav_contact:'Contact',nav_call:'Call Now',
+    hero_badge:'Friendly Dental Care in Miami',
+    hero_h1:'Your family deserves a smile they ',hero_em:'love.',
+    hero_sub:'General dentistry, cosmetic treatments, Invisalign, implants and more — all under one roof on SW 8th Street.',
+    hero_cta_appt:'Book Appointment',
+    hero_stars:'4.9 · 254 reviews on Google',
+    float_title:'9 Services',float_sub:'One office',
+    strip_1:'Family dentistry',strip_2:'Se Habla Español',strip_3:'All services in one office',strip_4:'4.9★ on Google',
+    srv_label:'Services',srv_title:'Everything your smile needs',
+    srv_sub:'From routine care to advanced treatments, all in one place.',
+    s1:'Family Dentistry',s2:'Cleanings',s3:'Cosmetic Dentistry',s4:'Oral Surgery',
+    s6:'Crowns',s7:'Bridges',s8:'Dentures',s9:'Implants',
+    rating_count:'254 reviews on Google',
+    esp_title:'Hablamos Español',esp_sub:'We communicate with you in your language so you feel comfortable throughout your treatment.',
+    doc_label:'Your dentist',doc_title:'Dr. Alex Rodriguez, DDS',
+    doc_bio:'Dr. Rodriguez is a general dentist that graduated from the University of Missouri-Kansas City in 2002. He has been practicing in Miami since he graduated and is proud of his hometown.',
+    doc_exp:'He has extensive experience in cosmetic dentistry, oral surgery, Invisalign, crowns, bridges, dentures and implants.',
+    doc_f1:'All procedures in-office',doc_f2:'Bilingual care: English & Spanish',doc_f3:'Care for the whole family',
+    team_label:'Our Team',team_title:'Meet the Happy Teeth family',
+    team_c1:'Dr. Rodriguez & team',team_c2:'Our team',team_c3:'Dental assistants',
+    cta_title:'Book your appointment today',cta_sub:'Call us or fill out the form. We\'ll get back to you promptly.',
+    cta_form:'Fill out form',
+    ct_label:'Contact',ct_title:'We\'re here for you',ct_addr_h:'Address',ct_phone_h:'Phone',
+    form_title:'Request your appointment',form_sub:'Fill out the form and we\'ll contact you.',
+    form_name:'Name',form_phone:'Phone',form_service:'Service',form_select:'Select a service',
+    form_msg:'Message (optional)',form_btn:'Send request',
+    footer_desc:'Friendly dental care on SW 8th Street, Miami. General dentistry, cosmetic treatments, Invisalign, implants and more — all under one roof.',
+    footer_nav:'Navigation',
+    sticky_call:'Call',sticky_appt:'Book'
+  },
+  es:{
+    nav_services:'Servicios',nav_doctor:'Doctor',nav_team:'Equipo',nav_contact:'Contacto',nav_call:'Llamar ahora',
+    hero_badge:'Cuidado dental amigable en Miami',
+    hero_h1:'Su familia merece una sonrisa que ',hero_em:'ame.',
+    hero_sub:'Odontología general, estética dental, Invisalign, implantes y más — todo bajo un mismo techo en la SW 8th Street.',
+    hero_cta_appt:'Agendar cita',
+    hero_stars:'4.9 · 254 reseñas en Google',
+    float_title:'9 Servicios',float_sub:'Un solo consultorio',
+    strip_1:'Odontología familiar',strip_2:'Hablamos Español',strip_3:'Todos los servicios en un consultorio',strip_4:'4.9★ en Google',
+    srv_label:'Servicios',srv_title:'Todo lo que su sonrisa necesita',
+    srv_sub:'Desde cuidado de rutina hasta tratamientos avanzados, todo en un solo lugar.',
+    s1:'Odontología Familiar',s2:'Limpiezas',s3:'Estética Dental',s4:'Cirugía Oral',
+    s6:'Coronas',s7:'Puentes',s8:'Dentaduras',s9:'Implantes',
+    rating_count:'254 reseñas en Google',
+    esp_title:'Hablamos Español',esp_sub:'Nos comunicamos con usted en su idioma para que se sienta cómodo durante todo su tratamiento.',
+    doc_label:'Su dentista',doc_title:'Dr. Alex Rodriguez, DDS',
+    doc_bio:'El Dr. Rodriguez es un dentista general graduado de la Universidad de Missouri-Kansas City en 2002. Ejerce en Miami desde que se graduó y está orgulloso de su ciudad.',
+    doc_exp:'Tiene amplia experiencia en estética dental, cirugía oral, Invisalign, coronas, puentes, dentaduras e implantes.',
+    doc_f1:'Todos los procedimientos en consultorio',doc_f2:'Atención bilingüe: inglés y español',doc_f3:'Cuidado para toda la familia',
+    team_label:'Nuestro equipo',team_title:'Conozca a la familia Happy Teeth',
+    team_c1:'Dr. Rodriguez y equipo',team_c2:'Nuestro equipo',team_c3:'Asistentes dentales',
+    cta_title:'Agende su cita hoy',cta_sub:'Llámenos o complete el formulario. Le responderemos a la brevedad.',
+    cta_form:'Completar formulario',
+    ct_label:'Contacto',ct_title:'Estamos para ayudarle',ct_addr_h:'Dirección',ct_phone_h:'Teléfono',
+    form_title:'Solicite su cita',form_sub:'Complete el formulario y nos comunicaremos con usted.',
+    form_name:'Nombre',form_phone:'Teléfono',form_service:'Servicio',form_select:'Seleccione un servicio',
+    form_msg:'Mensaje (opcional)',form_btn:'Enviar solicitud',
+    footer_desc:'Cuidado dental amigable en la SW 8th Street, Miami. Odontología general, estética dental, Invisalign, implantes y más — todo bajo un mismo techo.',
+    footer_nav:'Navegación',
+    sticky_call:'Llamar',sticky_appt:'Cita'
+  }
+};
+var lang='en';
+
+function applyLang(l){
+  lang=l;
+  document.querySelectorAll('[data-t]').forEach(function(el){
+    var k=el.getAttribute('data-t');
+    if(T[l]&&T[l][k]){
+      if(el.tagName==='INPUT'||el.tagName==='TEXTAREA')el.placeholder=T[l][k];
+      else el.textContent=T[l][k];
+    }
+  });
+  document.documentElement.lang=l==='es'?'es':'en';
+  document.querySelectorAll('.lang-opt').forEach(function(b){
+    b.classList.toggle('active',b.getAttribute('data-lang')===l);
+  });
+}
+
+document.querySelectorAll('.lang-opt').forEach(function(b){
+  b.addEventListener('click',function(){applyLang(this.getAttribute('data-lang'));});
+});
+
+/* SPLASH */
+var splash=document.getElementById('splash');
+if(splash){
+  var t1=setTimeout(function(){splash.classList.add('done')},900);
+  splash.addEventListener('click',function(){clearTimeout(t1);splash.classList.add('done')});
+}
+
+/* NAV SCROLL */
+var nav=document.getElementById('nav');
+function chkScroll(){if(nav)nav.classList.toggle('scrolled',window.scrollY>40)}
+window.addEventListener('scroll',chkScroll,{passive:true});
+chkScroll();
+
+/* BURGER */
+var burger=document.getElementById('burger'),mm=document.getElementById('mobileMenu');
+if(burger&&mm){
+  burger.addEventListener('click',function(){
+    burger.classList.toggle('open');mm.classList.toggle('open');
+    document.body.style.overflow=mm.classList.contains('open')?'hidden':'';
+  });
+  mm.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      burger.classList.remove('open');mm.classList.remove('open');
+      document.body.style.overflow='';
+    });
+  });
+}
+
+/* REVEAL */
+var mql=window.matchMedia('(prefers-reduced-motion: reduce)');
+if(!mql.matches){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+  },{threshold:0.04,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  setTimeout(function(){
+    document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){
+      var r=el.getBoundingClientRect();
+      if(r.top<window.innerHeight+100)el.classList.add('visible');
+    });
+  },1400);
+}else{
+  document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible')});
+}
+
+/* FORM */
+var form=document.getElementById('contactForm');
+if(form){
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=form.querySelector('.form-btn');
+    btn.textContent=lang==='es'?'¡Enviado!':'Sent!';
+    btn.style.background='#22c55e';
+    setTimeout(function(){
+      btn.textContent=T[lang].form_btn;
+      btn.style.background='';
+      form.reset();
+    },2500);
+  });
+}
+
+})();
+</script>
+</body>
+</html>
