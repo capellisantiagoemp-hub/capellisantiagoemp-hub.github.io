@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light only">
+<title>Tesoro Smile Dental Art — Miami, FL</title>
+<link rel="icon" href="images/logo.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--brand:#3a3632;--brand-dark:#2a2724;--gold:#c8b89a;--gold-light:#d4c4a0;
+--cream:#faf8f5;--warm:#f3efe9;--sand:#e8e2d8;
+--text:#2a2724;--text-light:#6b635a;--white:#fff;
+--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
+--nav-h:72px;--radius:12px;--radius-lg:20px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--text);background:var(--cream);
+  line-height:1.6;overflow-x:hidden;color-scheme:light only}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;border:none;background:none;font:inherit}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+/* SPLASH */
+.splash{position:fixed;inset:0;z-index:9999;background:var(--brand-dark);
+  display:flex;align-items:center;justify-content:center;transition:opacity .4s}
+.splash.out{opacity:0;pointer-events:none}
+.splash img{width:80px;height:80px;animation:pulse-logo 1s ease-in-out infinite alternate}
+@keyframes pulse-logo{to{transform:scale(1.08);opacity:.8}}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(250,248,245,.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(200,184,154,.15);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.06)}
+.nav-inner{max-width:1200px;margin:0 auto;height:var(--nav-h);
+  display:flex;align-items:center;padding:0 24px;gap:32px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:48px;width:auto;object-fit:contain}
+.brand-name{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--brand);letter-spacing:-.01em}
+.nav-links{display:flex;gap:28px;margin-left:auto}
+.nav-links a{font-size:.875rem;font-weight:500;color:var(--text-light);transition:color .2s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;
+  background:var(--gold);transition:width .3s}
+.nav-links a:hover::after,.nav-links a:focus::after{width:100%}
+.nav-links a:hover,.nav-links a:focus{color:var(--brand)}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.lang-toggle{font-size:.8rem;font-weight:600;color:var(--text-light);
+  border:1px solid var(--sand);border-radius:20px;padding:4px 12px;transition:all .2s}
+.lang-toggle:hover{border-color:var(--gold);color:var(--brand)}
+.lang-toggle .active{color:var(--brand)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:40px;
+  font-size:.9rem;font-weight:600;transition:all .3s;white-space:nowrap}
+.btn-primary{background:var(--brand);color:var(--gold-light);
+  box-shadow:0 4px 16px rgba(42,39,36,.2)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(42,39,36,.25)}
+.btn-primary:active{transform:translateY(0)}
+.btn-gold{background:var(--gold);color:var(--brand-dark);
+  box-shadow:0 4px 16px rgba(200,184,154,.3)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,184,154,.4)}
+.btn-ghost{border:1.5px solid var(--brand);color:var(--brand);background:transparent}
+.btn-ghost:hover{background:var(--brand);color:var(--cream)}
+.btn-sm{padding:8px 20px;font-size:.85rem}
+.nav-burger{display:none;width:28px;height:20px;position:relative;flex-shrink:0}
+.nav-burger span{display:block;position:absolute;left:0;width:100%;height:2px;
+  background:var(--brand);transition:.3s;border-radius:2px}
+.nav-burger span:first-child{top:0}
+.nav-burger span:nth-child(2){top:9px}
+.nav-burger span:last-child{top:18px}
+.nav-burger.open span:first-child{top:9px;transform:rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:last-child{top:9px;transform:rotate(-45deg)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
+  padding:calc(var(--nav-h) + 40px) 24px 60px}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.hero-bg::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(42,39,36,.82) 0%,rgba(42,39,36,.55) 50%,rgba(42,39,36,.3) 100%)}
+.hero-content{position:relative;z-index:1;max-width:1200px;margin:0 auto;width:100%;
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-copy{color:var(--cream)}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;
+  background:rgba(200,184,154,.15);border:1px solid rgba(200,184,154,.3);
+  border-radius:40px;padding:6px 16px;font-size:.8rem;font-weight:500;color:var(--gold-light);
+  margin-bottom:20px;backdrop-filter:blur(4px)}
+.hero-badge svg{flex-shrink:0}
+.hero-title{font-family:var(--serif);font-size:clamp(2.2rem,5vw,3.6rem);font-weight:500;
+  line-height:1.15;margin-bottom:20px;color:var(--cream)}
+.hero-title em{font-style:italic;color:var(--gold-light)}
+.hero-sub{font-size:1.05rem;line-height:1.7;color:rgba(250,248,245,.8);max-width:480px;margin-bottom:32px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-actions .btn-primary{background:var(--gold);color:var(--brand-dark)}
+.hero-actions .btn-primary:hover{background:var(--gold-light)}
+.hero-actions .btn-ghost{border-color:rgba(250,248,245,.5);color:var(--cream)}
+.hero-actions .btn-ghost:hover{background:rgba(250,248,245,.1);border-color:var(--cream)}
+.hero-photo{position:relative}
+.hero-photo img{border-radius:var(--radius-lg);box-shadow:0 24px 64px rgba(0,0,0,.3);
+  width:100%;max-width:480px;margin-left:auto;display:block}
+.hero-rating{position:absolute;bottom:-20px;left:0;
+  background:var(--white);border-radius:var(--radius);padding:16px 24px;
+  box-shadow:0 8px 32px rgba(0,0,0,.1);display:flex;align-items:center;gap:14px}
+.hero-rating .score{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--brand)}
+.hero-rating .stars{color:#e8b730;font-size:1.1rem;letter-spacing:2px}
+.hero-rating .count{font-size:.8rem;color:var(--text-light);margin-top:2px}
+
+/* SECTION PATTERN */
+section{padding:100px 24px}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-tag{font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px}
+.section-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:500;
+  line-height:1.2;margin-bottom:16px}
+.section-desc{font-size:1rem;color:var(--text-light);max-width:540px;line-height:1.7}
+
+/* TRUST STRIP */
+.trust{background:var(--brand);padding:24px;overflow:hidden}
+.trust-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:center;
+  gap:40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;color:var(--gold-light);
+  font-size:.9rem;font-weight:500;white-space:nowrap}
+.trust-item svg{flex-shrink:0;opacity:.7}
+
+/* SERVICES */
+.services{background:var(--cream)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.service-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;
+  border:1px solid var(--sand);transition:all .4s;position:relative}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.08);
+  border-color:var(--gold)}
+.service-card-img{height:220px;overflow:hidden}
+.service-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.service-card:hover .service-card-img img{transform:scale(1.05)}
+.service-card-body{padding:28px}
+.service-card h3{font-family:var(--serif);font-size:1.25rem;font-weight:600;margin-bottom:10px}
+.service-card p{font-size:.9rem;color:var(--text-light);line-height:1.6}
+
+/* BEFORE AFTER */
+.ba{background:var(--warm)}
+.ba-container{margin-top:48px;max-width:600px;margin-left:auto;margin-right:auto;
+  position:relative;border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:0 16px 48px rgba(0,0,0,.1);cursor:col-resize;touch-action:none;aspect-ratio:auto}
+.ba-container img{display:block;width:100%;user-select:none;-webkit-user-drag:none}
+.ba-after{position:absolute;inset:0;overflow:hidden;width:50%}
+.ba-after img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+.ba-before-img{width:100%;display:block}
+.ba-slider{position:absolute;top:0;bottom:0;width:4px;background:var(--gold);
+  left:50%;transform:translateX(-50%);z-index:2;cursor:col-resize}
+.ba-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:44px;height:44px;border-radius:50%;background:var(--gold);
+  box-shadow:0 2px 12px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;z-index:3}
+.ba-handle svg{pointer-events:none}
+.ba-label{position:absolute;top:16px;padding:4px 14px;border-radius:20px;
+  font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;z-index:2}
+.ba-label-before{right:16px;background:rgba(42,39,36,.7);color:var(--cream)}
+.ba-label-after{left:16px;background:rgba(200,184,154,.85);color:var(--brand-dark)}
+
+/* DOCTOR */
+.doctor{background:var(--cream)}
+.doctor-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:48px}
+.doctor-photo{position:relative}
+.doctor-photo img{border-radius:var(--radius-lg);width:100%;box-shadow:0 16px 48px rgba(0,0,0,.08)}
+.doctor-photo::after{content:'';position:absolute;top:-12px;left:-12px;right:12px;bottom:12px;
+  border:2px solid var(--gold);border-radius:var(--radius-lg);z-index:-1;opacity:.4}
+.doctor-text h3{font-family:var(--serif);font-size:1.8rem;font-weight:600;margin-bottom:6px}
+.doctor-text .role{font-size:.9rem;color:var(--gold);font-weight:600;margin-bottom:20px}
+.doctor-text p{font-size:.95rem;line-height:1.8;color:var(--text-light);margin-bottom:16px}
+
+/* TEAM DOCTOR */
+.team-doctor{margin-top:60px;padding-top:48px;border-top:1px solid var(--sand)}
+.team-doctor-text{max-width:640px}
+.team-doctor-text h4{font-family:var(--serif);font-size:1.2rem;font-weight:600;margin-bottom:4px}
+.team-doctor-text .role{font-size:.85rem;color:var(--gold);font-weight:600;margin-bottom:12px}
+.team-doctor-text p{font-size:.9rem;line-height:1.7;color:var(--text-light)}
+
+/* TESTIMONIALS */
+.testimonials{background:var(--brand)}
+.testimonials .section-tag{color:var(--gold-light)}
+.testimonials .section-title{color:var(--cream)}
+.testimonials .section-desc{color:rgba(250,248,245,.6)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.testi-card{background:rgba(250,248,245,.06);border:1px solid rgba(200,184,154,.12);
+  border-radius:var(--radius-lg);padding:32px;transition:border-color .3s}
+.testi-card:hover{border-color:rgba(200,184,154,.3)}
+.testi-stars{color:#e8b730;font-size:.9rem;letter-spacing:2px;margin-bottom:16px}
+.testi-text{font-size:.92rem;line-height:1.7;color:rgba(250,248,245,.8);font-style:italic;margin-bottom:20px}
+.testi-author{font-size:.85rem;font-weight:600;color:var(--gold-light)}
+
+/* FREE EXAM CTA */
+.free-exam{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);
+  text-align:center;padding:80px 24px}
+.free-exam h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:600;
+  color:var(--brand-dark);margin-bottom:12px}
+.free-exam p{font-size:1rem;color:var(--brand);max-width:480px;margin:0 auto 28px}
+.free-exam .btn-primary{background:var(--brand);color:var(--gold-light)}
+.free-exam .btn-primary:hover{background:var(--brand-dark)}
+
+/* GALLERY */
+.gallery{background:var(--warm)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:48px}
+.gallery-grid a{display:block;border-radius:var(--radius);overflow:hidden;position:relative;aspect-ratio:1}
+.gallery-grid a img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery-grid a:hover img{transform:scale(1.06)}
+.gallery-grid a .g-caption{position:absolute;bottom:0;left:0;right:0;padding:10px 14px;
+  background:linear-gradient(transparent,rgba(42,39,36,.7));color:var(--cream);
+  font-size:.8rem;font-weight:500}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.92);
+  display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .3s}
+.lightbox.active{display:flex;opacity:1}
+.lightbox img{max-width:90vw;max-height:85vh;border-radius:8px;box-shadow:0 0 60px rgba(0,0,0,.5)}
+.lightbox-close{position:absolute;top:20px;right:24px;color:#fff;font-size:2rem;
+  width:48px;height:48px;display:flex;align-items:center;justify-content:center;
+  border-radius:50%;background:rgba(255,255,255,.1);transition:background .2s}
+.lightbox-close:hover{background:rgba(255,255,255,.2)}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);
+  color:#fff;font-size:2rem;width:48px;height:48px;display:flex;align-items:center;
+  justify-content:center;border-radius:50%;background:rgba(255,255,255,.1);transition:background .2s}
+.lightbox-nav:hover{background:rgba(255,255,255,.2)}
+.lightbox-prev{left:20px}
+.lightbox-next{right:20px}
+
+/* BENEFITS */
+.benefits{background:var(--cream)}
+.benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.benefit-card{text-align:center;padding:32px 20px;background:var(--white);
+  border-radius:var(--radius-lg);border:1px solid var(--sand);transition:all .3s}
+.benefit-card:hover{border-color:var(--gold);transform:translateY(-3px);
+  box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.benefit-card svg{margin:0 auto 14px;color:var(--gold)}
+.benefit-card h4{font-family:var(--serif);font-size:1rem;font-weight:600;margin-bottom:6px}
+.benefit-card p{font-size:.82rem;color:var(--text-light);line-height:1.5}
+
+/* INSTAGRAM */
+.insta{background:var(--brand-dark);text-align:center}
+.insta .section-tag{color:var(--gold-light)}
+.insta .section-title{color:var(--cream)}
+.insta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px;margin-bottom:32px}
+.insta-grid img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:var(--radius);
+  transition:transform .4s;cursor:pointer}
+.insta-grid img:hover{transform:scale(1.04)}
+.insta .btn-ghost{border-color:rgba(200,184,154,.4);color:var(--gold-light)}
+.insta .btn-ghost:hover{background:rgba(200,184,154,.1);border-color:var(--gold)}
+
+/* CONTACT */
+.contact{background:var(--warm)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px}
+.contact-info{display:flex;flex-direction:column;gap:20px}
+.contact-item{display:flex;align-items:flex-start;gap:14px}
+.contact-item svg{flex-shrink:0;margin-top:2px;color:var(--gold)}
+.contact-item strong{font-size:.95rem;display:block;margin-bottom:2px}
+.contact-item span,.contact-item a{font-size:.9rem;color:var(--text-light)}
+.contact-item a:hover{color:var(--brand)}
+.contact-hours{margin-top:12px}
+.contact-hours h4{font-family:var(--serif);font-size:1.1rem;font-weight:600;margin-bottom:10px}
+.contact-hours table{font-size:.85rem;border-collapse:collapse;width:100%}
+.contact-hours td{padding:6px 0;border-bottom:1px solid var(--sand)}
+.contact-hours td:last-child{text-align:right;color:var(--text-light)}
+.contact-map{border-radius:var(--radius-lg);overflow:hidden;height:100%;min-height:360px;
+  box-shadow:0 8px 32px rgba(0,0,0,.08)}
+.contact-map iframe{width:100%;height:100%;border:0}
+
+/* FOOTER */
+footer{background:var(--brand-dark);color:rgba(250,248,245,.6);padding:48px 24px 28px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;
+  justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-brand{display:flex;align-items:center;gap:10px}
+.footer-brand img{height:40px;width:auto;filter:brightness(1.8) contrast(.8)}
+.footer-brand span{font-family:var(--serif);font-size:1rem;color:var(--cream)}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:.8rem;transition:color .2s}
+.footer-links a:hover{color:var(--gold-light)}
+footer .copy{font-size:.75rem;width:100%;text-align:center;margin-top:20px;
+  padding-top:20px;border-top:1px solid rgba(200,184,154,.1)}
+
+/* MOBILE BAR */
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:99;
+  background:var(--brand);padding:12px 16px;gap:10px}
+.mobile-bar a{flex:1;text-align:center;padding:12px;border-radius:40px;font-size:.9rem;font-weight:600}
+.mobile-bar .mb-wa{background:var(--gold);color:var(--brand-dark)}
+.mobile-bar .mb-call{background:transparent;border:1.5px solid var(--gold-light);color:var(--gold-light)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* COUNTER */
+.counter{display:inline-block}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav-links,.nav-cta .btn{display:none}
+  .nav-burger{display:block}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:var(--nav-h);
+    left:0;right:0;background:var(--cream);padding:24px;gap:20px;
+    border-bottom:1px solid var(--sand);box-shadow:0 8px 24px rgba(0,0,0,.06)}
+  .nav-links.open a{font-size:1rem}
+  .hero-content{grid-template-columns:1fr;gap:32px;text-align:center}
+  .hero-sub{margin-left:auto;margin-right:auto}
+  .hero-actions{justify-content:center}
+  .hero-photo{order:-1}
+  .hero-photo img{max-width:320px;margin:0 auto}
+  .hero-rating{position:relative;bottom:auto;margin:16px auto 0;justify-content:center}
+  .services-grid{grid-template-columns:1fr}
+  .doctor-grid{grid-template-columns:1fr;gap:32px}
+  .doctor-photo::after{display:none}
+  .team-doctor-text{text-align:center}
+  .testi-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .benefits-grid{grid-template-columns:repeat(2,1fr)}
+  .insta-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .mobile-bar{display:flex}
+  footer{padding-bottom:90px}
+  .footer-inner{justify-content:center;text-align:center}
+  .footer-links{justify-content:center}
+}
+@media(max-width:480px){
+  .hero-title{font-size:1.8rem}
+  .benefits-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .insta-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-photo img{max-width:260px}
+}
+</style>
+</head>
+<body>
+
+<!-- SPLASH -->
+<div class="splash" id="splash" aria-hidden="true">
+  <img src="images/logo.jpg" alt="" width="80" height="80" style="border-radius:50%">
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <img src="images/logo.jpg" alt="Tesoro Smile Dental Art" width="48" height="48" style="border-radius:50%">
+      <span class="brand-name" data-t="brand">Tesoro Smile <strong>Dental Art</strong></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#services" data-t="nav.services">Services</a>
+      <a href="#results" data-t="nav.results">Results</a>
+      <a href="#doctor" data-t="nav.doctor">Our Team</a>
+      <a href="#testimonials" data-t="nav.testimonials">Reviews</a>
+      <a href="#contact" data-t="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="active" id="langEn">EN</span> / <span id="langEs">ES</span>
+      </button>
+      <a class="btn btn-primary btn-sm" href="https://wa.me/17544656363" target="_blank" rel="noopener" data-t="nav.cta">WhatsApp</a>
+    </div>
+    <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<span id="top"></span>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="images/dra-radiografia.png" alt="" width="1200" height="800" loading="eager">
+  </div>
+  <div class="hero-content">
+    <div class="hero-copy reveal">
+      <div class="hero-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span>5.0 · 198 <span data-t="hero.badge">reviews on Google</span></span>
+      </div>
+      <h1 class="hero-title" data-t="hero.title">Your smile is <em>our art.</em></h1>
+      <p class="hero-sub" data-t="hero.sub">Tesoro Smile Dental Art combines clinical precision with an artistic eye to give you the smile you deserve. Serving families in Miami with warmth and care.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/17544656363" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 3.53A9.96 9.96 0 0 0 12 1.5C6.2 1.5 1.5 6.2 1.5 12c0 1.86.49 3.67 1.41 5.27L1.5 22.5l5.34-1.4A10.48 10.48 0 0 0 12 22.5c5.8 0 10.5-4.7 10.5-10.5 0-2.8-1.09-5.44-3.03-7.47zM12 20.7a8.72 8.72 0 0 1-4.44-1.22l-.32-.19-3.3.87.88-3.22-.2-.33A8.7 8.7 0 0 1 3.3 12c0-4.8 3.9-8.7 8.7-8.7 2.33 0 4.51.9 6.16 2.55A8.66 8.66 0 0 1 20.7 12c0 4.8-3.9 8.7-8.7 8.7zm4.76-6.52c-.26-.13-1.54-.76-1.78-.85-.24-.08-.42-.13-.6.13-.17.26-.68.85-.83 1.02-.15.18-.31.2-.57.07-.26-.13-1.1-.4-2.1-1.3-.78-.69-1.3-1.55-1.46-1.81-.15-.26-.02-.4.12-.53.12-.12.26-.31.4-.47.13-.15.17-.26.26-.44.09-.17.04-.32-.02-.45-.07-.13-.6-1.44-.82-1.97-.21-.52-.44-.45-.6-.46h-.51c-.18 0-.46.07-.7.33-.24.26-.92.9-.92 2.2 0 1.3.94 2.55 1.07 2.72.13.18 1.85 2.83 4.49 3.97.63.27 1.12.43 1.5.55.63.2 1.2.17 1.66.1.5-.07 1.54-.63 1.76-1.24.22-.6.22-1.12.15-1.23-.07-.1-.24-.16-.5-.28z"/></svg>
+          <span data-t="hero.wa">WhatsApp</span>
+        </a>
+        <a class="btn btn-ghost" href="tel:+13054009074">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.41a16 16 0 0 0 6 6l1.24-1.24a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-t="hero.call">Call Now</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-photo reveal">
+      <img src="images/hero.png" alt="Dr. Ludmila Tesoro and team at Tesoro Smile Dental Art" width="480" height="640">
+      <div class="hero-rating">
+        <div class="score">5.0</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="count"><span class="counter" data-target="198">0</span> <span data-t="hero.reviews">reviews on Google</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span data-t="trust.1">General, Cosmetic & Implants</span>
+    </div>
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span data-t="trust.2">Insurance Accepted</span>
+    </div>
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span data-t="trust.3">Extended Hours + Saturdays</span>
+    </div>
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span data-t="trust.4">English & Spanish</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-tag" data-t="services.tag">Services</p>
+      <h2 class="section-title" data-t="services.title">Comprehensive care,<br>artful results.</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-card-img"><img src="images/dra-radiografia.png" alt="General Dentistry" width="400" height="300" loading="lazy"></div>
+        <div class="service-card-body">
+          <h3 data-t="svc.gen.t">General Dentistry</h3>
+          <p data-t="svc.gen.d">Comprehensive checkups, cleanings, fillings, and extractions.</p>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-img"><img src="images/dra-paciente-happy.png" alt="Cosmetic Dentistry" width="400" height="300" loading="lazy"></div>
+        <div class="service-card-body">
+          <h3 data-t="svc.cos.t">Cosmetic Dentistry</h3>
+          <p data-t="svc.cos.d">Teeth whitening, veneers, and other aesthetic treatments.</p>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-img"><img src="images/dra-trabajando.png" alt="Dental Implants" width="400" height="300" loading="lazy"></div>
+        <div class="service-card-body">
+          <h3 data-t="svc.imp.t">Dental Implants</h3>
+          <p data-t="svc.imp.d">Durable and natural-looking tooth replacement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="ba" id="results">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <p class="section-tag" data-t="ba.tag">Real Results</p>
+      <h2 class="section-title" data-t="ba.title">See the transformation.</h2>
+      <p class="section-desc" style="margin:0 auto" data-t="ba.desc">Drag the slider to compare before and after.</p>
+    </div>
+    <div class="ba-container reveal" id="baContainer" role="img" aria-label="Before and after dental comparison">
+      <img class="ba-before-img" src="images/before-after.png" alt="Before" width="600" height="700" loading="lazy">
+      <div class="ba-after" id="baAfter">
+        <img src="images/before-after.png" alt="After" width="600" height="700" loading="lazy" style="clip-path:none">
+      </div>
+      <div class="ba-slider" id="baSlider">
+        <div class="ba-handle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2a2724" stroke-width="2.5"><polyline points="8 4 4 12 8 20"/><polyline points="16 4 20 12 16 20"/></svg>
+        </div>
+      </div>
+      <span class="ba-label ba-label-before" data-t="ba.before">Before</span>
+      <span class="ba-label ba-label-after" data-t="ba.after">After</span>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section class="doctor" id="doctor">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-tag" data-t="doc.tag">Our Team</p>
+      <h2 class="section-title" data-t="doc.title">Meet your dentists.</h2>
+    </div>
+    <div class="doctor-grid reveal">
+      <div class="doctor-photo">
+        <img src="images/dra-paciente-1.png" alt="Dr. Ludmila Tesoro at Tesoro Smile Dental Art" width="500" height="600" loading="lazy">
+      </div>
+      <div class="doctor-text">
+        <h3>Dr. Ludmila Tesoro</h3>
+        <p class="role">DDS</p>
+        <p data-t="doc.bio1">Dr. Ludmila Tesoro is a highly skilled dentist with a passion for providing full mouth restorations. Her education includes a General Practice Residency from the University of Miami/Jackson Memorial Hospital, where she completed full-time rotations in surgery, endodontics, periodontics, and prosthodontics.</p>
+        <p data-t="doc.bio2">She also holds a Certificate in Implantology from the Universidad Nacional Autónoma de México (1st place), an MSD with Specialization in Prosthodontics (1st Place with honors) and a Doctor in Dental Surgery degree from the Universidad Central de Venezuela.</p>
+        <p data-t="doc.bio3">Ludmila is a member of the American Dental Association, Florida Dental Association, and South Florida District Dental Association since November 2021. She is also the President of the Latin American Academy of Osseo integrated Dental Implants since June 2023.</p>
+      </div>
+    </div>
+    <div class="team-doctor reveal">
+      <div class="team-doctor-text">
+        <h4>Dr. Justin Schneider</h4>
+        <p class="role" data-t="doc2.role">Oral Maxillofacial Surgeon</p>
+        <p data-t="doc2.bio">Dr. Justin Schneider is an accomplished Oral Maxillofacial Surgeon with extensive experience in private practice and multiple hospital systems. He specializes in a wide range of services, providing exceptional care to his patients, from dental implants to wisdom teeth extractions under IV sedation, bone grafting, sinus lifts, and augmentation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <p class="section-tag" data-t="test.tag">Patient Reviews</p>
+      <h2 class="section-title">5.0 <span style="color:#e8b730">★★★★★</span></h2>
+      <p class="section-desc" style="margin:0 auto"><span class="counter" data-target="198">0</span> <span data-t="test.count">reviews on Google</span></p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I had a wonderful experience at this dental office. The staff was friendly and professional, and I felt completely at ease during my appointment."</p>
+        <p class="testi-author">— Tabatha L.</p>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Dr Ludmila is excellent, very professional, honest and has invaluable experience. She has been my dentist for many years and solved many problems with my teeth. She is an example to be followed by others in her profession."</p>
+        <p class="testi-author">— Myrna V.</p>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Dr. Ludmila is the best dentist in Doral and, without a doubt, in all of Miami. From the moment you enter she makes you feel comfortable and in the best hands. Her professionalism, attention to detail, and personalized care are unsurpassed."</p>
+        <p class="testi-author">— Gabriela B.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE EXAM CTA -->
+<section class="free-exam reveal">
+  <h2 data-t="free.title">No insurance? Your first examination is free.</h2>
+  <p data-t="free.desc">We believe everyone deserves access to quality dental care. Schedule your complimentary evaluation today.</p>
+  <a class="btn btn-primary" href="https://wa.me/17544656363" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 3.53A9.96 9.96 0 0 0 12 1.5C6.2 1.5 1.5 6.2 1.5 12c0 1.86.49 3.67 1.41 5.27L1.5 22.5l5.34-1.4A10.48 10.48 0 0 0 12 22.5c5.8 0 10.5-4.7 10.5-10.5 0-2.8-1.09-5.44-3.03-7.47zM12 20.7a8.72 8.72 0 0 1-4.44-1.22l-.32-.19-3.3.87.88-3.22-.2-.33A8.7 8.7 0 0 1 3.3 12c0-4.8 3.9-8.7 8.7-8.7 2.33 0 4.51.9 6.16 2.55A8.66 8.66 0 0 1 20.7 12c0 4.8-3.9 8.7-8.7 8.7zm4.76-6.52c-.26-.13-1.54-.76-1.78-.85-.24-.08-.42-.13-.6.13-.17.26-.68.85-.83 1.02-.15.18-.31.2-.57.07-.26-.13-1.1-.4-2.1-1.3-.78-.69-1.3-1.55-1.46-1.81-.15-.26-.02-.4.12-.53.12-.12.26-.31.4-.47.13-.15.17-.26.26-.44.09-.17.04-.32-.02-.45-.07-.13-.6-1.44-.82-1.97-.21-.52-.44-.45-.6-.46h-.51c-.18 0-.46.07-.7.33-.24.26-.92.9-.92 2.2 0 1.3.94 2.55 1.07 2.72.13.18 1.85 2.83 4.49 3.97.63.27 1.12.43 1.5.55.63.2 1.2.17 1.66.1.5-.07 1.54-.63 1.76-1.24.22-.6.22-1.12.15-1.23-.07-.1-.24-.16-.5-.28z"/></svg>
+    <span data-t="free.cta">Schedule on WhatsApp</span>
+  </a>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <p class="section-tag" data-t="gal.tag">Our Practice</p>
+      <h2 class="section-title" data-t="gal.title">A look inside.</h2>
+    </div>
+    <div class="gallery-grid">
+      <a href="images/dra-paciente-2.png" class="gallery-item reveal"><img src="images/dra-paciente-2.png" alt="Dr. Tesoro with patient" width="400" height="400" loading="lazy"><span class="g-caption" data-t="gal.c1">Dr. Tesoro & patient</span></a>
+      <a href="images/dra-paciente-3.png" class="gallery-item reveal"><img src="images/dra-paciente-3.png" alt="Dr. Tesoro with patient" width="400" height="400" loading="lazy"><span class="g-caption" data-t="gal.c2">Happy smiles</span></a>
+      <a href="images/banner-consultorio.png" class="gallery-item reveal"><img src="images/banner-consultorio.png" alt="Tesoro Smile Dental Art office" width="400" height="400" loading="lazy"><span class="g-caption" data-t="gal.c3">Our office</span></a>
+      <a href="images/frente.png" class="gallery-item reveal"><img src="images/frente.png" alt="Office entrance" width="400" height="400" loading="lazy"><span class="g-caption" data-t="gal.c4">Building entrance</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image gallery">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" aria-label="Previous">&#8249;</button>
+  <img src="" alt="" id="lightboxImg">
+  <button class="lightbox-nav lightbox-next" aria-label="Next">&#8250;</button>
+</div>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <p class="section-tag" data-t="ben.tag">Why Choose Us</p>
+      <h2 class="section-title" data-t="ben.title">Your comfort comes first.</h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card reveal">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <h4 data-t="ben.1.t">Extended Hours</h4>
+        <p data-t="ben.1.d">Open Saturdays and extended weekday hours to fit your schedule.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h4 data-t="ben.2.t">Insurance Accepted</h4>
+        <p data-t="ben.2.d">We work with most major dental insurance providers.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <h4 data-t="ben.3.t">Bilingual Care</h4>
+        <p data-t="ben.3.d">Our team speaks English and Spanish for seamless communication.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <h4 data-t="ben.4.t">Free First Exam</h4>
+        <p data-t="ben.4.d">Not insured? Your first examination is on us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="insta">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-tag">Instagram</p>
+      <h2 class="section-title">@tesorosmiledentalart</h2>
+    </div>
+    <div class="insta-grid">
+      <img src="images/dra-paciente-happy.png" alt="Tesoro Smile on Instagram" width="300" height="300" loading="lazy">
+      <img src="images/dra-paciente-2.png" alt="Tesoro Smile on Instagram" width="300" height="300" loading="lazy">
+      <img src="images/dra-trabajando.png" alt="Tesoro Smile on Instagram" width="300" height="300" loading="lazy">
+      <img src="images/dra-paciente-3.png" alt="Tesoro Smile on Instagram" width="300" height="300" loading="lazy">
+    </div>
+    <a class="btn btn-ghost" href="https://instagram.com/tesorosmiledentalart" target="_blank" rel="noopener" data-t="insta.cta">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+      View on Instagram
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-tag" data-t="con.tag">Contact</p>
+      <h2 class="section-title" data-t="con.title">Schedule your visit.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <strong data-t="con.address.label">Address</strong>
+            <span>1695 NW 110th Ave Ste 316, Miami, FL 33172</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.41a16 16 0 0 0 6 6l1.24-1.24a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
+          <div>
+            <strong data-t="con.phone.label">Phone</strong>
+            <a href="tel:+13054009074">(305) 400-9074</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 3.53A9.96 9.96 0 0 0 12 1.5C6.2 1.5 1.5 6.2 1.5 12c0 1.86.49 3.67 1.41 5.27L1.5 22.5l5.34-1.4A10.48 10.48 0 0 0 12 22.5c5.8 0 10.5-4.7 10.5-10.5 0-2.8-1.09-5.44-3.03-7.47z"/></svg>
+          <div>
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/17544656363" target="_blank" rel="noopener">(754) 465-6363</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:miami@tesorosmiledentalart.com">miami@tesorosmiledentalart.com</a>
+          </div>
+        </div>
+        <div class="contact-hours">
+          <h4 data-t="con.hours.title">Office Hours</h4>
+          <table>
+            <tr><td data-t="con.h.mf">Monday – Friday</td><td>8:00 AM – 5:00 PM</td></tr>
+            <tr><td data-t="con.h.sa">Saturday</td><td>10:00 AM – 5:00 PM</td></tr>
+            <tr><td data-t="con.h.su">Sunday</td><td data-t="con.h.closed">Closed</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="contact-map reveal">
+        <iframe src="https://www.google.com/maps?q=1695+NW+110th+Ave+Ste+316,+Miami,+FL+33172&output=embed" allowfullscreen loading="lazy" title="Tesoro Smile Dental Art location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="images/logo.jpg" alt="" width="40" height="40" style="border-radius:50%">
+      <span>Tesoro Smile Dental Art</span>
+    </div>
+    <div class="footer-links">
+      <a href="#services" data-t="nav.services">Services</a>
+      <a href="#doctor" data-t="nav.doctor">Our Team</a>
+      <a href="#testimonials" data-t="nav.testimonials">Reviews</a>
+      <a href="#contact" data-t="nav.contact">Contact</a>
+      <a href="https://instagram.com/tesorosmiledentalart" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="copy">&copy; 2026 Tesoro Smile Dental Art. 1695 NW 110th Ave Ste 316, Miami, FL 33172</p>
+  </div>
+</footer>
+
+<!-- MOBILE BAR -->
+<div class="mobile-bar">
+  <a class="mb-wa" href="https://wa.me/17544656363" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M17.47 3.53A9.96 9.96 0 0 0 12 1.5C6.2 1.5 1.5 6.2 1.5 12c0 1.86.49 3.67 1.41 5.27L1.5 22.5l5.34-1.4A10.48 10.48 0 0 0 12 22.5c5.8 0 10.5-4.7 10.5-10.5 0-2.8-1.09-5.44-3.03-7.47z"/></svg>
+    WhatsApp
+  </a>
+  <a class="mb-call" href="tel:+13054009074">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.41a16 16 0 0 0 6 6l1.24-1.24a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
+    <span data-t="hero.call">Call Now</span>
+  </a>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+// TRANSLATIONS
+const T={
+en:{
+'brand':'Tesoro Smile <strong>Dental Art</strong>',
+'nav.services':'Services','nav.results':'Results','nav.doctor':'Our Team',
+'nav.testimonials':'Reviews','nav.contact':'Contact','nav.cta':'WhatsApp',
+'hero.badge':'reviews on Google',
+'hero.title':'Your smile is <em>our art.</em>',
+'hero.sub':'Tesoro Smile Dental Art combines clinical precision with an artistic eye to give you the smile you deserve. Serving families in Miami with warmth and care.',
+'hero.wa':'WhatsApp','hero.call':'Call Now','hero.reviews':'reviews on Google',
+'trust.1':'General, Cosmetic & Implants','trust.2':'Insurance Accepted',
+'trust.3':'Extended Hours + Saturdays','trust.4':'English & Spanish',
+'services.tag':'Services','services.title':'Comprehensive care,<br>artful results.',
+'svc.gen.t':'General Dentistry','svc.gen.d':'Comprehensive checkups, cleanings, fillings, and extractions.',
+'svc.cos.t':'Cosmetic Dentistry','svc.cos.d':'Teeth whitening, veneers, and other aesthetic treatments.',
+'svc.imp.t':'Dental Implants','svc.imp.d':'Durable and natural-looking tooth replacement.',
+'ba.tag':'Real Results','ba.title':'See the transformation.',
+'ba.desc':'Drag the slider to compare before and after.','ba.before':'Before','ba.after':'After',
+'doc.tag':'Our Team','doc.title':'Meet your dentists.',
+'doc.bio1':'Dr. Ludmila Tesoro is a highly skilled dentist with a passion for providing full mouth restorations. Her education includes a General Practice Residency from the University of Miami/Jackson Memorial Hospital, where she completed full-time rotations in surgery, endodontics, periodontics, and prosthodontics.',
+'doc.bio2':'She also holds a Certificate in Implantology from the Universidad Nacional Autónoma de México (1st place), an MSD with Specialization in Prosthodontics (1st Place with honors) and a Doctor in Dental Surgery degree from the Universidad Central de Venezuela.',
+'doc.bio3':'Ludmila is a member of the American Dental Association, Florida Dental Association, and South Florida District Dental Association since November 2021. She is also the President of the Latin American Academy of Osseo integrated Dental Implants since June 2023.',
+'doc2.role':'Oral Maxillofacial Surgeon',
+'doc2.bio':'Dr. Justin Schneider is an accomplished Oral Maxillofacial Surgeon with extensive experience in private practice and multiple hospital systems. He specializes in a wide range of services, providing exceptional care to his patients, from dental implants to wisdom teeth extractions under IV sedation, bone grafting, sinus lifts, and augmentation.',
+'test.tag':'Patient Reviews','test.count':'reviews on Google',
+'free.title':'No insurance? Your first examination is free.',
+'free.desc':'We believe everyone deserves access to quality dental care. Schedule your complimentary evaluation today.',
+'free.cta':'Schedule on WhatsApp',
+'gal.tag':'Our Practice','gal.title':'A look inside.',
+'gal.c1':'Dr. Tesoro & patient','gal.c2':'Happy smiles','gal.c3':'Our office','gal.c4':'Building entrance',
+'ben.tag':'Why Choose Us','ben.title':'Your comfort comes first.',
+'ben.1.t':'Extended Hours','ben.1.d':'Open Saturdays and extended weekday hours to fit your schedule.',
+'ben.2.t':'Insurance Accepted','ben.2.d':'We work with most major dental insurance providers.',
+'ben.3.t':'Bilingual Care','ben.3.d':'Our team speaks English and Spanish for seamless communication.',
+'ben.4.t':'Free First Exam','ben.4.d':'Not insured? Your first examination is on us.',
+'insta.cta':'View on Instagram',
+'con.tag':'Contact','con.title':'Schedule your visit.',
+'con.address.label':'Address','con.phone.label':'Phone',
+'con.hours.title':'Office Hours','con.h.mf':'Monday – Friday',
+'con.h.sa':'Saturday','con.h.su':'Sunday','con.h.closed':'Closed'
+},
+es:{
+'brand':'Tesoro Smile <strong>Dental Art</strong>',
+'nav.services':'Servicios','nav.results':'Resultados','nav.doctor':'Equipo',
+'nav.testimonials':'Reseñas','nav.contact':'Contacto','nav.cta':'WhatsApp',
+'hero.badge':'reseñas en Google',
+'hero.title':'Su sonrisa es <em>nuestro arte.</em>',
+'hero.sub':'Tesoro Smile Dental Art combina precisión clínica con una mirada artística para darle la sonrisa que usted merece. Atención cálida y cercana para familias en Miami.',
+'hero.wa':'WhatsApp','hero.call':'Llamar','hero.reviews':'reseñas en Google',
+'trust.1':'General, Estética e Implantes','trust.2':'Aceptamos Seguros',
+'trust.3':'Horario Extendido + Sábados','trust.4':'Inglés y Español',
+'services.tag':'Servicios','services.title':'Cuidado integral,<br>resultados con arte.',
+'svc.gen.t':'Odontología General','svc.gen.d':'Chequeos completos, limpiezas, restauraciones y extracciones.',
+'svc.cos.t':'Odontología Estética','svc.cos.d':'Blanqueamiento, carillas y otros tratamientos estéticos.',
+'svc.imp.t':'Implantes Dentales','svc.imp.d':'Reemplazo dental duradero y de aspecto natural.',
+'ba.tag':'Resultados Reales','ba.title':'Vea la transformación.',
+'ba.desc':'Deslice para comparar el antes y el después.','ba.before':'Antes','ba.after':'Después',
+'doc.tag':'Equipo','doc.title':'Conozca a sus dentistas.',
+'doc.bio1':'La Dra. Ludmila Tesoro es una odontóloga altamente capacitada con pasión por las restauraciones de boca completa. Su formación incluye una Residencia en Práctica General en la University of Miami/Jackson Memorial Hospital, donde completó rotaciones a tiempo completo en cirugía, endodoncia, periodoncia y prostodoncia.',
+'doc.bio2':'También posee un Certificado en Implantología de la Universidad Nacional Autónoma de México (1er lugar), un MSD con Especialización en Prostodoncia (1er lugar con honores) y un título de Doctora en Cirugía Dental de la Universidad Central de Venezuela.',
+'doc.bio3':'Ludmila es miembro de la American Dental Association, Florida Dental Association y South Florida District Dental Association desde noviembre de 2021. También es Presidenta de la Latin American Academy of Osseo integrated Dental Implants desde junio de 2023.',
+'doc2.role':'Cirujano Oral Maxilofacial',
+'doc2.bio':'El Dr. Justin Schneider es un destacado Cirujano Oral Maxilofacial con amplia experiencia en práctica privada y múltiples sistemas hospitalarios. Se especializa en una amplia gama de servicios, brindando atención excepcional a sus pacientes, desde implantes dentales hasta extracciones de muelas del juicio con sedación IV, injerto óseo, elevación de seno y aumento.',
+'test.tag':'Reseñas de Pacientes','test.count':'reseñas en Google',
+'free.title':'¿Sin seguro? Su primera evaluación es gratis.',
+'free.desc':'Creemos que todos merecen acceso a atención dental de calidad. Agende su evaluación sin costo hoy.',
+'free.cta':'Agendar por WhatsApp',
+'gal.tag':'Nuestro Consultorio','gal.title':'Un vistazo al interior.',
+'gal.c1':'Dra. Tesoro y paciente','gal.c2':'Sonrisas felices','gal.c3':'Nuestro consultorio','gal.c4':'Entrada del edificio',
+'ben.tag':'Por Qué Elegirnos','ben.title':'Su comodidad es lo primero.',
+'ben.1.t':'Horario Extendido','ben.1.d':'Abiertos los sábados y horario extendido entre semana.',
+'ben.2.t':'Aceptamos Seguros','ben.2.d':'Trabajamos con las principales aseguradoras dentales.',
+'ben.3.t':'Atención Bilingüe','ben.3.d':'Nuestro equipo habla inglés y español.',
+'ben.4.t':'Primera Consulta Gratis','ben.4.d':'¿Sin seguro? Su primera evaluación es por nuestra cuenta.',
+'insta.cta':'Ver en Instagram',
+'con.tag':'Contacto','con.title':'Agende su visita.',
+'con.address.label':'Dirección','con.phone.label':'Teléfono',
+'con.hours.title':'Horario de Atención','con.h.mf':'Lunes – Viernes',
+'con.h.sa':'Sábado','con.h.su':'Domingo','con.h.closed':'Cerrado'
+}
+};
+
+let lang='en';
+function setLang(l){
+  lang=l;
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-t]').forEach(function(el){
+    var key=el.getAttribute('data-t');
+    if(T[l]&&T[l][key]) el.innerHTML=T[l][key];
+  });
+  document.getElementById('langEn').className=l==='en'?'active':'';
+  document.getElementById('langEs').className=l==='es'?'active':'';
+}
+document.getElementById('langToggle').addEventListener('click',function(){
+  setLang(lang==='en'?'es':'en');
+});
+
+// SPLASH
+var splash=document.getElementById('splash');
+setTimeout(function(){splash.classList.add('out');setTimeout(function(){splash.style.display='none'},400)},900);
+
+// NAV SCROLL
+var nav=document.getElementById('nav');
+var lastScroll=0;
+window.addEventListener('scroll',function(){
+  nav.classList.toggle('scrolled',window.scrollY>60);
+},{passive:true});
+
+// BURGER
+var burger=document.getElementById('burger');
+var navLinks=document.getElementById('navLinks');
+burger.addEventListener('click',function(){
+  burger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+  burger.setAttribute('aria-expanded',navLinks.classList.contains('open'));
+});
+navLinks.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(){
+    burger.classList.remove('open');navLinks.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+  });
+});
+
+// REVEAL
+var reveals=document.querySelectorAll('.reveal');
+var motionOk=!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(motionOk){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+  },{threshold:0.04,rootMargin:'0px 0px -40px 0px'});
+  reveals.forEach(function(r){io.observe(r)});
+}else{
+  reveals.forEach(function(r){r.classList.add('visible')});
+}
+
+// COUNTERS
+function animateCounters(){
+  document.querySelectorAll('.counter').forEach(function(c){
+    if(c.dataset.done) return;
+    var rect=c.getBoundingClientRect();
+    if(rect.top<window.innerHeight&&rect.bottom>0){
+      c.dataset.done='1';
+      var target=parseInt(c.dataset.target,10);
+      var start=0,dur=1500,t0=null;
+      function step(ts){
+        if(!t0)t0=ts;
+        var p=Math.min((ts-t0)/dur,1);
+        c.textContent=Math.floor(p*target);
+        if(p<1)requestAnimationFrame(step);else c.textContent=target;
+      }
+      requestAnimationFrame(step);
+    }
+  });
+}
+window.addEventListener('scroll',animateCounters,{passive:true});
+animateCounters();
+
+// BEFORE / AFTER SLIDER
+var baCont=document.getElementById('baContainer');
+var baAfter=document.getElementById('baAfter');
+var baSlider=document.getElementById('baSlider');
+if(baCont&&baAfter&&baSlider){
+  var dragging=false;
+  function setPos(x){
+    var rect=baCont.getBoundingClientRect();
+    var pct=Math.max(0,Math.min(1,(x-rect.left)/rect.width))*100;
+    baAfter.style.width=pct+'%';
+    baSlider.style.left=pct+'%';
+  }
+  baCont.addEventListener('mousedown',function(e){dragging=true;setPos(e.clientX);e.preventDefault()});
+  window.addEventListener('mousemove',function(e){if(dragging)setPos(e.clientX)});
+  window.addEventListener('mouseup',function(){dragging=false});
+  baCont.addEventListener('touchstart',function(e){dragging=true;setPos(e.touches[0].clientX)},{passive:true});
+  window.addEventListener('touchmove',function(e){if(dragging)setPos(e.touches[0].clientX)},{passive:true});
+  window.addEventListener('touchend',function(){dragging=false});
+}
+
+// LIGHTBOX
+var lightbox=document.getElementById('lightbox');
+var lbImg=document.getElementById('lightboxImg');
+var galleryItems=Array.from(document.querySelectorAll('.gallery-item'));
+var lbIdx=0;
+function openLb(idx){
+  lbIdx=idx;lbImg.src=galleryItems[idx].href;
+  lightbox.classList.add('active');document.body.style.overflow='hidden';
+}
+function closeLb(){lightbox.classList.remove('active');document.body.style.overflow=''}
+galleryItems.forEach(function(a,i){
+  a.addEventListener('click',function(e){e.preventDefault();openLb(i)});
+});
+lightbox.querySelector('.lightbox-close').addEventListener('click',closeLb);
+lightbox.querySelector('.lightbox-prev').addEventListener('click',function(){
+  openLb((lbIdx-1+galleryItems.length)%galleryItems.length);
+});
+lightbox.querySelector('.lightbox-next').addEventListener('click',function(){
+  openLb((lbIdx+1)%galleryItems.length);
+});
+lightbox.addEventListener('click',function(e){if(e.target===lightbox)closeLb()});
+document.addEventListener('keydown',function(e){
+  if(!lightbox.classList.contains('active'))return;
+  if(e.key==='Escape')closeLb();
+  if(e.key==='ArrowLeft')openLb((lbIdx-1+galleryItems.length)%galleryItems.length);
+  if(e.key==='ArrowRight')openLb((lbIdx+1)%galleryItems.length);
+});
+
+// TILT 3D on service cards
+if(motionOk){
+  document.querySelectorAll('.service-card').forEach(function(card){
+    card.addEventListener('mousemove',function(e){
+      var rect=card.getBoundingClientRect();
+      var x=(e.clientX-rect.left)/rect.width-.5;
+      var y=(e.clientY-rect.top)/rect.height-.5;
+      card.style.transform='perspective(600px) rotateY('+x*8+'deg) rotateX('+-y*8+'deg) translateY(-4px)';
+    });
+    card.addEventListener('mouseleave',function(){
+      card.style.transform='';
+    });
+  });
+}
+
+// STAGGER reveals in grids
+if(motionOk){
+  var grids=['.services-grid','.testi-grid','.benefits-grid','.gallery-grid'];
+  grids.forEach(function(sel){
+    var g=document.querySelector(sel);
+    if(!g) return;
+    Array.from(g.querySelectorAll('.reveal')).forEach(function(el,i){
+      el.style.transitionDelay=(i*0.1)+'s';
+    });
+  });
+}
+
+// HERO RATING glow pulse
+var heroR=document.querySelector('.hero-rating');
+if(heroR&&motionOk){
+  var ks=document.createElement('style');
+  ks.textContent='@keyframes glow-pulse{0%,100%{box-shadow:0 8px 32px rgba(200,184,154,.15)}50%{box-shadow:0 8px 40px rgba(200,184,154,.35)}}';
+  document.head.appendChild(ks);
+  heroR.style.animation='glow-pulse 3s ease-in-out infinite';
+}
+
+// LIGHTBOX swipe (touch)
+var lbTouchX=0;
+lightbox.addEventListener('touchstart',function(e){lbTouchX=e.touches[0].clientX},{passive:true});
+lightbox.addEventListener('touchend',function(e){
+  var dx=e.changedTouches[0].clientX-lbTouchX;
+  if(Math.abs(dx)>50){
+    if(dx<0) openLb((lbIdx+1)%galleryItems.length);
+    else openLb((lbIdx-1+galleryItems.length)%galleryItems.length);
+  }
+});
+
+// PARALLAX hero bg
+if(motionOk){
+  var heroBgImg=document.querySelector('.hero-bg img');
+  if(heroBgImg){
+    heroBgImg.style.transition='transform .1s linear';
+    window.addEventListener('scroll',function(){
+      var s=window.scrollY;
+      if(s<window.innerHeight){
+        heroBgImg.style.transform='scale(1.05) translateY('+s*0.15+'px)';
+      }
+    },{passive:true});
+  }
+}
+
+})();
+</script>
+</body>
+</html>
