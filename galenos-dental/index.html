@@ -1,0 +1,1115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Galenos Dental — Odontología general y cosmética en Flagami, Miami. Dr. Ivan Izquierdo, DMD. 5.0★ en Google. Llame al (305) 261-8080.">
+<meta name="theme-color" content="#0B3661">
+<title>Galenos Dental — Relax and Smile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/*──────────────────────────────────────────────────────────────
+  TOKENS
+──────────────────────────────────────────────────────────────*/
+:root{
+  --navy:#0B3661;--navy-dark:#071E3A;--navy-deeper:#04101F;
+  --blue:#1565A8;--blue-light:#2B7CC9;
+  --cyan:#00DFF8;--cyan-glow:rgba(0,223,248,.25);--cyan-pale:#D0F7FC;
+  --surface:#F2F7FB;--warm:#E8F0F7;--white:#FFFFFF;
+  --text:#1A1A2E;--text-light:#4A5B72;--text-muted:#5E7085;
+  --font-d:'Outfit',system-ui,sans-serif;
+  --font-b:'Inter',system-ui,sans-serif;
+  --ease:cubic-bezier(.23,1,.32,1);--bounce:cubic-bezier(.34,1.56,.64,1);
+  --nav-h:72px;--radius:14px;--radius-lg:22px;
+}
+/*──────────────────────────────────────────────────────────────
+  RESET
+──────────────────────────────────────────────────────────────*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-b);color:var(--text);background:var(--white);line-height:1.65;overflow-x:hidden}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:0 0}
+ul,ol{list-style:none}
+h1,h2,h3,h4{font-family:var(--font-d);line-height:1.15;font-weight:700}
+.skip-link{position:absolute;top:-100%;left:16px;background:var(--navy);color:#fff;padding:8px 16px;border-radius:0 0 8px 8px;z-index:9999;font-size:.875rem}
+.skip-link:focus{top:0}
+
+/*──────────────────────────────────────────────────────────────
+  SPLASH
+──────────────────────────────────────────────────────────────*/
+.splash{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;background:var(--navy-dark);transition:opacity .6s var(--ease),visibility .6s}
+.splash.hide{opacity:0;visibility:hidden;pointer-events:none}
+.splash-ring{width:64px;height:64px;border:3px solid rgba(0,223,248,.15);border-top-color:var(--cyan);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/*──────────────────────────────────────────────────────────────
+  ANIMATED MESH BACKGROUND (hero)
+──────────────────────────────────────────────────────────────*/
+.mesh{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 20%,rgba(11,54,97,.95),transparent),
+    radial-gradient(ellipse 60% 50% at 80% 80%,rgba(21,101,168,.6),transparent),
+    radial-gradient(circle at 50% 50%,rgba(0,223,248,.08),transparent 70%);
+}
+.mesh::after{content:'';position:absolute;inset:0;
+  background:radial-gradient(circle 600px at var(--mx,50%) var(--my,50%),rgba(0,223,248,.07),transparent);
+  transition:background .3s}
+
+/*──────────────────────────────────────────────────────────────
+  NAV
+──────────────────────────────────────────────────────────────*/
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);
+  display:flex;align-items:center;transition:background .3s,box-shadow .3s,backdrop-filter .3s}
+.nav.scrolled{background:rgba(11,54,97,.92);backdrop-filter:blur(16px);box-shadow:0 2px 24px rgba(0,0,0,.25)}
+.nav-inner{width:100%;max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-logo{height:60px;width:auto;flex-shrink:0}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-family:var(--font-b);font-size:.875rem;font-weight:500;color:rgba(255,255,255,.8);
+  transition:color .2s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;
+  background:var(--cyan);transition:width .3s var(--ease)}
+.nav-links a:hover{color:#fff}
+.nav-links a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:16px}
+
+/* Language toggle */
+.lang-toggle{display:flex;background:rgba(255,255,255,.1);border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.15)}
+.lang-btn{padding:6px 14px;font-size:.75rem;font-weight:600;color:rgba(255,255,255,.6);transition:all .3s var(--ease);text-transform:uppercase;letter-spacing:.05em}
+.lang-btn.active{background:var(--cyan);color:var(--navy-dark);border-radius:20px}
+.lang-btn:hover:not(.active){color:#fff}
+
+.nav-cta-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;
+  background:var(--cyan);color:var(--navy-dark);font-family:var(--font-d);font-size:.875rem;font-weight:700;
+  border-radius:50px;transition:all .3s var(--ease);box-shadow:0 0 0 0 var(--cyan-glow)}
+.nav-cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--cyan-glow)}
+.burger{display:none;flex-direction:column;gap:5px;width:28px;padding:4px 0}
+.burger span{display:block;height:2px;background:#fff;border-radius:2px;transition:all .3s var(--ease)}
+.burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* Phone in nav */
+.nav-phone{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.85);font-size:.875rem;font-weight:500;transition:color .2s}
+.nav-phone:hover{color:var(--cyan)}
+.nav-phone svg{width:16px;height:16px;flex-shrink:0}
+
+/*──────────────────────────────────────────────────────────────
+  HERO
+──────────────────────────────────────────────────────────────*/
+.hero{min-height:100vh;min-height:100dvh;display:flex;align-items:center;position:relative;padding:calc(var(--nav-h) + 40px) 24px 60px;overflow:hidden;
+  background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 40%,var(--blue) 100%)}
+.hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
+.hero-copy{color:#fff}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-b);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;
+  color:var(--cyan);margin-bottom:20px}
+.dot-pulse{width:8px;height:8px;background:var(--cyan);border-radius:50%;animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+.hero-title{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;margin-bottom:20px;
+  background:linear-gradient(135deg,#fff 60%,var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.75);margin-bottom:32px;max-width:520px;line-height:1.7}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+.hero-trust{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.hero-stars{display:flex;gap:2px}
+.hero-stars svg{width:20px;height:20px;fill:#FBBF24}
+.hero-trust-text{color:rgba(255,255,255,.8);font-size:.9rem}
+.hero-trust-text strong{color:#fff;font-weight:700}
+
+/* Hero visual */
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-photo{width:100%;max-width:480px;border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:0 25px 80px rgba(0,0,0,.4);position:relative;aspect-ratio:4/3}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-photo::before{content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 50%,rgba(11,54,97,.6));z-index:1;pointer-events:none}
+
+/* Floating cards */
+.float-card{position:absolute;background:rgba(255,255,255,.12);backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:16px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.2);z-index:2}
+.float-card-rating{bottom:20px;left:-30px;display:flex;align-items:center;gap:12px;animation:float 6s ease-in-out infinite}
+.float-card-rating .fc-stars{display:flex;gap:2px}
+.float-card-rating .fc-stars svg{width:16px;height:16px;fill:#FBBF24}
+.float-card-rating .fc-text{color:#fff;font-size:.85rem;font-weight:600}
+.float-card-rating .fc-text span{display:block;font-size:.7rem;font-weight:400;color:rgba(255,255,255,.6)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/*──────────────────────────────────────────────────────────────
+  BUTTONS
+──────────────────────────────────────────────────────────────*/
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:var(--font-d);font-weight:700;font-size:.95rem;padding:14px 32px;
+  border-radius:50px;transition:all .3s var(--ease);cursor:pointer;border:0}
+.btn-primary{background:var(--cyan);color:var(--navy-dark);
+  box-shadow:0 4px 20px var(--cyan-glow)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 40px var(--cyan-glow)}
+.btn-primary:active{transform:scale(.97)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.3)}
+.btn-outline:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px)}
+.btn-outline svg{width:18px;height:18px}
+.btn-dark{background:var(--navy);color:#fff;box-shadow:0 4px 20px rgba(11,54,97,.3)}
+.btn-dark:hover{background:var(--blue);transform:translateY(-3px);box-shadow:0 12px 40px rgba(11,54,97,.4)}
+
+/*──────────────────────────────────────────────────────────────
+  SECTIONS — SHARED
+──────────────────────────────────────────────────────────────*/
+.section{padding:100px 24px}
+.wrap{max-width:1100px;margin:0 auto}
+.kicker{font-family:var(--font-d);font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;
+  color:var(--cyan);margin-bottom:12px}
+.kicker-dark{color:var(--blue)}
+.section-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:16px}
+.section-lead{font-size:1.05rem;color:var(--text-light);max-width:600px;line-height:1.7;margin-bottom:48px}
+.section-title-white{color:#fff}
+
+/*──────────────────────────────────────────────────────────────
+  ABOUT / TRUST
+──────────────────────────────────────────────────────────────*/
+.about{background:var(--surface)}
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.stat-card{background:var(--white);border-radius:var(--radius);padding:32px 24px;text-align:center;
+  border:1px solid rgba(11,54,97,.06);
+  box-shadow:0 4px 24px rgba(11,54,97,.04);transition:all .4s var(--ease)}
+.stat-num{font-family:var(--font-d);font-size:2.6rem;font-weight:800;color:var(--navy);line-height:1}
+.stat-num .accent{color:var(--cyan)}
+.stat-lbl{font-size:.85rem;color:var(--text-light);margin-top:8px;line-height:1.4}
+
+/*──────────────────────────────────────────────────────────────
+  SERVICES
+──────────────────────────────────────────────────────────────*/
+.services{background:var(--white)}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.svc-card{background:var(--surface);border-radius:var(--radius);padding:32px 28px;
+  border:1px solid transparent;transition:all .4s var(--ease);position:relative;overflow:hidden}
+.svc-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;
+  background:linear-gradient(90deg,var(--cyan),var(--blue));transform:scaleX(0);transform-origin:left;
+  transition:transform .4s var(--ease)}
+.svc-ico{width:52px;height:52px;border-radius:14px;
+  background:linear-gradient(135deg,var(--navy),var(--blue));
+  display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  transition:transform .3s var(--bounce)}
+.svc-ico svg{width:24px;height:24px;fill:#fff}
+.svc-card h3{font-family:var(--font-d);font-size:1.1rem;font-weight:700;margin-bottom:8px;color:var(--navy)}
+.svc-card p{font-size:.9rem;color:var(--text-light);line-height:1.6}
+
+/*──────────────────────────────────────────────────────────────
+  SHOWCASE (implants before/after)
+──────────────────────────────────────────────────────────────*/
+.showcase{background:linear-gradient(135deg,var(--navy-dark),var(--navy));color:#fff;position:relative;overflow:hidden}
+.showcase::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;
+  background:radial-gradient(circle,rgba(0,223,248,.08),transparent 70%);pointer-events:none}
+.showcase-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.showcase-img{border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.showcase-img img{width:100%;display:block}
+.showcase-copy h2{margin-bottom:16px}
+.showcase-copy p{color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:24px}
+
+/*──────────────────────────────────────────────────────────────
+  TESTIMONIALS
+──────────────────────────────────────────────────────────────*/
+.testimonials{background:linear-gradient(180deg,var(--surface),var(--warm))}
+.testi-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  padding:8px 0 24px;scrollbar-width:none}
+.testi-track::-webkit-scrollbar{display:none}
+.testi-card{flex:0 0 min(380px,85vw);scroll-snap-align:start;
+  background:var(--white);border-radius:var(--radius);padding:32px 28px;
+  border:1px solid rgba(11,54,97,.06);box-shadow:0 4px 24px rgba(11,54,97,.05);
+  transition:all .4s var(--ease);position:relative}
+.testi-card::before{content:'\201C';position:absolute;top:16px;right:24px;
+  font-family:var(--font-d);font-size:4rem;line-height:1;color:var(--cyan);opacity:.3}
+.testi-stars{display:flex;gap:2px;margin-bottom:16px}
+.testi-stars svg{width:18px;height:18px;fill:#FBBF24}
+.testi-text{font-size:.95rem;color:var(--text);line-height:1.7;margin-bottom:20px;font-style:italic}
+.testi-author{font-family:var(--font-d);font-size:.9rem;font-weight:700;color:var(--navy)}
+.testi-source{font-size:.75rem;color:var(--text-muted);margin-top:2px}
+.testi-dots{display:flex;justify-content:center;gap:8px;margin-top:24px}
+.testi-dot{width:10px;height:10px;border-radius:50%;background:var(--navy);opacity:.2;
+  transition:all .3s;cursor:pointer;border:0}
+.testi-dot.active{opacity:1;background:var(--cyan);transform:scale(1.2)}
+
+/*──────────────────────────────────────────────────────────────
+  CTA / CONTACT
+──────────────────────────────────────────────────────────────*/
+.contact{background:var(--white);position:relative}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-info h2{margin-bottom:16px}
+.contact-info p{color:var(--text-light);margin-bottom:32px;line-height:1.7}
+.contact-detail{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px}
+.contact-detail-ico{width:48px;height:48px;border-radius:14px;
+  background:linear-gradient(135deg,var(--navy),var(--blue));
+  display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-detail-ico svg{width:22px;height:22px;fill:#fff}
+.contact-detail-text{font-size:.9rem;color:var(--text)}
+.contact-detail-text strong{display:block;font-family:var(--font-d);font-size:1rem;color:var(--navy);margin-bottom:4px}
+.contact-map{border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:0 12px 40px rgba(11,54,97,.1);border:1px solid rgba(11,54,97,.06)}
+.contact-map iframe{width:100%;height:380px;border:0}
+
+/*──────────────────────────────────────────────────────────────
+  CTA BANNER
+──────────────────────────────────────────────────────────────*/
+.cta-banner{background:linear-gradient(135deg,var(--navy),var(--blue));padding:80px 24px;text-align:center;
+  position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(circle 500px at 30% 50%,rgba(0,223,248,.12),transparent),
+             radial-gradient(circle 400px at 70% 50%,rgba(21,101,168,.15),transparent);pointer-events:none}
+.cta-banner h2{color:#fff;font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:16px;position:relative;z-index:1}
+.cta-banner p{color:rgba(255,255,255,.7);font-size:1.05rem;margin-bottom:32px;position:relative;z-index:1}
+.cta-banner .btn{position:relative;z-index:1}
+
+/*──────────────────────────────────────────────────────────────
+  FOOTER
+──────────────────────────────────────────────────────────────*/
+.footer{background:var(--navy-deeper);color:rgba(255,255,255,.6);padding:60px 24px 32px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
+.footer-brand{display:flex;flex-direction:column;gap:12px}
+.footer-brand .brand-logo{height:44px}
+.footer-tagline{font-size:.9rem;line-height:1.6;max-width:300px}
+.footer-col h4{font-family:var(--font-d);font-size:.9rem;font-weight:700;color:#fff;margin-bottom:16px;
+  text-transform:uppercase;letter-spacing:.08em}
+.footer-col a{display:block;font-size:.85rem;padding:4px 0;transition:color .2s}
+.footer-col a:hover{color:var(--cyan)}
+.footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.08);font-size:.75rem;text-align:center}
+
+/*──────────────────────────────────────────────────────────────
+  STICKY CALL BAR (mobile)
+──────────────────────────────────────────────────────────────*/
+.call-bar{position:fixed;bottom:0;left:0;right:0;z-index:999;
+  background:var(--navy);padding:12px 24px;display:none;
+  box-shadow:0 -4px 24px rgba(0,0,0,.3)}
+.call-bar a{display:flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--cyan);color:var(--navy-dark);font-family:var(--font-d);font-weight:700;
+  font-size:1rem;padding:14px;border-radius:50px;width:100%}
+.call-bar a svg{width:20px;height:20px}
+
+/*──────────────────────────────────────────────────────────────
+  REVEAL ANIMATION
+──────────────────────────────────────────────────────────────*/
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-24px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(24px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* Stagger: stat cards */
+.stat-card.reveal:nth-child(1){transition-delay:0ms}
+.stat-card.reveal:nth-child(2){transition-delay:60ms}
+.stat-card.reveal:nth-child(3){transition-delay:120ms}
+.stat-card.reveal:nth-child(4){transition-delay:180ms}
+/* Stagger: service cards */
+.svc-card.reveal:nth-child(1){transition-delay:0ms}
+.svc-card.reveal:nth-child(2){transition-delay:50ms}
+.svc-card.reveal:nth-child(3){transition-delay:100ms}
+.svc-card.reveal:nth-child(4){transition-delay:150ms}
+.svc-card.reveal:nth-child(5){transition-delay:200ms}
+.svc-card.reveal:nth-child(6){transition-delay:250ms}
+.svc-card.reveal:nth-child(7){transition-delay:300ms}
+.svc-card.reveal:nth-child(8){transition-delay:350ms}
+
+/* Hover only for pointer devices */
+@media(hover:hover)and(pointer:fine){
+.stat-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(11,54,97,.1);border-color:var(--cyan)}
+.svc-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(11,54,97,.1);border-color:rgba(0,223,248,.2)}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-card:hover .svc-ico{transform:scale(1.1) rotate(-5deg)}
+.testi-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(11,54,97,.1)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal,.reveal-left,.reveal-right{opacity:1;transform:none;transition:none}
+  .float-card-rating{animation:none}
+  .dot-pulse{animation:none}
+  .splash-ring{animation:none}
+}
+
+/*──────────────────────────────────────────────────────────────
+  RESPONSIVE
+──────────────────────────────────────────────────────────────*/
+.mobile-menu{display:none}
+
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;text-align:center}
+  .hero-sub{margin-left:auto;margin-right:auto}
+  .hero-actions{justify-content:center}
+  .hero-trust{justify-content:center}
+  .hero-visual{order:-1;margin-bottom:20px}
+  .hero-photo{max-width:400px;margin:0 auto}
+  .float-card-rating{left:10px;bottom:10px}
+  .showcase-inner{grid-template-columns:1fr;text-align:center}
+  .showcase-img{max-width:500px;margin:0 auto}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  :root{--nav-h:64px}
+  .nav-links,.nav-phone,.nav-cta-btn{display:none}
+  .burger{display:flex}
+  .about-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .stat-card{padding:24px 16px}
+  .stat-num{font-size:2rem}
+  .section{padding:70px 16px}
+  .hero{padding:calc(var(--nav-h) + 24px) 16px 40px}
+  .hero-photo{max-width:320px}
+  .call-bar{display:block}
+  body{padding-bottom:72px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-inner{gap:32px}
+
+  .mobile-menu{position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;
+    background:rgba(11,54,97,.98);backdrop-filter:blur(20px);z-index:999;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;
+    opacity:0;visibility:hidden;transition:all .3s var(--ease)}
+  .mobile-menu.open{opacity:1;visibility:visible}
+  .mobile-menu a{font-family:var(--font-d);font-size:1.4rem;font-weight:600;color:#fff;transition:color .2s}
+  .mobile-menu a:hover{color:var(--cyan)}
+}
+@media(max-width:480px){
+  .about-grid{grid-template-columns:1fr}
+  .hero-title{font-size:1.8rem}
+  .float-card{display:none}
+  .services-grid{grid-template-columns:1fr}
+}
+@media(max-width:400px){
+  .nav-inner{padding:0 12px;gap:8px}
+  .brand-logo{height:48px}
+  .lang-toggle{gap:0}
+  .lang-btn{padding:5px 10px;font-size:.65rem}
+  .burger{width:24px}
+}
+
+/* ── Appointment Form ── */
+.form-card{background:var(--white);border-radius:var(--radius-lg);padding:40px 32px;
+  box-shadow:0 12px 48px rgba(11,54,97,.08);border:1px solid rgba(11,54,97,.06)}
+.form-card h3{font-family:var(--font-d);font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:24px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:.85rem;font-weight:600;color:var(--text);margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;
+  border:1.5px solid rgba(11,54,97,.12);border-radius:10px;font-family:var(--font-b);font-size:.95rem;
+  color:var(--text);background:var(--white);transition:border-color .3s var(--ease),box-shadow .3s var(--ease)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;
+  border-color:var(--cyan);box-shadow:0 0 0 3px var(--cyan-glow)}
+.form-group textarea{resize:vertical;min-height:80px}
+.form-group .error-msg{color:#c0392b;font-size:.78rem;margin-top:4px;display:none}
+.form-group.has-error input,.form-group.has-error select{border-color:#c0392b}
+.form-group.has-error .error-msg{display:block}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:480px){.form-row{grid-template-columns:1fr}}
+.form-submit{width:100%;padding:14px;background:linear-gradient(135deg,var(--navy),var(--blue));
+  color:#fff;font-family:var(--font-d);font-size:1rem;font-weight:700;border:0;border-radius:50px;
+  cursor:pointer;transition:all .3s var(--ease);box-shadow:0 4px 20px rgba(11,54,97,.2)}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(11,54,97,.3)}
+.form-submit:active{transform:scale(.98)}
+.form-success{display:none;text-align:center;padding:40px 20px}
+.form-success.show{display:block}
+.form-success svg{width:64px;height:64px;margin:0 auto 16px}
+.form-success h4{font-family:var(--font-d);font-size:1.3rem;color:var(--navy);margin-bottom:8px}
+.form-success p{color:var(--text-light);font-size:.95rem}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#contenido" data-t="skip">Saltar al contenido</a>
+
+<!-- SPLASH -->
+<div class="splash" id="splash" aria-hidden="true"><div class="splash-ring"></div></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Galenos Dental, inicio">
+      <svg class="brand-logo" viewBox="0 0 280 60" xmlns="http://www.w3.org/2000/svg" aria-label="Galenos Dental">
+        <ellipse cx="140" cy="30" rx="138" ry="28" fill="none" stroke="#fff" stroke-width="1.5" opacity=".5"/>
+        <text x="140" y="28" text-anchor="middle" font-family="'Outfit',sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">GALENOS DENTAL</text>
+        <text x="140" y="48" text-anchor="middle" font-family="'Outfit',sans-serif" font-size="11" font-style="italic" fill="var(--cyan)" letter-spacing="1.5">Relax and Smile</text>
+      </svg>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#acerca" data-t="nav_about">Nosotros</a>
+      <a href="#servicios" data-t="nav_services">Servicios</a>
+      <a href="#resultados" data-t="nav_results">Resultados</a>
+      <a href="#opiniones" data-t="nav_reviews">Opiniones</a>
+      <a href="#contacto" data-t="nav_contact">Contacto</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-phone" href="tel:+13052618080" aria-label="Llamar">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+        <span>(305) 261-8080</span>
+      </a>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="es" aria-label="Español">ES</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+      <a class="nav-cta-btn" href="#cita-form" data-t="nav_cta">Pedir cita</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#acerca" data-t="nav_about">Nosotros</a>
+  <a href="#servicios" data-t="nav_services">Servicios</a>
+  <a href="#resultados" data-t="nav_results">Resultados</a>
+  <a href="#opiniones" data-t="nav_reviews">Opiniones</a>
+  <a href="#contacto" data-t="nav_contact">Contacto</a>
+  <div class="lang-toggle" style="margin-top:16px">
+    <button class="lang-btn active" data-lang="es" aria-label="Español">ES</button>
+    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+  </div>
+  <a class="btn btn-primary" href="#cita-form" data-t="nav_cta" style="margin-top:8px">Pedir cita</a>
+</div>
+
+<main id="contenido">
+<span id="top"></span>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero">
+  <div class="mesh" id="mesh" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy reveal">
+      <p class="eyebrow"><span class="dot-pulse"></span> <span data-t="hero_eyebrow">Odontología en Flagami, Miami</span></p>
+      <h1 class="hero-title" data-t="hero_title">Su sonrisa habla por usted.<br><em>Nosotros la cuidamos.</em></h1>
+      <p class="hero-sub" data-t="hero_sub">Galenos Dental ofrece atención cercana en odontología general y cosmética al servicio de las familias de Miami.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#cita-form" data-t="hero_cta">Pedir cita ahora</a>
+        <a class="btn btn-outline" href="tel:+13052618080" data-t="hero_cta2">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+          (305) 261-8080
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-stars" aria-label="5.0 estrellas">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+        </div>
+        <div class="hero-trust-text"><strong>5.0 / 5</strong> · <span data-t="hero_reviews">60 reseñas en Google</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal-right">
+      <div class="hero-photo">
+        <img src="images/consultorio.jpg" alt="Consultorio Galenos Dental" loading="eager" fetchpriority="high">
+      </div>
+      <div class="float-card float-card-rating">
+        <div class="fc-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+        </div>
+        <div class="fc-text">5.0<span data-t="fc_reviews">60 reseñas</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ABOUT / STATS ═══════════════════ -->
+<section class="section about" id="acerca">
+  <div class="wrap">
+    <h2 class="section-title reveal" data-t="about_title">Atención cercana, resultados que se ven.</h2>
+    <p class="section-lead reveal" data-t="about_lead">En Galenos Dental, el Dr. Ivan Izquierdo y su equipo ofrecen odontología general y cosmética con un enfoque personalizado. Más de 30 años de experiencia combinada al servicio de las familias de Flagami.</p>
+    <div class="about-grid">
+      <div class="stat-card reveal">
+        <div class="stat-num"><span data-count="5.0">5.0</span><span class="accent">★</span></div>
+        <div class="stat-lbl" data-t="stat_rating">Calificación en Google</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-num"><span data-count="60">60</span></div>
+        <div class="stat-lbl" data-t="stat_reviews">Reseñas de pacientes</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-num">30<span class="accent">+</span></div>
+        <div class="stat-lbl" data-t="stat_exp">Años de experiencia combinada del equipo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ SERVICES ═══════════════════ -->
+<section class="section services" id="servicios">
+  <div class="wrap">
+    <p class="kicker-dark reveal" data-t="svc_kicker">Servicios</p>
+    <h2 class="section-title reveal" data-t="svc_title">Todo lo que su familia necesita, en un solo lugar.</h2>
+    <p class="section-lead reveal" data-t="svc_lead">Desde la limpieza de rutina hasta tratamientos avanzados, con la atención personalizada que usted merece.</p>
+    <div class="services-grid">
+
+      <div class="svc-card reveal">
+        <div class="svc-ico">
+          <svg viewBox="0 0 24 24"><path d="M12 2c2 0 3.2 1 4.4 1s2.1-.6 3-.2c1.4.7 1.4 3 1 5.4-.3 1.7-.6 2.3-1 4.6-.5 3-.9 8.4-2.6 8.4-1.3 0-1.2-3.6-2.8-3.6S11.3 21 10 21c-1.7 0-2-5.4-2.5-8.4-.4-2.3-.7-2.9-1-4.6-.4-2.4-.4-4.7 1-5.4.9-.4 1.8.2 3 .2S10 2 12 2z"/></svg>
+        </div>
+        <h3 data-t="svc1_title">Odontología general</h3>
+        <p data-t="svc1_desc">Chequeos, limpiezas y prevención para toda la familia. Cuidado integral en cada visita.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-ico">
+          <svg viewBox="0 0 24 24"><path d="M7 22h10a1 1 0 0 0 1-1v-4.46a7 7 0 1 0-12 0V21a1 1 0 0 0 1 1zm5-18a5 5 0 0 1 4 8H8a5 5 0 0 1 4-8z"/></svg>
+        </div>
+        <h3 data-t="svc2_title">Implantes dentales</h3>
+        <p data-t="svc2_desc">Reemplace los dientes perdidos con implantes seguros y de aspecto natural.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-ico">
+          <svg viewBox="0 0 24 24"><path d="M12 3c-1.5 0-3 .5-3 2v4c0 1.66 1.34 3 3 3s3-1.34 3-3V5c0-1.5-1.5-2-3-2zm0 16c-3.31 0-6-2.69-6-6h2c0 2.21 1.79 4 4 4s4-1.79 4-4h2c0 3.31-2.69 6-6 6zm0 3l-3-3h6l-3 3z"/></svg>
+        </div>
+        <h3 data-t="svc3_title">Odontología cosmética</h3>
+        <p data-t="svc3_desc">Blanqueamiento, carillas y tratamientos estéticos para una sonrisa que brille.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-ico">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+        </div>
+        <h3 data-t="svc4_title">Endodoncia</h3>
+        <p data-t="svc4_desc">Tratamiento de conducto profesional para salvar su diente y terminar con el dolor.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-ico">
+          <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </div>
+        <h3 data-t="svc5_title">Extracciones</h3>
+        <p data-t="svc5_desc">Extracciones simples y quirúrgicas con técnicas que minimizan las molestias.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-ico">
+          <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm6 11h-3v3h-2v-3H8v-2h3v-3h2v3h3v2z"/></svg>
+        </div>
+        <h3 data-t="svc6_title">Cirugía oral</h3>
+        <p data-t="svc6_desc">Procedimientos quirúrgicos con la experiencia y el cuidado que usted necesita.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-ico">
+          <svg viewBox="0 0 24 24"><path d="M9 2l-1 2H4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h.3l1.5 12.3A2 2 0 0 0 7.8 22h8.4a2 2 0 0 0 2-1.7L19.7 8H20a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-4l-1-2H9zm3 8a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
+        </div>
+        <h3 data-t="svc7_title">Limpieza dental</h3>
+        <p data-t="svc7_desc">Limpiezas profesionales para mantener sus encías sanas y su sonrisa fresca.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-ico">
+          <svg viewBox="0 0 24 24"><path d="M20.35 5.12a5.5 5.5 0 0 0-6.3-.72L12 5.76l-2.05-1.36A5.5 5.5 0 0 0 1.6 9.88L12 22l10.4-12.12a5.5 5.5 0 0 0-2.05-4.76z"/></svg>
+        </div>
+        <h3 data-t="svc8_title">Blanqueamiento</h3>
+        <p data-t="svc8_desc">Dientes más blancos y brillantes con tratamientos seguros y resultados visibles.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ SHOWCASE — IMPLANTS ═══════════════════ -->
+<section class="section showcase" id="resultados">
+  <div class="wrap">
+    <div class="showcase-inner">
+      <div class="showcase-img reveal-left">
+        <img src="images/caso-implantes.jpg" alt="Caso real de implantes dentales — antes y después" loading="lazy">
+      </div>
+      <div class="showcase-copy reveal-right">
+        <h2 class="section-title section-title-white" data-t="show_title">Implantes dentales que devuelven la confianza.</h2>
+        <p data-t="show_desc">Caso real de un paciente de Galenos Dental. Resultados que hablan por sí mismos, con la técnica y el cuidado del Dr. Izquierdo y su equipo.</p>
+        <a class="btn btn-primary" href="#cita-form" data-t="show_cta">Consultar por implantes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ TESTIMONIALS ═══════════════════ -->
+<section class="section testimonials" id="opiniones">
+  <div class="wrap">
+    <p class="kicker-dark reveal" data-t="testi_kicker">Opiniones reales</p>
+    <h2 class="section-title reveal" data-t="testi_title">Lo que dicen nuestros pacientes.</h2>
+    <p class="section-lead reveal" data-t="testi_lead">5.0 estrellas en Google con 60 reseñas. La confianza de nuestros pacientes es nuestro mayor orgullo.</p>
+
+    <div class="testi-track" id="testiTrack">
+      <div class="testi-card reveal">
+        <div class="testi-stars">
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+        </div>
+        <p class="testi-text">"Dr. Izquierdo and his staff are extremely professional, very knowledgeable and always find solutions to any dental problem that might arise with minimum pain. They give their patients VIP treatment which makes your dental experience a success."</p>
+        <div class="testi-author">Eduardo G.</div>
+        <div class="testi-source">Google</div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="testi-stars">
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+        </div>
+        <p class="testi-text">"Dr. Izquierdo and staff are great!! They are all very skilled and experienced and provide a great care. Always a pleasure when I see them and love going to the dental cleanings too. I highly recommend them to anyone."</p>
+        <div class="testi-author">Yenisel M.</div>
+        <div class="testi-source">Google</div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="testi-stars">
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+        </div>
+        <p class="testi-text">"Dr. Izquierdo is a professional and caring dentist. I totally recommend him for all your dental needs!"</p>
+        <div class="testi-author">Elsa G.</div>
+        <div class="testi-source">Google</div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="testi-stars">
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#FBBF24" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+        </div>
+        <p class="testi-text">"If you are in need of a caring dentist, who is passionate to keep your teeth top notch…you definitely found the right place! My family and I, thank YOU! Dr Izquierdo and your amazing staff… for keeping us smiling!"</p>
+        <div class="testi-author">Liz E.</div>
+        <div class="testi-source">Google</div>
+      </div>
+    </div>
+
+    <div class="testi-dots" id="testiDots"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CONTACT ═══════════════════ -->
+<section class="section contact" id="contacto">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <h2 class="section-title" data-t="contact_title">Estamos aquí para usted.</h2>
+        <p data-t="contact_lead">Complete el formulario o llámenos para programar su cita. Atendemos de lunes a viernes en nuestra oficina de Flagami.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-ico">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <strong data-t="contact_phone_lbl">Teléfono</strong>
+            <a href="tel:+13052618080">(305) 261-8080</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-ico">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <strong data-t="contact_address_lbl">Dirección</strong>
+            7175 SW 8th Street, Suite 205<br>Miami, FL 33144
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-ico">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <strong data-t="contact_hours_lbl">Horario</strong>
+            <span data-t="contact_hours">Lun–Jue: 11:00 AM – 6:00 PM<br>Viernes: 9:00 AM – 3:00 PM<br>Sáb–Dom: Cerrado</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right reveal-right">
+        <div class="form-card" id="cita-form">
+          <h3 data-t="form_title">Solicite su cita</h3>
+          <form id="appointmentForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name" data-t="form_name">Nombre</label>
+                <input type="text" id="f-name" required autocomplete="name">
+                <span class="error-msg" data-t="form_err_name">Ingrese su nombre</span>
+              </div>
+              <div class="form-group">
+                <label for="f-phone" data-t="form_phone">Teléfono</label>
+                <input type="tel" id="f-phone" required autocomplete="tel">
+                <span class="error-msg" data-t="form_err_phone">Ingrese su teléfono</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-service" data-t="form_service">Servicio</label>
+              <select id="f-service" required>
+                <option value="" data-t="form_select">Seleccione un servicio</option>
+                <option value="general">Odontología general</option>
+                <option value="implantes">Implantes dentales</option>
+                <option value="cosmetica">Odontología cosmética</option>
+                <option value="endodoncia">Endodoncia</option>
+                <option value="extracciones">Extracciones</option>
+                <option value="cirugia">Cirugía oral</option>
+                <option value="limpieza">Limpieza dental</option>
+                <option value="blanqueamiento">Blanqueamiento</option>
+              </select>
+              <span class="error-msg" data-t="form_err_service">Seleccione un servicio</span>
+            </div>
+            <div class="form-group">
+              <label for="f-day" data-t="form_day">Día preferido</label>
+              <input type="text" id="f-day" title="Ej: lunes por la tarde" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="f-msg" data-t="form_msg">Mensaje (opcional)</label>
+              <textarea id="f-msg" rows="3"></textarea>
+            </div>
+            <button type="submit" class="form-submit" data-t="form_btn">Solicitar cita</button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="30" stroke="var(--cyan)" stroke-width="3"/><path d="M20 33l8 8 16-16" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><animate attributeName="stroke-dasharray" from="0 50" to="50 0" dur=".5s" fill="freeze"/></path></svg>
+            <h4 data-t="form_ok_title">¡Solicitud enviada!</h4>
+            <p data-t="form_ok_msg">Nos comunicaremos con usted a la brevedad para confirmar su cita.</p>
+          </div>
+        </div>
+        <div class="contact-map" style="margin-top:24px">
+          <iframe src="https://www.google.com/maps?q=7175+SW+8th+St+Suite+205,+Miami,+FL+33144&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Galenos Dental"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CTA BANNER ═══════════════════ -->
+<section class="cta-banner">
+  <div class="wrap reveal">
+    <h2 data-t="cta_title">¿Listo para sonreír con confianza?</h2>
+    <p data-t="cta_sub">Llame hoy y dé el primer paso hacia la sonrisa que usted merece.</p>
+    <a class="btn btn-primary" href="#cita-form" data-t="cta_btn">Pedir cita ahora</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand" style="text-align:left">
+      <svg viewBox="0 0 280 60" preserveAspectRatio="xMinYMid meet" class="brand-logo" style="margin:0" xmlns="http://www.w3.org/2000/svg" aria-label="Galenos Dental">
+        <ellipse cx="140" cy="30" rx="138" ry="28" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
+        <text x="140" y="28" text-anchor="middle" font-family="'Outfit',sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="4">GALENOS DENTAL</text>
+        <text x="140" y="48" text-anchor="middle" font-family="'Outfit',sans-serif" font-size="11" font-style="italic" fill="var(--cyan)" letter-spacing="1.5">Relax and Smile</text>
+      </svg>
+      <p class="footer-tagline" data-t="footer_tagline">Odontología general y cosmética en Flagami, Miami. A Smile Speaks a Thousand Words.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-t="footer_services">Servicios</h4>
+      <a href="#servicios" data-t="svc1_title">Odontología general</a>
+      <a href="#servicios" data-t="svc2_title">Implantes dentales</a>
+      <a href="#servicios" data-t="svc3_title">Odontología cosmética</a>
+      <a href="#servicios" data-t="svc4_title">Endodoncia</a>
+      <a href="#servicios" data-t="svc8_title">Blanqueamiento</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-t="footer_contact">Contacto</h4>
+      <a href="tel:+13052618080">(305) 261-8080</a>
+      <a href="https://maps.google.com/?q=7175+SW+8th+St+Suite+205+Miami+FL+33144" target="_blank" rel="noopener">7175 SW 8th St, Suite 205<br>Miami, FL 33144</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-t="footer_copy">&copy; 2026 Galenos Dental. Todos los derechos reservados.</span>
+  </div>
+</footer>
+
+<!-- STICKY CALL BAR (mobile) -->
+<div class="call-bar">
+  <a href="tel:+13052618080">
+    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+    <span data-t="callbar">Llamar a Galenos Dental</span>
+  </a>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+/* ── Translations ── */
+var T = {
+  es: {
+    skip:'Saltar al contenido',
+    nav_about:'Nosotros',nav_services:'Servicios',nav_results:'Resultados',nav_reviews:'Opiniones',nav_contact:'Contacto',
+    nav_cta:'Pedir cita',
+    hero_eyebrow:'Odontología en Flagami, Miami',
+    hero_title:'Su sonrisa habla por usted.<br><em>Nosotros la cuidamos.</em>',
+    hero_sub:'Galenos Dental ofrece atención cercana en odontología general y cosmética al servicio de las familias de Miami.',
+    hero_cta:'Pedir cita ahora',
+    hero_cta2:'<svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1z"/></svg> (305) 261-8080',
+    hero_reviews:'60 reseñas en Google',
+    fc_reviews:'60 reseñas',
+    about_kicker:'Su consultorio de confianza',
+    about_title:'Atención cercana, resultados que se ven.',
+    about_lead:'En Galenos Dental, el Dr. Ivan Izquierdo y su equipo ofrecen odontología general y cosmética con un enfoque personalizado. Más de 30 años de experiencia combinada al servicio de las familias de Flagami.',
+    stat_rating:'Calificación en Google',stat_reviews:'Reseñas de pacientes',stat_exp:'Años de experiencia combinada del equipo',
+    svc_kicker:'Servicios',svc_title:'Todo lo que su familia necesita, en un solo lugar.',
+    svc_lead:'Desde la limpieza de rutina hasta tratamientos avanzados, con la atención personalizada que usted merece.',
+    svc1_title:'Odontología general',svc1_desc:'Chequeos, limpiezas y prevención para toda la familia. Cuidado integral en cada visita.',
+    svc2_title:'Implantes dentales',svc2_desc:'Reemplace los dientes perdidos con implantes seguros y de aspecto natural.',
+    svc3_title:'Odontología cosmética',svc3_desc:'Blanqueamiento, carillas y tratamientos estéticos para una sonrisa que brille.',
+    svc4_title:'Endodoncia',svc4_desc:'Tratamiento de conducto profesional para salvar su diente y terminar con el dolor.',
+    svc5_title:'Extracciones',svc5_desc:'Extracciones simples y quirúrgicas con técnicas que minimizan las molestias.',
+    svc6_title:'Cirugía oral',svc6_desc:'Procedimientos quirúrgicos con la experiencia y el cuidado que usted necesita.',
+    svc7_title:'Limpieza dental',svc7_desc:'Limpiezas profesionales para mantener sus encías sanas y su sonrisa fresca.',
+    svc8_title:'Blanqueamiento',svc8_desc:'Dientes más blancos y brillantes con tratamientos seguros y resultados visibles.',
+    show_kicker:'Resultados reales',show_title:'Implantes dentales que devuelven la confianza.',
+    show_desc:'Caso real de un paciente de Galenos Dental. Resultados que hablan por sí mismos, con la técnica y el cuidado del Dr. Izquierdo y su equipo.',
+    show_cta:'Consultar por implantes',
+    testi_kicker:'Opiniones reales',testi_title:'Lo que dicen nuestros pacientes.',
+    testi_lead:'5.0 estrellas en Google con 60 reseñas. La confianza de nuestros pacientes es nuestro mayor orgullo.',
+    contact_kicker:'Contacto',contact_title:'Estamos aquí para usted.',
+    contact_lead:'Complete el formulario o llámenos para programar su cita. Atendemos de lunes a viernes en nuestra oficina de Flagami.',
+    contact_phone_lbl:'Teléfono',contact_address_lbl:'Dirección',contact_hours_lbl:'Horario',
+    contact_hours:'Lun–Jue: 11:00 AM – 6:00 PM<br>Viernes: 9:00 AM – 3:00 PM<br>Sáb–Dom: Cerrado',
+    cta_title:'¿Listo para sonreír con confianza?',cta_sub:'Pida su cita hoy y dé el primer paso hacia la sonrisa que usted merece.',
+    cta_btn:'Pedir cita ahora',
+    form_title:'Solicite su cita',form_name:'Nombre',form_phone:'Teléfono',form_service:'Servicio',
+    form_select:'Seleccione un servicio',form_day:'Día preferido',form_msg:'Mensaje (opcional)',form_btn:'Solicitar cita',
+    form_err_name:'Ingrese su nombre',form_err_phone:'Ingrese su teléfono',form_err_service:'Seleccione un servicio',
+    form_ok_title:'¡Solicitud enviada!',form_ok_msg:'Nos comunicaremos con usted a la brevedad para confirmar su cita.',
+    footer_tagline:'Odontología general y cosmética en Flagami, Miami. A Smile Speaks a Thousand Words.',
+    footer_services:'Servicios',footer_contact:'Contacto',
+    footer_copy:'&copy; 2026 Galenos Dental. Todos los derechos reservados.',
+    callbar:'Llamar a Galenos Dental'
+  },
+  en: {
+    skip:'Skip to content',
+    nav_about:'About',nav_services:'Services',nav_results:'Results',nav_reviews:'Reviews',nav_contact:'Contact',
+    nav_cta:'Book now',
+    hero_eyebrow:'Dentistry in Flagami, Miami',
+    hero_title:'Your smile speaks for you.<br><em>We take care of it.</em>',
+    hero_sub:'Galenos Dental provides personalized general and cosmetic dentistry serving Miami families.',
+    hero_cta:'Book your appointment',
+    hero_cta2:'<svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1z"/></svg> (305) 261-8080',
+    hero_reviews:'60 reviews on Google',
+    fc_reviews:'60 reviews',
+    about_kicker:'Your trusted dental office',
+    about_title:'Personalized care, visible results.',
+    about_lead:'At Galenos Dental, Dr. Ivan Izquierdo and associates provide general and cosmetic dentistry with a personalized approach. More than 30 years of combined experience serving Flagami families.',
+    stat_rating:'Google rating',stat_reviews:'Patient reviews',stat_exp:'Years of combined team experience',
+    svc_kicker:'Services',svc_title:'Everything your family needs, in one place.',
+    svc_lead:'From routine cleanings to advanced treatments, with the personalized attention you deserve.',
+    svc1_title:'General dentistry',svc1_desc:'Checkups, cleanings and prevention for the whole family. Comprehensive care at every visit.',
+    svc2_title:'Dental implants',svc2_desc:'Replace missing teeth with safe, natural-looking implants.',
+    svc3_title:'Cosmetic dentistry',svc3_desc:'Whitening, veneers and aesthetic treatments for a brighter smile.',
+    svc4_title:'Root canal',svc4_desc:'Professional root canal treatment to save your tooth and end the pain.',
+    svc5_title:'Extractions',svc5_desc:'Simple and surgical extractions with techniques that minimize discomfort.',
+    svc6_title:'Oral surgery',svc6_desc:'Surgical procedures with the expertise and care you need.',
+    svc7_title:'Dental cleaning',svc7_desc:'Professional cleanings to keep your gums healthy and your smile fresh.',
+    svc8_title:'Teeth whitening',svc8_desc:'Brighter, whiter teeth with safe treatments and visible results.',
+    show_kicker:'Real results',show_title:'Dental implants that restore confidence.',
+    show_desc:'A real patient case from Galenos Dental. Results that speak for themselves, with Dr. Izquierdo and his team\'s skill and care.',
+    show_cta:'Ask about implants',
+    testi_kicker:'Real reviews',testi_title:'What our patients say.',
+    testi_lead:'5.0 stars on Google with 60 reviews. Our patients\' trust is our greatest pride.',
+    contact_kicker:'Contact',contact_title:'We\'re here for you.',
+    contact_lead:'Fill out the form or call us to schedule your appointment. We\'re available Monday through Friday at our Flagami office.',
+    contact_phone_lbl:'Phone',contact_address_lbl:'Address',contact_hours_lbl:'Hours',
+    contact_hours:'Mon–Thu: 11:00 AM – 6:00 PM<br>Friday: 9:00 AM – 3:00 PM<br>Sat–Sun: Closed',
+    cta_title:'Ready to smile with confidence?',cta_sub:'Book your appointment today and take the first step toward the smile you deserve.',
+    cta_btn:'Book your appointment',
+    form_title:'Request an appointment',form_name:'Name',form_phone:'Phone',form_service:'Service',
+    form_select:'Select a service',form_day:'Preferred day',form_msg:'Message (optional)',form_btn:'Request appointment',
+    form_err_name:'Please enter your name',form_err_phone:'Please enter your phone number',form_err_service:'Please select a service',
+    form_ok_title:'Request sent!',form_ok_msg:'We will contact you shortly to confirm your appointment.',
+    footer_tagline:'General and cosmetic dentistry in Flagami, Miami. A Smile Speaks a Thousand Words.',
+    footer_services:'Services',footer_contact:'Contact',
+    footer_copy:'&copy; 2026 Galenos Dental. All rights reserved.',
+    callbar:'Call Galenos Dental'
+  }
+};
+
+var currentLang = 'es';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  var strings = T[lang];
+  document.querySelectorAll('[data-t]').forEach(function(el) {
+    var key = el.getAttribute('data-t');
+    if (strings[key] != null) el.innerHTML = strings[key];
+  });
+  document.querySelectorAll('.lang-toggle').forEach(function(tog) {
+    tog.querySelectorAll('.lang-btn').forEach(function(btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+  });
+}
+
+document.addEventListener('click', function(e) {
+  var btn = e.target.closest('.lang-btn');
+  if (btn) { setLang(btn.getAttribute('data-lang')); }
+});
+
+/* ── Splash ── */
+var splash = document.getElementById('splash');
+function hideSplash() { if (splash) splash.classList.add('hide'); }
+window.addEventListener('load', function() { setTimeout(hideSplash, 600); });
+setTimeout(hideSplash, 3000);
+
+/* ── Mesh mouse follow ── */
+var mesh = document.getElementById('mesh');
+if (mesh && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.addEventListener('mousemove', function(e) {
+    mesh.style.setProperty('--mx', e.clientX + 'px');
+    mesh.style.setProperty('--my', e.clientY + 'px');
+  });
+}
+
+/* ── Scroll: nav background ── */
+var nav = document.getElementById('nav');
+function onScroll() {
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 60);
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+/* ── Burger ── */
+var burger = document.getElementById('burger');
+var mobileMenu = document.getElementById('mobileMenu');
+if (burger && mobileMenu) {
+  burger.addEventListener('click', function() {
+    var open = burger.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+    mobileMenu.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function() {
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+}
+
+/* ── Smooth scroll for nav links ── */
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+/* ── Reveal on scroll ── */
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.04, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el) {
+    revealObserver.observe(el);
+  });
+} else {
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el) {
+    el.classList.add('visible');
+  });
+}
+
+/* ── Counter animation ── */
+document.querySelectorAll('[data-count]').forEach(function(el) {
+  var target = parseFloat(el.getAttribute('data-count'));
+  var isFloat = target % 1 !== 0;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        observer.unobserve(el);
+        var start = 0;
+        var duration = 1500;
+        var startTime = null;
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var current = start + (target - start) * eased;
+          el.textContent = isFloat ? current.toFixed(1) : Math.round(current);
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+    });
+  }, { threshold: 0.3 });
+  observer.observe(el);
+});
+
+/* ── Testimonials dots ── */
+var track = document.getElementById('testiTrack');
+var dotsContainer = document.getElementById('testiDots');
+if (track && dotsContainer) {
+  var cards = track.querySelectorAll('.testi-card');
+  cards.forEach(function(_, i) {
+    var dot = document.createElement('button');
+    dot.className = 'testi-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Reseña ' + (i + 1));
+    dot.addEventListener('click', function() {
+      cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    });
+    dotsContainer.appendChild(dot);
+  });
+  var dots = dotsContainer.querySelectorAll('.testi-dot');
+  track.addEventListener('scroll', function() {
+    var scrollLeft = track.scrollLeft;
+    var cardWidth = cards[0].offsetWidth + 24;
+    var index = Math.round(scrollLeft / cardWidth);
+    dots.forEach(function(d, i) { d.classList.toggle('active', i === index); });
+  }, { passive: true });
+}
+
+
+/* ── Appointment form ── */
+var form = document.getElementById('appointmentForm');
+var formSuccess = document.getElementById('formSuccess');
+if (form) {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var valid = true;
+    var required = form.querySelectorAll('[required]');
+    required.forEach(function(input) {
+      var group = input.closest('.form-group');
+      if (!input.value.trim()) {
+        group.classList.add('has-error');
+        valid = false;
+      } else {
+        group.classList.remove('has-error');
+      }
+    });
+    if (!valid) return;
+    form.style.display = 'none';
+    form.previousElementSibling.style.display = 'none';
+    formSuccess.classList.add('show');
+  });
+  form.querySelectorAll('[required]').forEach(function(input) {
+    input.addEventListener('input', function() {
+      if (input.value.trim()) input.closest('.form-group').classList.remove('has-error');
+    });
+  });
+}
+
+})();
+</script>
+</body>
+</html>
