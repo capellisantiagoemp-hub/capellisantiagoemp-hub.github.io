@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Latin Dental of Miami | Clínica dental en Little Havana</title>
+<meta name="description" content="Latin Dental of Miami: clínica dental en Little Havana, Miami. Atención en español y precios accesibles para pacientes sin seguro.">
+<meta name="theme-color" content="#0170C1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230170C1'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='36' font-weight='800' text-anchor='middle' fill='%23fff'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0170C1; --blue-d:#014C86; --navy:#06284A; --sky:#2CACE4; --tint:#EAF6FD; --cream:#FFF9EC;
+  --yellow:#FCB736; --green:#119251; --ink:#0B2540; --muted:#46607A; --line:#D5E5F2; --white:#FDFEFF;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --r:20px; --shadow:0 18px 40px -22px rgba(6,40,74,.45);
+  --head:'Lexend',system-ui,sans-serif; --body:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);font-size:17px;line-height:1.65;color:var(--ink);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+svg{width:1em;height:1em;flex:none}
+h1,h2,h3{font-family:var(--head);line-height:1.12;letter-spacing:-.02em;color:var(--navy)}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:8px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:700 16px/1 var(--head);text-decoration:none;border:2px solid transparent;cursor:pointer;white-space:nowrap;transition:transform .2s var(--ease),box-shadow .25s var(--ease),background-color .2s ease,color .2s ease,border-color .2s ease}
+.btn svg{font-size:20px}
+.btn:active{transform:scale(.97)!important}
+.btn-yellow{background:var(--yellow);color:var(--navy);box-shadow:0 10px 26px -10px rgba(252,183,54,.8)}
+.btn-blue{background:var(--blue);color:#fff;box-shadow:0 10px 26px -12px rgba(1,112,193,.9)}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-line{background:transparent;color:var(--blue-d);border-color:var(--blue)}
+@media (hover:hover) and (pointer:fine){
+  .btn-yellow:hover{box-shadow:0 16px 30px -10px rgba(252,183,54,.95);background:#ffc455}
+  .btn-blue:hover{background:var(--blue-d);box-shadow:0 16px 30px -12px rgba(1,76,134,.9)}
+  .btn-ghost:hover{background:#fff;color:var(--blue-d)}
+  .btn-line:hover{background:var(--blue);color:#fff}
+}
+
+/* splash */
+#splash{position:fixed;inset:0;z-index:100;background:#fff;display:grid;place-items:center;transition:opacity .5s ease,visibility .5s}
+#splash.hide{opacity:0;visibility:hidden}
+#splash img{width:120px;height:120px;border-radius:50%;animation:pop .9s var(--ease) both}
+@keyframes pop{from{opacity:0;transform:scale(.88) rotate(-12deg)}to{opacity:1;transform:none}}
+
+/* nav */
+.nav{position:fixed;top:12px;left:0;right:0;z-index:50;pointer-events:none}
+.nav-in{pointer-events:auto;width:min(1180px,100% - 24px);margin-inline:auto;min-height:72px;padding:6px 10px 6px 12px;display:flex;align-items:center;gap:14px;border-radius:999px;background:rgba(253,254,255,.88);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border:1px solid rgba(255,255,255,.7);box-shadow:0 10px 30px -16px rgba(6,40,74,.5);transition:box-shadow .3s ease,background-color .3s ease}
+.nav.scrolled .nav-in{background:rgba(253,254,255,.96);box-shadow:0 14px 34px -14px rgba(6,40,74,.55)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
+.logo img{width:60px;height:60px;object-fit:contain;border-radius:50%;transition:transform .5s var(--ease)}
+.logo:hover img{transform:rotate(-8deg) scale(1.04)}
+.logo b{font:700 17px/1.1 var(--head);color:var(--blue);letter-spacing:-.01em}
+.nav-links{display:flex;gap:4px;list-style:none}
+.nav-links a{display:block;padding:10px 14px;border-radius:999px;font:600 15px/1 var(--head);text-decoration:none;color:var(--navy);transition:background-color .2s ease,color .2s ease}
+.nav-links a:hover{background:var(--tint);color:var(--blue)}
+.lang{display:flex;background:var(--tint);border-radius:999px;padding:3px}
+.lang button{min-width:44px;min-height:40px;border:0;border-radius:999px;background:transparent;font:700 14px/1 var(--head);color:var(--muted);cursor:pointer;transition:background-color .2s ease,color .2s ease}
+.lang button[aria-pressed="true"]{background:var(--blue);color:#fff}
+.nav .btn{min-height:48px;padding:0 22px}
+.burger{display:none;width:48px;height:48px;border:0;border-radius:50%;background:var(--tint);cursor:pointer;position:relative}
+.burger span,.burger::before,.burger::after{content:"";position:absolute;left:14px;right:14px;height:2.5px;border-radius:2px;background:var(--navy);transition:transform .25s var(--ease),opacity .2s ease}
+.burger::before{top:16px}.burger span{top:23px}.burger::after{top:30px}
+.burger[aria-expanded="true"]::before{transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"]::after{transform:translateY(-7px) rotate(-45deg)}
+.burger[aria-expanded="true"] span{opacity:0}
+
+/* hero */
+.hero{position:relative;min-height:100dvh;display:flex;align-items:center;padding:120px 0 72px;color:#fff;background:linear-gradient(135deg,#032E55 0%,#0170C1 58%,#1E8FD0 110%);overflow:hidden;isolation:isolate}
+.blobs{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.blobs i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;animation:drift 18s ease-in-out infinite alternate}
+.blobs i:nth-child(1){width:520px;height:520px;background:#2CACE4;right:-120px;top:-120px}
+.blobs i:nth-child(2){width:420px;height:420px;background:#FCB736;opacity:.22;left:-140px;bottom:-160px;animation-duration:22s}
+.blobs i:nth-child(3){width:360px;height:360px;background:#119251;opacity:.28;right:22%;bottom:-200px;animation-duration:26s}
+@keyframes drift{to{transform:translate3d(-50px,40px,0) scale(1.12)}}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.35rem,5.2vw,4.3rem);font-weight:700;max-width:13ch}
+.hero h1 em{font-style:normal;color:var(--yellow);display:block}
+.hero .lead{margin:22px 0 32px;font-size:clamp(1.05rem,1.6vw,1.22rem);max-width:34ch;color:#E6F3FC}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.rise{opacity:0;transform:translateY(22px);animation:rise .8s var(--ease) forwards;animation-delay:calc(var(--n,0)*110ms + 250ms)}
+@keyframes rise{to{opacity:1;transform:none}}
+
+.hv{position:relative;display:grid;place-items:center;min-height:470px}
+.coin{position:relative;width:min(360px,76vw);aspect-ratio:1;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 40px 80px -30px rgba(2,22,44,.75),0 0 0 14px rgba(255,255,255,.14),0 0 0 30px rgba(255,255,255,.07);transition:transform .25s ease-out}
+.coin img{width:84%;height:84%;object-fit:contain;border-radius:50%}
+.chip{position:absolute;display:flex;align-items:center;gap:12px;padding:12px 18px;border-radius:18px;background:#fff;color:var(--navy);box-shadow:0 18px 36px -16px rgba(2,22,44,.7);animation:float 7s ease-in-out infinite alternate}
+@keyframes float{to{transform:translateY(-9px)}}
+.chip.rating{top:2%;left:-2%}
+.chip.rating b{font:700 32px/1 var(--head);color:var(--blue)}
+.chip.rating small{display:block;font-size:13px;line-height:1.3;color:var(--muted)}
+.stars{color:#E39A0B;letter-spacing:2px;font-size:15px;line-height:1}
+.chip.open{bottom:2%;right:-6%;animation-delay:-2s;font:600 14px/1.3 var(--head)}
+.dot{width:12px;height:12px;border-radius:50%;background:#A7B6C4;flex:none}
+.open.is-open .dot{background:var(--green);box-shadow:0 0 0 0 rgba(17,146,81,.6);animation:ping 2s ease-out infinite}
+@keyframes ping{to{box-shadow:0 0 0 12px rgba(17,146,81,0)}}
+.chip.bubble{bottom:-3%;left:-10%;max-width:262px;display:block;border-radius:18px 18px 18px 4px;padding:16px 18px;animation-delay:-4s}
+.chip.bubble p{font-size:14.5px;line-height:1.5;font-weight:600}
+.chip.bubble cite{display:block;margin-top:8px;font-style:normal;font-size:12.5px;color:var(--muted)}
+
+/* sections base */
+section{position:relative}
+.sec{padding:clamp(72px,10vw,120px) 0}
+.kicker{display:inline-block;font:700 13px/1 var(--head);letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+h2{font-size:clamp(1.9rem,3.8vw,3rem);font-weight:700}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+
+/* stats */
+.stats{background:#fff;padding:0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);transform:translateY(-36px);background:#fff;border-radius:var(--r);box-shadow:var(--shadow);border:1px solid var(--line);margin-bottom:-36px}
+.stat{padding:28px 24px;text-align:left;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font:700 clamp(2rem,3.6vw,2.9rem)/1 var(--head);color:var(--blue);letter-spacing:-.03em}
+.stat>span{display:block;margin-top:8px;font-size:15px;line-height:1.4;color:var(--muted)}
+
+/* price / reviews */
+.price{background:var(--tint);padding-top:clamp(96px,11vw,136px)}
+.price-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:44px}
+.price-head h2{max-width:16ch}
+.price-head p{margin-top:14px;max-width:52ch;color:var(--muted)}
+.score{display:flex;align-items:center;gap:14px;background:#fff;border-radius:var(--r);padding:14px 22px;box-shadow:var(--shadow)}
+.score b{font:700 38px/1 var(--head);color:var(--blue)}
+.score small{display:block;font-size:14px;color:var(--muted)}
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev{position:relative;border-radius:var(--r);padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:22px;background:#fff;border:1px solid var(--line);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.rev blockquote{font-size:16px;line-height:1.65}
+.rev footer{display:flex;align-items:center;gap:12px}
+.av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:700 17px/1 var(--head);background:var(--tint);color:var(--blue-d)}
+.rev cite{display:block;font:700 15px/1.2 var(--head);font-style:normal}
+.rev small{font-size:13px;color:var(--muted)}
+.rev .stars{margin-bottom:12px;display:block}
+.rev.big{grid-column:span 2;background:linear-gradient(140deg,var(--blue-d),var(--blue));color:#fff;border:0}
+.rev.big blockquote{font:600 clamp(1.25rem,2.4vw,1.7rem)/1.4 var(--head);letter-spacing:-.01em}
+.rev.big cite{color:#fff}.rev.big small{color:#CFE6F6}.rev.big .av{background:rgba(255,255,255,.18);color:#fff}
+.rev.big .stars{color:var(--yellow)}
+.rev.t-y{background:#FFF6DD;border-color:#F8E3A8}
+.rev.t-g{background:#EAF7EF;border-color:#C6E7D3}
+.rev.t-s{background:#fff}
+.rev.ask{background:var(--navy);color:#fff;border:0;justify-content:center;align-items:flex-start}
+.rev.ask h3{color:#fff;font-size:clamp(1.3rem,2vw,1.55rem)}
+.rev.ask p{color:#CFE0EE;font-size:15.5px}
+.car-ctrl{display:none}
+.rev-note{margin-top:24px;font-size:14px;color:var(--muted)}
+.rev-note a{color:var(--blue-d);font-weight:700}
+@media (hover:hover) and (pointer:fine){.rev:hover{transform:translateY(-6px);box-shadow:0 24px 44px -22px rgba(6,40,74,.5)}}
+
+/* services */
+.services{background:#fff}
+.svc-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.svc-intro{position:sticky;top:110px}
+.svc-intro p{margin:16px 0 28px;color:var(--muted);max-width:34ch}
+.svc-list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.svc{display:flex;flex-direction:column;gap:18px;padding:26px;border-radius:var(--r);background:var(--tint);border:1px solid transparent;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background-color .3s ease,border-color .3s ease;will-change:transform}
+.svc .ico{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;font-size:30px;background:#fff;color:var(--blue);box-shadow:0 8px 18px -10px rgba(1,112,193,.7);transition:transform .35s var(--ease),background-color .3s ease,color .3s ease}
+.svc h3{font-size:1.2rem;font-weight:600}
+.svc:nth-child(even){background:#F1FAF5}
+.svc:nth-child(even) .ico{color:var(--green)}
+.svc:nth-child(3n){background:#FFF8E6}
+.svc:nth-child(3n) .ico{color:#B7791F}
+@media (hover:hover) and (pointer:fine){
+  .svc:hover{box-shadow:0 22px 40px -22px rgba(6,40,74,.55);border-color:var(--line);background:#fff}
+  .svc:hover .ico{transform:rotate(-8deg) scale(1.08);background:var(--blue);color:#fff}
+}
+
+/* familia */
+.fam{background:linear-gradient(150deg,#032E55,#06284A 55%,#0A3F73);color:#fff;overflow:hidden;isolation:isolate}
+.fam::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;right:-160px;top:-180px;background:radial-gradient(circle,rgba(44,172,228,.35),transparent 65%);z-index:-1}
+.fam-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:56px;align-items:end}
+.fam blockquote{font:600 clamp(1.7rem,3.8vw,3rem)/1.18 var(--head);letter-spacing:-.02em;color:#fff}
+.fam blockquote em{font-style:normal;color:var(--yellow)}
+.fam cite{display:block;margin-top:22px;font-style:normal;font-size:15px;color:#BBD5E8}
+.facts{display:grid;gap:14px}
+.fact{display:flex;gap:14px;align-items:center;padding:18px 20px;border-radius:var(--r);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font:600 16px/1.35 var(--head)}
+.fact svg{font-size:28px;color:var(--yellow)}
+.fact small{display:block;font:500 14px/1.4 var(--body);color:#BBD5E8}
+
+/* pasos */
+.steps{background:var(--cream)}
+.steps h2{max-width:14ch;margin-bottom:56px}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start}
+.step{position:relative;padding:30px 28px;border-radius:var(--r);background:#fff;border:1px solid #F1E2B8;box-shadow:var(--shadow)}
+.step:nth-child(2){margin-top:44px}
+.step:nth-child(3){margin-top:88px}
+.step .ico{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:26px;background:var(--blue);color:#fff;margin-bottom:18px}
+.step:nth-child(2) .ico{background:var(--green)}
+.step:nth-child(3) .ico{background:var(--yellow);color:var(--navy)}
+.step h3{font-size:1.3rem;margin-bottom:8px}
+.step p{color:var(--muted);font-size:16px}
+
+/* faq */
+.faq{background:#fff}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq-grid>div:first-child p{margin-top:16px;color:var(--muted)}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;text-align:left;padding:22px 0;min-height:60px;background:none;border:0;cursor:pointer;font:600 1.1rem/1.35 var(--head);color:var(--navy)}
+.pm{width:40px;height:40px;border-radius:50%;background:var(--tint);color:var(--blue);display:grid;place-items:center;font-size:18px;flex:none;transition:transform .3s var(--ease),background-color .2s ease,color .2s ease}
+.acc-item.open .pm{transform:rotate(45deg);background:var(--blue);color:#fff}
+.acc-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}
+.acc-a>div{overflow:hidden}
+.acc-a p{padding:0 56px 22px 0;color:var(--muted)}
+.acc-item.open .acc-a{grid-template-rows:1fr}
+
+/* contacto */
+.contact{background:var(--tint)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.info{list-style:none;margin:26px 0 22px;display:grid;gap:14px}
+.info li{display:flex;gap:14px;align-items:flex-start}
+.info li>svg{font-size:26px;color:var(--blue);margin-top:2px}
+.info a{font:600 1.1rem/1.4 var(--head);text-decoration:none}
+.info a:hover{color:var(--blue)}
+.info small{display:block;color:var(--muted);font-size:14px}
+.open-now{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:#fff;font:600 14.5px/1.3 var(--head);box-shadow:0 8px 20px -14px rgba(6,40,74,.6)}
+.hours{margin-top:24px;background:#fff;border-radius:var(--r);padding:22px 24px}
+.hours h3{font-size:1.15rem;margin-bottom:10px}
+.row{display:flex;justify-content:space-between;gap:16px;padding:9px 12px;border-radius:12px;font-size:15.5px}
+.row dt{font-weight:600}
+.row.today{background:var(--blue);color:#fff}
+.row.today dt::after{content:" (hoy)"}
+html[lang="en"] .row.today dt::after{content:" (today)"}
+.map{width:100%;height:280px;border:0;border-radius:var(--r);margin-top:22px;filter:saturate(1.05)}
+.form{position:relative;background:#fff;border-radius:28px;padding:clamp(24px,4vw,40px);box-shadow:var(--shadow);overflow:hidden}
+.form h3{font-size:1.5rem;margin-bottom:6px}
+.form>p{color:var(--muted);margin-bottom:22px;font-size:15.5px}
+.field{margin-bottom:16px}
+.field label{display:block;font:600 14.5px/1.2 var(--head);margin-bottom:8px;color:var(--navy)}
+.field input,.field select{width:100%;min-height:52px;padding:0 16px;border:2px solid #BCD3E6;border-radius:14px;background:#fff;font:500 16px var(--body);color:var(--ink);transition:border-color .2s ease,box-shadow .2s ease}
+.field input:focus,.field select:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 4px rgba(1,112,193,.18)}
+.field .err{display:none;margin-top:6px;font-size:14px;color:#B3261E;font-weight:600}
+.field.invalid input,.field.invalid select{border-color:#B3261E}
+.field.invalid .err{display:block}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form .btn{width:100%;margin-top:6px}
+.hint{display:block;margin-top:12px;font-size:13.5px;color:var(--muted)}
+.success{position:absolute;inset:0;background:#fff;display:grid;place-content:center;justify-items:center;gap:12px;text-align:center;padding:30px;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s}
+.success.show{opacity:1;visibility:visible}
+.success svg{width:84px;height:84px}
+.success circle{fill:none;stroke:var(--green);stroke-width:3;stroke-dasharray:160;stroke-dashoffset:160}
+.success path{fill:none;stroke:var(--green);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:50;stroke-dashoffset:50}
+.success.show circle{animation:draw .6s var(--ease) .1s forwards}
+.success.show path{animation:draw .45s var(--ease) .55s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* footer */
+footer.site{background:var(--navy);color:#C4D8E8;padding:72px 0 28px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot-logo{display:inline-flex;align-items:center;gap:14px;background:#fff;border-radius:18px;padding:8px 18px 8px 10px;text-decoration:none}
+.foot-logo img{width:64px;height:64px;object-fit:contain;border-radius:50%}
+.foot-logo b{font:700 17px/1.1 var(--head);color:var(--blue)}
+footer p{margin-top:18px;max-width:32ch;font-size:15.5px}
+footer h4{font:700 13px/1 var(--head);letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:10px;font-size:15.5px}
+footer a{text-decoration:none;transition:color .2s ease}
+footer a:hover{color:var(--yellow)}
+.legal{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:14px}
+
+/* barra mobile */
+.bar{display:none}
+
+@media (max-width:1020px){
+  .nav-links,.nav .btn.book{display:none}
+  .burger{display:block}
+  .nav-links.open{display:grid;position:absolute;top:84px;left:0;right:0;background:#fff;border-radius:24px;padding:12px;box-shadow:0 24px 50px -20px rgba(6,40,74,.6);pointer-events:auto}
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .hv{min-height:420px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .svc-grid,.faq-grid,.contact-grid,.fam-grid{grid-template-columns:1fr;gap:36px}
+  .svc-intro{position:static}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .bento{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-inline:-16px;padding:6px 16px 18px;scrollbar-width:none}
+  .bento::-webkit-scrollbar{display:none}
+  .rev{flex:0 0 86%;scroll-snap-align:center}
+  .rev.big{grid-column:auto}
+  .car-ctrl{display:flex;gap:10px;margin-top:6px}
+  .car-ctrl button{width:52px;height:52px;border-radius:50%;border:2px solid var(--blue);background:#fff;color:var(--blue);font-size:22px;display:grid;place-items:center;cursor:pointer;transition:transform .2s var(--ease),background-color .2s ease,color .2s ease}
+  .car-ctrl button:active{transform:scale(.94);background:var(--blue);color:#fff}
+  .steps-grid{grid-template-columns:1fr}
+  .step:nth-child(2),.step:nth-child(3){margin-top:0}
+}
+@media (max-width:640px){
+  body{font-size:16.5px;padding-bottom:84px}
+  .wrap{width:min(1180px,100% - 32px)}
+  .nav-in{min-height:68px;gap:8px;padding:4px 8px 4px 10px}
+  .logo img{width:56px;height:56px}
+  .logo b{font-size:14px;max-width:9ch}
+  .hero{padding:104px 0 56px}
+  .hv{min-height:auto;display:grid;gap:14px;justify-items:center}
+  .coin{width:min(240px,64vw)}
+  .chip{position:static;animation:none;width:100%;max-width:340px}
+  .chip.bubble{max-width:340px}
+  .hv .rating{order:2}.hv .open{order:3}.hv .bubble{order:4}
+  .stats-grid{transform:translateY(-28px);margin-bottom:-28px}
+  .stat{padding:20px 16px}
+  .svc-list{grid-template-columns:1fr 1fr;gap:12px}
+  .svc{padding:18px}.svc h3{font-size:1.02rem}
+  .two{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .bar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(253,254,255,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 -10px 30px -16px rgba(6,40,74,.5)}
+  .bar .btn{flex:1;padding:0 12px}
+  .lang button{min-width:44px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .rise,.reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body id="top">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800L12 3z"/><path d="M19 17v4M17 19h4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.500-2.800 8-7 10-4.200-2-7-5.500-7-10V6l7-3z"/><path d="M9 12l2.200 2.200L15.500 10"/></symbol>
+    <symbol id="i-root" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v6c0 3-1.200 4.500-2 7l-1 5h-2l-1-6-1 6H9l-1-5c-.800-2.500-2-4-2-7V3z"/><path d="M12 9v5"/></symbol>
+    <symbol id="i-align" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10c0-3 4-5 9-5s9 2 9 5"/><path d="M3 10v2c0 2 4 3 9 3s9-1 9-3v-2"/><path d="M7 11v3M12 11.500v3M17 11v3"/></symbol>
+    <symbol id="i-tooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7.200 3C4.600 3 3 5 3 7.600c0 2 .8 3.400 1.300 5.200.5 2 .7 5.200 2 7.200.6.900 1.700.900 2.100-.200.5-1.600.6-4 2.600-4s2.100 2.400 2.600 4c.4 1.100 1.500 1.100 2.100.2 1.300-2 1.500-5.200 2-7.200.5-1.800 1.300-3.200 1.300-5.200C21 5 19.400 3 16.800 3c-1.800 0-2.800 1-4.800 1S9 3 7.200 3z"/></symbol>
+    <symbol id="i-extract" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7.200 3C4.600 3 3 5 3 7.600c0 2 .8 3.400 1.300 5.200.5 2 .7 5.200 2 7.200.6.900 1.700.900 2.100-.200.5-1.600.6-4 2.600-4s2.100 2.400 2.600 4c.4 1.100 1.500 1.100 2.100.2 1.300-2 1.500-5.200 2-7.200.5-1.800 1.300-3.200 1.300-5.200C21 5 19.400 3 16.800 3c-1.800 0-2.800 1-4.800 1S9 3 7.200 3z"/><path d="M12.500 6.500l-2 3.200 3 1.800-1.800 3.200"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.500" y="5" width="17" height="15.500" rx="3"/><path d="M8 3v4M16 3v4M3.500 10h17M9 15l2 2 4-4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.200 7-11.500A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7.500l8 6 8-6"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-9l-5 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/><path d="M10 20v-6h4v6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.500l2.800 2.800L16 9.500"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  </defs>
+</svg>
+
+<div id="splash" aria-hidden="true"><img src="images/isotipo.png" alt=""></div>
+<div id="navSentinel" aria-hidden="true" style="position:absolute;top:0;height:40px;width:1px"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top" aria-label="Latin Dental of Miami"><img src="images/isotipo.png" alt="" width="60" height="60"><b>Latin Dental<br>of Miami</b></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#precios" data-t="nav_price">Reseñas</a></li>
+      <li><a href="#servicios" data-t="nav_services">Servicios</a></li>
+      <li><a href="#preguntas" data-t="nav_faq">Preguntas</a></li>
+      <li><a href="#contacto" data-t="nav_contact">Contacto</a></li>
+    </ul>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-blue book" data-magnetic href="#contacto"><svg><use href="#i-cal"/></svg><span data-t="book">Pedir una cita</span></a>
+    <button class="burger" id="burger" type="button" aria-label="Menú" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="blobs" style="overflow:hidden" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero-grid">
+    <div>
+      <h1 class="rise" style="--n:0"><span data-t="h1a">Dentista en Little Havana,</span> <em data-t="h1b">con trato de familia.</em></h1>
+      <p class="lead rise" style="--n:1" data-t="hero_sub">Más de 20 años de experiencia. Atención en español y precios accesibles para quienes no tienen seguro.</p>
+      <div class="cta-row rise" style="--n:2">
+        <a class="btn btn-yellow" data-magnetic href="#contacto"><svg><use href="#i-cal"/></svg><span data-t="book">Pedir una cita</span></a>
+        <a class="btn btn-ghost" data-magnetic href="tel:+13056420504"><svg><use href="#i-phone"/></svg><span>(305) 642-0504</span></a>
+      </div>
+    </div>
+    <div class="hv rise" style="--n:2">
+      <div class="coin" data-tilt><img src="images/isotipo.png" alt="Latin Dental of Miami" width="690" height="690" fetchpriority="high"></div>
+      <div class="chip rating"><b data-count-to="4.6" data-decimals="1">4.6</b><div><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><small data-t="rating_small">59 reseñas en Google</small></div></div>
+      <div class="chip open" id="openNow"><span class="dot"></span><span id="openText">&nbsp;</span></div>
+      <div class="chip bubble"><p>&ldquo;Los precios que ofrecen son económicos para aquellos que no tienen seguro.&rdquo;</p><cite>Dariana O., <span data-t="rev_src">Reseña en Google</span></cite></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" aria-label="Latin Dental of Miami">
+  <div class="wrap stats-grid">
+    <div class="stat reveal"><b data-count-to="4.6" data-decimals="1">4.6</b><span data-t="st1">calificación en Google</span></div>
+    <div class="stat reveal" style="--d:.08s"><b data-count-to="59">59</b><span data-t="st2">reseñas en Google</span></div>
+    <div class="stat reveal" style="--d:.16s"><b><span data-count-to="20">20</span>+</b><span data-t="st3">años de experiencia</span></div>
+    <div class="stat reveal" style="--d:.24s"><b data-t="st4b">Sábados</b><span data-t="st4">abierto por la mañana, y los miércoles hasta las 7:00 p. m.</span></div>
+  </div>
+</section>
+
+<!-- PRECIOS / RESEÑAS -->
+<section class="sec price" id="precios">
+  <div class="wrap">
+    <div class="price-head reveal">
+      <div>
+        <h2 data-t="price_h">¿Sin seguro? Escuche a nuestros pacientes.</h2>
+        <p data-t="price_sub">Precios accesibles y un plan de ahorro, contado por quienes ya se atendieron aquí.</p>
+      </div>
+      <div class="score"><b>4.6</b><div><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><small data-t="rev_score">59 reseñas en Google</small></div></div>
+    </div>
+    <div class="bento carousel reveal" id="carousel" tabindex="0" aria-label="Reseñas / Reviews">
+      <article class="rev big"><div><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;¡Excelente servicio! Me he tratado aquí como 2 año, desde que tenía una muela infectada y encontrar esta clínica fue maravilloso. El equipo bien atento, cordial y bien organizado. Los precios que ofrecen son económicos para aquellos que no tienen seguro. También, ofrecen un plan de ahorro.&rdquo;</blockquote></div><footer><span class="av">D</span><div><cite>Dariana O.</cite><small data-t="rev_src">Reseña en Google</small></div></footer></article>
+      <article class="rev t-y"><div><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Quiero agradecer al equipo de Latin Dental of Miami por su gran profesionalismo pues me resolvieron todos los problemas dentales que padecia,  me siento muy satisfecho por la relacion precio/resultado excelente, el costumer service magnfico, lo recomiendo 100% x 100%.&rdquo;</blockquote></div><footer><span class="av">W</span><div><cite>William E.</cite><small data-t="rev_src">Reseña en Google</small></div></footer></article>
+      <article class="rev t-g"><div><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Profesionalismo y servicio muy gentil. Soluciones en ortodoncia muy acertadas y honestas como sus precios. A mi hijo adolescente le ofrecían en otros lugares tratamientos de 3 años, y aquí le dieron excelentes resultados en 1 año y su sonrisa ahora es impecable.&rdquo;</blockquote></div><footer><span class="av">C</span><div><cite>Carl R.</cite><small data-t="rev_src">Reseña en Google</small></div></footer></article>
+      <article class="rev t-s"><div><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Es una clínica muy familiar, te hacen sentir a gusto. Los precios son muy buenos. Las doctoras muy profesionales y el cirujano es atento y amable. Lo recomiendo 100%&rdquo;</blockquote></div><footer><span class="av">Y</span><div><cite>Yoslen R.</cite><small data-t="rev_src">Reseña en Google</small></div></footer></article>
+      <article class="rev ask"><svg style="font-size:34px;color:var(--yellow);margin-bottom:14px"><use href="#i-chat"/></svg><h3 data-t="ask_h">¿Quiere saber cómo funciona el plan de ahorro?</h3><p style="margin:10px 0 20px" data-t="ask_p">Llámenos y se lo explicamos.</p><a class="btn btn-yellow" href="tel:+13056420504"><svg><use href="#i-phone"/></svg><span>(305) 642-0504</span></a></article>
+    </div>
+    <div class="car-ctrl">
+      <button type="button" id="prev" aria-label="Anterior"><svg><use href="#i-left"/></svg></button>
+      <button type="button" id="next" aria-label="Siguiente"><svg><use href="#i-arrow"/></svg></button>
+    </div>
+    <p class="rev-note"><span data-t="rev_note">Las reseñas se muestran en su idioma original.</span> <a href="https://www.google.com/maps/search/?api=1&query=Latin+Dental+Of+Miami+434+SW+12th+Ave+Miami+FL+33130" target="_blank" rel="noopener" data-t="rev_link">Ver todas en Google</a></p>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="sec services" id="servicios">
+  <div class="wrap svc-grid">
+    <div class="svc-intro reveal">
+      <h2 data-t="svc_h">Nuestros tratamientos.</h2>
+      <p data-t="svc_p">¿Necesita otro tratamiento? Llámenos y le confirmamos.</p>
+      <a class="btn btn-blue" data-magnetic href="#contacto"><svg><use href="#i-cal"/></svg><span data-t="book">Pedir una cita</span></a>
+    </div>
+    <div class="svc-list">
+      <div class="svc reveal" data-tilt><span class="ico"><svg><use href="#i-shield"/></svg></span><h3 data-t="s1">Limpieza dental</h3></div>
+      <div class="svc reveal" style="--d:.06s" data-tilt><span class="ico"><svg><use href="#i-root"/></svg></span><h3 data-t="s2">Tratamiento de conducto</h3></div>
+      <div class="svc reveal" style="--d:.12s" data-tilt><span class="ico"><svg><use href="#i-extract"/></svg></span><h3 data-t="s3">Extracciones</h3></div>
+      <div class="svc reveal" style="--d:.18s" data-tilt><span class="ico"><svg><use href="#i-align"/></svg></span><h3 data-t="s4">Ortodoncia (brackets)</h3></div>
+      <div class="svc reveal" style="--d:.24s" data-tilt><span class="ico"><svg><use href="#i-sparkle"/></svg></span><h3 data-t="s5">Diseño de sonrisa</h3></div>
+      <div class="svc reveal" style="--d:.3s" data-tilt><span class="ico"><svg><use href="#i-tooth"/></svg></span><h3 data-t="s6">Cirugía oral</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAMILIA -->
+<section class="sec fam">
+  <div class="wrap fam-grid">
+    <div class="reveal">
+      <blockquote><span data-t="fam_a">Somos una clínica de odontología con</span> <em data-t="fam_b">más de 20 años de experiencia.</em></blockquote>
+    </div>
+    <div class="facts">
+      <div class="fact reveal" style="--d:.08s"><svg><use href="#i-chat"/></svg><div><span data-t="f1">Atención en español</span><small data-t="f1s">Para usted y toda su familia.</small></div></div>
+      <div class="fact reveal" style="--d:.16s"><svg><use href="#i-cal"/></svg><div><span data-t="f2">Abierto los sábados</span><small data-t="f2s">De 8:00 a. m. a 1:00 p. m.</small></div></div>
+      <div class="fact reveal" style="--d:.24s"><svg><use href="#i-pin"/></svg><div><span>434 SW 12th Ave #204</span><small>Miami, FL 33130</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PASOS -->
+<section class="sec steps">
+  <div class="wrap">
+    <h2 class="reveal" data-t="steps_h">Pedir su cita es simple.</h2>
+    <div class="steps-grid">
+      <div class="step reveal"><span class="ico"><svg><use href="#i-phone"/></svg></span><h3 data-t="p1h">Llámenos o escríbanos</h3><p data-t="p1">Cuéntenos qué necesita y qué día le queda mejor.</p></div>
+      <div class="step reveal" style="--d:.1s"><span class="ico"><svg><use href="#i-check"/></svg></span><h3 data-t="p2h">Confirmamos su cita</h3><p data-t="p2">Le confirmamos el día y la hora.</p></div>
+      <div class="step reveal" style="--d:.2s"><span class="ico"><svg><use href="#i-pin"/></svg></span><h3 data-t="p3h">Venga a Little Havana</h3><p data-t="p3">Estamos en 434 SW 12th Ave #204, Miami.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq" id="preguntas">
+  <div class="wrap faq-grid">
+    <div class="reveal">
+      <h2 data-t="faq_h">Antes de su visita.</h2>
+      <p data-t="faq_sub">¿Otra pregunta? Llámenos al (305) 642-0504.</p>
+    </div>
+    <div class="acc">
+      <div class="acc-item reveal"><button class="acc-q" type="button" aria-expanded="false"><span data-t="q1">¿Cómo pido una cita?</span><span class="pm"><svg><use href="#i-plus"/></svg></span></button><div class="acc-a"><div><p data-t="a1">Llámenos al (305) 642-0504 o envíe el formulario de esta página.</p></div></div></div>
+      <div class="acc-item reveal" style="--d:.05s"><button class="acc-q" type="button" aria-expanded="false"><span data-t="q2">¿Atienden a pacientes sin seguro?</span><span class="pm"><svg><use href="#i-plus"/></svg></span></button><div class="acc-a"><div><p data-t="a2">Sí. Llámenos al (305) 642-0504 y le damos los precios del tratamiento que necesita.</p></div></div></div>
+      <div class="acc-item reveal" style="--d:.1s"><button class="acc-q" type="button" aria-expanded="false"><span data-t="q3">¿Tienen un plan de ahorro?</span><span class="pm"><svg><use href="#i-plus"/></svg></span></button><div class="acc-a"><div><p data-t="a3">Sí. Llámenos y le explicamos cómo funciona.</p></div></div></div>
+      <div class="acc-item reveal" style="--d:.15s"><button class="acc-q" type="button" aria-expanded="false"><span data-t="q4">¿Aceptan mi seguro?</span><span class="pm"><svg><use href="#i-plus"/></svg></span></button><div class="acc-a"><div><p data-t="a4">Llámenos y se lo confirmamos.</p></div></div></div>
+      <div class="acc-item reveal" style="--d:.2s"><button class="acc-q" type="button" aria-expanded="false"><span data-t="q5">¿Se habla español?</span><span class="pm"><svg><use href="#i-plus"/></svg></span></button><div class="acc-a"><div><p data-t="a5">Sí, atendemos en español.</p></div></div></div>
+      <div class="acc-item reveal" style="--d:.25s"><button class="acc-q" type="button" aria-expanded="false"><span data-t="q6">¿Qué días abren?</span><span class="pm"><svg><use href="#i-plus"/></svg></span></button><div class="acc-a"><div><p data-t="a6">De lunes a sábado. Los miércoles abrimos hasta las 7:00 p. m. y los sábados desde las 8:00 a. m. Vea el horario completo más abajo.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="sec contact" id="contacto">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 class="reveal" data-t="ct_h">Pida su cita.</h2>
+      <ul class="info reveal" style="--d:.05s">
+        <li><svg><use href="#i-phone"/></svg><div><a href="tel:+13056420504">(305) 642-0504</a></div></li>
+        <li><svg><use href="#i-mail"/></svg><div><a href="mailto:latindentalofmiami@gmail.com">latindentalofmiami@gmail.com</a></div></li>
+        <li><svg><use href="#i-pin"/></svg><div><a href="https://www.google.com/maps/search/?api=1&query=434+SW+12th+Ave+%23204+Miami+FL+33130" target="_blank" rel="noopener">434 SW 12th Ave #204<br>Miami, FL 33130</a><small data-t="ct_dir">Cómo llegar</small></div></li>
+      </ul>
+      <div class="open-now reveal open" id="openNow2"><span class="dot"></span><span id="openText2">&nbsp;</span></div>
+      <div class="hours reveal" style="--d:.08s">
+        <h3 data-t="hr_h">Horario</h3>
+        <dl id="hours">
+          <div class="row" data-d="1"><dt data-t="d1">Lunes</dt><dd data-t="h_a">10:00 a. m. a 4:00 p. m.</dd></div>
+          <div class="row" data-d="2"><dt data-t="d2">Martes</dt><dd data-t="h_a">10:00 a. m. a 4:00 p. m.</dd></div>
+          <div class="row" data-d="3"><dt data-t="d3">Miércoles</dt><dd data-t="h_b">11:00 a. m. a 7:00 p. m.</dd></div>
+          <div class="row" data-d="4"><dt data-t="d4">Jueves</dt><dd data-t="h_a">10:00 a. m. a 4:00 p. m.</dd></div>
+          <div class="row" data-d="5"><dt data-t="d5">Viernes</dt><dd data-t="h_a">10:00 a. m. a 4:00 p. m.</dd></div>
+          <div class="row" data-d="6"><dt data-t="d6">Sábado</dt><dd data-t="h_c">8:00 a. m. a 1:00 p. m.</dd></div>
+          <div class="row" data-d="0"><dt data-t="d0">Domingo</dt><dd data-t="h_x">Cerrado</dd></div>
+        </dl>
+      </div>
+      <iframe class="map reveal" style="--d:.1s" title="Mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=434%20SW%2012th%20Ave%20%23204%20Miami%20FL%2033130&output=embed"></iframe>
+    </div>
+    <form class="form reveal" id="apptForm" style="--d:.1s" novalidate>
+      <h3 data-t="fm_h">Pida su cita</h3>
+      <p data-t="fm_p">Déjenos sus datos y le confirmamos día y hora.</p>
+      <div class="field"><label for="f-name" data-t="fm_name">Su nombre</label><input id="f-name" name="name" autocomplete="name" required><span class="err" data-t="fm_err">Por favor complete este campo.</span></div>
+      <div class="field"><label for="f-phone" data-t="fm_phone">Teléfono</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required><span class="err" data-t="fm_err">Por favor complete este campo.</span></div>
+      <div class="two">
+        <div class="field"><label for="f-why" data-t="fm_why">Motivo</label>
+          <select id="f-why" name="why" required>
+            <option value="" data-t="o0">Elija uno</option>
+            <option value="1" data-t="s1">Limpieza dental</option>
+            <option value="2" data-t="s2">Tratamiento de conducto</option>
+            <option value="3" data-t="s3">Extracciones</option>
+            <option value="4" data-t="s4">Ortodoncia (brackets)</option>
+            <option value="5" data-t="s5">Diseño de sonrisa</option>
+            <option value="6" data-t="s6">Cirugía oral</option>
+            <option value="7" data-t="o7">Otro</option>
+          </select><span class="err" data-t="fm_err">Por favor complete este campo.</span></div>
+        <div class="field"><label for="f-day" data-t="fm_day">Día preferido</label>
+          <select id="f-day" name="day">
+            <option value="" data-t="o8">Cualquiera</option>
+            <option value="1" data-t="d1">Lunes</option>
+            <option value="2" data-t="d2">Martes</option>
+            <option value="3" data-t="d3">Miércoles</option>
+            <option value="4" data-t="d4">Jueves</option>
+            <option value="5" data-t="d5">Viernes</option>
+            <option value="6" data-t="d6">Sábado</option>
+          </select></div>
+      </div>
+      <button class="btn btn-blue" type="submit" data-magnetic><svg><use href="#i-mail"/></svg><span data-t="fm_send">Enviar solicitud</span></button>
+      <small class="hint" data-t="fm_hint">Se abrirá su aplicación de correo con el mensaje listo para enviar. Si prefiere, llámenos al (305) 642-0504.</small>
+      <div class="success" id="formOk" role="status">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" transform="rotate(-90 26 26)"/><path d="M14 27l8 8 16-17"/></svg>
+        <h3 data-t="ok_h">Casi listo</h3>
+        <p data-t="ok_p">Su aplicación de correo debería estar abierta. Envíe el mensaje y le respondemos.</p>
+        <button class="btn btn-line" type="button" id="formReset" data-t="ok_back">Volver</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="foot-logo" href="#top" aria-label="Latin Dental of Miami"><img src="images/isotipo.png" alt="" width="64" height="64"><b>Latin Dental<br>of Miami</b></a>
+        <p data-t="ft_p">Clínica dental en Little Havana, Miami.</p>
+      </div>
+      <div>
+        <h4 data-t="ft_nav">Explorar</h4>
+        <ul>
+          <li><a href="#precios" data-t="nav_price">Reseñas</a></li>
+          <li><a href="#servicios" data-t="nav_services">Servicios</a></li>
+          <li><a href="#preguntas" data-t="nav_faq">Preguntas</a></li>
+          <li><a href="#contacto" data-t="nav_contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-t="ft_contact">Contacto</h4>
+        <ul>
+          <li><a href="tel:+13056420504">(305) 642-0504</a></li>
+          <li><a href="mailto:latindentalofmiami@gmail.com">latindentalofmiami@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-t="ft_visit">Visítenos</h4>
+        <ul>
+          <li>434 SW 12th Ave #204</li>
+          <li>Miami, FL 33130</li>
+          <li><a href="#contacto" data-t="book">Pedir una cita</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">&copy; Latin Dental of Miami</div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-line" href="tel:+13056420504"><svg><use href="#i-phone"/></svg><span data-t="call">Llamar</span></a>
+  <a class="btn btn-blue" href="#contacto"><svg><use href="#i-cal"/></svg><span data-t="book">Pedir una cita</span></a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var $=function(s,c){return (c||document).querySelector(s)};
+  var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+  var reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var fine=matchMedia("(hover: hover) and (pointer: fine)").matches;
+  function safe(f,n){try{f()}catch(e){console.warn("["+n+"]",e)}}
+
+  var T={
+    es:{
+      nav_price:"Reseñas",nav_services:"Servicios",nav_faq:"Preguntas",nav_contact:"Contacto",
+      book:"Pedir una cita",call:"Llamar",
+      h1a:"Dentista en Little Havana,",h1b:"con trato de familia.",
+      hero_sub:"Más de 20 años de experiencia. Atención en español y precios accesibles para quienes no tienen seguro.",
+      rating_small:"59 reseñas en Google",rev_src:"Reseña en Google",
+      st1:"calificación en Google",st2:"reseñas en Google",st3:"años de experiencia",st4b:"Sábados",st4:"abierto por la mañana, y los miércoles hasta las 7:00 p. m.",
+      price_h:"¿Sin seguro? Escuche a nuestros pacientes.",price_sub:"Precios accesibles y un plan de ahorro, contado por quienes ya se atendieron aquí.",
+      rev_score:"59 reseñas en Google",ask_h:"¿Quiere saber cómo funciona el plan de ahorro?",ask_p:"Llámenos y se lo explicamos.",
+      rev_note:"Las reseñas se muestran en su idioma original.",rev_link:"Ver todas en Google",
+      svc_h:"Nuestros tratamientos.",svc_p:"¿Necesita otro tratamiento? Llámenos y le confirmamos.",
+      s1:"Limpieza dental",s2:"Tratamiento de conducto",s3:"Extracciones",s4:"Ortodoncia (brackets)",s5:"Diseño de sonrisa",s6:"Cirugía oral",
+      fam_a:"Somos una clínica de odontología con",fam_b:"más de 20 años de experiencia.",
+      f1:"Atención en español",f1s:"Para usted y toda su familia.",f2:"Abierto los sábados",f2s:"De 8:00 a. m. a 1:00 p. m.",
+      steps_h:"Pedir su cita es simple.",
+      p1h:"Llámenos o escríbanos",p1:"Cuéntenos qué necesita y qué día le queda mejor.",
+      p2h:"Confirmamos su cita",p2:"Le confirmamos el día y la hora.",
+      p3h:"Venga a Little Havana",p3:"Estamos en 434 SW 12th Ave #204, Miami.",
+      faq_h:"Antes de su visita.",faq_sub:"¿Otra pregunta? Llámenos al (305) 642-0504.",
+      q1:"¿Cómo pido una cita?",a1:"Llámenos al (305) 642-0504 o envíe el formulario de esta página.",
+      q2:"¿Atienden a pacientes sin seguro?",a2:"Sí. Llámenos al (305) 642-0504 y le damos los precios del tratamiento que necesita.",
+      q3:"¿Tienen un plan de ahorro?",a3:"Sí. Llámenos y le explicamos cómo funciona.",
+      q4:"¿Aceptan mi seguro?",a4:"Llámenos y se lo confirmamos.",
+      q5:"¿Se habla español?",a5:"Sí, atendemos en español.",
+      q6:"¿Qué días abren?",a6:"De lunes a sábado. Los miércoles abrimos hasta las 7:00 p. m. y los sábados desde las 8:00 a. m. Vea el horario completo más abajo.",
+      ct_h:"Pida su cita.",ct_dir:"Cómo llegar",
+      hr_h:"Horario",d1:"Lunes",d2:"Martes",d3:"Miércoles",d4:"Jueves",d5:"Viernes",d6:"Sábado",d0:"Domingo",
+      h_a:"10:00 a. m. a 4:00 p. m.",h_b:"11:00 a. m. a 7:00 p. m.",h_c:"8:00 a. m. a 1:00 p. m.",h_x:"Cerrado",
+      fm_h:"Pida su cita",fm_p:"Déjenos sus datos y le confirmamos día y hora.",fm_name:"Su nombre",fm_phone:"Teléfono",fm_why:"Motivo",fm_day:"Día preferido",o0:"Elija uno",o7:"Otro",o8:"Cualquiera",
+      fm_err:"Por favor complete este campo.",fm_send:"Enviar solicitud",fm_hint:"Se abrirá su aplicación de correo con el mensaje listo para enviar. Si prefiere, llámenos al (305) 642-0504.",
+      ok_h:"Casi listo",ok_p:"Su aplicación de correo debería estar abierta. Envíe el mensaje y le respondemos.",ok_back:"Volver",
+      ft_p:"Clínica dental en Little Havana, Miami.",ft_nav:"Explorar",ft_contact:"Contacto",ft_visit:"Visítenos",
+      open_yes:"Abierto ahora, cierra a las ",open_no:"Cerrado ahora, abre ",open_at:" a las ",today:"hoy",tomorrow:"mañana",
+      title:"Latin Dental of Miami | Clínica dental en Little Havana",
+      desc:"Latin Dental of Miami: clínica dental en Little Havana, Miami. Atención en español y precios accesibles para pacientes sin seguro.",
+      mailsub:"Solicitud de cita",mailname:"Nombre",mailphone:"Teléfono",mailwhy:"Motivo",mailday:"Día preferido",mailany:"Cualquiera",mailhello:"Hola, quisiera pedir una cita."
+    },
+    en:{
+      nav_price:"Reviews",nav_services:"Services",nav_faq:"FAQ",nav_contact:"Contact",
+      book:"Request an appointment",call:"Call",
+      h1a:"A dentist in Little Havana,",h1b:"with a family feel.",
+      hero_sub:"Over 20 years of experience. Care in Spanish and affordable prices for patients without insurance.",
+      rating_small:"59 Google reviews",rev_src:"Google review",
+      st1:"rating on Google",st2:"Google reviews",st3:"years of experience",st4b:"Saturdays",st4:"open in the morning, and Wednesdays until 7:00 PM",
+      price_h:"No insurance? Hear from our patients.",price_sub:"Affordable prices and a savings plan, told by people who have already been treated here.",
+      rev_score:"59 Google reviews",ask_h:"Want to know how the savings plan works?",ask_p:"Call us and we will explain it.",
+      rev_note:"Reviews are shown in their original language.",rev_link:"See all on Google",
+      svc_h:"Our treatments.",svc_p:"Need another treatment? Call us and we will confirm.",
+      s1:"Dental cleaning",s2:"Root canal treatment",s3:"Extractions",s4:"Orthodontics (braces)",s5:"Smile design",s6:"Oral surgery",
+      fam_a:"We are a dental clinic with",fam_b:"over 20 years of experience.",
+      f1:"Care in Spanish",f1s:"For you and your whole family.",f2:"Open on Saturdays",f2s:"From 8:00 AM to 1:00 PM",
+      steps_h:"Requesting an appointment is simple.",
+      p1h:"Call or write to us",p1:"Tell us what you need and which day works best.",
+      p2h:"We confirm your appointment",p2:"We confirm the day and time with you.",
+      p3h:"Come to Little Havana",p3:"We are at 434 SW 12th Ave #204, Miami.",
+      faq_h:"Before your visit.",faq_sub:"Another question? Call us at (305) 642-0504.",
+      q1:"How do I request an appointment?",a1:"Call us at (305) 642-0504 or send the form on this page.",
+      q2:"Do you see patients without insurance?",a2:"Yes. Call us at (305) 642-0504 and we will give you the prices for the treatment you need.",
+      q3:"Do you have a savings plan?",a3:"Yes. Call us and we will explain how it works.",
+      q4:"Do you accept my insurance?",a4:"Call us and we will confirm it for you.",
+      q5:"Do you speak Spanish?",a5:"Yes, we provide care in Spanish.",
+      q6:"What days are you open?",a6:"Monday to Saturday. On Wednesdays we are open until 7:00 PM and on Saturdays from 8:00 AM. See the full schedule below.",
+      ct_h:"Request your appointment.",ct_dir:"Get directions",
+      hr_h:"Hours",d1:"Monday",d2:"Tuesday",d3:"Wednesday",d4:"Thursday",d5:"Friday",d6:"Saturday",d0:"Sunday",
+      h_a:"10:00 AM to 4:00 PM",h_b:"11:00 AM to 7:00 PM",h_c:"8:00 AM to 1:00 PM",h_x:"Closed",
+      fm_h:"Request your appointment",fm_p:"Leave us your details and we will confirm the day and time.",fm_name:"Your name",fm_phone:"Phone",fm_why:"Reason",fm_day:"Preferred day",o0:"Choose one",o7:"Other",o8:"Any day",
+      fm_err:"Please complete this field.",fm_send:"Send request",fm_hint:"This opens your email app with the message ready to send. If you prefer, call us at (305) 642-0504.",
+      ok_h:"Almost done",ok_p:"Your email app should be open. Send the message and we will get back to you.",ok_back:"Back",
+      ft_p:"Dental clinic in Little Havana, Miami.",ft_nav:"Explore",ft_contact:"Contact",ft_visit:"Visit us",
+      open_yes:"Open now, closes at ",open_no:"Closed now, opens ",open_at:" at ",today:"today",tomorrow:"tomorrow",
+      title:"Latin Dental of Miami | Dental clinic in Little Havana",
+      desc:"Latin Dental of Miami: dental clinic in Little Havana, Miami. Care in Spanish and affordable prices for patients without insurance.",
+      mailsub:"Appointment request",mailname:"Name",mailphone:"Phone",mailwhy:"Reason",mailday:"Preferred day",mailany:"Any day",mailhello:"Hello, I would like to request an appointment."
+    }
+  };
+  var lang="es";
+
+  /* Horario (hora de Miami). Minutos desde 0:00. */
+  var HRS={0:null,1:[600,960],2:[600,960],3:[660,1140],4:[600,960],5:[600,960],6:[480,780]};
+  var DAYKEY=["d0","d1","d2","d3","d4","d5","d6"];
+  function miami(){
+    var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var o={};p.forEach(function(x){o[x.type]=x.value});
+    var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    return {day:map[o.weekday],min:(parseInt(o.hour,10)%24)*60+parseInt(o.minute,10)};
+  }
+  function clock(m){
+    var h=Math.floor(m/60),mm=m%60,pm=h>=12,h12=h%12===0?12:h%12,s=h12+":"+(mm<10?"0":"")+mm;
+    return lang==="es"?s+(pm?" p. m.":" a. m."):s+(pm?" PM":" AM");
+  }
+  function openStatus(){
+    var t=miami(),h=HRS[t.day],L=T[lang],isOpen=false,txt;
+    if(h&&t.min>=h[0]&&t.min<h[1]){isOpen=true;txt=L.open_yes+clock(h[1]);}
+    else{
+      var d=t.day,when;
+      if(h&&t.min<h[0]){when=L.today;}
+      else{
+        for(var i=1;i<=7;i++){d=(t.day+i)%7;if(HRS[d]){when=(i===1)?L.tomorrow:L[DAYKEY[d]];break;}}
+      }
+      var nh=HRS[d];txt=L.open_no+when+L.open_at+clock(nh[0]);
+    }
+    ["openNow","openNow2"].forEach(function(id){var el=$("#"+id);if(el)el.classList.toggle("is-open",isOpen)});
+    var a=$("#openText"),b=$("#openText2");if(a)a.textContent=txt;if(b)b.textContent=txt;
+  }
+
+  function setLang(l){
+    if(!T[l])return;
+    lang=l;
+    document.documentElement.lang=l;
+    $$("[data-t]").forEach(function(el){var k=el.getAttribute("data-t");if(T[l][k]!=null)el.textContent=T[l][k]});
+    $$("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===l?"true":"false")});
+    document.title=T[l].title;
+    var m=$('meta[name="description"]');if(m)m.setAttribute("content",T[l].desc);
+    openStatus();
+    try{localStorage.setItem("ld-lang",l)}catch(e){}
+  }
+  function initLang(){
+    $$("[data-lang]").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-lang"))})});
+    var saved=null;try{saved=localStorage.getItem("ld-lang")}catch(e){}
+    setLang(saved==="en"?"en":"es");
+    setInterval(openStatus,60000);
+  }
+
+  function initSplash(){
+    var s=$("#splash");if(!s)return;
+    var hide=function(){s.classList.add("hide")};
+    if(document.readyState==="complete")setTimeout(hide,800);else window.addEventListener("load",function(){setTimeout(hide,800)});
+    setTimeout(hide,2200);
+  }
+  function initNav(){
+    var nav=$("#nav"),links=$("#navLinks"),b=$("#burger"),sen=$("#navSentinel");
+    if("IntersectionObserver" in window&&sen){
+      new IntersectionObserver(function(en){nav.classList.toggle("scrolled",!en[0].isIntersecting)}).observe(sen);
+    }
+    b.addEventListener("click",function(){var o=links.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false")});
+    links.addEventListener("click",function(e){if(e.target.closest("a")){links.classList.remove("open");b.setAttribute("aria-expanded","false")}});
+  }
+  function initReveals(){
+    var els=$$(".reveal");
+    if(!("IntersectionObserver" in window)||reduced){els.forEach(function(e){e.classList.add("in")});return}
+    var io=new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");o.unobserve(x.target)}})},{threshold:.04,rootMargin:"0px 0px -6% 0px"});
+    els.forEach(function(e){io.observe(e)});
+    setTimeout(function(){els.forEach(function(e){e.classList.add("in")})},3500);
+  }
+  function fmt(v,d){return d>0?v.toFixed(d):String(Math.round(v))}
+  function count(el){
+    var t=parseFloat(el.getAttribute("data-count-to")),d=parseInt(el.getAttribute("data-decimals")||"0",10);
+    if(isNaN(t))return;
+    if(reduced){el.textContent=fmt(t,d);return}
+    var st=performance.now(),dur=1300;
+    (function tick(n){var p=Math.min(1,(n-st)/dur),e=1-Math.pow(1-p,3);el.textContent=fmt(t*e,d);if(p<1)requestAnimationFrame(tick);else el.textContent=fmt(t,d)})(st);
+  }
+  function initCounts(){
+    var els=$$("[data-count-to]");
+    if(!("IntersectionObserver" in window))return;
+    var io=new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){count(x.target);o.unobserve(x.target)}})},{threshold:.6});
+    els.forEach(function(e){io.observe(e)});
+  }
+  function initTilt(){
+    if(!fine||reduced)return;
+    $$("[data-tilt]").forEach(function(c){
+      c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect(),px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;c.style.transition="box-shadow .3s,border-color .3s,background-color .3s";c.style.transform="perspective(800px) rotateY("+(px*8)+"deg) rotateX("+(-py*8)+"deg) translateY(-5px)"});
+      c.addEventListener("mouseleave",function(){c.style.transition="";c.style.transform=""});
+    });
+  }
+  function initMagnetic(){
+    if(!fine||reduced)return;
+    $$("[data-magnetic]").forEach(function(b){
+      b.addEventListener("mousemove",function(e){var r=b.getBoundingClientRect();b.style.transform="translate("+((e.clientX-r.left-r.width/2)*.2)+"px,"+((e.clientY-r.top-r.height/2)*.25)+"px)"});
+      b.addEventListener("mouseleave",function(){b.style.transform=""});
+    });
+  }
+  function initCarousel(){
+    var c=$("#carousel");if(!c)return;
+    var step=function(){var r=$(".rev",c);return r?r.getBoundingClientRect().width+14:300};
+    $("#prev").addEventListener("click",function(){c.scrollBy({left:-step(),behavior:reduced?"auto":"smooth"})});
+    $("#next").addEventListener("click",function(){c.scrollBy({left:step(),behavior:reduced?"auto":"smooth"})});
+    c.addEventListener("keydown",function(e){if(e.key==="ArrowRight")$("#next").click();if(e.key==="ArrowLeft")$("#prev").click()});
+  }
+  function initFaq(){
+    $$(".acc-item").forEach(function(it){
+      var q=$(".acc-q",it);
+      q.addEventListener("click",function(){var o=it.classList.toggle("open");q.setAttribute("aria-expanded",o?"true":"false")});
+    });
+  }
+  function initHours(){
+    var d=String(miami().day);
+    $$("#hours .row").forEach(function(r){r.classList.toggle("today",r.getAttribute("data-d")===d)});
+  }
+  function initForm(){
+    var f=$("#apptForm"),ok=$("#formOk");if(!f)return;
+    var mark=function(el,bad){el.closest(".field").classList.toggle("invalid",bad)};
+    f.addEventListener("submit",function(e){
+      e.preventDefault();
+      var bad=null;
+      $$("[required]",f).forEach(function(el){var b=!el.value.trim();mark(el,b);if(b&&!bad)bad=el});
+      if(bad){bad.focus();return}
+      var t=T[lang],why=$("#f-why"),day=$("#f-day");
+      var body=t.mailhello+"\n\n"+t.mailname+": "+$("#f-name").value.trim()+"\n"+t.mailphone+": "+$("#f-phone").value.trim()+"\n"+t.mailwhy+": "+why.options[why.selectedIndex].text+"\n"+t.mailday+": "+(day.value?day.options[day.selectedIndex].text:t.mailany);
+      ok.classList.add("show");
+      window.location.href="mailto:latindentalofmiami@gmail.com?subject="+encodeURIComponent(t.mailsub)+"&body="+encodeURIComponent(body);
+    });
+    f.addEventListener("input",function(e){if(e.target.matches("[required]"))mark(e.target,!e.target.value.trim())});
+    f.addEventListener("change",function(e){if(e.target.matches("[required]"))mark(e.target,!e.target.value.trim())});
+    $("#formReset").addEventListener("click",function(){ok.classList.remove("show");f.reset()});
+  }
+
+  function boot(){
+    safe(initLang,"lang");safe(initSplash,"splash");safe(initNav,"nav");safe(initReveals,"reveals");
+    safe(initCounts,"counts");safe(initTilt,"tilt");safe(initMagnetic,"magnetic");
+    safe(initCarousel,"carousel");safe(initFaq,"faq");safe(initHours,"hours");safe(initForm,"form");
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);else boot();
+})();
+</script>
+</body>
+</html>
