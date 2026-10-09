@@ -1,0 +1,845 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Flagler Dental Clinic | Dentista en Miami</title>
+<meta name="description" content="Flagler Dental Clinic, consultorio de la Dra. Evelyn O. Caballero en West Flagler Street, Miami. Odontología general, familiar y cosmética. Hablamos español.">
+<meta name="theme-color" content="#00008B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2300008B'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Arial' font-weight='800' font-size='40' fill='%2300BCC4'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700;800&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --navy:#00008B; --navy-d:#00005C; --navy-dd:#00003A;
+  --teal:#00BCC4; --teal-d:#007A80; --teal-l:#7FE6EA;
+  --tint:#E6F8F9; --surface:#F2FAFB; --white:#fff;
+  --ink:#0B1033; --muted:#464C6B; --line:#D3E7EA;
+  --r-card:24px; --r-in:14px;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --font-d:'Gabarito','Trebuchet MS',system-ui,sans-serif;
+  --font-b:'Mulish','Segoe UI',system-ui,sans-serif;
+  --shadow:0 18px 40px -18px rgba(0,0,92,.28);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-b);font-size:17px;line-height:1.6;color:var(--ink);background:var(--white);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--font-d);line-height:1.12;letter-spacing:-.01em}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;background:var(--teal);color:var(--navy-dd);padding:10px 16px;border-radius:999px;font-weight:800;z-index:200}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+svg.i{width:1.15em;height:1.15em;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+svg.i.fill{fill:currentColor;stroke:none}
+
+/* splash */
+.splash{position:fixed;inset:0;z-index:300;background:var(--navy);display:grid;place-items:center;transition:opacity .45s var(--ease),visibility .45s}
+.splash img{width:150px;height:auto;animation:pop .7s var(--ease) both}
+.splash.hide{opacity:0;visibility:hidden}
+@keyframes pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+
+/* nav */
+.nav{position:fixed;top:12px;left:0;right:0;z-index:100;pointer-events:none}
+.nav-in{pointer-events:auto;width:min(1180px,100% - 24px);margin-inline:auto;display:flex;align-items:center;gap:18px;padding:8px 10px 8px 18px;border-radius:999px;background:rgba(0,0,92,.72);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 14px 34px -14px rgba(0,0,60,.55);transition:background .3s,box-shadow .3s}
+.nav.scrolled .nav-in{background:rgba(0,0,70,.92)}
+.brand img{height:72px;width:auto;object-fit:contain;margin-block:-5px;display:block}
+.links{display:flex;gap:2px;margin-left:auto}
+.links a{color:rgba(255,255,255,.88);text-decoration:none;font-weight:700;font-size:15px;padding:9px 13px;border-radius:999px;transition:background .2s,color .2s;white-space:nowrap}
+.links a:hover{background:rgba(255,255,255,.12);color:#fff}
+.lang{display:flex;background:rgba(255,255,255,.12);border-radius:999px;padding:3px}
+.lang button{font:800 13px var(--font-b);letter-spacing:.04em;color:rgba(255,255,255,.85);background:none;border:0;border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer;transition:background .2s,color .2s}
+.lang button[aria-pressed="true"]{background:var(--teal);color:var(--navy-dd)}
+.lang button:not([aria-pressed="true"]):hover{background:rgba(255,255,255,.14)}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;cursor:pointer;align-items:center;justify-content:center}
+.burger span,.burger span::before{display:block;width:18px;height:2px;background:currentColor;border-radius:2px;position:relative;transition:transform .25s var(--ease)}
+.burger span::before{content:"";position:absolute;top:6px}
+.burger[aria-expanded="true"] span{transform:translateY(3px) rotate(45deg)}
+.burger[aria-expanded="true"] span::before{transform:translateY(-6px) rotate(-90deg);top:6px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;border:2px solid transparent;font:800 16px var(--font-b);text-decoration:none;cursor:pointer;white-space:nowrap;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .2s,color .2s,border-color .2s}
+.btn:active{transform:scale(.97)!important}
+.btn-teal{background:var(--teal);color:var(--navy-dd)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-ghost{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.55);color:#fff}
+.btn-sm{min-height:44px;padding:0 20px;font-size:15px}
+@media (hover:hover) and (pointer:fine){
+  .btn-teal:hover{box-shadow:0 14px 30px -10px rgba(0,188,196,.7);transform:translateY(-2px)}
+  .btn-navy:hover{box-shadow:0 14px 30px -10px rgba(0,0,139,.6);transform:translateY(-2px);background:#0000a6}
+  .btn-ghost:hover{background:#fff;color:var(--navy);border-color:#fff;transform:translateY(-2px)}
+}
+
+/* hero */
+.hero{position:relative;min-height:100dvh;display:flex;align-items:center;background:linear-gradient(135deg,#00005C 0%,#00008B 52%,#003FA8 100%);color:#fff;overflow:hidden;padding:128px 0 72px;isolation:isolate}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;z-index:-1;will-change:transform}
+.b1{width:520px;height:520px;background:#00BCC4;top:-160px;right:-120px;animation:drift 20s ease-in-out infinite alternate}
+.b2{width:420px;height:420px;background:#2F5BFF;bottom:-160px;left:-120px;opacity:.5;animation:drift 24s ease-in-out infinite alternate-reverse}
+.b3{width:300px;height:300px;background:#00E0D0;top:38%;left:42%;opacity:.22;animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(60px,40px,0) scale(1.12)}}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4.4rem);font-weight:800;line-height:1.04;max-width:15ch;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero-sub{margin-top:22px;font-size:clamp(1.08rem,1.6vw,1.28rem);color:rgba(255,255,255,.88);max-width:34ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.portrait{position:relative;width:min(420px,100%);margin-inline:auto;aspect-ratio:380/470}
+.arch{position:absolute;inset:0;border-radius:999px 999px 36px 36px;background:linear-gradient(170deg,#00D6DE 0%,#00BCC4 55%,#0094A0 100%);overflow:hidden;box-shadow:0 40px 70px -30px rgba(0,0,40,.7)}
+.arch::before{content:"";position:absolute;width:140%;aspect-ratio:1;border-radius:50%;left:-20%;top:46%;background:rgba(255,255,255,.18)}
+.arch img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:92%;height:auto;max-height:98%;object-fit:contain;object-position:bottom}
+.round-photo{position:absolute;left:-34px;bottom:34px;width:168px;height:168px;border-radius:50%;border:6px solid #fff;overflow:hidden;box-shadow:var(--shadow);animation:float 7s ease-in-out infinite}
+.round-photo img{width:100%;height:100%;object-fit:cover}
+.rate{position:absolute;right:-18px;top:62px;background:#fff;color:var(--ink);border-radius:20px;padding:12px 16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;animation:float 8s ease-in-out -3s infinite}
+.rate b{font:800 30px/1 var(--font-d);color:var(--navy)}
+.rate small{display:block;font-size:13px;font-weight:700;color:var(--muted);line-height:1.25}
+.stars{display:flex;gap:2px;color:#F5A400}
+.stars svg{width:15px;height:15px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+/* proof strip */
+.proof{background:#fff;padding:0}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;transform:translateY(-44px);background:#fff;border-radius:var(--r-card);box-shadow:var(--shadow);border:1px solid var(--line)}
+.stat{padding:28px 22px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font:800 clamp(2rem,3.4vw,2.7rem)/1 var(--font-d);color:var(--navy)}
+.stat span{display:block;margin-top:8px;font-weight:700;color:var(--muted);font-size:15px;line-height:1.35}
+.stat .i{width:34px;height:34px;color:var(--teal-d);margin:0 auto 4px}
+.proof-pad{height:0}
+
+/* sections */
+section{position:relative}
+.sec{padding:96px 0}
+.sec h2{font-size:clamp(1.9rem,3.8vw,3rem);font-weight:800;color:var(--navy);max-width:20ch}
+.sec .lead{margin-top:16px;color:var(--muted);font-size:1.1rem;max-width:56ch}
+.on-dark h2{color:#fff}.on-dark .lead{color:rgba(255,255,255,.82)}
+
+/* doctor */
+.doc{background:var(--surface)}
+.doc-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+.doc-photo{position:relative;border-radius:var(--r-card);background:linear-gradient(160deg,var(--tint),#BFEFF1);padding:32px 32px 0;overflow:hidden;aspect-ratio:1/1.12;display:flex;align-items:flex-end;justify-content:center}
+.doc-photo img{width:88%;height:auto}
+.doc-tag{position:absolute;left:18px;bottom:18px;background:var(--navy);color:#fff;border-radius:16px;padding:12px 18px;font-weight:800;line-height:1.25;box-shadow:var(--shadow)}
+.doc-tag small{display:block;font-weight:600;font-size:13px;opacity:.85}
+.doc p.lead{max-width:52ch}
+.tl{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:0;position:relative}
+.tl li{display:grid;grid-template-columns:22px 1fr;gap:16px;padding-bottom:22px;position:relative}
+.tl li::before{content:"";position:absolute;left:10px;top:22px;bottom:-2px;width:2px;background:linear-gradient(var(--teal),transparent)}
+.tl li:last-child::before{display:none}
+.tl i{width:22px;height:22px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 6px var(--tint);margin-top:2px}
+.tl b{display:block;font:700 1.1rem var(--font-d);color:var(--navy)}
+.tl span{color:var(--muted);font-size:16px}
+.chips-h{margin-top:12px;font-weight:800;color:var(--navy);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.chips span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:700;font-size:14.5px;color:var(--ink)}
+
+/* services bento */
+.serv{background:#fff}
+.bento{margin-top:48px;display:grid;grid-template-columns:repeat(12,1fr);gap:18px;perspective:1100px}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);padding:28px;display:flex;flex-direction:column;gap:10px;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .2s;transform-style:preserve-3d;will-change:transform}
+.card .ico{width:54px;height:54px;border-radius:16px;background:#fff;color:var(--teal-d);display:grid;place-items:center;box-shadow:0 8px 18px -10px rgba(0,0,92,.4);transition:transform .35s var(--ease),background .25s,color .25s}
+.card .ico svg{width:28px;height:28px}
+.card h3{font-size:1.28rem;font-weight:700;color:var(--navy)}
+.card p{color:var(--muted);font-size:16px}
+.card ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
+.card li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-weight:700;font-size:14px;color:var(--ink)}
+.c1{grid-column:span 5}.c2{grid-column:span 4}.c3{grid-column:span 3}
+.c4{grid-column:span 3}.c5{grid-column:span 5}.c6{grid-column:span 4}
+.c7{grid-column:span 7}.c8{grid-column:span 5}
+.card.dark{background:linear-gradient(150deg,var(--navy),var(--navy-d));border-color:transparent;color:#fff}
+.card.dark h3{color:#fff}.card.dark p{color:rgba(255,255,255,.82)}
+.card.dark .ico{background:rgba(255,255,255,.14);color:var(--teal);box-shadow:none}
+.card.dark li{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#fff}
+.card.glow{background:linear-gradient(150deg,#D9F6F8,#B9EEF1);border-color:transparent}
+.urg{grid-column:1/-1;background:linear-gradient(100deg,var(--teal),#35D2D8);border:0;flex-direction:row;align-items:center;gap:22px;flex-wrap:wrap;color:var(--navy-dd)}
+.urg .ico{background:var(--navy);color:#fff}
+.urg h3{color:var(--navy-dd)}.urg p{color:#06304A}
+.urg .txt{flex:1;min-width:240px}
+@media (hover:hover) and (pointer:fine){
+  .card:hover{box-shadow:0 26px 44px -22px rgba(0,0,92,.45);border-color:var(--teal)}
+  .card:hover .ico{transform:translateY(-3px) scale(1.06);background:var(--teal);color:var(--navy-dd)}
+  .card.dark:hover .ico{background:var(--teal);color:var(--navy-dd)}
+}
+
+/* promise band */
+.promise{background:var(--teal);color:var(--navy-dd);padding:84px 0;text-align:center;overflow:hidden}
+.promise .big{font:800 clamp(1.7rem,3.8vw,3rem)/1.18 var(--font-d);max-width:24ch;margin-inline:auto}
+.promise .es{margin-top:18px;font-weight:700;font-size:1.12rem;color:#06304A}
+.promise .src{margin-top:22px;display:inline-flex;gap:10px;align-items:center;font-weight:800;font-size:15px;background:rgba(255,255,255,.4);padding:8px 18px;border-radius:999px}
+html[lang="en"] .promise .es{display:none}
+
+/* reviews */
+.rev{background:linear-gradient(160deg,#00004A,#00008B 120%);color:#fff}
+.rev-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px}
+.score{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:14px 22px}
+.score b{font:800 44px/1 var(--font-d)}
+.score small{display:block;font-weight:700;color:rgba(255,255,255,.85);line-height:1.3}
+.car{position:relative;margin-top:44px}
+.track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 2px 18px;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.rc{flex:0 0 min(400px,86%);scroll-snap-align:start;background:#fff;color:var(--ink);border-radius:var(--r-card);padding:28px;display:flex;flex-direction:column;gap:16px;box-shadow:0 24px 40px -24px rgba(0,0,30,.7);transition:transform .35s var(--ease)}
+.rc q{display:block;quotes:"“" "”";white-space:pre-line;font-size:17px;line-height:1.55}
+.rc footer{margin-top:auto;display:flex;align-items:center;gap:12px}
+.av{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font:800 18px var(--font-d)}
+.rc footer b{display:block;line-height:1.2}
+.rc footer small{color:var(--muted);font-weight:700}
+@media (hover:hover) and (pointer:fine){.rc:hover{transform:translateY(-6px)}}
+.car-ctl{display:flex;align-items:center;justify-content:space-between;margin-top:6px;gap:16px}
+.dots{display:flex;gap:8px}
+.dots button{width:10px;height:10px;border-radius:50%;border:0;background:rgba(255,255,255,.35);padding:0;cursor:pointer;transition:width .3s var(--ease),background .2s}
+.dots button.on{width:30px;border-radius:999px;background:var(--teal)}
+.arrows{display:flex;gap:10px}
+.arrows button{width:48px;height:48px;border-radius:50%;border:2px solid rgba(255,255,255,.4);background:transparent;color:#fff;cursor:pointer;display:grid;place-items:center;transition:background .2s,color .2s,transform .25s var(--ease)}
+.arrows button:hover{background:var(--teal);color:var(--navy-dd);border-color:var(--teal)}
+.arrows button:active{transform:scale(.94)}
+.rev .note{margin-top:18px;font-size:14px;color:rgba(255,255,255,.7)}
+
+/* gallery */
+.gal{background:var(--tint)}
+.mosaic{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:16px}
+.mosaic figure{position:relative;border-radius:var(--r-card);overflow:hidden;background:#cfeff1}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.mosaic figcaption{position:absolute;left:12px;bottom:12px;background:rgba(0,0,60,.78);backdrop-filter:blur(8px);color:#fff;font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px}
+.m1{grid-column:span 2;grid-row:span 2}.m2{grid-column:span 1}.m3{grid-column:span 1}.m4{grid-column:span 1}.m5{grid-column:span 1}
+@media (hover:hover) and (pointer:fine){.mosaic figure:hover img{transform:scale(1.05)}}
+
+/* faq */
+.faq{background:#fff}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq-grid>div:first-child{position:sticky;top:110px}
+.acc{display:grid;gap:12px}
+.acc details{background:var(--surface);border:1px solid var(--line);border-radius:20px;transition:background .2s,border-color .2s}
+.acc details[open]{background:#fff;border-color:var(--teal);box-shadow:var(--shadow)}
+.acc summary{list-style:none;cursor:pointer;padding:20px 24px;font:700 1.08rem var(--font-d);color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:60px}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary svg{transition:transform .3s var(--ease);color:var(--teal-d)}
+.acc details[open] summary svg{transform:rotate(180deg)}
+.acc .ans{padding:0 24px 22px;color:var(--muted)}
+.acc .ans a{color:var(--navy);font-weight:800}
+
+/* location */
+.loc{background:linear-gradient(180deg,#fff 0%,#DDF5F7 100%)}
+.loc-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;margin-top:44px;align-items:stretch}
+.map{border-radius:var(--r-card);overflow:hidden;min-height:440px;border:1px solid var(--line);background:#cfeff1;box-shadow:var(--shadow)}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;display:block}
+.info{background:#fff;border-radius:var(--r-card);padding:30px;border:1px solid var(--line);display:flex;flex-direction:column;gap:18px}
+.row{display:flex;gap:14px;align-items:flex-start}
+.row .i{width:24px;height:24px;color:var(--teal-d);margin-top:2px}
+.row a{font-weight:800;color:var(--navy);text-decoration:none}
+.row a:hover{text-decoration:underline}
+.state{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;font-weight:800;font-size:15px;background:var(--tint);color:#055B60;align-self:flex-start}
+.state::before{content:"";width:10px;height:10px;border-radius:50%;background:#14A057;box-shadow:0 0 0 0 rgba(20,160,87,.5);animation:ping 2s infinite}
+.state.closed{background:#EEF0F8;color:#3A4165}
+.state.closed::before{background:#8A92B5;animation:none}
+@keyframes ping{70%{box-shadow:0 0 0 9px rgba(20,160,87,0)}100%{box-shadow:0 0 0 0 rgba(20,160,87,0)}}
+.hrs{list-style:none;padding:0;display:grid;gap:2px}
+.hrs li{display:flex;justify-content:space-between;gap:12px;padding:9px 14px;border-radius:12px;font-size:16px}
+.hrs li.today{background:var(--navy);color:#fff;font-weight:800}
+.hrs li span:last-child{text-align:right;white-space:nowrap}
+.info .btn{align-self:flex-start}
+
+/* appointment */
+.cita{background:linear-gradient(135deg,#00BCC4 0%,#27CFD6 55%,#6FE3E8 100%);color:var(--navy-dd)}
+.cita-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.cita h2{color:var(--navy-dd)}
+.cita .lead{color:#06304A}
+.call-big{display:inline-flex;align-items:center;gap:12px;margin-top:26px;font:800 clamp(1.5rem,3vw,2.1rem) var(--font-d);color:var(--navy-dd);text-decoration:none}
+.call-big .i{width:40px;height:40px;background:var(--navy);color:#fff;border-radius:50%;padding:9px}
+form{background:#fff;border-radius:28px;padding:32px;box-shadow:0 30px 60px -28px rgba(0,0,60,.6);display:grid;gap:18px;position:relative;color:var(--ink)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:grid;gap:7px;font-weight:800;font-size:15px;color:var(--navy)}
+input,select{font:600 17px var(--font-b);color:var(--ink);background:var(--surface);border:2px solid var(--line);border-radius:var(--r-in);padding:0 16px;min-height:52px;width:100%;transition:border-color .2s,box-shadow .2s,background .2s}
+input:focus,select:focus{outline:none;border-color:var(--navy);background:#fff;box-shadow:0 0 0 4px rgba(0,0,139,.14)}
+.err{display:none;color:#B3261E;font-weight:700;font-size:14px}
+label.bad input{border-color:#B3261E}label.bad .err{display:block}
+.fine{font-size:14px;color:var(--muted)}
+.ok{display:none;text-align:center;padding:18px 6px;gap:12px;justify-items:center}
+form.sent .fields{display:none}
+form.sent .ok{display:grid}
+.ok svg{width:84px;height:84px}
+.ok circle{stroke:var(--teal-d);stroke-width:4;fill:none;stroke-dasharray:190;stroke-dashoffset:190;animation:draw .7s var(--ease) forwards}
+.ok path{stroke:var(--navy);stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:50;stroke-dashoffset:50;animation:draw .5s .5s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.ok h3{font-size:1.5rem;color:var(--navy)}
+
+/* footer */
+footer.foot{background:#00002E;color:rgba(255,255,255,.82);padding:72px 0 120px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:44px}
+.foot img{height:84px;width:auto;object-fit:contain}
+.foot h4{font:800 1.05rem var(--font-d);color:#fff;margin-bottom:14px}
+.foot a{text-decoration:none}.foot a:hover{color:var(--teal)}
+.foot ul{list-style:none;padding:0;display:grid;gap:8px}
+.foot .fine{margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.62);font-size:14px}
+.foot .ln{display:flex;gap:10px;align-items:flex-start;margin-top:10px}
+.foot .ln .i{margin-top:3px;color:var(--teal)}
+
+/* sticky bar */
+.bar{display:none}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:calc(var(--d,0) * 70ms)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (max-width:1020px){
+  .links{display:none}
+  .nav-in{padding-right:10px}
+  .lang{margin-left:auto}
+  .burger{display:inline-flex}
+  .links.open{display:flex;position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;background:rgba(0,0,70,.97);border-radius:24px;padding:12px;margin:0;pointer-events:auto}
+  .links.open a{padding:14px 16px;font-size:17px}
+  .nav-call{display:none}
+}
+@media (max-width:900px){
+  .hero{padding:112px 0 56px;min-height:auto}
+  .hero-grid,.doc-grid,.faq-grid,.loc-grid,.cita-grid{grid-template-columns:1fr}
+  .hero-grid{gap:56px}
+  .portrait{width:min(340px,86%)}
+  .round-photo{left:-14px;width:128px;height:128px;bottom:24px}
+  .rate{right:-10px;top:40px}
+  .proof-grid{grid-template-columns:1fr 1fr;transform:translateY(-32px)}
+  .stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .sec{padding:72px 0}
+  .bento{grid-template-columns:1fr 1fr}
+  .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8{grid-column:span 1}
+  .c1,.c7{grid-column:1/-1}
+  .mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+  .m1{grid-column:1/-1;grid-row:span 2}
+  .faq-grid>div:first-child{position:static}
+  .foot-grid{grid-template-columns:1fr}
+  .doc-photo{max-width:420px}
+  .bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:90;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(0,0,60,.94);backdrop-filter:blur(12px)}
+  .bar .btn{min-height:50px;padding:0 12px}
+}
+@media (max-width:560px){
+  body{font-size:16.5px}
+  .wrap{width:calc(100% - 32px)}
+  .bento{grid-template-columns:1fr}
+  .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8{grid-column:1/-1}
+  .f2{grid-template-columns:1fr}
+  .proof-grid{grid-template-columns:1fr 1fr}
+  .stat{padding:20px 12px}
+  form{padding:24px 20px}
+  .brand img{height:64px;margin-block:-5px}
+  .nav-in{gap:8px;padding-left:12px}
+  .lang button{padding:8px 10px}
+  .hero-cta .btn{flex:1 1 100%}
+  .mosaic{grid-auto-rows:150px}
+  .info{padding:24px 20px}
+  .row:has(.hrs)>svg{display:none}
+  .hrs li{padding:9px 10px;font-size:15.5px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .js .rv{opacity:1;transform:none}
+  .blob{display:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M7.2 3C4.9 3 3.2 4.8 3.2 7.2c0 2 .8 3.4 1.4 5.2.6 1.8.8 4 1.4 6 .3 1 1 1.6 1.9 1.6 1.1 0 1.5-1 1.9-2.6.3-1.2.7-2.2 1.4-2.2s1.1 1 1.4 2.2c.4 1.6.8 2.6 1.9 2.6.9 0 1.6-.6 1.9-1.6.6-2 .8-4.2 1.4-6 .6-1.8 1.4-3.2 1.4-5.2C20.8 4.8 19.1 3 16.8 3c-1.7 0-2.7.8-4.800.8S8.900 3 7.200 3z"/></symbol>
+    <symbol id="i-canal" viewBox="0 0 24 24"><path d="M7.2 3C4.9 3 3.2 4.8 3.2 7.2c0 2 .8 3.4 1.4 5.2.6 1.8.8 4 1.4 6 .3 1 1 1.6 1.9 1.6 1.1 0 1.5-1 1.9-2.6.3-1.2.7-2.2 1.4-2.2s1.1 1 1.4 2.2c.4 1.6.8 2.6 1.9 2.6.9 0 1.6-.6 1.9-1.6.6-2 .8-4.2 1.4-6 .6-1.8 1.4-3.2 1.4-5.2C20.8 4.8 19.1 3 16.8 3c-1.7 0-2.7.8-4.800.8S8.900 3 7.200 3z"/><path d="M12 8v6M10 16l2 2 2-2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.500-3 8-7 10-4-2-7-5.500-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.500 14c.9 1.300 2 2 3.500 2s2.600-.7 3.500-2M9 9.500h.01M15 9.500h.01"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3c3 4 5 6.500 5 9.500a5 5 0 01-10 0C7 9.500 9 7 12 3z"/><path d="M9.500 13.500a2.500 2.500 0 002 2.500"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24"><path d="M4 8l4 4 4-7 4 7 4-4-2 11H6L4 8z"/></symbol>
+    <symbol id="i-implant" viewBox="0 0 24 24"><path d="M8 3h8l-1 5H9L8 3z"/><path d="M9.500 11h5M10 14h4M10.500 17h3M12 17v4"/></symbol>
+    <symbol id="i-dent" viewBox="0 0 24 24"><path d="M3.500 10c0-3.800 3.700-6 8.500-6s8.500 2.200 8.500 6c0 1.800-1 3-2.200 3H5.700c-1.200 0-2.200-1.200-2.200-3z"/><path d="M6 13c0 3 2.500 5 6 5s6-2 6-5M9 13v-2.500M12 13v-3M15 13v-2.500"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M11 3l2 5.500L18.500 10.500 13 12.500 11 18l-2-5.500L3.500 10.500 9 8.500 11 3z"/><path d="M19 16l.8 2 2 .8-2 .8L19 21.600l-.8-2-2-.8 2-.8L19 16z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.200-7-11a7 7 0 0114 0c0 4.800-7 11-7 11z"/><circle cx="12" cy="10" r="2.500"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.500" width="18" height="13" rx="2"/><path d="M3.500 7l8.500 6 8.500-6"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h2.200V5H13.500A3.500 3.500 0 0010 8.500V11H8v3h2v6h3v-6h2.200l.5-3H13V8.800c0-.5.200-.8 1-.8z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.800l2.800 5.800 6.300.8-4.600 4.400 1.200 6.300L12 17.100 6.300 20.100l1.200-6.300L2.900 9.400l6.300-.8L12 2.800z"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+    <symbol id="i-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z"/><path d="M8.500 10.500h7"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5.500" width="16" height="14.500" rx="2"/><path d="M4 10h16M8.500 3.500v4M15.500 3.500v4"/></symbol>
+    <symbol id="i-nav" viewBox="0 0 24 24"><path d="M4 11.500L20 4l-7.500 16-1.800-6.700L4 11.500z"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#contenido" data-t="skip">Saltar al contenido</a>
+
+<div class="splash" id="splash" aria-hidden="true"><img src="images/logo.png" alt="" width="238" height="183"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Flagler Dental Clinic"><img src="images/logo.png" alt="Flagler Dental Clinic" width="94" height="72"></a>
+    <nav class="links" id="links" aria-label="Principal">
+      <a href="#doctora" data-t="nav_doc">Su doctora</a>
+      <a href="#servicios" data-t="nav_serv">Servicios</a>
+      <a href="#resenas" data-t="nav_rev">Reseñas</a>
+      <a href="#consultorio" data-t="nav_off">Consultorio</a>
+      <a href="#preguntas" data-t="nav_faq">Preguntas</a>
+      <a href="#visitenos" data-t="nav_loc">Ubicación</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-teal btn-sm nav-call" href="tel:+13055544304" data-magnetic><svg class="i"><use href="#i-phone"/></svg><span>(305) 554-4304</span></a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="links" data-aria="menu" aria-label="Abrir menú"><span></span></button>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- HERO -->
+<section class="hero" id="top" style="overflow:hidden">
+  <div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div><div class="blob b3" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <h1 class="rv" data-th="hero_h1">La doctora de su familia, <em>desde 1995.</em></h1>
+      <p class="hero-sub rv" style="--d:1" data-t="hero_sub">Odontología general, familiar y cosmética con la Dra. Evelyn O. Caballero, en West Flagler Street.</p>
+      <div class="hero-cta rv" style="--d:2">
+        <a class="btn btn-teal" href="#cita" data-magnetic data-t="cta_book">Pedir cita</a>
+        <a class="btn btn-ghost" href="tel:+13055544304" data-magnetic><svg class="i"><use href="#i-phone"/></svg><span data-t="cta_call">Llamar ahora</span></a>
+      </div>
+    </div>
+    <div class="portrait rv" style="--d:2">
+      <div class="arch"><img src="images/dra-caballero.png" alt="Dra. Evelyn O. Caballero" width="391" height="478" fetchpriority="high"></div>
+      <div class="round-photo"><img src="images/consulta-2.jpg" alt="" width="600" height="364"></div>
+      <div class="rate">
+        <b data-num="4.9">4.9</b>
+        <div>
+          <div class="stars" aria-hidden="true"><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg></div>
+          <small data-t="rate_small">91 reseñas en Google</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof" aria-label="Datos del consultorio">
+  <div class="wrap">
+    <div class="proof-grid rv">
+      <div class="stat"><svg class="i"><use href="#i-star"/></svg><b data-count-to="4.9" data-decimals="1">4.9</b><span data-t="st1">calificación en Google</span></div>
+      <div class="stat"><svg class="i"><use href="#i-chat"/></svg><b data-count-to="91">91</b><span data-t="st2">reseñas de pacientes en Google</span></div>
+      <div class="stat"><svg class="i"><use href="#i-tooth"/></svg><b>1995</b><span data-t="st3">año en que se fundó el consultorio</span></div>
+      <div class="stat"><svg class="i"><use href="#i-smile"/></svg><b data-t="st4b">Español</b><span data-t="st4">Hablamos español</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORA -->
+<section class="sec doc" id="doctora" style="padding-top:56px">
+  <div class="wrap doc-grid">
+    <div class="doc-photo rv">
+      <img src="images/dra-caballero.png" alt="Dra. Evelyn O. Caballero, DDS" width="391" height="478" loading="lazy">
+      <div class="doc-tag">Dra. Evelyn O. Caballero, DDS<small data-t="doc_tag">Fundadora del consultorio</small></div>
+    </div>
+    <div>
+      <h2 class="rv" data-t="doc_h">Una doctora de cabecera, con pacientes que la siguen hace años</h2>
+      <p class="lead rv" style="--d:1" data-t="doc_p">Estudió en University of Miami y se doctoró en University of Illinois College of Dentistry. Después de trabajar cinco años en Chicago, fundó Flagler Dental Clinic of Miami, Inc. en 1995.</p>
+      <ul class="tl">
+        <li class="rv" style="--d:1"><i></i><div><b data-t="tl1b">Bachelor of Science</b><span>University of Miami</span></div></li>
+        <li class="rv" style="--d:2"><i></i><div><b>Doctor of Dental Surgery (DDS)</b><span>University of Illinois College of Dentistry</span></div></li>
+        <li class="rv" style="--d:3"><i></i><div><b data-t="tl3b">Cinco años de práctica en Chicago</b></div></li>
+        <li class="rv" style="--d:4"><i></i><div><b data-t="tl4b">1995: funda Flagler Dental Clinic of Miami, Inc.</b></div></li>
+      </ul>
+      <p class="chips-h rv" data-t="doc_chip_h">Formación y membresías</p>
+      <div class="chips rv">
+        <span data-t="chip0">Fellowship, International Congress of Oral Implantologists</span>
+        <span>American Dental Association</span>
+        <span>Florida Dental Association</span>
+        <span>South Florida District Dental Association</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="sec serv" id="servicios">
+  <div class="wrap">
+    <h2 class="rv" data-t="serv_h">Cuidado dental para toda la familia</h2>
+    <p class="lead rv" style="--d:1" data-t="serv_p">Desde la primera limpieza hasta implantes y dentaduras.</p>
+    <div class="bento">
+      <article class="card c1 rv" data-tilt><div class="ico"><svg class="i"><use href="#i-shield"/></svg></div><h3 data-t="s1h">Prevención</h3><p data-t="s1p">Revisiones y cuidado periódico para mantener su sonrisa sana.</p><ul><li data-t="s1a">Exámenes y limpiezas</li><li data-t="s1b">Selladores</li></ul></article>
+      <article class="card c2 glow rv" style="--d:1" data-tilt><div class="ico"><svg class="i"><use href="#i-smile"/></svg></div><h3 data-t="s2h">Odontología infantil</h3><p data-t="s2p">Atención dental pensada para los más pequeños de la familia.</p></article>
+      <article class="card c3 rv" style="--d:2" data-tilt><div class="ico"><svg class="i"><use href="#i-drop"/></svg></div><h3 data-t="s3h">Encías</h3><p data-t="s3p">Tratamiento y seguimiento para cuidar la salud de sus encías.</p><ul><li data-t="s3a">Limpieza profunda (scaling and root planing)</li><li data-t="s3b">Mantenimiento periodontal</li></ul></article>
+      <article class="card c4 rv" data-tilt><div class="ico"><svg class="i"><use href="#i-crown"/></svg></div><h3 data-t="s4h">Restauración</h3><p data-t="s4p">Reparan dientes dañados o faltantes.</p><ul><li data-t="s4a">Empastes</li><li data-t="s4b">Coronas</li><li data-t="s4c">Puentes</li></ul></article>
+      <article class="card c5 dark rv" style="--d:1" data-tilt><div class="ico"><svg class="i"><use href="#i-canal"/></svg></div><h3 data-t="s5h">Endodoncia</h3><p data-t="s5p">Trata el interior de un diente afectado para poder conservarlo.</p><ul><li data-t="s5a">Endodoncia no quirúrgica (root canal)</li></ul></article>
+      <article class="card c6 rv" style="--d:2" data-tilt><div class="ico"><svg class="i"><use href="#i-implant"/></svg></div><h3 data-t="s6h">Implantes y cirugía</h3><p data-t="s6p">Reemplazo de dientes y extracciones cuando hacen falta.</p><ul><li data-t="s6a">Implantes</li><li data-t="s6b">Extracciones</li><li data-t="s6c">Muelas del juicio</li></ul></article>
+      <article class="card c7 rv" data-tilt><div class="ico"><svg class="i"><use href="#i-dent"/></svg></div><h3 data-t="s7h">Dentaduras</h3><p data-t="s7p">Opciones para reemplazar varios dientes o todos.</p><ul><li data-t="s7a">Completas</li><li data-t="s7b">Parciales</li><li data-t="s7c">Inmediatas</li><li data-t="s7d">Sobre implantes</li></ul></article>
+      <article class="card c8 glow rv" style="--d:1" data-tilt><div class="ico"><svg class="i"><use href="#i-spark"/></svg></div><h3 data-t="s8h">Estética dental</h3><p data-t="s8p">Mejoran el color, la forma y el aspecto de sus dientes.</p><ul><li>Bonding</li><li data-t="s8b">Carillas de porcelana</li><li data-t="s8c">Blanqueamiento (Zoom)</li></ul></article>
+      <article class="card urg rv"><div class="ico"><svg class="i"><use href="#i-plus"/></svg></div><div class="txt"><h3 data-t="s9h">Urgencias</h3><p data-t="s9p">Si tiene una urgencia dental, llámenos.</p></div><a class="btn btn-navy" href="tel:+13055544304" data-magnetic><svg class="i"><use href="#i-phone"/></svg><span>(305) 554-4304</span></a></article>
+    </div>
+  </div>
+</section>
+
+<!-- PROMESA -->
+<section class="promise" aria-label="Nuestra promesa">
+  <div class="wrap">
+    <p class="big rv">Enjoy convenient dental services with courtesy and care - that's our promise.</p>
+    <p class="es rv" style="--d:1">Servicios dentales convenientes, con cortesía y cuidado: esa es nuestra promesa.</p>
+    <span class="src rv" style="--d:2"><svg class="i"><use href="#i-fb"/></svg><span data-t="promise_src">Flagler Dental Clinic en Facebook</span></span>
+  </div>
+</section>
+
+<!-- RESEÑAS -->
+<section class="sec rev on-dark" id="resenas">
+  <div class="wrap">
+    <div class="rev-top">
+      <div>
+        <h2 class="rv" data-t="rev_h">Lo que dicen sus pacientes</h2>
+        <p class="lead rv" style="--d:1" data-t="rev_p">Reseñas reales de Google, tal como las escribieron.</p>
+      </div>
+      <div class="score rv" style="--d:2">
+        <b data-num="4.9">4.9</b>
+        <div><div class="stars" aria-hidden="true"><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg></div><small data-t="rate_small2">91 reseñas en Google</small></div>
+      </div>
+    </div>
+    <div class="car rv" role="region" aria-roledescription="carrusel" data-aria="car" aria-label="Reseñas de pacientes">
+      <div class="track" id="track" tabindex="0">
+        <figure class="rc"><div class="stars" aria-label="5 estrellas"><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg></div><q lang="es">Visito la clinica desde hace años. Una atencion profesional, considerada y MUY respetuosa. Te ofrecen una asistencia que ademas de calidad,  te brindan seguridad y confianca. Cero estres con ellos.
+Los invito, inténtenlo!!!</q><footer><span class="av">M</span><div><b>Maria A.</b><small>Google</small></div></footer></figure>
+        <figure class="rc"><div class="stars" aria-label="5 estrellas"><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg></div><q lang="es">Yo he sido paciente  de Flagler Dental Clinic por más de 5 anos y pienso seguir siendo paciente de la doctora por muchos años más. El personal es encantador, da gusto venir a esta oficina porque te sientes en familia pero además Todo el staff muy profesional. Muy contentos mi esposo y yo con sus servicios</q><footer><span class="av">M</span><div><b>Morayma E.</b><small>Google</small></div></footer></figure>
+        <figure class="rc"><div class="stars" aria-label="5 estrellas"><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg></div><q lang="es">Hace años visito Flagler Dental . La Dr Evelyn es de las mejores dentistas que he conocido, me gusta la seguridad que me hace sentir sobre todo teniendo en cuenta que ir a el dentista no es de las cosas que más disfruto 😊 . Siempre trata de ayudar a los pacientes en cuanto a cobertura y tratamiento. Su staff es súper amable y hay un ambiente tranquilo. Los recomiendo 100 por ciento .</q><footer><span class="av">G</span><div><b>Gretell S.</b><small>Google</small></div></footer></figure>
+        <figure class="rc"><div class="stars" aria-label="5 estrellas"><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg></div><q lang="es">Son muy profesionales todo el colectivo incluyendo la Dra Evelyn  Caballero propietaria y dentista del local 100% atención súper esmerada y de calidad los recomiendo</q><footer><span class="av">L</span><div><b>Luis E.</b><small>Google</small></div></footer></figure>
+        <figure class="rc"><div class="stars" aria-label="5 estrellas"><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg></div><q lang="es">Son especiales nos tratan con mucho respeto paciencia y ternura. Se nota que aman mucho su trabajo. Brindan un servicio excelente 100x100 los recomiendo</q><footer><span class="av">L</span><div><b>Linny G.</b><small>Google</small></div></footer></figure>
+        <figure class="rc"><div class="stars" aria-label="5 estrellas"><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg></div><q lang="es">Excelente servicio desde el Front Desk y todos sus empleados te dan confianza y lo más bueno cero dolor me encanta son muy profesionales en lo que hacen mil gracias por todos los servicios que me han hecho 🙏❤️🙏…</q><footer><span class="av">B</span><div><b>Betty P.</b><small>Google</small></div></footer></figure>
+      </div>
+      <div class="car-ctl">
+        <div class="dots" id="dots" aria-hidden="true"></div>
+        <div class="arrows">
+          <button type="button" id="prev" data-aria="prev" aria-label="Reseña anterior"><svg class="i"><use href="#i-l"/></svg></button>
+          <button type="button" id="next" data-aria="next" aria-label="Reseña siguiente"><svg class="i"><use href="#i-r"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <p class="note" data-t="rev_note">Las reseñas se muestran en el idioma en que fueron escritas.</p>
+  </div>
+</section>
+
+<!-- CONSULTORIO -->
+<section class="sec gal" id="consultorio">
+  <div class="wrap">
+    <h2 class="rv" data-t="off_h">Conozca el consultorio</h2>
+    <p class="lead rv" style="--d:1" data-t="off_p">Así es el consultorio de la Dra. Caballero en West Flagler Street.</p>
+    <div class="mosaic">
+      <figure class="m1 rv"><img src="images/equipo.jpg" alt="El equipo de Flagler Dental Clinic" width="600" height="364" loading="lazy"><figcaption data-t="cap1">El equipo</figcaption></figure>
+      <figure class="m2 rv" style="--d:1"><img src="images/consulta-1.jpg" alt="Consulta con un paciente" width="600" height="364" loading="lazy"><figcaption data-t="cap2">Consulta</figcaption></figure>
+      <figure class="m3 rv" style="--d:2"><img src="images/recepcion.jpg" alt="Recepción del consultorio" width="600" height="364" loading="lazy"><figcaption data-t="cap3">Recepción</figcaption></figure>
+      <figure class="m4 rv" style="--d:1"><img src="images/sala.jpg" alt="Sala de tratamiento" width="600" height="364" loading="lazy"><figcaption data-t="cap4">Sala de tratamiento</figcaption></figure>
+      <figure class="m5 rv" style="--d:2"><img src="images/consulta-2.jpg" alt="Consulta con una paciente" width="600" height="364" loading="lazy"><figcaption data-t="cap2">Consulta</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq" id="preguntas">
+  <div class="wrap faq-grid">
+    <div>
+      <h2 class="rv" data-t="faq_h">Preguntas frecuentes</h2>
+      <p class="lead rv" style="--d:1" data-t="faq_p">Si no encuentra su respuesta, llámenos.</p>
+      <a class="btn btn-navy rv" style="--d:2;margin-top:26px" href="tel:+13055544304" data-magnetic><svg class="i"><use href="#i-phone"/></svg><span>(305) 554-4304</span></a>
+    </div>
+    <div class="acc rv" style="--d:1">
+      <details><summary><span data-t="q1">¿Hablan español?</span><svg class="i"><use href="#i-chev"/></svg></summary><div class="ans" data-t="a1">Sí, hablamos español.</div></details>
+      <details><summary><span data-t="q2">¿Qué servicios ofrecen?</span><svg class="i"><use href="#i-chev"/></svg></summary><div class="ans" data-t="a2">Odontología general, infantil y cosmética, endodoncia, implantes, dentaduras y urgencias, entre otros. Vea la lista completa en la sección de servicios.</div></details>
+      <details><summary><span data-t="q3">¿Atienden urgencias?</span><svg class="i"><use href="#i-chev"/></svg></summary><div class="ans" data-th="a3">Las urgencias figuran entre nuestros servicios. Llámenos al <a href="tel:+13055544304">(305) 554-4304</a> y le indicamos cómo seguir.</div></details>
+      <details><summary><span data-t="q4">¿Aceptan mi seguro dental?</span><svg class="i"><use href="#i-chev"/></svg></summary><div class="ans" data-th="a4">Llámenos al <a href="tel:+13055544304">(305) 554-4304</a> y le confirmamos.</div></details>
+      <details><summary><span data-t="q5">¿Cuánto cuesta un tratamiento?</span><svg class="i"><use href="#i-chev"/></svg></summary><div class="ans" data-th="a5">Cada caso es distinto. Llámenos al <a href="tel:+13055544304">(305) 554-4304</a> y le confirmamos.</div></details>
+      <details><summary><span data-t="q6">¿Tienen opciones de pago o financiamiento?</span><svg class="i"><use href="#i-chev"/></svg></summary><div class="ans" data-th="a6">Llámenos al <a href="tel:+13055544304">(305) 554-4304</a> y le confirmamos.</div></details>
+      <details><summary><span data-t="q7">¿Cómo pido una cita?</span><svg class="i"><use href="#i-chev"/></svg></summary><div class="ans" data-th="a7">Llame al <a href="tel:+13055544304">(305) 554-4304</a> o use el formulario de esta página: se abre su correo con el mensaje listo para enviar.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- UBICACION -->
+<section class="sec loc" id="visitenos">
+  <div class="wrap">
+    <h2 class="rv" data-t="loc_h">Visítenos en West Flagler</h2>
+    <div class="loc-grid">
+      <div class="map rv"><iframe title="Mapa de Flagler Dental Clinic" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=11373+West+Flagler+Street+Suite+214+Miami+FL+33174&amp;output=embed"></iframe></div>
+      <div class="info rv" style="--d:1">
+        <span class="state" id="state" role="status"></span>
+        <div class="row"><svg class="i"><use href="#i-pin"/></svg><div>11373 West Flagler Street, Suite 214<br>Miami, FL 33174</div></div>
+        <div class="row"><svg class="i"><use href="#i-phone"/></svg><a href="tel:+13055544304">(305) 554-4304</a></div>
+        <div class="row"><svg class="i"><use href="#i-mail"/></svg><a href="mailto:flaglerdentalclinic@gmail.com">flaglerdentalclinic@gmail.com</a></div>
+        <div class="row"><svg class="i"><use href="#i-clock"/></svg><ul class="hrs" id="hrs" style="flex:1"></ul></div>
+        <a class="btn btn-navy" href="https://www.google.com/maps/dir/?api=1&amp;destination=11373+West+Flagler+Street+Suite+214+Miami+FL+33174" target="_blank" rel="noopener" data-magnetic><svg class="i"><use href="#i-nav"/></svg><span data-t="directions">Cómo llegar</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CITA -->
+<section class="sec cita" id="cita">
+  <div class="wrap cita-grid">
+    <div>
+      <h2 class="rv" data-t="cita_h">Pida su cita</h2>
+      <p class="lead rv" style="--d:1" data-t="cita_p">Déjenos sus datos y le respondemos. También puede llamarnos.</p>
+      <a class="call-big rv" style="--d:2" href="tel:+13055544304"><svg class="i"><use href="#i-phone"/></svg>(305) 554-4304</a>
+    </div>
+    <form id="form" class="rv" style="--d:1" novalidate>
+      <div class="fields" style="display:grid;gap:18px">
+        <label id="l-name"><span data-t="f_name">Nombre</span><input id="f-name" name="nombre" autocomplete="name" required><span class="err" data-t="f_err">Complete este campo.</span></label>
+        <div class="f2">
+          <label id="l-tel"><span data-t="f_tel">Teléfono</span><input id="f-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required><span class="err" data-t="f_err">Complete este campo.</span></label>
+          <label><span data-t="f_day">Día preferido</span>
+            <select id="f-day" name="dia">
+              <option value="any" data-t="d_any">Cualquier día</option>
+              <option value="0" data-t="d1">Lunes</option><option value="1" data-t="d2">Martes</option><option value="2" data-t="d3">Miércoles</option><option value="3" data-t="d4">Jueves</option><option value="4" data-t="d5">Viernes</option>
+            </select></label>
+        </div>
+        <label><span data-t="f_reason">Motivo de la consulta</span>
+          <select id="f-reason" name="motivo">
+            <option value="exam" data-t="r1">Examen y limpieza</option>
+            <option value="kids" data-t="r2">Odontología infantil</option>
+            <option value="gums" data-t="r3">Encías</option>
+            <option value="rest" data-t="r4">Empaste, corona o puente</option>
+            <option value="root" data-t="r5">Endodoncia</option>
+            <option value="impl" data-t="r6">Implantes o extracciones</option>
+            <option value="dent" data-t="r7">Dentaduras</option>
+            <option value="aest" data-t="r8">Estética dental</option>
+            <option value="urg" data-t="r9">Urgencia</option>
+            <option value="other" data-t="r10">Otro</option>
+          </select></label>
+        <button class="btn btn-navy" type="submit" data-magnetic data-t="f_send">Pedir cita</button>
+        <p class="fine" data-t="f_fine">Al enviar se abre su correo con el mensaje listo. Nada se guarda en esta página.</p>
+      </div>
+      <div class="ok" role="status" aria-live="polite">
+        <svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="30"/><path d="M29 43l9 9 18-20"/></svg>
+        <h3 data-t="ok_h">Su mensaje está listo</h3>
+        <p data-th="ok_p">Se abrió su correo con los datos de la cita. Si no se abrió, escríbanos a <a href="mailto:flaglerdentalclinic@gmail.com">flaglerdentalclinic@gmail.com</a> o llame al <a href="tel:+13055544304">(305) 554-4304</a>.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="images/logo.png" alt="Flagler Dental Clinic" width="109" height="84">
+        <p style="margin-top:14px;max-width:34ch" data-t="foot_about">Consultorio de la Dra. Evelyn O. Caballero, DDS. Odontología general, familiar y cosmética en Miami.</p>
+        <a class="btn btn-ghost btn-sm" style="margin-top:18px" href="https://www.facebook.com/FlaglerDentalClinic/" target="_blank" rel="noopener"><svg class="i"><use href="#i-fb"/></svg>Facebook</a>
+      </div>
+      <div>
+        <h4 data-t="foot_contact">Contacto</h4>
+        <div class="ln"><svg class="i"><use href="#i-pin"/></svg><span>11373 West Flagler Street, Suite 214<br>Miami, FL 33174</span></div>
+        <div class="ln"><svg class="i"><use href="#i-phone"/></svg><a href="tel:+13055544304">(305) 554-4304</a></div>
+        <div class="ln"><svg class="i"><use href="#i-mail"/></svg><a href="mailto:flaglerdentalclinic@gmail.com">flaglerdentalclinic@gmail.com</a></div>
+      </div>
+      <div>
+        <h4 data-t="foot_links">Enlaces</h4>
+        <ul>
+          <li><a href="#doctora" data-t="nav_doc">Su doctora</a></li>
+          <li><a href="#servicios" data-t="nav_serv">Servicios</a></li>
+          <li><a href="#resenas" data-t="nav_rev">Reseñas</a></li>
+          <li><a href="#preguntas" data-t="nav_faq">Preguntas</a></li>
+          <li><a href="#cita" data-t="cta_book">Pedir cita</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">&copy; Flagler Dental Clinic of Miami, Inc.</p>
+  </div>
+</footer>
+
+<div class="bar" aria-label="Acciones rápidas">
+  <a class="btn btn-teal" href="tel:+13055544304"><svg class="i"><use href="#i-phone"/></svg><span data-t="cta_call_short">Llamar</span></a>
+  <a class="btn btn-ghost" href="#cita" data-t="cta_book">Pedir cita</a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var fine=matchMedia("(hover: hover) and (pointer: fine)").matches;
+function safe(f,n){try{f()}catch(e){console.warn("["+n+"]",e)}}
+
+var T={
+es:{
+skip:"Saltar al contenido",menu:"Abrir menú",car:"Reseñas de pacientes",prev:"Reseña anterior",next:"Reseña siguiente",
+nav_doc:"Su doctora",nav_serv:"Servicios",nav_rev:"Reseñas",nav_off:"Consultorio",nav_faq:"Preguntas",nav_loc:"Ubicación",
+hero_h1:"La doctora de su familia, <em>desde 1995.</em>",hero_sub:"Odontología general, familiar y cosmética con la Dra. Evelyn O. Caballero, en West Flagler Street.",
+cta_book:"Pedir cita",cta_call:"Llamar ahora",cta_call_short:"Llamar",rate_small:"91 reseñas en Google",rate_small2:"91 reseñas en Google",
+st1:"calificación en Google",st2:"reseñas de pacientes en Google",st3:"año en que se fundó el consultorio",st4b:"Español",st4:"Hablamos español",
+doc_tag:"Fundadora del consultorio",doc_h:"Una doctora de cabecera, con pacientes que la siguen hace años",
+doc_p:"Estudió en University of Miami y se doctoró en University of Illinois College of Dentistry. Después de trabajar cinco años en Chicago, fundó Flagler Dental Clinic of Miami, Inc. en 1995.",
+tl1b:"Bachelor of Science",tl3b:"Cinco años de práctica en Chicago",tl4b:"1995: funda Flagler Dental Clinic of Miami, Inc.",doc_chip_h:"Formación y membresías",chip0:"Fellowship, International Congress of Oral Implantologists",
+serv_h:"Cuidado dental para toda la familia",serv_p:"Desde la primera limpieza hasta implantes y dentaduras.",
+s1h:"Prevención",s1p:"Revisiones y cuidado periódico para mantener su sonrisa sana.",s1a:"Exámenes y limpiezas",s1b:"Selladores",
+s2h:"Odontología infantil",s2p:"Atención dental pensada para los más pequeños de la familia.",
+s3h:"Encías",s3p:"Tratamiento y seguimiento para cuidar la salud de sus encías.",s3a:"Limpieza profunda (scaling and root planing)",s3b:"Mantenimiento periodontal",
+s4h:"Restauración",s4p:"Reparan dientes dañados o faltantes.",s4a:"Empastes",s4b:"Coronas",s4c:"Puentes",
+s5h:"Endodoncia",s5p:"Trata el interior de un diente afectado para poder conservarlo.",s5a:"Endodoncia no quirúrgica (root canal)",
+s6h:"Implantes y cirugía",s6p:"Reemplazo de dientes y extracciones cuando hacen falta.",s6a:"Implantes",s6b:"Extracciones",s6c:"Muelas del juicio",
+s7h:"Dentaduras",s7p:"Opciones para reemplazar varios dientes o todos.",s7a:"Completas",s7b:"Parciales",s7c:"Inmediatas",s7d:"Sobre implantes",
+s8h:"Estética dental",s8p:"Mejoran el color, la forma y el aspecto de sus dientes.",s8b:"Carillas de porcelana",s8c:"Blanqueamiento (Zoom)",
+s9h:"Urgencias",s9p:"Si tiene una urgencia dental, llámenos.",
+promise_src:"Flagler Dental Clinic en Facebook",
+rev_h:"Lo que dicen sus pacientes",rev_p:"Reseñas reales de Google, tal como las escribieron.",rev_note:"Las reseñas se muestran en el idioma en que fueron escritas.",
+off_h:"Conozca el consultorio",off_p:"Así es el consultorio de la Dra. Caballero en West Flagler Street.",cap1:"El equipo",cap2:"Consulta",cap3:"Recepción",cap4:"Sala de tratamiento",
+faq_h:"Preguntas frecuentes",faq_p:"Si no encuentra su respuesta, llámenos.",
+q1:"¿Hablan español?",a1:"Sí, hablamos español.",
+q2:"¿Qué servicios ofrecen?",a2:"Odontología general, infantil y cosmética, endodoncia, implantes, dentaduras y urgencias, entre otros. Vea la lista completa en la sección de servicios.",
+q3:"¿Atienden urgencias?",a3:"Las urgencias figuran entre nuestros servicios. Llámenos al <a href=\"tel:+13055544304\">(305) 554-4304</a> y le indicamos cómo seguir.",
+q4:"¿Aceptan mi seguro dental?",a4:"Llámenos al <a href=\"tel:+13055544304\">(305) 554-4304</a> y le confirmamos.",
+q5:"¿Cuánto cuesta un tratamiento?",a5:"Cada caso es distinto. Llámenos al <a href=\"tel:+13055544304\">(305) 554-4304</a> y le confirmamos.",
+q6:"¿Tienen opciones de pago o financiamiento?",a6:"Llámenos al <a href=\"tel:+13055544304\">(305) 554-4304</a> y le confirmamos.",
+q7:"¿Cómo pido una cita?",a7:"Llame al <a href=\"tel:+13055544304\">(305) 554-4304</a> o use el formulario de esta página: se abre su correo con el mensaje listo para enviar.",
+loc_h:"Visítenos en West Flagler",directions:"Cómo llegar",
+cita_h:"Pida su cita",cita_p:"Déjenos sus datos y le respondemos. También puede llamarnos.",
+f_name:"Nombre",f_tel:"Teléfono",f_day:"Día preferido",f_reason:"Motivo de la consulta",f_err:"Complete este campo.",f_send:"Pedir cita",f_fine:"Al enviar se abre su correo con el mensaje listo. Nada se guarda en esta página.",
+d_any:"Cualquier día",d1:"Lunes",d2:"Martes",d3:"Miércoles",d4:"Jueves",d5:"Viernes",
+r1:"Examen y limpieza",r2:"Odontología infantil",r3:"Encías",r4:"Empaste, corona o puente",r5:"Endodoncia",r6:"Implantes o extracciones",r7:"Dentaduras",r8:"Estética dental",r9:"Urgencia",r10:"Otro",
+ok_h:"Su mensaje está listo",ok_p:"Se abrió su correo con los datos de la cita. Si no se abrió, escríbanos a <a href=\"mailto:flaglerdentalclinic@gmail.com\">flaglerdentalclinic@gmail.com</a> o llame al <a href=\"tel:+13055544304\">(305) 554-4304</a>.",
+foot_about:"Consultorio de la Dra. Evelyn O. Caballero, DDS. Odontología general, familiar y cosmética en Miami.",foot_contact:"Contacto",foot_links:"Enlaces",
+title:"Flagler Dental Clinic | Dentista en Miami",desc:"Flagler Dental Clinic, consultorio de la Dra. Evelyn O. Caballero en West Flagler Street, Miami. Odontología general, familiar y cosmética. Hablamos español."
+},
+en:{
+skip:"Skip to content",menu:"Open menu",car:"Patient reviews",prev:"Previous review",next:"Next review",
+nav_doc:"Your dentist",nav_serv:"Services",nav_rev:"Reviews",nav_off:"Our office",nav_faq:"FAQ",nav_loc:"Location",
+hero_h1:"Your family's dentist, <em>since 1995.</em>",hero_sub:"General, family and cosmetic dentistry with Dr. Evelyn O. Caballero, on West Flagler Street.",
+cta_book:"Book appointment",cta_call:"Call now",cta_call_short:"Call",rate_small:"91 Google reviews",rate_small2:"91 Google reviews",
+st1:"rating on Google",st2:"patient reviews on Google",st3:"year the office was founded",st4b:"Spanish",st4:"We speak Spanish",
+doc_tag:"Founder of the practice",doc_h:"A family dentist whose patients have stayed for years",
+doc_p:"She studied at University of Miami and earned her DDS at University of Illinois College of Dentistry. After working five years in Chicago, she founded Flagler Dental Clinic of Miami, Inc. in 1995.",
+tl1b:"Bachelor of Science",tl3b:"Five years of practice in Chicago",tl4b:"1995: founds Flagler Dental Clinic of Miami, Inc.",doc_chip_h:"Training and memberships",chip0:"Fellowship, International Congress of Oral Implantologists",
+serv_h:"Dental care for the whole family",serv_p:"From your first cleaning to implants and dentures.",
+s1h:"Prevention",s1p:"Regular checkups and care to keep your smile healthy.",s1a:"Exams and cleanings",s1b:"Sealants",
+s2h:"Children's dentistry",s2p:"Dental care designed for the youngest in the family.",
+s3h:"Gum care",s3p:"Treatment and follow-up to look after the health of your gums.",s3a:"Deep cleaning (scaling and root planing)",s3b:"Periodontal maintenance",
+s4h:"Restorations",s4p:"Repair damaged or missing teeth.",s4a:"Fillings",s4b:"Crowns",s4c:"Bridges",
+s5h:"Endodontics",s5p:"Treats the inside of an affected tooth so it can be saved.",s5a:"Non-surgical root canal",
+s6h:"Implants and surgery",s6p:"Tooth replacement and extractions when they are needed.",s6a:"Implants",s6b:"Extractions",s6c:"Wisdom teeth",
+s7h:"Dentures",s7p:"Options to replace several teeth or all of them.",s7a:"Complete",s7b:"Partial",s7c:"Immediate",s7d:"Implant-supported",
+s8h:"Cosmetic dentistry",s8p:"Improve the color, shape and look of your teeth.",s8b:"Porcelain veneers",s8c:"Whitening (Zoom)",
+s9h:"Emergencies",s9p:"If you have a dental emergency, call us.",
+promise_src:"Flagler Dental Clinic on Facebook",
+rev_h:"What patients say",rev_p:"Real Google reviews, exactly as written.",rev_note:"Reviews are shown in the language they were written in (Spanish).",
+off_h:"Meet our office",off_p:"This is Dr. Caballero's office on West Flagler Street.",cap1:"The team",cap2:"Consultation",cap3:"Front desk",cap4:"Treatment room",
+faq_h:"Frequently asked questions",faq_p:"If you don't find your answer, call us.",
+q1:"Do you speak Spanish?",a1:"Yes, we speak Spanish.",
+q2:"What services do you offer?",a2:"General, children's and cosmetic dentistry, root canals, implants, dentures and emergencies, among others. See the full list in the services section.",
+q3:"Do you see dental emergencies?",a3:"Emergencies are among our services. Call us at <a href=\"tel:+13055544304\">(305) 554-4304</a> and we will tell you how to proceed.",
+q4:"Do you accept my dental insurance?",a4:"Call us at <a href=\"tel:+13055544304\">(305) 554-4304</a> and we will confirm.",
+q5:"How much does a treatment cost?",a5:"Every case is different. Call us at <a href=\"tel:+13055544304\">(305) 554-4304</a> and we will confirm.",
+q6:"Do you offer payment or financing options?",a6:"Call us at <a href=\"tel:+13055544304\">(305) 554-4304</a> and we will confirm.",
+q7:"How do I book an appointment?",a7:"Call <a href=\"tel:+13055544304\">(305) 554-4304</a> or use the form on this page: your email opens with the message ready to send.",
+loc_h:"Visit us on West Flagler",directions:"Get directions",
+cita_h:"Book your appointment",cita_p:"Leave your details and we will get back to you. You can also call us.",
+f_name:"Name",f_tel:"Phone",f_day:"Preferred day",f_reason:"Reason for your visit",f_err:"Please fill in this field.",f_send:"Book appointment",f_fine:"When you send, your email opens with the message ready. Nothing is stored on this page.",
+d_any:"Any day",d1:"Monday",d2:"Tuesday",d3:"Wednesday",d4:"Thursday",d5:"Friday",
+r1:"Exam and cleaning",r2:"Children's dentistry",r3:"Gum care",r4:"Filling, crown or bridge",r5:"Root canal",r6:"Implants or extractions",r7:"Dentures",r8:"Cosmetic dentistry",r9:"Emergency",r10:"Other",
+ok_h:"Your message is ready",ok_p:"Your email opened with the appointment details. If it did not, write to <a href=\"mailto:flaglerdentalclinic@gmail.com\">flaglerdentalclinic@gmail.com</a> or call <a href=\"tel:+13055544304\">(305) 554-4304</a>.",
+foot_about:"Practice of Dr. Evelyn O. Caballero, DDS. General, family and cosmetic dentistry in Miami.",foot_contact:"Contact",foot_links:"Links",
+title:"Flagler Dental Clinic | Miami Dentist",desc:"Flagler Dental Clinic, the practice of Dr. Evelyn O. Caballero on West Flagler Street, Miami. General, family and cosmetic dentistry. We speak Spanish."
+}};
+
+var lang="es";
+try{var sv=localStorage.getItem("fdc-lang");if(sv==="en"||sv==="es")lang=sv}catch(e){}
+
+var DAYS={es:["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"],en:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]};
+var H=[null,[570,1080],[570,1080],[570,1080],[600,1080],[570,900],null];
+var ORDER=[1,2,3,4,5,6,0];
+
+function fmtT(m){var h=Math.floor(m/60),mi=m%60,ap=h>=12;var h12=h%12||12;var mm=mi?":"+String(mi).padStart(2,"0"):":00";
+  return lang==="es"?h12+mm+(ap?" p. m.":" a. m."):h12+mm+(ap?" PM":" AM")}
+function miami(){
+  var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+  var o={};p.forEach(function(x){o[x.type]=x.value});
+  var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+  var h=parseInt(o.hour,10)%24;return{d:map[o.weekday],m:h*60+parseInt(o.minute,10)}}
+function renderHours(){
+  var now=miami(),ul=$("#hrs");if(!ul)return;
+  ul.innerHTML=ORDER.map(function(d){var h=H[d];var t=h?(lang==="es"?fmtT(h[0])+" a "+fmtT(h[1]):fmtT(h[0])+" - "+fmtT(h[1])):(lang==="es"?"Cerrado":"Closed");
+    return '<li class="'+(d===now.d?"today":"")+'"><span>'+DAYS[lang][d]+'</span><span>'+t+'</span></li>'}).join("");
+  var st=$("#state"),h=H[now.d],txt,closed=true;
+  if(h&&now.m>=h[0]&&now.m<h[1]){closed=false;txt=lang==="es"?"Abierto ahora · cierra a las "+fmtT(h[1]):"Open now · closes at "+fmtT(h[1])}
+  else{
+    var nd=null,add=0;
+    if(h&&now.m<h[0]){nd=now.d;add=0}
+    else{for(var i=1;i<=7;i++){var d=(now.d+i)%7;if(H[d]){nd=d;add=i;break}}}
+    var when=add===0?(lang==="es"?"hoy":"today"):add===1?(lang==="es"?"mañana":"tomorrow"):(lang==="es"?"el "+DAYS.es[nd].toLowerCase():DAYS.en[nd]);
+    txt=lang==="es"?"Cerrado · abre "+when+" a las "+fmtT(H[nd][0]):"Closed · opens "+when+" at "+fmtT(H[nd][0])}
+  st.textContent=txt;st.classList.toggle("closed",closed)}
+
+function num(v,dec){var s=(dec?Number(v).toFixed(dec):String(Math.round(v)));return s}
+function applyLang(l){
+  lang=l;var t=T[l];document.documentElement.lang=l;
+  $$("[data-t]").forEach(function(e){var k=e.getAttribute("data-t");if(t[k]!=null)e.textContent=t[k]});
+  $$("[data-th]").forEach(function(e){var k=e.getAttribute("data-th");if(t[k]!=null)e.innerHTML=t[k]});
+  $$("[data-aria]").forEach(function(e){var k=e.getAttribute("data-aria");if(t[k])e.setAttribute("aria-label",t[k])});
+  $$("[data-num]").forEach(function(e){e.textContent=num(e.getAttribute("data-num"),1)});
+  $$("[data-count-to]").forEach(function(e){if(e.dataset.done)e.textContent=num(e.getAttribute("data-count-to"),parseInt(e.getAttribute("data-decimals")||"0",10))});
+  $$("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===l?"true":"false")});
+  document.title=t.title;var m=$('meta[name="description"]');if(m)m.setAttribute("content",t.desc);
+  renderHours();
+  try{localStorage.setItem("fdc-lang",l)}catch(e){}}
+
+function initSplash(){var s=$("#splash");if(!s)return;var hide=function(){s.classList.add("hide")};
+  if(reduced){hide();return}
+  if(document.readyState==="complete")setTimeout(hide,700);else window.addEventListener("load",function(){setTimeout(hide,700)});
+  setTimeout(hide,2200)}
+function initNav(){var nav=$("#nav"),links=$("#links"),b=$("#burger");
+  var io=new IntersectionObserver(function(en){nav.classList.toggle("scrolled",!en[0].isIntersecting)},{rootMargin:"-40px 0px 0px 0px"});io.observe($("#top"));
+  b.addEventListener("click",function(){var o=links.classList.toggle("open");b.setAttribute("aria-expanded",o)});
+  links.addEventListener("click",function(e){if(e.target.closest("a")){links.classList.remove("open");b.setAttribute("aria-expanded","false")}})}
+function initReveal(){var els=$$(".rv");
+  if(!("IntersectionObserver" in window)||reduced){els.forEach(function(e){e.classList.add("in")});return}
+  var io=new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");o.unobserve(x.target)}})},{threshold:.04,rootMargin:"0px 0px -6% 0px"});
+  els.forEach(function(e){io.observe(e)})}
+function initCount(){var els=$$("[data-count-to]");
+  function run(el){var to=parseFloat(el.getAttribute("data-count-to")),dec=parseInt(el.getAttribute("data-decimals")||"0",10);
+    if(reduced){el.textContent=num(to,dec);el.dataset.done=1;return}
+    var s=performance.now();(function tick(n){var p=Math.min(1,(n-s)/1300),e=1-Math.pow(1-p,3);el.textContent=num(to*e,dec);if(p<1)requestAnimationFrame(tick);else{el.textContent=num(to,dec);el.dataset.done=1}})(s)}
+  if(!("IntersectionObserver" in window)){els.forEach(run);return}
+  var io=new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){run(x.target);o.unobserve(x.target)}})},{threshold:.6});els.forEach(function(e){io.observe(e)})}
+function initTilt(){if(!fine||reduced)return;
+  $$("[data-tilt]").forEach(function(c){var raf;
+    c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      cancelAnimationFrame(raf);raf=requestAnimationFrame(function(){c.style.transform="rotateX("+(-y*6)+"deg) rotateY("+(x*6)+"deg) translateY(-4px)"})});
+    c.addEventListener("pointerleave",function(){cancelAnimationFrame(raf);c.style.transform=""})})}
+function initMagnetic(){if(!fine||reduced)return;
+  $$("[data-magnetic]").forEach(function(b){
+    b.addEventListener("pointermove",function(e){var r=b.getBoundingClientRect(),x=(e.clientX-r.left-r.width/2)*.18,y=(e.clientY-r.top-r.height/2)*.28;b.style.transform="translate("+x+"px,"+y+"px)"});
+    b.addEventListener("pointerleave",function(){b.style.transform=""})})}
+function initCarousel(){var tr=$("#track"),dots=$("#dots");if(!tr)return;
+  var cards=$$(".rc",tr);
+  cards.forEach(function(_,i){var d=document.createElement("button");d.type="button";d.tabIndex=-1;d.addEventListener("click",function(){go(i)});dots.appendChild(d)});
+  function step(){var c=cards[0];return c.getBoundingClientRect().width+20}
+  function go(i){tr.scrollTo({left:i*step(),behavior:reduced?"auto":"smooth"})}
+  function idx(){return Math.max(0,Math.min(cards.length-1,Math.round(tr.scrollLeft/step())))}
+  var raf;function mark(){cancelAnimationFrame(raf);raf=requestAnimationFrame(function(){var i=idx();$$("button",dots).forEach(function(d,k){d.classList.toggle("on",k===i)})})}
+  tr.addEventListener("scroll",mark,{passive:true});mark();
+  $("#prev").addEventListener("click",function(){go(idx()-1)});$("#next").addEventListener("click",function(){go(idx()+1)});
+  tr.addEventListener("keydown",function(e){if(e.key==="ArrowRight"){go(idx()+1);e.preventDefault()}if(e.key==="ArrowLeft"){go(idx()-1);e.preventDefault()}})}
+function initForm(){var f=$("#form");if(!f)return;
+  f.addEventListener("submit",function(e){e.preventDefault();
+    var n=$("#f-name"),t=$("#f-tel"),bad=false;
+    [[n,"#l-name"],[t,"#l-tel"]].forEach(function(p){var ok=p[0].value.trim().length>1;$(p[1]).classList.toggle("bad",!ok);if(!ok)bad=true});
+    if(bad){(n.value.trim().length>1?t:n).focus();return}
+    var reason=$("#f-reason").selectedOptions[0].textContent,dayEl=$("#f-day"),day=dayEl.selectedOptions[0].textContent;
+    var subj=lang==="es"?"Solicitud de cita":"Appointment request";
+    var body=lang==="es"
+      ?"Hola, quisiera pedir una cita.\n\nNombre: "+n.value.trim()+"\nTeléfono: "+t.value.trim()+"\nMotivo: "+reason+"\nDía preferido: "+day+"\n\nGracias."
+      :"Hello, I would like to book an appointment.\n\nName: "+n.value.trim()+"\nPhone: "+t.value.trim()+"\nReason: "+reason+"\nPreferred day: "+day+"\n\nThank you.";
+    f.classList.add("sent");
+    window.location.href="mailto:flaglerdentalclinic@gmail.com?subject="+encodeURIComponent(subj)+"&body="+encodeURIComponent(body)});
+  $$("input",f).forEach(function(i){i.addEventListener("input",function(){i.closest("label").classList.remove("bad")})})}
+
+$$("[data-lang]").forEach(function(b){b.addEventListener("click",function(){applyLang(b.getAttribute("data-lang"))})});
+safe(function(){applyLang(lang)},"lang");
+safe(initSplash,"splash");safe(initNav,"nav");safe(initReveal,"reveal");safe(initCount,"count");
+safe(initTilt,"tilt");safe(initMagnetic,"magnetic");safe(initCarousel,"carousel");safe(initForm,"form");
+setInterval(function(){safe(renderHours,"hours")},60000);
+})();
+</script>
+</body>
+</html>
