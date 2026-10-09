@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bayview Dental | Dr. Amalia Quiñones, Fort Lauderdale</title>
+<meta name="description" content="Bayview Dental: cosmetic and general dentistry with Dr. Amalia Quiñones in Fort Lauderdale, FL. Care in English and Spanish.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23014B3C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='700' text-anchor='middle' fill='%23D7C19B'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green-900:#01352A;
+  --green-800:#014B3C;
+  --green-600:#0F7D67;
+  --green-100:#E3F1EC;
+  --green-50:#F1F8F5;
+  --sand:#D7C19B;
+  --sand-100:#F3ECDD;
+  --ink:#10231E;
+  --ink-soft:#42564F;
+  --white:#FFFFFF;
+  --r-card:22px;
+  --r-input:12px;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --display:'Bricolage Grotesque','Figtree',system-ui,sans-serif;
+  --body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --shadow:0 18px 40px -18px rgba(1,53,42,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);font-size:17px;line-height:1.6;color:var(--ink);background:var(--white);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:clamp(2rem,4.4vw,3.2rem);font-weight:800}
+h3{font-size:1.25rem;font-weight:700}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+:focus-visible{outline:3px solid var(--sand);outline-offset:3px;border-radius:6px}
+
+/* splash */
+#splash{position:fixed;inset:0;z-index:100;background:var(--green-800);display:grid;place-items:center;transition:opacity .5s var(--ease),visibility .5s}
+#splash img{width:min(300px,70vw);filter:brightness(0) invert(1);opacity:0;animation:splashIn .7s .1s var(--ease) forwards}
+#splash.hide{opacity:0;visibility:hidden}
+@keyframes splashIn{from{opacity:0;transform:translateY(8px) scale(.97)}to{opacity:1;transform:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:52px;padding:0 1.6rem;border-radius:999px;border:2px solid transparent;font:600 1rem/1 var(--body);text-decoration:none;cursor:pointer;white-space:nowrap;transition:transform .22s var(--ease),box-shadow .22s var(--ease),background-color .22s,color .22s,border-color .22s}
+.btn:active{transform:scale(.97)!important}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-primary{background:var(--sand);color:var(--green-900);box-shadow:0 10px 26px -10px rgba(215,193,155,.9)}
+.btn-green{background:var(--green-800);color:#fff;box-shadow:0 10px 26px -12px rgba(1,75,60,.8)}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost-dark{border-color:var(--green-800);color:var(--green-800)}
+@media (hover:hover) and (pointer:fine){
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 30px -10px rgba(215,193,155,1);background:#e4d2b2}
+  .btn-green:hover{transform:translateY(-3px);background:var(--green-600);box-shadow:0 16px 30px -12px rgba(15,125,103,.9)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff;transform:translateY(-3px)}
+  .btn-ghost-dark:hover{background:var(--green-800);color:#fff;transform:translateY(-3px)}
+}
+
+/* header */
+header.nav{position:fixed;top:12px;left:0;right:0;z-index:50;pointer-events:none}
+.nav-in{pointer-events:auto;width:min(1200px,100% - 24px);margin-inline:auto;display:flex;align-items:center;gap:.6rem;padding:8px 10px 8px 20px;border-radius:999px;background:rgba(255,255,255,.88);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border:1px solid rgba(255,255,255,.7);box-shadow:0 10px 34px -14px rgba(1,35,28,.45);transition:box-shadow .3s,background .3s}
+.nav.scrolled .nav-in{background:rgba(255,255,255,.96);box-shadow:0 14px 38px -14px rgba(1,35,28,.55)}
+.logo{display:block;flex:none;line-height:0}
+.logo img{height:60px;width:auto;object-fit:contain}
+.nav-links{display:flex;gap:.2rem;margin-left:auto;list-style:none}
+.nav-links a{display:block;padding:.45rem .55rem;white-space:nowrap;border-radius:999px;font-weight:600;font-size:.9rem;text-decoration:none;color:var(--ink);transition:background-color .2s,color .2s}
+@media (hover:hover){.nav-links a:hover{background:var(--green-100);color:var(--green-800)}}
+.lang{display:inline-flex;padding:3px;border-radius:999px;background:var(--green-100);flex:none}
+.lang button{border:0;background:transparent;font:700 .85rem/1 var(--body);letter-spacing:.04em;min-width:44px;min-height:40px;border-radius:999px;color:var(--green-800);cursor:pointer;transition:background-color .2s,color .2s}
+.lang button[aria-pressed="true"]{background:var(--green-800);color:#fff}
+.nav .btn{min-height:46px;padding:0 1.2rem;font-size:.95rem}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--green-100);cursor:pointer;place-items:center;flex:none}
+.burger span{display:block;width:18px;height:2px;background:var(--green-800);position:relative;transition:background .2s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--green-800);transition:transform .25s var(--ease)}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;min-height:100dvh;display:flex;align-items:center;padding:130px 0 70px;color:#fff;background:linear-gradient(135deg,rgba(1,53,42,.94),rgba(1,75,60,.88) 55%,rgba(15,125,103,.8)),url(images/recepcion.jpg) center/cover;overflow:hidden;isolation:isolate}
+.mesh{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.mesh i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;will-change:transform}
+.mesh i:nth-child(1){width:520px;height:520px;background:var(--green-600);top:-160px;right:0;animation:float1 16s ease-in-out infinite}
+.mesh i:nth-child(2){width:420px;height:420px;background:var(--sand);opacity:.28;bottom:-160px;left:-100px;animation:float2 19s ease-in-out infinite}
+.mesh i:nth-child(3){width:300px;height:300px;background:#1b9c82;opacity:.35;top:40%;right:12%;animation:float1 22s ease-in-out infinite reverse}
+@keyframes float1{50%{transform:translate(-50px,40px) scale(1.1)}}
+@keyframes float2{50%{transform:translate(60px,-40px) scale(1.12)}}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.hero h1{font-size:clamp(2.6rem,6vw,5rem);font-weight:800;margin-bottom:1.2rem}
+.hero h1 em{font-style:normal;color:var(--sand)}
+.hero p.lead{font-size:clamp(1.05rem,1.6vw,1.3rem);max-width:34rem;color:rgba(255,255,255,.88);margin-bottom:2rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem}
+.portrait{position:relative;justify-self:center;width:min(440px,100%)}
+.portrait .arch{position:relative;aspect-ratio:4/5;border-radius:999px 999px 28px 28px;overflow:hidden;box-shadow:0 40px 70px -30px rgba(0,0,0,.65);border:6px solid rgba(255,255,255,.14)}
+.portrait .arch img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.portrait::before{content:"";position:absolute;inset:-16px -16px 16px 16px;border:2px solid var(--sand);border-radius:999px 999px 28px 28px;opacity:.75;z-index:-1;transform:translate(10px,10px)}
+.rating{position:absolute;left:-26px;bottom:34px;display:flex;align-items:center;gap:.8rem;padding:.85rem 1.2rem;border-radius:var(--r-card);background:rgba(255,255,255,.94);color:var(--ink);box-shadow:var(--shadow);animation:bob 5s ease-in-out infinite}
+.rating b{font:800 2rem/1 var(--display);color:var(--green-800)}
+.rating small{display:block;font-size:.8rem;color:var(--ink-soft);line-height:1.25}
+.stars{color:#E2A300;letter-spacing:2px;font-size:.95rem}
+@keyframes bob{50%{transform:translateY(-8px)}}
+
+/* stats */
+.stats{background:var(--sand-100);padding:clamp(2.5rem,5vw,4rem) 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.stat{padding:1.4rem 1rem;text-align:center;border-radius:var(--r-card);background:#fff;box-shadow:0 8px 24px -16px rgba(1,53,42,.5);transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.stat b{display:block;font:800 clamp(2.2rem,4vw,3.2rem)/1 var(--display);color:var(--green-800);margin-bottom:.4rem}
+.stat span{font-size:.98rem;color:var(--ink-soft);display:block;line-height:1.35}
+@media (hover:hover){.stat:hover{transform:translateY(-5px);box-shadow:var(--shadow)}}
+
+/* doctor */
+.doctor{padding:clamp(4rem,9vw,7.5rem) 0;background:#fff}
+.doc-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.doc-photo{position:relative;border-radius:var(--r-card);overflow:hidden;aspect-ratio:3/4;box-shadow:var(--shadow);background:var(--green-100)}
+.doc-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform 1.2s var(--ease)}
+.doc-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(transparent,rgba(1,53,42,.35))}
+@media (hover:hover){.doc-photo:hover img{transform:scale(1.04)}}
+.doc-text .kicker{display:inline-block;font-weight:700;color:var(--green-600);margin-bottom:.8rem;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase}
+.doc-text h2{margin-bottom:1.3rem}
+.doc-text p{color:var(--ink-soft);margin-bottom:1rem;max-width:38rem}
+.creds{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.6rem 0 0;list-style:none}
+.creds li{display:flex;align-items:center;gap:.6rem;padding:.7rem 1.1rem;border-radius:999px;background:var(--green-50);border:1px solid var(--green-100);font-weight:600;font-size:.95rem;color:var(--green-800)}
+.creds svg{width:20px;height:20px;color:var(--green-600);flex:none}
+
+/* services */
+.services{padding:clamp(4rem,9vw,7.5rem) 0;background:linear-gradient(160deg,var(--green-900),var(--green-800) 60%,#0a5f4d);color:#fff;position:relative;overflow:hidden}
+.services::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(215,193,155,.22),transparent 65%);top:-200px;right:-160px}
+.svc-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(1.5rem,5vw,4rem);align-items:start;position:relative}
+.svc-side{position:sticky;top:110px}
+.svc-side h2{margin-bottom:1rem}
+.svc-side p.sub{color:rgba(255,255,255,.8);margin-bottom:1.6rem;max-width:30rem}
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.3rem}
+.tab{min-height:46px;padding:0 1.2rem;border-radius:999px;border:2px solid rgba(255,255,255,.3);background:transparent;color:#fff;font:600 .98rem var(--body);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s,transform .2s var(--ease)}
+.tab:active{transform:scale(.97)}
+.tab[aria-selected="true"]{background:var(--sand);border-color:var(--sand);color:var(--green-900)}
+@media (hover:hover){.tab[aria-selected="false"]:hover{border-color:#fff;background:rgba(255,255,255,.1)}}
+.tab-intro{color:rgba(255,255,255,.88);min-height:4.8em;max-width:30rem}
+.svc-panel{display:none;grid-template-columns:repeat(2,1fr);gap:1rem}
+.svc-panel.active{display:grid;animation:panelIn .35s var(--ease)}
+@keyframes panelIn{from{opacity:0;transform:translateY(10px)}}
+.card{position:relative;display:flex;flex-direction:column;gap:.9rem;padding:1.5rem;border-radius:var(--r-card);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);text-decoration:none;color:#fff;transition:transform .3s var(--ease),background-color .3s,box-shadow .3s,border-color .3s;will-change:transform}
+.card .ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--sand);color:var(--green-900);transition:transform .3s var(--ease)}
+.card .ico svg{width:28px;height:28px}
+.card h3{font-size:1.08rem;line-height:1.25}
+.card .go{margin-top:auto;font-size:.88rem;font-weight:600;color:var(--sand);display:inline-flex;gap:.35rem;align-items:center}
+.card .go svg{width:16px;height:16px;transition:transform .25s var(--ease)}
+@media (hover:hover) and (pointer:fine){
+  .card:hover{background:rgba(255,255,255,.15);border-color:rgba(215,193,155,.7);box-shadow:0 22px 40px -22px rgba(0,0,0,.6)}
+  .card:hover .ico{transform:scale(1.08) rotate(-4deg)}
+  .card:hover .go svg{transform:translateX(4px)}
+}
+
+/* office */
+.office{padding:clamp(4rem,9vw,7.5rem) 0;background:linear-gradient(180deg,var(--green-50),#fff)}
+.office-head{max-width:44rem;margin-bottom:2.6rem}
+.office-head h2{margin-bottom:1rem}
+.office-head p{color:var(--ink-soft)}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(150px,auto);gap:1rem}
+.tile{position:relative;border-radius:var(--r-card);overflow:hidden;background:var(--green-100)}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+@media (hover:hover){.tile:hover img{transform:scale(1.05)}}
+.t-big{grid-column:span 5;grid-row:span 3;min-height:600px}
+.t-rec{grid-column:span 4;grid-row:span 2;min-height:300px}
+.t-rec img{object-position:50% 35%}
+.t-note{grid-column:span 3;grid-row:span 2;background:var(--green-800);color:#fff;padding:1.7rem;display:flex;flex-direction:column;justify-content:center;gap:.8rem}
+.t-note h3{font-size:1.5rem;color:var(--sand)}
+.t-note p{color:rgba(255,255,255,.88);font-size:.98rem}
+.t-bld{grid-column:span 7;grid-row:span 1;min-height:230px}
+.feat{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1rem}
+.feat li{display:flex;gap:.9rem;align-items:flex-start;padding:1.2rem;border-radius:var(--r-card);background:#fff;border:1px solid var(--green-100);transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.feat svg{width:34px;height:34px;color:var(--green-600);flex:none}
+.feat b{display:block;font-family:var(--display);font-size:1.02rem;line-height:1.25;margin-bottom:.2rem}
+.feat span{font-size:.92rem;color:var(--ink-soft);line-height:1.4;display:block}
+@media (hover:hover){.feat li:hover{transform:translateY(-4px);box-shadow:var(--shadow)}}
+
+/* reviews */
+.reviews{padding:clamp(4rem,9vw,7.5rem) 0;background:radial-gradient(900px 500px at 85% 0,rgba(15,125,103,.55),transparent 60%),var(--green-900);color:#fff;overflow:hidden}
+.rev-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1.5rem;margin-bottom:2.2rem}
+.rev-head h2{max-width:36rem}
+.rev-head .score{display:flex;align-items:center;gap:1rem}
+.rev-head .score b{font:800 3.4rem/1 var(--display);color:var(--sand)}
+.rev-head .score small{display:block;color:rgba(255,255,255,.8);font-size:.92rem}
+.carousel{display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem 20px 1.5rem;margin:0 -20px;scrollbar-width:none;cursor:grab}
+.carousel::-webkit-scrollbar{display:none}
+.carousel.drag{cursor:grabbing;scroll-snap-type:none}
+.rev{flex:0 0 min(400px,84%);scroll-snap-align:start;display:flex;flex-direction:column;gap:1rem;padding:1.8rem;border-radius:var(--r-card);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .3s var(--ease),border-color .3s,background-color .3s}
+.rev blockquote{font-size:1.05rem;line-height:1.55;color:rgba(255,255,255,.95)}
+.rev blockquote::before{content:"\201C";display:block;font:800 3.4rem/.6 var(--display);color:var(--sand);margin-bottom:.4rem}
+.rev footer{margin-top:auto;display:flex;align-items:center;gap:.8rem}
+.rev .av{width:42px;height:42px;border-radius:50%;background:var(--sand);color:var(--green-900);display:grid;place-items:center;font:800 1rem var(--display)}
+.rev cite{font-style:normal;font-weight:700;display:block;line-height:1.2}
+.rev footer small{color:rgba(255,255,255,.7);font-size:.82rem}
+@media (hover:hover){.rev:hover{transform:translateY(-6px);border-color:rgba(215,193,155,.7);background:rgba(255,255,255,.12)}}
+.car-ctrl{display:flex;align-items:center;gap:.7rem;margin-top:.4rem;flex-wrap:wrap}
+.car-ctrl button{width:52px;height:52px;border-radius:50%;border:2px solid rgba(255,255,255,.4);background:transparent;color:#fff;cursor:pointer;display:grid;place-items:center;transition:background-color .2s,transform .2s var(--ease),border-color .2s}
+.car-ctrl button:active{transform:scale(.94)}
+.car-ctrl button svg{width:22px;height:22px}
+@media (hover:hover){.car-ctrl button:hover{background:var(--sand);color:var(--green-900);border-color:var(--sand)}}
+.car-ctrl .link{margin-left:auto;color:var(--sand);font-weight:600;text-decoration:none;padding:.7rem 0;border-bottom:2px solid transparent;transition:border-color .2s}
+.car-ctrl .link:hover{border-color:var(--sand)}
+.rev-note{font-size:.88rem;color:rgba(255,255,255,.65);margin-top:1.2rem}
+
+/* spanish band */
+.band{padding:clamp(3.5rem,7vw,5.5rem) 0;background:var(--sand);color:var(--green-900);position:relative;overflow:hidden}
+.band::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;border:60px solid rgba(255,255,255,.22);right:-120px;top:-160px}
+.band-in{display:grid;grid-template-columns:1.3fr auto;gap:2rem;align-items:center;position:relative;z-index:1}
+.band h2{margin-bottom:.8rem}
+.band p{max-width:40rem;font-size:1.1rem}
+
+/* faq */
+.faq{padding:clamp(4rem,9vw,7rem) 0;background:#fff}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+.faq h2{margin-bottom:1rem}
+.faq p.sub{color:var(--ink-soft)}
+.acc{display:grid;gap:.8rem}
+.acc-item{border-radius:var(--r-card);border:1px solid var(--green-100);background:var(--green-50);overflow:hidden;transition:background-color .25s,border-color .25s}
+.acc-item.open{background:#fff;border-color:var(--green-600);box-shadow:var(--shadow)}
+.acc-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:64px;padding:1rem 1.4rem;border:0;background:transparent;text-align:left;font:700 1.05rem/1.3 var(--display);color:var(--ink);cursor:pointer}
+.acc-q .pm{flex:none;width:32px;height:32px;border-radius:50%;background:var(--green-800);color:#fff;display:grid;place-items:center;transition:transform .3s var(--ease)}
+.acc-q .pm svg{width:16px;height:16px}
+.acc-item.open .pm{transform:rotate(45deg)}
+.acc-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s var(--ease)}
+.acc-item.open .acc-a{grid-template-rows:1fr}
+.acc-a div{overflow:hidden}
+.acc-a p{padding:0 1.4rem 1.3rem;color:var(--ink-soft)}
+
+/* contact */
+.contact{padding:clamp(4rem,9vw,7rem) 0;background:linear-gradient(180deg,var(--green-100),var(--green-50))}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:stretch}
+.contact h2{margin-bottom:1.4rem}
+.info{list-style:none;display:grid;gap:1rem;margin-bottom:1.6rem}
+.info li{display:flex;gap:1rem;align-items:flex-start}
+.info svg{width:26px;height:26px;color:var(--green-600);flex:none;margin-top:.1rem}
+.info a{text-decoration:none;font-weight:600;border-bottom:2px solid var(--green-100);transition:border-color .2s}
+.info a:hover{border-color:var(--green-600)}
+.info small{display:block;color:var(--ink-soft);font-size:.9rem}
+.map{border-radius:var(--r-card);overflow:hidden;min-height:260px;border:0;width:100%;height:260px;box-shadow:var(--shadow)}
+.form{position:relative;padding:clamp(1.5rem,3vw,2.2rem);border-radius:var(--r-card);background:#fff;box-shadow:var(--shadow)}
+.form h3{font-size:1.5rem;margin-bottom:1.2rem}
+.field{margin-bottom:1rem}
+.field label{display:block;font-weight:600;font-size:.95rem;margin-bottom:.4rem;color:var(--ink)}
+.field input,.field textarea{width:100%;min-height:50px;padding:.8rem 1rem;border-radius:var(--r-input);border:2px solid #b9cbc4;background:#fff;font:inherit;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field textarea:focus{outline:0;border-color:var(--green-600);box-shadow:0 0 0 4px rgba(15,125,103,.18)}
+.field .err{display:none;color:#A12626;font-size:.88rem;margin-top:.3rem;font-weight:600}
+.field.invalid input{border-color:#A12626}
+.field.invalid .err{display:block}
+.form .btn{width:100%}
+.form small.hint{display:block;margin-top:.8rem;color:var(--ink-soft);font-size:.88rem;text-align:center}
+.success{position:absolute;inset:0;border-radius:var(--r-card);background:#fff;display:grid;place-content:center;justify-items:center;gap:1rem;text-align:center;padding:2rem;opacity:0;visibility:hidden;transition:opacity .35s var(--ease)}
+.success.show{opacity:1;visibility:visible}
+.success svg{width:84px;height:84px}
+.success circle{stroke:var(--green-600);stroke-width:4;fill:none;stroke-dasharray:166;stroke-dashoffset:166}
+.success path{stroke:var(--green-800);stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:48;stroke-dashoffset:48}
+.success.show circle{animation:draw .6s .1s var(--ease) forwards}
+.success.show path{animation:draw .4s .55s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.success button{margin-top:.5rem}
+
+/* footer */
+footer.site{background:var(--green-900);color:rgba(255,255,255,.82);padding:4rem 0 7rem}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2rem}
+.foot-grid img{height:60px;width:auto;filter:brightness(0) invert(1);margin-bottom:1rem}
+.foot-grid h4{font-family:var(--display);color:#fff;margin-bottom:.9rem;font-size:1.05rem}
+.foot-grid ul{list-style:none;display:grid;gap:.5rem}
+.foot-grid a{text-decoration:none;transition:color .2s}
+.foot-grid a:hover{color:var(--sand)}
+.foot-grid p{max-width:22rem;font-size:.95rem}
+.legal{margin-top:2.5rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.16);font-size:.88rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+/* sticky bar */
+.bar{display:none}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:1280px){
+  .nav-links{display:none}
+  .nav-links.open{display:grid;position:absolute;top:calc(100% + 8px);left:0;right:0;gap:.2rem;padding:.8rem;background:#fff;border-radius:var(--r-card);box-shadow:var(--shadow);pointer-events:auto}
+  .burger{display:grid}
+  .nav-in{position:relative;margin-left:auto}
+  .nav .btn.book{margin-left:auto}
+  .nav-links.open{margin-left:0}
+  .t-note{grid-column:span 7}
+  .t-big{grid-column:span 5}
+  .t-rec{grid-column:span 7}
+  .feat{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .hero{padding-top:150px}
+  .hero-grid,.doc-grid,.svc-grid,.faq-grid,.contact-grid,.band-in{grid-template-columns:1fr}
+  .svc-side{position:static}
+  .doc-photo{max-width:420px;aspect-ratio:4/5}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .rating{left:8px}
+  .bento{grid-template-columns:1fr 1fr}
+  .t-big,.t-rec,.t-note,.t-bld{grid-column:span 2;grid-row:auto;min-height:260px}
+  .t-big{min-height:380px}
+  .t-note{min-height:0}
+  .band::after{display:none}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  header.nav{top:8px}
+  .nav-in{flex-wrap:wrap;padding:8px 10px 8px 10px;border-radius:30px;row-gap:6px;justify-content:space-between}
+  .logo{flex:1 0 100%;display:flex;justify-content:center}
+  .logo img{height:50px;max-width:100%;transition:height .3s var(--ease)}
+  .nav.scrolled .logo{flex:0 0 auto}
+  .nav.scrolled .logo img{height:40px}
+  .nav .btn.book{display:none}
+  .nav-links{order:5}
+  .nav .lang{margin-left:0}
+  .burger{margin-left:auto}
+  .nav-in{margin-left:auto}
+  .svc-panel{grid-template-columns:1fr}
+  .feat{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .rating{position:relative;left:auto;bottom:auto;margin:-40px auto 0;width:max-content;max-width:92%}
+  .portrait{width:min(320px,86%)}
+  .portrait::before{inset:-10px -10px 10px 10px}
+  .cta-row .btn{flex:1 1 100%}
+  .hero{padding-top:150px;padding-bottom:50px}
+  .bar{display:grid;grid-template-columns:1fr 1.4fr;gap:.6rem;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:.6rem .8rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 -10px 30px -12px rgba(1,35,28,.45)}
+  .bar .btn{min-height:48px;padding:0 1rem}
+  .car-ctrl .link{margin-left:0;flex:1 0 100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .mesh i,.rating{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+  .svc-panel.active{animation:none}
+  #splash img{animation:none;opacity:1}
+  .btn,.card,.rev,.stat,.tile img,.doc-photo img{transition-duration:.01s}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-tooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7.2 3C4.6 3 3 5 3 7.6c0 2 .8 3.4 1.3 5.2.5 2 .7 5.200 2 7.200.6.900 1.700.900 2.100-.200.5-1.600.6-4 2.600-4s2.100 2.400 2.600 4c.4 1.100 1.500 1.100 2.100.2 1.300-2 1.500-5.200 2-7.200.5-1.800 1.300-3.200 1.300-5.200C21 5 19.400 3 16.800 3c-1.800 0-2.800 1-4.800 1S9 3 7.200 3z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.500-2.800 8-7 10-4.200-2-7-5.500-7-10V6l7-3z"/><path d="M9 12l2.200 2.200L15.500 10"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.500"/><path d="M16 16l4.500 4.500"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.500 4.200 6 7.200 6 10.500a6 6 0 0 1-12 0C6 10.200 8.500 7.200 12 3z"/></symbol>
+    <symbol id="i-root" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v6c0 3-1.200 4.500-2 7l-1 5h-2l-1-6-1 6H9l-1-5c-.800-2.500-2-4-2-7V3z"/><path d="M12 9v5"/></symbol>
+    <symbol id="i-extract" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V8"/><path d="M7 12l5-5 5 5"/><path d="M5 21h14"/></symbol>
+    <symbol id="i-denture" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c0-2 4-4 9-4s9 2 9 4v2c0 2-4 4-9 4s-9-2-9-4V9z"/><path d="M8 7.500v7M12 8v7M16 7.500v7"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800L12 3z"/><path d="M19 17v4M17 19h4"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8l4 4 4-7 4 7 4-4-1.500 11h-13L4 8z"/></symbol>
+    <symbol id="i-implant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10v5a5 5 0 0 1-10 0V3z"/><path d="M9 13h6M9.500 16h5M10.500 19h3M12 21v0"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.600 5.600L7 7M17 17l1.400 1.400M5.600 18.400L7 17M17 7l1.400-1.400"/></symbol>
+    <symbol id="i-align" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10c0-3 4-5 9-5s9 2 9 5"/><path d="M3 10v2c0 2 4 3 9 3s9-1 9-3v-2"/><path d="M7 11v3M12 11.500v3M17 11v3"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.500A8 8 0 0 1 9.500 4 8 8 0 1 0 20 14.500z"/></symbol>
+    <symbol id="i-wisdom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14v6c0 2-1 3.500-1.500 6l-.8 4h-2.200l-1-5h-3l-1 5H7.300l-.8-4C6 13.500 5 12 5 10V4z"/><path d="M9 8h6"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.500 13.500H11L10 22l8.500-11.500H12L13 2z"/></symbol>
+    <symbol id="i-syringe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3l3 3M16 5l3 3M14.500 6.500l3 3L9 18l-4 1 1-4 8.500-8.500z"/><path d="M3 21l3-3M11 12l1.500 1.500"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.500" y="5" width="17" height="15.500" rx="3"/><path d="M8 3v4M16 3v4M3.500 10h17M9 15l2 2 4-4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.200 7-11.500A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7.500l8 6 8-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-grad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11.500V16c0 1.500 2.700 3 6 3s6-1.500 6-3v-4.500"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.500-4.500-7.500-10A4.500 4.500 0 0 1 12 7.500 4.500 4.500 0 0 1 19.500 10c0 5.500-7.500 10-7.500 10z"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16V8a2 2 0 0 1 2-2h5a4 4 0 0 1 0 8H8"/><path d="M8 11v8"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  </defs>
+</svg>
+
+<div id="splash" aria-hidden="true"><img src="images/logo.png" alt=""></div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top" aria-label="Bayview Dental"><img src="images/logo.png" alt="Bayview Dental" width="350" height="50"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services" data-t="nav_services">Services</a></li>
+      <li><a href="#doctor" data-t="nav_doctor">Dr. Q</a></li>
+      <li><a href="#office" data-t="nav_office">Office</a></li>
+      <li><a href="#reviews" data-t="nav_reviews">Reviews</a></li>
+      <li><a href="#contact" data-t="nav_contact">Contact</a></li>
+    </ul>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+    <a class="btn btn-green book" data-magnetic href="https://book.modento.io/c/8104c8ce1a604955bd638c847e0337ea/Schedule" target="_blank" rel="noopener"><svg><use href="#i-cal"/></svg><span data-t="book">Book online</span></a>
+    <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="mesh" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 class="reveal"><span data-t="h1a">Beautiful smile.</span> <em data-t="h1b">Peace of mind.</em></h1>
+      <p class="lead reveal" style="--d:.1s" data-t="hero_sub">Cosmetic and general dentistry with Dr. Amalia Quiñones, in a newly renovated office on US 1.</p>
+      <div class="cta-row reveal" style="--d:.2s">
+        <a class="btn btn-primary" data-magnetic href="https://book.modento.io/c/8104c8ce1a604955bd638c847e0337ea/Schedule" target="_blank" rel="noopener"><svg><use href="#i-cal"/></svg><span data-t="book">Book online</span></a>
+        <a class="btn btn-ghost" data-magnetic href="tel:+19548704900"><svg><use href="#i-phone"/></svg>(954) 870-4900</a>
+      </div>
+    </div>
+    <div class="portrait reveal" style="--d:.15s">
+      <div class="arch"><img src="images/dra-retrato.jpg" alt="Dr. Amalia Quiñones" width="1400" height="1454" fetchpriority="high"></div>
+      <div class="rating" aria-label="Google rating 5.0, 318 reviews">
+        <b>5.0</b>
+        <div><span class="stars" aria-hidden="true">★★★★★</span><small data-t="rating_small">318 Google reviews</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" aria-label="Bayview Dental">
+  <div class="wrap stats-grid">
+    <div class="stat reveal"><b data-count-to="5" data-decimals="1">5.0</b><span data-t="st1">Rating on Google</span></div>
+    <div class="stat reveal" style="--d:.07s"><b data-count-to="318">318</b><span data-t="st2">Google reviews</span></div>
+    <div class="stat reveal" style="--d:.14s"><b data-count-to="15">15</b><span data-t="st3">services under one roof</span></div>
+    <div class="stat reveal" style="--d:.21s"><b>EN | ES</b><span data-t="st4">Care in English and Spanish</span></div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section class="doctor" id="doctor">
+  <div class="wrap doc-grid">
+    <div class="doc-photo reveal"><img src="images/dra-cuerpo.jpg" alt="Dr. Amalia Quiñones" width="961" height="1440" loading="lazy"></div>
+    <div class="doc-text">
+      <span class="kicker reveal" data-t="doc_kicker">Meet your dentist</span>
+      <h2 class="reveal" style="--d:.05s" data-t="doc_h">Dr. Amalia Quiñones</h2>
+      <p class="reveal" style="--d:.1s" data-t="doc_p1">Dr. Amalia Quiñones practices cosmetic and general dentistry at Bayview Dental in Fort Lauderdale. She was born in Cuba and has lived most of her life in South Florida. After working in the DC area for a few years, she moved back to be close to her family.</p>
+      <p class="reveal" style="--d:.15s" data-t="doc_p2">Her patients can always voice their concerns and trust they are treated with gentle care. Dr. Q, as many patients call her, is known for her compassion and integrity, and treats her patients with respect, honesty and, most notably, as family.</p>
+      <ul class="creds reveal" style="--d:.2s">
+        <li><svg><use href="#i-grad"/></svg><span data-t="cred1">Doctorate in Dental Surgery, Howard University</span></li>
+        <li><svg><use href="#i-heart"/></svg><span data-t="cred2">Born in Cuba, rooted in South Florida</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap svc-grid">
+    <div class="svc-side">
+      <h2 class="reveal" data-t="svc_h">Everything under one roof.</h2>
+      <p class="sub reveal" style="--d:.05s" data-t="svc_sub">Choose a category to see what we offer.</p>
+      <div class="tabs reveal" style="--d:.1s" role="tablist" aria-label="Services">
+        <button class="tab" role="tab" id="tab-0" aria-selected="true" aria-controls="panel-0" data-t="tab0">General</button>
+        <button class="tab" role="tab" id="tab-1" aria-selected="false" aria-controls="panel-1" tabindex="-1" data-t="tab1">Cosmetic</button>
+        <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel-2" tabindex="-1" data-t="tab2">More care</button>
+      </div>
+      <p class="tab-intro" id="tabIntro" aria-live="polite"></p>
+    </div>
+    <div class="svc-panels">
+      <div class="svc-panel active" id="panel-0" role="tabpanel" aria-labelledby="tab-0">
+        <a class="card" data-tilt href="https://mybayviewdentist.com/services/comprehensive-dental-care" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-tooth"/></svg></span><h3 data-t="s1">Comprehensive Dental Care</h3><span class="go"><span data-t="more">Learn more</span><svg><use href="#i-arrow"/></svg></span></a>
+        <a class="card" data-tilt href="https://mybayviewdentist.com/services/oral-cancer-screening" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-search"/></svg></span><h3 data-t="s2">Oral Cancer Screening</h3><span class="go"><span data-t="more">Learn more</span><svg><use href="#i-arrow"/></svg></span></a>
+        <a class="card" data-tilt href="https://mybayviewdentist.com/services/fillings" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-drop"/></svg></span><h3 data-t="s3">Fillings</h3><span class="go"><span data-t="more">Learn more</span><svg><use href="#i-arrow"/></svg></span></a>
+        <a class="card" data-tilt href="https://mybayviewdentist.com/services/root-canal-therapy" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-root"/></svg></span><h3 data-t="s4">Root Canal Therapy</h3><span class="go"><span data-t="more">Learn more</span><svg><use href="#i-arrow"/></svg></span></a>
+        <a class="card" data-tilt href="https://mybayviewdentist.com/services/tooth-extraction-and-bone-graft" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-extract"/></svg></span><h3 data-t="s5">Tooth Extraction &amp; Bone Graft</h3><span class="go"><span data-t="more">Learn more</span><svg><use href="#i-arrow"/></svg></span></a>
+        <a class="card" data-tilt href="https://mybayviewdentist.com/services/dentures" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-denture"/></svg></span><h3 data-t="s6">Dentures</h3><span class="go"><span data-t="more">Learn more</span><svg><use href="#i-arrow"/></svg></span></a>
+      </div>
+      <div class="svc-panel" id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+        <a class="card" data-tilt href="https://mybayviewdentist.com/services/veneers" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-sparkle"/></svg></span><h3 data-t="s7">Veneers</h3><span class="go"><span data-t="more">Learn more</span><svg><use href="#i-arrow"/></svg></span></a>
+        <a class="card" data-tilt href="https://mybayviewdentist.com/services/crowns-and-bridges" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-crown"/></svg></span><h3 data-t="s8">Crowns &amp; Bridges</h3><span class="go"><span data-t="more">Learn more</span><svg><use href="#i-arrow"/></svg></span></a>
+        <a class="card" data-tilt href="https://mybayviewdentist.com/services/dental-implants" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-implant"/></svg></span><h3 data-t="s9">Dental Implants</h3><span class="go"><span data-t="more">Learn more</span><svg><use href="#i-arrow"/></svg></span></a>
+        <a class="card" data-tilt href="https://mybayviewdentist.com/services/teeth-whitening" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-sun"/></svg></span><h3 data-t="s10">Teeth Whitening</h3><span class="go"><span data-t="more">Learn more</span><svg><use href="#i-arrow"/></svg></span></a>
+      </div>
+      <div class="svc-panel" id="panel-2" role="tabpanel" aria-labelledby="tab-2">
+        <a class="card" data-tilt href="https://mybayviewdentist.com/services/orthodontic-clear-aligners" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-align"/></svg></span><h3 data-t="s11">Orthodontic Clear Aligners</h3><span class="go"><span data-t="more">Learn more</span><svg><use href="#i-arrow"/></svg></span></a>
+        <a class="card" data-tilt href="https://mybayviewdentist.com/services/sedation-dentistry" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-moon"/></svg></span><h3 data-t="s12">Sedation Dentistry</h3><span class="go"><span data-t="more">Learn more</span><svg><use href="#i-arrow"/></svg></span></a>
+        <a class="card" data-tilt href="https://mybayviewdentist.com/services/wisdom-teeth-extraction" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-wisdom"/></svg></span><h3 data-t="s13">Wisdom Teeth Extraction</h3><span class="go"><span data-t="more">Learn more</span><svg><use href="#i-arrow"/></svg></span></a>
+        <a class="card" data-tilt href="https://mybayviewdentist.com/services/dental-emergencies" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-bolt"/></svg></span><h3 data-t="s14">Same Day Dental Emergency Services</h3><span class="go"><span data-t="more">Learn more</span><svg><use href="#i-arrow"/></svg></span></a>
+        <a class="card" data-tilt href="tel:+19548704900"><span class="ico"><svg><use href="#i-syringe"/></svg></span><h3 data-t="s15">Botox &amp; Fillers</h3><span class="go"><span data-t="ask">Call to ask</span><svg><use href="#i-arrow"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFICE -->
+<section class="office" id="office">
+  <div class="wrap">
+    <div class="office-head">
+      <h2 class="reveal" data-t="off_h">A newly renovated office, made to put you at ease.</h2>
+      <p class="reveal" style="--d:.05s" data-t="off_p">Our friendly staff welcomes you into a relaxing, laid-back environment where you can feel at home.</p>
+    </div>
+    <div class="bento">
+      <figure class="tile t-big reveal"><img src="images/recepcion.jpg" alt="Bayview Dental reception" loading="lazy"></figure>
+      <figure class="tile t-rec reveal" style="--d:.08s"><img src="images/dra-recepcion.jpg" alt="Dr. Quiñones in the reception area" loading="lazy"></figure>
+      <div class="tile t-note reveal" style="--d:.16s"><h3 data-t="note_h">Afraid of the dentist?</h3><p data-t="note_p">We understand, and we do our best to accommodate your concerns.</p></div>
+      <figure class="tile t-bld reveal" style="--d:.1s"><img src="images/edificio.jpg" alt="Building at 6451 N Federal Hwy, Fort Lauderdale" loading="lazy" style="object-position:50% 40%"></figure>
+    </div>
+    <ul class="feat">
+      <li class="reveal"><svg><use href="#i-pin"/></svg><div><b data-t="f1h">On US 1</b><span data-t="f1p">Conveniently located, with ample parking space.</span></div></li>
+      <li class="reveal" style="--d:.06s"><svg><use href="#i-chip"/></svg><div><b data-t="f2h">Modern technology</b><span data-t="f2p">Cutting-edge, state-of-the-art equipment.</span></div></li>
+      <li class="reveal" style="--d:.12s"><svg><use href="#i-clock"/></svg><div><b data-t="f3h">Flexible hours</b><span data-t="f3p">After-hours appointments available. Call to confirm.</span></div></li>
+      <li class="reveal" style="--d:.18s"><svg><use href="#i-bolt"/></svg><div><b data-t="f4h">Same day emergencies</b><span data-t="f4p">We offer same day dental emergency visits.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="rev-head">
+      <h2 class="reveal" data-t="rev_h">What our patients say.</h2>
+      <div class="score reveal" style="--d:.08s"><b>5.0</b><div><span class="stars" aria-hidden="true">★★★★★</span><small data-t="rev_score">318 reviews on Google</small></div></div>
+    </div>
+    <div class="carousel" id="carousel" tabindex="0" aria-label="Reviews">
+      <article class="rev"><blockquote>Dr. Quiñones and her staff are amazing! They are kind, welcoming, and compassionate. Dr. Quiñones has changed my smile and I wish I would have went to her sooner. Can’t recommend this dentist and staff enough</blockquote><footer><span class="av">D</span><div><cite>Drew K.</cite><small>Google ★★★★★</small></div></footer></article>
+      <article class="rev"><blockquote>They were great!! Everyone is so kind and helpful. So informative! I've been looking for an awesome dentist and I'm glad I can stop my search. This is the place to come!!</blockquote><footer><span class="av">S</span><div><cite>Seanna K.</cite><small>Google ★★★★★</small></div></footer></article>
+      <article class="rev"><blockquote>I was very happy and satisfied with the work I had done on my teeth. I already scheduled my next appointment. Everyone is so nice and they make you feel so comfortable.</blockquote><footer><span class="av">J</span><div><cite>Josie T.</cite><small>Google ★★★★★</small></div></footer></article>
+      <article class="rev"><blockquote>I love this office, the staff is always amazing, kind, welcoming, and fast. They made me love coming to dental visits.</blockquote><footer><span class="av">L</span><div><cite>Leesley B.</cite><small>Google ★★★★★</small></div></footer></article>
+      <article class="rev"><blockquote>Dr. Amalia Quinones is truly exceptional. She is not only incredibly professional and knowledgeable but also very personable. She took the time to explain everything clearly, listened to my concerns, and made sure I felt comfortable throughout the entire visit.</blockquote><footer><span class="av">E</span><div><cite>Emily B.</cite><small data-t="rev_src">Patient testimonial</small></div></footer></article>
+    </div>
+    <div class="car-ctrl">
+      <button type="button" id="prev" aria-label="Previous"><svg><use href="#i-left"/></svg></button>
+      <button type="button" id="next" aria-label="Next"><svg><use href="#i-arrow"/></svg></button>
+      <a class="link" href="https://www.google.com/maps/search/?api=1&query=Bayview+Dental+6451+N+Federal+Hwy+Fort+Lauderdale+FL" target="_blank" rel="noopener" data-t="rev_link">Read our Google reviews</a>
+    </div>
+    <p class="rev-note" data-t="rev_note" hidden>Reviews shown in their original language (English).</p>
+  </div>
+</section>
+
+<!-- SPANISH BAND -->
+<section class="band">
+  <div class="wrap band-in">
+    <div>
+      <h2 class="reveal" data-t="band_h">We speak Spanish.</h2>
+      <p class="reveal" style="--d:.06s" data-t="band_p">Dr. Quiñones was born in Cuba and has lived most of her life in South Florida. You can be seen in English or Spanish.</p>
+    </div>
+    <a class="btn btn-green reveal" style="--d:.12s" data-magnetic href="tel:+19548704900"><svg><use href="#i-phone"/></svg>(954) 870-4900</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap faq-grid">
+    <div>
+      <h2 class="reveal" data-t="faq_h">Good to know before you visit.</h2>
+      <p class="sub reveal" style="--d:.05s" data-t="faq_sub">Something else on your mind? Give us a call.</p>
+    </div>
+    <div class="acc">
+      <div class="acc-item reveal"><button class="acc-q" type="button" aria-expanded="false"><span data-t="q1">How do I book an appointment?</span><span class="pm"><svg><use href="#i-plus"/></svg></span></button><div class="acc-a"><div><p data-t="a1">You can book online in a few clicks or call us at (954) 870-4900. You can also text that number.</p></div></div></div>
+      <div class="acc-item reveal" style="--d:.05s"><button class="acc-q" type="button" aria-expanded="false"><span data-t="q2">Do you see dental emergencies?</span><span class="pm"><svg><use href="#i-plus"/></svg></span></button><div class="acc-a"><div><p data-t="a2">Yes, we offer same day dental emergency services. Call us as soon as you can.</p></div></div></div>
+      <div class="acc-item reveal" style="--d:.1s"><button class="acc-q" type="button" aria-expanded="false"><span data-t="q3">Do you accept my insurance?</span><span class="pm"><svg><use href="#i-plus"/></svg></span></button><div class="acc-a"><div><p data-t="a3">Call us and we will confirm it for you.</p></div></div></div>
+      <div class="acc-item reveal" style="--d:.15s"><button class="acc-q" type="button" aria-expanded="false"><span data-t="q4">Do you offer payment plans?</span><span class="pm"><svg><use href="#i-plus"/></svg></span></button><div class="acc-a"><div><p data-t="a4">Call us and we will confirm it for you.</p></div></div></div>
+      <div class="acc-item reveal" style="--d:.2s"><button class="acc-q" type="button" aria-expanded="false"><span data-t="q5">Where are you and where do I park?</span><span class="pm"><svg><use href="#i-plus"/></svg></span></button><div class="acc-a"><div><p data-t="a5">We are at 6451 N Federal Hwy, Suite 129, Fort Lauderdale, on US 1, with ample parking space.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 class="reveal" data-t="ct_h">We would love to hear from you.</h2>
+      <ul class="info reveal" style="--d:.05s">
+        <li><svg><use href="#i-phone"/></svg><div><a href="tel:+19548704900">(954) 870-4900</a> <small data-t="ct_call">Call or text</small><a href="tel:+19548704930" style="margin-top:.3rem;display:inline-block">(954) 870-4930</a></div></li>
+        <li><svg><use href="#i-mail"/></svg><div><a href="mailto:info@mybayviewdentist.com">info@mybayviewdentist.com</a></div></li>
+        <li><svg><use href="#i-pin"/></svg><div><a href="https://www.google.com/maps/search/?api=1&query=6451+N+Federal+Hwy+Suite+129+Fort+Lauderdale+FL+33308" target="_blank" rel="noopener">6451 N Federal Hwy, Suite 129<br>Fort Lauderdale, FL 33308</a><small data-t="ct_dir">Get directions</small></div></li>
+      </ul>
+      <iframe class="map reveal" style="--d:.1s" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=6451%20N%20Federal%20Hwy%20Suite%20129%20Fort%20Lauderdale%20FL%2033308&output=embed"></iframe>
+    </div>
+    <form class="form reveal" id="apptForm" style="--d:.1s" novalidate>
+      <h3 data-t="fm_h">Send us a message</h3>
+      <div class="field"><label for="f-name" data-t="fm_name">Your name</label><input id="f-name" name="name" autocomplete="name" required><span class="err" data-t="fm_err">Please complete this field.</span></div>
+      <div class="field"><label for="f-phone" data-t="fm_phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required><span class="err" data-t="fm_err">Please complete this field.</span></div>
+      <div class="field"><label for="f-msg" data-t="fm_msg">How can we help?</label><textarea id="f-msg" name="msg" required></textarea><span class="err" data-t="fm_err">Please complete this field.</span></div>
+      <button class="btn btn-green" type="submit" data-magnetic><svg><use href="#i-mail"/></svg><span data-t="fm_send">Send message</span></button>
+      <small class="hint" data-t="fm_hint">This opens your email app with the message ready to send.</small>
+      <div class="success" id="formOk" role="status">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25"/><path d="M14 27l8 8 16-17"/></svg>
+        <h3 data-t="ok_h">Almost done</h3>
+        <p data-t="ok_p">Your email app should be open. Send the message and we will get back to you.</p>
+        <button class="btn btn-ghost-dark" type="button" id="formReset" data-t="ok_back">Back</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="images/logo.png" alt="Bayview Dental" width="350" height="50">
+        <p data-t="ft_p">Beautiful smile. Peace of mind.</p>
+      </div>
+      <div>
+        <h4 data-t="ft_nav">Explore</h4>
+        <ul>
+          <li><a href="#services" data-t="nav_services">Services</a></li>
+          <li><a href="#doctor" data-t="nav_doctor">Dr. Q</a></li>
+          <li><a href="#office" data-t="nav_office">Office</a></li>
+          <li><a href="#reviews" data-t="nav_reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-t="ft_contact">Contact</h4>
+        <ul>
+          <li><a href="tel:+19548704900">(954) 870-4900</a></li>
+          <li><a href="tel:+19548704930">(954) 870-4930</a></li>
+          <li><a href="mailto:info@mybayviewdentist.com">info@mybayviewdentist.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-t="ft_visit">Visit</h4>
+        <ul>
+          <li>6451 N Federal Hwy, Suite 129</li>
+          <li>Fort Lauderdale, FL 33308</li>
+          <li><a href="https://book.modento.io/c/8104c8ce1a604955bd638c847e0337ea/Schedule" target="_blank" rel="noopener" data-t="book">Book online</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© Bayview Dental: Dr. Amalia Quiñones, DDS</span>
+      <span><a href="https://mybayviewdentist.com/privacy-policy" target="_blank" rel="noopener" data-t="ft_priv">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://mybayviewdentist.com/terms-and-conditions" target="_blank" rel="noopener" data-t="ft_terms">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-ghost-dark" href="tel:+19548704900"><svg><use href="#i-phone"/></svg><span data-t="call">Call</span></a>
+  <a class="btn btn-green" href="https://book.modento.io/c/8104c8ce1a604955bd638c847e0337ea/Schedule" target="_blank" rel="noopener"><svg><use href="#i-cal"/></svg><span data-t="book">Book online</span></a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var $=function(s,c){return (c||document).querySelector(s)};
+  var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+  var reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var fine=matchMedia("(hover: hover) and (pointer: fine)").matches;
+  function safe(f,n){try{f()}catch(e){console.warn("["+n+"]",e)}}
+
+  var T={
+    en:{
+      nav_services:"Services",nav_doctor:"Dr. Q",nav_office:"Office",nav_reviews:"Reviews",nav_faq:"FAQ",nav_contact:"Contact",
+      book:"Book online",call:"Call",
+      h1a:"Beautiful smile.",h1b:"Peace of mind.",
+      hero_sub:"Cosmetic and general dentistry with Dr. Amalia Quiñones, in a newly renovated office on US 1.",
+      rating_small:"318 Google reviews",
+      st1:"Rating on Google",st2:"Google reviews",st3:"services under one roof",st4:"Care in English and Spanish",
+      doc_kicker:"Meet your dentist",doc_h:"Dr. Amalia Quiñones",
+      doc_p1:"Dr. Amalia Quiñones practices cosmetic and general dentistry at Bayview Dental in Fort Lauderdale. She was born in Cuba and has lived most of her life in South Florida. After working in the DC area for a few years, she moved back to be close to her family.",
+      doc_p2:"Her patients can always voice their concerns and trust they are treated with gentle care. Dr. Q, as many patients call her, is known for her compassion and integrity, and treats her patients with respect, honesty and, most notably, as family.",
+      cred1:"Doctorate in Dental Surgery, Howard University",cred2:"Born in Cuba, rooted in South Florida",
+      svc_h:"Everything under one roof.",svc_sub:"Choose a category to see what we offer.",
+      tab0:"General",tab1:"Cosmetic",tab2:"More care",
+      intro0:"Look and feel more confident in your smile. We offer professional general dentistry solutions to suit your needs.",
+      intro1:"From teeth whitening to veneers, we help you achieve a more balanced, symmetrical and aesthetically pleasing smile.",
+      intro2:"We can help you with most of your dental needs, including same day emergency visits.",
+      more:"Learn more",ask:"Call to ask",
+      s1:"Comprehensive Dental Care",s2:"Oral Cancer Screening",s3:"Fillings",s4:"Root Canal Therapy",s5:"Tooth Extraction & Bone Graft",s6:"Dentures",
+      s7:"Veneers",s8:"Crowns & Bridges",s9:"Dental Implants",s10:"Teeth Whitening",
+      s11:"Orthodontic Clear Aligners",s12:"Sedation Dentistry",s13:"Wisdom Teeth Extraction",s14:"Same Day Dental Emergency Services",s15:"Botox & Fillers",
+      off_h:"A newly renovated office, made to put you at ease.",off_p:"Our friendly staff welcomes you into a relaxing, laid-back environment where you can feel at home.",
+      note_h:"Afraid of the dentist?",note_p:"We understand, and we do our best to accommodate your concerns.",
+      f1h:"On US 1",f1p:"Conveniently located, with ample parking space.",
+      f2h:"Modern technology",f2p:"Cutting-edge, state-of-the-art equipment.",
+      f3h:"Flexible hours",f3p:"After-hours appointments available. Call to confirm.",
+      f4h:"Same day emergencies",f4p:"We offer same day dental emergency visits.",
+      rev_h:"What our patients say.",rev_score:"318 reviews on Google",rev_src:"Patient testimonial",rev_link:"Read our Google reviews",
+      rev_note:"Reviews are shown in their original language (English).",
+      band_h:"We speak Spanish.",band_p:"Dr. Quiñones was born in Cuba and has lived most of her life in South Florida. You can be seen in English or Spanish.",
+      faq_h:"Good to know before you visit.",faq_sub:"Something else on your mind? Give us a call.",
+      q1:"How do I book an appointment?",a1:"You can book online in a few clicks or call us at (954) 870-4900. You can also text that number.",
+      q2:"Do you see dental emergencies?",a2:"Yes, we offer same day dental emergency services. Call us as soon as you can.",
+      q3:"Do you accept my insurance?",a3:"Call us and we will confirm it for you.",
+      q4:"Do you offer payment plans?",a4:"Call us and we will confirm it for you.",
+      q5:"Where are you and where do I park?",a5:"We are at 6451 N Federal Hwy, Suite 129, Fort Lauderdale, on US 1, with ample parking space.",
+      ct_h:"We would love to hear from you.",ct_call:"Call or text",ct_dir:"Get directions",
+      fm_h:"Send us a message",fm_name:"Your name",fm_phone:"Phone",fm_msg:"How can we help?",fm_err:"Please complete this field.",fm_send:"Send message",fm_hint:"This opens your email app with the message ready to send.",
+      ok_h:"Almost done",ok_p:"Your email app should be open. Send the message and we will get back to you.",ok_back:"Back",
+      ft_p:"Beautiful smile. Peace of mind.",ft_nav:"Explore",ft_contact:"Contact",ft_visit:"Visit",ft_priv:"Privacy Policy",ft_terms:"Terms & Conditions",
+      title:"Bayview Dental | Dr. Amalia Quiñones, Fort Lauderdale",
+      desc:"Bayview Dental: cosmetic and general dentistry with Dr. Amalia Quiñones in Fort Lauderdale, FL. Care in English and Spanish.",
+      mailsub:"Appointment request",mailname:"Name",mailphone:"Phone",mailmsg:"Message"
+    },
+    es:{
+      nav_services:"Servicios",nav_doctor:"La Dra. Q",nav_office:"Consultorio",nav_reviews:"Reseñas",nav_faq:"Preguntas",nav_contact:"Contacto",
+      book:"Reservar en línea",call:"Llamar",
+      h1a:"Sonrisa hermosa.",h1b:"Tranquilidad total.",
+      hero_sub:"Odontología general y cosmética con la Dra. Amalia Quiñones, en un consultorio recién renovado sobre la US 1.",
+      rating_small:"318 reseñas en Google",
+      st1:"Calificación en Google",st2:"reseñas en Google",st3:"servicios bajo un mismo techo",st4:"Atención en inglés y español",
+      doc_kicker:"Conozca a su dentista",doc_h:"Dra. Amalia Quiñones",
+      doc_p1:"La Dra. Amalia Quiñones ejerce la odontología cosmética y general en Bayview Dental, en Fort Lauderdale. Nació en Cuba y ha vivido casi toda su vida en el sur de Florida. Tras trabajar unos años en el área de Washington DC, regresó para estar cerca de su familia.",
+      doc_p2:"Sus pacientes siempre pueden expresar sus inquietudes y confiar en que los tratará con delicadeza. La Dra. Q, como la llaman muchos pacientes, es conocida por su compasión e integridad, y trata a sus pacientes con respeto, honestidad y, sobre todo, como a familia.",
+      cred1:"Doctorado en Cirugía Dental, Howard University",cred2:"Nacida en Cuba, con raíces en el sur de Florida",
+      svc_h:"Todo bajo un mismo techo.",svc_sub:"Elija una categoría para ver lo que ofrecemos.",
+      tab0:"General",tab1:"Estética",tab2:"Más cuidados",
+      intro0:"Luzca y siéntase más seguro con su sonrisa. Ofrecemos soluciones profesionales de odontología general a su medida.",
+      intro1:"Desde el blanqueamiento hasta las carillas, le ayudamos a lograr una sonrisa más equilibrada, simétrica y armoniosa.",
+      intro2:"Podemos ayudarle con la mayoría de sus necesidades dentales, incluidas las emergencias el mismo día.",
+      more:"Ver más",ask:"Llame para preguntar",
+      s1:"Cuidado dental integral",s2:"Detección de cáncer oral",s3:"Empastes",s4:"Tratamiento de conducto",s5:"Extracción dental e injerto óseo",s6:"Dentaduras",
+      s7:"Carillas",s8:"Coronas y puentes",s9:"Implantes dentales",s10:"Blanqueamiento dental",
+      s11:"Alineadores transparentes de ortodoncia",s12:"Odontología con sedación",s13:"Extracción de muelas del juicio",s14:"Emergencias dentales el mismo día",s15:"Botox y rellenos",
+      off_h:"Un consultorio recién renovado, pensado para que usted esté tranquilo.",off_p:"Nuestro amable equipo lo recibe en un ambiente relajado y sereno, donde se sentirá como en casa.",
+      note_h:"¿Le teme al dentista?",note_p:"Lo entendemos y hacemos todo lo posible por atender sus inquietudes.",
+      f1h:"Sobre la US 1",f1p:"Ubicación conveniente, con amplio estacionamiento.",
+      f2h:"Tecnología moderna",f2p:"Equipos de vanguardia y de última generación.",
+      f3h:"Horarios flexibles",f3p:"Citas fuera del horario habitual. Llame para confirmar.",
+      f4h:"Emergencias el mismo día",f4p:"Ofrecemos atención de emergencias dentales el mismo día.",
+      rev_h:"Lo que dicen nuestros pacientes.",rev_score:"318 reseñas en Google",rev_src:"Testimonio de paciente",rev_link:"Ver reseñas en Google",
+      rev_note:"Las reseñas se muestran en su idioma original (inglés).",
+      band_h:"Hablamos español.",band_p:"La Dra. Quiñones nació en Cuba y ha vivido casi toda su vida en el sur de Florida. Usted puede atenderse en inglés o en español.",
+      faq_h:"Lo que conviene saber antes de su visita.",faq_sub:"¿Tiene otra pregunta? Llámenos.",
+      q1:"¿Cómo reservo una cita?",a1:"Puede reservar en línea en unos clics o llamarnos al (954) 870-4900. También puede enviar un mensaje de texto a ese número.",
+      q2:"¿Atienden emergencias dentales?",a2:"Sí, ofrecemos atención de emergencias dentales el mismo día. Llámenos lo antes posible.",
+      q3:"¿Aceptan mi seguro?",a3:"Llámenos y se lo confirmamos.",
+      q4:"¿Ofrecen planes de pago?",a4:"Llámenos y se lo confirmamos.",
+      q5:"¿Dónde están y dónde estaciono?",a5:"Estamos en 6451 N Federal Hwy, Suite 129, Fort Lauderdale, sobre la US 1, con amplio estacionamiento.",
+      ct_h:"Nos encantará saber de usted.",ct_call:"Llame o envíe un texto",ct_dir:"Cómo llegar",
+      fm_h:"Envíenos un mensaje",fm_name:"Su nombre",fm_phone:"Teléfono",fm_msg:"¿En qué podemos ayudarle?",fm_err:"Por favor complete este campo.",fm_send:"Enviar mensaje",fm_hint:"Se abrirá su aplicación de correo con el mensaje listo para enviar.",
+      ok_h:"Casi listo",ok_p:"Su aplicación de correo debería estar abierta. Envíe el mensaje y le responderemos.",ok_back:"Volver",
+      ft_p:"Sonrisa hermosa. Tranquilidad total.",ft_nav:"Explorar",ft_contact:"Contacto",ft_visit:"Visítenos",ft_priv:"Política de privacidad",ft_terms:"Términos y condiciones",
+      title:"Bayview Dental | Dra. Amalia Quiñones, Fort Lauderdale",
+      desc:"Bayview Dental: odontología general y cosmética con la Dra. Amalia Quiñones en Fort Lauderdale, FL. Atención en inglés y español.",
+      mailsub:"Solicitud de cita",mailname:"Nombre",mailphone:"Teléfono",mailmsg:"Mensaje"
+    }
+  };
+  var lang="en";
+
+  function setLang(l){
+    if(!T[l])return;
+    lang=l;
+    document.documentElement.lang=l;
+    $$("[data-t]").forEach(function(el){var k=el.getAttribute("data-t");if(T[l][k]!=null)el.textContent=T[l][k]});
+    $$("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===l?"true":"false")});
+    document.title=T[l].title;
+    var m=$('meta[name="description"]');if(m)m.setAttribute("content",T[l].desc);
+    var note=$(".rev-note");if(note)note.hidden=(l!=="es");
+    updateIntro();
+    try{localStorage.setItem("bv-lang",l)}catch(e){}
+  }
+  function initLang(){
+    $$("[data-lang]").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-lang"))})});
+    var saved=null;try{saved=localStorage.getItem("bv-lang")}catch(e){}
+    if(saved&&saved!=="en")setLang(saved);else setLang("en");
+  }
+
+  function initSplash(){
+    var s=$("#splash");if(!s)return;
+    var hide=function(){s.classList.add("hide")};
+    if(document.readyState==="complete")setTimeout(hide,900);else window.addEventListener("load",function(){setTimeout(hide,900)});
+    setTimeout(hide,2200);
+  }
+  function initNav(){
+    var nav=$("#nav"),links=$("#navLinks"),b=$("#burger");
+    var on=function(){nav.classList.toggle("scrolled",window.scrollY>20)};on();
+    window.addEventListener("scroll",on,{passive:true});
+    b.addEventListener("click",function(){var o=links.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false")});
+    links.addEventListener("click",function(e){if(e.target.closest("a")){links.classList.remove("open");b.setAttribute("aria-expanded","false")}});
+  }
+  function initReveals(){
+    var els=$$(".reveal");
+    if(!("IntersectionObserver" in window)||reduced){els.forEach(function(e){e.classList.add("in")});return}
+    var io=new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");o.unobserve(x.target)}})},{threshold:.04,rootMargin:"0px 0px -6% 0px"});
+    els.forEach(function(e){io.observe(e)});
+    setTimeout(function(){els.forEach(function(e){e.classList.add("in")})},3500);
+  }
+  function fmt(v,d){return d>0?v.toFixed(d):String(Math.round(v))}
+  function count(el){
+    var t=parseFloat(el.getAttribute("data-count-to")),d=parseInt(el.getAttribute("data-decimals")||"0",10);
+    if(isNaN(t))return;
+    if(reduced){el.textContent=fmt(t,d);return}
+    var st=performance.now(),dur=1300;
+    (function tick(n){var p=Math.min(1,(n-st)/dur),e=1-Math.pow(1-p,3);el.textContent=fmt(t*e,d);if(p<1)requestAnimationFrame(tick);else el.textContent=fmt(t,d)})(st);
+  }
+  function initCounts(){
+    var els=$$("[data-count-to]");
+    if(!("IntersectionObserver" in window)){return}
+    var io=new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){count(x.target);o.unobserve(x.target)}})},{threshold:.6});
+    els.forEach(function(e){io.observe(e)});
+  }
+  function initTilt(){
+    if(!fine||reduced)return;
+    $$("[data-tilt]").forEach(function(c){
+      c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect(),px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;c.style.transform="perspective(800px) rotateY("+(px*7)+"deg) rotateX("+(-py*7)+"deg) translateY(-5px)"});
+      c.addEventListener("mouseleave",function(){c.style.transform=""});
+    });
+  }
+  function initMagnetic(){
+    if(!fine||reduced)return;
+    $$("[data-magnetic]").forEach(function(b){
+      b.addEventListener("mousemove",function(e){var r=b.getBoundingClientRect();b.style.transform="translate("+((e.clientX-r.left-r.width/2)*.2)+"px,"+((e.clientY-r.top-r.height/2)*.25)+"px)"});
+      b.addEventListener("mouseleave",function(){b.style.transform=""});
+    });
+  }
+
+  var tabs,panels,cur=0;
+  function updateIntro(){var i=$("#tabIntro");if(i)i.textContent=T[lang]["intro"+cur]}
+  function initTabs(){
+    tabs=$$(".tab");panels=$$(".svc-panel");
+    function sel(n,focus){
+      cur=n;
+      tabs.forEach(function(t,i){t.setAttribute("aria-selected",i===n?"true":"false");t.tabIndex=i===n?0:-1});
+      panels.forEach(function(p,i){p.classList.toggle("active",i===n)});
+      updateIntro();
+      if(focus)tabs[n].focus();
+    }
+    tabs.forEach(function(t,i){
+      t.addEventListener("click",function(){sel(i)});
+      t.addEventListener("keydown",function(e){
+        if(e.key==="ArrowRight"){e.preventDefault();sel((i+1)%tabs.length,true)}
+        if(e.key==="ArrowLeft"){e.preventDefault();sel((i+tabs.length-1)%tabs.length,true)}
+      });
+    });
+  }
+  function initCarousel(){
+    var c=$("#carousel");if(!c)return;
+    var step=function(){var r=$(".rev",c);return r?r.getBoundingClientRect().width+18:380};
+    $("#prev").addEventListener("click",function(){c.scrollBy({left:-step(),behavior:reduced?"auto":"smooth"})});
+    $("#next").addEventListener("click",function(){c.scrollBy({left:step(),behavior:reduced?"auto":"smooth"})});
+    c.addEventListener("keydown",function(e){if(e.key==="ArrowRight")$("#next").click();if(e.key==="ArrowLeft")$("#prev").click()});
+    var down=false,sx=0,sl=0,moved=false;
+    c.addEventListener("pointerdown",function(e){if(e.pointerType!=="mouse")return;down=true;moved=false;sx=e.clientX;sl=c.scrollLeft});
+    window.addEventListener("pointermove",function(e){if(!down)return;var dx=e.clientX-sx;if(Math.abs(dx)>4){moved=true;c.classList.add("drag")}c.scrollLeft=sl-dx});
+    window.addEventListener("pointerup",function(){if(!down)return;down=false;c.classList.remove("drag")});
+  }
+  function initFaq(){
+    $$(".acc-item").forEach(function(it){
+      var q=$(".acc-q",it);
+      q.addEventListener("click",function(){var o=it.classList.toggle("open");q.setAttribute("aria-expanded",o?"true":"false")});
+    });
+  }
+  function initForm(){
+    var f=$("#apptForm"),ok=$("#formOk");if(!f)return;
+    var mark=function(el,bad){el.closest(".field").classList.toggle("invalid",bad)};
+    f.addEventListener("submit",function(e){
+      e.preventDefault();
+      var bad=null;
+      $$("[required]",f).forEach(function(el){var b=!el.value.trim();mark(el,b);if(b&&!bad)bad=el});
+      if(bad){bad.focus();return}
+      var t=T[lang];
+      var body=t.mailname+": "+$("#f-name").value.trim()+"\n"+t.mailphone+": "+$("#f-phone").value.trim()+"\n\n"+t.mailmsg+":\n"+$("#f-msg").value.trim();
+      ok.classList.add("show");
+      window.location.href="mailto:info@mybayviewdentist.com?subject="+encodeURIComponent(t.mailsub)+"&body="+encodeURIComponent(body);
+    });
+    f.addEventListener("input",function(e){if(e.target.matches("[required]"))mark(e.target,!e.target.value.trim())});
+    $("#formReset").addEventListener("click",function(){ok.classList.remove("show");f.reset()});
+  }
+
+  function boot(){
+    safe(initLang,"lang");safe(initSplash,"splash");safe(initNav,"nav");safe(initReveals,"reveals");
+    safe(initCounts,"counts");safe(initTilt,"tilt");safe(initMagnetic,"magnetic");
+    safe(initTabs,"tabs");safe(initCarousel,"carousel");safe(initFaq,"faq");safe(initForm,"form");
+    updateIntro();
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);else boot();
+})();
+</script>
+</body>
+</html>
