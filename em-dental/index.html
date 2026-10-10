@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>EM Dental | Odontología general y cosmética en Little Havana, Miami</title>
+<meta name="description" id="metaDesc" content="EM Dental, odontología general y cosmética del Dr. Ernesto Martinez en Little Havana, Miami. Exámenes, radiografías, limpiezas y empastes. Llame al (305) 541-4677.">
+<meta name="theme-color" content="#0B3661">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230B3661'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='34' text-anchor='middle' fill='%2300DFF8'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B3661; --navy-deep:#072544; --blue:#14508F; --cyan:#00DFF8; --cyan-soft:#CFF8FD;
+  --sky:#EAF8FB; --paper:#FFFFFF; --ink:#0A1F3A; --ink-soft:#3B5570; --mute:#566E86;
+  --line:rgba(11,54,97,.14);
+  --display:"Bricolage Grotesque",system-ui,sans-serif; --sans:"Onest",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.23,1,.32,1); --ease-io:cubic-bezier(.77,0,.175,1);
+  --r-card:26px; --r-in:14px; --wrap:1180px;
+  --sh:0 22px 50px -26px rgba(11,54,97,.45); --sh-lg:0 34px 70px -30px rgba(11,54,97,.55);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:96px}
+body{font-family:var(--sans);font-size:16px;line-height:1.62;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:clip;padding-bottom:0}
+img,svg,iframe{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+p{text-wrap:pretty}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.06;letter-spacing:-.02em;font-weight:700}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:8px}
+.on-light :focus-visible,.sec-light :focus-visible{outline-color:var(--blue)}
+::selection{background:var(--cyan);color:var(--navy)}
+.wrap{width:min(var(--wrap),100% - 2.4rem);margin-inline:auto}
+.skip{position:fixed;top:-80px;left:1rem;background:#fff;color:var(--navy);padding:.6rem 1rem;border-radius:10px;z-index:200;font-weight:600}
+.skip:focus{top:1rem}
+.i{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.i.fill{fill:currentColor;stroke:none}
+
+/* ---------- splash ---------- */
+#splash{position:fixed;inset:0;z-index:300;display:grid;place-items:center;background:var(--navy-deep);color:#fff;transition:opacity .5s var(--ease),visibility .5s}
+#splash.hide{opacity:0;visibility:hidden}
+#splash .wm{font-family:var(--display);font-size:clamp(2.6rem,9vw,4rem);font-weight:800;letter-spacing:-.03em;animation:wmIn .7s var(--ease) both}
+#splash .wm b{color:var(--cyan);font-weight:800}
+#splash .wm span{font-weight:500}
+#splash .bar{display:block;height:3px;width:120px;margin:14px auto 0;background:rgba(255,255,255,.18);border-radius:3px;overflow:hidden}
+#splash .bar::after{content:"";display:block;height:100%;width:100%;background:var(--cyan);transform:translateX(-100%);animation:bar 1s var(--ease-io) .2s forwards}
+@keyframes wmIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes bar{to{transform:none}}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:12px;left:0;right:0;z-index:100;pointer-events:none}
+.nav-in{pointer-events:auto;width:min(1180px,100% - 1.4rem);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.35rem .5rem .35rem 1.25rem;border-radius:999px;background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);border:1px solid rgba(255,255,255,.7);box-shadow:0 14px 40px -20px rgba(7,37,68,.55);transition:box-shadow .3s,background .3s}
+.nav.scrolled .nav-in{background:rgba(255,255,255,.92);box-shadow:0 18px 44px -18px rgba(7,37,68,.6)}
+.brand{display:flex;align-items:center;min-height:60px;font-family:var(--display);font-size:2.05rem;letter-spacing:-.035em;line-height:1;color:var(--navy);font-weight:800}
+.brand b{font-weight:800}
+.brand span{font-weight:500;margin-left:.22em;color:var(--blue)}
+.brand::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--cyan);margin-right:.5rem;align-self:center;box-shadow:0 0 0 3px rgba(0,223,248,.28)}
+.links{display:flex;align-items:center;gap:.15rem}
+.links a{padding:.55rem .85rem;border-radius:999px;font-weight:500;font-size:.95rem;color:var(--ink-soft);transition:background .2s,color .2s}
+.links a:hover{background:var(--sky);color:var(--navy)}
+.nav-r{display:flex;align-items:center;gap:.6rem}
+.lang{display:inline-flex;padding:3px;border-radius:999px;background:var(--sky);border:1px solid var(--line)}
+.lang button{min-width:44px;min-height:38px;padding:0 .7rem;border-radius:999px;font-weight:700;font-size:.85rem;color:var(--ink-soft);transition:background .25s var(--ease),color .25s,transform .16s}
+.lang button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.lang button:active{transform:scale(.96)}
+.burger{display:none;width:48px;height:48px;border-radius:50%;background:var(--sky);position:relative}
+.burger span,.burger span::before,.burger span::after{position:absolute;left:14px;right:14px;height:2px;border-radius:2px;background:var(--navy);content:"";transition:transform .25s var(--ease),opacity .2s}
+.burger span{top:23px}.burger span::before{left:0;right:0;top:-7px}.burger span::after{left:0;right:0;top:7px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.85rem 1.5rem;border-radius:999px;font-weight:700;font-size:1rem;white-space:nowrap;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,color .25s,border-color .25s;will-change:transform}
+.btn:active{transform:scale(.97)!important}
+.btn-cyan{background:var(--cyan);color:var(--navy);box-shadow:0 14px 30px -12px rgba(0,223,248,.8)}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:0 14px 30px -14px rgba(11,54,97,.85)}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+.btn-line{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+.btn-sm{min-height:46px;padding:.65rem 1.2rem;font-size:.95rem}
+@media (hover:hover) and (pointer:fine){
+  .btn-cyan:hover{transform:translateY(-3px);box-shadow:0 20px 38px -12px rgba(0,223,248,.95);background:#33E8FB}
+  .btn-navy:hover{transform:translateY(-3px);box-shadow:0 20px 38px -14px rgba(11,54,97,.95);background:var(--blue)}
+  .btn-ghost:hover{transform:translateY(-3px);background:rgba(255,255,255,.2);border-color:#fff}
+  .btn-line:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:var(--navy)}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;padding:7.4rem 0 5rem;min-height:min(100dvh,860px);display:flex;align-items:center;background:linear-gradient(155deg,#072544 0%,#0B3661 48%,#0F4C86 100%)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 50% at 82% 20%,rgba(0,223,248,.28),transparent 62%),radial-gradient(40% 40% at 6% 100%,rgba(0,223,248,.16),transparent 60%)}
+.hero::after{content:"";position:absolute;inset:-25%;z-index:-1;pointer-events:none;background:radial-gradient(28% 28% at 78% 18%,rgba(10,168,216,.55),transparent 70%),radial-gradient(26% 26% at 12% 88%,rgba(27,111,192,.55),transparent 70%);animation:drift 24s ease-in-out infinite;will-change:transform}
+@keyframes drift{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(40px,30px,0) scale(1.15)}}
+.hero-in{display:grid;grid-template-columns:1.2fr .8fr;gap:2.4rem;align-items:center}
+.hello{display:inline-flex;align-items:center;gap:.6rem;padding:.4rem .9rem .4rem .4rem;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);font-size:.92rem;font-weight:500;margin-bottom:1.4rem}
+.hello .ht{display:flex;flex-direction:column;line-height:1.25}.hello .ht b{font-weight:600}.hello .ht small{font-size:.8rem;color:rgba(255,255,255,.78)}
+.hello img{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:50% 25%;border:2px solid var(--cyan)}
+.hero h1{font-size:clamp(2.4rem,4.6vw,3.7rem);font-weight:800;letter-spacing:-.035em}
+.hero h1 em{font-style:normal;color:var(--cyan)}
+.hero .sub{margin-top:1.3rem;font-size:1.14rem;color:rgba(255,255,255,.86);max-width:30rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.hero-photo{position:relative;justify-self:center;width:min(100%,460px)}
+.hero-photo .frame{position:relative;aspect-ratio:5/6;border-radius:230px 230px 34px 34px;overflow:hidden;box-shadow:var(--sh-lg);border:6px solid rgba(255,255,255,.92)}
+.hero-photo .frame img{width:100%;height:100%;object-fit:cover;object-position:52% 50%;transform:scale(1.04);transition:transform 1.6s var(--ease)}
+.hero-photo:hover .frame img{transform:scale(1.09)}
+.hero-photo::before{content:"";position:absolute;inset:-14px -16px 18px 18px;border-radius:244px 244px 40px 40px;border:2px solid var(--cyan);opacity:.75;z-index:-1;transform:rotate(2.5deg)}
+.chip{position:absolute;display:flex;align-items:center;gap:.7rem;padding:.7rem 1rem;border-radius:20px;background:rgba(255,255,255,.94);color:var(--ink);box-shadow:var(--sh);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.chip.rate{left:-26px;bottom:34px;animation:float 6s ease-in-out infinite}
+.chip.rate b{font-family:var(--display);font-size:2.2rem;line-height:1;color:var(--navy);font-weight:800}
+.chip small{display:block;font-size:.82rem;color:var(--ink-soft);line-height:1.25}
+.chip .st{display:flex;gap:2px;color:#E7A41A;margin-bottom:2px}
+.chip .st svg{width:15px;height:15px}
+.chip.open{right:-10px;top:30px;font-weight:600;font-size:.9rem;animation:float 7s ease-in-out infinite reverse}
+.chip.open i{width:10px;height:10px;border-radius:50%;background:#9AA9B8;flex:none}
+.chip.open.is-open i{background:#16A34A;box-shadow:0 0 0 0 rgba(22,163,74,.55);animation:ping 2.2s ease-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(22,163,74,0)}100%{box-shadow:0 0 0 0 rgba(22,163,74,0)}}
+
+/* hero entrance */
+.rise{opacity:0;transform:translateY(22px);animation:rise .8s var(--ease) forwards;animation-delay:calc(var(--n,0)*90ms + .15s)}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* ---------- sections ---------- */
+.sec{padding:clamp(4.2rem,9vw,7rem) 0;position:relative}
+.sec-sky{background:var(--sky)}
+.sec-white{background:var(--paper)}
+.sec-dark{background:linear-gradient(180deg,#072544,#0B3661);color:#fff;overflow:hidden}
+.sec h2{font-size:clamp(1.9rem,4.2vw,3.1rem);color:var(--navy);font-weight:800;letter-spacing:-.03em}
+.sec-dark h2{color:#fff}
+.sec h2 em{font-style:normal;color:var(--blue)}
+.sec-dark h2 em{color:var(--cyan)}
+.lead{margin-top:.9rem;max-width:36rem;color:var(--ink-soft);font-size:1.08rem}
+.sec-dark .lead{color:rgba(255,255,255,.8)}
+.kick{display:inline-block;font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:.8rem}
+.sec-dark .kick{color:var(--cyan)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .75s var(--ease),transform .75s var(--ease);transition-delay:calc(var(--d,0)*80ms)}
+.reveal.in{opacity:1;transform:none}
+
+/* services bento */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:1.1rem;margin-top:2.6rem}
+.svc{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:2.4rem;min-height:240px;padding:1.8rem;border-radius:var(--r-card);overflow:hidden;transform-style:preserve-3d;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.svc:nth-child(1){grid-column:span 7;background:linear-gradient(140deg,#0B3661,#14508F);color:#fff}
+.svc:nth-child(2){grid-column:span 5;background:var(--cyan);color:var(--navy)}
+.svc:nth-child(3){grid-column:span 5;background:#fff;border:1px solid var(--line);color:var(--navy)}
+.svc:nth-child(4){grid-column:span 7;background:var(--cyan-soft);color:var(--navy)}
+.svc .ic{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:rgba(255,255,255,.16);transition:transform .35s var(--ease)}
+.svc:nth-child(2) .ic,.svc:nth-child(4) .ic{background:rgba(11,54,97,.1)}
+.svc:nth-child(3) .ic{background:var(--sky)}
+.svc .ic .i{width:30px;height:30px}
+.svc h3{font-size:1.75rem;font-weight:800}
+.svc p{margin-top:.5rem;font-size:1rem;max-width:26rem;opacity:.92}
+.svc::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:currentColor;opacity:.06;transition:transform .5s var(--ease)}
+@media (hover:hover) and (pointer:fine){
+  .svc:hover{transform:translateY(-6px);box-shadow:var(--sh-lg)}
+  .svc:hover .ic{transform:scale(1.1) rotate(-4deg)}
+  .svc:hover::after{transform:scale(1.5)}
+}
+.note{margin-top:1.6rem;color:var(--ink-soft);font-size:.98rem}
+.note a{color:var(--navy);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+/* doctor */
+.doc-head{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem 3rem;align-items:end}
+.es-pill{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.2rem;padding:.55rem 1rem;border-radius:999px;background:var(--cyan-soft);color:var(--navy);font-weight:700;font-size:.95rem}
+.doc-fig{position:relative;margin-top:2.4rem;border-radius:34px;overflow:hidden;box-shadow:var(--sh-lg);aspect-ratio:21/9}
+.doc-fig img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+.stats{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:-3.2rem 1.5rem 0;z-index:2}
+.stat{padding:1.3rem 1.4rem;border-radius:22px;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(16px) saturate(150%);backdrop-filter:blur(16px) saturate(150%);border:1px solid #fff;box-shadow:var(--sh);transition:transform .3s var(--ease)}
+.stat b{display:block;font-family:var(--display);font-size:clamp(2.1rem,4vw,3rem);line-height:1;color:var(--navy);font-weight:800}
+.stat span{display:block;margin-top:.3rem;color:var(--ink-soft);font-size:.95rem}
+@media (hover:hover) and (pointer:fine){.stat:hover{transform:translateY(-5px)}}
+
+/* reviews */
+.rev-top{display:flex;flex-wrap:wrap;gap:1.5rem 3rem;align-items:flex-end;justify-content:space-between}
+.big-rate{display:flex;align-items:center;gap:1rem}
+.big-rate b{font-family:var(--display);font-size:4.6rem;line-height:.9;font-weight:800;color:var(--cyan)}
+.big-rate .st{display:flex;gap:3px;color:#FFC83D}
+.big-rate .st svg{width:22px;height:22px}
+.big-rate small{display:block;color:rgba(255,255,255,.82);margin-top:.3rem;font-size:.98rem}
+.track-wrap{position:relative;margin-top:2.4rem}
+.track{display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 1.2rem 1.4rem;margin-inline:-1.2rem;scrollbar-width:none;scroll-padding-inline:1.2rem}
+.track::-webkit-scrollbar{display:none}
+.rcard{flex:0 0 min(86%,390px);scroll-snap-align:start;display:flex;flex-direction:column;gap:1rem;padding:1.7rem;border-radius:var(--r-card);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transition:transform .35s var(--ease),background .3s,border-color .3s}
+.rcard .q{width:34px;height:34px;color:var(--cyan)}
+.rcard blockquote{font-size:1.04rem;line-height:1.6;color:#fff;flex:1}
+.rcard footer{display:flex;align-items:center;justify-content:space-between;gap:.8rem;font-size:.92rem;color:rgba(255,255,255,.82)}
+.rcard footer b{color:#fff;font-weight:700}
+.rcard .st{display:flex;gap:2px;color:#FFC83D}
+.rcard .st svg{width:15px;height:15px}
+@media (hover:hover) and (pointer:fine){.rcard:hover{transform:translateY(-6px);background:rgba(255,255,255,.13);border-color:rgba(0,223,248,.5)}}
+.rev-ctl{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.4rem}
+.arrows{display:flex;gap:.6rem}
+.arrow{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.4);color:#fff;transition:transform .25s var(--ease),background .25s,color .25s}
+.arrow:active{transform:scale(.94)}
+@media (hover:hover) and (pointer:fine){.arrow:hover{background:var(--cyan);color:var(--navy);border-color:var(--cyan);transform:translateY(-2px)}}
+.dots{display:flex;gap:.5rem}
+.dots button{width:10px;height:10px;border-radius:99px;background:rgba(255,255,255,.35);transition:width .3s var(--ease),background .3s;padding:0;position:relative}
+.dots button::after{content:"";position:absolute;inset:-17px -7px}
+.dots button[aria-current="true"]{width:30px;background:var(--cyan)}
+.orig{font-size:.85rem;color:rgba(255,255,255,.7);margin-top:1rem}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:2.5rem 4rem;align-items:start}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:20px;margin-bottom:.8rem;transition:box-shadow .3s var(--ease),border-color .3s}
+.faq details[open]{box-shadow:var(--sh);border-color:rgba(0,223,248,.9)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.15rem 1.4rem;min-height:60px;font-weight:700;font-size:1.04rem;color:var(--navy)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pl{width:34px;height:34px;border-radius:50%;background:var(--sky);display:grid;place-items:center;flex:none;transition:transform .35s var(--ease),background .25s}
+.faq details[open] summary .pl{transform:rotate(45deg);background:var(--cyan)}
+.faq .ans{padding:0 1.4rem 1.3rem;color:var(--ink-soft);animation:ans .4s var(--ease)}
+@keyframes ans{from{opacity:0;transform:translateY(-6px)}}
+.faq .ans a{color:var(--navy);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+/* location */
+.loc{display:grid;grid-template-columns:1.1fr .9fr;gap:2.2rem;margin-top:2.4rem;align-items:stretch}
+.map{border-radius:var(--r-card);overflow:hidden;box-shadow:var(--sh);border:1px solid var(--line);min-height:380px;background:var(--sky)}
+.map iframe{width:100%;height:100%;min-height:380px;border:0}
+.info{display:flex;flex-direction:column;gap:1.3rem}
+.addr{display:flex;gap:.8rem;font-size:1.06rem;font-weight:600;color:var(--navy)}
+.addr .i{width:26px;height:26px;color:var(--blue);margin-top:2px}
+.hours{list-style:none;padding:0;border-radius:22px;background:var(--sky);padding:.6rem 1.2rem}
+.hours li{display:flex;justify-content:space-between;gap:1rem;padding:.7rem 0;font-size:.98rem}
+.hours li+li{border-top:1px solid var(--line)}
+.hours li .tm{color:var(--ink-soft);text-align:right}
+.hours li.today{font-weight:700;color:var(--navy)}
+.hours li.today .tm{color:var(--navy)}
+.hours li.today span:first-child::after{content:attr(data-today);margin-left:.6rem;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;background:var(--cyan);padding:.18rem .55rem;border-radius:99px;vertical-align:middle}
+.hours li.closed .tm{opacity:.8}
+.loc-cta{display:flex;flex-wrap:wrap;gap:.7rem}
+
+/* contact */
+.contact{background:linear-gradient(135deg,#00B8D2 0%,#0B6FB0 38%,#0B3661 100%);color:#fff;overflow:hidden;isolation:isolate}
+.contact::before{content:"";position:absolute;z-index:-1;right:-140px;bottom:-160px;width:520px;height:520px;border-radius:50%;background:rgba(0,223,248,.25);filter:blur(30px)}
+.contact h2{color:#fff}
+.contact .lead{color:rgba(255,255,255,.9)}
+.c-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:2.4rem 4rem;align-items:center}
+.callbig{display:inline-flex;align-items:center;gap:.8rem;margin-top:1.6rem;font-family:var(--display);font-size:clamp(1.9rem,4.4vw,2.9rem);font-weight:800;letter-spacing:-.02em;color:#fff;transition:transform .3s var(--ease)}
+.callbig .ci{width:60px;height:60px;border-radius:50%;background:var(--cyan);color:var(--navy);display:grid;place-items:center;flex:none;transition:transform .3s var(--ease)}
+@media (hover:hover) and (pointer:fine){.callbig:hover .ci{transform:scale(1.1) rotate(-8deg)}}
+.mailline{margin-top:1rem;color:rgba(255,255,255,.9)}
+.mailline a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.form{position:relative;padding:clamp(1.4rem,3vw,2.2rem);border-radius:30px;background:#fff;color:var(--ink);box-shadow:var(--sh-lg)}
+.form h3{font-size:1.5rem;color:var(--navy);margin-bottom:1.1rem;font-weight:800}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{display:flex;flex-direction:column;gap:.4rem}
+.field.full{grid-column:1/-1}
+.field label{font-weight:600;font-size:.92rem;color:var(--navy)}
+.field input,.field select{width:100%;min-height:50px;padding:.7rem 1rem;border-radius:var(--r-in);border:1.5px solid #9DB2C6;background:#fff;font:inherit;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(20,80,143,.18)}
+.field .err{display:none;color:#B42318;font-size:.88rem;font-weight:600}
+.field.invalid input,.field.invalid select{border-color:#B42318}
+.field.invalid .err{display:block}
+.form .btn{width:100%;margin-top:1.2rem}
+.fine{margin-top:.9rem;font-size:.88rem;color:var(--mute)}
+.ok{display:none;text-align:center;padding:1.4rem .5rem}
+.form.sent .ok{display:block}
+.form.sent .fwrap{display:none}
+.ok svg{width:96px;height:96px;margin:0 auto 1rem}
+.ok circle{fill:none;stroke:var(--cyan);stroke-width:4;stroke-dasharray:226;stroke-dashoffset:226}
+.ok path{fill:none;stroke:var(--navy);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:50;stroke-dashoffset:50}
+.form.sent .ok circle{animation:draw .7s var(--ease-io) forwards}
+.form.sent .ok path{animation:draw .45s var(--ease-io) .55s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.ok h3{margin-bottom:.4rem}
+.ok p{color:var(--ink-soft)}
+.ok .btn{margin-top:1rem}
+
+/* footer */
+footer.site{background:var(--navy-deep);color:rgba(255,255,255,.82);padding:4rem 0 6.5rem}
+.f-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:2.4rem}
+.f-brand{font-family:var(--display);font-size:2.2rem;font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1}
+.f-brand span{font-weight:500;color:var(--cyan);margin-left:.2em}
+footer h4{font-family:var(--display);color:#fff;font-size:1.05rem;margin-bottom:.8rem;font-weight:700}
+footer ul{list-style:none;padding:0;display:grid;gap:.45rem}
+footer a{transition:color .2s}
+footer a:hover{color:var(--cyan)}
+footer .ln a{display:inline-flex;min-height:36px;align-items:center}
+.f-note{margin-top:1.1rem;font-size:.92rem;max-width:22rem}
+.f-bot{margin-top:2.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.14);font-size:.88rem;color:rgba(255,255,255,.62)}
+
+/* mobile bar */
+.mbar{transform:translateY(160%);opacity:0;visibility:hidden;transition:transform .35s var(--ease),opacity .25s,visibility .35s;position:fixed;left:.7rem;right:.7rem;bottom:.7rem;z-index:90;display:none;gap:.6rem;padding:.5rem;border-radius:999px;background:rgba(7,37,68,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 16px 40px -10px rgba(7,37,68,.8)}
+.mbar.show{transform:none;opacity:1;visibility:visible}
+.mbar .btn{flex:1;min-height:48px;padding:.6rem 1rem}
+
+/* ---------- responsive ---------- */
+@media (max-width:1020px){
+  .links{position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;align-items:stretch;gap:.2rem;padding:.8rem;border-radius:26px;background:rgba(255,255,255,.97);box-shadow:var(--sh-lg);opacity:0;visibility:hidden;transform:translateY(-8px) scale(.98);transform-origin:top right;transition:opacity .22s var(--ease),transform .22s var(--ease),visibility .22s}
+  .links.open{opacity:1;visibility:visible;transform:none}
+  .links a{padding:.9rem 1rem;font-size:1.05rem;min-height:48px;display:flex;align-items:center}
+  .nav-in{position:relative}
+  .burger{display:block}
+  .nav-r .book{display:none}
+}
+@media (max-width:900px){
+  .hero{padding:6.6rem 0 6rem;min-height:0}
+  .hero-in{grid-template-columns:1fr;gap:2.6rem}
+  .hero-photo{width:min(100%,380px)}
+  .chip.rate{left:-6px}.chip.open{right:-4px}
+  .bento{grid-template-columns:1fr}
+  .svc:nth-child(n){grid-column:auto;min-height:0}
+  .doc-head{grid-template-columns:1fr}
+  .doc-fig{aspect-ratio:4/3}
+  .stats{grid-template-columns:1fr;margin:-2rem .8rem 0}
+  .faq-grid,.loc,.c-grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .mbar{display:flex}
+}
+@media (max-width:560px){
+  .brand{font-size:1.8rem;min-height:48px}
+  .nav-in{padding-left:1rem}
+  .fgrid{grid-template-columns:1fr}
+  .cta .btn{flex:1 1 100%}
+  .nav-r{gap:.4rem}
+  .lang button{min-width:44px;padding:0 .55rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal,.rise{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-t="skip">Saltar al contenido</a>
+
+<div id="splash" aria-hidden="true"><div><div class="wm"><b>EM</b> <span>Dental</span></div><span class="bar"></span></div></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 5.3 5.3l1.4-2.2L19 14.5V18a2 2 0 0 1-2 2A13 13 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M8 3v4M16 3v4M4 10h16"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 8 8 6 8-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-5 4v-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24"><path d="M10 7H6.5A2.5 2.5 0 0 0 4 9.5V13h4.5v4H4M20 7h-3.5A2.5 2.5 0 0 0 14 9.5V13h4.5v4H14" transform="translate(0 -1)"/></symbol>
+    <symbol id="i-exam" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M8.5 11l2 2 3.5-4"/></symbol>
+    <symbol id="i-xray" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M8 12h8M12 8v8"/></symbol>
+    <symbol id="i-clean" viewBox="0 0 24 24"><path d="M11 3l1.7 4.6L17.3 9.3l-4.6 1.7L11 15.6l-1.7-4.6L4.7 9.3l4.6-1.7z"/><path d="M19 14l.8 2.2 2.2.8-2.2.8L19 20l-.8-2.2-2.2-.8 2.2-.8z"/></symbol>
+    <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 6C10 4 6.2 4 5.2 7.4c-.7 2.5.6 4.3 1.2 6.5.6 2.2.7 6.1 2.3 6.1 1.6 0 1.3-3.7 3.3-3.7s1.7 3.7 3.3 3.7c1.6 0 1.7-3.9 2.3-6.1.6-2.2 1.9-4 1.2-6.5C17.800 4 14 4 12 6z"/></symbol>
+    <symbol id="i-lang" viewBox="0 0 24 24"><path d="M4 6h9M8.500 4v2M6 6c.5 3 2.500 5.500 5.500 7M12 6c-.7 3.200-3 6-7 8M13 20l4-9 4 9M14.500 17h5"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#inicio" aria-label="EM Dental"><b>EM</b><span>Dental</span></a>
+    <nav class="links" id="links" aria-label="Principal">
+      <a href="#servicios" data-t="n_serv">Servicios</a>
+      <a href="#doctor" data-t="n_doc">Su doctor</a>
+      <a href="#resenas" data-t="n_res">Reseñas</a>
+      <a href="#preguntas" data-t="n_faq">Preguntas</a>
+      <a href="#ubicacion" data-t="n_loc">Ubicación</a>
+    </nav>
+    <div class="nav-r">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      </div>
+      <a class="btn btn-navy btn-sm book" data-magnetic href="#contacto"><svg class="i"><use href="#i-cal"/></svg><span data-t="book">Pedir cita</span></a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="links" aria-label="Menú"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="inicio">
+  <div class="wrap hero-in">
+    <div>
+      <span class="hello rise" style="--n:0"><img src="images/dr-perfil.jpg" alt="" width="34" height="34"><span class="ht"><b>Dr. Ernesto Martinez, DDS</b><small data-t="hello_d">Odontología general y cosmética</small></span></span>
+      <h1 class="rise" style="--n:1" data-t="h1">Su dentista de familia en <em>Little Havana</em></h1>
+      <p class="sub rise" style="--n:2" data-t="sub">Exámenes, radiografías, limpiezas y empastes con el Dr. Martinez y su equipo.</p>
+      <div class="cta rise" style="--n:3">
+        <a class="btn btn-cyan" data-magnetic href="tel:+13055414677"><svg class="i"><use href="#i-phone"/></svg><span data-t="call_n">Llamar (305) 541-4677</span></a>
+        <a class="btn btn-ghost" data-magnetic href="#contacto"><svg class="i"><use href="#i-cal"/></svg><span data-t="book">Pedir cita</span></a>
+      </div>
+    </div>
+    <div class="hero-photo rise" style="--n:2">
+      <div class="frame"><img src="images/equipo.jpg" data-t-alt="alt_hero" alt="El Dr. Ernesto Martinez con su equipo en el consultorio de EM Dental" width="1500" height="1000" fetchpriority="high"></div>
+      <div class="chip rate">
+        <b>4.8</b>
+        <div><div class="st" aria-hidden="true"><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg></div><small data-t="chip_rate">71 reseñas en Google</small></div>
+      </div>
+      <div class="chip open" id="openChip"><i></i><span id="openTxt" data-t="open_load">Horario: ver abajo</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-sky" id="servicios">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kick" data-t="k_serv">Servicios</span>
+      <h2 data-t="h_serv">Cuidado dental <em>para toda la familia</em></h2>
+      <p class="lead" data-t="l_serv">Lo esencial para mantener su sonrisa sana, explicado con calma por el doctor.</p>
+    </div>
+    <div class="bento">
+      <article class="svc reveal" data-tilt style="--d:0">
+        <div class="ic"><svg class="i"><use href="#i-exam"/></svg></div>
+        <div><h3 data-t="s1">Exámenes</h3><p data-t="s1d">Revisión completa de dientes y encías, con una explicación clara de lo que el doctor encuentra.</p></div>
+      </article>
+      <article class="svc reveal" data-tilt style="--d:1">
+        <div class="ic"><svg class="i"><use href="#i-xray"/></svg></div>
+        <div><h3 data-t="s2">Radiografías</h3><p data-t="s2d">Imágenes que permiten ver lo que no se aprecia a simple vista.</p></div>
+      </article>
+      <article class="svc reveal" data-tilt style="--d:2">
+        <div class="ic"><svg class="i"><use href="#i-clean"/></svg></div>
+        <div><h3 data-t="s3">Limpiezas</h3><p data-t="s3d">Eliminación de placa y sarro para cuidar sus encías y mantener los dientes limpios.</p></div>
+      </article>
+      <article class="svc reveal" data-tilt style="--d:3">
+        <div class="ic"><svg class="i"><use href="#i-tooth"/></svg></div>
+        <div><h3 data-t="s4">Empastes</h3><p data-t="s4d">Reparación de dientes con caries para recuperar su forma y su función.</p></div>
+      </article>
+    </div>
+    <p class="note reveal" data-t-html="note_serv">¿Necesita otro tratamiento? <a href="tel:+13055414677">Llámenos</a> y le confirmamos.</p>
+  </div>
+</section>
+
+<section class="sec sec-white" id="doctor">
+  <div class="wrap">
+    <div class="doc-head">
+      <div class="reveal">
+        <span class="kick" data-t="k_doc">Su doctor</span>
+        <h2 data-t="h_doc">Dr. Ernesto Martinez, <em>y un equipo que lo conoce por su nombre</em></h2>
+      </div>
+      <div class="reveal" style="--d:1">
+        <p class="lead" style="margin-top:0" data-t="l_doc">Odontología general y cosmética en un consultorio de barrio, con atención cercana. Hablamos con usted en el idioma que prefiera.</p>
+        <span class="es-pill"><svg class="i"><use href="#i-lang"/></svg><span data-t="es_pill">Hablamos español · We speak English</span></span>
+      </div>
+    </div>
+    <figure class="doc-fig reveal"><img src="images/equipo.jpg" data-t-alt="alt_doc" alt="El Dr. Martinez y su equipo sonriendo frente al equipo de radiografías del consultorio" width="1500" height="1000" loading="lazy"></figure>
+    <div class="stats">
+      <div class="stat reveal" style="--d:0"><b data-count-to="4.8" data-decimals="1">4.8</b><span data-t="st1">calificación en Google</span></div>
+      <div class="stat reveal" style="--d:1"><b data-count-to="71">71</b><span data-t="st2">reseñas de pacientes en Google</span></div>
+      <div class="stat reveal" style="--d:2"><b data-count-to="5">5</b><span data-t="st3">días a la semana con atención</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-dark" id="resenas">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div>
+        <span class="kick" data-t="k_res">Reseñas</span>
+        <h2 data-t="h_res">Lo que dicen <em>sus pacientes</em></h2>
+      </div>
+      <div class="big-rate">
+        <b>4.8</b>
+        <div><div class="st" aria-hidden="true"><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg></div><small data-t="big_rate">71 reseñas en Google</small></div>
+      </div>
+    </div>
+    <div class="track-wrap reveal" style="--d:1">
+      <div class="track" id="track" tabindex="0" role="region" aria-label="Reseñas de Google">
+        <article class="rcard"><svg class="i q"><use href="#i-quote"/></svg><blockquote lang="en">The staff was wonderful and the doctor was amazing as well. He explained everything in detail and was very gentle throughout the procedure. The assistant, dental hygienist, and receptionist were very kind and attentive. There was no wait time and the appointment went by smoothly. Highly recommend!</blockquote><footer><span><b>Roxana A.</b><br>Google</span><span class="st" aria-label="5 de 5"><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg></span></footer></article>
+        <article class="rcard"><svg class="i q"><use href="#i-quote"/></svg><blockquote lang="en">Great friendly staff and good atmosphere, really good customer service at the front desk, office very clean. Doctor is very nice super thorough and comforting when communicating with you. I was recommended by family members. Definitely recommendable :)</blockquote><footer><span><b>Sandra E.</b><br>Google</span><span class="st" aria-label="5 de 5"><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg></span></footer></article>
+        <article class="rcard"><svg class="i q"><use href="#i-quote"/></svg><blockquote lang="en">I am extremely happy with Dr. Martinez and his team, they are very attentive, friendly and professionals and have an excellent service, they have helped me throughout this journey, I really recommend them 100%. Best Service!</blockquote><footer><span><b>Izairis C.</b><br>Google</span><span class="st" aria-label="5 de 5"><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg></span></footer></article>
+        <article class="rcard"><svg class="i q"><use href="#i-quote"/></svg><blockquote lang="en">The whole team is very gentle, polite and professional. I had a great experience on my first visit! Highly recommended!</blockquote><footer><span><b>Aleksandra G.</b><br>Google</span><span class="st" aria-label="5 de 5"><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg><svg class="i fill"><use href="#i-star"/></svg></span></footer></article>
+      </div>
+      <div class="rev-ctl">
+        <div class="dots" id="dots" role="group" aria-label="Reseñas"></div>
+        <div class="arrows">
+          <button class="arrow" id="prev" type="button" aria-label="Anterior"><svg class="i"><use href="#i-left"/></svg></button>
+          <button class="arrow" id="next" type="button" aria-label="Siguiente"><svg class="i"><use href="#i-right"/></svg></button>
+        </div>
+      </div>
+      <p class="orig" data-t="orig">Reseñas de Google, publicadas en inglés. Se muestran tal cual.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-sky faq" id="preguntas">
+  <div class="wrap faq-grid">
+    <div class="reveal">
+      <span class="kick" data-t="k_faq">Antes de su primera visita</span>
+      <h2 data-t="h_faq">Preguntas <em>frecuentes</em></h2>
+      <p class="lead" data-t="l_faq">Si no encuentra su respuesta, llámenos y se la damos con gusto.</p>
+    </div>
+    <div class="reveal" style="--d:1">
+      <details><summary><span data-t="q1">¿Cómo pido una cita?</span><span class="pl"><svg class="i"><use href="#i-plus"/></svg></span></summary><div class="ans" data-t-html="a1">Llame al <a href="tel:+13055414677">(305) 541-4677</a> o use el formulario de esta página: arma un correo para el consultorio con sus datos.</div></details>
+      <details><summary><span data-t="q2">¿Aceptan mi seguro? ¿Cuánto cuesta una consulta?</span><span class="pl"><svg class="i"><use href="#i-plus"/></svg></span></summary><div class="ans" data-t-html="a2">Depende de su plan y del tratamiento. Llámenos al <a href="tel:+13055414677">(305) 541-4677</a> y se lo confirmamos antes de su visita.</div></details>
+      <details><summary><span data-t="q4">¿Atienden en español?</span><span class="pl"><svg class="i"><use href="#i-plus"/></svg></span></summary><div class="ans" data-t="a4">Sí. Puede llamarnos o escribirnos en español o en inglés.</div></details>
+      <details><summary><span data-t="q5">¿Qué días y horarios atienden?</span><span class="pl"><svg class="i"><use href="#i-plus"/></svg></span></summary><div class="ans" data-t-html="a5">Atendemos lunes, miércoles, jueves, viernes y sábado. Los martes y domingos estamos cerrados. Vea el <a href="#ubicacion">horario completo</a>.</div></details>
+      <details><summary><span data-t="q6">¿Atienden los sábados?</span><span class="pl"><svg class="i"><use href="#i-plus"/></svg></span></summary><div class="ans" data-t="a6">Sí, los sábados de 9:00 a. m. a 1:30 p. m.</div></details>
+      <details><summary><span data-t="q7">¿Dónde queda el consultorio?</span><span class="pl"><svg class="i"><use href="#i-plus"/></svg></span></summary><div class="ans" data-t-html="a7">En 2742 SW 8th St, Suite 219, Little Havana, Miami. <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=2742+SW+8th+St+Suite+219+Miami+FL+33135">Cómo llegar</a>.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-white" id="ubicacion">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kick" data-t="k_loc">Cómo llegar</span>
+      <h2 data-t="h_loc">En el corazón de <em>Little Havana</em></h2>
+    </div>
+    <div class="loc">
+      <div class="map reveal"><iframe title="Mapa de EM Dental" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=2742+SW+8th+St+Suite+219+Miami+FL+33135&output=embed"></iframe></div>
+      <div class="info reveal" style="--d:1">
+        <p class="addr"><svg class="i"><use href="#i-pin"/></svg><span>2742 SW 8th St, Suite 219<br>Miami, FL 33135</span></p>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span data-t="d1" data-today-key="today">Lunes</span><span class="tm" data-h="08:00-18:00">8:00 a. m. - 6:00 p. m.</span></li>
+          <li data-d="2" class="closed"><span data-t="d2">Martes</span><span class="tm" data-h="">Cerrado</span></li>
+          <li data-d="3"><span data-t="d3">Miércoles</span><span class="tm" data-h="08:00-18:00">8:00 a. m. - 6:00 p. m.</span></li>
+          <li data-d="4"><span data-t="d4">Jueves</span><span class="tm" data-h="08:00-17:00">8:00 a. m. - 5:00 p. m.</span></li>
+          <li data-d="5"><span data-t="d5">Viernes</span><span class="tm" data-h="08:00-14:00">8:00 a. m. - 2:00 p. m.</span></li>
+          <li data-d="6"><span data-t="d6">Sábado</span><span class="tm" data-h="09:00-13:30">9:00 a. m. - 1:30 p. m.</span></li>
+          <li data-d="0" class="closed"><span data-t="d0">Domingo</span><span class="tm" data-h="">Cerrado</span></li>
+        </ul>
+        <div class="loc-cta">
+          <a class="btn btn-navy" data-magnetic target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=2742+SW+8th+St+Suite+219+Miami+FL+33135"><svg class="i"><use href="#i-pin"/></svg><span data-t="dir">Cómo llegar</span></a>
+          <a class="btn btn-line" data-magnetic href="tel:+13055414677"><svg class="i"><use href="#i-phone"/></svg><span data-t="call">Llamar</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contacto">
+  <div class="wrap c-grid">
+    <div class="reveal">
+      <h2 data-t="h_c">Pida su cita <em style="color:var(--cyan)">hoy</em></h2>
+      <p class="lead" data-t="l_c">Llámenos y lo atendemos. Si prefiere escribir, deje sus datos y le armamos el correo.</p>
+      <a class="callbig" href="tel:+13055414677"><span class="ci"><svg class="i" style="width:28px;height:28px"><use href="#i-phone"/></svg></span>(305) 541-4677</a>
+      <p class="mailline"><span data-t="or_mail">También por correo:</span> <a href="mailto:em-dental@outlook.com">em-dental@outlook.com</a></p>
+    </div>
+    <form class="form reveal" id="apptForm" style="--d:1" novalidate>
+      <div class="fwrap">
+        <h3 data-t="f_h">Solicitar una cita</h3>
+        <div class="fgrid">
+          <div class="field"><label for="f-n" data-t="f_name">Nombre</label><input id="f-n" name="n" autocomplete="name" required><span class="err" data-t="f_err">Complete este campo</span></div>
+          <div class="field"><label for="f-p" data-t="f_phone">Teléfono</label><input id="f-p" name="p" type="tel" inputmode="tel" autocomplete="tel" required><span class="err" data-t="f_err">Complete este campo</span></div>
+          <div class="field"><label for="f-m" data-t="f_why">Motivo</label>
+            <select id="f-m" name="m">
+              <option value="exam" data-t="s1">Exámenes</option>
+              <option value="xray" data-t="s2">Radiografías</option>
+              <option value="clean" data-t="s3">Limpiezas</option>
+              <option value="fill" data-t="s4">Empastes</option>
+              <option value="other" data-t="f_other">Otro / no estoy seguro</option>
+            </select></div>
+          <div class="field"><label for="f-d" data-t="f_day">Día preferido</label>
+            <select id="f-d" name="d">
+              <option value="d1" data-t="d1">Lunes</option>
+              <option value="d3" data-t="d3">Miércoles</option>
+              <option value="d4" data-t="d4">Jueves</option>
+              <option value="d5" data-t="d5">Viernes</option>
+              <option value="d6" data-t="d6">Sábado</option>
+            </select></div>
+        </div>
+        <button class="btn btn-navy" data-magnetic type="submit"><svg class="i"><use href="#i-mail"/></svg><span data-t="f_send">Armar mi solicitud</span></button>
+        <p class="fine" data-t="f_fine">Se abre un correo para el consultorio. Esta página no guarda sus datos.</p>
+      </div>
+      <div class="ok" role="status" aria-live="polite">
+        <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36"/><path d="M24 41l11 11 21-24"/></svg>
+        <h3 data-t="ok_h">¡Listo!</h3>
+        <p data-t="ok_p">Le abrimos el correo para que lo envíe. Si no se abrió, use el botón.</p>
+        <a class="btn btn-navy" id="mailAgain" href="mailto:em-dental@outlook.com"><svg class="i"><use href="#i-mail"/></svg><span data-t="ok_btn">Abrir el correo</span></a>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-brand">EM<span>Dental</span></div>
+        <p class="f-note" data-t="f_about">Odontología general y cosmética. Consultorio del Dr. Ernesto Martinez, DDS, en Little Havana, Miami.</p>
+      </div>
+      <div class="ln">
+        <h4 data-t="f_contact">Contacto</h4>
+        <ul>
+          <li><a href="tel:+13055414677">(305) 541-4677</a></li>
+          <li><a href="mailto:em-dental@outlook.com">em-dental@outlook.com</a></li>
+          <li>2742 SW 8th St, Suite 219<br>Miami, FL 33135</li>
+        </ul>
+      </div>
+      <div class="ln">
+        <h4 data-t="f_links">Enlaces</h4>
+        <ul>
+          <li><a href="#servicios" data-t="n_serv">Servicios</a></li>
+          <li><a href="#resenas" data-t="n_res">Reseñas</a></li>
+          <li><a href="#preguntas" data-t="n_faq">Preguntas</a></li>
+          <li><a href="#ubicacion" data-t="n_loc">Ubicación</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="f-bot" data-t="f_bot">Sitio de demostración. Las reseñas y calificaciones son de Google Maps.</p>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a class="btn btn-cyan" href="tel:+13055414677"><svg class="i"><use href="#i-phone"/></svg><span data-t="call">Llamar</span></a>
+  <a class="btn btn-ghost" href="#contacto"><svg class="i"><use href="#i-cal"/></svg><span data-t="book">Pedir cita</span></a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,c){return (c||document).querySelector(s)};
+var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var fine=matchMedia("(hover: hover) and (pointer: fine)").matches;
+function safe(fn,n){try{fn()}catch(e){console.warn("["+n+"]",e)}}
+
+var HOURS={0:"",1:"08:00-18:00",2:"",3:"08:00-18:00",4:"08:00-17:00",5:"08:00-14:00",6:"09:00-13:30"};
+var T={
+ es:{
+  skip:"Saltar al contenido",n_serv:"Servicios",n_doc:"Su doctor",n_res:"Reseñas",n_faq:"Preguntas",n_loc:"Ubicación",book:"Pedir cita",call:"Llamar",call_n:"Llamar (305) 541-4677",
+  hello_d:"Odontología general y cosmética",alt_hero:"El Dr. Ernesto Martinez con su equipo en el consultorio de EM Dental",alt_doc:"El Dr. Martinez y su equipo sonriendo frente al equipo de radiografías del consultorio",h1:"Su dentista de familia en <em>Little Havana</em>",sub:"Exámenes, radiografías, limpiezas y empastes con el Dr. Martinez y su equipo.",
+  chip_rate:"71 reseñas en Google",open_load:"Horario: ver abajo",
+  k_serv:"Servicios",h_serv:"Cuidado dental <em>para toda la familia</em>",l_serv:"Lo esencial para mantener su sonrisa sana, explicado con calma por el doctor.",
+  s1:"Exámenes",s1d:"Revisión completa de dientes y encías, con una explicación clara de lo que el doctor encuentra.",
+  s2:"Radiografías",s2d:"Imágenes que permiten ver lo que no se aprecia a simple vista.",
+  s3:"Limpiezas",s3d:"Eliminación de placa y sarro para cuidar sus encías y mantener los dientes limpios.",
+  s4:"Empastes",s4d:"Reparación de dientes con caries para recuperar su forma y su función.",
+  note_serv:"¿Necesita otro tratamiento? <a href=\"tel:+13055414677\">Llámenos</a> y le confirmamos.",
+  k_doc:"Su doctor",h_doc:"Dr. Ernesto Martinez, <em>y un equipo que lo conoce por su nombre</em>",l_doc:"Odontología general y cosmética en un consultorio de barrio, con atención cercana. Hablamos con usted en el idioma que prefiera.",es_pill:"Hablamos español · We speak English",
+  st1:"calificación en Google",st2:"reseñas de pacientes en Google",st3:"días a la semana con atención",
+  k_res:"Reseñas",h_res:"Lo que dicen <em>sus pacientes</em>",big_rate:"71 reseñas en Google",orig:"Reseñas de Google, publicadas en inglés. Se muestran tal cual.",
+  k_faq:"Antes de su primera visita",h_faq:"Preguntas <em>frecuentes</em>",l_faq:"Si no encuentra su respuesta, llámenos y se la damos con gusto.",
+  q1:"¿Cómo pido una cita?",a1:"Llame al <a href=\"tel:+13055414677\">(305) 541-4677</a> o use el formulario de esta página: arma un correo para el consultorio con sus datos.",
+  q2:"¿Aceptan mi seguro? ¿Cuánto cuesta una consulta?",a2:"Depende de su plan y del tratamiento. Llámenos al <a href=\"tel:+13055414677\">(305) 541-4677</a> y se lo confirmamos antes de su visita.",
+  q4:"¿Atienden en español?",a4:"Sí. Puede llamarnos o escribirnos en español o en inglés.",
+  q5:"¿Qué días y horarios atienden?",a5:"Atendemos lunes, miércoles, jueves, viernes y sábado. Los martes y domingos estamos cerrados. Vea el <a href=\"#ubicacion\">horario completo</a>.",
+  q6:"¿Atienden los sábados?",a6:"Sí, los sábados de 9:00 a. m. a 1:30 p. m.",q7:"¿Dónde queda el consultorio?",a7:"En 2742 SW 8th St, Suite 219, Little Havana, Miami. <a target=\"_blank\" rel=\"noopener\" href=\"https://www.google.com/maps/search/?api=1&query=2742+SW+8th+St+Suite+219+Miami+FL+33135\">Cómo llegar</a>.",
+  k_loc:"Cómo llegar",h_loc:"En el corazón de <em>Little Havana</em>",dir:"Cómo llegar",
+  d0:"Domingo",d1:"Lunes",d2:"Martes",d3:"Miércoles",d4:"Jueves",d5:"Viernes",d6:"Sábado",closed:"Cerrado",today:"Hoy",
+  h_c:"Pida su cita <em style=\"color:var(--cyan)\">hoy</em>",l_c:"Llámenos y lo atendemos. Si prefiere escribir, deje sus datos y le armamos el correo.",or_mail:"También por correo:",
+  f_h:"Solicitar una cita",f_name:"Nombre",f_phone:"Teléfono",f_why:"Motivo",f_day:"Día preferido",f_other:"Otro / no estoy seguro",f_err:"Complete este campo",f_send:"Armar mi solicitud",f_fine:"Se abre un correo para el consultorio. Esta página no guarda sus datos.",
+  ok_h:"¡Listo!",ok_p:"Le abrimos el correo para que lo envíe. Si no se abrió, use el botón.",ok_btn:"Abrir el correo",
+  f_about:"Odontología general y cosmética. Consultorio del Dr. Ernesto Martinez, DDS, en Little Havana, Miami.",f_contact:"Contacto",f_links:"Enlaces",f_bot:"Sitio de demostración. Las reseñas y calificaciones son de Google Maps.",
+  open_now:function(t){return "Abierto ahora, hasta las "+t},closed_now:function(d,t){return "Cerrado, abre "+d+" a las "+t},
+  title:"EM Dental | Odontología general y cosmética en Little Havana, Miami",desc:"EM Dental, odontología general y cosmética del Dr. Ernesto Martinez en Little Havana, Miami. Exámenes, radiografías, limpiezas y empastes. Llame al (305) 541-4677.",
+  mail_sub:"Solicitud de cita",mail_body:function(o){return "Hola, quisiera pedir una cita en EM Dental.\n\nNombre: "+o.n+"\nTeléfono: "+o.p+"\nMotivo: "+o.m+"\nDía preferido: "+o.d+"\n\nGracias."},
+  prev:"Anterior",next:"Siguiente",menu:"Menú"
+ },
+ en:{
+  skip:"Skip to content",n_serv:"Services",n_doc:"Your dentist",n_res:"Reviews",n_faq:"FAQ",n_loc:"Location",book:"Book a visit",call:"Call",call_n:"Call (305) 541-4677",
+  hello_d:"General & Cosmetic Dentistry",alt_hero:"Dr. Ernesto Martinez with his team at the EM Dental office",alt_doc:"Dr. Martinez and his team smiling in front of the office X-ray equipment",h1:"Your family dentist in <em>Little Havana</em>",sub:"Exams, X-rays, cleanings and fillings with Dr. Martinez and his team.",
+  chip_rate:"71 Google reviews",open_load:"Hours: see below",
+  k_serv:"Services",h_serv:"Dental care <em>for the whole family</em>",l_serv:"The essentials to keep your smile healthy, explained calmly by the doctor.",
+  s1:"Exams",s1d:"A complete check of your teeth and gums, with a clear explanation of what the doctor finds.",
+  s2:"X-rays",s2d:"Images that show what cannot be seen at a glance.",
+  s3:"Cleanings",s3d:"Plaque and tartar removal to look after your gums and keep your teeth clean.",
+  s4:"Fillings",s4d:"Repair of teeth with cavities to restore their shape and function.",
+  note_serv:"Need another treatment? <a href=\"tel:+13055414677\">Call us</a> and we will let you know.",
+  k_doc:"Your dentist",h_doc:"Dr. Ernesto Martinez, <em>and a team that knows you by name</em>",l_doc:"General & Cosmetic Dentistry in a neighborhood practice with personal attention. We speak with you in the language you prefer.",es_pill:"We speak English · Hablamos español",
+  st1:"rating on Google",st2:"patient reviews on Google",st3:"days a week open",
+  k_res:"Reviews",h_res:"What <em>patients say</em>",big_rate:"71 Google reviews",orig:"Google reviews, shown exactly as posted.",
+  k_faq:"Before your first visit",h_faq:"Frequently asked <em>questions</em>",l_faq:"If you do not find your answer, call us and we will gladly help.",
+  q1:"How do I book a visit?",a1:"Call <a href=\"tel:+13055414677\">(305) 541-4677</a> or use the form on this page: it drafts an email to the office with your details.",
+  q2:"Do you accept my insurance? How much is a visit?",a2:"It depends on your plan and the treatment. Call us at <a href=\"tel:+13055414677\">(305) 541-4677</a> and we will confirm before your visit.",
+  q4:"Do you speak Spanish?",a4:"Yes. You can call or write to us in Spanish or English.",
+  q5:"Which days and hours are you open?",a5:"We are open Monday, Wednesday, Thursday, Friday and Saturday. We are closed on Tuesdays and Sundays. See the <a href=\"#ubicacion\">full schedule</a>.",
+  q6:"Are you open on Saturdays?",a6:"Yes, on Saturdays from 9:00 AM to 1:30 PM.",q7:"Where is the office?",a7:"At 2742 SW 8th St, Suite 219, in Little Havana, Miami. <a target=\"_blank\" rel=\"noopener\" href=\"https://www.google.com/maps/search/?api=1&query=2742+SW+8th+St+Suite+219+Miami+FL+33135\">Get directions</a>.",
+  k_loc:"Getting here",h_loc:"In the heart of <em>Little Havana</em>",dir:"Get directions",
+  d0:"Sunday",d1:"Monday",d2:"Tuesday",d3:"Wednesday",d4:"Thursday",d5:"Friday",d6:"Saturday",closed:"Closed",today:"Today",
+  h_c:"Book your visit <em style=\"color:var(--cyan)\">today</em>",l_c:"Call and we will take care of you. If you prefer to write, leave your details and we will draft the email.",or_mail:"Or by email:",
+  f_h:"Request a visit",f_name:"Name",f_phone:"Phone",f_why:"Reason",f_day:"Preferred day",f_other:"Other / not sure",f_err:"Please fill in this field",f_send:"Draft my request",f_fine:"An email to the office opens. This page does not store your details.",
+  ok_h:"All set!",ok_p:"We opened the email so you can send it. If it did not open, use the button.",ok_btn:"Open the email",
+  f_about:"General & Cosmetic Dentistry. Office of Dr. Ernesto Martinez, DDS, in Little Havana, Miami.",f_contact:"Contact",f_links:"Links",f_bot:"Demo site. Reviews and ratings are from Google Maps.",
+  open_now:function(t){return "Open now, until "+t},closed_now:function(d,t){return "Closed, opens "+d+" at "+t},
+  title:"EM Dental | General & Cosmetic Dentistry in Little Havana, Miami",desc:"EM Dental, general and cosmetic dentistry by Dr. Ernesto Martinez in Little Havana, Miami. Exams, X-rays, cleanings and fillings. Call (305) 541-4677.",
+  mail_sub:"Appointment request",mail_body:function(o){return "Hello, I would like to book a visit at EM Dental.\n\nName: "+o.n+"\nPhone: "+o.p+"\nReason: "+o.m+"\nPreferred day: "+o.d+"\n\nThank you."},
+  prev:"Previous",next:"Next",menu:"Menu"
+ }
+};
+var lang="es";
+try{var sv=localStorage.getItem("em-lang");if(sv==="en"||sv==="es")lang=sv}catch(e){}
+
+function fmt(hhmm,l){var p=hhmm.split(":"),h=+p[0],m=p[1];var ap=h>=12?(l==="es"?"p. m.":"PM"):(l==="es"?"a. m.":"AM");var h12=h%12||12;return h12+":"+m+" "+ap}
+function range(r,l){if(!r)return T[l].closed;var a=r.split("-");return fmt(a[0],l)+" - "+fmt(a[1],l)}
+function nyNow(){
+  var f=new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+  var o={};f.forEach(function(p){o[p.type]=p.value});
+  var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+  var h=+o.hour;if(h===24)h=0;
+  return {d:map[o.weekday],min:h*60+ +o.minute};
+}
+function toMin(s){var p=s.split(":");return +p[0]*60+ +p[1]}
+function updateOpen(){
+  var chip=$("#openChip"),txt=$("#openTxt");if(!chip||!txt)return;
+  var n=nyNow(),L=T[lang],r=HOURS[n.d],open=false,msg="";
+  if(r){var a=r.split("-"),s=toMin(a[0]),e=toMin(a[1]);if(n.min>=s&&n.min<e){open=true;msg=L.open_now(fmt(a[1],lang))}}
+  if(!open){
+    for(var k=0;k<=7;k++){
+      var dd=(n.d+k)%7,rr=HOURS[dd];if(!rr)continue;
+      var st=toMin(rr.split("-")[0]);
+      if(k===0&&n.min>=st)continue;
+      var day=k===0?(lang==="es"?"hoy":"today"):k===1?(lang==="es"?"mañana":"tomorrow"):L["d"+dd];
+      msg=L.closed_now(day,fmt(rr.split("-")[0],lang));break;
+    }
+  }
+  txt.textContent=msg;chip.classList.toggle("is-open",open);
+}
+function markToday(){
+  var n=nyNow();
+  $$("#hours li").forEach(function(li){
+    var is=+li.getAttribute("data-d")===n.d;li.classList.toggle("today",is);
+    var s=li.firstElementChild;s.setAttribute("data-today",is?T[lang].today:"");
+    if(!is)s.removeAttribute("data-today");
+  });
+}
+function applyLang(l){
+  lang=l;var L=T[l];
+  document.documentElement.lang=l;document.title=L.title;var md=$("#metaDesc");if(md)md.setAttribute("content",L.desc);
+  $$("[data-t-alt]").forEach(function(el){el.setAttribute("alt",L[el.getAttribute("data-t-alt")])});
+  $$("[data-t]").forEach(function(el){var k=el.getAttribute("data-t");if(L[k]!=null&&typeof L[k]==="string")el.innerHTML=L[k]});
+  $$("[data-t-html]").forEach(function(el){var k=el.getAttribute("data-t-html");if(L[k])el.innerHTML=L[k]});
+  $$("#hours li").forEach(function(li){var tm=$(".tm",li);tm.textContent=range(tm.getAttribute("data-h"),l)});
+  $$("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===l?"true":"false")});
+  var pv=$("#prev"),nx=$("#next"),bg=$("#burger");
+  if(pv)pv.setAttribute("aria-label",L.prev);if(nx)nx.setAttribute("aria-label",L.next);if(bg)bg.setAttribute("aria-label",L.menu);
+  markToday();updateOpen();
+  try{localStorage.setItem("em-lang",l)}catch(e){}
+}
+function initLang(){
+  $$("[data-lang]").forEach(function(b){b.addEventListener("click",function(){applyLang(b.getAttribute("data-lang"))})});
+  applyLang(lang);setInterval(updateOpen,60000);
+}
+function initSplash(){
+  var s=$("#splash");if(!s)return;
+  var hide=function(){s.classList.add("hide")};
+  if(reduced){hide();return}
+  if(document.readyState==="complete")setTimeout(hide,900);else window.addEventListener("load",function(){setTimeout(hide,900)});
+  setTimeout(hide,2200);
+}
+function initNav(){
+  var nav=$("#nav"),links=$("#links"),b=$("#burger");
+  var on=function(){nav.classList.toggle("scrolled",window.scrollY>12)};on();
+  window.addEventListener("scroll",on,{passive:true});
+  b.addEventListener("click",function(){var o=links.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false")});
+  links.addEventListener("click",function(e){if(e.target.closest("a")){links.classList.remove("open");b.setAttribute("aria-expanded","false")}});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"){links.classList.remove("open");b.setAttribute("aria-expanded","false")}});
+}
+function initReveal(){
+  var els=$$(".reveal");
+  if(!("IntersectionObserver" in window)||reduced){els.forEach(function(e){e.classList.add("in")});return}
+  var io=new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");o.unobserve(x.target)}})},{threshold:.05,rootMargin:"0px 0px -5% 0px"});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.add("in")})},3500);
+}
+function initCount(){
+  var els=$$("[data-count-to]");if(!els.length)return;
+  var run=function(el){
+    var to=parseFloat(el.getAttribute("data-count-to")),dec=+el.getAttribute("data-decimals")||0;
+    var fmtn=function(v){return dec?v.toFixed(dec):String(Math.round(v))};
+    if(reduced){el.textContent=fmtn(to);return}
+    var t0=performance.now(),dur=1300;
+    (function tick(now){var p=Math.min(1,(now-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=fmtn(to*e);if(p<1)requestAnimationFrame(tick);else el.textContent=fmtn(to)})(t0);
+  };
+  if(!("IntersectionObserver" in window)){return}
+  var io=new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){run(x.target);o.unobserve(x.target)}})},{threshold:.6});
+  els.forEach(function(e){io.observe(e)});
+}
+function initTilt(){
+  if(!fine||reduced)return;
+  $$("[data-tilt]").forEach(function(c){
+    c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="perspective(900px) rotateY("+(x*6)+"deg) rotateX("+(-y*6)+"deg) translateY(-6px)"});
+    c.addEventListener("mouseleave",function(){c.style.transform=""});
+  });
+}
+function initMagnetic(){
+  if(!fine||reduced)return;
+  $$("[data-magnetic]").forEach(function(b){
+    b.addEventListener("mousemove",function(e){var r=b.getBoundingClientRect();b.style.transform="translate("+((e.clientX-r.left-r.width/2)*.2)+"px,"+((e.clientY-r.top-r.height/2)*.28-2)+"px)"});
+    b.addEventListener("mouseleave",function(){b.style.transform=""});
+  });
+}
+function initCarousel(){
+  var tr=$("#track"),dots=$("#dots"),pv=$("#prev"),nx=$("#next");if(!tr)return;
+  var cards=$$(".rcard",tr);
+  cards.forEach(function(c,i){var d=document.createElement("button");d.type="button";d.setAttribute("aria-label",(i+1)+" / "+cards.length);d.addEventListener("click",function(){go(i)});dots.appendChild(d)});
+  function step(){var c=cards[0],g=parseFloat(getComputedStyle(tr).columnGap)||16;return c.getBoundingClientRect().width+g}
+  function idx(){return Math.max(0,Math.min(cards.length-1,Math.round(tr.scrollLeft/step())))}
+  function go(i){tr.scrollTo({left:i*step(),behavior:reduced?"auto":"smooth"})}
+  function sync(){var i=idx(),ds=$$("button",dots);ds.forEach(function(d,k){d.setAttribute("aria-current",k===i?"true":"false")})}
+  pv.addEventListener("click",function(){go(Math.max(0,idx()-1))});
+  nx.addEventListener("click",function(){var i=idx();go(i>=cards.length-1?0:i+1)});
+  tr.addEventListener("scroll",function(){requestAnimationFrame(sync)},{passive:true});
+  tr.addEventListener("keydown",function(e){if(e.key==="ArrowRight"){e.preventDefault();nx.click()}if(e.key==="ArrowLeft"){e.preventDefault();pv.click()}});
+  sync();
+}
+function initBar(){
+  var bar=$("#mbar"),hero=$(".hero");if(!bar||!hero)return;
+  if(!("IntersectionObserver" in window)){bar.classList.add("show");return}
+  new IntersectionObserver(function(en){var e=en[0];bar.classList.toggle("show",!e.isIntersecting&&e.boundingClientRect.bottom<0)},{threshold:0}).observe(hero);
+}
+function initForm(){
+  var f=$("#apptForm");if(!f)return;
+  var again=$("#mailAgain");
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var bad=null;
+    $$("input[required]",f).forEach(function(i){var w=i.closest(".field"),b=!i.value.trim();w.classList.toggle("invalid",b);if(b&&!bad)bad=i});
+    if(bad){bad.focus();return}
+    var L=T[lang];
+    var mSel=$("#f-m",f),dSel=$("#f-d",f);
+    var o={n:$("#f-n",f).value.trim(),p:$("#f-p",f).value.trim(),m:mSel.options[mSel.selectedIndex].text,d:dSel.options[dSel.selectedIndex].text};
+    var href="mailto:em-dental@outlook.com?subject="+encodeURIComponent(L.mail_sub)+"&body="+encodeURIComponent(L.mail_body(o));
+    again.setAttribute("href",href);
+    f.classList.add("sent");
+    setTimeout(function(){window.location.href=href},reduced?0:900);
+  });
+  $$("input[required]",f).forEach(function(i){i.addEventListener("input",function(){i.closest(".field").classList.remove("invalid")})});
+}
+safe(initLang,"lang");safe(initSplash,"splash");safe(initNav,"nav");safe(initReveal,"reveal");safe(initCount,"count");safe(initTilt,"tilt");safe(initMagnetic,"mag");safe(initCarousel,"carousel");safe(initForm,"form");safe(initBar,"bar");
+})();
+</script>
+</body>
+</html>
