@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Westchester Dental | Dentista en Westchester, Miami</title>
+<meta name="description" content="Westchester Dental, con la Dra. Diangelly Estrada, DMD, en Coral Way, Miami: odontología general, exámenes, radiografías, limpiezas, implantes y blanqueamiento. Hablamos español.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0E3B3C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230E3B3C'/%3E%3Ctext x='32' y='46' font-family='Arial,sans-serif' font-size='38' font-weight='700' text-anchor='middle' fill='%2362A9A8'%3EW%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@500;600;700;800&family=Albert+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --teal:#62A9A8;          /* logo */
+  --gray:#B4B4BC;          /* logo */
+  --teal-700:#1B6564;
+  --teal-900:#0E3B3C;
+  --teal-950:#081F20;
+  --tint:#E4F1F0;
+  --mist:#F0F2F5;
+  --ink:#14292A;
+  --muted:#4B6061;
+  --line:rgba(20,41,42,.12);
+  --white:#fff;
+  --r:22px;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --ease-io:cubic-bezier(.77,0,.175,1);
+  --head:"Rethink Sans",system-ui,sans-serif;
+  --body:"Albert Sans",system-ui,sans-serif;
+  --shadow:0 24px 50px -28px rgba(14,59,60,.45);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);font-size:17px;line-height:1.6;color:var(--ink);background:var(--white);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--head);line-height:1.08;margin:0;letter-spacing:-.02em;font-weight:700}
+p{margin:0}
+ul{list-style:none;margin:0;padding:0}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- splash ---------- */
+#splash{position:fixed;inset:0;z-index:100;background:var(--teal-900);display:grid;place-items:center;transition:opacity .5s var(--ease),visibility .5s}
+#splash.hide{opacity:0;visibility:hidden;pointer-events:none}
+#splash .plate{background:#fff;border-radius:var(--r);padding:16px 22px;animation:pop .7s var(--ease) both}
+#splash img{height:72px;width:auto}
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(8px)}to{opacity:1;transform:none}}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:2px solid transparent;font-family:var(--head);font-weight:700;font-size:17px;white-space:nowrap;
+  transition:transform .2s var(--ease),box-shadow .25s var(--ease),background-color .2s ease,color .2s ease,border-color .2s ease}
+.btn:active{transform:scale(.97)!important}
+.btn-white{background:#fff;color:var(--teal-900)}
+.btn-teal{background:var(--teal-700);color:#fff}
+.btn-dark{background:var(--teal-900);color:#fff}
+.btn-line{border-color:rgba(255,255,255,.55);color:#fff;background:rgba(255,255,255,.06)}
+.btn-line-dark{border-color:var(--teal-700);color:var(--teal-700)}
+@media (hover:hover) and (pointer:fine){
+  .btn-white:hover{box-shadow:0 14px 30px -10px rgba(0,0,0,.45);transform:translateY(-2px)}
+  .btn-teal:hover,.btn-dark:hover{box-shadow:0 14px 30px -12px rgba(14,59,60,.7);transform:translateY(-2px);background:var(--teal-900)}
+  .btn-line:hover{background:rgba(255,255,255,.16);border-color:#fff}
+  .btn-line-dark:hover{background:var(--teal-700);color:#fff}
+}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;z-index:60;top:14px;left:0;right:0;pointer-events:none}
+.nav-in{pointer-events:auto;width:min(1180px,100% - 28px);margin-inline:auto;min-height:76px;display:flex;align-items:center;gap:18px;padding:8px 12px 8px 16px;border-radius:999px;
+  background:#fff;box-shadow:0 10px 36px -16px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.6);transition:box-shadow .3s var(--ease),background-color .3s}
+.nav.scrolled .nav-in{box-shadow:0 14px 40px -18px rgba(14,59,60,.6)}
+.logo img{height:60px;width:auto;object-fit:contain}
+.links{display:flex;gap:4px;margin-left:auto}
+.links a{display:block;padding:10px 14px;border-radius:999px;font-weight:600;font-size:16px;color:var(--muted);transition:background-color .2s ease,color .2s ease}
+@media (hover:hover){.links a:hover{background:var(--tint);color:var(--teal-900)}}
+.nav-r{display:flex;align-items:center;gap:10px}
+.lang{display:flex;background:var(--mist);border-radius:999px;padding:3px}
+.lang button{border:0;background:transparent;min-width:44px;min-height:40px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.04em;color:var(--muted);transition:background-color .2s ease,color .2s ease}
+.lang button[aria-pressed="true"]{background:var(--teal-700);color:#fff}
+.nav .btn{min-height:46px;padding:0 20px;font-size:16px}
+.burger{display:none;width:48px;height:48px;border:0;border-radius:50%;background:var(--tint);position:relative}
+.burger span,.burger span::before,.burger span::after{position:absolute;left:14px;width:20px;height:2px;background:var(--teal-900);border-radius:2px;transition:transform .25s var(--ease),opacity .2s}
+.burger span{top:23px}.burger span::before{content:"";top:-6px;left:0}.burger span::after{content:"";top:6px;left:0}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(140deg,var(--teal-950) 0%,var(--teal-900) 45%,#15595A 100%);padding:150px 0 90px;min-height:100dvh;display:flex;align-items:center}
+.m{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;pointer-events:none}
+.m1{width:520px;height:520px;background:var(--teal);left:-140px;top:-120px;animation:drift 18s ease-in-out infinite alternate}
+.m2{width:460px;height:460px;background:#2E8584;right:-100px;bottom:-140px;animation:drift 22s ease-in-out infinite alternate-reverse}
+.m3{width:300px;height:300px;background:var(--gray);opacity:.2;left:45%;top:20%;animation:drift 26s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(70px,50px) scale(1.12)}}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(1200px 600px at 20% 0%,rgba(255,255,255,.06),transparent 60%);pointer-events:none}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(40px,5.4vw,70px);font-weight:800;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:#8FD0CE}
+.hero .sub{margin-top:22px;font-size:clamp(18px,1.7vw,21px);max-width:34ch;color:rgba(255,255,255,.88)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chip{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:6px 16px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-weight:600;font-size:16px}
+.chip .stars{display:flex;gap:2px;color:#F3C969}
+.chip .stars .i{width:16px;height:16px;fill:currentColor;stroke:none}
+.chip .pulse{width:10px;height:10px;border-radius:50%;background:#58D68D;box-shadow:0 0 0 0 rgba(88,214,141,.7);animation:ping 2s infinite}
+.chip.closed .pulse{background:var(--gray);animation:none}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(88,214,141,0)}100%{box-shadow:0 0 0 0 rgba(88,214,141,0)}}
+.arch{position:relative;justify-self:center;width:min(100%,430px)}
+.arch .frame{aspect-ratio:4/5;border-radius:999px 999px 28px 28px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 0 8px rgba(255,255,255,.1)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:52% 50%}
+.arch .tag{position:absolute;left:-22px;bottom:34px;display:flex;align-items:center;gap:12px;background:#fff;color:var(--ink);padding:12px 18px 12px 14px;border-radius:var(--r);box-shadow:0 20px 40px -18px rgba(0,0,0,.6);animation:bob 6s ease-in-out infinite}
+.arch .tag .i{color:var(--teal-700);width:26px;height:26px}
+.arch .tag b{display:block;font-family:var(--head);font-size:16px;line-height:1.2}
+.arch .tag small{font-size:14px;color:var(--muted)}
+@keyframes bob{50%{transform:translateY(-8px)}}
+
+/* ---------- sections ---------- */
+.sec{padding:110px 0;position:relative}
+.sec.tint{background:var(--tint)}
+.sec.mist{background:var(--mist)}
+.sec h2{font-size:clamp(32px,4vw,50px)}
+.lead{margin-top:16px;color:var(--muted);font-size:19px;max-width:52ch}
+.dark .lead{color:rgba(255,255,255,.8)}
+
+/* proof strip */
+.proof{padding:46px 0;background:#fff;border-bottom:1px solid var(--line)}
+.proof ul{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.proof li{display:flex;align-items:center;gap:18px}
+.proof .big{font-family:var(--head);font-weight:800;font-size:clamp(40px,5vw,60px);line-height:1;color:var(--teal-700);letter-spacing:-.03em}
+.proof .big small{font-size:.5em;color:var(--teal)}
+.proof p{font-weight:600;color:var(--muted);max-width:18ch;line-height:1.3}
+.proof .ico{width:60px;height:60px;border-radius:50%;background:var(--tint);color:var(--teal-700);display:grid;place-items:center}
+.proof .ico .i{width:28px;height:28px}
+
+/* services (bento) */
+.svc{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:48px}
+.card{position:relative;background:#fff;border-radius:var(--r);padding:30px;box-shadow:0 1px 0 var(--line),var(--shadow);overflow:hidden;
+  transition:transform .35s var(--ease),box-shadow .3s var(--ease)}
+.card .ico{width:58px;height:58px;border-radius:18px;background:var(--tint);color:var(--teal-700);display:grid;place-items:center;transition:background-color .25s ease,color .25s ease,transform .35s var(--ease)}
+.card .ico .i{width:30px;height:30px}
+.card h3{font-size:25px;margin-top:22px}
+.card p{margin-top:10px;color:var(--muted)}
+@media (hover:hover) and (pointer:fine){
+  .card:hover{box-shadow:0 30px 60px -26px rgba(14,59,60,.55)}
+  .card:hover .ico{background:var(--teal-700);color:#fff;transform:rotate(-6deg) scale(1.06)}
+}
+.svc .card:nth-child(1){grid-column:span 2}
+.svc .card:nth-child(2){grid-column:span 2}
+.svc .card:nth-child(3){grid-column:span 2}
+.svc .card:nth-child(4){grid-column:span 3;background:linear-gradient(135deg,var(--teal-900),var(--teal-700));color:#fff;display:flex;flex-direction:column;justify-content:space-between}
+.svc .card:nth-child(4) p{color:rgba(255,255,255,.82)}
+.svc .card:nth-child(4) .ico{background:rgba(255,255,255,.14);color:#fff}
+.svc .card:nth-child(4) a{margin-top:22px;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-family:var(--head)}
+.svc .card:nth-child(5){grid-column:span 3;background:linear-gradient(135deg,#fff 0%,#fff 40%,#CFE7E6 100%)}
+
+/* reviews */
+.dark{background:var(--teal-700);color:#fff}
+.rv-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.ctrl{display:flex;gap:10px}
+.ctrl button{width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(255,255,255,.4);background:transparent;color:#fff;display:grid;place-items:center;transition:background-color .2s ease,color .2s ease,transform .2s var(--ease)}
+.ctrl button:active{transform:scale(.94)}
+@media (hover:hover){.ctrl button:hover{background:#fff;color:var(--teal-900)}}
+.track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:44px;padding:6px 0 10px}
+.track::-webkit-scrollbar{display:none}
+.rv{flex:0 0 min(430px,86%);scroll-snap-align:start;background:#fff;color:var(--ink);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:20px;box-shadow:0 30px 50px -30px rgba(0,0,0,.5)}
+.rv .q{font-family:var(--head);font-size:70px;line-height:.5;color:var(--teal);height:28px}
+.rv blockquote{margin:0;font-size:18px;line-height:1.55;flex:1}
+.rv footer{display:flex;align-items:center;gap:12px}
+.rv .av{width:46px;height:46px;border-radius:50%;background:var(--teal-700);color:#fff;display:grid;place-items:center;font-family:var(--head);font-weight:700}
+.rv strong{display:block;font-family:var(--head)}
+.rv small{color:var(--muted);font-size:14px}
+.rv .stars{margin-left:auto;display:flex;gap:2px;color:#E0A81F}
+.rv .stars .i{width:17px;height:17px;fill:currentColor;stroke:none}
+.dots{display:flex;gap:8px;margin-top:22px}
+.dots button{width:10px;height:10px;border-radius:999px;border:0;background:rgba(255,255,255,.35);padding:0;transition:width .3s var(--ease),background-color .2s}
+.dots button[aria-current="true"]{width:30px;background:#fff}
+.note{margin-top:18px;font-size:15px;color:rgba(255,255,255,.75)}
+
+/* first visit */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;position:relative}
+.steps::before{content:"";position:absolute;left:8%;right:8%;top:38px;border-top:2px dashed var(--teal)}
+.step{position:relative;text-align:center;padding:0 22px}
+.step .dot{position:relative;width:78px;height:78px;margin:0 auto;border-radius:50%;background:var(--teal-700);color:#fff;display:grid;place-items:center;box-shadow:0 0 0 10px #fff,0 18px 30px -14px rgba(14,59,60,.7)}
+.step .dot .i{width:32px;height:32px}
+.step h3{font-size:26px;margin-top:26px}
+.step p{margin:10px auto 0;color:var(--muted);max-width:30ch}
+.step a{color:var(--teal-700);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+/* office */
+.off{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.off .ph{position:relative;min-height:520px}
+.off .ph img{position:absolute;border-radius:var(--r);object-fit:cover;box-shadow:var(--shadow)}
+.off .ph .a{left:0;top:0;width:78%;height:58%;object-position:85% 50%}
+.off .ph .b{right:0;bottom:0;width:52%;height:72%;border:8px solid var(--mist);object-position:50% 40%}
+.off .txt p{margin-top:16px;color:var(--muted);font-size:18px;max-width:46ch}
+.off address{font-style:normal;margin-top:24px;display:flex;gap:12px;align-items:flex-start;font-weight:600}
+.off address .i{color:var(--teal-700);margin-top:3px}
+
+/* faq */
+.faq{max-width:820px;margin-top:44px}
+.qa{border-bottom:1px solid var(--line)}
+.qa button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;text-align:left;background:none;border:0;padding:24px 0;min-height:64px;font-family:var(--head);font-weight:600;font-size:21px;color:var(--ink)}
+.qa button .i{transition:transform .3s var(--ease);color:var(--teal-700)}
+.qa.open button .i{transform:rotate(180deg)}
+.qa .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}
+.qa.open .ans{grid-template-rows:1fr}
+.qa .ans>div{overflow:hidden}
+.qa .ans p{padding:0 0 24px;color:var(--muted);max-width:62ch}
+
+/* location */
+.loc{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;margin-top:44px}
+.map{border-radius:var(--r);overflow:hidden;min-height:440px;box-shadow:var(--shadow);background:#fff}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;display:block}
+.info{background:#fff;border-radius:var(--r);padding:30px;box-shadow:var(--shadow)}
+.info h3{font-size:25px}
+.info address{font-style:normal;margin-top:8px;color:var(--muted)}
+.hrs{margin:20px 0 24px}
+.hrs li{display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-radius:12px;font-size:16px}
+.hrs li:nth-child(odd){background:var(--mist)}
+.hrs li.today{background:var(--teal-700);color:#fff;font-weight:700}
+.hrs li span:last-child{text-align:right}
+
+/* contact */
+.contact{background:var(--teal);color:var(--teal-950)}
+.ct-in{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+.contact h2{color:var(--teal-950)}
+.contact .lead{color:var(--teal-900)}
+.contact-l{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+.contact-l a{display:inline-flex;align-items:center;gap:12px;font-family:var(--head);font-weight:700;font-size:22px;min-height:44px}
+.contact-l .i{width:26px;height:26px}
+.formc{background:#fff;border-radius:28px;padding:34px;box-shadow:0 40px 70px -34px rgba(8,31,32,.7);position:relative;color:var(--ink)}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:700;font-size:16px;margin-bottom:7px}
+.field input,.field select{width:100%;min-height:52px;border-radius:14px;border:1.5px solid #8FA3A4;background:#fff;padding:0 16px;font:inherit;font-size:17px;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--teal-700);box-shadow:0 0 0 4px rgba(98,169,168,.35)}
+.field .err{display:none;color:#A32121;font-size:15px;margin-top:6px;font-weight:600}
+.field.invalid input,.field.invalid select{border-color:#A32121}
+.field.invalid .err{display:block}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.formc .btn{width:100%}
+.ok{position:absolute;inset:0;border-radius:28px;background:#fff;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:34px;gap:12px}
+.ok.show{display:flex}
+.ok .chk{width:84px;height:84px;fill:none;stroke:var(--teal-700);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.ok .chk circle{stroke-dasharray:152;stroke-dashoffset:152;animation:draw .7s var(--ease) forwards}
+.ok .chk path{stroke-dasharray:40;stroke-dashoffset:40;animation:draw .5s .45s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.ok h3{font-size:28px}
+.ok p{color:var(--muted);max-width:34ch}
+
+/* footer */
+footer.site{background:var(--teal-950);color:rgba(255,255,255,.82);padding:80px 0 34px}
+.ft{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
+.ft .lg{display:inline-block;background:#fff;border-radius:18px;padding:12px 16px}
+.ft .lg img{height:60px;width:auto;object-fit:contain}
+.ft p{margin-top:18px;max-width:34ch}
+.ft h4{color:#fff;font-size:18px;margin-bottom:14px}
+.ft li{margin-bottom:8px}
+.ft a{display:inline-flex;align-items:center;gap:10px;min-height:32px;transition:color .2s}
+@media (hover:hover){.ft a:hover{color:var(--teal)}}
+.ft address{font-style:normal}
+.copy{margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);font-size:15px;color:rgba(255,255,255,.6)}
+
+/* mobile bar */
+.mbar{display:none}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (max-width:1020px){
+  .links{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;background:#fff;border-radius:var(--r);padding:12px;box-shadow:0 24px 50px -20px rgba(0,0,0,.5);margin:0}
+  .links.open{display:flex}
+  .links a{padding:14px 16px;font-size:18px}
+  .nav-in{position:relative}
+  .nav-r{margin-left:auto}
+  .burger{display:block}
+  .nav .book{display:none}
+}
+@media (max-width:900px){
+  .hero{padding:120px 0 70px;min-height:auto}
+  .hero-in{grid-template-columns:1fr;gap:44px}
+  .arch{width:min(86%,360px)}
+  .arch .tag{left:-8px}
+  .sec{padding:76px 0}
+  .proof ul{grid-template-columns:1fr;gap:22px}
+  .svc{grid-template-columns:1fr}
+  .svc .card:nth-child(n){grid-column:auto}
+  .steps{grid-template-columns:1fr;gap:42px}
+  .steps::before{display:none}
+  .off{grid-template-columns:1fr;gap:40px}
+  .off .ph{min-height:440px}
+  .loc{grid-template-columns:1fr}
+  .map,.map iframe{min-height:320px}
+  .ct-in{grid-template-columns:1fr;gap:36px}
+  .ft{grid-template-columns:1fr 1fr}
+  body{padding-bottom:84px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;z-index:70;left:0;right:0;bottom:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(14px);box-shadow:0 -10px 30px -14px rgba(0,0,0,.4)}
+  .mbar .btn{min-height:52px;padding:0 12px}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .wrap{width:min(1180px,100% - 32px)}
+  .nav-in{width:calc(100% - 20px);gap:8px;padding-left:12px}
+  .logo img{height:52px}
+  .lang button{min-width:42px}
+  .hero h1{font-size:clamp(37px,10.4vw,46px)}
+  .cta .btn{width:100%}
+  .row2{grid-template-columns:1fr}
+  .formc{padding:24px}
+  .ft{grid-template-columns:1fr}
+  .qa button{font-size:19px}
+  .off .ph{min-height:380px}
+  .proof li{gap:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 6C10.5 4.2 8.4 3.6 6.8 4.2 4.6 5 4 7.4 4.5 9.8c.5 2.500 1.500 4 1.800 6.600.200 1.800.600 4 1.800 4 1.300 0 1.500-2.300 2-4 .300-1 .800-1.500 1.900-1.500s1.600.500 1.900 1.500c.500 1.700.700 4 2 4 1.200 0 1.600-2.200 1.800-4 .300-2.600 1.300-4.100 1.800-6.600.500-2.400-.100-4.800-2.300-5.600C15.600 3.600 13.500 4.200 12 6z"/></symbol>
+<symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><path d="M9 9.500c0-1 .8-1.500 1.600-1.500.6 0 1 .3 1.400.3s.8-.3 1.400-.3c.8 0 1.600.5 1.600 1.500 0 1.300-.8 2-1 3.500-.1.800-.3 1.500-.8 1.500s-.6-.8-.8-1.500c-.1-.400-.2-.500-.4-.500s-.3.100-.4.500c-.2.700-.3 1.500-.8 1.500s-.7-.700-.8-1.500C9.800 11.500 9 10.800 9 9.500z"/></symbol>
+<symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.900 5.600L18.500 10.500l-5.600 1.900L11 18l-1.900-5.600L3.500 10.500l5.600-1.900z"/><path d="M19 15.500l.8 2.200 2.200.8-2.200.8L19 21.500l-.8-2.200-2.200-.8 2.200-.8z"/></symbol>
+<symbol id="i-implant" viewBox="0 0 24 24"><path d="M7 3.500h10c.9 0 1.500.8 1.200 1.700L17 10H7L5.800 5.200C5.500 4.300 6.100 3.500 7 3.500z"/><path d="M8.500 12.500h7M9.500 15h5M10.500 17.500h3M12 17.500V21"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.500 12C4.500 7.500 8 5 12 5s7.500 2.500 9.500 7c-2 4.500-5.500 7-9.500 7s-7.500-2.500-9.500-7z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.500l1.800 4.800-2.300 1.500a11 11 0 0 0 5.700 5.700l1.500-2.300L20 15.500V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5.500" width="16" height="15" rx="2.500"/><path d="M4 10h16M8.500 3.500v4M15.500 3.500v4"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5.500h16a1 1 0 0 1 1 1V16a1 1 0 0 1-1 1h-9l-4.500 3.500V17H4a1 1 0 0 1-1-1V6.500a1 1 0 0 1 1-1z"/><path d="M8 10h8M8 13h5"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11.500a7 7 0 1 0-14 0C5 15 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.500" width="18" height="13" rx="2.500"/><path d="M3.500 7.500l8.500 6 8.500-6"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-prev" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+<symbol id="i-next" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.500 2.500 3.500 5.500 3.500 9s-1 6.500-3.500 9c-2.500-2.500-3.500-5.500-3.500-9s1-6.500 3.500-9z"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.800l2.800 5.900 6.400.8-4.700 4.400 1.200 6.400L12 17.200l-5.700 3.100 1.200-6.400L2.800 9.500l6.400-.8z"/></symbol>
+</svg>
+
+<div id="splash" aria-hidden="true"><div class="plate"><img src="images/logo.png" alt="" width="195" height="72"></div></div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#inicio" aria-label="Westchester Dental"><img src="images/logo.png" alt="Westchester Dental" width="162" height="60"></a>
+    <ul class="links" id="links">
+      <li><a href="#servicios" data-t="n_svc">Servicios</a></li>
+      <li><a href="#resenas" data-t="n_rev">Reseñas</a></li>
+      <li><a href="#visita" data-t="n_visit">Su cita</a></li>
+      <li><a href="#preguntas" data-t="n_faq">Preguntas</a></li>
+      <li><a href="#ubicacion" data-t="n_loc">Ubicación</a></li>
+    </ul>
+    <div class="nav-r">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      </div>
+      <a class="btn btn-teal book" data-magnetic href="tel:+13052669996"><svg class="i"><use href="#i-phone"/></svg><span data-t="call_n">Llamar</span></a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="links" aria-label="Menú"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="mesh" style="position:absolute;inset:0;overflow:hidden;pointer-events:none"><div class="m m1"></div><div class="m m2"></div><div class="m m3"></div></div>
+  <div class="wrap hero-in">
+    <div>
+      <h1 class="reveal" data-t="h1">Cuidamos su sonrisa con <em>trato de barrio</em></h1>
+      <p class="sub reveal" style="--d:.08s" data-t="hero_sub">Odontología general en Westchester, Miami, con la Dra. Diangelly Estrada, DMD. Hablamos español.</p>
+      <div class="cta reveal" style="--d:.16s">
+        <a class="btn btn-white" data-magnetic href="tel:+13052669996"><svg class="i"><use href="#i-phone"/></svg><span>(305) 266-9996</span></a>
+        <a class="btn btn-line" href="#contacto"><svg class="i"><use href="#i-cal"/></svg><span data-t="book">Pedir cita</span></a>
+      </div>
+      <div class="chips reveal" style="--d:.24s">
+        <span class="chip"><span class="stars" aria-hidden="true"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></span><span data-t="chip_rate">4.9 en Google, 70 reseñas</span></span>
+        <span class="chip" id="openChip"><span class="pulse"></span><span id="openTxt">Horario: lunes a viernes</span></span>
+      </div>
+    </div>
+    <div class="arch reveal" style="--d:.12s">
+      <div class="frame"><img src="images/recepcion.jpg" alt="Recepción de Westchester Dental con el cartel del consultorio" width="1000" height="750" fetchpriority="high" data-ta="alt:hero_alt"></div>
+      <div class="tag"><svg class="i"><use href="#i-pin"/></svg><div><b>Westchester Shopping Center</b><small data-t="tag_s">8489 Coral Way, Miami</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="proof" aria-label="Reputación">
+  <div class="wrap">
+    <ul>
+      <li class="reveal"><div class="big"><span data-count-to="4.9" data-decimals="1">4.9</span></div><p data-t="p1">de calificación en Google</p></li>
+      <li class="reveal" style="--d:.08s"><div class="big"><span data-count-to="70">70</span></div><p data-t="p2">reseñas de pacientes en Google</p></li>
+      <li class="reveal" style="--d:.16s"><div class="ico"><svg class="i"><use href="#i-globe"/></svg></div><p data-t="p3">Hablamos español e inglés</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec tint" id="servicios">
+  <div class="wrap">
+    <div class="reveal">
+      <h2 data-t="svc_h">Lo que su sonrisa necesita</h2>
+      <p class="lead" data-t="svc_lead">Cinco servicios, con el mismo trato de siempre.</p>
+    </div>
+    <div class="svc">
+      <article class="card reveal" data-tilt><div class="ico"><svg class="i"><use href="#i-eye"/></svg></div><h3 data-t="s_ex">Exámenes</h3><p data-t="s_ex_d">Una revisión para conocer el estado de su boca y planear los próximos pasos.</p></article>
+      <article class="card reveal" style="--d:.08s" data-tilt><div class="ico"><svg class="i"><use href="#i-scan"/></svg></div><h3 data-t="s_rx">Radiografías</h3><p data-t="s_rx_d">Imágenes que permiten ver lo que no se aprecia a simple vista.</p></article>
+      <article class="card reveal" style="--d:.16s" data-tilt><div class="ico"><svg class="i"><use href="#i-tooth"/></svg></div><h3 data-t="s_li">Limpiezas</h3><p data-t="s_li_d">Limpieza profesional para cuidar sus dientes y sus encías.</p></article>
+      <article class="card reveal" data-tilt><div><div class="ico"><svg class="i"><use href="#i-implant"/></svg></div><h3 data-t="s_im">Implantes</h3><p data-t="s_im_d">Una opción para reemplazar dientes faltantes. Cada caso es distinto: llámenos y le explicamos.</p></div><a href="tel:+13052669996"><span data-t="s_im_l">Consultar por implantes</span><svg class="i"><use href="#i-arrow"/></svg></a></article>
+      <article class="card reveal" style="--d:.08s" data-tilt><div class="ico"><svg class="i"><use href="#i-sparkle"/></svg></div><h3 data-t="s_bl">Blanqueamiento</h3><p data-t="s_bl_d">Para aclarar el tono de sus dientes y sonreír con más confianza.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="resenas">
+  <div class="wrap">
+    <div class="rv-head reveal">
+      <div>
+        <h2 data-t="rv_h">Lo que dicen los pacientes</h2>
+        <p class="lead" data-t="rv_lead">Reseñas reales de Google, tal como las escribieron.</p>
+      </div>
+      <div class="ctrl"><button type="button" id="prev" aria-label="Anterior" data-ta="aria-label:prev"><svg class="i"><use href="#i-prev"/></svg></button><button type="button" id="next" aria-label="Siguiente" data-ta="aria-label:next"><svg class="i"><use href="#i-next"/></svg></button></div>
+    </div>
+    <div class="track reveal" id="track" tabindex="0" aria-label="Reseñas de Google">
+      <article class="rv"><div class="q" aria-hidden="true">“</div><blockquote lang="es">Maravillosa esta doctora! Manos de angel!!! Ella y su ayudante nos hace sentir en casa! Un Angel total!!!</blockquote><footer><span class="av">Y</span><div><strong>Yolanda W.</strong><small>Google</small></div><div class="stars" aria-label="5 / 5"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></div></footer></article>
+      <article class="rv"><div class="q" aria-hidden="true">“</div><blockquote lang="es">Excelente atención con calidez humana. Sin prisa, ni demoras y con resultados adecuados muy propios del actuar profesional. Muchas gracias</blockquote><footer><span class="av">J</span><div><strong>Jorge S.</strong><small>Google</small></div><div class="stars" aria-label="5 / 5"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></div></footer></article>
+      <article class="rv"><div class="q" aria-hidden="true">“</div><blockquote lang="es">La Doctora Estrada y su asistente son excelente, su profesionalismo es indudable. 100% recomendado.</blockquote><footer><span class="av">M</span><div><strong>Melissa D.</strong><small>Google</small></div><div class="stars" aria-label="5 / 5"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></div></footer></article>
+      <article class="rv"><div class="q" aria-hidden="true">“</div><blockquote lang="es">Excelente trabajo y trato espectacular les recomiendo a la Dr Diangelly y a la asistente Leydi por su desepeñok y professionalismo ,estoy muy contenta con mi sonrisa .</blockquote><footer><span class="av">A</span><div><strong>Ana P.</strong><small>Google</small></div><div class="stars" aria-label="5 / 5"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></div></footer></article>
+      <article class="rv"><div class="q" aria-hidden="true">“</div><blockquote lang="es">Fui con la doctora Estrada para realizarme el PRF y quede muy contenta , la doctora es súper y la recomiendo muchísimo , el equipo en general fueron muy atentos y profesionales , el local súper limpio y higiénico todo, si quieren buen trabajo, buen profesionalismo y buena limpieza, vallan a Westchester Dental con la doctora Estrada</blockquote><footer><span class="av">A</span><div><strong>Anabel A.</strong><small>Google</small></div><div class="stars" aria-label="5 / 5"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></div></footer></article>
+    </div>
+    <div class="dots" id="dots"></div>
+    <p class="note" data-t="rv_note">Las reseñas se muestran en su idioma original (español).</p>
+  </div>
+</section>
+
+<section class="sec" id="visita">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <h2 data-t="v_h">Pedir su cita es sencillo</h2>
+      <p class="lead" style="margin-inline:auto" data-t="v_lead">Tres pasos, sin complicaciones.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="dot"><svg class="i"><use href="#i-phone"/></svg></div><h3 data-t="v1">Llámenos</h3><p><span data-t="v1d">Al</span> <a href="tel:+13052669996">(305) 266-9996</a> <span data-t="v1e">coordinamos el día y la hora.</span></p></div>
+      <div class="step reveal" style="--d:.1s"><div class="dot"><svg class="i"><use href="#i-chat"/></svg></div><h3 data-t="v2">Cuéntenos</h3><p data-t="v2d">Díganos el motivo de su visita: un examen, una limpieza u otra consulta.</p></div>
+      <div class="step reveal" style="--d:.2s"><div class="dot"><svg class="i"><use href="#i-pin"/></svg></div><h3 data-t="v3">Venga a vernos</h3><p data-t="v3d">Estamos en el Westchester Shopping Center, sobre Coral Way.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec mist" id="consultorio">
+  <div class="wrap off">
+    <div class="ph reveal">
+      <img class="a" src="images/consultorio.jpg" alt="Área de tratamiento del consultorio" width="1000" height="750" loading="lazy" data-ta="alt:off_a">
+      <img class="b" src="images/fachada.jpg" alt="Fachada del consultorio en el Westchester Shopping Center" width="1000" height="1333" loading="lazy" data-ta="alt:off_b">
+    </div>
+    <div class="txt reveal" style="--d:.1s">
+      <h2 data-t="off_h">Un consultorio de barrio, fácil de encontrar</h2>
+      <p data-t="off_p">Estamos en el Westchester Shopping Center, sobre Coral Way. Pase a conocernos o llámenos para coordinar su cita.</p>
+      <address><svg class="i"><use href="#i-pin"/></svg><span>8489 Coral Way<br>Miami, FL 33155</span></address>
+      <div class="cta" style="margin-top:28px"><a class="btn btn-teal" data-magnetic href="https://www.google.com/maps/dir/?api=1&amp;destination=8489+Coral+Way+Miami+FL+33155" target="_blank" rel="noopener"><svg class="i"><use href="#i-pin"/></svg><span data-t="dir">Cómo llegar</span></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="preguntas">
+  <div class="wrap">
+    <div class="reveal">
+      <h2 data-t="faq_h">Preguntas frecuentes</h2>
+      <p class="lead" data-t="faq_lead">Si no encuentra su respuesta, llámenos.</p>
+    </div>
+    <div class="faq reveal">
+      <div class="qa"><button type="button" aria-expanded="false"><span data-t="q1">¿Hablan español?</span><svg class="i"><use href="#i-chev"/></svg></button><div class="ans"><div><p data-t="a1">Sí. Atendemos en español y en inglés.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false"><span data-t="q2">¿Qué servicios ofrecen?</span><svg class="i"><use href="#i-chev"/></svg></button><div class="ans"><div><p data-t="a2">Exámenes, radiografías, limpiezas, implantes y blanqueamiento.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false"><span data-t="q3">¿Cómo pido una cita?</span><svg class="i"><use href="#i-chev"/></svg></button><div class="ans"><div><p data-t="a3">Llame al (305) 266-9996 o use el formulario de esta página. Le respondemos para coordinar el día y la hora.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false"><span data-t="q4">¿Aceptan mi seguro?</span><svg class="i"><use href="#i-chev"/></svg></button><div class="ans"><div><p data-t="a4">Llámenos al (305) 266-9996 y se lo confirmamos.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false"><span data-t="q5">¿Cuánto cuesta un tratamiento?</span><svg class="i"><use href="#i-chev"/></svg></button><div class="ans"><div><p data-t="a5">Depende de cada caso. Llámenos al (305) 266-9996 y se lo confirmamos.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false"><span data-t="q6">¿Cuál es el horario?</span><svg class="i"><use href="#i-chev"/></svg></button><div class="ans"><div><p data-t="a6">Lunes, miércoles y jueves de 9:00 a. m. a 5:00 p. m.; martes de 9:00 a. m. a 7:00 p. m.; viernes de 9:00 a. m. a 4:00 p. m. Sábado y domingo cerrado.</p></div></div></div>
+      <div class="qa"><button type="button" aria-expanded="false"><span data-t="q7">¿Dónde están?</span><svg class="i"><use href="#i-chev"/></svg></button><div class="ans"><div><p data-t="a7">En el Westchester Shopping Center, 8489 Coral Way, Miami, FL 33155.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint" id="ubicacion">
+  <div class="wrap">
+    <div class="reveal">
+      <h2 data-t="loc_h">Cómo llegar</h2>
+      <p class="lead" data-t="loc_lead">En Westchester, sobre Coral Way.</p>
+    </div>
+    <div class="loc reveal">
+      <div class="map"><iframe title="Mapa de Westchester Dental" src="https://www.google.com/maps?q=8489+Coral+Way+Miami+FL+33155&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+      <div class="info">
+        <h3>Westchester Dental</h3>
+        <address>8489 Coral Way<br>Miami, FL 33155</address>
+        <ul class="hrs" id="hrs">
+          <li data-d="1"><span data-t="d1">Lunes</span><span data-t="h9_5">9:00 a. m. a 5:00 p. m.</span></li>
+          <li data-d="2"><span data-t="d2">Martes</span><span data-t="h9_7">9:00 a. m. a 7:00 p. m.</span></li>
+          <li data-d="3"><span data-t="d3">Miércoles</span><span data-t="h9_5">9:00 a. m. a 5:00 p. m.</span></li>
+          <li data-d="4"><span data-t="d4">Jueves</span><span data-t="h9_5">9:00 a. m. a 5:00 p. m.</span></li>
+          <li data-d="5"><span data-t="d5">Viernes</span><span data-t="h9_4">9:00 a. m. a 4:00 p. m.</span></li>
+          <li data-d="6"><span data-t="d6">Sábado</span><span data-t="h_closed">Cerrado</span></li>
+          <li data-d="0"><span data-t="d0">Domingo</span><span data-t="h_closed">Cerrado</span></li>
+        </ul>
+        <a class="btn btn-teal" style="width:100%" href="https://www.google.com/maps/dir/?api=1&amp;destination=8489+Coral+Way+Miami+FL+33155" target="_blank" rel="noopener"><svg class="i"><use href="#i-pin"/></svg><span data-t="dir">Cómo llegar</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contacto">
+  <div class="wrap ct-in">
+    <div class="reveal">
+      <h2 data-t="ct_h">Reserve su cita</h2>
+      <p class="lead" data-t="ct_lead">Cuéntenos qué necesita y le respondemos para coordinar el día y la hora. Si prefiere, llámenos.</p>
+      <div class="contact-l">
+        <a href="tel:+13052669996"><svg class="i"><use href="#i-phone"/></svg>(305) 266-9996</a>
+        <a href="mailto:admin@westchesterdentaloffice.com" style="font-size:18px"><svg class="i"><use href="#i-mail"/></svg>admin@westchesterdentaloffice.com</a>
+      </div>
+    </div>
+    <div class="formc reveal" style="--d:.1s">
+      <form id="form" novalidate>
+        <div class="field"><label for="f-n" data-t="f_name">Nombre</label><input id="f-n" name="n" type="text" autocomplete="name" required><div class="err" data-t="f_err">Complete este campo.</div></div>
+        <div class="row2">
+          <div class="field"><label for="f-t" data-t="f_phone">Teléfono</label><input id="f-t" name="t" type="tel" autocomplete="tel" inputmode="tel" required><div class="err" data-t="f_err">Complete este campo.</div></div>
+          <div class="field"><label for="f-d" data-t="f_day">Día preferido</label>
+            <select id="f-d" name="d"><option value="" data-t="f_any">Cualquier día</option><option data-t="d1" value="Lunes">Lunes</option><option data-t="d2" value="Martes">Martes</option><option data-t="d3" value="Miércoles">Miércoles</option><option data-t="d4" value="Jueves">Jueves</option><option data-t="d5" value="Viernes">Viernes</option></select></div>
+        </div>
+        <div class="field"><label for="f-m" data-t="f_why">Motivo de la consulta</label>
+          <select id="f-m" name="m" required><option value="" data-t="f_pick">Elija una opción</option><option data-t="s_ex" value="Examen">Exámenes</option><option data-t="s_rx" value="Radiografías">Radiografías</option><option data-t="s_li" value="Limpieza">Limpiezas</option><option data-t="s_im" value="Implantes">Implantes</option><option data-t="s_bl" value="Blanqueamiento">Blanqueamiento</option><option data-t="f_other" value="Otra consulta">Otra consulta</option></select><div class="err" data-t="f_err">Complete este campo.</div></div>
+        <button class="btn btn-teal" type="submit" data-magnetic><svg class="i"><use href="#i-cal"/></svg><span data-t="f_send">Pedir cita</span></button>
+      </form>
+      <div class="ok" id="ok" role="status" aria-live="polite">
+        <svg class="chk" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27l8 8 14-16"/></svg>
+        <h3 data-t="ok_h">Casi listo</h3>
+        <p data-t="ok_p">Se abrió su correo con el mensaje preparado. Envíelo y el consultorio le responderá.</p>
+        <button class="btn btn-line-dark" type="button" id="again" data-t="ok_again">Enviar otra consulta</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <span class="lg"><img src="images/logo.png" alt="Westchester Dental" width="162" height="60" loading="lazy"></span>
+        <p data-t="ft_p">Odontología general en Westchester, Miami, con la Dra. Diangelly Estrada, DMD. Hablamos español.</p>
+      </div>
+      <div>
+        <h4 data-t="ft_visit">Visítenos</h4>
+        <address>8489 Coral Way<br>Miami, FL 33155</address>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=8489+Coral+Way+Miami+FL+33155" target="_blank" rel="noopener"><span data-t="dir">Cómo llegar</span></a>
+      </div>
+      <div>
+        <h4 data-t="ft_contact">Contacto</h4>
+        <ul>
+          <li><a href="tel:+13052669996"><svg class="i"><use href="#i-phone"/></svg>(305) 266-9996</a></li>
+          <li><a href="mailto:admin@westchesterdentaloffice.com"><svg class="i"><use href="#i-mail"/></svg>admin@westchesterdentaloffice.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-t="ft_hours">Horario</h4>
+        <ul>
+          <li data-t="ft_h1">Lunes, miércoles y jueves: 9:00 a. m. a 5:00 p. m.</li>
+          <li data-t="ft_h2">Martes: 9:00 a. m. a 7:00 p. m.</li>
+          <li data-t="ft_h3">Viernes: 9:00 a. m. a 4:00 p. m.</li>
+          <li data-t="ft_h4">Sábado y domingo: cerrado</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2026 Westchester Dental. <span data-t="ft_rights">Todos los derechos reservados.</span></div>
+  </div>
+</footer>
+
+<div class="mbar" aria-label="Acciones rápidas">
+  <a class="btn btn-teal" href="tel:+13052669996"><svg class="i"><use href="#i-phone"/></svg><span data-t="call">Llamar</span></a>
+  <a class="btn btn-line-dark" href="#contacto"><svg class="i"><use href="#i-cal"/></svg><span data-t="book">Pedir cita</span></a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var fine=matchMedia("(hover: hover) and (pointer: fine)").matches;
+function safe(f,n){try{f()}catch(e){console.warn("["+n+"]",e)}}
+
+/* ---------- Traducciones: ES se captura del HTML, EN va acá ---------- */
+var T={es:{},en:{
+n_svc:"Services",n_rev:"Reviews",n_visit:"Your visit",n_faq:"FAQ",n_loc:"Location",call_n:"Call",call:"Call",book:"Book a visit",
+h1:"We care for your smile with <em>neighborhood warmth</em>",
+hero_sub:"General dentistry in Westchester, Miami, with Dr. Diangelly Estrada, DMD. We speak Spanish.",
+chip_rate:"4.9 on Google, 70 reviews",hero_alt:"Reception of Westchester Dental with the office sign",tag_s:"8489 Coral Way, Miami",
+p1:"rating on Google",p2:"patient reviews on Google",p3:"We speak Spanish and English",
+svc_h:"What your smile needs",svc_lead:"Five services, with the same caring approach.",
+s_ex:"Exams",s_ex_d:"A check-up to understand the state of your mouth and plan the next steps.",
+s_rx:"X-rays",s_rx_d:"Images that show what cannot be seen at a glance.",
+s_li:"Cleanings",s_li_d:"Professional cleaning to look after your teeth and gums.",
+s_im:"Implants",s_im_d:"An option to replace missing teeth. Every case is different: call us and we will explain.",s_im_l:"Ask about implants",
+s_bl:"Whitening",s_bl_d:"To lighten the shade of your teeth and smile with more confidence.",
+rv_h:"What patients say",rv_lead:"Real Google reviews, exactly as they wrote them.",rv_note:"Reviews are shown in their original language (Spanish).",prev:"Previous",next:"Next",
+v_h:"Booking your visit is simple",v_lead:"Three steps, no hassle.",
+v1:"Call us",v1d:"At",v1e:"we set the day and time.",
+v2:"Tell us",v2d:"Let us know the reason for your visit: an exam, a cleaning or another concern.",
+v3:"Come see us",v3d:"We are in the Westchester Shopping Center, on Coral Way.",
+off_a:"Treatment area of the office",off_b:"Office front in the Westchester Shopping Center",
+off_h:"A neighborhood office, easy to find",off_p:"We are in the Westchester Shopping Center, on Coral Way. Stop by or call us to set your visit.",dir:"Get directions",
+faq_h:"Frequently asked questions",faq_lead:"If you do not find your answer, give us a call.",
+q1:"Do you speak Spanish?",a1:"Yes. We see patients in Spanish and in English.",
+q2:"What services do you offer?",a2:"Exams, X-rays, cleanings, implants and whitening.",
+q3:"How do I book a visit?",a3:"Call (305) 266-9996 or use the form on this page. We will get back to you to set the day and time.",
+q4:"Do you accept my insurance?",a4:"Call us at (305) 266-9996 and we will confirm.",
+q5:"How much does a treatment cost?",a5:"It depends on each case. Call us at (305) 266-9996 and we will confirm.",
+q6:"What are your hours?",a6:"Monday, Wednesday and Thursday 9:00 AM to 5:00 PM; Tuesday 9:00 AM to 7:00 PM; Friday 9:00 AM to 4:00 PM. Closed Saturday and Sunday.",
+q7:"Where are you?",a7:"In the Westchester Shopping Center, 8489 Coral Way, Miami, FL 33155.",
+loc_h:"Getting here",loc_lead:"In Westchester, on Coral Way.",
+d1:"Monday",d2:"Tuesday",d3:"Wednesday",d4:"Thursday",d5:"Friday",d6:"Saturday",d0:"Sunday",h9_5:"9:00 AM to 5:00 PM",h9_7:"9:00 AM to 7:00 PM",h9_4:"9:00 AM to 4:00 PM",h_closed:"Closed",
+ct_h:"Book your visit",ct_lead:"Tell us what you need and we will get back to you to set the day and time. Or call us.",
+f_name:"Name",f_phone:"Phone",f_day:"Preferred day",f_any:"Any day",f_why:"Reason for your visit",f_pick:"Choose an option",f_other:"Other concern",f_err:"Please fill in this field.",f_send:"Book a visit",
+ok_h:"Almost done",ok_p:"Your email app opened with the message ready. Send it and the office will reply.",ok_again:"Send another request",
+ft_p:"General dentistry in Westchester, Miami, with Dr. Diangelly Estrada, DMD. We speak Spanish.",ft_visit:"Visit us",ft_contact:"Contact",ft_hours:"Hours",
+ft_h1:"Monday, Wednesday, Thursday: 9:00 AM to 5:00 PM",ft_h2:"Tuesday: 9:00 AM to 7:00 PM",ft_h3:"Friday: 9:00 AM to 4:00 PM",ft_h4:"Saturday and Sunday: closed",ft_rights:"All rights reserved."
+}};
+var DAYS={es:["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],en:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]};
+/* horarios en minutos desde medianoche (Google, 2026-10-10) */
+var H={1:[540,1020],2:[540,1140],3:[540,1020],4:[540,1020],5:[540,960]};
+function clock(m,l){var h=Math.floor(m/60),mm=m%60,ap=h>=12?"PM":"AM";h=h%12||12;var t=h+":"+(mm<10?"0":"")+mm;return l==="es"?t+(ap==="AM"?" a. m.":" p. m."):t+" "+ap}
+var M={es:{mailSubj:"Solicitud de cita",mailBody:function(o){return "Hola, soy "+o.n+". Quisiera pedir una cita.\nMotivo: "+o.m+"\nDía preferido: "+(o.d||"cualquier día")+"\nMi teléfono: "+o.t+"\n\nGracias."}},
+ en:{mailSubj:"Appointment request",mailBody:function(o){return "Hello, my name is "+o.n+". I would like to book a visit.\nReason: "+o.m+"\nPreferred day: "+(o.d||"any day")+"\nMy phone: "+o.t+"\n\nThank you."}}};
+var lang="es";
+
+function captureES(){
+  $$("[data-t]").forEach(function(el){var k=el.getAttribute("data-t");if(!(k in T.es))T.es[k]=el.innerHTML});
+  $$("[data-ta]").forEach(function(el){el.getAttribute("data-ta").split(",").forEach(function(p){var a=p.split(":");T.es[a[1]]=el.getAttribute(a[0])})});
+  T.es.prev="Anterior";T.es.next="Siguiente";
+}
+function setLang(l){
+  lang=l;document.documentElement.lang=l;
+  $$("[data-t]").forEach(function(el){var v=T[l][el.getAttribute("data-t")];if(v!=null)el.innerHTML=v});
+  $$("[data-ta]").forEach(function(el){el.getAttribute("data-ta").split(",").forEach(function(p){var a=p.split(":");var v=T[l][a[1]];if(v!=null)el.setAttribute(a[0],v)})});
+  $$("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===l?"true":"false")});
+  try{localStorage.setItem("wd-lang",l)}catch(e){}
+  updateOpen();
+}
+function initLang(){
+  captureES();
+  $$("[data-lang]").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-lang"))})});
+  var s=null;try{s=localStorage.getItem("wd-lang")}catch(e){}
+  if(s==="en")setLang("en");
+}
+
+/* ---------- Abierto ahora (hora de Miami) ---------- */
+function miami(){
+  var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+  var o={};p.forEach(function(x){o[x.type]=x.value});
+  var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
+  return {day:wd,min:(parseInt(o.hour,10)%24)*60+parseInt(o.minute,10)};
+}
+function updateOpen(){
+  var n=miami(),chip=$("#openChip"),txt=$("#openTxt"),es=lang==="es";
+  $$("#hrs li").forEach(function(li){li.classList.toggle("today",parseInt(li.getAttribute("data-d"),10)===n.day)});
+  if(!chip||!txt)return;
+  var h=H[n.day],open=!!h&&n.min>=h[0]&&n.min<h[1];
+  chip.classList.toggle("closed",!open);
+  if(open){txt.textContent=es?"Abierto ahora, cierra a las "+clock(h[1],lang):"Open now, closes at "+clock(h[1],lang);return}
+  var d,off;
+  if(h&&n.min<h[0]){d=n.day;off=0}
+  else{for(off=1;off<=7;off++){d=(n.day+off)%7;if(H[d])break}}
+  var when=off===0?(es?"hoy":"today"):off===1?(es?"mañana":"tomorrow"):(es?"el "+DAYS.es[d]:"on "+DAYS.en[d]);
+  txt.textContent=es?"Cerrado, abre "+when+" a las "+clock(H[d][0],lang):"Closed, opens "+when+" at "+clock(H[d][0],lang);
+}
+
+/* ---------- UI ---------- */
+function initSplash(){var s=$("#splash");if(!s)return;var h=function(){s.classList.add("hide")};
+  if(document.readyState==="complete")setTimeout(h,800);else window.addEventListener("load",function(){setTimeout(h,800)});setTimeout(h,1600)}
+function initNav(){
+  var nav=$("#nav"),links=$("#links"),b=$("#burger");
+  var on=function(){nav.classList.toggle("scrolled",window.scrollY>12)};on();window.addEventListener("scroll",on,{passive:true});
+  b.addEventListener("click",function(){var o=links.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false")});
+  links.addEventListener("click",function(e){if(e.target.closest("a")){links.classList.remove("open");b.setAttribute("aria-expanded","false")}});
+}
+function initReveals(){
+  var els=$$(".reveal");
+  if(!("IntersectionObserver"in window)||reduced){els.forEach(function(e){e.classList.add("in")});return}
+  var io=new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");o.unobserve(x.target)}})},{threshold:.05,rootMargin:"0px 0px -5% 0px"});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.add("in")})},3200);
+}
+function fmt(v,d){return d>0?v.toFixed(d):String(Math.round(v))}
+function count(el){
+  var t=parseFloat(el.getAttribute("data-count-to")),d=parseInt(el.getAttribute("data-decimals")||"0",10);
+  if(isNaN(t)||reduced){el.textContent=fmt(t,d);return}
+  var s=performance.now(),D=1300;
+  (function tick(n){var p=Math.min(1,(n-s)/D),e=1-Math.pow(1-p,3);el.textContent=fmt(t*e,d);if(p<1)requestAnimationFrame(tick);else el.textContent=fmt(t,d)})(s);
+}
+function initCounts(){
+  var els=$$("[data-count-to]");if(!("IntersectionObserver"in window)||reduced)return;
+  var io=new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){count(x.target);o.unobserve(x.target)}})},{threshold:.6});
+  els.forEach(function(e){io.observe(e)});
+}
+function initTilt(){
+  if(!fine||reduced)return;
+  $$("[data-tilt]").forEach(function(c){
+    c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      c.style.transition="box-shadow .25s";c.style.transform="perspective(900px) rotateY("+(x*6)+"deg) rotateX("+(-y*6)+"deg) translateY(-4px)"});
+    c.addEventListener("mouseleave",function(){c.style.transition="";c.style.transform=""});
+  });
+}
+function initMagnetic(){
+  if(!fine||reduced)return;
+  $$("[data-magnetic]").forEach(function(b){
+    b.addEventListener("mousemove",function(e){var r=b.getBoundingClientRect();b.style.transform="translate("+((e.clientX-r.left-r.width/2)*.2)+"px,"+((e.clientY-r.top-r.height/2)*.28)+"px)"});
+    b.addEventListener("mouseleave",function(){b.style.transform=""});
+  });
+}
+function initCarousel(){
+  var tr=$("#track"),dots=$("#dots"),cards=$$(".rv",tr),cur=0,timer=null,paused=false;
+  cards.forEach(function(c,i){var d=document.createElement("button");d.type="button";d.setAttribute("aria-label",(i+1)+" / "+cards.length);d.addEventListener("click",function(){go(i)});dots.appendChild(d)});
+  function mark(){var best=0,bd=1e9;cards.forEach(function(c,i){var d=Math.abs(c.offsetLeft-tr.scrollLeft-cards[0].offsetLeft);if(d<bd){bd=d;best=i}});cur=best;$$("button",dots).forEach(function(d,i){d.setAttribute("aria-current",i===cur?"true":"false")})}
+  function go(i){cur=(i+cards.length)%cards.length;tr.scrollTo({left:cards[cur].offsetLeft-cards[0].offsetLeft,behavior:reduced?"auto":"smooth"})}
+  tr.addEventListener("scroll",function(){clearTimeout(tr._t);tr._t=setTimeout(mark,80)},{passive:true});
+  $("#prev").addEventListener("click",function(){go(cur-1)});$("#next").addEventListener("click",function(){go(cur+1)});
+  tr.addEventListener("keydown",function(e){if(e.key==="ArrowRight")go(cur+1);if(e.key==="ArrowLeft")go(cur-1)});
+  ["mouseenter","focusin","touchstart"].forEach(function(ev){tr.addEventListener(ev,function(){paused=true},{passive:true})});
+  tr.addEventListener("mouseleave",function(){paused=false});
+  if(!reduced)timer=setInterval(function(){if(!paused&&!document.hidden)go(cur+1)},6500);
+  mark();
+}
+function initFaq(){
+  $$(".qa").forEach(function(q){var b=$("button",q);b.addEventListener("click",function(){
+    var o=!q.classList.contains("open");
+    $$(".qa.open").forEach(function(x){if(x!==q){x.classList.remove("open");$("button",x).setAttribute("aria-expanded","false")}});
+    q.classList.toggle("open",o);b.setAttribute("aria-expanded",o?"true":"false")})});
+}
+function initForm(){
+  var f=$("#form"),ok=$("#ok");if(!f)return;
+  function bad(el,v){var w=el.closest(".field");if(w)w.classList.toggle("invalid",v)}
+  f.addEventListener("input",function(e){if(e.target.matches("[required]"))bad(e.target,!e.target.value.trim())});
+  f.addEventListener("change",function(e){if(e.target.matches("[required]"))bad(e.target,!e.target.value.trim())});
+  f.addEventListener("submit",function(e){
+    e.preventDefault();var first=null;
+    $$("[required]",f).forEach(function(x){var b=!x.value.trim();bad(x,b);if(b&&!first)first=x});
+    if(first){first.focus();return}
+    var o={n:$("#f-n").value.trim(),t:$("#f-t").value.trim(),d:$("#f-d").value,m:$("#f-m").value};
+    var u="mailto:admin@westchesterdentaloffice.com?subject="+encodeURIComponent(M[lang].mailSubj)+"&body="+encodeURIComponent(M[lang].mailBody(o));
+    ok.classList.add("show");
+    window.location.href=u;
+  });
+  $("#again").addEventListener("click",function(){ok.classList.remove("show");f.reset();$$(".field.invalid",f).forEach(function(w){w.classList.remove("invalid")});$("#f-n").focus()});
+}
+
+safe(initSplash,"splash");safe(initNav,"nav");safe(initLang,"lang");safe(updateOpen,"open");
+safe(initReveals,"reveals");safe(initCounts,"counts");safe(initTilt,"tilt");safe(initMagnetic,"magnetic");
+safe(initCarousel,"carousel");safe(initFaq,"faq");safe(initForm,"form");
+setInterval(updateOpen,60000);
+})();
+</script>
+</body>
+</html>
