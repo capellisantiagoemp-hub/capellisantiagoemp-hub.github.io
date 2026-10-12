@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>VidaDental: Kenia Cuevas, DDS | Odontología familiar en Doral, FL</title>
+<meta name="description" id="metaDesc" content="VidaDental: Kenia Cuevas, DDS. Odontología general, cosmética y familiar en Doral, FL. 5.0 en Google con 198 reseñas. Llame al (305) 230-4487.">
+<meta name="theme-color" content="#9DB5DB">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%239DB5DB'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='34' font-weight='700' text-anchor='middle' fill='white'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lav:#9DB5DB; --lav-soft:#C9D8EF; --lav-deep:#5F7DB8;
+  --indigo:#26396B; --indigo-deep:#16224A;
+  --mist:#EEF3FB; --warm:#FFF3EB;
+  --peach:#FFB48A; --peach-deep:#F59A68;
+  --ink:#1B2547; --ink-soft:#46537A; --paper:#FFFFFF;
+  --line:rgba(38,57,107,.14);
+  --display:"Quicksand",system-ui,sans-serif; --sans:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.23,1,.32,1); --ease-io:cubic-bezier(.77,0,.175,1);
+  --r:24px; --r-sm:14px; --wrap:1180px;
+  --sh:0 24px 50px -28px rgba(38,57,107,.5); --sh-lg:0 36px 70px -30px rgba(38,57,107,.6);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:100px}
+body{font-family:var(--sans);font-size:17px;line-height:1.65;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,svg,iframe{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+p{text-wrap:pretty}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.1;letter-spacing:-.015em;font-weight:700}
+:focus-visible{outline:3px solid var(--peach-deep);outline-offset:3px;border-radius:8px}
+::selection{background:var(--peach);color:var(--indigo-deep)}
+.wrap{width:min(var(--wrap),100% - 2.4rem);margin-inline:auto}
+.skip{position:fixed;top:-80px;left:1rem;background:#fff;color:var(--indigo);padding:.6rem 1rem;border-radius:10px;z-index:400;font-weight:700}
+.skip:focus{top:1rem}
+.i{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* splash */
+#splash{position:fixed;inset:0;z-index:300;display:grid;place-items:center;background:linear-gradient(160deg,var(--lav),var(--lav-deep));transition:opacity .5s var(--ease),visibility .5s}
+#splash.hide{opacity:0;visibility:hidden}
+#splash img{width:min(300px,70vw);border-radius:20px;animation:pop .8s var(--ease) both;box-shadow:0 30px 60px -24px rgba(22,34,74,.5)}
+#splash .bar{display:block;height:4px;width:140px;margin:18px auto 0;background:rgba(255,255,255,.35);border-radius:4px;overflow:hidden}
+#splash .bar::after{content:"";display:block;height:100%;background:#fff;transform:translateX(-100%);animation:bar 1s var(--ease-io) .2s forwards}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes bar{to{transform:none}}
+
+/* nav */
+.nav{position:fixed;top:10px;left:0;right:0;z-index:100;pointer-events:none}
+.nav-in{pointer-events:auto;width:min(1180px,100% - 1.2rem);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.4rem .5rem .4rem .45rem;border-radius:22px;background:rgba(255,255,255,.7);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,.7);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 14px 36px -22px rgba(22,34,74,.55);transition:box-shadow .3s var(--ease),background .3s var(--ease)}
+.nav.scrolled .nav-in{background:rgba(255,255,255,.93);box-shadow:inset 0 1px 0 #fff,0 18px 44px -20px rgba(22,34,74,.6)}
+.brand img{height:60px;width:auto;border-radius:16px;object-fit:contain}
+.links{display:none;gap:.2rem;font-weight:700;font-size:.95rem}
+.links a{padding:.55rem .85rem;border-radius:12px;color:var(--ink-soft);transition:background .2s,color .2s}
+.links a:hover{background:var(--mist);color:var(--indigo)}
+.nav-r{display:flex;align-items:center;gap:.5rem}
+.lang{display:flex;background:var(--mist);border-radius:999px;padding:3px;border:1px solid var(--line)}
+.lang button{min-width:44px;min-height:40px;padding:0 .7rem;border-radius:999px;font-weight:700;font-size:.9rem;color:var(--ink-soft);transition:background .2s,color .2s,transform .16s}
+.lang button[aria-pressed="true"]{background:var(--indigo);color:#fff}
+.lang button:active{transform:scale(.96)}
+.nav .btn.call{display:none}
+@media(min-width:900px){.links{display:flex}.nav .btn.call{display:inline-flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;font-weight:700;font-size:1rem;white-space:nowrap;transition:transform .2s var(--ease),box-shadow .25s var(--ease),background .2s,color .2s;will-change:transform}
+.btn:active{transform:scale(.97)!important}
+.btn-primary{background:var(--indigo);color:#fff;box-shadow:0 14px 28px -14px rgba(22,34,74,.7)}
+.btn-primary:hover{background:var(--indigo-deep);box-shadow:0 20px 34px -14px rgba(22,34,74,.8);transform:translateY(-2px)}
+.btn-peach{background:var(--peach);color:var(--indigo-deep);box-shadow:0 14px 28px -14px rgba(245,154,104,.9)}
+.btn-peach:hover{background:#FFC4A2;transform:translateY(-2px);box-shadow:0 20px 34px -14px rgba(245,154,104,1)}
+.btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.7)}
+.btn-ghost:hover{background:#fff;color:var(--indigo);transform:translateY(-2px)}
+.btn-line{border:1.5px solid var(--indigo);color:var(--indigo)}
+.btn-line:hover{background:var(--indigo);color:#fff;transform:translateY(-2px)}
+
+/* hero */
+.hero{position:relative;min-height:100dvh;display:flex;align-items:center;padding:112px 0 64px;color:#fff;overflow:hidden;background:linear-gradient(155deg,#7E9CCB 0%,#5F7DB8 42%,#26396B 100%)}
+.hero::before,.hero::after{content:"";position:absolute;inset:0;pointer-events:none;will-change:transform}
+.hero::before{background:radial-gradient(520px 520px at 8% 6%,rgba(201,216,239,.6),transparent 70%),radial-gradient(380px 380px at 52% 55%,rgba(157,181,219,.45),transparent 70%);animation:float 18s ease-in-out infinite}
+.hero::after{background:radial-gradient(460px 460px at 96% 98%,rgba(255,180,138,.4),transparent 70%);animation:float 22s ease-in-out infinite reverse}
+@keyframes float{50%{transform:scale(1.12)}}
+.hero-grid{position:relative;z-index:1;display:grid;gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(2.2rem,6vw,3.9rem);margin-bottom:1.1rem}
+.hero h1 em{font-style:normal;color:var(--peach)}
+.hero p.lead{font-size:clamp(1.05rem,2vw,1.2rem);max-width:30em;color:rgba(255,255,255,.93);margin-bottom:1.8rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero-photo{position:relative;justify-self:center;width:min(86%,380px)}
+.arch{border-radius:200px 200px 28px 28px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--sh-lg);border:6px solid rgba(255,255,255,.85);background:var(--lav)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.chip{position:absolute;display:flex;align-items:center;gap:.6rem;background:#fff;color:var(--ink);padding:.65rem 1rem;border-radius:18px;box-shadow:0 18px 36px -16px rgba(22,34,74,.6);font-weight:700;font-size:.95rem;line-height:1.2}
+.chip.r{left:-6%;bottom:12%;animation:bob 6s ease-in-out infinite}
+.chip.y{right:-5%;top:10%;animation:bob 7s ease-in-out infinite reverse}
+.chip b{font-family:var(--display);font-size:1.5rem;color:var(--indigo)}
+.chip small{display:block;font-weight:600;color:var(--ink-soft);font-size:.78rem}
+.stars{display:flex;gap:2px;color:#F5A524}
+.stars svg{width:15px;height:15px;fill:currentColor}
+@keyframes bob{50%{transform:translateY(-10px)}}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr}.hero-photo{width:min(100%,430px);justify-self:end}}
+@media(max-width:560px){.chip.r{left:-2%}.chip.y{right:-2%}}
+
+/* sections */
+section{position:relative}
+.sec{padding:clamp(4rem,9vw,7rem) 0}
+.sec h2{font-size:clamp(1.9rem,4.4vw,2.9rem);margin-bottom:.9rem}
+.sec .sub{max-width:36em;color:var(--ink-soft);font-size:1.08rem}
+.bg-mist{background:var(--mist)}
+.bg-warm{background:var(--warm)}
+.bg-dark{background:linear-gradient(160deg,var(--indigo),var(--indigo-deep));color:#fff}
+.bg-dark .sub{color:rgba(255,255,255,.85)}
+
+/* trust strip */
+.strip{padding:2.2rem 0;background:#fff;border-bottom:1px solid var(--line)}
+.strip-g{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem 1rem}
+.stat{display:flex;flex-direction:column;align-items:center;text-align:center}
+.stat b{font-family:var(--display);font-size:clamp(2rem,5vw,2.8rem);color:var(--indigo);line-height:1}
+.stat > span{font-weight:600;color:var(--ink-soft);font-size:.98rem;margin-top:.35rem}
+@media(min-width:800px){.strip-g{grid-template-columns:repeat(4,1fr)}.stat+.stat{border-left:1px solid var(--line)}}
+
+/* services */
+.svc-g{display:grid;gap:1rem;margin-top:2.6rem;grid-template-columns:repeat(2,1fr)}
+.card{position:relative;background:#fff;border-radius:var(--r);padding:1.4rem 1.2rem;border:1px solid var(--line);box-shadow:0 10px 24px -22px rgba(22,34,74,.6);transition:transform .25s var(--ease),box-shadow .3s var(--ease),border-color .2s;transform-style:preserve-3d}
+.card .ic{width:50px;height:50px;border-radius:16px;display:grid;place-items:center;background:var(--mist);color:var(--indigo);margin-bottom:.9rem;transition:background .25s,color .25s,transform .3s var(--ease)}
+.card .ic .i{width:26px;height:26px}
+.card h3{font-size:1.12rem;margin-bottom:.35rem}
+.card p{font-size:.95rem;color:var(--ink-soft);line-height:1.5}
+.card.big{grid-column:1/-1;padding:1.8rem;color:#fff;border:0;background:linear-gradient(140deg,var(--lav-deep),var(--indigo))}
+.card.big.alt{background:linear-gradient(140deg,#F59A68,#D9774A);color:var(--indigo-deep)}
+.card.big .ic{background:rgba(255,255,255,.2);color:#fff}
+.card.big.alt .ic{background:rgba(255,255,255,.45);color:var(--indigo-deep)}
+.card.big p{color:rgba(255,255,255,.92)}
+.card.big.alt p{color:var(--indigo-deep)}
+.card.big h3{font-size:1.45rem}
+@media(hover:hover) and (pointer:fine){
+  .card:hover{transform:translateY(-6px);box-shadow:var(--sh);border-color:var(--lav)}
+  .card:hover .ic{background:var(--indigo);color:#fff;transform:rotate(-6deg) scale(1.06)}
+  .card.big:hover .ic{background:#fff;color:var(--indigo)}
+}
+@media(min-width:760px){.svc-g{grid-template-columns:repeat(4,1fr)}.card.big{grid-column:span 2;display:flex;flex-direction:column;justify-content:flex-end;min-height:260px}.card{padding:1.5rem 1.3rem}}
+
+/* about */
+.about-g{display:grid;gap:2.6rem;align-items:center}
+.ph-stack{position:relative;max-width:460px}
+.ph-stack .p1{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;box-shadow:var(--sh-lg)}
+.ph-stack .p1 img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.ph-stack .p2{position:absolute;right:0;bottom:-8%;width:56%;border-radius:20px;overflow:hidden;border:5px solid var(--indigo);box-shadow:var(--sh-lg)}
+.ph-stack .p2 img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.about-g p{margin-bottom:1rem;color:rgba(255,255,255,.9)}
+.badge-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.4rem 0 1.8rem}
+.badge-row > span{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1rem;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);font-weight:700;font-size:.95rem}
+.badge-row .i{color:var(--peach)}
+@media(min-width:900px){.ph-stack .p2{right:-8%}.about-g{grid-template-columns:.9fr 1.1fr;gap:4.5rem}}
+@media(max-width:560px){.ph-stack{margin-bottom:2rem}}
+
+/* reviews */
+.rev-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1.2rem}
+.rev-nav{display:flex;gap:.6rem}
+.rev-nav button{width:52px;height:52px;border-radius:50%;background:#fff;border:1.5px solid var(--line);display:grid;place-items:center;color:var(--indigo);transition:transform .2s var(--ease),background .2s,color .2s}
+.rev-nav button:hover{background:var(--indigo);color:#fff;transform:translateY(-2px)}
+.rev-nav button:active{transform:scale(.94)}
+.track{display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2.2rem 0 1.4rem;margin-inline:-1.2rem;padding-inline:1.2rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.rev{flex:0 0 min(86%,400px);scroll-snap-align:start;background:#fff;border-radius:var(--r);padding:1.7rem;box-shadow:var(--sh);display:flex;flex-direction:column;gap:1rem;position:relative;border:1px solid rgba(38,57,107,.08)}
+.rev::before{content:"\201C";position:absolute;top:.2rem;right:1.2rem;font-family:var(--display);font-size:5.5rem;line-height:1;color:var(--lav-soft)}
+.rev blockquote{font-size:1.04rem;color:var(--ink);position:relative}
+.rev footer{margin-top:auto;display:flex;align-items:center;gap:.75rem}
+.av{width:42px;height:42px;border-radius:50%;background:linear-gradient(140deg,var(--lav),var(--lav-deep));color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:700}
+.rev cite{font-style:normal;font-weight:700;display:block;line-height:1.2}
+.rev small{color:var(--ink-soft);font-size:.82rem}
+.orig{display:none;font-size:.82rem;color:var(--ink-soft);font-style:italic}
+html[lang="en"] .orig{display:block}
+.g-link{display:inline-flex;align-items:center;gap:.5rem;margin-top:.6rem;font-weight:700;color:var(--indigo);border-bottom:2px solid var(--peach);padding-bottom:2px;transition:gap .2s var(--ease)}
+.g-link:hover{gap:.8rem}
+
+/* steps */
+.steps{display:grid;gap:1.1rem;margin-top:2.6rem;counter-reset:s}
+.step{position:relative;padding:1.6rem 1.5rem 1.6rem 5rem;border-radius:var(--r);background:var(--mist);transition:transform .25s var(--ease),box-shadow .3s}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:1.2rem;top:1.4rem;width:46px;height:46px;border-radius:50%;background:var(--indigo);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:1.25rem}
+.step h3{font-size:1.25rem;margin-bottom:.3rem}
+.step p{color:var(--ink-soft)}
+@media(hover:hover) and (pointer:fine){.step:hover{transform:translateY(-4px);box-shadow:var(--sh)}}
+@media(min-width:800px){.steps{grid-template-columns:repeat(3,1fr)}.step{padding:5.2rem 1.6rem 1.6rem}.step::before{left:1.6rem;top:1.5rem}}
+
+/* faq */
+.faq{max-width:780px;margin-top:2.4rem;display:grid;gap:.8rem}
+.qa{background:#fff;border-radius:18px;border:1px solid var(--line);overflow:hidden;transition:box-shadow .25s}
+.qa[open]{box-shadow:var(--sh)}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 1.3rem;min-height:56px;font-family:var(--display);font-weight:700;font-size:1.08rem}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .pl{width:30px;height:30px;border-radius:50%;background:var(--mist);display:grid;place-items:center;flex:none;transition:transform .3s var(--ease),background .2s}
+.qa[open] .pl{transform:rotate(45deg);background:var(--peach)}
+.qa .ans{padding:0 1.3rem 1.2rem;color:var(--ink-soft)}
+.qa .ans a{color:var(--indigo);font-weight:700;border-bottom:2px solid var(--peach)}
+
+/* contact */
+.ct-g{display:grid;gap:2rem;margin-top:2.4rem}
+.info{display:grid;gap:.9rem;align-content:start}
+.info a,.info div.row{display:flex;gap:.9rem;align-items:flex-start;padding:1rem 1.1rem;border-radius:18px;background:#fff;border:1px solid var(--line);transition:transform .2s var(--ease),box-shadow .25s}
+.info a:hover{transform:translateY(-3px);box-shadow:var(--sh)}
+.info .ic{width:44px;height:44px;border-radius:14px;background:var(--mist);color:var(--indigo);display:grid;place-items:center;flex:none}
+.info b{display:block;font-family:var(--display)}
+.info span{color:var(--ink-soft);font-size:.97rem}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh);min-height:260px;background:var(--mist)}
+.map iframe{width:100%;height:100%;min-height:260px;border:0}
+form.appt{background:#fff;border-radius:var(--r);padding:1.6rem;box-shadow:var(--sh-lg);display:grid;gap:1rem;border:1px solid rgba(38,57,107,.08);position:relative}
+form.appt h3{font-size:1.45rem}
+.fld{display:grid;gap:.4rem}
+.fld label{font-weight:700;font-size:.95rem;color:var(--indigo)}
+.fld input,.fld select,.fld textarea{width:100%;min-height:50px;padding:.7rem 1rem;border-radius:14px;border:1.5px solid #9AA8C7;background:#fff;transition:border-color .2s,box-shadow .2s}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--indigo);box-shadow:0 0 0 4px rgba(157,181,219,.5)}
+.fld input[aria-invalid="true"]{border-color:#B3321B}
+.err{color:#B3321B;font-size:.88rem;font-weight:600;min-height:0}
+.ok{display:none;position:absolute;inset:0;background:#fff;border-radius:var(--r);place-items:center;text-align:center;padding:2rem;align-content:center;gap:.8rem}
+.ok.show{display:grid}
+.ok svg{width:84px;height:84px;margin-inline:auto}
+.ok circle{stroke:var(--lav);fill:none;stroke-width:4;stroke-dasharray:240;stroke-dashoffset:240;animation:dash .7s var(--ease) forwards}
+.ok path{stroke:var(--indigo);fill:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60;animation:dash .5s var(--ease) .5s forwards}
+@keyframes dash{to{stroke-dashoffset:0}}
+@media(min-width:900px){.ct-g{grid-template-columns:1fr 1fr;gap:2.4rem}.map{grid-column:1/-1;min-height:320px}}
+
+/* final cta */
+.final{padding:clamp(4rem,9vw,6.5rem) 0;text-align:center;color:var(--indigo-deep);background:linear-gradient(135deg,var(--lav-soft),var(--lav) 60%,#86A3D1);overflow:hidden}
+.final h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:.8rem}
+.final p{max-width:30em;margin:0 auto 1.8rem;font-size:1.1rem}
+.final .cta{justify-content:center}
+
+/* footer */
+footer.site{background:var(--indigo-deep);color:rgba(255,255,255,.85);padding:3.6rem 0 6.5rem}
+.f-g{display:grid;gap:2.2rem}
+.f-g img{height:68px;width:auto;border-radius:16px;margin-bottom:1rem}
+.f-g h4{font-family:var(--display);color:#fff;margin-bottom:.7rem;font-size:1.05rem}
+.f-g a{display:block;padding:.2rem 0;transition:color .2s}
+.f-g a:hover{color:var(--peach)}
+.copy{margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.14);font-size:.88rem;color:rgba(255,255,255,.65)}
+@media(min-width:800px){.f-g{grid-template-columns:1.4fr 1fr 1fr 1fr}footer.site{padding-bottom:3rem}}
+
+/* mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:90;display:flex;gap:.6rem;padding:.6rem .8rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.mbar .btn{flex:1;min-height:50px;padding:.6rem 1rem}
+@media(min-width:800px){.mbar{display:none}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.no-js .rv{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="splash" aria-hidden="true"><div><img src="images/logo.png" alt=""><span class="bar"></span></div></div>
+<a class="skip" href="#main" data-t="skip">Saltar al contenido</a>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="VidaDental: Kenia Cuevas, DDS"><img src="images/logo.png" alt="VidaDental: Kenia Cuevas, DDS" width="193" height="60"></a>
+    <nav class="links" aria-label="Principal">
+      <a href="#servicios" data-t="nav_serv">Servicios</a>
+      <a href="#doctora" data-t="nav_doc">La doctora</a>
+      <a href="#resenas" data-t="nav_rev">Reseñas</a>
+      <a href="#contacto" data-t="nav_ct">Contacto</a>
+    </nav>
+    <div class="nav-r">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      </div>
+      <a class="btn btn-primary call" href="tel:+13052304487"><svg class="i" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>(305) 230-4487</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 data-th="h1">Una sonrisa sana para <em>toda su familia</em>, en Doral.</h1>
+      <p class="lead" data-t="lead">Odontología general, cosmética y familiar con la Dra. Kenia Cuevas. Hablamos español.</p>
+      <div class="cta">
+        <a class="btn btn-peach mag" href="#contacto" data-t="cta_cita">Pedir cita</a>
+        <a class="btn btn-ghost mag" href="tel:+13052304487"><svg class="i" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-t="cta_llamar">Llamar</span> (305) 230-4487</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="arch"><img src="images/dra-cuevas.jpg" alt="La Dra. Kenia Cuevas trabajando en su consultorio" width="472" height="590" fetchpriority="high"></div>
+      <div class="chip r"><b>5.0</b><div><div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg></div><small data-t="chip_g">198 reseñas en Google</small></div></div>
+      <div class="chip y"><svg class="i" viewBox="0 0 24 24" style="color:var(--indigo)"><path d="M12 21s-7-4.4-9.3-9A5.3 5.3 0 0 1 12 6a5.3 5.3 0 0 1 9.3 6c-2.3 4.6-9.3 9-9.3 9z"/></svg><div><span data-t="chip_fam">Atención familiar</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="strip" aria-label="Datos">
+  <div class="wrap strip-g">
+    <div class="stat rv"><b><span class="count" data-to="5" data-dec="1">5.0</span></b><span data-t="s1">Calificación en Google</span></div>
+    <div class="stat rv" style="--d:.08s"><b><span class="count" data-to="198">198</span></b><span data-t="s2">Reseñas de pacientes</span></div>
+    <div class="stat rv" style="--d:.16s"><b><span class="count" data-to="21">21</span></b><span data-t="s3">Años de experiencia</span></div>
+    <div class="stat rv" style="--d:.24s"><b>ES</b><span data-t="s4">Hablamos español</span></div>
+  </div>
+</section>
+
+<section class="sec bg-mist" id="servicios">
+  <div class="wrap">
+    <h2 class="rv" data-t="svc_h">Todo lo que su sonrisa necesita</h2>
+    <p class="sub rv" data-t="svc_s">Cuidado dental para cada edad, en un solo consultorio.</p>
+    <div class="svc-g">
+      <article class="card big rv tilt"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M7 4h10l1 5-2 11h-2l-1-7h-2l-1 7H8L6 9z"/><path d="M9 4c.5 1.2 1.7 2 3 2s2.5-.8 3-2"/></svg></div><h3 data-t="sv_cerec">Coronas CEREC en el día</h3><p data-t="sv_cerec_d">Restaure un diente en el día con tecnología CEREC.</p></article>
+      <article class="card big alt rv tilt" style="--d:.08s"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M4 12c0-3 2-5 4.5-5h7C18 7 20 9 20 12s-2 5-4.5 5h-7C6 17 4 15 4 12z"/><path d="M8 12h8"/></svg></div><h3 data-t="sv_inv">Invisalign</h3><p data-t="sv_inv_d">Proveedora preferida de Invisalign. Alineadores transparentes para enderezar su sonrisa.</p></article>
+      <article class="card rv tilt"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/><rect x="3" y="3" width="18" height="18" rx="5"/></svg></div><h3 data-t="sv_chk">Chequeos</h3><p data-t="sv_chk_d">Revisión completa de dientes y encías para detectar a tiempo.</p></article>
+      <article class="card rv tilt" style="--d:.05s"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M7 4c2-1 4 0 5 1 1-1 3-2 5-1 2 1 2 4 1 7-.5 2-1 5-2 8-.5 1.500-2 1.500-2.500 0L12 15l-.5 3c-.5 1.500-2 1.500-2.500 0-1-3-1.500-6-2-8-1-3-1-6 0-6z"/></svg></div><h3 data-t="sv_ped">Odontopediatría</h3><p data-t="sv_ped_d">Cuidado dental pensado para los más pequeños.</p></article>
+      <article class="card rv tilt" style="--d:.1s"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3"/></svg></div><h3 data-t="sv_urg">Urgencias</h3><p data-t="sv_urg_d">Dolor o accidente dental: llámenos y le indicamos cómo atenderle.</p></article>
+      <article class="card rv tilt"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 3v7M9 10h6M12 10v11M9 21h6"/><path d="M8 5h8"/></svg></div><h3 data-t="sv_imp">Implantes</h3><p data-t="sv_imp_d">Una opción fija para reemplazar dientes ausentes.</p></article>
+      <article class="card rv tilt" style="--d:.05s"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M6 8c0-3 2-4 6-4s6 1 6 4v3H6z"/><path d="M6 11v2c0 3 1.500 7 3 7s1-4 3-4 1.500 4 3 4 3-4 3-7v-2"/></svg></div><h3 data-t="sv_cor">Coronas y puentes</h3><p data-t="sv_cor_d">Restauran dientes dañados o reponen los que faltan.</p></article>
+      <article class="card rv tilt" style="--d:.1s"><div class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="6"/><path d="M9 8h6"/></svg></div><h3 data-t="sv_car">Carillas</h3><p data-t="sv_car_d">Finas láminas para mejorar la forma y el color de la sonrisa.</p></article>
+      <article class="card rv tilt"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M4 14c2 4 5 6 8 6s6-2 8-6"/><path d="M8 11l1-1M12 10v-2M16 11l-1-1"/></svg></div><h3 data-t="sv_dis">Diseño de sonrisa</h3><p data-t="sv_dis_d">Un plan pensado para su rostro y lo que usted desea.</p></article>
+      <article class="card rv tilt" style="--d:.05s"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 3l1.800 4.200L18 9l-4.200 1.800L12 15l-1.800-4.200L6 9l4.200-1.800z"/><path d="M18 16l.8 1.700L20.500 18.500 18.800 19.300 18 21l-.8-1.700-1.700-.8 1.700-.8z"/></svg></div><h3 data-t="sv_bla">Blanqueamiento</h3><p data-t="sv_bla_d">Aclara el color natural de sus dientes.</p></article>
+      <article class="card rv tilt" style="--d:.1s"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M4 9c4-3 12-3 16 0v2c0 4-3 8-8 8s-8-4-8-8z"/><path d="M8 13h8"/></svg></div><h3 data-t="sv_den">Dentaduras completas y parciales</h3><p data-t="sv_den_d">Para recuperar la masticación y la sonrisa.</p></article>
+      <article class="card rv tilt"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg></div><h3 data-t="sv_reh">Rehabilitación oral completa</h3><p data-t="sv_reh_d">Un plan integral para recuperar función y estética.</p></article>
+      <article class="card rv tilt" style="--d:.05s"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M9 3h6l1 5-2 6v7h-4v-7L8 8z"/><path d="M12 8v6"/></svg></div><h3 data-t="sv_end">Endodoncia</h3><p data-t="sv_end_d">Tratamiento del nervio para conservar su diente.</p></article>
+      <article class="card rv tilt" style="--d:.1s"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 5c1.500-2 5-2 6 1s-1 6-3 8"/><path d="M12 5C10.500 3 7 3 6 6s1 6 3 8"/><path d="M9 14c0 3 1 6 3 6s3-3 3-6"/></svg></div><h3 data-t="sv_bot">Botox</h3><p data-t="sv_bot_d">Disponible en el consultorio. Llámenos y le damos los detalles.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-dark" id="doctora">
+  <div class="wrap about-g">
+    <div class="ph-stack rv">
+      <div class="p1"><img src="images/dra-cuevas.jpg" alt="La Dra. Kenia Cuevas frente al monitor de su consultorio" loading="lazy" width="472" height="590"></div>
+      <div class="p2"><img src="images/consultorio.jpg" alt="La Dra. Cuevas atendiendo a una paciente" loading="lazy" width="512" height="420"></div>
+    </div>
+    <div>
+      <h2 class="rv" data-t="ab_h">Conozca a la Dra. Kenia Cuevas</h2>
+      <p class="rv" data-t="ab_p1">La Dra. Kenia Cuevas, DDS atiende a familias de Doral con odontología general, cosmética y familiar.</p>
+      <p class="rv" data-t="ab_p2">Sus pacientes lo cuentan mejor que nosotros: hablan de paciencia, de un lugar acogedor y de una clínica de confianza por muchos años.</p>
+      <div class="badge-row rv">
+        <span><svg class="i" viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg><span data-t="ab_b1">21 años de experiencia</span></span>
+        <span><svg class="i" viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg><span data-t="ab_b2">5.0 en Google</span></span>
+        <span><svg class="i" viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg><span data-t="ab_b3">Hablamos español</span></span>
+      </div>
+      <a class="btn btn-peach mag rv" href="#contacto" data-t="cta_cita">Pedir cita</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-warm" id="resenas">
+  <div class="wrap">
+    <div class="rev-head">
+      <div>
+        <h2 class="rv" data-t="rv_h">Lo que dicen sus pacientes</h2>
+        <p class="sub rv" data-t="rv_s">5.0 en Google con 198 reseñas. Estas son algunas, tal como se publicaron.</p>
+      </div>
+      <div class="rev-nav rv">
+        <button type="button" id="prev" aria-label="Anterior"><svg class="i" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" id="next" aria-label="Siguiente"><svg class="i" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <div class="track" id="track" tabindex="0" aria-label="Reseñas de Google">
+      <figure class="rev"><div class="stars" aria-label="5 de 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg></div><blockquote lang="es">Desde que entras sientes mucha paz. Todo el personal es maravilloso y en especial la doctora es muy profesional y amable. Recomendado 100%</blockquote><span class="orig" data-t="orig">Reseña original en español</span><footer><span class="av">L</span><div><cite>Lauri Lopez</cite><small>Google</small></div></footer></figure>
+      <figure class="rev"><div class="stars" aria-label="5 de 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg></div><blockquote lang="es">Tengo trauma con el dentista desde niña y la Doctora Cuevas me ha ayudado a superarlo, es muy paciente, logra que te relajes hasta el punto que tu experiencia con su trabajo sea la mejor</blockquote><span class="orig" data-t="orig">Reseña original en español</span><footer><span class="av">D</span><div><cite>Dianelys Alvarez</cite><small>Google</small></div></footer></figure>
+      <figure class="rev"><div class="stars" aria-label="5 de 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg></div><blockquote lang="es">Muy buena atención de parte de los trabajadores, doctores profesionales y con amplio conocimiento de la materia. Lugar acogedor y limpio. Ha sido mi clínica de confianza por muchos años</blockquote><span class="orig" data-t="orig">Reseña original en español</span><footer><span class="av">A</span><div><cite>Anaily Millo</cite><small>Google</small></div></footer></figure>
+      <figure class="rev"><div class="stars" aria-label="5 de 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg></div><blockquote lang="es">La mejor experiencia que e tenido con un dentista, recomendado 100 % muy amables, Gracias Kenia</blockquote><span class="orig" data-t="orig">Reseña original en español</span><footer><span class="av">R</span><div><cite>Ruben Echevarria</cite><small>Google</small></div></footer></figure>
+      <figure class="rev"><div class="stars" aria-label="5 de 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg></div><blockquote lang="es">Encantada con el team de trabajo Dra.Kenia, Odalis, Ana y Lili  todos son súper amables</blockquote><span class="orig" data-t="orig">Reseña original en español</span><footer><span class="av">J</span><div><cite>Jacqueline Bello</cite><small>Google</small></div></footer></figure>
+    </div>
+    <a class="g-link rv" href="https://www.google.com/maps/search/?api=1&query=3650+NW+82nd+Ave+Ste+202+Doral+FL+33166" target="_blank" rel="noopener"><span data-t="rv_link">Ver todas en Google Maps</span><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<section class="sec" id="visita">
+  <div class="wrap">
+    <h2 class="rv" data-t="st_h">Su primera visita, paso a paso</h2>
+    <p class="sub rv" data-t="st_s">Así de sencillo es empezar.</p>
+    <div class="steps">
+      <div class="step rv"><h3 data-t="st1">Pida su cita</h3><p data-t="st1d">Llámenos o escríbanos desde esta página y coordinamos un día.</p></div>
+      <div class="step rv" style="--d:.1s"><h3 data-t="st2">Conozca a la doctora</h3><p data-t="st2d">La Dra. Cuevas revisa su caso y le explica cada opción.</p></div>
+      <div class="step rv" style="--d:.2s"><h3 data-t="st3">Elija su plan</h3><p data-t="st3d">Usted decide con la información completa y a su ritmo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-mist" id="faq">
+  <div class="wrap">
+    <h2 class="rv" data-t="fq_h">Preguntas frecuentes</h2>
+    <div class="faq">
+      <details class="qa rv"><summary><span data-t="q1">¿Aceptan mi seguro dental?</span><span class="pl"><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans"><span data-t="a1">Llámenos al</span> <a href="tel:+13052304487">(305) 230-4487</a> <span data-t="a1b">y se lo confirmamos.</span></div></details>
+      <details class="qa rv"><summary><span data-t="q2">¿Cuánto cuesta un tratamiento?</span><span class="pl"><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans"><span data-t="a2">Depende de cada caso. Llámenos al</span> <a href="tel:+13052304487">(305) 230-4487</a> <span data-t="a2b">y se lo confirmamos.</span></div></details>
+      <details class="qa rv"><summary><span data-t="q3">¿Atienden a niños?</span><span class="pl"><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans" data-t="a3">Sí. La odontopediatría es uno de nuestros servicios. Llámenos para coordinar la cita.</div></details>
+      <details class="qa rv"><summary><span data-t="q4">¿Qué hago si tengo una urgencia dental?</span><span class="pl"><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans"><span data-t="a4">Las urgencias son uno de nuestros servicios. Llámenos al</span> <a href="tel:+13052304487">(305) 230-4487</a> <span data-t="a4b">y le indicamos cómo ayudarle.</span></div></details>
+      <details class="qa rv"><summary><span data-t="q5">¿Hablan español?</span><span class="pl"><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans" data-t="a5">Sí, hablamos español.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-warm" id="contacto">
+  <div class="wrap">
+    <h2 class="rv" data-t="ct_h">Pida su cita</h2>
+    <p class="sub rv" data-t="ct_s">Cuéntenos qué necesita y le respondemos para coordinar su visita.</p>
+    <div class="ct-g">
+      <form class="appt rv" id="form" novalidate>
+        <h3 data-t="f_h">Solicitar cita</h3>
+        <div class="fld"><label for="f-n" data-t="f_n">Nombre</label><input id="f-n" name="n" autocomplete="name" required><div class="err" id="e-n" role="alert"></div></div>
+        <div class="fld"><label for="f-t" data-t="f_t">Teléfono</label><input id="f-t" name="t" type="tel" autocomplete="tel" inputmode="tel" required><div class="err" id="e-t" role="alert"></div></div>
+        <div class="fld"><label for="f-m" data-t="f_m">Motivo de la visita</label><select id="f-m" name="m"></select></div>
+        <div class="fld"><label for="f-d" data-t="f_d">Día preferido</label><select id="f-d" name="d"></select></div>
+        <button class="btn btn-primary" type="submit" data-t="f_s">Enviar solicitud</button>
+        <p style="font-size:.88rem;color:var(--ink-soft)" data-t="f_note">Se abrirá su correo con el mensaje listo para enviar al consultorio.</p>
+        <div class="ok" id="ok" role="status"><svg viewBox="0 0 84 84"><circle cx="42" cy="42" r="38"/><path d="M26 43l11 11 21-23"/></svg><h3 data-t="ok_h">Mensaje listo</h3><p data-t="ok_p">Revise su correo y presione enviar. Si prefiere, llámenos al (305) 230-4487.</p></div>
+      </form>
+      <div class="info">
+        <a href="tel:+13052304487"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><div><b data-t="i_tel">Teléfono</b><span>(305) 230-4487</span></div></a>
+        <a href="mailto:kenia@vidadental.com"><span class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 8l9 6 9-6"/></svg></span><div><b>Email</b><span>kenia@vidadental.com</span></div></a>
+        <a href="https://www.google.com/maps/search/?api=1&query=3650+NW+82nd+Ave+Ste+202+Doral+FL+33166" target="_blank" rel="noopener"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.500"/></svg></span><div><b data-t="i_dir">Dirección</b><span>3650 NW 82nd Ave Ste 202<br>Doral, FL 33166<br><span data-t="i_pav">The Pavilion At Doral</span></span><br><span style="font-weight:700;color:var(--indigo)" data-t="i_como">Cómo llegar</span></div></a>
+      </div>
+      <div class="map rv"><iframe title="Mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=3650+NW+82nd+Ave+Ste+202+Doral+FL+33166&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="rv" data-t="fn_h">Su sonrisa, en buenas manos</h2>
+    <p class="rv" data-t="fn_p">Llame hoy y coordine su visita con la Dra. Cuevas.</p>
+    <div class="cta rv"><a class="btn btn-primary mag" href="tel:+13052304487">(305) 230-4487</a><a class="btn btn-line mag" href="#contacto" data-t="cta_cita">Pedir cita</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="f-g">
+      <div><img src="images/logo.png" alt="VidaDental: Kenia Cuevas, DDS" width="218" height="68" loading="lazy"><p data-t="ft_p">Odontología general, cosmética y familiar en Doral, FL.</p></div>
+      <div><h4 data-t="ft_m">Menú</h4><a href="#servicios" data-t="nav_serv">Servicios</a><a href="#doctora" data-t="nav_doc">La doctora</a><a href="#resenas" data-t="nav_rev">Reseñas</a><a href="#faq" data-t="fq_h">Preguntas frecuentes</a></div>
+      <div><h4 data-t="ft_c">Contacto</h4><a href="tel:+13052304487">(305) 230-4487</a><a href="mailto:kenia@vidadental.com">kenia@vidadental.com</a></div>
+      <div><h4 data-t="i_dir">Dirección</h4><a href="https://www.google.com/maps/search/?api=1&query=3650+NW+82nd+Ave+Ste+202+Doral+FL+33166" target="_blank" rel="noopener">3650 NW 82nd Ave Ste 202<br>Doral, FL 33166</a></div>
+    </div>
+    <div class="copy" data-t="ft_copy">VidaDental: Kenia Cuevas, DDS. Sitio de demostración.</div>
+  </div>
+</footer>
+
+<div class="mbar"><a class="btn btn-line" href="tel:+13052304487" data-t="cta_llamar">Llamar</a><a class="btn btn-primary" href="#contacto" data-t="cta_cita">Pedir cita</a></div>
+
+<script>
+(function(){
+"use strict";
+var T={
+es:{skip:"Saltar al contenido",nav_serv:"Servicios",nav_doc:"La doctora",nav_rev:"Reseñas",nav_ct:"Contacto",
+h1:"Una sonrisa sana para <em>toda su familia</em>, en Doral.",lead:"Odontología general, cosmética y familiar con la Dra. Kenia Cuevas. Hablamos español.",cta_cita:"Pedir cita",cta_llamar:"Llamar",chip_g:"198 reseñas en Google",chip_fam:"Atención familiar",
+s1:"Calificación en Google",s2:"Reseñas de pacientes",s3:"Años de experiencia",s4:"Hablamos español",
+svc_h:"Todo lo que su sonrisa necesita",svc_s:"Cuidado dental para cada edad, en un solo consultorio.",
+sv_cerec:"Coronas CEREC en el día",sv_cerec_d:"Restaure un diente en el día con tecnología CEREC.",sv_inv:"Invisalign",sv_inv_d:"Proveedora preferida de Invisalign. Alineadores transparentes para enderezar su sonrisa.",
+sv_chk:"Chequeos",sv_chk_d:"Revisión completa de dientes y encías para detectar a tiempo.",sv_ped:"Odontopediatría",sv_ped_d:"Cuidado dental pensado para los más pequeños.",sv_urg:"Urgencias",sv_urg_d:"Dolor o accidente dental: llámenos y le indicamos cómo atenderle.",
+sv_imp:"Implantes",sv_imp_d:"Una opción fija para reemplazar dientes ausentes.",sv_cor:"Coronas y puentes",sv_cor_d:"Restauran dientes dañados o reponen los que faltan.",sv_car:"Carillas",sv_car_d:"Finas láminas para mejorar la forma y el color de la sonrisa.",
+sv_dis:"Diseño de sonrisa",sv_dis_d:"Un plan pensado para su rostro y lo que usted desea.",sv_bla:"Blanqueamiento",sv_bla_d:"Aclara el color natural de sus dientes.",sv_den:"Dentaduras completas y parciales",sv_den_d:"Para recuperar la masticación y la sonrisa.",
+sv_reh:"Rehabilitación oral completa",sv_reh_d:"Un plan integral para recuperar función y estética.",sv_end:"Endodoncia",sv_end_d:"Tratamiento del nervio para conservar su diente.",sv_bot:"Botox",sv_bot_d:"Disponible en el consultorio. Llámenos y le damos los detalles.",
+ab_h:"Conozca a la Dra. Kenia Cuevas",ab_p1:"La Dra. Kenia Cuevas, DDS atiende a familias de Doral con odontología general, cosmética y familiar.",ab_p2:"Sus pacientes lo cuentan mejor que nosotros: hablan de paciencia, de un lugar acogedor y de una clínica de confianza por muchos años.",ab_b1:"21 años de experiencia",ab_b2:"5.0 en Google",ab_b3:"Hablamos español",
+rv_h:"Lo que dicen sus pacientes",rv_s:"5.0 en Google con 198 reseñas. Estas son algunas, tal como se publicaron.",orig:"Reseña original en español",rv_link:"Ver todas en Google Maps",
+st_h:"Su primera visita, paso a paso",st_s:"Así de sencillo es empezar.",st1:"Pida su cita",st1d:"Llámenos o escríbanos desde esta página y coordinamos un día.",st2:"Conozca a la doctora",st2d:"La Dra. Cuevas revisa su caso y le explica cada opción.",st3:"Elija su plan",st3d:"Usted decide con la información completa y a su ritmo.",
+fq_h:"Preguntas frecuentes",q1:"¿Aceptan mi seguro dental?",a1:"Llámenos al",a1b:"y se lo confirmamos.",q2:"¿Cuánto cuesta un tratamiento?",a2:"Depende de cada caso. Llámenos al",a2b:"y se lo confirmamos.",q3:"¿Atienden a niños?",a3:"Sí. La odontopediatría es uno de nuestros servicios. Llámenos para coordinar la cita.",q4:"¿Qué hago si tengo una urgencia dental?",a4:"Las urgencias son uno de nuestros servicios. Llámenos al",a4b:"y le indicamos cómo ayudarle.",q5:"¿Hablan español?",a5:"Sí, hablamos español.",
+ct_h:"Pida su cita",ct_s:"Cuéntenos qué necesita y le respondemos para coordinar su visita.",f_h:"Solicitar cita",f_n:"Nombre",f_t:"Teléfono",f_m:"Motivo de la visita",f_d:"Día preferido",f_s:"Enviar solicitud",f_note:"Se abrirá su correo con el mensaje listo para enviar al consultorio.",ok_h:"Mensaje listo",ok_p:"Revise su correo y presione enviar. Si prefiere, llámenos al (305) 230-4487.",
+i_tel:"Teléfono",i_dir:"Dirección",i_pav:"The Pavilion At Doral",i_como:"Cómo llegar",fn_h:"Su sonrisa, en buenas manos",fn_p:"Llame hoy y coordine su visita con la Dra. Cuevas.",
+ft_p:"Odontología general, cosmética y familiar en Doral, FL.",ft_m:"Menú",ft_c:"Contacto",ft_copy:"VidaDental: Kenia Cuevas, DDS. Sitio de demostración.",
+e_n:"Escriba su nombre.",e_t:"Escriba un teléfono válido.",motivos:["Chequeo","Invisalign","Coronas CEREC","Implantes","Carillas o blanqueamiento","Odontopediatría","Urgencia","Otro motivo"],dias:["Cualquier día","Esta semana","La próxima semana"],
+title:"VidaDental: Kenia Cuevas, DDS | Odontología familiar en Doral, FL",desc:"VidaDental: Kenia Cuevas, DDS. Odontología general, cosmética y familiar en Doral, FL. 5.0 en Google con 198 reseñas. Llame al (305) 230-4487.",mail_s:"Solicitud de cita",mail_n:"Nombre",mail_t:"Teléfono",mail_m:"Motivo",mail_d:"Día preferido"},
+en:{skip:"Skip to content",nav_serv:"Services",nav_doc:"The doctor",nav_rev:"Reviews",nav_ct:"Contact",
+h1:"A healthy smile for <em>your whole family</em>, in Doral.",lead:"General, cosmetic and family dentistry with Dr. Kenia Cuevas. We speak Spanish.",cta_cita:"Book a visit",cta_llamar:"Call",chip_g:"198 Google reviews",chip_fam:"Family care",
+s1:"Google rating",s2:"Patient reviews",s3:"Years of experience",s4:"We speak Spanish",
+svc_h:"Everything your smile needs",svc_s:"Dental care for every age, in one office.",
+sv_cerec:"Same-day CEREC crowns",sv_cerec_d:"Restore a tooth in one day with CEREC technology.",sv_inv:"Invisalign",sv_inv_d:"Invisalign preferred provider. Clear aligners to straighten your smile.",
+sv_chk:"Check-ups",sv_chk_d:"A complete review of teeth and gums to catch things early.",sv_ped:"Pediatric dentistry",sv_ped_d:"Dental care designed for the little ones.",sv_urg:"Emergencies",sv_urg_d:"Tooth pain or an accident: call us and we will tell you how we can help.",
+sv_imp:"Implants",sv_imp_d:"A fixed option to replace missing teeth.",sv_cor:"Crowns and bridges",sv_cor_d:"Restore damaged teeth or replace missing ones.",sv_car:"Veneers",sv_car_d:"Thin shells to improve the shape and color of your smile.",
+sv_dis:"Smile design",sv_dis_d:"A plan shaped around your face and what you want.",sv_bla:"Teeth whitening",sv_bla_d:"Lightens the natural color of your teeth.",sv_den:"Full and partial dentures",sv_den_d:"To get back chewing and your smile.",
+sv_reh:"Full mouth rehabilitation",sv_reh_d:"A complete plan to restore function and appearance.",sv_end:"Root canal therapy",sv_end_d:"Treatment of the nerve to save your tooth.",sv_bot:"Botox",sv_bot_d:"Available at the office. Call us for the details.",
+ab_h:"Meet Dr. Kenia Cuevas",ab_p1:"Dr. Kenia Cuevas, DDS cares for Doral families with general, cosmetic and family dentistry.",ab_p2:"Her patients say it better than we can: they talk about patience, a welcoming place and a trusted clinic for many years.",ab_b1:"21 years of experience",ab_b2:"5.0 on Google",ab_b3:"We speak Spanish",
+rv_h:"What patients say",rv_s:"5.0 on Google with 198 reviews. Here are a few, exactly as they were posted.",orig:"Original review, in Spanish",rv_link:"See all on Google Maps",
+st_h:"Your first visit, step by step",st_s:"Getting started is simple.",st1:"Book your visit",st1d:"Call us or write from this page and we will set a day.",st2:"Meet the doctor",st2d:"Dr. Cuevas reviews your case and explains each option.",st3:"Choose your plan",st3d:"You decide with the full picture, at your own pace.",
+fq_h:"Frequently asked questions",q1:"Do you accept my dental insurance?",a1:"Call us at",a1b:"and we will confirm.",q2:"How much does treatment cost?",a2:"It depends on each case. Call us at",a2b:"and we will confirm.",q3:"Do you see children?",a3:"Yes. Pediatric dentistry is one of our services. Call us to set up a visit.",q4:"What if I have a dental emergency?",a4:"Emergencies are one of our services. Call us at",a4b:"and we will tell you how we can help.",q5:"Do you speak Spanish?",a5:"Yes, we speak Spanish.",
+ct_h:"Book your visit",ct_s:"Tell us what you need and we will get back to you to set up your visit.",f_h:"Request a visit",f_n:"Name",f_t:"Phone",f_m:"Reason for the visit",f_d:"Preferred day",f_s:"Send request",f_note:"Your email app will open with the message ready to send to the office.",ok_h:"Message ready",ok_p:"Check your email and press send. If you prefer, call us at (305) 230-4487.",
+i_tel:"Phone",i_dir:"Address",i_pav:"The Pavilion At Doral",i_como:"Get directions",fn_h:"Your smile, in good hands",fn_p:"Call today and set up your visit with Dr. Cuevas.",
+ft_p:"General, cosmetic and family dentistry in Doral, FL.",ft_m:"Menu",ft_c:"Contact",ft_copy:"VidaDental: Kenia Cuevas, DDS. Demo site.",
+e_n:"Please enter your name.",e_t:"Please enter a valid phone number.",motivos:["Check-up","Invisalign","CEREC crowns","Implants","Veneers or whitening","Pediatric dentistry","Emergency","Other reason"],dias:["Any day","This week","Next week"],
+title:"VidaDental: Kenia Cuevas, DDS | Family dentistry in Doral, FL",desc:"VidaDental: Kenia Cuevas, DDS. General, cosmetic and family dentistry in Doral, FL. 5.0 on Google with 198 reviews. Call (305) 230-4487.",mail_s:"Appointment request",mail_n:"Name",mail_t:"Phone",mail_m:"Reason",mail_d:"Preferred day"}
+};
+var lang="es";
+try{var s=localStorage.getItem("vd-lang");if(s==="en"||s==="es")lang=s}catch(e){}
+function setLang(l){
+  lang=l;var D=T[l];
+  document.documentElement.lang=l;
+  document.querySelectorAll("[data-t]").forEach(function(el){var v=D[el.getAttribute("data-t")];if(v!=null)el.textContent=v});
+  document.querySelectorAll("[data-th]").forEach(function(el){var v=D[el.getAttribute("data-th")];if(v!=null)el.innerHTML=v});
+  document.title=D.title;var m=document.getElementById("metaDesc");if(m)m.setAttribute("content",D.desc);
+  document.querySelectorAll("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===l?"true":"false")});
+  fillSel("f-m",D.motivos);fillSel("f-d",D.dias);
+  try{localStorage.setItem("vd-lang",l)}catch(e){}
+}
+function fillSel(id,arr){var el=document.getElementById(id);if(!el)return;var i=el.selectedIndex>0?el.selectedIndex:0;el.innerHTML="";arr.forEach(function(t,k){var o=document.createElement("option");o.value=k;o.textContent=t;el.appendChild(o)});el.selectedIndex=i}
+document.querySelectorAll("[data-lang]").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-lang"))})});
+setLang(lang);
+
+var rm=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function safe(f){try{f()}catch(e){}}
+
+/* splash */
+var sp=document.getElementById("splash");
+function hideSplash(){sp&&sp.classList.add("hide")}
+window.addEventListener("load",function(){setTimeout(hideSplash,rm?0:900)});
+setTimeout(hideSplash,2200);
+
+/* nav scrolled */
+safe(function(){var n=document.getElementById("nav");var on=function(){n.classList.toggle("scrolled",window.scrollY>20)};on();window.addEventListener("scroll",on,{passive:true})});
+
+/* reveal */
+safe(function(){
+  var els=document.querySelectorAll(".rv");
+  if(!("IntersectionObserver" in window)||rm){els.forEach(function(e){e.classList.add("in")});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.05,rootMargin:"0px 0px -4% 0px"});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.add("in")})},4500);
+});
+
+/* counters (valores reales) */
+safe(function(){
+  var cs=document.querySelectorAll(".count");
+  var run=function(el){
+    var to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||"0",10);
+    if(rm){el.textContent=to.toFixed(dec);return}
+    var t0=performance.now(),dur=1100;
+    (function f(t){var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(dec);if(p<1)requestAnimationFrame(f);else el.textContent=to.toFixed(dec)})(t0);
+  };
+  if(!("IntersectionObserver" in window)){return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);io.unobserve(e.target)}})},{threshold:.4});
+  cs.forEach(function(c){io.observe(c)});
+});
+
+/* carousel */
+safe(function(){
+  var tr=document.getElementById("track");
+  var step=function(d){var c=tr.querySelector(".rev");tr.scrollBy({left:d*(c.offsetWidth+18),behavior:rm?"auto":"smooth"})};
+  document.getElementById("prev").addEventListener("click",function(){step(-1)});
+  document.getElementById("next").addEventListener("click",function(){step(1)});
+  tr.addEventListener("keydown",function(e){if(e.key==="ArrowRight"){step(1)}else if(e.key==="ArrowLeft"){step(-1)}});
+});
+
+/* tilt + magnetic (solo puntero fino) */
+safe(function(){
+  if(rm||!window.matchMedia("(hover:hover) and (pointer:fine)").matches)return;
+  document.querySelectorAll(".tilt").forEach(function(c){
+    c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="perspective(700px) rotateX("+(-y*5)+"deg) rotateY("+(x*6)+"deg) translateY(-6px)"});
+    c.addEventListener("pointerleave",function(){c.style.transform=""});
+  });
+  document.querySelectorAll(".mag").forEach(function(b){
+    b.addEventListener("pointermove",function(e){var r=b.getBoundingClientRect();b.style.transform="translate("+((e.clientX-r.left-r.width/2)*.18)+"px,"+((e.clientY-r.top-r.height/2)*.28-2)+"px)"});
+    b.addEventListener("pointerleave",function(){b.style.transform=""});
+  });
+});
+
+/* form: arma mailto, no envía a ningún servidor */
+safe(function(){
+  var f=document.getElementById("form"),ok=document.getElementById("ok");
+  f.addEventListener("submit",function(e){
+    e.preventDefault();var D=T[lang],bad=false;
+    var n=f.n,t=f.t;
+    [["n",n,D.e_n,n.value.trim().length>1],["t",t,D.e_t,t.value.replace(/\D/g,"").length>=7]].forEach(function(x){
+      var er=document.getElementById("e-"+x[0]);
+      if(!x[3]){bad=true;er.textContent=x[2];x[1].setAttribute("aria-invalid","true")}else{er.textContent="";x[1].removeAttribute("aria-invalid")}
+    });
+    if(bad)return;
+    var body=D.mail_n+": "+n.value.trim()+"\n"+D.mail_t+": "+t.value.trim()+"\n"+D.mail_m+": "+D.motivos[f.m.value]+"\n"+D.mail_d+": "+D.dias[f.d.value];
+    var href="mailto:kenia@vidadental.com?subject="+encodeURIComponent(D.mail_s+" - "+n.value.trim())+"&body="+encodeURIComponent(body);
+    ok.classList.add("show");
+    window.location.href=href;
+  });
+});
+})();
+</script>
+</body>
+</html>
