@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#114B83">
+<title>Pembroke Pines Dental Solutions | Odontología familiar y estética en Pembroke Pines, FL</title>
+<meta name="description" content="Pembroke Pines Dental Solutions, con la Dra. Annabel Perez. Odontología familiar y estética en 18450 Pines Blvd, Pembroke Pines, FL. Hablamos español. Llame al (954) 947-2151.">
+<link rel="icon" href="images/favicon.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Lexend:wght@500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --navy:#114B83;--navy-d:#0A3358;--navy-dd:#06203A;--sky:#00ADEE;--sky-l:#E6F6FD;--sky-m:#BFE8F8;
+  --ink:#0B2F52;--muted:#41627F;--paper:#fff;--surface:#F1F9FD;
+  --r-card:24px;--r-in:14px;--r-pill:999px;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --head:'Lexend',system-ui,sans-serif;--body:'Figtree',system-ui,sans-serif;
+  --shadow:0 18px 50px -22px rgba(10,51,88,.35);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);font-weight:600;line-height:1.12;margin:0;letter-spacing:-.015em}
+p{margin:0}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+section{position:relative}
+.sec{padding:clamp(72px,9vw,128px) 0}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* splash */
+#splash{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:var(--navy-dd);transition:opacity .5s var(--ease),visibility .5s}
+#splash img{width:min(260px,62vw);background:#fff;border-radius:22px;padding:16px 22px;animation:pop .7s var(--ease) both}
+#splash.hide{opacity:0;visibility:hidden}
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(8px)}to{opacity:1;transform:none}}
+
+/* nav */
+.nav{position:fixed;z-index:50;top:14px;left:50%;translate:-50% 0;width:min(1200px,100% - 24px);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 10px 8px 18px;border-radius:var(--r-pill);background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border:1px solid rgba(255,255,255,.7);box-shadow:0 10px 34px -16px rgba(6,32,58,.5);transition:box-shadow .3s var(--ease)}
+.nav.scrolled{box-shadow:0 14px 40px -14px rgba(6,32,58,.6)}
+.brand img{height:48px;width:auto;object-fit:contain}
+.links{display:none;gap:4px;margin:0;padding:0;list-style:none}
+.links a{display:block;padding:10px 14px;border-radius:var(--r-pill);text-decoration:none;font-weight:600;font-size:15px;color:var(--navy-d);transition:background .2s,color .2s}
+.links a.act{background:var(--sky-l);color:var(--navy)}
+@media (hover:hover){.links a:hover{background:var(--sky-l)}}
+.navr{display:flex;align-items:center;gap:8px}
+.lang{display:flex;padding:3px;border-radius:var(--r-pill);background:var(--sky-l)}
+.lang button{font:600 14px var(--body);border:0;background:none;color:var(--navy-d);padding:8px 12px;border-radius:var(--r-pill);cursor:pointer;min-height:40px;transition:background .2s,color .2s}
+.lang button[aria-pressed=true]{background:var(--navy);color:#fff}
+.navcall{display:none}
+@media (min-width:480px){.navcall{display:inline-flex}}
+@media (min-width:1080px){.links{display:flex}.brand img{height:56px}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 26px;border-radius:var(--r-pill);border:2px solid transparent;font:600 16px var(--body);text-decoration:none;cursor:pointer;white-space:nowrap;transition:transform .2s var(--ease),box-shadow .25s var(--ease),background .2s,color .2s,border-color .2s}
+.btn:active{transform:scale(.97)}
+.btn-sky{background:var(--sky);color:var(--navy-dd)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-line{background:#fff;color:var(--navy);border-color:var(--navy)}
+.btn-sm{min-height:44px;padding:0 20px;font-size:15px}
+@media (hover:hover){
+ .btn-sky:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(0,173,238,.7);background:#2cc0f8}
+ .btn-navy:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(17,75,131,.7);background:#0e3f6f}
+ .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff;transform:translateY(-2px)}
+ .btn-line:hover{background:var(--sky-l);transform:translateY(-2px)}
+}
+
+/* hero */
+.hero{min-height:100dvh;display:flex;align-items:center;padding:104px 0 56px;color:#fff;background:linear-gradient(110deg,rgba(6,32,58,.96) 0%,rgba(10,51,88,.9) 48%,rgba(17,75,131,.72) 100%),url(images/entrada.webp) center/cover;overflow:hidden;isolation:isolate}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;pointer-events:none}
+.b1{width:520px;height:520px;background:#00ADEE;right:-120px;top:-120px;animation:drift 18s ease-in-out infinite alternate}
+.b2{width:420px;height:420px;background:#114B83;left:-140px;bottom:-140px;animation:drift 22s ease-in-out infinite alternate-reverse}
+@keyframes drift{to{transform:translate3d(-60px,50px,0) scale(1.1)}}
+.hgrid{display:grid;gap:40px;align-items:center}
+.hero h1{font-size:clamp(38px,6.4vw,76px);font-weight:700;letter-spacing:-.025em;max-width:13ch}
+.hero h1 span{color:#8EDDFA;display:block}
+.hero p.sub{margin-top:22px;font-size:clamp(18px,2vw,21px);max-width:34ch;color:#DDEFFA}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hvis{position:relative;justify-self:center;width:min(400px,78vw)}
+.arch{position:relative;aspect-ratio:4/5.1;border-radius:200px 200px 30px 30px;background:#fff;overflow:hidden;box-shadow:0 0 0 10px rgba(0,173,238,.35),0 40px 80px -30px rgba(0,0,0,.6)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.chip{position:absolute;left:-12px;bottom:34px;display:flex;align-items:center;gap:12px;padding:12px 18px;border-radius:20px;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:var(--ink);box-shadow:var(--shadow);animation:float 6s ease-in-out infinite}
+.chip b{font:700 28px var(--head);color:var(--navy)}
+.chip small{display:block;font-size:13px;line-height:1.3;color:var(--muted);font-weight:600}
+.stars{color:#F5A623;letter-spacing:2px;font-size:15px}
+@keyframes float{50%{transform:translateY(-8px)}}
+@media (min-width:900px){.hgrid{grid-template-columns:1.15fr .85fr}.hvis{justify-self:end}}
+@media (max-width:899px){.hero{padding-top:100px}.hvis{width:min(300px,70vw)}.chip{left:-6px;bottom:20px;padding:10px 14px}.chip b{font-size:22px}}
+
+/* stats */
+.stats{background:#fff;padding:44px 0;border-bottom:1px solid var(--sky-m)}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px 16px}
+.st b{display:block;font:700 clamp(34px,5vw,52px)/1 var(--head);color:var(--navy)}
+.st span{display:block;margin-top:6px;font-weight:600;color:var(--muted);font-size:16px}
+.st.txt b{font-size:clamp(22px,3vw,28px);line-height:1.15}
+@media (min-width:860px){.sgrid{grid-template-columns:repeat(4,auto);justify-content:space-between}.st+.st{padding-left:32px;border-left:1px solid var(--sky-m)}}
+
+/* headings */
+.eyebrow{display:inline-block;font:600 14px var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:14px}
+.on-dark .eyebrow{color:#8EDDFA}
+.h2{font-size:clamp(30px,4.4vw,52px);max-width:20ch}
+.lead{margin-top:16px;font-size:19px;color:var(--muted);max-width:56ch}
+
+/* services */
+.services{background:var(--surface)}
+.sv{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:48px}
+.card{grid-column:span 6;display:flex;gap:18px;padding:26px;background:#fff;border:1px solid var(--sky-m);border-radius:var(--r-card);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+.card img{width:68px;height:68px;flex:none}
+.card h3{font-size:20px;margin-bottom:8px}
+.card p{font-size:16px;color:var(--muted)}
+.card.big{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-d) 100%);border:0;color:#fff;padding:32px}
+.card.big p{color:#D3ECFA}
+.card.big img{width:84px;height:84px}
+.card.big h3{font-size:24px}
+@media (hover:hover){.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--sky)}.card.big:hover{border-color:transparent}}
+@media (min-width:760px){.card.big{grid-column:span 3}.card{grid-column:span 2;flex-direction:column}.card.big{flex-direction:row;align-items:flex-start}}
+.also{margin-top:40px}
+.also h3{font-size:18px;margin-bottom:14px;color:var(--navy)}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.pills li{padding:10px 18px;border-radius:var(--r-pill);background:#fff;border:1px solid var(--sky-m);font-weight:600;font-size:16px;color:var(--navy-d);transition:background .2s,transform .2s var(--ease)}
+@media (hover:hover){.pills li:hover{background:var(--sky-l);transform:translateY(-2px)}}
+
+/* doctor */
+.doctor{background:linear-gradient(180deg,#fff 0%,var(--sky-l) 100%)}
+.dgrid{display:grid;gap:48px;align-items:center}
+.dpho{position:relative;justify-self:center;width:min(420px,88%)}
+.dpho .arch{border-radius:210px 210px 30px 30px;aspect-ratio:4/5;box-shadow:0 0 0 10px var(--sky-m),0 30px 60px -30px rgba(10,51,88,.5)}
+.tl{list-style:none;margin:36px 0 0;padding:0 0 0 30px;position:relative}
+.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--sky),var(--navy))}
+.tl li{position:relative;padding-bottom:26px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-30px;top:6px;width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid var(--sky)}
+.tl h3{font-size:19px;color:var(--navy)}
+.tl p{font-size:16px;color:var(--muted);margin-top:4px}
+@media (min-width:900px){.dgrid{grid-template-columns:.8fr 1.2fr;gap:80px}}
+
+/* bento */
+.bento{background:var(--navy-dd);color:#fff;overflow:hidden}
+.bg-glow{position:absolute;right:-200px;top:-160px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(0,173,238,.35),transparent 65%);pointer-events:none}
+.bgrid{display:grid;gap:16px;margin-top:48px}
+.bc{position:relative;padding:32px;border-radius:var(--r-card);overflow:hidden;isolation:isolate;transition:transform .3s var(--ease),box-shadow .3s}
+.bc h3{font-size:clamp(24px,3vw,32px)}
+.bc p{margin-top:12px;max-width:44ch}
+.b-smile{background:linear-gradient(150deg,var(--sky) 0%,#0690CC 55%,var(--navy) 100%);color:var(--navy-dd);min-height:320px;display:flex;flex-direction:column;justify-content:flex-end}
+.bimg{flex:1;min-height:200px;width:100%;object-fit:cover;border-radius:18px;margin-bottom:26px;box-shadow:0 18px 40px -22px rgba(6,32,58,.7)}
+.b-smile h3{font-size:clamp(32px,4.4vw,52px)}
+.b-smile p{color:#06284a;font-weight:500}
+.b-em{background:linear-gradient(rgba(6,32,58,.78),rgba(6,32,58,.9)),url(images/consultorio.webp) center/cover;min-height:260px;display:flex;flex-direction:column;justify-content:flex-end}
+.b-em p{color:#DDEFFA}
+.b-fam{background:#fff;color:var(--ink)}
+.b-fam p{color:var(--muted)}
+.b-fam .pills{margin-top:20px}
+.b-fam .pills li{background:var(--sky-l);border-color:transparent}
+@media (hover:hover){.bc:hover{transform:translateY(-4px);box-shadow:0 30px 60px -30px rgba(0,173,238,.6)}}
+@media (min-width:900px){.bgrid{grid-template-columns:1.15fr 1fr;grid-template-rows:auto auto}.b-smile{grid-row:span 2}}
+
+/* gallery */
+.gallery{background:var(--surface);overflow:hidden}
+.gh{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.gnav{display:flex;gap:10px}
+.arrow{width:50px;height:50px;border-radius:50%;border:2px solid var(--navy);background:#fff;color:var(--navy);font:600 24px/1 var(--body);cursor:pointer;transition:background .2s,color .2s,transform .2s var(--ease)}
+.arrow:active{transform:scale(.94)}
+@media (hover:hover){.arrow:hover{background:var(--navy);color:#fff}}
+.gal{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:36px 20px 24px;margin:0 calc(50% - 50vw);padding-inline:max(20px,calc(50vw - 600px));scrollbar-width:thin;scrollbar-color:var(--sky) transparent;scroll-padding-inline:max(20px,calc(50vw - 600px))}
+.gal figure{margin:0;flex:none;width:min(84vw,540px);scroll-snap-align:start}
+.gal button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:var(--r-card);overflow:hidden;box-shadow:var(--shadow)}
+.gal img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .6s var(--ease)}
+@media (hover:hover){.gal button:hover img{transform:scale(1.04)}}
+.gal figcaption{margin-top:12px;font-weight:600;color:var(--navy-d);font-size:16px}
+dialog{border:0;padding:0;background:transparent;max-width:min(1100px,94vw);max-height:92dvh;overflow:visible}
+dialog::backdrop{background:rgba(6,32,58,.88);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+dialog img{border-radius:var(--r-card);max-height:84dvh;width:auto;max-width:100%;margin:auto}
+dialog form{position:absolute;right:-6px;top:-54px}
+dialog .x{min-height:44px;padding:0 18px;border-radius:var(--r-pill);border:0;background:#fff;color:var(--navy);font:600 15px var(--body);cursor:pointer}
+
+/* reviews */
+.reviews{background:linear-gradient(160deg,var(--sky) 0%,#3DC4F5 100%);color:var(--navy-dd);overflow:hidden}
+.reviews .eyebrow{color:var(--navy-dd)}
+.reviews .lead{color:#06284a}
+.rtop{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.gbadge{display:flex;align-items:center;gap:14px;padding:14px 22px;border-radius:20px;background:#fff;box-shadow:var(--shadow)}
+.gbadge b{font:700 36px var(--head);color:var(--navy)}
+.gbadge small{display:block;font-size:14px;font-weight:600;color:var(--muted);line-height:1.3}
+.car{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin:36px calc(50% - 50vw) 0;padding:8px max(20px,calc(50vw - 600px)) 28px;scroll-padding-inline:max(20px,calc(50vw - 600px));scrollbar-width:none}
+.car::-webkit-scrollbar{display:none}
+.rc{flex:none;width:min(86vw,440px);scroll-snap-align:start;background:#fff;color:var(--ink);padding:28px;border-radius:var(--r-card);box-shadow:0 22px 50px -26px rgba(6,32,58,.55);display:flex;flex-direction:column;gap:16px}
+.rc blockquote{margin:0;font-size:17px;line-height:1.6}
+.rc footer{margin-top:auto;display:flex;align-items:center;gap:12px}
+.av{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font:600 18px var(--head)}
+.rc footer b{display:block;font-size:16px}
+.rc footer small{color:var(--muted);font-size:14px;font-weight:600}
+.rnav{display:flex;align-items:center;gap:14px;margin-top:4px}
+.reviews .arrow{border-color:var(--navy-dd);color:var(--navy-dd);background:transparent}
+@media (hover:hover){.reviews .arrow:hover{background:var(--navy-dd);color:#fff}}
+.dots{display:flex;gap:8px}
+.dots i{width:9px;height:9px;border-radius:50%;background:rgba(6,32,58,.3);transition:width .3s var(--ease),background .3s}
+.dots i.on{width:28px;border-radius:9px;background:var(--navy-dd)}
+.rnote{font-size:14px;font-weight:600;color:#06284a;margin-top:6px}
+
+/* faq + seguros */
+.faq{background:#fff}
+.fgrid{display:grid;gap:48px}
+.ins{padding:32px;border-radius:var(--r-card);background:var(--sky-l);border:1px solid var(--sky-m);align-self:start}
+.ins h3{font-size:24px;margin-bottom:14px;color:var(--navy)}
+.ins p+p{margin-top:12px}
+.ins .btn{margin-top:22px}
+.q{border-bottom:1px solid var(--sky-m)}
+.q button{display:flex;width:100%;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;background:none;border:0;text-align:left;cursor:pointer;font:600 18px/1.35 var(--head);color:var(--ink)}
+.q button::after{content:"+";flex:none;width:36px;height:36px;border-radius:50%;background:var(--sky-l);color:var(--navy);display:grid;place-items:center;font:600 22px/1 var(--body);transition:transform .3s var(--ease),background .2s}
+.q[data-open=true] button::after{transform:rotate(45deg);background:var(--sky)}
+.qa{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}
+.qa>div{overflow:hidden}
+.qa p{padding:0 52px 22px 0;color:var(--muted)}
+.q[data-open=true] .qa{grid-template-rows:1fr}
+@media (min-width:960px){.fgrid{grid-template-columns:.8fr 1.2fr;gap:72px}}
+
+/* contact */
+.contact{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-d) 100%);color:#fff;overflow:hidden}
+.cgrid{display:grid;gap:36px;margin-top:44px}
+.form{background:#fff;color:var(--ink);padding:clamp(24px,4vw,40px);border-radius:var(--r-card);box-shadow:0 30px 70px -30px rgba(0,0,0,.55)}
+.f{margin-bottom:18px}
+.f label{display:block;font-weight:600;font-size:16px;margin-bottom:8px;color:var(--navy-d)}
+.f input,.f select{width:100%;min-height:52px;padding:0 16px;border:2px solid #9FB8CC;border-radius:var(--r-in);font:500 17px var(--body);color:var(--ink);background:#fff;transition:border-color .2s,box-shadow .2s}
+.f input:focus,.f select:focus{outline:0;border-color:var(--navy);box-shadow:0 0 0 4px rgba(0,173,238,.3)}
+.f .err{display:none;margin-top:6px;font-size:15px;font-weight:600;color:#B42318}
+.f.bad input{border-color:#B42318}
+.f.bad .err{display:block}
+.row2{display:grid;gap:0 16px}
+@media (min-width:560px){.row2{grid-template-columns:1fr 1fr}}
+.form .btn{width:100%}
+.done{display:none;text-align:center;padding:12px 0}
+.form.sent .fields{display:none}
+.form.sent .done{display:block}
+.done svg{width:76px;height:76px;margin:0 auto 14px;display:block}
+.done circle{fill:none;stroke:var(--sky);stroke-width:4;stroke-dasharray:170;stroke-dashoffset:170}
+.done path{fill:none;stroke:var(--navy);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:50;stroke-dashoffset:50}
+.sent .done circle{animation:draw .7s var(--ease) forwards}
+.sent .done path{animation:draw .5s .45s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.done h3{font-size:26px;margin-bottom:10px}
+.done p{color:var(--muted);margin-bottom:20px}
+.mapbox{border-radius:var(--r-card);overflow:hidden;box-shadow:0 30px 70px -30px rgba(0,0,0,.6);background:#dbeaf5}
+.mapbox iframe{display:block;width:100%;height:300px;border:0}
+.addr{padding:22px 26px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-card);margin-top:16px}
+.addr b{font:600 19px var(--head);display:block;margin-bottom:6px}
+.addr p{color:#DDEFFA;font-size:17px}
+.addr .cta{margin-top:16px}
+.addr .hrs{margin-top:12px}
+.addr .hrs strong{font-weight:600;color:#fff}
+@media (min-width:960px){.cgrid{grid-template-columns:1fr 1fr;align-items:start}}
+
+/* footer */
+footer.foot{background:var(--navy-dd);color:#C9DCEA;padding:56px 0 110px}
+.fg{display:grid;gap:36px}
+.foot .brandchip{display:inline-block;background:#fff;border-radius:16px;padding:10px 16px}
+.foot .brandchip img{height:52px;width:auto}
+.foot h4{font:600 16px var(--head);color:#fff;margin:0 0 12px}
+.foot a{text-decoration:none}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+@media (hover:hover){.foot a:hover{color:#fff;text-decoration:underline}}
+.foot .tag{margin-top:16px;max-width:34ch}
+.copy{margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);font-size:15px}
+@media (min-width:860px){.fg{grid-template-columns:1.4fr 1fr 1fr 1fr}footer.foot{padding-bottom:56px}}
+
+/* bar */
+.bar{position:fixed;z-index:60;left:0;right:0;bottom:0;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 -10px 30px -14px rgba(6,32,58,.4)}
+.bar .btn{flex:1;min-height:50px}
+@media (min-width:860px){.bar{display:none}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.hero .hl{animation:rise .9s var(--ease) both;animation-delay:calc(var(--i,0)*.1s + .55s)}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .blob,.chip{animation:none}
+ .js .rv{opacity:1;transform:none;transition:none}
+ .hero .hl{animation:none}
+ .card,.bc,.btn,.pills li{transition:none}
+ #splash img{animation:none}
+}
+</style>
+</head>
+<body>
+
+<div id="splash" aria-hidden="true"><img src="images/logo.webp" alt=""></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" data-ta="aria-label:brand_aria" aria-label="Pembroke Pines Dental Solutions, inicio"><img src="images/logo.webp" width="176" height="48" alt="Pembroke Pines Dental Solutions" data-ta="alt:logo_alt"></a>
+  <nav aria-label="Principal" data-ta="aria-label:nav_aria">
+    <ul class="links">
+      <li><a href="#servicios" data-t="n_serv">Servicios</a></li>
+      <li><a href="#doctora" data-t="n_doc">La doctora</a></li>
+      <li><a href="#clinica" data-t="n_cli">Clínica</a></li>
+      <li><a href="#resenas" data-t="n_rev">Reseñas</a></li>
+      <li><a href="#cita" data-t="n_con">Contacto</a></li>
+    </ul>
+  </nav>
+  <div class="navr">
+    <div class="lang" role="group" aria-label="Idioma" data-ta="aria-label:lang_aria">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-navy btn-sm navcall" href="tel:+19549472151" data-t="n_call">Llamar</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div style="position:absolute;inset:0;overflow:hidden;z-index:-1;pointer-events:none"><div class="blob b1"></div><div class="blob b2"></div></div>
+  <div class="wrap hgrid">
+    <div>
+      <h1 class="hl" style="--i:0"><span class="x1" data-t="h1a">Su sonrisa.</span><span data-t="h1b">Nuestra pasión, nuestro orgullo.</span></h1>
+      <p class="sub hl" style="--i:1" data-t="h_sub">Odontología familiar y estética con la Dra. Annabel Perez, en un consultorio moderno de West Pembroke Pines.</p>
+      <div class="cta hl" style="--i:2">
+        <a class="btn btn-sky" href="#cita" data-t="b_req" data-mag>Pedir cita</a>
+        <a class="btn btn-ghost" href="tel:+19549472151" data-t="b_callnum" data-mag>Llamar al (954) 947-2151</a>
+      </div>
+    </div>
+    <div class="hvis hl" style="--i:2">
+      <div class="arch"><img src="images/dra-perez.webp" width="800" height="1018" alt="La Dra. Annabel Perez, con bata blanca, sonriendo" data-ta="alt:dr_alt" fetchpriority="high"></div>
+      <div class="chip" role="img" aria-label="Calificación de Google: 4.9 de 5, con 517 reseñas" data-ta="aria-label:rate_aria">
+        <b>4.9</b>
+        <div><span class="stars" aria-hidden="true">★★★★★</span><small data-t="chip">517 reseñas en Google</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Datos del consultorio" data-ta="aria-label:stats_aria">
+  <div class="wrap sgrid">
+    <div class="st rv"><b data-count-to="4.9" data-decimals="1">4.9</b><span data-t="s1">calificación en Google</span></div>
+    <div class="st rv"><b data-count-to="517">517</b><span data-t="s2">reseñas en Google</span></div>
+    <div class="st txt rv"><b data-t="s3a">Hablamos español</b><span data-t="s3b">y también inglés</span></div>
+    <div class="st txt rv"><b data-t="s4a">Emergencias y walk-ins</b><span data-t="s4b">Llame y le atendemos</span></div>
+  </div>
+</section>
+
+<section class="sec services" id="servicios">
+  <div class="wrap">
+    <span class="eyebrow rv" data-t="sv_eye">Servicios</span>
+    <h2 class="h2 rv" data-t="sv_h2">Todo lo que su familia necesita, en un solo lugar</h2>
+    <p class="lead rv" data-t="sv_lead">Desde una limpieza de rutina hasta implantes y rediseño de sonrisa, con la tecnología y el trato personal de un consultorio independiente.</p>
+    <div class="sv">
+      <article class="card big rv"><img src="images/icons/implant-icon.webp" alt="" width="84" height="84"><div><h3 data-t="c1h">Implantes dentales</h3><p data-t="c1p">Una opción para reponer un diente perdido por periodontitis, caries o una lesión, y mantener la estructura de su boca.</p></div></article>
+      <article class="card big rv"><img src="images/icons/invisalign-icon.webp" alt="" width="84" height="84"><div><h3 data-t="c2h">Invisalign para adolescentes y adultos</h3><p data-t="c2p">Alineadores casi invisibles que corrigen las imperfecciones de su sonrisa sin que los demás lo noten.</p></div></article>
+      <article class="card rv"><img src="images/icons/teeth-cleaning-icon.webp" alt="" width="68" height="68"><div><h3 data-t="c3h">Limpiezas dentales</h3><p data-t="c3p">El cuidado preventivo mantiene sanos sus dientes y encías, y ayuda a prevenir caries y problemas de encías.</p></div></article>
+      <article class="card rv"><img src="images/icons/dental-filling-icon.webp" alt="" width="68" height="68"><div><h3 data-t="c4h">Resinas blancas</h3><p data-t="c4p">Reparan un diente con caries, fisurado, roto o desgastado, con resinas del color de su diente.</p></div></article>
+      <article class="card rv"><img src="images/icons/crown-icon.webp" alt="" width="68" height="68"><div><h3 data-t="c5h">Coronas y puentes</h3><p data-t="c5p">Restauraciones de porcelana para dientes rotos, astillados, deformes, con caries o muy dañados.</p></div></article>
+      <article class="card rv"><img src="images/icons/veneer-icon.webp" alt="" width="68" height="68"><div><h3 data-t="c6h">Carillas de porcelana</h3><p data-t="c6p">Reparan dientes rotos, astillados, manchados o con espacios entre sí.</p></div></article>
+      <article class="card rv"><img src="images/icons/oral-surgery-icon.webp" alt="" width="68" height="68"><div><h3 data-t="c7h">Cirugía oral</h3><p data-t="c7p">Diagnóstico y tratamiento de condiciones de la boca, la mandíbula y el rostro.</p></div></article>
+      <article class="card rv"><img src="images/icons/denture-icon.webp" alt="" width="68" height="68"><div><h3 data-t="c8h">Dentaduras</h3><p data-t="c8p">Si perdió todos o casi todos sus dientes, puede recibir un juego completo que ayuda a mantener la estructura de su boca.</p></div></article>
+    </div>
+    <div class="also rv">
+      <h3 data-t="also_h">También ofrecemos</h3>
+      <ul class="pills">
+        <li data-t="p1">Examen dental completo</li><li data-t="p2">Rayos X digitales</li><li data-t="p3">Rayos X 3D / tomografía (CT)</li><li data-t="p4">Detección de cáncer oral</li><li data-t="p5">Endodoncia</li><li data-t="p6">Extracciones comunes</li><li data-t="p7">Extracción de muelas de juicio</li><li data-t="p8">Injertos óseos</li><li data-t="p9">Blanqueamiento</li><li data-t="p10">Botox</li><li data-t="p11">Bonding estético</li><li data-t="p12">Diseño de sonrisa</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec doctor" id="doctora">
+  <div class="wrap dgrid">
+    <div class="dpho rv"><div class="arch"><img src="images/dra-perez.webp" width="800" height="1018" alt="Retrato de la Dra. Annabel Perez" data-ta="alt:dr2_alt" loading="lazy"></div></div>
+    <div>
+      <span class="eyebrow rv" data-t="d_eye">La doctora</span>
+      <h2 class="h2 rv" data-t="d_h2">Conozca a la Dra. Annabel Perez</h2>
+      <p class="lead rv" data-t="d_lead">La familia es una gran motivación para la Dra. Perez, por eso quiso ejercer cerca de casa. En su consultorio, los pacientes no son clientes: son parte de su familia dental.</p>
+      <ol class="tl rv">
+        <li><h3 data-t="t1h">La Habana, Cuba</h3><p data-t="t1p">Quiso ser dentista desde niña. Hoy vive y ejerce en el sur de Florida.</p></li>
+        <li><h3 data-t="t2h">Florida International University</h3><p data-t="t2p">Licenciatura en Ciencias, Magna Cum Laude, con especialidad en Biología y subespecialidad en Química.</p></li>
+        <li><h3 data-t="t3h">Nova Southeastern University</h3><p data-t="t3p">Se graduó con honores en Odontología Estética y Prostodoncia.</p></li>
+        <li><h3 data-t="t4h">2020</h3><p data-t="t4p">Abrió su consulta privada para ejercer como profesional independiente.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec bento on-dark" id="familia">
+  <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none"><div class="bg-glow"></div></div>
+  <div class="wrap">
+    <h2 class="h2 rv" data-t="bn_h2">Una atención para cada integrante de su familia</h2>
+    <div class="bgrid">
+      <article class="bc b-smile rv" data-tilt>
+        <img class="bimg" src="images/pasillo.webp" width="1000" height="666" loading="lazy" alt="Pasillo luminoso del consultorio, con un retrato sonriente en la pared" data-ta="alt:bimg_alt">
+        <h3 data-t="bs_h">Smile Promise</h3>
+        <p data-t="bs_p">Le prometemos un rediseño completo de su sonrisa: un enfoque integral y a su medida que combina tratamientos estéticos y restauradores para atender varios aspectos de su sonrisa.</p>
+      </article>
+      <article class="bc b-em rv" data-tilt>
+        <h3 data-t="be_h">Emergencias y walk-ins</h3>
+        <p data-t="be_p">Atendemos emergencias dentales el mismo día en Pembroke Pines, Southwest Ranches y Miramar. Si tiene dolor, llámenos ahora.</p>
+        <div class="cta"><a class="btn btn-sky" href="tel:+19549472151" data-t="b_callnum2">Llamar al (954) 947-2151</a></div>
+      </article>
+      <article class="bc b-fam rv" data-tilt>
+        <h3 data-t="bf_h">Odontología para niños</h3>
+        <p data-t="bf_p">Cuidado dental pensado para los más chicos de la familia.</p>
+        <ul class="pills">
+          <li data-t="k1">Limpiezas suaves</li><li data-t="k2">Exámenes dentales</li><li data-t="k3">Resinas blancas</li><li data-t="k4">Extracciones suaves</li><li data-t="k5">Mantenedores de espacio</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec gallery" id="clinica">
+  <div class="wrap gh">
+    <div>
+      <h2 class="h2 rv" data-t="g_h2">Conozca el consultorio</h2>
+      <p class="lead rv" data-t="g_lead">Espacios luminosos y modernos en 18450 Pines Blvd. Toque una foto para verla en grande.</p>
+    </div>
+    <div class="gnav rv"><button class="arrow" id="gprev" type="button" aria-label="Foto anterior" data-ta="aria-label:prev_g">‹</button><button class="arrow" id="gnext" type="button" aria-label="Foto siguiente" data-ta="aria-label:next_g">›</button></div>
+  </div>
+  <div class="gal carousel" id="gal" tabindex="0" aria-label="Fotos del consultorio, deslice hacia los lados" data-ta="aria-label:gal_aria">
+    <figure><button type="button" data-full="images/recepcion.webp"><img src="images/recepcion.webp" width="1000" height="666" loading="lazy" alt="Recepción del consultorio con pared azul y el logo" data-ta="alt:ga1"></button><figcaption data-t="gc1">Recepción</figcaption></figure>
+    <figure><button type="button" data-full="images/sala-espera.webp"><img src="images/sala-espera.webp" width="1000" height="666" loading="lazy" alt="Sala de espera con sillas blancas y plantas" data-ta="alt:ga2"></button><figcaption data-t="gc2">Sala de espera</figcaption></figure>
+    <figure><button type="button" data-full="images/consultorio.webp"><img src="images/consultorio.webp" width="1000" height="666" loading="lazy" alt="Sala de tratamiento con sillón dental y pared azul" data-ta="alt:ga3"></button><figcaption data-t="gc3">Sala de tratamiento</figcaption></figure>
+    <figure><button type="button" data-full="images/entrada.webp"><img src="images/entrada.webp" width="1000" height="666" loading="lazy" alt="Entrada con puerta de vidrio y mostrador" data-ta="alt:ga4"></button><figcaption data-t="gc4">Entrada</figcaption></figure>
+    <figure><button type="button" data-full="images/pasillo.webp"><img src="images/pasillo.webp" width="1000" height="666" loading="lazy" alt="Pasillo luminoso del consultorio" data-ta="alt:ga5"></button><figcaption data-t="gc5">Pasillo</figcaption></figure>
+    <figure><button type="button" data-full="images/edificio.webp"><img src="images/edificio.webp" width="1000" height="666" loading="lazy" alt="Vista aérea del edificio donde está el consultorio" data-ta="alt:ga6"></button><figcaption data-t="gc6">El edificio</figcaption></figure>
+  </div>
+</section>
+
+<dialog id="lb" aria-label="Foto ampliada" data-ta="aria-label:lb_aria">
+  <img id="lbimg" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+  <form method="dialog"><button class="x" data-t="close">Cerrar</button></form>
+</dialog>
+
+<section class="sec reviews" id="resenas">
+  <div class="wrap">
+    <div class="rtop">
+      <div>
+        <span class="eyebrow rv" data-t="r_eye">Reseñas</span>
+        <h2 class="h2 rv" data-t="r_h2">Lo que dicen nuestros pacientes</h2>
+      </div>
+      <div class="gbadge rv" role="img" aria-label="Calificación de Google: 4.9 de 5, con 517 reseñas" data-ta="aria-label:rate_aria">
+        <b>4.9</b>
+        <div><span class="stars" aria-hidden="true">★★★★★</span><small data-t="r_badge">517 reseñas en Google</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="car carousel" id="car" tabindex="0" aria-label="Reseñas de pacientes, deslice hacia los lados" data-ta="aria-label:car_aria">
+    <article class="rc"><span class="stars" aria-hidden="true">★★★★★</span><blockquote lang="en">Been seeing Dr. Perez for about 5 years and wouldn’t trade her for anyone else. Followed her from Davie, to Kendall and now to Pembroke Pines. She is truly a wonderful dentist. Her office staff is very attentive, sweet and courteous. You will feel very comfortable there, right at home. 5 stars for all of them.</blockquote><footer><span class="av" aria-hidden="true">T</span><div><b>Tammy C</b><small data-t="r_src">Reseña de Google</small></div></footer></article>
+    <article class="rc"><span class="stars" aria-hidden="true">★★★★★</span><blockquote lang="en">Pembroke Pines Dental Solutions staff and services are the very best we’ve had in years. Solutions, technology, knowledge, kindness and patience are just a few of many qualities this office has to offer. We, family of 5, all come to this office, we are very pleased and happy to have found such a pleasant place for our dental care and needs.</blockquote><footer><span class="av" aria-hidden="true">B</span><div><b>Brunilda F</b><small data-t="r_src2">Reseña de Google</small></div></footer></article>
+    <article class="rc"><span class="stars" aria-hidden="true">★★★★★</span><blockquote lang="en">The entire experience was good, from my first call and through the entire appointment.The clinic is well kept,  clean and filled with light.Tatiana,Darling and Dr. A Perez took the time to guide me step by step to my first visit.Can't wait to come back for more of the great service.</blockquote><footer><span class="av" aria-hidden="true">S</span><div><b>Sonia B</b><small data-t="r_src3">Reseña de Google</small></div></footer></article>
+    <article class="rc"><span class="stars" aria-hidden="true">★★★★★</span><blockquote lang="en">First time at PPDS today. Beautiful office, friendly staff and a wonderful experience. Dr. Perez is so personable and has great bedside manor. Can’t wait to get started on my treatment plan. It’s very hard for me to find a good dentist that I like. I’m so glad I found this office.</blockquote><footer><span class="av" aria-hidden="true">J</span><div><b>Jeff and Alexandra T</b><small data-t="r_src4">Reseña de Google</small></div></footer></article>
+    <article class="rc"><span class="stars" aria-hidden="true">★★★★★</span><blockquote lang="en">Excellent service!!! Staff and Dr. Perez are just the most friendliest and professional dental staff I have ever met. From the moment you walk in they make you feel right at home. Thank you so much for everything Dr. Perez and the Pembroke Pines Dental Solutions staff!!!</blockquote><footer><span class="av" aria-hidden="true">A</span><div><b>Angie G</b><small data-t="r_src5">Reseña de Google</small></div></footer></article>
+  </div>
+  <div class="wrap">
+    <div class="rnav"><button class="arrow" id="rprev" type="button" aria-label="Reseña anterior" data-ta="aria-label:prev_r">‹</button><div class="dots" id="dots" aria-hidden="true"></div><button class="arrow" id="rnext" type="button" aria-label="Reseña siguiente" data-ta="aria-label:next_r">›</button></div>
+    <p class="rnote" data-t="r_note">Reseñas de pacientes, en su idioma original.</p>
+  </div>
+</section>
+
+<section class="sec faq" id="preguntas">
+  <div class="wrap fgrid">
+    <div>
+      <h2 class="h2 rv" data-t="f_h2">Preguntas frecuentes</h2>
+      <div class="ins rv" style="margin-top:32px">
+        <h3 data-t="i_h">Seguros dentales</h3>
+        <p data-t="i_p1">Aceptamos una amplia variedad de planes PPO. En algunos casos de emergencia podemos gestionar una autorización aunque no estemos pre-autorizados con su aseguradora.</p>
+        <p data-t="i_p2">También recibimos a nuestros adultos mayores con planes Medicare Advantage. Según el plan, puede requerir copago o coseguro.</p>
+        <a class="btn btn-navy" href="tel:+19549472151" data-t="i_btn">Verifique su plan por teléfono</a>
+      </div>
+    </div>
+    <div class="rv">
+      <div class="q" data-open="false"><button type="button" aria-expanded="false" data-t="q1">¿Qué hace especial a Pembroke Pines Dental Solutions?</button><div class="qa"><div><p data-t="a1">La Dra. Annabel Perez ofrece atención personalizada con tecnología avanzada y un trato amable. El consultorio ofrece desde limpiezas preventivas hasta tratamientos estéticos.</p></div></div></div>
+      <div class="q" data-open="false"><button type="button" aria-expanded="false" data-t="q2">¿Cada cuánto debo hacerme una limpieza dental?</button><div class="qa"><div><p data-t="a2">La Dra. Perez recomienda una limpieza profesional cada seis meses para eliminar la placa, prevenir caries y mantener sanas las encías. También ayuda a detectar problemas a tiempo.</p></div></div></div>
+      <div class="q" data-open="false"><button type="button" aria-expanded="false" data-t="q3">¿Las resinas son del color del diente?</button><div class="qa"><div><p data-t="a3">Sí. Usamos resinas compuestas de alta calidad, del color de su diente, que se integran con su sonrisa natural y son duraderas.</p></div></div></div>
+      <div class="q" data-open="false"><button type="button" aria-expanded="false" data-t="q4">¿Cuál es la diferencia entre una corona y un puente?</button><div class="qa"><div><p data-t="a4">La corona restaura un diente dañado o debilitado. El puente reemplaza uno o más dientes ausentes apoyándose en los dientes vecinos. La Dra. Perez le recomendará la mejor opción según su caso.</p></div></div></div>
+      <div class="q" data-open="false"><button type="button" aria-expanded="false" data-t="q5">¿Soy buen candidato para implantes dentales?</button><div class="qa"><div><p data-t="a5">Si le faltan uno o más dientes y tiene encías y hueso sanos, los implantes pueden ser una buena opción. Agende una consulta para ver si son lo mejor para usted.</p></div></div></div>
+      <div class="q" data-open="false"><button type="button" aria-expanded="false" data-t="q6">¿Cuánto costará mi tratamiento?</button><div class="qa"><div><p data-t="a6">Depende del tratamiento que necesite. Llámenos al (954) 947-2151 y lo repasamos con usted.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact on-dark" id="cita">
+  <div class="wrap">
+    <span class="eyebrow rv" data-t="v_eye">Visítenos</span>
+    <h2 class="h2 rv" data-t="v_h2">Pida su cita</h2>
+    <p class="lead rv" style="color:#DDEFFA" data-t="v_lead">Cuéntenos qué necesita y qué día le conviene. Le confirmamos por teléfono.</p>
+    <div class="cgrid">
+      <form class="form rv" id="form" novalidate>
+        <div class="fields">
+          <div class="row2">
+            <div class="f"><label for="fn" data-t="f_name">Su nombre</label><input id="fn" name="name" autocomplete="name" required><span class="err" data-t="f_errn">Por favor escriba su nombre.</span></div>
+            <div class="f"><label for="fp" data-t="f_phone">Teléfono</label><input id="fp" name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span class="err" data-t="f_errp">Por favor escriba un teléfono al que podamos llamarle.</span></div>
+          </div>
+          <div class="f"><label for="fr" data-t="f_reason">Motivo de su visita</label>
+            <select id="fr" name="reason">
+              <option data-t="o1">Revisión y limpieza</option><option data-t="o2">Invisalign</option><option data-t="o3">Implantes</option><option data-t="o4">Carillas o diseño de sonrisa</option><option data-t="o5">Blanqueamiento</option><option data-t="o6">Atención para niños</option><option data-t="o7">Emergencia dental</option><option data-t="o8">Otro motivo</option>
+            </select></div>
+          <div class="f"><label for="fd" data-t="f_day">Día preferido</label>
+            <select id="fd" name="day"><option data-t="dy0">Cualquier día de semana</option><option data-t="dy1">Lunes</option><option data-t="dy2">Martes</option><option data-t="dy3">Miércoles</option><option data-t="dy4">Jueves</option><option data-t="dy5">Viernes</option><option data-t="dy6">Sábado</option></select></div>
+          <button class="btn btn-navy" type="submit" data-t="f_send">Preparar mi solicitud</button>
+        </div>
+        <div class="done" role="status" aria-live="polite">
+          <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="27"/><path d="M28 41l9 9 16-18"/></svg>
+          <h3><span data-t="f_thanks">Gracias,</span> <span id="who"></span></h3>
+          <p id="sum"></p>
+          <a class="btn btn-navy" href="tel:+19549472151" data-t="f_callnow">Llamar ahora</a>
+        </div>
+      </form>
+      <div class="rv">
+        <div class="mapbox"><iframe title="Mapa de Pembroke Pines Dental Solutions, 18450 Pines Blvd, Pembroke Pines, FL" data-ta="title:map_title" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=18450+Pines+Blvd+Suite+202+Pembroke+Pines+FL+33029&amp;output=embed"></iframe></div>
+        <div class="addr">
+          <b data-t="a_h">Pembroke Pines Dental Solutions</b>
+          <p>18450 Pines Blvd, Suite 202<br>Pembroke Pines, FL 33029</p>
+          <p class="hrs"><strong data-t="hr_l">Horario</strong><br><span data-t="hr_v">Lunes a viernes, 9:00 am a 6:00 pm</span></p>
+          <div class="cta">
+            <a class="btn btn-sky btn-sm" href="https://www.google.com/maps/dir//Pembroke+Pines+Dental+Solutions+18450+Pines+Blvd+Suite+202+Pembroke+Pines,+FL+33029" target="_blank" rel="noopener" data-t="a_dir">Cómo llegar</a>
+            <a class="btn btn-ghost btn-sm" href="tel:+19549472151">(954) 947-2151</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <span class="brandchip"><img src="images/logo.webp" width="191" height="52" alt="Pembroke Pines Dental Solutions" data-ta="alt:logo_alt"></span>
+        <p class="tag" data-t="ft_tag">Odontología familiar y estética con la Dra. Annabel Perez.</p>
+      </div>
+      <div>
+        <h4 data-t="ft_contact">Contacto</h4>
+        <ul><li><a href="tel:+19549472151">(954) 947-2151</a></li><li>18450 Pines Blvd, Suite 202<br>Pembroke Pines, FL 33029</li><li><span data-t="hr_v2">Lunes a viernes, 9:00 am a 6:00 pm</span></li></ul>
+      </div>
+      <div>
+        <h4 data-t="ft_explore">Explorar</h4>
+        <ul><li><a href="#servicios" data-t="n_serv2">Servicios</a></li><li><a href="#doctora" data-t="n_doc2">La doctora</a></li><li><a href="#resenas" data-t="n_rev2">Reseñas</a></li><li><a href="#cita" data-t="ft_req">Pedir cita</a></li></ul>
+      </div>
+      <div>
+        <h4 data-t="ft_social">Síganos</h4>
+        <ul><li><a href="https://www.instagram.com/pembrokepines.dental/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/PembrokePinesDental/" target="_blank" rel="noopener">Facebook</a></li></ul>
+      </div>
+    </div>
+    <p class="copy" data-t="ft_copy">Pembroke Pines Dental Solutions. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="bar" role="group" aria-label="Acciones rápidas" data-ta="aria-label:bar_aria">
+  <a class="btn btn-line" href="tel:+19549472151" data-t="bar_call">Llamar</a>
+  <a class="btn btn-navy" href="#cita" data-t="bar_req">Pedir cita</a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function safe(f,n){try{f()}catch(e){if(window.console)console.warn("init "+n,e)}}
+var reduced=matchMedia("(prefers-reduced-motion: reduce)").matches,fine=matchMedia("(hover:hover) and (pointer:fine)").matches;
+
+var T={es:{},en:{
+ n_serv:"Services",n_doc:"The doctor",n_cli:"Clinic",n_rev:"Reviews",n_con:"Contact",n_call:"Call",
+ h1a:"Your smile.",h1b:"Our passion, our pride.",
+ h_sub:"Family and cosmetic dentistry with Dr. Annabel Perez, in a modern office in West Pembroke Pines.",
+ b_req:"Book a visit",b_callnum:"Call (954) 947-2151",b_callnum2:"Call (954) 947-2151",chip:"517 Google reviews",
+ s1:"rating on Google",s2:"Google reviews",s3a:"We speak Spanish",s3b:"and English too",s4a:"Emergencies and walk-ins",s4b:"Call and we will see you",
+ sv_eye:"Services",sv_h2:"Everything your family needs, under one roof",
+ sv_lead:"From a routine cleaning to implants and smile design, with the technology and personal care of an independent practice.",
+ c1h:"Dental implants",c1p:"An option to replace a tooth lost to periodontitis, decay or injury, and to keep the structure of your mouth.",
+ c2h:"Invisalign for teens and adults",c2p:"Nearly invisible aligners that correct the imperfections of your smile without others noticing.",
+ c3h:"Teeth cleanings",c3p:"Preventive care keeps your teeth and gums healthy and helps prevent cavities and gum problems.",
+ c4h:"White fillings",c4p:"They repair a tooth with a cavity, or one that is cracked, broken or worn down, with tooth-colored composite.",
+ c5h:"Crowns and bridges",c5p:"Porcelain restorations for broken, chipped, misshapen, decayed or severely damaged teeth.",
+ c6h:"Porcelain veneers",c6p:"They repair broken, chipped, stained or gapped teeth.",
+ c7h:"Oral surgery",c7p:"Diagnosis and treatment of conditions of the mouth, jaws and face.",
+ c8h:"Dentures",c8p:"If you have lost all or most of your teeth, a complete set of dentures helps maintain the structure of your mouth.",
+ also_h:"We also offer",
+ p1:"Complete dental exam",p2:"Digital X-rays",p3:"3D X-rays / CT scan",p4:"Oral cancer screenings",p5:"Root canals",p6:"Tooth extractions",p7:"Wisdom tooth extractions",p8:"Bone grafts",p9:"Teeth whitening",p10:"Botox",p11:"Cosmetic bonding",p12:"Smile design",
+ d_eye:"The doctor",d_h2:"Meet Dr. Annabel Perez",
+ d_lead:"Family is a big motivator for Dr. Perez, which is why she wanted to practice close to home. In her office, patients are not customers: they are part of her dental family.",
+ t1h:"Havana, Cuba",t1p:"She has wanted to be a dentist since she was a little girl. Today she lives and practices in South Florida.",
+ t2h:"Florida International University",t2p:"Bachelor of Science, Magna Cum Laude, with a major in Biology and a minor in Chemistry.",
+ t3h:"Nova Southeastern University",t3p:"She graduated with honors in Cosmetic Dentistry and Prosthodontics.",
+ t4h:"2020",t4p:"She opened her own private practice to work as an independent practitioner.",
+ bn_h2:"Care for every member of your family",
+ bs_h:"Smile Promise",bs_p:"We promise to give your smile a complete makeover: a comprehensive, customized approach that combines cosmetic and restorative treatments to address several aspects of your smile.",
+ be_h:"Emergencies and walk-ins",be_p:"We see dental emergencies the same day in Pembroke Pines, Southwest Ranches and Miramar. If you are in pain, call us now.",
+ bf_h:"Dentistry for kids",bf_p:"Dental care designed for the youngest in the family.",
+ k1:"Gentle cleanings",k2:"Dental exams",k3:"White fillings",k4:"Gentle extractions",k5:"Space maintainers",
+ g_h2:"See the office",g_lead:"Bright, modern spaces at 18450 Pines Blvd. Tap a photo to see it larger.",
+ gc1:"Reception",gc2:"Waiting room",gc3:"Treatment room",gc4:"Entrance",gc5:"Hallway",gc6:"The building",close:"Close",
+ r_eye:"Reviews",r_h2:"What our patients say",r_badge:"517 Google reviews",
+ r_src:"Google review",r_src2:"Google review",r_src3:"Google review",r_src4:"Google review",r_src5:"Google review",r_note:"Patient reviews, in their original language.",
+ f_h2:"Frequently asked questions",
+ i_h:"Dental insurance",i_p1:"We accept a wide range of PPO insurance carriers. In some emergency cases we may get authorization even if we are not pre-authorized with your insurer.",
+ i_p2:"We also welcome seniors with Medicare Advantage plans. Depending on the plan, a copayment or coinsurance may apply.",i_btn:"Check your plan by phone",
+ q1:"What makes Pembroke Pines Dental Solutions special?",a1:"Dr. Annabel Perez provides personalized care with advanced technology and a gentle approach. The office offers everything from preventive cleanings to cosmetic treatments.",
+ q2:"How often should I get a teeth cleaning?",a2:"Dr. Perez recommends a professional cleaning every six months to remove plaque, prevent cavities and keep your gums healthy. It also helps detect problems early.",
+ q3:"Are the fillings tooth-colored?",a3:"Yes. We use high-quality, tooth-colored composite fillings that blend with your natural teeth and are durable.",
+ q4:"What is the difference between a crown and a bridge?",a4:"A crown restores a damaged or weakened tooth. A bridge replaces one or more missing teeth by anchoring to the neighboring teeth. Dr. Perez will recommend the best option for your case.",
+ q5:"Am I a good candidate for dental implants?",a5:"If you are missing one or more teeth and have healthy gums and bone, implants may be a good option. Schedule a consultation to see if they are the best solution for you.",
+ q6:"How much will my treatment cost?",a6:"It depends on the treatment you need. Call us at (954) 947-2151 and we will go over it with you.",
+ v_eye:"Visit us",v_h2:"Book your visit",v_lead:"Tell us what you need and which day suits you. We will confirm by phone.",
+ f_name:"Your name",f_errn:"Please enter your name.",f_phone:"Phone",f_errp:"Please enter a phone number where we can call you.",
+ f_reason:"Reason for your visit",f_day:"Preferred day",
+ o1:"Checkup and cleaning",o2:"Invisalign",o3:"Implants",o4:"Veneers or smile design",o5:"Teeth whitening",o6:"Care for children",o7:"Dental emergency",o8:"Other reason",
+ dy0:"Any weekday",dy1:"Monday",dy2:"Tuesday",dy3:"Wednesday",dy4:"Thursday",dy5:"Friday",dy6:"Saturday",
+ f_send:"Prepare my request",f_thanks:"Thank you,",f_callnow:"Call now",
+ a_h:"Pembroke Pines Dental Solutions",hr_l:"Hours",hr_v:"Monday to Friday, 9:00 am to 6:00 pm",hr_v2:"Monday to Friday, 9:00 am to 6:00 pm",a_dir:"Get directions",
+ ft_tag:"Family and cosmetic dentistry with Dr. Annabel Perez.",ft_contact:"Contact",ft_explore:"Explore",n_serv2:"Services",n_doc2:"The doctor",n_rev2:"Reviews",ft_req:"Book a visit",ft_social:"Follow us",
+ ft_copy:"Pembroke Pines Dental Solutions. All rights reserved.",bar_call:"Call",bar_req:"Book a visit"
+},esA:{},enA:{
+ brand_aria:"Pembroke Pines Dental Solutions, home",logo_alt:"Pembroke Pines Dental Solutions",nav_aria:"Main",lang_aria:"Language",
+ dr_alt:"Dr. Annabel Perez in a white coat, smiling",dr2_alt:"Portrait of Dr. Annabel Perez",rate_aria:"Google rating: 4.9 out of 5, with 517 reviews",stats_aria:"Practice highlights",
+ prev_g:"Previous photo",next_g:"Next photo",gal_aria:"Photos of the office, swipe sideways",
+ ga1:"Reception with a blue wall and the logo",ga2:"Waiting room with white chairs and plants",ga3:"Treatment room with a dental chair and blue wall",ga4:"Entrance with a glass door and front desk",ga5:"Bright hallway of the office",bimg_alt:"Bright hallway of the office, with a smiling portrait on the wall",ga6:"Aerial view of the building that houses the office",
+ lb_aria:"Enlarged photo",car_aria:"Patient reviews, swipe sideways",prev_r:"Previous review",next_r:"Next review",
+ map_title:"Map of Pembroke Pines Dental Solutions, 18450 Pines Blvd, Pembroke Pines, FL",bar_aria:"Quick actions"
+}};
+var D={
+ es:{title:"Pembroke Pines Dental Solutions | Odontología familiar y estética en Pembroke Pines, FL",desc:"Pembroke Pines Dental Solutions, con la Dra. Annabel Perez. Odontología familiar y estética en 18450 Pines Blvd, Pembroke Pines, FL. Hablamos español. Llame al (954) 947-2151.",
+  sum:function(r,d){return "Su solicitud está lista: "+r+", "+d+". Llame al (954) 947-2151 y el equipo le confirmará un horario."}},
+ en:{title:"Pembroke Pines Dental Solutions | Family & Cosmetic Dentistry in Pembroke Pines, FL",desc:"Pembroke Pines Dental Solutions, with Dr. Annabel Perez. Family and cosmetic dentistry at 18450 Pines Blvd, Pembroke Pines, FL. Hablamos español. Call (954) 947-2151.",
+  sum:function(r,d){return "Your request is ready: "+r+", "+d+". Call (954) 947-2151 and the team will confirm a time with you."}}
+};
+var lang="es";
+
+safe(function(){
+  $$("[data-t]").forEach(function(el){T.es[el.getAttribute("data-t")]=el.innerHTML});
+  $$("[data-ta]").forEach(function(el){
+    el.getAttribute("data-ta").split(",").forEach(function(p){var a=p.split(":");T.esA[a[1]]=el.getAttribute(a[0])});
+  });
+},"capture");
+
+function setLang(l,persist){
+  lang=l;
+  document.documentElement.lang=l;
+  $$("[data-t]").forEach(function(el){var v=T[l][el.getAttribute("data-t")];if(v!==undefined)el.innerHTML=v});
+  $$("[data-ta]").forEach(function(el){
+    el.getAttribute("data-ta").split(",").forEach(function(p){var a=p.split(":"),v=(l==="es"?T.esA:T.enA)[a[1]];if(v!==undefined)el.setAttribute(a[0],v)});
+  });
+  $$(".lang button").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-lang")===l))});
+  document.title=D[l].title;
+  var m=$('meta[name="description"]');if(m)m.setAttribute("content",D[l].desc);
+  var f=$("#form");if(f&&f.classList.contains("sent"))renderSum();
+  if(persist){try{localStorage.setItem("lang",l)}catch(e){}}
+}
+safe(function(){$$(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-lang"),true)})})},"lang");
+
+safe(function(){
+  var s=$("#splash");if(!s)return;
+  var hide=function(){s.classList.add("hide")};
+  if(document.readyState==="complete")setTimeout(hide,600);else addEventListener("load",function(){setTimeout(hide,600)});
+  setTimeout(hide,1600);
+},"splash");
+
+safe(function(){
+  var nav=$("#nav"),sentinel=document.createElement("div");
+  sentinel.style.cssText="position:absolute;top:0;left:0;height:24px;width:1px;pointer-events:none";
+  document.body.prepend(sentinel);
+  new IntersectionObserver(function(e){nav.classList.toggle("scrolled",!e[0].isIntersecting)}).observe(sentinel);
+  var links=$$(".links a"),map={};
+  links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a});
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){
+    if(en.isIntersecting){links.forEach(function(a){a.classList.remove("act")});var a=map[en.target.id];if(a)a.classList.add("act")}
+  })},{rootMargin:"-45% 0px -50% 0px"});
+  Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el)});
+},"nav");
+
+safe(function(){
+  var els=$$(".rv");
+  if(!("IntersectionObserver" in window)||reduced){els.forEach(function(e){e.classList.add("in")});return}
+  els.forEach(function(e,i){e.style.setProperty("--d",(i%4)*0.07+"s")});
+  var io=new IntersectionObserver(function(es,o){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");o.unobserve(en.target)}})},{threshold:.04,rootMargin:"0px 0px -6% 0px"});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.add("in")})},3500);
+},"reveal");
+
+safe(function(){
+  var els=$$("[data-count-to]");
+  function fmt(v,d){return d?v.toFixed(d):String(Math.round(v))}
+  function run(el){
+    var to=parseFloat(el.getAttribute("data-count-to")),d=parseInt(el.getAttribute("data-decimals")||"0",10);
+    if(reduced){el.textContent=fmt(to,d);return}
+    var t0=performance.now();
+    (function tick(n){var p=Math.min(1,(n-t0)/1300),e=1-Math.pow(1-p,3);el.textContent=fmt(to*e,d);if(p<1)requestAnimationFrame(tick);else el.textContent=fmt(to,d)})(t0);
+  }
+  var io=new IntersectionObserver(function(es,o){es.forEach(function(en){if(en.isIntersecting){run(en.target);o.unobserve(en.target)}})},{threshold:.6});
+  els.forEach(function(e){io.observe(e)});
+},"count");
+
+safe(function(){
+  if(!fine||reduced)return;
+  $$("[data-tilt]").forEach(function(c){
+    c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="perspective(900px) rotateX("+(-y*4)+"deg) rotateY("+(x*4)+"deg) translateY(-4px)"});
+    c.addEventListener("mouseleave",function(){c.style.transform=""});
+  });
+  $$("[data-mag]").forEach(function(b){
+    b.addEventListener("mousemove",function(e){var r=b.getBoundingClientRect();b.style.translate=((e.clientX-r.left-r.width/2)*.12)+"px "+((e.clientY-r.top-r.height/2)*.2)+"px"});
+    b.addEventListener("mouseleave",function(){b.style.translate=""});
+  });
+},"fx");
+
+function scroller(box,prev,next,step){
+  var go=function(dir){var f=box.firstElementChild;if(!f)return;var w=f.getBoundingClientRect().width+16;box.scrollBy({left:dir*w,behavior:reduced?"auto":"smooth"})};
+  prev.addEventListener("click",function(){go(-1)});
+  next.addEventListener("click",function(){go(1)});
+  box.addEventListener("keydown",function(e){if(e.key==="ArrowRight"){e.preventDefault();go(1)}if(e.key==="ArrowLeft"){e.preventDefault();go(-1)}});
+}
+safe(function(){scroller($("#gal"),$("#gprev"),$("#gnext"))},"gallery");
+
+safe(function(){
+  var car=$("#car"),dots=$("#dots"),cards=$$(".rc",car);
+  cards.forEach(function(){dots.appendChild(document.createElement("i"))});
+  var di=$$("i",dots);if(di[0])di[0].classList.add("on");
+  var upd=function(){var w=cards[0].getBoundingClientRect().width+16,i=Math.min(cards.length-1,Math.round(car.scrollLeft/w));di.forEach(function(d,k){d.classList.toggle("on",k===i)})};
+  car.addEventListener("scroll",upd,{passive:true});
+  scroller(car,$("#rprev"),$("#rnext"));
+},"carousel");
+
+safe(function(){
+  var lb=$("#lb"),img=$("#lbimg");
+  $$("#gal button").forEach(function(b){b.addEventListener("click",function(){
+    img.src=b.getAttribute("data-full");img.alt=$("img",b).alt;
+    if(lb.showModal)lb.showModal();else lb.setAttribute("open","")
+  })});
+  lb.addEventListener("click",function(e){if(e.target===lb)lb.close()});
+},"lightbox");
+
+safe(function(){
+  $$(".q").forEach(function(q){
+    var b=$("button",q);
+    b.addEventListener("click",function(){var o=q.getAttribute("data-open")==="true";q.setAttribute("data-open",String(!o));b.setAttribute("aria-expanded",String(!o))});
+  });
+},"faq");
+
+function renderSum(){
+  $("#sum").textContent=D[lang].sum($("#fr").selectedOptions[0].textContent,$("#fd").selectedOptions[0].textContent);
+}
+safe(function(){
+  var f=$("#form");if(!f)return;
+  function chk(i){var w=i.closest(".f"),bad=!i.value.trim()||(i.name==="phone"&&i.value.replace(/\D/g,"").length<7);w.classList.toggle("bad",bad);return !bad}
+  $$("input[required]",f).forEach(function(i){i.addEventListener("input",function(){if(i.closest(".f").classList.contains("bad"))chk(i)})});
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var ok=$$("input[required]",f).map(chk).every(Boolean);
+    if(!ok){var b=$(".f.bad input",f);if(b)b.focus();return}
+    $("#who").textContent=f.name.value.trim().split(" ")[0];
+    renderSum();
+    f.classList.add("sent");
+    if(matchMedia("(pointer: coarse)").matches)setTimeout(function(){location.href="tel:+19549472151"},1800);
+  });
+},"form");
+
+var saved=null;try{saved=localStorage.getItem("lang")}catch(e){}
+if(saved==="en")setLang("en",false);
+})();
+</script>
+</body>
+</html>
