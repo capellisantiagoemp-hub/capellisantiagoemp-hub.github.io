@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Dentist in Miami | Dr. Pablo J. Fonseca, Brickell</title>
+<meta name="description" content="Odontología general y cosmética en Brickell, Miami, con el Dr. Pablo J. Fonseca desde 1989. Línea de emergencias 24/7.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231B2A9B'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' text-anchor='middle' fill='%23fff'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1B2A9B; --navy-deep:#0E1635; --navy-ink:#080E26; --sky:#5EA9DD; --sky-soft:#E6F1FA; --sky-wash:#F5F9FD;
+  --red:#EA292C; --red-deep:#C41E21; --ink:#0E1635; --muted:#4A5578; --line:#D9E4F1; --white:#fff;
+  --r-card:22px; --r-field:12px; --r-pill:999px;
+  --ease:cubic-bezier(.23,1,.32,1); --ease-io:cubic-bezier(.77,0,.175,1);
+  --shadow:0 18px 50px -22px rgba(27,42,155,.38);
+  --f-display:"Sora",system-ui,sans-serif; --f-body:"Hanken Grotesk",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--f-body);font-size:17px;line-height:1.6;color:var(--ink);background:var(--white);overflow-x:hidden;padding-bottom:0}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);line-height:1.12;letter-spacing:-.02em;font-weight:700}
+h2{font-size:clamp(1.9rem,4.2vw,3rem);max-width:20ch}
+h3{font-size:1.2rem}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+section{position:relative;padding:clamp(64px,9vw,120px) 0}
+.eyebrow{display:inline-block;font:600 .8rem/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--sky);margin-bottom:18px}
+.lead{font-size:1.12rem;color:var(--muted);max-width:56ch;margin-top:18px}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* buttons: pill, 44px min */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:var(--r-pill);border:2px solid transparent;font:600 1rem/1 var(--f-body);text-decoration:none;cursor:pointer;white-space:nowrap;transition:transform .2s var(--ease),box-shadow .25s var(--ease),background-color .2s,color .2s,border-color .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--navy);color:#fff;box-shadow:0 10px 26px -10px rgba(27,42,155,.8)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 26px -10px rgba(234,41,44,.8)}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff;background:rgba(255,255,255,.06)}
+.btn-line{border-color:var(--navy);color:var(--navy);background:transparent}
+@media (hover:hover) and (pointer:fine){
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px -10px rgba(27,42,155,.9);background:#2335b8}
+  .btn-red:hover{transform:translateY(-2px);background:var(--red-deep);box-shadow:0 16px 32px -10px rgba(234,41,44,.9)}
+  .btn-ghost:hover{background:#fff;color:var(--navy);transform:translateY(-2px)}
+  .btn-line:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+}
+
+/* splash */
+#splash{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:linear-gradient(160deg,#0E1635,#1B2A9B);transition:opacity .5s ease,visibility .5s}
+#splash img{width:min(78vw,380px);background:#fff;padding:18px 26px;border-radius:20px;animation:pop .7s var(--ease) both}
+#splash.hide{opacity:0;visibility:hidden}
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(10px)}to{opacity:1;transform:none}}
+
+/* nav: floating pill */
+#nav{position:fixed;top:12px;left:0;right:0;z-index:50;pointer-events:none}
+.nav-in{pointer-events:auto;width:min(1180px,100% - 20px);margin-inline:auto;display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border:1px solid rgba(255,255,255,.7);box-shadow:0 14px 40px -18px rgba(14,22,53,.5);border-radius:var(--r-pill);padding:8px 10px 8px 20px;transition:box-shadow .3s,background .3s}
+#nav.scrolled .nav-in{background:rgba(255,255,255,.96);box-shadow:0 18px 44px -16px rgba(14,22,53,.55)}
+.brand img{width:clamp(200px,58vw,330px);height:auto;object-fit:contain}
+.nav-links{display:none;margin-left:auto;gap:4px;list-style:none;padding:0}
+.nav-links a{display:block;white-space:nowrap;padding:10px 14px;border-radius:var(--r-pill);text-decoration:none;font-weight:600;font-size:.95rem;color:var(--navy-deep);transition:background .2s,color .2s}
+@media (hover:hover){.nav-links a:hover{background:var(--sky-soft);color:var(--navy)}}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:8px}
+.lang{display:inline-flex;background:var(--sky-soft);border-radius:var(--r-pill);padding:3px}
+.lang button{font:700 .8rem/1 var(--f-body);letter-spacing:.06em;min-width:44px;min-height:40px;border:0;border-radius:var(--r-pill);background:transparent;color:var(--navy);cursor:pointer;transition:background .2s,color .2s}
+.lang button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.nav-call{display:none}
+.burger{width:44px;height:44px;border-radius:50%;border:0;background:var(--navy);color:#fff;display:grid;place-items:center;cursor:pointer}
+.burger svg{width:22px;height:22px}
+.nav-links.open{display:flex;flex-direction:column;position:absolute;top:calc(100% + 8px);left:10px;right:10px;background:#fff;border-radius:24px;padding:12px;box-shadow:0 24px 50px -20px rgba(14,22,53,.6);pointer-events:auto;animation:drop .22s var(--ease)}
+@keyframes drop{from{opacity:0;transform:translateY(-6px) scale(.98)}to{opacity:1;transform:none}}
+.nav-in{position:relative}
+@media (min-width:1180px){
+  .nav-links{display:flex}
+  .burger{display:none}
+  .nav-right{margin-left:8px}
+  .nav-call{display:inline-flex;min-height:46px;padding:0 22px}
+}
+
+/* hero */
+.hero{min-height:100dvh;display:flex;align-items:center;padding:132px 0 72px;color:#fff;background:radial-gradient(1200px 700px at 85% 10%,#2c43d6 0,transparent 60%),radial-gradient(900px 600px at 0% 100%,#1f5fa8 0,transparent 55%),linear-gradient(160deg,#0B1330 0%,#14238a 100%);overflow:hidden;isolation:isolate}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;animation:float 16s ease-in-out infinite}
+.b1{width:420px;height:420px;background:#5EA9DD;top:-80px;right:-60px}
+.b2{width:360px;height:360px;background:#3347d9;bottom:-120px;left:10%;animation-delay:-6s}
+@keyframes float{50%{transform:translate3d(30px,-34px,0) scale(1.08)}}
+.hero-grid{display:grid;gap:44px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,6vw,4.2rem);max-width:15ch;margin-top:4px}
+.hero h1 em{font-style:italic;color:var(--sky);padding-right:.04em;display:inline-block;padding-bottom:.08em}
+.hero .lead{color:#C9D6F2;max-width:46ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero .eyebrow{color:#8EC6EE}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.92rem;padding:8px 14px;border-radius:var(--r-pill);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);margin-top:22px}
+.status i{width:9px;height:9px;border-radius:50%;background:#8a94b8;display:block}
+.status.open i{background:#4ade80;box-shadow:0 0 0 0 rgba(74,222,128,.7);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+.sos{position:relative;border-radius:28px;padding:30px;background:linear-gradient(150deg,rgba(255,255,255,.17),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 40px 80px -30px rgba(0,0,0,.6);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);transform-style:preserve-3d;transition:transform .25s var(--ease)}
+.sos-tag{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font:700 .78rem/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;padding:9px 14px;border-radius:var(--r-pill)}
+.sos-tag i{width:8px;height:8px;border-radius:50%;background:#fff;animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+.sos h2{font-size:clamp(1.5rem,3vw,2.1rem);margin:18px 0 6px;max-width:none;color:#fff}
+.sos p{color:#D3DEF6}
+.sos-num{display:block;font:800 clamp(1.9rem,6.6vw,2.7rem)/1 var(--f-display);letter-spacing:-.02em;margin:18px 0 20px;color:#fff;text-decoration:none;white-space:nowrap}
+.ecg{width:100%;height:56px;margin-top:22px}
+.ecg path{fill:none;stroke:#8EC6EE;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:420;stroke-dashoffset:420;animation:ecg 3.2s var(--ease-io) infinite}
+@keyframes ecg{0%{stroke-dashoffset:420}60%,100%{stroke-dashoffset:0}}
+@media (min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr;gap:64px}}
+
+/* stats */
+.stats{padding:0;margin-top:-1px;background:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+.stat{padding:34px 18px;border-bottom:1px solid var(--line)}
+.stat:nth-child(odd){border-right:1px solid var(--line)}
+.stat b{display:block;font:800 clamp(2rem,5vw,3.2rem)/1 var(--f-display);color:var(--navy);letter-spacing:-.03em}
+.stat span{display:block;margin-top:8px;color:var(--muted);font-size:.95rem;max-width:22ch}
+@media (min-width:860px){.stats-grid{grid-template-columns:repeat(4,1fr)}.stat{border-bottom:0;border-right:1px solid var(--line);padding:46px 28px}.stat:nth-child(odd){border-right:1px solid var(--line)}.stat:last-child{border-right:0}}
+
+/* services */
+.services{background:var(--sky-wash)}
+.svc-grid{display:grid;gap:16px;margin-top:44px}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:28px;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+@media (hover:hover) and (pointer:fine){.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#b9d4ee}}
+.ico{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:var(--sky-soft);color:var(--navy);margin-bottom:18px;transition:transform .3s var(--ease),background .3s,color .3s}
+.ico svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+@media (hover:hover){.card:hover .ico{transform:scale(1.1) rotate(-4deg);background:var(--navy);color:#fff}}
+.card p{color:var(--muted);margin-top:10px;font-size:.98rem}
+.card.photo{padding:0;min-height:300px;color:#fff;display:flex;align-items:flex-end;border:0}
+.card.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.card.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,14,38,0) 25%,rgba(8,14,38,.88))}
+.card.photo .in{position:relative;z-index:1;padding:28px}
+.card.photo p{color:#DCE6FA}
+@media (hover:hover){.card.photo:hover img{transform:scale(1.06)}}
+.card.sos-card{background:linear-gradient(150deg,var(--red) 0,#9d1417 100%);color:#fff;border:0}
+.card.sos-card .ico{background:rgba(255,255,255,.18);color:#fff}
+.card.sos-card p{color:#ffe3e3}
+.card.sos-card a{display:inline-block;margin-top:16px;font:800 1.4rem/1 var(--f-display);text-decoration:none;white-space:nowrap}
+@media (min-width:700px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1020px){
+  .svc-grid{grid-template-columns:repeat(6,1fr)}
+  .svc-grid>*{grid-column:span 2}
+  .svc-grid .w3{grid-column:span 3}
+  .svc-grid .w4{grid-column:span 4}
+  .svc-grid .w6{grid-column:span 6}
+}
+
+/* urgent band */
+.urgent{background:var(--navy-deep);color:#fff;overflow:hidden}
+.urgent::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 420px at 100% 0,rgba(234,41,44,.28),transparent 60%),radial-gradient(600px 400px at 0 100%,rgba(94,169,221,.22),transparent 60%)}
+.urgent .wrap{position:relative;display:grid;gap:34px;align-items:center}
+.urgent h2{color:#fff;max-width:16ch}
+.urgent .eyebrow{color:#ff8b8d}
+.urgent .lead{color:#C9D6F2}
+.phones{display:grid;gap:12px}
+.phone-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 22px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);text-decoration:none;transition:transform .25s var(--ease),background .25s,border-color .25s}
+.phone-row small{display:block;color:#A9BADF;font-size:.85rem}
+.phone-row strong{font:700 1.35rem/1.2 var(--f-display);white-space:nowrap}
+.phone-row.main{background:var(--red);border-color:transparent}
+.phone-row.main small{color:#ffe0e0}
+.phone-row svg{width:24px;height:24px;flex:none}
+@media (hover:hover){.phone-row:hover{transform:translateX(6px);background:rgba(255,255,255,.14)}.phone-row.main:hover{background:var(--red-deep)}}
+@media (min-width:900px){.urgent .wrap{grid-template-columns:1.1fr .9fr}}
+
+/* doctor */
+.doctor{background:#fff}
+.doc-grid{display:grid;gap:48px;align-items:start}
+.docphoto{margin:0 0 22px}.zoomb{display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in;border-radius:var(--r-card);overflow:hidden;box-shadow:var(--shadow);transition:transform .3s var(--ease)}.zoomb img{width:100%;height:auto;display:block}@media (hover:hover) and (pointer:fine){.zoomb:hover{transform:translateY(-4px)}}
+.perks{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;list-style:none;padding:0}
+.perks li{padding:11px 18px;border-radius:var(--r-pill);background:var(--sky-soft);color:var(--navy);font-weight:600;font-size:.95rem}
+.sig{margin-top:30px;padding-left:18px;border-left:4px solid var(--sky)}
+.sig b{font:700 1.15rem var(--f-display);display:block}
+.sig span{color:var(--muted)}
+.plaques{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.plaque{border:0;background:#fff;padding:10px;border-radius:var(--r-card);box-shadow:var(--shadow);border:1px solid var(--line);cursor:zoom-in;transition:transform .3s var(--ease),box-shadow .3s}
+.plaque:nth-child(2){margin-top:34px}
+.plaque img{border-radius:14px;width:100%;height:auto}
+.plaque figcaption{padding:12px 6px 4px;font-size:.88rem;color:var(--muted);text-align:left}
+@media (hover:hover) and (pointer:fine){.plaque:hover{transform:translateY(-6px) rotate(-.6deg)}}
+@media (min-width:900px){.doc-grid{grid-template-columns:1fr 1fr;gap:80px;align-items:center}}
+
+/* gallery */
+.gallery{background:var(--sky-wash)}
+.g-grid{display:grid;gap:16px;margin-top:40px}
+.g-grid figure{margin:0}
+.g-grid img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.g-grid figcaption{margin-top:10px;color:var(--muted);font-size:.92rem}
+@media (min-width:860px){.g-grid{grid-template-columns:repeat(6,1fr)}.g1{grid-column:span 4}.g2{grid-column:span 2}.g3,.g4,.g5{grid-column:span 2}.g1 img{aspect-ratio:3/2}.g2 img{aspect-ratio:3/4}}
+/* reviews */
+.reviews{background:linear-gradient(160deg,#0B1330,#17269b);color:#fff}.reviews h2{color:#fff}.reviews .eyebrow{color:#8EC6EE}.reviews .rv-note{color:#B9C8EA}.reviews .rv-ctl button{border-color:#fff;color:#fff}@media (hover:hover){.reviews .rv-ctl button:hover{background:#fff;color:var(--navy)}}
+.rv-head{display:flex;flex-wrap:wrap;gap:20px;align-items:end;justify-content:space-between}
+.rv-ctl{display:flex;gap:10px}
+.rv-ctl button{width:52px;height:52px;border-radius:50%;border:2px solid var(--navy);background:transparent;color:var(--navy);display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s,transform .2s var(--ease)}
+.rv-ctl button:active{transform:scale(.94)}
+@media (hover:hover){.rv-ctl button:hover{background:var(--navy);color:#fff}}
+.rv-ctl svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rv-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:36px 16px 8px;margin:0 -16px;scrollbar-width:none;align-items:flex-start}
+.rv-track::-webkit-scrollbar{display:none}
+.rv{flex:0 0 min(86vw,390px);scroll-snap-align:start;background:#fff;border-radius:var(--r-card);padding:28px;border:1px solid #cfe0f1;box-shadow:0 14px 34px -22px rgba(27,42,155,.5)}
+.rv:nth-child(even){margin-top:26px}
+.rv q{display:block;quotes:"\201C" "\201D";font-size:1.02rem;line-height:1.6;color:var(--ink)}
+.rv q::before{content:open-quote;font:800 3rem/0 var(--f-display);color:var(--sky);display:block;height:26px}
+.rv footer{margin-top:18px;display:flex;justify-content:space-between;gap:10px;font-size:.9rem;color:var(--muted)}
+.rv footer b{color:var(--navy-deep)}
+.rv-note{margin-top:6px;color:var(--muted);font-size:.9rem}
+
+/* payments + faq */
+.pay{background:#fff}
+.pay-grid{display:grid;gap:56px;align-items:start}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px;list-style:none;padding:0}
+.chips li{padding:10px 16px;border-radius:14px;border:1px solid var(--line);background:var(--sky-wash);font-weight:600;font-size:.94rem;color:var(--navy-deep)}
+.pay-cards{display:grid;gap:14px;margin-top:26px}
+.mini{padding:20px 22px;border-radius:18px;background:linear-gradient(135deg,var(--navy),#2e43d0);color:#fff}
+.mini h3{font-size:1.05rem}
+.mini p{color:#D0DBF8;font-size:.95rem;margin-top:6px}
+.mini a{color:#fff;font-weight:600}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font:600 1.08rem/1.35 var(--f-display);min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:32px;height:32px;border-radius:50%;background:var(--sky-soft);position:relative;transition:transform .3s var(--ease),background .2s}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;margin:-1px 0 0 -6px;background:var(--navy);border-radius:2px;transition:transform .3s var(--ease)}
+.faq summary i::after{transform:rotate(90deg)}
+.faq details[open] summary i{background:var(--navy);transform:rotate(180deg)}
+.faq details[open] summary i::before,.faq details[open] summary i::after{background:#fff}
+.faq details[open] summary i::after{transform:rotate(0)}
+.faq .ans{padding:0 0 22px;color:var(--muted);max-width:60ch;animation:fade .3s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+@media (min-width:960px){.pay-grid{grid-template-columns:.95fr 1.05fr;gap:84px}}
+
+/* contact */
+.contact{background:linear-gradient(160deg,#14238a,#0B1330);color:#fff}
+.contact h2{color:#fff}
+.c-grid{display:grid;gap:36px;margin-top:44px}
+.form{background:#fff;color:var(--ink);border-radius:26px;padding:30px;box-shadow:0 40px 80px -36px rgba(0,0,0,.7)}
+.field{display:grid;gap:8px;margin-bottom:18px}
+.field label{font-weight:600;font-size:.95rem;color:var(--navy-deep)}
+.field input,.field select,.field textarea{font:inherit;font-size:1rem;min-height:50px;padding:12px 14px;border-radius:var(--r-field);border:1.5px solid #9fb3cf;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s;width:100%}
+.field input:focus,.field select:focus{outline:0;border-color:var(--navy);box-shadow:0 0 0 4px rgba(94,169,221,.35)}
+.field .err{color:#b3151a;font-size:.88rem;min-height:0;display:none}
+.field.bad input,.field.bad select{border-color:#b3151a}
+.field.bad .err{display:block}
+.row2{display:grid;gap:0 16px}
+@media (min-width:560px){.row2{grid-template-columns:1fr 1fr}}
+.form .btn{width:100%}
+.hint{font-size:.88rem;color:var(--muted);margin-top:12px}
+.ok{display:none;text-align:center;padding:30px 6px}
+.ok.show{display:block;animation:fade .4s var(--ease)}
+.ok svg{width:84px;height:84px;margin:0 auto 14px;display:block}
+.ok circle,.ok path{fill:none;stroke:#16a34a;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:200;stroke-dashoffset:200;animation:draw .8s var(--ease) forwards}
+.ok path{animation-delay:.35s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.info{display:grid;gap:16px;align-content:start}
+.info-card{padding:22px 24px;border-radius:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18)}
+.info-card h3{font-size:1rem;color:#8EC6EE;margin-bottom:10px;letter-spacing:.02em}
+.hrs{display:grid;gap:6px;font-size:.98rem}
+.hrs div{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dashed rgba(255,255,255,.18);padding-bottom:6px}
+.hrs div:last-child{border-bottom:0}
+.info a{text-decoration:none;font-weight:600}
+.map{border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.2);min-height:260px}
+.map iframe{width:100%;height:100%;min-height:260px;border:0;display:block}
+@media (min-width:960px){.c-grid{grid-template-columns:1fr 1fr;gap:56px}}
+
+/* footer */
+footer.site{background:var(--navy-ink);color:#B4C1E4;padding:56px 0 110px}
+.f-grid{display:grid;gap:34px}
+.f-logo{display:inline-block;background:#fff;padding:12px 18px;border-radius:16px}
+.f-logo img{width:min(300px,70vw);height:auto;object-fit:contain}
+footer.site h3{color:#fff;font-size:1rem;margin-bottom:12px}
+footer.site a{text-decoration:none;display:inline-block;padding:4px 0}
+footer.site ul{list-style:none;padding:0;display:grid;gap:4px}
+.social{display:flex;gap:10px;margin-top:6px;flex-wrap:wrap}
+.social a{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;transition:background .2s,transform .2s var(--ease)}
+.social svg{width:20px;height:20px;fill:currentColor}
+@media (hover:hover){.social a:hover{background:var(--sky);color:var(--navy-ink);transform:translateY(-3px)}footer.site li a:hover{color:#fff}}
+.copy{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:.88rem}
+@media (min-width:860px){.f-grid{grid-template-columns:1.3fr 1fr 1fr 1fr}footer.site{padding-bottom:56px}}
+
+/* sticky mobile bar */
+.bar{position:fixed;left:10px;right:10px;bottom:10px;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;border-radius:var(--r-pill);background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 14px 40px -10px rgba(14,22,53,.6)}
+.bar .btn{min-height:50px;padding:0 14px}
+@media (min-width:860px){.bar{display:none}}
+
+/* lightbox */
+#lb{position:fixed;inset:0;z-index:90;display:none;place-items:center;background:rgba(8,14,38,.88);padding:20px}
+#lb.open{display:grid;animation:fade .25s ease}
+#lb img{max-height:90dvh;max-width:92vw;border-radius:16px;animation:pop .35s var(--ease)}
+#lb button{position:absolute;top:16px;right:16px;width:52px;height:52px;border-radius:50%;border:0;background:#fff;color:var(--navy);font:700 1.4rem/1 var(--f-body);cursor:pointer}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0ms)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .blob,.ecg path,.sos-tag i,.status.open i{animation:none}
+  .ecg path{stroke-dashoffset:0}
+  #splash{display:none}
+  .ok circle,.ok path{animation:none;stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+
+<div id="splash" aria-hidden="true"><img src="images/logo.webp" alt=""></div>
+
+<header id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="My Dentist in Miami"><img src="images/logo.webp" alt="My Dentist in Miami" width="345" height="28"></a>
+    <ul class="nav-links" id="links">
+      <li><a href="#servicios" data-t="nav_services"></a></li>
+      <li><a href="#emergencias" data-t="nav_emergency"></a></li>
+      <li><a href="#doctor" data-t="nav_doctor"></a></li>
+      <li><a href="#consultorio" data-t="nav_office"></a></li>
+      <li><a href="#resenas" data-t="nav_reviews"></a></li>
+      <li><a href="#pagos" data-t="nav_pay"></a></li>
+      <li><a href="#cita" data-t="nav_contact"></a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      </div>
+      <a class="btn btn-primary nav-call" href="tel:+13052229899"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-t="call"></span></a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="links" data-t-aria="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div style="overflow:hidden;position:absolute;inset:0;z-index:-1;pointer-events:none"><span class="blob b1"></span><span class="blob b2"></span></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow reveal" data-t="hero_eyebrow"></span>
+      <h1 class="reveal" style="--d:80ms" data-th="hero_h1"></h1>
+      <p class="lead reveal" style="--d:160ms" data-t="hero_sub"></p>
+      <div class="cta-row reveal" style="--d:240ms">
+        <a class="btn btn-red mag" href="#cita" data-t="book"></a>
+        <a class="btn btn-ghost mag" href="tel:+13052229899"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>(305) 222-9899</span></a>
+      </div>
+      <div class="status reveal" style="--d:320ms" id="status" role="status"><i></i><span id="statusTxt"></span></div>
+    </div>
+    <aside class="sos reveal" style="--d:200ms" data-tilt>
+      <span class="sos-tag"><i></i><span data-t="sos_tag"></span></span>
+      <h2 data-t="sos_h"></h2>
+      <p data-t="sos_p"></p>
+      <a class="sos-num" href="tel:+17868050060">(786) 805-0060</a>
+      <a class="btn btn-red" style="width:100%" href="tel:+17868050060"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-t="sos_btn"></span></a>
+      <svg class="ecg" viewBox="0 0 400 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30h110l14-22 18 44 16-30 12 8h230"/></svg>
+    </aside>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" aria-label="My Dentist in Miami">
+  <div class="wrap stats-grid">
+    <div class="stat reveal"><b data-count-from="1950" data-count-to="1989">1989</b><span data-t="st1"></span></div>
+    <div class="stat reveal" style="--d:80ms"><b>24/7</b><span data-t="st2"></span></div>
+    <div class="stat reveal" style="--d:160ms"><b data-t="st_rate"></b><span data-t="st3"></span></div>
+    <div class="stat reveal" style="--d:240ms"><b data-count-to="2">2</b><span data-t="st4"></span></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="servicios">
+  <div class="wrap">
+    <h2 class="reveal" data-t="svc_h"></h2>
+    <p class="lead reveal" data-t="svc_sub"></p>
+    <div class="svc-grid">
+      <article class="card sos-card w3 reveal" data-tilt>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v2M4.5 6.5 6 8M19.5 6.5 18 8M5 19v-5a7 7 0 0 1 14 0v5M3 19h18M12 9v4"/></svg></div>
+        <h3 data-t="s_em"></h3>
+        <p data-t="s_em_p"></p>
+        <a href="tel:+17868050060">(786) 805-0060</a>
+      </article>
+      <article class="card w3 reveal" style="--d:80ms" data-tilt>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12c0-3 2-5 5-5h8c3 0 5 2 5 5s-2 5-5 5H8c-3 0-5-2-5-5z"/><path d="M8 10v4M12 10v4M16 10v4"/></svg></div>
+        <h3>Invisalign</h3>
+        <p data-t="s_inv_p"></p>
+      </article>
+      <article class="card w4 reveal" data-tilt>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8zM18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></div>
+        <h3 data-t="s_zoom"></h3><p data-t="s_zoom_p"></p>
+      </article>
+      <article class="card w2 reveal" style="--d:80ms" data-tilt>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 10c2.5 3 11.5 3 14 0M7 8c0-2 2-3 5-3s5 1 5 3M6 14c2 2 10 2 12 0"/></svg></div>
+        <h3 data-t="s_ven"></h3>
+        <p data-t="s_ven_p"></p>
+      </article>
+      <article class="card w2 reveal" data-tilt>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M8 3h8l-1 5H9zM9 8l1 3M15 8l-1 3M10 11h4M10.5 14h3M11 17h2l-.5 4h-1z"/></svg></div>
+        <h3 data-t="s_imp"></h3>
+        <p data-t="s_imp_p"></p>
+      </article>
+      <article class="card w2 reveal" style="--d:80ms" data-tilt>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M10 3h4l-.6 3h-2.8zM10.5 6l.7 3M13.5 6l-.7 3M11 9h2M11.3 12h1.4M11.6 15h.8"/><path d="M12 18v3"/></svg></div>
+        <h3 data-t="s_mini"></h3>
+        <p data-t="s_mini_p"></p>
+      </article>
+      <article class="card w2 reveal" style="--d:80ms" data-tilt>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M7 3c-2 0-4 2-4 5 0 4 2 5 2.5 9 .3 2.5 1.3 4 2.5 4 1.5 0 1.5-4 4-4s2.5 4 4 4c1.2 0 2.2-1.5 2.5-4 .5-4 2.5-5 2.5-9 0-3-2-5-4-5-2 0-3 1-5 1S9 3 7 3z"/></svg></div>
+        <h3 data-t="s_ap"></h3>
+        <p data-t="s_ap_p"></p>
+      </article>
+      <article class="card w6 reveal" data-tilt>
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="6"/><path d="M9.5 9.5h.01M14.5 9.5h.01M9.5 12.5c1.5 1.5 3.5 1.5 5 0M6 20c1-2.5 3-3.5 6-3.5s5 1 6 3.5"/></svg></div>
+        <h3 data-t="s_ped"></h3><p data-t="s_ped_p"></p>
+      </article>
+      
+    </div>
+  </div>
+</section>
+
+<!-- URGENT -->
+<section class="urgent" id="emergencias">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow reveal" data-t="u_eyebrow"></span>
+      <h2 class="reveal" style="--d:80ms" data-t="u_h"></h2>
+      <p class="lead reveal" style="--d:160ms" data-t="u_p"></p>
+    </div>
+    <div class="phones">
+      <a class="phone-row main reveal" href="tel:+17868050060"><span><small data-t="ph_em"></small><strong>(786) 805-0060</strong></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a>
+      <a class="phone-row reveal" style="--d:80ms" href="tel:+13052229899"><span><small data-t="ph_bri"></small><strong>(305) 222-9899</strong></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a>
+      <a class="phone-row reveal" style="--d:160ms" href="tel:+13052229219"><span><small data-t="ph_ken"></small><strong>(305) 222-9219</strong></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section class="doctor" id="doctor">
+  <div class="wrap doc-grid">
+    <div>
+      <h2 class="reveal" data-t="d_h"></h2>
+      <p class="lead reveal" style="--d:80ms" data-t="d_p"></p>
+      <ul class="perks reveal" style="--d:140ms">
+        <li data-t="perk1"></li><li data-t="perk2"></li><li data-t="perk3"></li><li data-t="perk4"></li>
+      </ul>
+      <div class="sig reveal" style="--d:200ms"><b>Dr. Pablo J. Fonseca, DDS</b><span data-t="d_sig"></span></div>
+    </div>
+    <div class="docvis">
+      <figure class="docphoto reveal"><button class="zoomb" type="button" data-zoom="images/doctor.webp" data-t-aria="zoom"><img src="images/doctor.webp" alt="" data-t-alt="doc_alt" width="1100" height="855" loading="lazy"></button></figure>
+    <div class="plaques">
+      <figure class="reveal"><button class="plaque" type="button" data-zoom="images/placa-2019.webp" data-t-aria="zoom"><img src="images/placa-2019.webp" alt="" data-t-alt="plq1" loading="lazy" width="800" height="1024"><figcaption data-t="plq1c"></figcaption></button></figure>
+      <figure class="reveal" style="--d:100ms"><button class="plaque" type="button" data-zoom="images/placa-2024.webp" data-t-aria="zoom"><img src="images/placa-2024.webp" alt="" data-t-alt="plq2" loading="lazy" width="800" height="1069"><figcaption data-t="plq2c"></figcaption></button></figure>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="consultorio">
+  <div class="wrap">
+    <h2 class="reveal" data-t="g_h"></h2>
+    <p class="lead reveal" data-t="g_p"></p>
+    <div class="g-grid">
+      <figure class="g1 reveal"><button class="zoomb" type="button" data-zoom="images/consultorio.webp" data-t-aria="zoom"><img src="images/consultorio.webp" alt="" data-t-alt="g1a" width="1400" height="934" loading="lazy"></button><figcaption data-t="g1c"></figcaption></figure>
+      <figure class="g2 reveal" style="--d:80ms"><button class="zoomb" type="button" data-zoom="images/itero.webp" data-t-aria="zoom"><img src="images/itero.webp" alt="" data-t-alt="g2a" width="1100" height="825" loading="lazy"></button><figcaption data-t="g2c"></figcaption></figure>
+      <figure class="g3 reveal"><button class="zoomb" type="button" data-zoom="images/sala.webp" data-t-aria="zoom"><img src="images/sala.webp" alt="" data-t-alt="g3a" width="1100" height="734" loading="lazy"></button><figcaption data-t="g3c"></figcaption></figure>
+      <figure class="g4 reveal" style="--d:80ms"><button class="zoomb" type="button" data-zoom="images/entrada.webp" data-t-aria="zoom"><img src="images/entrada.webp" alt="" data-t-alt="g4a" width="1100" height="734" loading="lazy"></button><figcaption data-t="g4c"></figcaption></figure>
+      <figure class="g5 reveal" style="--d:160ms"><button class="zoomb" type="button" data-zoom="images/edificio.webp" data-t-aria="zoom"><img src="images/edificio.webp" alt="" data-t-alt="g5a" width="1100" height="734" loading="lazy"></button><figcaption data-t="g5c"></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="resenas">
+  <div class="wrap">
+    <div class="rv-head">
+      <div>
+        <span class="eyebrow reveal" data-t="r_eyebrow"></span>
+        <h2 class="reveal" data-t="r_h"></h2>
+        <p class="rv-note reveal" data-t="r_note"></p>
+      </div>
+      <div class="rv-ctl reveal">
+        <button type="button" id="prev" data-t-aria="prev"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" id="next" data-t-aria="next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <div class="rv-track" id="track" tabindex="0" data-t-aria="r_aria">
+      <figure class="rv"><q lang="en">On my flight to head to cruise a crown popped off. As soon as I got to my layover I called the 24 hour phone number and told him the situation. He said show up at 9 and I'll take care of you. As soon as I showed up he got me squared away. In and out in 30 minutes. Super polite staff and 100% recommend them.</q><footer><b>Jesiah P.</b><span>06/17/2026</span></footer></figure>
+      <figure class="rv"><q lang="en">On Sunday April 19, 2026, before 9 am, I called the 24 hours emergency service of My Dentist in Miami and Dr. Pablo J. Fonseca answered my call and told me to go immediately to his office. Excellent emergency service.</q><footer><b>Ana R.</b><span>05/03/2026</span></footer></figure>
+      <figure class="rv"><q lang="en">Very friendly, professional, and good prices, highly recommended! I've been coming to this dentist for a couple of years now, 100% recommended!</q><footer><b>Laura S.</b><span>06/11/2026</span></footer></figure>
+      <figure class="rv"><q lang="en">I was visiting Miami and I had an abscess that needed to be evaluated. So I came here and was able to be seen the same day. The office is very clean and the dentist was very helpful in his guidance. I appreciate the ease of this visit, thank you so much.</q><footer><b>Kimberly A.</b><span>05/12/2026</span></footer></figure>
+      <figure class="rv"><q lang="en">Friendly place and great service. The doctor is honest with you and won't try to upsell or make up unnecessary treatments, unlike other dental offices in Miami. The facilities are nice and modern as well. Highly recommend!</q><footer><b>Stephanie M.</b><span>10/24/2025</span></footer></figure>
+      <figure class="rv"><q lang="en">Thank you for taking care of my husband during an emergency after-hours extraction. He answered the phone and was able to see him within 30 minutes of me calling on a Saturday night. He was incredibly quick, efficient, gentle, and truly a blessing in a stressful moment. God bless his hands and the work he does. We’re so grateful for his kindness, professionalism, and willingness to help us so late in the evening. Highly recommend.</q><footer><b>Danielle H.</b><span>12/18/2025</span></footer></figure>
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENTS + FAQ -->
+<section class="pay" id="pagos">
+  <div class="wrap pay-grid">
+    <div>
+      <h2 class="reveal" data-t="p_h"></h2>
+      <p class="lead reveal" data-t="p_p"></p>
+      <ul class="chips reveal">
+        <li>Aetna</li><li>Cigna</li><li>Delta Dental</li><li>Humana</li><li>Guardian</li><li>Ameritas</li><li>Principal</li><li>GEHA</li><li>Assurant</li><li>Anthem</li><li>Blue Cross Blue Shield</li>
+      </ul>
+      <div class="pay-cards">
+        <div class="mini reveal"><h3>CareCredit</h3><p data-t="p_cc"></p></div>
+        <div class="mini reveal" style="--d:80ms"><h3>Advantage Plan</h3><p><span data-t="p_ap"></span> <a href="https://mydentistinmiami.com/images/MyDentist_Enrollment_plan.pdf" target="_blank" rel="noopener" data-t="p_ap_link"></a></p></div>
+      </div>
+    </div>
+    <div class="faq reveal">
+      <details open><summary><span data-t="q1"></span><i></i></summary><div class="ans" data-t="a1"></div></details>
+      <details><summary><span data-t="q2"></span><i></i></summary><div class="ans" data-t="a2"></div></details>
+      <details><summary><span data-t="q3"></span><i></i></summary><div class="ans" data-t="a3"></div></details>
+      <details><summary><span data-t="q4"></span><i></i></summary><div class="ans" data-t="a4"></div></details>
+      <details><summary><span data-t="q5"></span><i></i></summary><div class="ans" data-t="a5"></div></details>
+      <details><summary><span data-t="q6"></span><i></i></summary><div class="ans" data-t="a6"></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="cita">
+  <div class="wrap">
+    <h2 class="reveal" data-t="c_h"></h2>
+    <div class="c-grid">
+      <form class="form reveal" id="form" novalidate>
+        <div id="formBody">
+          <div class="row2">
+            <div class="field"><label for="f-name" data-t="f_name"></label><input id="f-name" name="name" autocomplete="name" required><span class="err" data-t="f_err"></span></div>
+            <div class="field"><label for="f-phone" data-t="f_phone"></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span class="err" data-t="f_err"></span></div>
+          </div>
+          <div class="field"><label for="f-reason" data-t="f_reason"></label>
+            <select id="f-reason" name="reason" required>
+              <option value="" data-t="f_pick"></option>
+              <option value="checkup" data-t="o_general"></option>
+              <option value="Invisalign">Invisalign</option>
+              <option value="zoom" data-t="s_zoom"></option>
+              <option value="veneers" data-t="s_ven"></option>
+              <option value="implants" data-t="s_imp"></option>
+              <option value="pediatric" data-t="s_ped"></option>
+              <option value="other" data-t="o_other"></option>
+            </select><span class="err" data-t="f_err"></span></div>
+          <div class="field"><label for="f-day" data-t="f_day"></label><input id="f-day" name="day" type="date"></div>
+          <button class="btn btn-primary" type="submit"><span data-t="f_send"></span></button>
+          <p class="hint" data-t="f_hint"></p>
+        </div>
+        <div class="ok" id="ok" role="status">
+          <svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="34"/><path d="M27 43l11 11 20-23"/></svg>
+          <h3 data-t="f_ok_h"></h3>
+          <p class="hint" data-t="f_ok_p"></p>
+        </div>
+      </form>
+      <div class="info">
+        <div class="info-card reveal">
+          <h3 data-t="i_addr"></h3>
+          <p>40 SW 13th Street, Suite 103<br>Miami, FL 33130</p>
+          <p style="margin-top:10px"><a href="https://maps.google.com/?q=40+SW+13th+Street+Suite+103+Miami+FL+33130" target="_blank" rel="noopener" data-t="i_dir"></a></p>
+        </div>
+        <div class="info-card reveal" style="--d:80ms">
+          <h3 data-t="i_hours"></h3>
+          <div class="hrs">
+            <div><span data-t="h_mt"></span><span>9:00 am - 6:00 pm</span></div>
+            <div><span data-t="h_sat"></span><span>9:00 am - 2:00 pm</span></div>
+            <div><span data-t="h_em"></span><span>24/7 · (786) 805-0060</span></div>
+          </div>
+          <p class="hint" style="color:#B4C1E4" data-t="h_note"></p>
+        </div>
+        <div class="map reveal" style="--d:140ms"><iframe title="Map" data-t-title="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=40+SW+13th+Street+Suite+103+Miami+FL+33130&amp;output=embed"></iframe></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <span class="f-logo"><img src="images/logo.webp" alt="My Dentist in Miami" width="345" height="28"></span>
+        <p style="margin-top:16px;max-width:30ch" data-t="f_tag"></p>
+        <div class="social">
+          <a href="https://www.instagram.com/mydentistinmiami/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.3 5.8a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/></svg></a>
+          <a href="https://www.facebook.com/mydentistinmiami" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6.5c0-.8.2-1.2 1.3-1.2H17V2h-2.6C11.4 2 10 3.700 10 6.300V8H7.500v3.400H10V22h4V11.400h2.700L17 8h-3z"/></svg></a>
+          <a href="https://www.linkedin.com/in/dr-pablo-j-fonseca-04073520/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.500 8.500h3.600V20H4.500V8.500zM6.300 3a2.100 2.100 0 1 1 0 4.200 2.100 2.100 0 0 1 0-4.200zM10.200 8.500h3.400v1.600c.5-.9 1.700-1.900 3.500-1.900 3.700 0 4.400 2.400 4.400 5.600V20h-3.600v-5.400c0-1.300 0-3-1.800-3s-2.100 1.400-2.100 2.900V20h-3.600V8.500z"/></svg></a>
+          <a href="https://www.youtube.com/channel/UCINb99p7zvhaAe61u1nRBdQ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21.600 7.200a2.500 2.500 0 0 0-1.800-1.800C18.200 5 12 5 12 5s-6.200 0-7.800.4A2.500 2.500 0 0 0 2.400 7.200C2 8.800 2 12 2 12s0 3.200.4 4.800a2.500 2.500 0 0 0 1.800 1.800C5.800 19 12 19 12 19s6.200 0 7.800-.4a2.500 2.500 0 0 0 1.800-1.800c.4-1.600.4-4.800.4-4.800s0-3.200-.4-4.800zM10 15V9l5.200 3L10 15z"/></svg></a>
+        </div>
+      </div>
+      <div><h3 data-t="f_visit"></h3><p>40 SW 13th Street, Suite 103<br>Miami, FL 33130</p><p style="margin-top:10px"><a href="mailto:info@mydentistinmiami.com">info@mydentistinmiami.com</a></p></div>
+      <div><h3 data-t="f_call"></h3><ul><li><a href="tel:+13052229899">Brickell (305) 222-9899</a></li><li><a href="tel:+13052229219">West Kendall (305) 222-9219</a></li><li><a href="tel:+17868050060" data-t="f_em247"></a></li></ul></div>
+      <div><h3 data-t="f_links"></h3><ul><li><a href="#servicios" data-t="nav_services"></a></li><li><a href="#doctor" data-t="nav_doctor"></a></li><li><a href="#consultorio" data-t="nav_office"></a></li><li><a href="#resenas" data-t="nav_reviews"></a></li><li><a href="#pagos" data-t="nav_pay"></a></li><li><a href="#cita" data-t="nav_contact"></a></li></ul></div>
+    </div>
+    <p class="copy">© <span id="yr">2026</span> My Dentist in Miami. <span data-t="f_rights"></span></p>
+  </div>
+</footer>
+
+<div class="bar" role="group" aria-label="Quick actions">
+  <a class="btn btn-red" href="tel:+13052229899"><span data-t="call"></span></a>
+  <a class="btn btn-primary" href="#cita"><span data-t="book"></span></a>
+</div>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image"><button type="button" aria-label="Close" id="lbx">&times;</button><img alt="" id="lbi" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div>
+
+<script>
+(function(){
+"use strict";
+var reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var fine=matchMedia("(hover: hover) and (pointer: fine)").matches;
+var $=function(s,c){return (c||document).querySelector(s)};
+var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+function safe(f,n){try{f()}catch(e){console.warn(n,e)}}
+
+var T={
+es:{
+ meta_title:"My Dentist in Miami | Dr. Pablo J. Fonseca, Brickell",
+ meta_desc:"Odontología general y cosmética en Brickell, Miami, con el Dr. Pablo J. Fonseca desde 1989. Línea de emergencias 24/7.",
+ nav_services:"Servicios",nav_emergency:"Emergencias",nav_doctor:"El doctor",nav_office:"Consultorio",nav_reviews:"Reseñas",nav_pay:"Seguros y pagos",nav_contact:"Contacto",
+ call:"Llamar",book:"Pedir cita",menu:"Abrir menú",
+ hero_eyebrow:"Brickell, Miami",
+ hero_h1:"Su dentista en Brickell, <em>desde 1989.</em>",
+ hero_sub:"Odontología general y cosmética con el Dr. Pablo J. Fonseca, y una línea de emergencias que atiende las 24 horas.",
+ sos_tag:"Emergencias 24/7",sos_h:"Un diente no espera al lunes.",sos_p:"Llame a cualquier hora. Varios pacientes cuentan que el propio Dr. Fonseca contestó el teléfono.",sos_btn:"Llamar ahora",
+ st1:"Atendiendo Miami desde",st2:"Línea de emergencias, todos los días",st_rate:"4,3",st3:"Calificación en Google Maps, 84 opiniones",st4:"Placas America's Best Dentists (2019 y 2024)",
+ svc_h:"Lo que hacemos en el consultorio",svc_sub:"Tratamientos que ofrece hoy My Dentist in Miami. Para cualquier otro, llámenos y le confirmamos.",
+ s_em:"Emergencias 24/7",s_em_p:"Dolor, un diente roto o una corona que se salió. Llame a la línea de emergencias.",
+ s_inv_p:"Alineadores transparentes para enderezar los dientes con menos molestias a la vista.",
+ s_zoom:"Blanqueamiento Phillips Zoom",s_zoom_p:"Blanqueamiento dental en el consultorio para aclarar el color de su sonrisa.",
+ s_ven:"Carillas de porcelana",s_ven_p:"Finas láminas de porcelana para mejorar forma y color de los dientes visibles.",
+ s_imp:"Implantes dentales",s_imp_p:"Una raíz artificial que sostiene un diente nuevo cuando perdió uno.",
+ s_mini:"Mini implantes",s_mini_p:"Implantes de menor diámetro. En consulta le explicamos si le convienen.",
+ s_ped:"Odontopediatría",s_ped_p:"Cuidado dental para los más chicos de la familia.",
+ s_ap:"Advantage Plan",s_ap_p:"El plan de membresía del consultorio. Pida el formulario de inscripción.",
+ u_eyebrow:"Emergencias",u_h:"Cuando no puede esperar, llame.",u_p:"La línea de emergencias funciona las 24 horas. Para citas y consultas, use los teléfonos del consultorio.",
+ ph_em:"Emergencias 24/7",ph_bri:"Brickell, citas",ph_ken:"West Kendall",
+ d_h:"Un consultorio, un dentista, desde 1989.",
+ d_p:"El Dr. Pablo J. Fonseca atiende en el Brickell Financial District. Es el dentista de la práctica y quien responde sus llamadas de emergencia.",
+ perk1:"Español e inglés",perk2:"Wi-Fi",perk3:"Realidad virtual",perk4:"Masaje en el sillón",
+ d_sig:"Odontología general y cosmética",zoom:"Ampliar imagen",doc_alt:"El Dr. Pablo J. Fonseca junto al logo en la recepción del consultorio",g_h:"Así es el consultorio.",g_p:"Fotos reales del consultorio en Brickell.",g1a:"Sala de tratamiento con sillones azules",g1c:"Sala de tratamiento",g2a:"Escáner iTero junto a un sillón dental",g2c:"Escáner iTero en el consultorio",g3a:"Sala con equipo de imágenes y computadora",g3c:"Sala de imágenes",g4a:"Pasillo de entrada con el logo del consultorio",g4c:"Entrada al consultorio",g5a:"Edificio donde está el consultorio, en SW 13th Street",g5c:"El edificio, en SW 13th Street",
+ plq1:"Placa America's Best Dentists 2019 a nombre del Dr. Pablo J. Fonseca",plq1c:"America's Best Dentists, 2019",
+ plq2:"Placa America's Best Dentists 2024 a nombre del Dr. Pablo J. Fonseca",plq2c:"America's Best Dentists, 2024",
+ r_eyebrow:"Pacientes",r_h:"Lo que cuentan quienes ya vinieron.",r_note:"Reseñas textuales publicadas por pacientes en el sitio del consultorio, en su idioma original (inglés). Google Maps: 4,3 con 84 opiniones (verificado el 18/10/2026).",prev:"Anterior",next:"Siguiente",r_aria:"Reseñas de pacientes",
+ p_h:"Seguros y formas de pago",p_p:"Estos son algunos de los planes que figuran en el sitio del consultorio. Llámenos y le confirmamos si el suyo está cubierto.",
+ p_cc:"Financiación con CareCredit. Llámenos y le confirmamos las condiciones.",p_ap:"Plan de membresía del consultorio.",p_ap_link:"Ver formulario de inscripción",
+ q1:"¿Atienden emergencias fuera de horario?",a1:"Sí. La línea de emergencias (786) 805-0060 funciona las 24 horas.",
+ q2:"¿Aceptan mi seguro?",a2:"Arriba están algunos de los planes que figuran en el consultorio. Llámenos y le confirmamos su cobertura.",
+ q3:"¿Hay financiación?",a3:"Trabajan con CareCredit. Para las condiciones, llámenos y le confirmamos.",
+ q4:"¿Cuánto cuesta un tratamiento?",a4:"Depende de cada caso. Llámenos y le confirmamos.",
+ q5:"¿Hablan español?",a5:"Sí, atendemos en español y en inglés.",
+ q6:"¿Atienden niños?",a6:"Sí, el consultorio ofrece odontopediatría. Llámenos para coordinar la cita.",
+ c_h:"Pida su cita.",f_name:"Nombre",f_phone:"Teléfono",f_reason:"Motivo de la visita",f_pick:"Elija una opción",o_general:"Revisión o consulta general",o_other:"Otro motivo",f_day:"Día preferido (opcional)",f_send:"Preparar mi solicitud",
+ f_err:"Complete este campo.",f_hint:"Se abrirá su correo con el mensaje listo. No enviamos nada a ningún servidor desde esta página.",
+ f_ok_h:"Su mensaje está listo",f_ok_p:"Si su correo no se abrió, llámenos al (305) 222-9899.",
+ mail_subj:"Solicitud de cita",mail_hi:"Hola, quisiera pedir una cita.",mail_name:"Nombre",mail_phone:"Teléfono",mail_reason:"Motivo",mail_day:"Día preferido",
+ i_addr:"Dirección",i_dir:"Cómo llegar",i_hours:"Horario del consultorio",h_mt:"Lunes a jueves",h_sat:"Sábado",h_em:"Emergencias",
+ h_note:"Para viernes y domingo, llame al consultorio. Cita el mismo día según disponibilidad.",map:"Mapa del consultorio",
+ f_tag:"Odontología general y cosmética en Brickell desde 1989.",f_visit:"Visítenos",f_call:"Llámenos",f_em247:"Emergencias 24/7 (786) 805-0060",f_links:"Secciones",f_rights:"Todos los derechos reservados.",
+ open_now:"Abierto ahora",closed:"Cerrado",opens:"abre",today:"hoy",tomorrow:"mañana",
+ days:["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],em_line:"emergencias 24/7"
+},
+en:{
+ meta_title:"My Dentist in Miami | Dr. Pablo J. Fonseca, Brickell",
+ meta_desc:"General and cosmetic dentistry in Brickell, Miami, with Dr. Pablo J. Fonseca since 1989. 24/7 emergency line.",
+ nav_services:"Services",nav_emergency:"Emergencies",nav_doctor:"The doctor",nav_office:"The office",nav_reviews:"Reviews",nav_pay:"Insurance & payment",nav_contact:"Contact",
+ call:"Call",book:"Book a visit",menu:"Open menu",
+ hero_eyebrow:"Brickell, Miami",
+ hero_h1:"Your Brickell dentist, <em>since 1989.</em>",
+ hero_sub:"General and cosmetic dentistry with Dr. Pablo J. Fonseca, plus an emergency line that answers around the clock.",
+ sos_tag:"Emergencies 24/7",sos_h:"A toothache won't wait for Monday.",sos_p:"Call any time. Several patients say Dr. Fonseca answered the phone himself.",sos_btn:"Call now",
+ st1:"Serving Miami since",st2:"Emergency line, every day",st_rate:"4.3",st3:"Google Maps rating, 84 reviews",st4:"America's Best Dentists plaques (2019 and 2024)",
+ svc_h:"What we do at the office",svc_sub:"Treatments My Dentist in Miami offers today. For anything else, call us and we will confirm.",
+ s_em:"Emergencies 24/7",s_em_p:"Pain, a broken tooth or a crown that came off. Call the emergency line.",
+ s_inv_p:"Clear aligners to straighten your teeth with less visible hardware.",
+ s_zoom:"Phillips Zoom whitening",s_zoom_p:"In-office teeth whitening to brighten the color of your smile.",
+ s_ven:"Porcelain veneers",s_ven_p:"Thin porcelain shells to improve the shape and color of visible teeth.",
+ s_imp:"Dental implants",s_imp_p:"An artificial root that holds a new tooth when you have lost one.",
+ s_mini:"Mini implants",s_mini_p:"Smaller-diameter implants. At your visit we explain if they suit you.",
+ s_ped:"Pediatric dentistry",s_ped_p:"Dental care for the youngest members of the family.",
+ s_ap:"Advantage Plan",s_ap_p:"The office's membership plan. Ask for the enrollment form.",
+ u_eyebrow:"Emergencies",u_h:"When it can't wait, call.",u_p:"The emergency line is open 24 hours. For appointments and questions, use the office numbers.",
+ ph_em:"Emergencies 24/7",ph_bri:"Brickell, appointments",ph_ken:"West Kendall",
+ d_h:"One office, one dentist, since 1989.",
+ d_p:"Dr. Pablo J. Fonseca sees patients in the Brickell Financial District. He is the practice's dentist and the one who takes your emergency calls.",
+ perk1:"Spanish and English",perk2:"Wi-Fi",perk3:"Virtual reality",perk4:"Chair massage",
+ d_sig:"General and cosmetic dentistry",zoom:"Enlarge image",doc_alt:"Dr. Pablo J. Fonseca next to the office logo at reception",g_h:"This is the office.",g_p:"Real photos of the Brickell office.",g1a:"Treatment room with blue dental chairs",g1c:"Treatment room",g2a:"iTero scanner next to a dental chair",g2c:"iTero scanner at the office",g3a:"Room with imaging equipment and a computer",g3c:"Imaging room",g4a:"Entrance hallway with the office logo",g4c:"Office entrance",g5a:"The building on SW 13th Street where the office is",g5c:"The building, on SW 13th Street",
+ plq1:"America's Best Dentists 2019 plaque in the name of Dr. Pablo J. Fonseca",plq1c:"America's Best Dentists, 2019",
+ plq2:"America's Best Dentists 2024 plaque in the name of Dr. Pablo J. Fonseca",plq2c:"America's Best Dentists, 2024",
+ r_eyebrow:"Patients",r_h:"What patients say after their visit.",r_note:"Word-for-word reviews posted by patients on the office website. Google Maps: 4.3 with 84 reviews (checked 10/18/2026).",prev:"Previous",next:"Next",r_aria:"Patient reviews",
+ p_h:"Insurance and payment",p_p:"These are some of the plans listed on the office's website. Call us and we will confirm whether yours is covered.",
+ p_cc:"Financing with CareCredit. Call us and we will confirm the terms.",p_ap:"The office's membership plan.",p_ap_link:"View enrollment form",
+ q1:"Do you handle after-hours emergencies?",a1:"Yes. The emergency line (786) 805-0060 is open 24 hours.",
+ q2:"Do you take my insurance?",a2:"Some of the plans listed by the office are above. Call us and we will confirm your coverage.",
+ q3:"Is financing available?",a3:"The office works with CareCredit. For terms, call us and we will confirm.",
+ q4:"How much does a treatment cost?",a4:"It depends on each case. Call us and we will confirm.",
+ q5:"Do you speak Spanish?",a5:"Yes, we see patients in Spanish and English.",
+ q6:"Do you see children?",a6:"Yes, the office offers pediatric dentistry. Call us to schedule.",
+ c_h:"Book your visit.",f_name:"Name",f_phone:"Phone",f_reason:"Reason for the visit",f_pick:"Choose an option",o_general:"Checkup or general visit",o_other:"Other reason",f_day:"Preferred day (optional)",f_send:"Prepare my request",
+ f_err:"Please fill in this field.",f_hint:"Your email app will open with the message ready. This page sends nothing to any server.",
+ f_ok_h:"Your message is ready",f_ok_p:"If your email did not open, call us at (305) 222-9899.",
+ mail_subj:"Appointment request",mail_hi:"Hello, I would like to book an appointment.",mail_name:"Name",mail_phone:"Phone",mail_reason:"Reason",mail_day:"Preferred day",
+ i_addr:"Address",i_dir:"Get directions",i_hours:"Office hours",h_mt:"Monday to Thursday",h_sat:"Saturday",h_em:"Emergencies",
+ h_note:"For Friday and Sunday, call the office. Same-day visits depending on availability.",map:"Office map",
+ f_tag:"General and cosmetic dentistry in Brickell since 1989.",f_visit:"Visit us",f_call:"Call us",f_em247:"Emergencies 24/7 (786) 805-0060",f_links:"Sections",f_rights:"All rights reserved.",
+ open_now:"Open now",closed:"Closed",opens:"opens",today:"today",tomorrow:"tomorrow",
+ days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],em_line:"emergencies 24/7"
+}};
+var lang="es";
+var HOURS={0:null,1:[9,18],2:[9,18],3:[9,18],4:[9,18],5:null,6:[9,14]};
+
+function t(k){return (T[lang]&&T[lang][k]!=null)?T[lang][k]:k}
+function applyLang(l){
+  lang=l;
+  document.documentElement.lang=l;
+  $$("[data-t]").forEach(function(e){e.textContent=t(e.getAttribute("data-t"))});
+  $$("[data-th]").forEach(function(e){e.innerHTML=t(e.getAttribute("data-th"))});
+  $$("[data-t-aria]").forEach(function(e){e.setAttribute("aria-label",t(e.getAttribute("data-t-aria")))});
+  $$("[data-t-alt]").forEach(function(e){e.setAttribute("alt",t(e.getAttribute("data-t-alt")))});
+  $$("[data-t-title]").forEach(function(e){e.setAttribute("title",t(e.getAttribute("data-t-title")))});
+  document.title=t("meta_title");
+  var m=$('meta[name="description"]');if(m)m.setAttribute("content",t("meta_desc"));
+  $$(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===l?"true":"false")});
+  renderStatus();
+}
+function miamiNow(){
+  var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",weekday:"short",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date()),o={};
+  p.forEach(function(x){o[x.type]=x.value});
+  var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
+  return {d:wd,h:parseInt(o.hour,10)+parseInt(o.minute,10)/60};
+}
+function fmt(h){var s=h>=12?"pm":"am",x=h%12||12;return x+":00 "+s}
+function renderStatus(){
+  var el=$("#status"),tx=$("#statusTxt");if(!el)return;
+  var n=miamiNow(),h=HOURS[n.d],open=h&&n.h>=h[0]&&n.h<h[1];
+  el.classList.toggle("open",!!open);
+  if(open){tx.textContent=t("open_now")+" · "+(lang==="es"?"cierra a las ":"closes at ")+fmt(h[1]);return}
+  var nd=null,when="";
+  for(var i=0;i<=7;i++){
+    var d=(n.d+i)%7,hh=HOURS[d];
+    if(!hh)continue;
+    if(i===0&&n.h>=hh[0])continue;
+    nd=d;when=i===0?t("today"):i===1?t("tomorrow"):t("days")[d];break;
+  }
+  tx.textContent=t("closed")+" · "+t("opens")+" "+when+" "+fmt(HOURS[nd][0])+" · "+t("em_line");
+}
+
+safe(function(){
+  $$(".lang button").forEach(function(b){b.addEventListener("click",function(){applyLang(b.getAttribute("data-lang"))})});
+  applyLang("es");
+  setInterval(renderStatus,60000);
+  $("#yr").textContent=new Date().getFullYear();
+},"lang");
+
+safe(function(){
+  var s=$("#splash");function hide(){s.classList.add("hide")}
+  if(document.readyState==="complete")setTimeout(hide,700);else addEventListener("load",function(){setTimeout(hide,700)});
+  setTimeout(hide,2200);
+},"splash");
+
+safe(function(){
+  var nav=$("#nav"),links=$("#links"),b=$("#burger");
+  function sc(){nav.classList.toggle("scrolled",scrollY>12)}sc();addEventListener("scroll",sc,{passive:true});
+  b.addEventListener("click",function(){var o=links.classList.toggle("open");b.setAttribute("aria-expanded",o)});
+  links.addEventListener("click",function(e){if(e.target.closest("a")){links.classList.remove("open");b.setAttribute("aria-expanded","false")}});
+  addEventListener("keydown",function(e){if(e.key==="Escape")links.classList.remove("open")});
+},"nav");
+
+safe(function(){
+  var els=$$(".reveal");
+  if(!("IntersectionObserver" in window)||reduced){els.forEach(function(e){e.classList.add("in")});return}
+  var io=new IntersectionObserver(function(es,o){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");o.unobserve(x.target)}})},{threshold:.05,rootMargin:"0px 0px -5% 0px"});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.add("in")})},3000);
+},"reveal");
+
+safe(function(){
+  var els=$$("[data-count-to]");if(!els.length)return;
+  function run(el){
+    var to=+el.getAttribute("data-count-to"),from=+(el.getAttribute("data-count-from")||0);
+    if(reduced){el.textContent=to;return}
+    var t0=performance.now(),dur=1300;
+    (function tick(n){var p=Math.min(1,(n-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=Math.round(from+(to-from)*e);if(p<1)requestAnimationFrame(tick)})(t0);
+  }
+  var io=new IntersectionObserver(function(es,o){es.forEach(function(x){if(x.isIntersecting){run(x.target);o.unobserve(x.target)}})},{threshold:.6});
+  els.forEach(function(e){io.observe(e)});
+},"count");
+
+safe(function(){
+  if(!fine||reduced)return;
+  $$("[data-tilt]").forEach(function(c){
+    c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="perspective(900px) rotateX("+(-y*5)+"deg) rotateY("+(x*5)+"deg) translateY(-4px)"});
+    c.addEventListener("mouseleave",function(){c.style.transform=""});
+  });
+  $$(".mag").forEach(function(b){
+    b.addEventListener("mousemove",function(e){var r=b.getBoundingClientRect();b.style.transform="translate("+((e.clientX-r.left-r.width/2)*.18)+"px,"+((e.clientY-r.top-r.height/2)*.25-2)+"px)"});
+    b.addEventListener("mouseleave",function(){b.style.transform=""});
+  });
+},"tilt");
+
+safe(function(){
+  var tr=$("#track"),step=function(){var c=tr.firstElementChild;return c?c.getBoundingClientRect().width+18:380};
+  $("#next").addEventListener("click",function(){tr.scrollBy({left:step(),behavior:reduced?"auto":"smooth"})});
+  $("#prev").addEventListener("click",function(){tr.scrollBy({left:-step(),behavior:reduced?"auto":"smooth"})});
+  tr.addEventListener("keydown",function(e){if(e.key==="ArrowRight")$("#next").click();if(e.key==="ArrowLeft")$("#prev").click()});
+  var down=false,sx=0,sl=0;
+  tr.addEventListener("pointerdown",function(e){if(e.pointerType!=="mouse")return;down=true;sx=e.clientX;sl=tr.scrollLeft;tr.style.scrollSnapType="none"});
+  addEventListener("pointermove",function(e){if(down)tr.scrollLeft=sl-(e.clientX-sx)});
+  addEventListener("pointerup",function(){if(down){down=false;tr.style.scrollSnapType=""}});
+},"carousel");
+
+safe(function(){
+  var lb=$("#lb"),img=$("#lbi");
+  function close(){lb.classList.remove("open")}
+  $$("[data-zoom]").forEach(function(b){b.addEventListener("click",function(){img.src=b.getAttribute("data-zoom");img.alt=$("img",b).alt;lb.classList.add("open");$("#lbx").focus()})});
+  lb.addEventListener("click",function(e){if(e.target!==img)close()});
+  addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+},"lightbox");
+
+safe(function(){
+  var f=$("#form");
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var ok=true;
+    ["f-name","f-phone","f-reason"].forEach(function(id){var i=$("#"+id),w=i.closest(".field"),bad=!i.value.trim();w.classList.toggle("bad",bad);if(bad)ok=false});
+    if(!ok)return;
+    var sel=$("#f-reason"),reason=sel.options[sel.selectedIndex].text;
+    var body=[t("mail_hi"),"",t("mail_name")+": "+$("#f-name").value.trim(),t("mail_phone")+": "+$("#f-phone").value.trim(),t("mail_reason")+": "+reason];
+    if($("#f-day").value)body.push(t("mail_day")+": "+$("#f-day").value);
+    $("#formBody").style.display="none";$("#ok").classList.add("show");
+    location.href="mailto:info@mydentistinmiami.com?subject="+encodeURIComponent(t("mail_subj"))+"&body="+encodeURIComponent(body.join("\n"));
+  });
+  $$("input,select",f).forEach(function(i){i.addEventListener("input",function(){i.closest(".field").classList.remove("bad")})});
+  var d=$("#f-day");if(d)d.min=new Date().toISOString().slice(0,10);
+},"form");
+})();
+</script>
+</body>
+</html>
