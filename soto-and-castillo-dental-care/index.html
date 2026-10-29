@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soto &amp; Castillo Dental Care | Hollywood, FL</title>
+<meta name="description" content="Odontología general y familiar en Hollywood, FL. Dras. Paola Soto y Sandra Castillo. Hablamos español, inglés y portugués." data-t-content="meta">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#3551A4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233551A4'/%3E%3Ctext x='32' y='43' font-size='32' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='white'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#3551A4; --navy:#0F1B4D; --peri:#7B8FE0; --mist:#E9EDFB; --paper:#F6F8FE; --white:#fff;
+  --ink:#16203F; --dim:#4A5578; --line:#D9DFF3;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --gutter:clamp(16px,4vw,48px);
+  --r:24px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px;-webkit-text-size-adjust:100%}
+body{font-family:"Nunito Sans",system-ui,sans-serif;font-size:17px;color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,.btn,.pill{font-family:Rubik,system-ui,sans-serif}
+.wrap{width:min(1180px,100% - var(--gutter)*2);margin-inline:auto}
+section{padding:clamp(60px,8vw,108px) 0;position:relative}
+h2{font-weight:700;font-size:clamp(30px,4.2vw,48px);line-height:1.1;letter-spacing:-.015em;color:var(--navy);text-wrap:balance}
+.sub{margin-top:12px;color:var(--dim);max-width:58ch;font-size:clamp(16px,1.6vw,19px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 28px;border-radius:99px;font-weight:600;font-size:17px;text-decoration:none;border:2px solid transparent;cursor:pointer;white-space:nowrap;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background-color .25s,color .25s,border-color .25s}
+.btn:active{transform:scale(.97)}
+.btn-main{background:#fff;color:var(--navy)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-line{border-color:rgba(255,255,255,.55);color:#fff;background:transparent}
+.btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+@media (hover:hover){
+  .btn-main:hover{transform:translateY(-2px);box-shadow:0 16px 34px -14px rgba(0,0,0,.55);background:#E4EAFF}
+  .btn-blue:hover{transform:translateY(-2px);box-shadow:0 16px 34px -14px rgba(53,81,164,.8);background:#2A4290}
+  .btn-line:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+}
+:focus-visible{outline:3px solid var(--peri);outline-offset:3px}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:var(--blue);color:#fff;box-shadow:0 8px 30px -20px rgba(15,27,77,.7)}
+.top .wrap{display:flex;align-items:center;gap:20px;height:76px}
+.brand img{height:62px;width:auto;object-fit:contain}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{font-weight:600;font-size:15px;text-decoration:none;color:#dbe3ff;padding:10px 14px;border-radius:99px;min-height:44px;display:inline-flex;align-items:center;transition:background-color .2s,color .2s}
+@media (hover:hover){.nav a:hover{background:rgba(255,255,255,.14);color:#fff}}
+.lang{display:inline-flex;background:rgba(255,255,255,.14);border-radius:99px;padding:3px}
+.lang button{all:unset;cursor:pointer;min-width:44px;min-height:38px;text-align:center;font:600 14px Rubik,sans-serif;color:#dbe3ff;border-radius:99px;transition:background-color .2s,color .2s}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--navy)}
+.lang button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.call{display:inline-flex}
+.call.btn{min-height:46px;padding:10px 20px;font-size:15px}
+
+/* hero */
+.hero{padding:0;background:linear-gradient(150deg,var(--blue) 0%,var(--navy) 80%);color:#fff;overflow:hidden;min-height:min(86dvh,760px);display:flex;align-items:center}
+.hero .blob{position:absolute;border-radius:50%;pointer-events:none}
+.hero .b1{width:560px;height:560px;right:-160px;top:-140px;border:90px solid rgba(123,143,224,.2);animation:drift 14s ease-in-out infinite alternate}
+.hero .b2{width:240px;height:240px;left:-80px;bottom:-60px;background:rgba(123,143,224,.18);animation:drift 11s ease-in-out infinite alternate-reverse}
+@keyframes drift{to{transform:translate(18px,26px)}}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,72px);align-items:center;padding:clamp(40px,7vw,88px) 0;position:relative;z-index:1}
+.open{display:inline-flex;align-items:center;gap:10px;font:600 15px Rubik,sans-serif;background:rgba(255,255,255,.12);padding:9px 16px;border-radius:99px;margin-bottom:22px}
+.open i{width:10px;height:10px;border-radius:50%;background:#8BE0A6;flex:none}
+.open.closed i{background:#F2B880}
+.hero h1{font-weight:700;font-size:clamp(38px,5.6vw,68px);line-height:1.04;letter-spacing:-.02em;max-width:15ch;text-wrap:balance}
+.hero h1 em{font-style:normal;color:#B9C6FF}
+.hero p{margin-top:20px;font-size:clamp(17px,1.8vw,21px);color:#DCE3FF;max-width:46ch}
+.ctas{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.duo figure{background:#fff;border-radius:var(--r);overflow:hidden;color:var(--navy);box-shadow:0 30px 60px -30px rgba(0,0,0,.6);transition:transform .4s var(--ease)}
+.duo figure:nth-child(2){transform:translateY(28px)}
+@media (hover:hover){.duo figure:hover{transform:translateY(-6px) rotate(-.6deg)}.duo figure:nth-child(2):hover{transform:translateY(22px) rotate(.6deg)}}
+.duo img{width:100%;height:auto;aspect-ratio:1/1.1;object-fit:cover;object-position:center top}
+.duo figcaption{padding:12px 14px 14px;font:600 15px/1.3 Rubik,sans-serif}
+
+/* rating */
+.rating{background:var(--mist);padding:30px 0}
+.rating .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 44px;text-align:center}
+.rating .n{font:700 clamp(34px,4.5vw,48px)/1 Rubik,sans-serif;color:var(--blue)}
+.rating .stars{color:#E0A81C;font-size:24px;letter-spacing:3px}
+.rating p{color:var(--dim);font-size:17px}
+.rating .item{display:flex;align-items:center;gap:14px}
+
+/* servicios */
+#servicios{background:var(--white)}
+.cards{margin-top:clamp(28px,4vw,48px);display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s,background-color .3s}
+@media (hover:hover){.card:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 26px 50px -28px rgba(15,27,77,.5);border-color:var(--peri);background:#fff}}
+.card .ic{width:54px;height:54px;border-radius:18px;background:var(--blue);display:grid;place-items:center;margin-bottom:18px;transition:transform .3s var(--ease)}
+@media (hover:hover){.card:hover .ic{transform:rotate(-6deg) scale(1.06)}}
+.card svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:20px;font-weight:600;color:var(--navy);margin-bottom:6px;line-height:1.25}
+.card p{font-size:16px;color:var(--dim);line-height:1.5}
+
+/* doctoras */
+#doctoras{background:var(--mist)}
+.docs{margin-top:clamp(28px,4vw,48px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3vw,32px)}
+.doc{background:#fff;border-radius:32px;display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:center;padding:22px;border:1px solid var(--line);transition:transform .3s var(--ease),box-shadow .3s}
+@media (hover:hover){.doc:hover{transform:translateY(-5px);box-shadow:0 26px 50px -30px rgba(15,27,77,.5)}}
+.doc img{border-radius:50%;width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:center top;background:var(--peri)}
+.doc h3{font-size:24px;color:var(--navy);line-height:1.15}
+.doc .role{color:var(--blue);font-weight:700;font-size:15px;margin:4px 0 8px}
+.doc p{font-size:16px;color:var(--dim);line-height:1.5}
+
+/* idiomas */
+.langs{background:var(--navy);color:#fff;text-align:center;overflow:hidden}
+.langs h2{color:#fff;max-width:22ch;margin-inline:auto}
+.langs .sub{color:#C7D2FF;margin-inline:auto}
+.pills{margin-top:30px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.pill{padding:14px 30px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);font-weight:600;font-size:20px;transition:transform .25s var(--ease),background-color .25s}
+@media (hover:hover){.pill:hover{transform:translateY(-3px);background:rgba(255,255,255,.2)}}
+
+/* reseña */
+#opiniones{background:var(--paper)}
+.rev{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,64px);align-items:center}
+.big{font:700 clamp(80px,12vw,150px)/.9 Rubik,sans-serif;color:var(--blue)}
+.big small{display:block;font:600 18px Nunito Sans,sans-serif;color:var(--dim);margin-top:10px}
+.q{background:var(--navy);color:#fff;border-radius:32px;padding:clamp(26px,4vw,46px)}
+.q .stars{color:#F7C948;font-size:22px;letter-spacing:3px}
+.q blockquote{margin:14px 0;font:600 clamp(19px,2.2vw,25px)/1.35 Rubik,sans-serif}
+.q cite{font-style:normal;color:#C7D2FF;font-size:16px}
+
+/* primera visita + faq */
+#visita{background:var(--white)}
+.vis{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:start}
+.steps{margin-top:26px;display:grid;gap:14px;counter-reset:s}
+.steps li{list-style:none;counter-increment:s;display:flex;gap:16px;align-items:flex-start;background:var(--paper);border-radius:20px;padding:18px 20px;border:1px solid var(--line)}
+.steps li::before{content:counter(s);flex:none;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font:600 18px Rubik,sans-serif}
+.steps b{display:block;font:600 18px Rubik,sans-serif;color:var(--navy)}
+.steps span{font-size:16px;color:var(--dim)}
+details{background:var(--paper);border:1px solid var(--line);border-radius:20px;margin-bottom:12px;transition:background-color .2s,border-color .2s}
+details[open]{background:#fff;border-color:var(--peri)}
+summary{cursor:pointer;list-style:none;padding:20px 22px;font:600 18px Rubik,sans-serif;color:var(--navy);display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:56px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:28px;line-height:1;color:var(--blue);transition:transform .25s var(--ease);flex:none}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 22px 20px;color:var(--dim);font-size:16.5px}
+
+/* galeria */
+#consultorio{background:var(--mist)}
+.gal{margin-top:clamp(28px,4vw,44px);display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.gal figure{margin:0;border-radius:var(--r);overflow:hidden;position:relative;background:var(--line)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+@media (hover:hover){.gal figure:hover img{transform:scale(1.04)}}
+.gal .g1{grid-column:span 4;aspect-ratio:16/9}
+.gal .g2{grid-column:span 2}
+.gal .g3{grid-column:span 6;aspect-ratio:21/8}
+
+/* contacto */
+#contacto{background:var(--white)}
+.loc{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,4vw,56px);align-items:stretch}
+.info{display:grid;gap:14px;align-content:start}
+.row{display:flex;gap:16px;align-items:flex-start;padding:18px 20px;background:var(--paper);border-radius:20px;border:1px solid var(--line)}
+.row svg{width:24px;height:24px;stroke:var(--blue);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none;margin-top:3px}
+.row b{display:block;font:600 17px Rubik,sans-serif;color:var(--navy)}
+.row span,.row a{font-size:16.5px;color:var(--dim)}
+.hrs{display:grid;grid-template-columns:auto auto;gap:2px 22px;margin-top:4px}
+.map{border-radius:28px;overflow:hidden;border:1px solid var(--line);min-height:380px;background:var(--mist)}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+form{margin-top:26px;background:var(--navy);color:#fff;border-radius:32px;padding:clamp(24px,4vw,40px);display:grid;gap:16px}
+form h3{font-size:26px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:6px;font:600 15px Rubik,sans-serif;color:#DCE3FF}
+input,select,textarea{font:inherit;font-size:16px;font-family:"Nunito Sans",sans-serif;padding:14px 16px;border-radius:14px;border:2px solid transparent;background:#fff;color:var(--ink);min-height:50px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--peri)}
+.note{font-size:14.5px;color:#C7D2FF}
+.sent{display:none;background:rgba(139,224,166,.16);border:1px solid #8BE0A6;border-radius:14px;padding:14px 16px;color:#fff}
+
+/* cta */
+.cta{background:linear-gradient(150deg,var(--blue),var(--navy));color:#fff;text-align:center}
+.cta h2{color:#fff;max-width:20ch;margin-inline:auto}
+.cta .sub{color:#DCE3FF;margin-inline:auto}
+.cta .ctas{justify-content:center}
+
+/* footer */
+footer{background:#0A1238;color:#B7C2EE;padding:56px 0 100px}
+.foot{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:34px}
+footer img{height:64px;width:auto;margin-bottom:14px}
+footer h4{font:600 16px Rubik,sans-serif;color:#fff;margin-bottom:10px}
+footer p,footer a{font-size:15.5px;line-height:1.7;text-decoration:none;display:block}
+@media (hover:hover){footer a:hover{color:#fff}}
+.legal{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:14px}
+
+/* barra movil */
+.bar{display:none}
+@media (max-width:760px){
+  .bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(15,27,77,.96);backdrop-filter:blur(8px)}
+  .bar .btn{min-height:48px;padding:10px 12px;font-size:16px}
+}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .65s var(--ease),transform .65s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1020px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .hero .wrap,.rev,.vis,.loc{grid-template-columns:1fr}
+  .duo{max-width:480px}
+  .docs{grid-template-columns:1fr}
+  .nav{display:none}
+  .lang{margin-left:auto}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  body{font-size:16.5px}
+  .top .wrap{height:70px;gap:10px}
+  .brand img{height:56px}
+  .call.btn span{display:none}
+  .call.btn{padding:10px 14px;min-width:46px}
+  .cards{grid-template-columns:1fr}
+  .doc{grid-template-columns:110px 1fr;gap:16px;padding:16px}
+  .fgrid{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr}
+  .gal .g1,.gal .g2,.gal .g3{grid-column:auto;aspect-ratio:16/10}
+  .foot{grid-template-columns:1fr}
+  .btn{white-space:normal;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" data-t-aria="aria_home" aria-label="Inicio"><img src="images/logo.webp" alt="S&amp;C Dental Care" width="197" height="62"></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#servicios" data-t="nav_services">Servicios</a>
+      <a href="#doctoras" data-t="nav_doctors">Doctoras</a>
+      <a href="#visita" data-t="nav_visit">Su visita</a>
+      <a href="#contacto" data-t="nav_contact">Contacto</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-main call" href="tel:+19549873344" data-t-aria="aria_call" aria-label="Llamar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+      <span>(954) 987-3344</span>
+    </a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span></div>
+    <div class="wrap">
+      <div>
+        <div class="open rv" id="openNow" hidden><i></i><span id="openTxt"></span></div>
+        <h1 class="rv" style="--d:.06s"><span data-t="h1a">Cuidamos su sonrisa y la de</span> <em data-t="h1b">toda su familia.</em></h1>
+        <p class="rv" style="--d:.12s" data-t="hero_p">Odontología general y familiar en Hollywood, con las doctoras Paola Soto y Sandra Castillo.</p>
+        <div class="ctas rv" style="--d:.18s">
+          <a class="btn btn-main" href="#contacto" data-t="cta_book">Pedir cita</a>
+          <a class="btn btn-line" href="tel:+19549873344"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-t="cta_call">Llamar</span> (954) 987-3344</a>
+        </div>
+      </div>
+      <div class="duo rv" style="--d:.14s">
+        <figure><img src="images/dra-soto.webp" alt="Dra. Paola Soto" width="335" height="374"><figcaption>Dra. Paola Soto<br><span data-t="dmd">DMD</span></figcaption></figure>
+        <figure><img src="images/dra-castillo.webp" alt="Dra. Sandra Castillo" width="336" height="374"><figcaption>Dra. Sandra Castillo<br><span data-t="dds">DDS</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="rating">
+    <div class="wrap">
+      <div class="item rv"><span class="n" data-count="4.7" data-dec="1">4,7</span><div><div class="stars" aria-hidden="true">★★★★★</div><p data-t="rating_p">en Google</p></div></div>
+      <div class="item rv" style="--d:.08s"><span class="n" data-count="282">282</span><p data-t="reviews_p">reseñas de pacientes</p></div>
+    </div>
+  </div>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="rv"><h2 data-t="srv_h">Servicios para toda la familia</h2><p class="sub" data-t="srv_sub">Lo que hacemos en nuestro consultorio de Hollywood. Llámenos y le contamos qué es lo mejor para usted.</p></div>
+      <div class="cards">
+        <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c-3 0-5 1.500-5 4 0 2 1 3 1 5s-1 3-1 5c0 1.500.8 2.500 2 2.500s1.500-1 2-3c.3-1.200.5-2 1-2s.7.800 1 2c.5 2 .8 3 2 3s2-1 2-2.500c0-2-1-3-1-5s1-3 1-5c0-2.500-2-4-5-4z" transform="translate(0 -1) scale(1 .9)"/></svg></div><h3 data-t="s1">Implantes dentales</h3><p data-t="s1d">Una opción para reemplazar dientes que faltan.</p></article>
+        <article class="card rv" style="--d:.05s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9c2-3 6-4 8-4s6 1 8 4c-1 5-3 9-8 9s-7-4-8-9z"/><path d="M8 11h8"/></svg></div><h3 data-t="s2">Dentaduras sobre implantes</h3><p data-t="s2d">Prótesis que se apoyan en implantes para mayor firmeza.</p></article>
+        <article class="card rv" style="--d:.1s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12c0-4 4-7 9-7s9 3 9 7-4 7-9 7-9-3-9-7z"/><path d="M7 12h10"/></svg></div><h3 data-t="s3">Dentaduras</h3><p data-t="s3d">Prótesis completas o parciales para recuperar su sonrisa.</p></article>
+        <article class="card rv" style="--d:.15s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.500 5.500L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.500-.5z"/></svg></div><h3 data-t="s4">Carillas de porcelana</h3><p data-t="s4d">Finas láminas para una sonrisa más pareja.</p></article>
+        <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M8 3h8l-1 7 2 11h-3l-2-7-2 7H7l2-11z"/></svg></div><h3 data-t="s5">Extracciones</h3><p data-t="s5d">Cuando un diente no se puede conservar, lo atendemos con cuidado.</p></article>
+        <article class="card rv" style="--d:.05s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c4 0 7 2 7 6 0 3-1 4-1 7a2 2 0 0 1-4 0c0-2-1-3-2-3s-2 1-2 3a2 2 0 0 1-4 0c0-3-1-4-1-7 0-4 3-6 7-6z"/><path d="M9 9h6"/></svg></div><h3 data-t="s6">Empastes de resina</h3><p data-t="s6d">Restauraciones del color de su diente.</p></article>
+        <article class="card rv" style="--d:.1s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 10c0-2 2-4 4-4h10c2 0 4 2 4 4v1c0 2-2 4-4 4H7c-2 0-4-2-4-4z"/><path d="M8 10v1M12 10v1M16 10v1"/></svg></div><h3 data-t="s7">Invisalign</h3><p data-t="s7d">Alineadores transparentes para enderezar sus dientes.</p></article>
+        <article class="card rv" style="--d:.15s"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div><h3 data-t="s8">Blanqueamiento dental</h3><p data-t="s8d">Una sonrisa más luminosa, con la guía de su dentista.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="doctoras">
+    <div class="wrap">
+      <div class="rv"><h2 data-t="doc_h">Conozca a sus doctoras</h2><p class="sub" data-t="doc_sub">Dos doctoras, un mismo consultorio.</p></div>
+      <div class="docs">
+        <article class="doc rv"><img src="images/dra-soto.webp" alt="Dra. Paola Soto" width="335" height="374" loading="lazy"><div><h3>Dra. Paola F. Soto</h3><div class="role" data-t="role_soto">DMD</div><p data-t="bio_soto">Habla inglés, español y portugués.</p></div></article>
+        <article class="doc rv" style="--d:.08s"><img src="images/dra-castillo.webp" alt="Dra. Sandra Castillo" width="336" height="374" loading="lazy"><div><h3>Dra. Sandra M. Castillo</h3><div class="role" data-t="role_cast">DDS</div><p data-t="bio_cast">Doctora en Cirugía Dental por la Universidad de Illinois en Chicago. Una de las reseñas de Google dice que la atiende desde que era niño.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="langs">
+    <div class="wrap rv">
+      <h2 data-t="lang_h">Hablamos su idioma</h2>
+      <p class="sub" data-t="lang_sub">Nuestro equipo atiende en tres idiomas, para que se sienta cómodo en cada cita.</p>
+      <div class="pills"><span class="pill" data-t="l_es">Español</span><span class="pill" data-t="l_en">Inglés</span><span class="pill" data-t="l_pt">Portugués</span></div>
+    </div>
+  </section>
+
+  <section id="opiniones">
+    <div class="wrap rev">
+      <div class="big rv"><span data-count="4.7" data-dec="1">4,7</span><small data-t="rev_small">en Google, con 282 reseñas</small></div>
+      <figure class="q rv" style="--d:.08s">
+        <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <blockquote>“The best dental office available! Dr. Castillo has been with me since I was a kid and I’ve never had any issues. Very sweet staff and always accommodating with times and schedules.”</blockquote>
+        <cite data-t="rev_cite">josh, reseña en Google</cite>
+      </figure>
+    </div>
+  </section>
+
+  <section id="visita">
+    <div class="wrap vis">
+      <div class="rv">
+        <h2 data-t="vis_h">Su primera visita</h2>
+        <p class="sub" data-t="vis_sub">Así es, en términos generales, empezar con nosotras.</p>
+        <ol class="steps">
+          <li><div><b data-t="v1">Llámenos o escríbanos</b><span data-t="v1d">Elija un día y hora que le convengan.</span></div></li>
+          <li><div><b data-t="v2">Conózcanos</b><span data-t="v2d">Las doctoras lo escuchan y revisan su caso.</span></div></li>
+          <li><div><b data-t="v3">Su plan a medida</b><span data-t="v3d">Le explicamos las opciones para que decida con tranquilidad.</span></div></li>
+        </ol>
+      </div>
+      <div class="rv" style="--d:.08s">
+        <h2 data-t="faq_h">Preguntas frecuentes</h2>
+        <div style="margin-top:24px">
+          <details><summary data-t="q1">¿Aceptan mi seguro?</summary><p data-t="a1">Llámenos al (954) 987-3344 y le confirmamos.</p></details>
+          <details><summary data-t="q2">¿Cuánto cuesta una consulta o tratamiento?</summary><p data-t="a2">Llámenos y le confirmamos.</p></details>
+          <details><summary data-t="q3">¿Hay opciones de financiamiento?</summary><p data-t="a3">Llámenos y le confirmamos.</p></details>
+          <details><summary data-t="q4">¿Atienden a niños y adultos?</summary><p data-t="a4">Somos un consultorio de odontología general y familiar. Llámenos y le contamos cómo podemos ayudarle.</p></details>
+          <details><summary data-t="q5">¿En qué idiomas me atienden?</summary><p data-t="a5">En español, inglés y portugués.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="consultorio">
+    <div class="wrap">
+      <div class="rv"><h2 data-t="gal_h">Nuestro consultorio</h2><p class="sub" data-t="gal_sub">Un espacio tranquilo y luminoso, en Hollywood.</p></div>
+      <div class="gal">
+        <figure class="g1 rv"><img src="images/sala-1.webp" alt="Sala de espera con sofá azul y el letrero de S&amp;C Dental Care" data-t-alt="alt_sala1" width="1400" height="662" loading="lazy"></figure>
+        <figure class="g2 rv" style="--d:.08s"><img src="images/sala-2.webp" alt="Otra vista de la sala de espera" data-t-alt="alt_sala2" width="1400" height="662" loading="lazy"></figure>
+        <figure class="g3 rv"><img src="images/recepcion.webp" alt="Recepción y pasillo del consultorio" data-t-alt="alt_recep" width="1400" height="664" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap">
+      <div class="rv"><h2 data-t="con_h">Visítenos en Hollywood</h2><p class="sub" data-t="con_sub">Estamos sobre Hollywood Blvd. Pida su cita por teléfono o con el formulario.</p></div>
+      <div class="loc" style="margin-top:clamp(28px,4vw,44px)">
+        <div class="info rv">
+          <div class="row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.500"/></svg><div><b data-t="addr">Dirección</b><span>3911 Hollywood Blvd #102, Hollywood, FL 33021</span><br><a href="https://www.google.com/maps/place/Soto+%26+Castillo+Dental+Care/@26.0119462,-80.183214,17z" target="_blank" rel="noopener" data-t="directions" style="color:var(--blue);font-weight:700">Cómo llegar</a></div></div>
+          <div class="row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div><b data-t="phone">Teléfono</b><a href="tel:+19549873344">(954) 987-3344</a></div></div>
+          <div class="row"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b data-t="hours">Horario</b><div class="hrs"><span data-t="mf">Lunes a viernes</span><span>9:00 am - 5:00 pm</span><span data-t="weekend">Sábado y domingo</span><span data-t="closed">Cerrado</span></div></div></div>
+        </div>
+        <div class="map rv" style="--d:.08s"><iframe title="Mapa" data-t-title="map_title" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=3911+Hollywood+Blvd+%23102,+Hollywood,+FL+33021&output=embed"></iframe></div>
+      </div>
+
+      <form id="cita" class="rv" novalidate>
+        <h3 data-t="f_h">Pida su cita</h3>
+        <div class="fgrid">
+          <label><span data-t="f_name">Nombre</span><input id="fn" name="nombre" autocomplete="name" required></label>
+          <label><span data-t="f_phone">Teléfono</span><input id="fp" name="tel" type="tel" autocomplete="tel" required></label>
+          <label><span data-t="f_reason">Motivo de la visita</span>
+            <select id="fr"><option value="" data-t="f_opt0">Elija una opción</option><option data-t="s1">Implantes dentales</option><option data-t="s7">Invisalign</option><option data-t="s4">Carillas de porcelana</option><option data-t="s8">Blanqueamiento dental</option><option data-t="f_gen">Revisión o limpieza</option><option data-t="f_other">Otro</option></select></label>
+          <label><span data-t="f_day">Día preferido</span><input id="fd" name="dia"></label>
+        </div>
+        <button class="btn btn-main" type="submit" data-t="f_send">Enviar solicitud</button>
+        <p class="note" data-t="f_note">Se abrirá su correo con el mensaje listo para enviar. También puede llamarnos al (954) 987-3344.</p>
+        <div class="sent" id="sent" role="status" data-t="f_err">Complete su nombre y teléfono.</div>
+      </form>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap rv">
+      <h2 data-t="cta_h">Una sonrisa sana empieza con una llamada.</h2>
+      <p class="sub" data-t="cta_sub">Con gusto lo atendemos.</p>
+      <div class="ctas"><a class="btn btn-main" href="tel:+19549873344">(954) 987-3344</a><a class="btn btn-line" href="#contacto" data-t="cta_book2">Pedir cita</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="images/logo.webp" alt="S&amp;C Dental Care" width="197" height="62" loading="lazy"><p data-t="foot_p">Odontología general y familiar en Hollywood, FL.</p></div>
+      <div><h4 data-t="foot_contact">Contacto</h4><p>3911 Hollywood Blvd #102<br>Hollywood, FL 33021</p><a href="tel:+19549873344">(954) 987-3344</a></div>
+      <div><h4 data-t="hours">Horario</h4><p><span data-t="mf">Lunes a viernes</span>: 9:00 am - 5:00 pm</p><p><span data-t="weekend">Sábado y domingo</span>: <span data-t="closed">Cerrado</span></p></div>
+    </div>
+    <div class="legal">© Soto &amp; Castillo Dental Care</div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-main" href="tel:+19549873344" data-t="cta_call">Llamar</a>
+  <a class="btn btn-blue" href="#contacto" data-t="cta_book">Pedir cita</a>
+</div>
+
+<script>
+(function(){
+  var T={
+    es:{
+      meta:"Odontología general y familiar en Hollywood, FL. Dras. Paola Soto y Sandra Castillo. Hablamos español, inglés y portugués.",
+      aria_home:"Inicio",aria_call:"Llamar al (954) 987-3344",
+      nav_services:"Servicios",nav_doctors:"Doctoras",nav_visit:"Su visita",nav_contact:"Contacto",
+      h1a:"Cuidamos su sonrisa y la de",h1b:"toda su familia.",
+      hero_p:"Odontología general y familiar en Hollywood, con las doctoras Paola Soto y Sandra Castillo.",
+      cta_book:"Pedir cita",cta_book2:"Pedir cita",cta_call:"Llamar",dmd:"DMD",dds:"DDS",
+      rating_p:"en Google",reviews_p:"reseñas de pacientes",
+      srv_h:"Servicios para toda la familia",srv_sub:"Lo que hacemos en nuestro consultorio de Hollywood. Llámenos y le contamos qué es lo mejor para usted.",
+      s1:"Implantes dentales",s1d:"Una opción para reemplazar dientes que faltan.",
+      s2:"Dentaduras sobre implantes",s2d:"Prótesis que se apoyan en implantes para mayor firmeza.",
+      s3:"Dentaduras",s3d:"Prótesis completas o parciales para recuperar su sonrisa.",
+      s4:"Carillas de porcelana",s4d:"Finas láminas para una sonrisa más pareja.",
+      s5:"Extracciones",s5d:"Cuando un diente no se puede conservar, lo atendemos con cuidado.",
+      s6:"Empastes de resina",s6d:"Restauraciones del color de su diente.",
+      s7:"Invisalign",s7d:"Alineadores transparentes para enderezar sus dientes.",
+      s8:"Blanqueamiento dental",s8d:"Una sonrisa más luminosa, con la guía de su dentista.",
+      doc_h:"Conozca a sus doctoras",doc_sub:"Dos doctoras, un mismo consultorio.",
+      role_soto:"DMD",role_cast:"DDS",
+      bio_soto:"Habla inglés, español y portugués.",
+      bio_cast:"Doctora en Cirugía Dental por la Universidad de Illinois en Chicago. Una de las reseñas de Google dice que la atiende desde que era niño.",
+      lang_h:"Hablamos su idioma",lang_sub:"Nuestro equipo atiende en tres idiomas, para que se sienta cómodo en cada cita.",
+      l_es:"Español",l_en:"Inglés",l_pt:"Portugués",
+      rev_small:"en Google, con 282 reseñas",rev_cite:"josh, reseña en Google",
+      vis_h:"Su primera visita",vis_sub:"Así es, en términos generales, empezar con nosotras.",
+      v1:"Llámenos o escríbanos",v1d:"Elija un día y hora que le convengan.",
+      v2:"Conózcanos",v2d:"Las doctoras lo escuchan y revisan su caso.",
+      v3:"Su plan a medida",v3d:"Le explicamos las opciones para que decida con tranquilidad.",
+      faq_h:"Preguntas frecuentes",
+      q1:"¿Aceptan mi seguro?",a1:"Llámenos al (954) 987-3344 y le confirmamos.",
+      q2:"¿Cuánto cuesta una consulta o tratamiento?",a2:"Llámenos y le confirmamos.",
+      q3:"¿Hay opciones de financiamiento?",a3:"Llámenos y le confirmamos.",
+      q4:"¿Atienden a niños y adultos?",a4:"Somos un consultorio de odontología general y familiar. Llámenos y le contamos cómo podemos ayudarle.",
+      q5:"¿En qué idiomas me atienden?",a5:"En español, inglés y portugués.",
+      gal_h:"Nuestro consultorio",gal_sub:"Un espacio tranquilo y luminoso, en Hollywood.",
+      alt_sala1:"Sala de espera con sofá azul y el letrero de S&C Dental Care",alt_sala2:"Otra vista de la sala de espera",alt_recep:"Recepción y pasillo del consultorio",
+      con_h:"Visítenos en Hollywood",con_sub:"Estamos sobre Hollywood Blvd. Pida su cita por teléfono o con el formulario.",
+      addr:"Dirección",directions:"Cómo llegar",phone:"Teléfono",hours:"Horario",mf:"Lunes a viernes",weekend:"Sábado y domingo",closed:"Cerrado",map_title:"Mapa del consultorio",
+      f_h:"Pida su cita",f_name:"Nombre",f_phone:"Teléfono",f_reason:"Motivo de la visita",f_opt0:"Elija una opción",f_gen:"Revisión o limpieza",f_other:"Otro",f_day:"Día preferido",f_send:"Enviar solicitud",
+      f_note:"Se abrirá su correo con el mensaje listo para enviar. También puede llamarnos al (954) 987-3344.",f_err:"Complete su nombre y teléfono.",
+      cta_h:"Una sonrisa sana empieza con una llamada.",cta_sub:"Con gusto lo atendemos.",
+      foot_p:"Odontología general y familiar en Hollywood, FL.",foot_contact:"Contacto",
+      open_now:"Abierto ahora",closed_until:"Cerrado · abre ",days:["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],today:"hoy",tomorrow:"mañana",at:" a las ",
+      mail_subj:"Solicitud de cita",mail_name:"Nombre",mail_phone:"Teléfono",mail_reason:"Motivo",mail_day:"Día preferido",mail_hi:"Hola, quisiera pedir una cita."
+    },
+    en:{
+      meta:"General and family dentistry in Hollywood, FL. Drs. Paola Soto and Sandra Castillo. We speak English, Spanish and Portuguese.",
+      aria_home:"Home",aria_call:"Call (954) 987-3344",
+      nav_services:"Services",nav_doctors:"Doctors",nav_visit:"Your visit",nav_contact:"Contact",
+      h1a:"We take care of your smile and",h1b:"your whole family's.",
+      hero_p:"General and family dentistry in Hollywood, with Dr. Paola Soto and Dr. Sandra Castillo.",
+      cta_book:"Book an appointment",cta_book2:"Book an appointment",cta_call:"Call",dmd:"DMD",dds:"DDS",
+      rating_p:"on Google",reviews_p:"patient reviews",
+      srv_h:"Services for the whole family",srv_sub:"What we do at our Hollywood office. Call us and we will help you find what is best for you.",
+      s1:"Dental implants",s1d:"An option to replace missing teeth.",
+      s2:"Implant dentures",s2d:"Dentures anchored on implants for a firmer fit.",
+      s3:"Dentures",s3d:"Full or partial dentures to bring back your smile.",
+      s4:"Porcelain veneers",s4d:"Thin shells for a more even smile.",
+      s5:"Extractions",s5d:"When a tooth cannot be saved, we treat you with care.",
+      s6:"Composite fillings",s6d:"Tooth-colored restorations.",
+      s7:"Invisalign",s7d:"Clear aligners to straighten your teeth.",
+      s8:"Teeth whitening",s8d:"A brighter smile, guided by your dentist.",
+      doc_h:"Meet your doctors",doc_sub:"Two doctors, one office.",
+      role_soto:"DMD",role_cast:"DDS",
+      bio_soto:"Speaks English, Spanish and Portuguese.",
+      bio_cast:"Doctor of Dental Surgery from the University of Illinois at Chicago. One Google review says she has been his dentist since he was a kid.",
+      lang_h:"We speak your language",lang_sub:"Our team sees patients in three languages, so you feel comfortable at every visit.",
+      l_es:"Spanish",l_en:"English",l_pt:"Portuguese",
+      rev_small:"on Google, with 282 reviews",rev_cite:"josh, Google review",
+      vis_h:"Your first visit",vis_sub:"Here is, in general terms, how it starts with us.",
+      v1:"Call or write to us",v1d:"Pick a day and time that work for you.",
+      v2:"Get to know us",v2d:"The doctors listen to you and review your case.",
+      v3:"Your plan, your way",v3d:"We explain your options so you can decide with peace of mind.",
+      faq_h:"Frequently asked questions",
+      q1:"Do you accept my insurance?",a1:"Call us at (954) 987-3344 and we will confirm.",
+      q2:"How much does a visit or treatment cost?",a2:"Call us and we will confirm.",
+      q3:"Are there financing options?",a3:"Call us and we will confirm.",
+      q4:"Do you see children and adults?",a4:"We are a general and family dental office. Call us and we will tell you how we can help.",
+      q5:"What languages do you speak?",a5:"Spanish, English and Portuguese.",
+      gal_h:"Our office",gal_sub:"A calm, bright space in Hollywood.",
+      alt_sala1:"Waiting room with a blue sofa and the S&C Dental Care sign",alt_sala2:"Another view of the waiting room",alt_recep:"Reception and hallway of the office",
+      con_h:"Visit us in Hollywood",con_sub:"We are on Hollywood Blvd. Book by phone or with the form.",
+      addr:"Address",directions:"Get directions",phone:"Phone",hours:"Hours",mf:"Monday to Friday",weekend:"Saturday and Sunday",closed:"Closed",map_title:"Map of the office",
+      f_h:"Book an appointment",f_name:"Name",f_phone:"Phone",f_reason:"Reason for visit",f_opt0:"Choose an option",f_gen:"Checkup or cleaning",f_other:"Other",f_day:"Preferred day",f_send:"Send request",
+      f_note:"Your email app will open with the message ready to send. You can also call us at (954) 987-3344.",f_err:"Please enter your name and phone.",
+      cta_h:"A healthy smile starts with a phone call.",cta_sub:"We would be glad to see you.",
+      foot_p:"General and family dentistry in Hollywood, FL.",foot_contact:"Contact",
+      open_now:"Open now",closed_until:"Closed · opens ",days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],today:"today",tomorrow:"tomorrow",at:" at ",
+      mail_subj:"Appointment request",mail_name:"Name",mail_phone:"Phone",mail_reason:"Reason",mail_day:"Preferred day",mail_hi:"Hello, I would like to book an appointment."
+    }
+  };
+  var lang='es';
+  try{var s=localStorage.getItem('sc-lang');if(s==='en'||s==='es')lang=s}catch(e){}
+  function t(k){return (T[lang]&&T[lang][k])||T.es[k]||k}
+  function apply(){
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[data-t]').forEach(function(el){el.textContent=t(el.dataset.t)});
+    document.querySelectorAll('[data-t-alt]').forEach(function(el){el.alt=t(el.dataset.tAlt)});
+    document.querySelectorAll('[data-t-aria]').forEach(function(el){el.setAttribute('aria-label',t(el.dataset.tAria))});
+    document.querySelectorAll('[data-t-title]').forEach(function(el){el.title=t(el.dataset.tTitle)});
+    var m=document.querySelector('meta[name=description]');if(m)m.content=t('meta');
+    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.lang===lang))});
+    document.querySelectorAll('[data-count]').forEach(function(n){n.textContent=lang==='es'?n.dataset.count.replace('.',','):n.dataset.count});
+    openNow();
+  }
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){lang=b.dataset.lang;try{localStorage.setItem('sc-lang',lang)}catch(e){}apply()})});
+
+  /* abierto ahora, hora de Miami */
+  function miami(){
+    var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date()),o={};
+    p.forEach(function(x){o[x.type]=x.value});
+    var d={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
+    return {d:d,m:(parseInt(o.hour,10)%24)*60+parseInt(o.minute,10)};
+  }
+  function openNow(){
+    var box=document.getElementById('openNow'),tx=document.getElementById('openTxt');if(!box)return;
+    var n=miami(),op=540,cl=1020,isOpen=n.d>=1&&n.d<=5&&n.m>=op&&n.m<cl;
+    box.hidden=false;box.classList.toggle('closed',!isOpen);
+    if(isOpen){tx.textContent=t('open_now')+' · '+(lang==='es'?'hasta las 5:00 pm':'until 5:00 pm');return}
+    var nd=n.d,add=0;
+    if(n.d>=1&&n.d<=5&&n.m<op){add=0}else{do{nd=(nd+1)%7;add++}while(nd===0||nd===6)}
+    var when=add===0?t('today'):(add===1?t('tomorrow'):t('days')[nd]);
+    tx.textContent=t('closed_until')+when+t('at')+'9:00 am';
+  }
+
+  /* formulario -> mailto */
+  var f=document.getElementById('cita');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('fn').value.trim(),p=document.getElementById('fp').value.trim(),r=document.getElementById('fr').value,d=document.getElementById('fd').value.trim(),s=document.getElementById('sent');
+    if(!n||!p){s.style.display='block';s.textContent=t('f_err');return}
+    s.style.display='none';
+    var body=t('mail_hi')+'\n\n'+t('mail_name')+': '+n+'\n'+t('mail_phone')+': '+p+(r?'\n'+t('mail_reason')+': '+r:'')+(d?'\n'+t('mail_day')+': '+d:'');
+    location.href='mailto:sc.dentalhollywood@gmail.com?subject='+encodeURIComponent(t('mail_subj'))+'&body='+encodeURIComponent(body);
+  });
+
+  /* reveal */
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.05,rootMargin:'0px 0px -4% 0px'});
+    rv.forEach(function(el){io.observe(el)});
+    setTimeout(function(){rv.forEach(function(el){el.classList.add('in')})},2500);
+  }else rv.forEach(function(el){el.classList.add('in')});
+
+  /* contador 4,7 */
+  if(!reduce&&'IntersectionObserver' in window){
+    var co=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;co.unobserve(e.target);
+      var el=e.target,end=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||'0',10),t0=performance.now();
+      (function step(now){var k=Math.min(1,(now-t0)/900),v=end*(1-Math.pow(1-k,3)),str=v.toFixed(dec);
+        el.textContent=lang==='es'?str.replace('.',','):str;if(k<1)requestAnimationFrame(step)})(t0);
+    })},{threshold:.5});
+    document.querySelectorAll('[data-count]').forEach(function(n){co.observe(n)});
+  }
+  apply();
+})();
+</script>
+</body>
+</html>
