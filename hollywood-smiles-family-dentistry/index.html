@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hollywood Smiles Family Dentistry | Odontología familiar y estética en Hollywood, FL</title>
+<meta name="description" content="Hollywood Smiles Family Dentistry: odontología general, familiar y estética en Hollywood, FL, con la Dra. Marcela Newman. Atención en español e inglés.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0e0e0e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e0e0e'/%3E%3Ctext x='32' y='45' font-family='Arial' font-weight='700' font-size='38' text-anchor='middle' fill='%238fc1bf'%3EH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="preload" as="image" href="images/consultorio-doctora-paciente.webp">
+<style>
+:root{
+  --ink:#0e0e0e; --ink-2:#1b2222; --aqua:#8fc1bf; --aqua-deep:#6fa9a6; --teal:#2b7a76;
+  --sky:#d5e4f0; --sky-soft:#e8f0f7; --mist:#f3f8f8; --paper:#ffffff;
+  --txt:#243030; --txt-dim:#4b5a5a; --line:rgba(14,14,14,.12);
+  --on-dark:#f1f7f7; --on-dark-dim:rgba(241,247,247,.74); --line-dark:rgba(143,193,191,.28);
+  --r:24px; --r-in:14px; --pill:999px;
+  --ease:cubic-bezier(.23,1,.32,1); --ease-io:cubic-bezier(.77,0,.175,1);
+  --gutter:clamp(18px,4.4vw,56px);
+  --f-head:'Outfit',system-ui,sans-serif; --f-body:'Instrument Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--f-body);font-size:17px;line-height:1.6;color:var(--txt);background:var(--paper);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--gutter)}
+h1,h2,h3{font-family:var(--f-head);line-height:1.08;letter-spacing:-.02em;color:var(--ink)}
+h2{font-size:clamp(30px,4.4vw,52px);font-weight:700}
+h3{font-size:clamp(20px,2vw,25px);font-weight:600;letter-spacing:-.01em}
+.lead{font-size:clamp(17px,1.5vw,19px);color:var(--txt-dim);max-width:60ch}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+section{position:relative;padding:clamp(72px,10vw,128px) 0}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* splash */
+.splash{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:linear-gradient(160deg,#f3f8f8,#d5e4f0);transition:opacity .5s var(--ease),visibility .5s}
+.splash img{width:min(280px,64vw);height:auto;animation:splashIn .7s var(--ease) both}
+.splash.out{opacity:0;visibility:hidden}
+@keyframes splashIn{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:var(--pill);border:2px solid transparent;font-weight:600;font-size:16px;text-decoration:none;white-space:nowrap;transition:transform .2s var(--ease),box-shadow .25s var(--ease),background-color .2s,color .2s,border-color .2s}
+.btn:active{transform:scale(.97)}
+.btn-p{background:var(--ink);color:#fff;box-shadow:0 10px 26px -10px rgba(14,14,14,.55)}
+.btn-a{background:var(--aqua);color:var(--ink)}
+.btn-o{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-ol{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn i{font-size:20px}
+@media (hover:hover) and (pointer:fine){
+  .btn-p:hover{background:#243030;transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(14,14,14,.6)}
+  .btn-a:hover{background:#a3d0ce;transform:translateY(-2px)}
+  .btn-o:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
+  .btn-ol:hover{background:#fff;color:var(--ink);transform:translateY(-2px)}
+}
+
+/* nav (pill) */
+.nav{position:fixed;top:12px;left:0;right:0;z-index:60;padding:0 var(--gutter);pointer-events:none}
+.nav-in{pointer-events:auto;max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:8px 10px 8px 18px;border-radius:var(--pill);background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border:1px solid rgba(255,255,255,.8);box-shadow:0 10px 30px -14px rgba(14,14,14,.28);transition:background-color .3s,box-shadow .3s}
+.nav.solid .nav-in{background:rgba(255,255,255,.94)}
+.brand img{height:60px;width:auto;object-fit:contain}
+.links{display:flex;gap:4px;margin-left:auto}
+.links a{padding:10px 14px;border-radius:var(--pill);text-decoration:none;font-weight:600;font-size:15px;color:var(--ink);transition:background-color .2s}
+@media (hover:hover){.links a:hover{background:var(--sky-soft)}}
+.lang{display:inline-flex;padding:3px;border-radius:var(--pill);background:var(--sky-soft);gap:2px}
+.lang button{border:0;background:transparent;padding:8px 13px;border-radius:var(--pill);font-weight:700;font-size:13px;letter-spacing:.04em;color:var(--txt-dim);min-height:36px;transition:background-color .2s,color .2s}
+.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.nav .btn{min-height:46px;padding:0 20px;font-size:15px}
+.burger{display:none;border:0;background:var(--ink);color:#fff;width:46px;height:46px;border-radius:50%;font-size:22px;align-items:center;justify-content:center}
+.menu{position:fixed;inset:0;z-index:90;background:var(--ink);color:#fff;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:var(--gutter);opacity:0;visibility:hidden;transition:opacity .3s var(--ease),visibility .3s}
+.menu.open{opacity:1;visibility:visible}
+.menu a{font-family:var(--f-head);font-size:clamp(30px,8vw,44px);font-weight:600;text-decoration:none;padding:8px 0;color:#fff}
+.menu .menux{position:absolute;top:18px;right:var(--gutter);border:0;background:rgba(255,255,255,.14);color:#fff;width:48px;height:48px;border-radius:50%;font-size:22px}
+.menu .btn{margin-top:18px;align-self:flex-start;font-family:var(--f-body);font-size:17px}
+@media (max-width:980px){
+  .links,.nav .btn{display:none}
+  .burger{display:inline-flex}
+  .lang{margin-left:auto}
+  .brand img{height:48px}
+}
+
+/* hero */
+.hero{min-height:100dvh;display:flex;align-items:center;padding:132px 0 72px;overflow:hidden;background:linear-gradient(135deg,#eaf3f3 0%,#d5e4f0 52%,#bcdad8 100%)}
+.mesh{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.mesh span{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:float 18s var(--ease-io) infinite alternate}
+.mesh span:nth-child(1){width:46vw;height:46vw;left:-12vw;top:-14vw;background:#8fc1bf}
+.mesh span:nth-child(2){width:38vw;height:38vw;right:-8vw;bottom:-14vw;background:#b9d3ea;animation-delay:-6s}
+.mesh span:nth-child(3){width:24vw;height:24vw;left:36%;bottom:-8vw;background:#fff;opacity:.6;animation-delay:-11s}
+@keyframes float{to{transform:translate3d(5vw,4vw,0) scale(1.12)}}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(40px,6.2vw,82px);font-weight:800;letter-spacing:-.035em;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero .lead{margin-bottom:34px;color:#344343}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.frame{position:relative;border-radius:36px;overflow:hidden;aspect-ratio:1/1.06;box-shadow:0 40px 80px -30px rgba(14,14,14,.45);transform-style:preserve-3d;transition:transform .35s var(--ease);background:var(--sky)}
+.frame img{width:100%;height:100%;object-fit:cover;object-position:left center}
+.frame::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5);pointer-events:none}
+.hero-photo{position:relative}
+.hero-photo::before{content:"";position:absolute;inset:6% -5% -6% 8%;border-radius:40px;background:var(--aqua);z-index:-1;transform:rotate(3deg)}
+.in-up{opacity:0;transform:translateY(22px);animation:up .8s var(--ease) forwards;animation-delay:calc(var(--i,0)*90ms + .5s)}
+.no-splash .in-up{animation-delay:calc(var(--i,0)*90ms + .1s)}
+@keyframes up{to{opacity:1;transform:none}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--d,0)*70ms)}
+.rv.in{opacity:1;transform:none}
+
+/* stats */
+.stats{background:var(--ink);color:var(--on-dark);padding:clamp(44px,6vw,72px) 0}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,56px)}
+.stat{display:flex;flex-direction:column;gap:6px;padding-left:20px;border-left:2px solid var(--aqua)}
+.stat b{font-family:var(--f-head);font-size:clamp(40px,5.4vw,68px);font-weight:700;line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+.stat b i{font-size:.6em;color:var(--aqua);margin-left:4px;vertical-align:.12em}
+.stat>span{font-size:16px;color:var(--on-dark-dim)}
+
+/* services bento */
+.svc{background:var(--paper)}
+.svc-head{max-width:680px;margin-bottom:clamp(36px,5vw,60px)}
+.svc-head .lead{margin-top:16px}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.cell{border-radius:var(--r);padding:clamp(24px,3vw,38px);position:relative;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.c-est{grid-column:span 7;background:linear-gradient(150deg,#a9d0ce 0%,#d5e4f0 100%)}
+.c-photo{grid-column:span 5;padding:0;min-height:320px;background:var(--sky)}
+.c-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left center}
+.c-res{grid-column:span 5;background:var(--ink);color:var(--on-dark)}
+.c-res h3{color:#fff}
+.c-fam{grid-column:span 7;background:var(--mist);border:1px solid var(--line)}
+.cell h3{margin-bottom:6px;display:flex;align-items:center;gap:12px}
+.cell h3 i{font-size:28px}
+.cell .sub{font-size:16px;margin-bottom:22px;opacity:.82}
+.slist{list-style:none;display:grid;gap:14px}
+.c-est .slist,.c-fam .slist{grid-template-columns:repeat(2,1fr);gap:16px 26px}
+.slist li{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start}
+.slist li>i{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;font-size:19px;background:rgba(255,255,255,.7);color:var(--ink);transition:transform .25s var(--ease),background-color .25s}
+.c-res .slist li>i{background:rgba(143,193,191,.2);color:var(--aqua)}
+.slist b{display:block;font-family:var(--f-head);font-weight:600;font-size:17px;line-height:1.25;color:inherit}
+.slist span{display:block;font-size:14.5px;line-height:1.45;opacity:.78;margin-top:2px}
+@media (hover:hover) and (pointer:fine){
+  .cell:not(.c-photo):hover{transform:translateY(-6px);box-shadow:0 26px 50px -26px rgba(14,14,14,.4)}
+  .slist li:hover>i{transform:scale(1.1) rotate(-4deg);background:var(--ink);color:var(--aqua)}
+  .c-res .slist li:hover>i{background:var(--aqua);color:var(--ink)}
+}
+.c-fam{display:flex;flex-direction:column}
+.urg{margin-top:auto;padding-top:26px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between}
+.c-fam .slist{margin-bottom:28px}
+.urg p{max-width:40ch;color:var(--txt-dim);font-size:15.5px}
+.urg h3{margin-bottom:4px;font-size:21px}
+
+/* doctor */
+.doc{background:var(--sky-soft)}
+.doc-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,6vw,88px);align-items:center}
+.doc-photo{position:relative}
+.doc-photo .frame{aspect-ratio:4/5;border-radius:200px 200px 36px 36px}
+.doc-photo::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border-radius:210px 210px 40px 40px;border:2px solid var(--aqua)}
+.doc .lead{margin:18px 0 26px}
+.tl{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:28px}
+.tl li{background:#fff;border-radius:var(--r);padding:18px 20px;display:flex;flex-direction:column;gap:2px;transition:transform .3s var(--ease),box-shadow .3s}
+.tl b{font-family:var(--f-head);font-size:30px;font-weight:700;color:var(--teal);line-height:1.1}
+.tl span{font-size:15px;color:var(--txt-dim);line-height:1.4}
+@media (hover:hover){.tl li:hover{transform:translateY(-4px);box-shadow:0 18px 36px -22px rgba(14,14,14,.4)}}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:var(--pill);background:var(--ink);color:#fff;font-weight:600;font-size:15px}
+.chip i{color:var(--aqua);font-size:19px}
+
+/* reviews */
+.rev{background:var(--aqua);color:var(--ink);overflow:hidden}
+.rev-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(28px,6vw,80px);align-items:center}
+.score{display:flex;flex-direction:column;gap:6px}
+.score b{font-family:var(--f-head);font-size:clamp(84px,12vw,150px);font-weight:800;line-height:.9;letter-spacing:-.04em}
+.stars{display:flex;gap:4px;font-size:26px;color:var(--ink)}
+.score p{font-weight:600;font-size:17px}
+.quote{position:relative;background:#fff;border-radius:32px;padding:clamp(30px,4vw,56px);box-shadow:0 30px 60px -34px rgba(14,14,14,.45)}
+.quote>i{position:absolute;top:-22px;left:30px;width:54px;height:54px;border-radius:50%;background:var(--ink);color:var(--aqua);display:grid;place-items:center;font-size:26px}
+.quote blockquote{font-family:var(--f-head);font-weight:600;font-size:clamp(22px,2.7vw,34px);line-height:1.22;letter-spacing:-.015em;color:var(--ink);margin-top:8px}
+.quote footer{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;font-size:16px;color:var(--txt-dim)}
+.quote footer b{color:var(--ink)}
+.rev .btn{margin-top:26px}
+
+/* faq */
+.faq{background:var(--paper)}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,6vw,80px);align-items:start}
+.faq-grid>div:first-child{position:sticky;top:110px}
+.faq-grid .lead{margin-top:16px}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 0;min-height:64px;cursor:pointer;font-family:var(--f-head);font-weight:600;font-size:clamp(18px,1.8vw,21px);color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary i{flex:none;width:36px;height:36px;border-radius:50%;background:var(--sky-soft);display:grid;place-items:center;font-size:18px;transition:transform .3s var(--ease),background-color .2s}
+details[open] summary i{transform:rotate(180deg);background:var(--aqua)}
+details p{padding:0 54px 24px 0;color:var(--txt-dim);max-width:62ch}
+
+/* visit */
+.visit{background:var(--mist)}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:start;margin-top:clamp(32px,5vw,56px)}
+.status{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:var(--pill);background:#fff;font-weight:600;font-size:15px;margin-top:18px;border:1px solid var(--line)}
+.status::before{content:"";width:10px;height:10px;border-radius:50%;background:#9aa;flex:none}
+.status.open::before{background:#2f9e6b;box-shadow:0 0 0 0 rgba(47,158,107,.5);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(47,158,107,0)}100%{box-shadow:0 0 0 0 rgba(47,158,107,0)}}
+.info{display:grid;gap:16px}
+.row{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;padding:18px 20px;background:#fff;border-radius:var(--r)}
+.row>i{width:44px;height:44px;border-radius:14px;background:var(--sky-soft);display:grid;place-items:center;font-size:22px;color:var(--teal)}
+.row h3{font-size:18px;margin-bottom:4px}
+.row p,.row a{font-size:16px;color:var(--txt-dim)}
+.row a{text-decoration:none;font-weight:600;color:var(--ink);border-bottom:2px solid var(--aqua)}
+.hrs{list-style:none;display:grid;gap:2px;font-size:16px;color:var(--txt-dim)}
+.hrs li{display:flex;justify-content:space-between;gap:14px;max-width:320px}
+.hrs li b{color:var(--ink);font-weight:600}
+.map{border-radius:var(--r);overflow:hidden;min-height:260px;aspect-ratio:16/10;border:0;width:100%;box-shadow:0 20px 40px -26px rgba(14,14,14,.4)}
+.form{background:#fff;border-radius:var(--r);padding:clamp(24px,3vw,36px);margin-top:18px;box-shadow:0 20px 44px -30px rgba(14,14,14,.45);position:relative;overflow:hidden}
+.form h3{margin-bottom:4px}
+.form>p{color:var(--txt-dim);font-size:15.5px;margin-bottom:18px}
+.fld{display:grid;gap:6px;margin-bottom:14px}
+.fld label{font-weight:600;font-size:15px;color:var(--ink)}
+.fld input,.fld select{width:100%;min-height:52px;padding:0 16px;border-radius:var(--r-in);border:1.5px solid #9fb0b0;background:#fff;font:inherit;font-size:16px;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.fld input:focus,.fld select:focus{outline:0;border-color:var(--teal);box-shadow:0 0 0 4px rgba(43,122,118,.18)}
+.fld .err{display:none;color:#a4262c;font-size:14px;font-weight:600}
+.fld.bad .err{display:block}
+.fld.bad input{border-color:#a4262c}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form .btn{width:100%;margin-top:6px}
+.ok{position:absolute;inset:0;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:30px;opacity:0;visibility:hidden;transition:opacity .35s var(--ease)}
+.ok.show{opacity:1;visibility:visible}
+.ok svg{width:84px;height:84px}
+.ok circle,.ok path{fill:none;stroke:var(--teal);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:200;stroke-dashoffset:200}
+.ok.show circle{animation:draw .7s var(--ease) forwards}
+.ok.show path{animation:draw .5s .45s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.ok p{color:var(--txt-dim);max-width:34ch}
+
+/* footer */
+footer.site{background:var(--ink);color:var(--on-dark);padding:64px 0 120px}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+.f-logo{height:64px;width:auto;filter:invert(1);margin-bottom:16px}
+footer.site h4{font-family:var(--f-head);font-size:16px;font-weight:600;color:var(--aqua);margin-bottom:12px;letter-spacing:.02em}
+footer.site p,footer.site li,footer.site a{font-size:15.5px;color:var(--on-dark-dim);text-decoration:none;line-height:1.8}
+footer.site ul{list-style:none}
+@media (hover:hover){footer.site a:hover{color:#fff}}
+.f-bot{margin-top:40px;padding-top:22px;border-top:1px solid var(--line-dark);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:14px;color:var(--on-dark-dim)}
+
+/* callbar */
+.callbar{display:none}
+@media (max-width:760px){
+  .callbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:70;padding:10px var(--gutter) calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+  .callbar .btn{min-height:50px;padding:0 12px}
+}
+
+@media (max-width:980px){
+  .hero-grid,.doc-grid,.rev-grid,.faq-grid,.visit-grid{grid-template-columns:1fr}
+  .faq-grid>div:first-child{position:static}
+  .hero{padding-top:112px;min-height:auto}
+  .hero-photo{max-width:560px}
+  .c-est,.c-photo,.c-res,.c-fam{grid-column:span 12}
+  .c-photo{min-height:280px;order:-1}
+  .doc-photo{max-width:420px}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .f-grid>div:first-child{grid-column:1/-1}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .stats-grid{grid-template-columns:1fr;gap:22px}
+  .stat{flex-direction:row;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .c-est .slist,.c-fam .slist,.tl,.two{grid-template-columns:1fr}
+  .hero .btn{width:100%}
+  .nav .lang button{padding:8px 11px}
+  .f-grid{grid-template-columns:1fr}
+  details p{padding-right:0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .mesh span,.in-up,.splash img,.status.open::before{animation:none!important}
+  .in-up{opacity:1;transform:none}
+  .rv{opacity:1;transform:none;transition:none}
+  .ok.show circle,.ok.show path{animation-duration:.01s}
+}
+</style>
+</head>
+<body>
+
+<div class="splash" id="splash" aria-hidden="true"><img src="images/logo.webp" alt="" width="280" height="94"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" data-ta="aria-label:a_home" aria-label="Hollywood Smiles Family Dentistry"><img src="images/logo.webp" alt="Hollywood Smiles" width="179" height="60" data-ta="alt:a_logo"></a>
+    <nav class="links" data-ta="aria-label:a_nav" aria-label="Principal">
+      <a href="#servicios" data-t="nav_services">Servicios</a>
+      <a href="#doctora" data-t="nav_doc">La doctora</a>
+      <a href="#resenas" data-t="nav_reviews">Reseñas</a>
+      <a href="#preguntas" data-t="nav_faq">Preguntas</a>
+      <a href="#visitenos" data-t="nav_visit">Visítenos</a>
+    </nav>
+    <div class="lang" role="group" data-ta="aria-label:a_lang" aria-label="Idioma">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-p mag" href="tel:+19549833992"><i class="ph ph-phone-call" aria-hidden="true"></i><span data-t="call">Llamar</span></a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" data-ta="aria-label:a_menu" aria-label="Abrir menú"><i class="ph ph-list" aria-hidden="true"></i></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <button class="menux" id="menux" type="button" data-ta="aria-label:a_close" aria-label="Cerrar menú"><i class="ph ph-x" aria-hidden="true"></i></button>
+  <a href="#servicios" data-t="nav_services">Servicios</a>
+  <a href="#doctora" data-t="nav_doc">La doctora</a>
+  <a href="#resenas" data-t="nav_reviews">Reseñas</a>
+  <a href="#preguntas" data-t="nav_faq">Preguntas</a>
+  <a href="#visitenos" data-t="nav_visit">Visítenos</a>
+  <a class="btn btn-a" href="tel:+19549833992"><i class="ph ph-phone-call" aria-hidden="true"></i><span data-t="call_num">Llamar (954) 983-3992</span></a>
+</div>
+
+<main id="top">
+
+<section class="hero">
+  <div class="mesh" aria-hidden="true" style="overflow:hidden"><span></span><span></span><span></span></div>
+  <div class="wrap hero-grid">
+    <div>
+      <h1 class="in-up" style="--i:0" data-th="h1">Su sonrisa, cuidada <em>como en familia.</em></h1>
+      <p class="lead in-up" style="--i:1" data-t="sub">Odontología general, familiar y estética en Hollywood, FL, con la Dra. Marcela Newman.</p>
+      <div class="cta-row in-up" style="--i:2">
+        <a class="btn btn-p mag" href="#visitenos"><i class="ph ph-calendar-check" aria-hidden="true"></i><span data-t="cta_book">Pedir cita</span></a>
+        <a class="btn btn-o mag" href="tel:+19549833992"><i class="ph ph-phone-call" aria-hidden="true"></i><span data-t="call_num">Llamar (954) 983-3992</span></a>
+      </div>
+    </div>
+    <div class="hero-photo in-up" style="--i:2">
+      <div class="frame" id="heroFrame"><img src="images/consultorio-doctora-paciente.webp" width="1000" height="916" alt="Atención a una paciente en el consultorio" data-ta="alt:a_hero"></div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat rv"><b><span id="cRating">4.8</span><i class="ph-fill ph-star" aria-hidden="true"></i></b><span data-t="st_google">Calificación en Google</span></div>
+    <div class="stat rv" style="--d:1"><b id="cCount">171</b><span data-t="st_reviews">Reseñas de pacientes en Google</span></div>
+    <div class="stat rv" style="--d:2"><b>ES / EN</b><span data-t="st_lang">La Dra. Newman atiende en español e inglés</span></div>
+  </div>
+</div>
+
+<section class="svc" id="servicios">
+  <div class="wrap">
+    <div class="svc-head rv">
+      <h2 data-t="svc_h">Todo lo que su sonrisa necesita, bajo un mismo techo.</h2>
+      <p class="lead" data-t="svc_lead">Desde una revisión de rutina hasta una rehabilitación completa, para adultos y niños.</p>
+    </div>
+    <div class="bento">
+      <article class="cell c-est rv tilt">
+        <h3><i class="ph ph-sparkle" aria-hidden="true"></i><span data-t="g_est">Estética de la sonrisa</span></h3>
+        <p class="sub" data-t="g_est_p">Cambios de forma, color y proporción, a su medida.</p>
+        <ul class="slist">
+          <li><i class="ph ph-sparkle" aria-hidden="true"></i><div><b data-t="s_veneers">Carillas y laminados</b><span data-t="s_veneers_d">Finas capas sobre el diente para cambiar su forma, tamaño o color.</span></div></li>
+          <li><i class="ph ph-star-four" aria-hidden="true"></i><div><b>Lumineers</b><span data-t="s_lumi_d">Carillas muy delgadas. Su doctora le dice si son para su caso.</span></div></li>
+          <li><i class="ph ph-smiley" aria-hidden="true"></i><div><b data-t="s_design">Diseño de sonrisa</b><span data-t="s_design_d">Un plan para armonizar forma, color y proporción de su sonrisa.</span></div></li>
+          <li><i class="ph ph-sun" aria-hidden="true"></i><div><b data-t="s_whiten">Blanqueamiento</b><span data-t="s_whiten_d">Dientes más claros, con supervisión profesional.</span></div></li>
+          <li><i class="ph ph-tooth" aria-hidden="true"></i><div><b>Invisalign</b><span data-t="s_invis_d">Alineadores transparentes para enderezar los dientes.</span></div></li>
+        </ul>
+      </article>
+      <figure class="cell c-photo rv" style="--d:1"><img src="images/doctora-asistente-paciente.webp" width="1000" height="916" loading="lazy" alt="La doctora y su asistente atendiendo a una paciente" data-ta="alt:a_svc"></figure>
+      <article class="cell c-res rv tilt">
+        <h3><i class="ph ph-crown-simple" aria-hidden="true"></i><span data-t="g_res">Restauración</span></h3>
+        <p class="sub" data-t="g_res_p">Devolver función y apariencia a sus dientes.</p>
+        <ul class="slist">
+          <li><i class="ph ph-crown-simple" aria-hidden="true"></i><div><b data-t="s_crowns">Coronas y puentes</b><span data-t="s_crowns_d">Restauran dientes dañados o reemplazan los que faltan.</span></div></li>
+          <li><i class="ph ph-anchor-simple" aria-hidden="true"></i><div><b data-t="s_implants">Implantes</b><span data-t="s_implants_d">Una raíz artificial que sostiene un diente de reemplazo.</span></div></li>
+          <li><i class="ph ph-hammer" aria-hidden="true"></i><div><b data-t="s_rehab">Rehabilitación oral completa</b><span data-t="s_rehab_d">Un plan para restaurar la función y la apariencia de toda la boca.</span></div></li>
+          <li><i class="ph ph-first-aid-kit" aria-hidden="true"></i><div><b data-t="s_root">Tratamiento de conductos</b><span data-t="s_root_d">Para salvar un diente cuya pulpa está dañada o infectada.</span></div></li>
+          <li><i class="ph ph-smiley-sticker" aria-hidden="true"></i><div><b data-t="s_dent">Dentaduras y parciales</b><span data-t="s_dent_d">Reemplazan varios dientes o todos, para comer y sonreír con comodidad.</span></div></li>
+        </ul>
+      </article>
+      <article class="cell c-fam rv tilt" style="--d:1">
+        <h3><i class="ph ph-heartbeat" aria-hidden="true"></i><span data-t="g_fam">Cuidado de la familia</span></h3>
+        <p class="sub" data-t="g_fam_p">Para que todos en casa tengan su dentista.</p>
+        <ul class="slist">
+          <li><i class="ph ph-magnifying-glass" aria-hidden="true"></i><div><b data-t="s_check">Chequeo dental</b><span data-t="s_check_d">Revisión periódica para detectar problemas a tiempo.</span></div></li>
+          <li><i class="ph ph-baby" aria-hidden="true"></i><div><b data-t="s_kids">Odontopediatría</b><span data-t="s_kids_d">Cuidado dental para niños.</span></div></li>
+        </ul>
+        <div class="urg">
+          <div>
+            <h3><i class="ph ph-siren" aria-hidden="true"></i><span data-t="urg_h">¿Dolor o un diente roto?</span></h3>
+            <p data-t="urg_p">Atención de urgencias dentales. Llámenos y le confirmamos la disponibilidad.</p>
+          </div>
+          <a class="btn btn-p mag" href="tel:+19549833992"><i class="ph ph-phone-call" aria-hidden="true"></i><span data-t="call_num">Llamar (954) 983-3992</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="doc" id="doctora">
+  <div class="wrap doc-grid">
+    <div class="doc-photo rv">
+      <div class="frame" id="portrait"><img src="images/doctora-asistente-paciente.webp" width="1000" height="916" loading="lazy" alt="Atención en el consultorio de Hollywood Smiles" data-ta="alt:a_doc" style="object-position:88% center"></div>
+    </div>
+    <div class="rv" style="--d:1">
+      <h2 data-t="doc_h">Dra. Marcela Newman</h2>
+      <p class="lead" data-t="doc_p">Una dentista con formación en dos países y práctica propia en Hollywood, FL. Su filosofía: tratar a cada paciente como a un familiar.</p>
+      <ul class="tl">
+        <li><b>1997</b><span data-t="tl1">Título en la Universidad Central de Venezuela</span></li>
+        <li><b>2001</b><span data-t="tl2">DDS en la Universidad de Michigan</span></li>
+        <li><b>Ann Arbor</b><span data-t="tl3">Primeros años de ejercicio en Michigan</span></li>
+        <li><b>2009</b><span data-t="tl4">Se muda a Florida</span></li>
+      </ul>
+      <div class="chips">
+        <span class="chip"><i class="ph ph-translate" aria-hidden="true"></i><span data-t="chip_lang">Hablamos español</span></span>
+        <span class="chip"><i class="ph ph-heart" aria-hidden="true"></i><span data-t="chip_fam">Odontología familiar</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rev" id="resenas">
+  <div class="wrap rev-grid">
+    <div class="score rv">
+      <b>4.8</b>
+      <div class="stars" aria-hidden="true"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+      <p data-t="rev_score">171 reseñas en Google</p>
+    </div>
+    <div class="rv" style="--d:1">
+      <figure class="quote">
+        <i class="ph-fill ph-quotes" aria-hidden="true"></i>
+        <blockquote lang="en">&ldquo;The best of the best in dentistry! If you're looking for an excellent, honest dentist in South Florida, this is the place!&rdquo;</blockquote>
+        <footer><b>Mariheri</b><span data-t="rev_src">Reseña de Google, en su idioma original</span></footer>
+      </figure>
+      <a class="btn btn-p mag" href="https://www.google.com/maps/search/?api=1&query=Hollywood+Smiles+Family+Dentistry+1869+N+66th+Ave+Hollywood+FL+33024" target="_blank" rel="noopener"><i class="ph ph-google-logo" aria-hidden="true"></i><span data-t="rev_btn">Ver reseñas en Google</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="preguntas">
+  <div class="wrap faq-grid">
+    <div class="rv">
+      <h2 data-t="faq_h">Preguntas frecuentes</h2>
+      <p class="lead" data-t="faq_lead">Lo básico antes de su primera cita. Para cualquier otra duda, llámenos.</p>
+    </div>
+    <div class="rv" style="--d:1">
+      <details><summary><span data-t="q1">¿Aceptan nuevos pacientes?</span><i class="ph ph-caret-down" aria-hidden="true"></i></summary><p data-t="a1">Sí. Llámenos al (954) 983-3992 o escríbanos por WhatsApp y le damos la próxima cita disponible.</p></details>
+      <details><summary><span data-t="q2">¿Atienden en español?</span><i class="ph ph-caret-down" aria-hidden="true"></i></summary><p data-t="a2">Sí. La Dra. Newman atiende en español y en inglés, y este sitio también está en los dos idiomas.</p></details>
+      <details><summary><span data-t="q3">¿Atienden a niños?</span><i class="ph ph-caret-down" aria-hidden="true"></i></summary><p data-t="a3">Sí. Ofrecemos odontopediatría y atención para toda la familia en un mismo consultorio.</p></details>
+      <details><summary><span data-t="q4">¿Atienden urgencias dentales?</span><i class="ph ph-caret-down" aria-hidden="true"></i></summary><p data-t="a4">Sí, la atención de urgencias es uno de nuestros servicios. Llámenos y le confirmamos la disponibilidad.</p></details>
+      <details><summary><span data-t="q5">¿Aceptan mi seguro? ¿Cuánto cuesta?</span><i class="ph ph-caret-down" aria-hidden="true"></i></summary><p data-t="a5">Llámenos y le confirmamos. Depende de su plan y del tratamiento que necesite.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visitenos">
+  <div class="wrap">
+    <div class="rv" style="max-width:640px">
+      <h2 data-t="vis_h">Visítenos en Hollywood</h2>
+      <div class="status" id="status" role="status"><span id="statusTxt">&nbsp;</span></div>
+    </div>
+    <div class="visit-grid">
+      <div class="info rv">
+        <div class="row"><i class="ph ph-map-pin" aria-hidden="true"></i><div><h3 data-t="v_addr">Dirección</h3><p>1869 N 66th Ave<br>Hollywood, FL 33024</p><a href="https://www.google.com/maps/search/?api=1&query=Hollywood+Smiles+Family+Dentistry+1869+N+66th+Ave+Hollywood+FL+33024" target="_blank" rel="noopener" data-t="v_dir">Cómo llegar</a></div></div>
+        <div class="row"><i class="ph ph-phone" aria-hidden="true"></i><div><h3 data-t="v_phone">Teléfono y WhatsApp</h3><p><a href="tel:+19549833992">(954) 983-3992</a><br><a href="https://wa.me/19546650352" target="_blank" rel="noopener">WhatsApp (954) 665-0352</a></p></div></div>
+        <div class="row"><i class="ph ph-envelope-simple" aria-hidden="true"></i><div><h3>Email</h3><p><a href="mailto:drnewman@hollywoodsmilesfl.com">drnewman@hollywoodsmilesfl.com</a></p></div></div>
+        <div class="row"><i class="ph ph-clock" aria-hidden="true"></i><div><h3 data-t="v_hours">Horario</h3>
+          <ul class="hrs">
+            <li><span data-t="d_mt">Lunes a jueves</span><b>9:00 AM - 5:00 PM</b></li>
+            <li><span data-t="d_f">Viernes</span><b>9:00 AM - 1:00 PM</b></li>
+            <li><span data-t="d_ss">Sábado y domingo</span><b data-t="closed">Cerrado</b></li>
+          </ul>
+          <p style="font-size:14px;margin-top:6px" data-t="v_appt">Con cita previa.</p></div></div>
+      </div>
+      <div class="rv" style="--d:1">
+        <iframe class="map" title="Mapa de Hollywood Smiles Family Dentistry" data-ta="title:a_map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1869+N+66th+Ave+Hollywood+FL+33024&output=embed"></iframe>
+        <form class="form" id="form" novalidate>
+          <h3 data-t="f_h">Pida su cita</h3>
+          <p data-t="f_p">Complete sus datos y se abre WhatsApp con su mensaje listo para enviar.</p>
+          <div class="fld" id="fn"><label for="name" data-t="f_name">Nombre</label><input id="name" name="name" autocomplete="name" required><span class="err" data-t="f_err">Complete este campo.</span></div>
+          <div class="fld" id="fp"><label for="phone" data-t="f_phone">Teléfono</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required><span class="err" data-t="f_err">Complete este campo.</span></div>
+          <div class="two">
+            <div class="fld"><label for="reason" data-t="f_reason">Motivo</label>
+              <select id="reason"><option value="r_check" data-t="r_check">Chequeo dental</option><option value="r_est" data-t="r_est">Estética de la sonrisa</option><option value="r_res" data-t="r_res">Restauración o implantes</option><option value="r_kids" data-t="r_kids">Cita para un niño</option><option value="r_urg" data-t="r_urg">Urgencia</option><option value="r_other" data-t="r_other">Otro</option></select></div>
+            <div class="fld"><label for="day" data-t="f_day">Día preferido</label>
+              <select id="day"><option value="d1" data-t="d1">Lunes</option><option value="d2" data-t="d2">Martes</option><option value="d3" data-t="d3">Miércoles</option><option value="d4" data-t="d4">Jueves</option><option value="d5" data-t="d5">Viernes (mañana)</option></select></div>
+          </div>
+          <button class="btn btn-p mag" type="submit"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i><span data-t="f_send">Enviar por WhatsApp</span></button>
+          <div class="ok" id="ok" role="status"><svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="34"/><path d="M27 43l11 11 20-23"/></svg><h3 data-t="ok_h">Listo, ya casi está</h3><p data-t="ok_p">Se abrió WhatsApp con su mensaje. Envíelo y le respondemos para confirmar la cita.</p></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="f-grid">
+      <div><img class="f-logo" src="images/logo.webp" alt="Hollywood Smiles" width="191" height="64" data-ta="alt:a_logo"><p data-t="f_about">Odontología general, familiar y estética en Hollywood, FL.</p></div>
+      <div><h4 data-t="f_contact">Contacto</h4><ul><li>1869 N 66th Ave, Hollywood, FL 33024</li><li><a href="tel:+19549833992">(954) 983-3992</a></li><li><a href="https://wa.me/19546650352" target="_blank" rel="noopener">WhatsApp (954) 665-0352</a></li><li><a href="mailto:drnewman@hollywoodsmilesfl.com">drnewman@hollywoodsmilesfl.com</a></li></ul></div>
+      <div><h4 data-t="v_hours">Horario</h4><ul><li data-t="f_h1">Lun a jue: 9:00 AM - 5:00 PM</li><li data-t="f_h2">Viernes: 9:00 AM - 1:00 PM</li><li data-t="f_h3">Sábado y domingo: cerrado</li></ul></div>
+    </div>
+    <div class="f-bot"><span>Hollywood Smiles Family Dentistry (Marcela Newman DDS MS PA)</span><span data-t="f_lic">Licencia FL DN18470</span><span data-t="f_demo">Sitio de demostración</span></div>
+  </div>
+</footer>
+
+<div class="callbar" data-ta="aria-label:a_quick" aria-label="Contacto rápido">
+  <a class="btn btn-p" href="tel:+19549833992"><i class="ph ph-phone-call" aria-hidden="true"></i><span data-t="call">Llamar</span></a>
+  <a class="btn btn-a" href="#visitenos"><i class="ph ph-calendar-check" aria-hidden="true"></i><span data-t="cta_book">Pedir cita</span></a>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var T={
+    es:{
+      title:'Hollywood Smiles Family Dentistry | Odontología familiar y estética en Hollywood, FL',
+      meta:'Hollywood Smiles Family Dentistry: odontología general, familiar y estética en Hollywood, FL, con la Dra. Marcela Newman. Atención en español e inglés.',
+      nav_services:'Servicios',nav_doc:'La doctora',nav_reviews:'Reseñas',nav_faq:'Preguntas',nav_visit:'Visítenos',call:'Llamar',call_num:'Llamar (954) 983-3992',cta_book:'Pedir cita',
+      a_home:'Hollywood Smiles Family Dentistry, inicio',a_logo:'Hollywood Smiles',a_nav:'Principal',a_lang:'Idioma',a_menu:'Abrir menú',a_close:'Cerrar menú',a_quick:'Contacto rápido',
+      a_hero:'Atención a una paciente en el consultorio',a_svc:'La doctora y su asistente atendiendo a una paciente',a_doc:'Atención en el consultorio de Hollywood Smiles',a_map:'Mapa de Hollywood Smiles Family Dentistry',
+      h1:'Su sonrisa, cuidada <em>como en familia.</em>',sub:'Odontología general, familiar y estética en Hollywood, FL, con la Dra. Marcela Newman.',
+      st_google:'Calificación en Google',st_reviews:'Reseñas de pacientes en Google',st_lang:'La Dra. Newman atiende en español e inglés',
+      svc_h:'Todo lo que su sonrisa necesita, bajo un mismo techo.',svc_lead:'Desde una revisión de rutina hasta una rehabilitación completa, para adultos y niños.',
+      g_est:'Estética de la sonrisa',g_est_p:'Cambios de forma, color y proporción, a su medida.',
+      s_veneers:'Carillas y laminados',s_veneers_d:'Finas capas sobre el diente para cambiar su forma, tamaño o color.',s_lumi_d:'Carillas muy delgadas. Su doctora le dice si son para su caso.',
+      s_design:'Diseño de sonrisa',s_design_d:'Un plan para armonizar forma, color y proporción de su sonrisa.',s_whiten:'Blanqueamiento',s_whiten_d:'Dientes más claros, con supervisión profesional.',s_invis_d:'Alineadores transparentes para enderezar los dientes.',
+      g_res:'Restauración',g_res_p:'Devolver función y apariencia a sus dientes.',
+      s_crowns:'Coronas y puentes',s_crowns_d:'Restauran dientes dañados o reemplazan los que faltan.',s_implants:'Implantes',s_implants_d:'Una raíz artificial que sostiene un diente de reemplazo.',
+      s_rehab:'Rehabilitación oral completa',s_rehab_d:'Un plan para restaurar la función y la apariencia de toda la boca.',s_root:'Tratamiento de conductos',s_root_d:'Para salvar un diente cuya pulpa está dañada o infectada.',
+      s_dent:'Dentaduras y parciales',s_dent_d:'Reemplazan varios dientes o todos, para comer y sonreír con comodidad.',
+      g_fam:'Cuidado de la familia',g_fam_p:'Para que todos en casa tengan su dentista.',s_check:'Chequeo dental',s_check_d:'Revisión periódica para detectar problemas a tiempo.',s_kids:'Odontopediatría',s_kids_d:'Cuidado dental para niños.',
+      urg_h:'¿Dolor o un diente roto?',urg_p:'Atención de urgencias dentales. Llámenos y le confirmamos la disponibilidad.',
+      doc_h:'Dra. Marcela Newman',doc_p:'Una dentista con formación en dos países y práctica propia en Hollywood, FL. Su filosofía: tratar a cada paciente como a un familiar.',
+      tl1:'Título en la Universidad Central de Venezuela',tl2:'DDS en la Universidad de Michigan',tl3:'Primeros años de ejercicio en Michigan',tl4:'Se muda a Florida',chip_lang:'Hablamos español',chip_fam:'Odontología familiar',
+      rev_score:'171 reseñas en Google',rev_src:'Reseña de Google, en su idioma original',rev_btn:'Ver reseñas en Google',
+      faq_h:'Preguntas frecuentes',faq_lead:'Lo básico antes de su primera cita. Para cualquier otra duda, llámenos.',
+      q1:'¿Aceptan nuevos pacientes?',a1:'Sí. Llámenos al (954) 983-3992 o escríbanos por WhatsApp y le damos la próxima cita disponible.',
+      q2:'¿Atienden en español?',a2:'Sí. La Dra. Newman atiende en español y en inglés, y este sitio también está en los dos idiomas.',
+      q3:'¿Atienden a niños?',a3:'Sí. Ofrecemos odontopediatría y atención para toda la familia en un mismo consultorio.',
+      q4:'¿Atienden urgencias dentales?',a4:'Sí, la atención de urgencias es uno de nuestros servicios. Llámenos y le confirmamos la disponibilidad.',
+      q5:'¿Aceptan mi seguro? ¿Cuánto cuesta?',a5:'Llámenos y le confirmamos. Depende de su plan y del tratamiento que necesite.',
+      vis_h:'Visítenos en Hollywood',v_addr:'Dirección',v_dir:'Cómo llegar',v_phone:'Teléfono y WhatsApp',v_hours:'Horario',d_mt:'Lunes a jueves',d_f:'Viernes',d_ss:'Sábado y domingo',closed:'Cerrado',v_appt:'Con cita previa.',
+      f_h:'Pida su cita',f_p:'Complete sus datos y se abre WhatsApp con su mensaje listo para enviar.',f_name:'Nombre',f_phone:'Teléfono',f_err:'Complete este campo.',f_reason:'Motivo',f_day:'Día preferido',
+      r_check:'Chequeo dental',r_est:'Estética de la sonrisa',r_res:'Restauración o implantes',r_kids:'Cita para un niño',r_urg:'Urgencia',r_other:'Otro',
+      d1:'Lunes',d2:'Martes',d3:'Miércoles',d4:'Jueves',d5:'Viernes (mañana)',f_send:'Enviar por WhatsApp',ok_h:'Listo, ya casi está',ok_p:'Se abrió WhatsApp con su mensaje. Envíelo y le respondemos para confirmar la cita.',
+      f_about:'Odontología general, familiar y estética en Hollywood, FL.',f_contact:'Contacto',f_h1:'Lun a jue: 9:00 AM - 5:00 PM',f_h2:'Viernes: 9:00 AM - 1:00 PM',f_h3:'Sábado y domingo: cerrado',f_lic:'Licencia FL DN18470',f_demo:'Sitio de demostración',
+      open_now:'Abierto ahora · cierra a las ',closed_open:'Cerrado · abre ',at:' a las ',wd:['domingo','lunes','martes','miércoles','jueves','viernes','sábado'],today:'hoy',tomorrow:'mañana',
+      msg:'Hola, soy {n}. Quisiera pedir una cita en Hollywood Smiles. Motivo: {r}. Día preferido: {d}. Mi teléfono: {p}.'
+    },
+    en:{
+      title:'Hollywood Smiles Family Dentistry | Family and cosmetic dentistry in Hollywood, FL',
+      meta:'Hollywood Smiles Family Dentistry: general, family and cosmetic dentistry in Hollywood, FL, with Dr. Marcela Newman. Care in English and Spanish.',
+      nav_services:'Services',nav_doc:'The doctor',nav_reviews:'Reviews',nav_faq:'FAQ',nav_visit:'Visit us',call:'Call',call_num:'Call (954) 983-3992',cta_book:'Book a visit',
+      a_home:'Hollywood Smiles Family Dentistry, home',a_logo:'Hollywood Smiles',a_nav:'Main',a_lang:'Language',a_menu:'Open menu',a_close:'Close menu',a_quick:'Quick contact',
+      a_hero:'A patient being treated at the practice',a_svc:'The doctor and her assistant treating a patient',a_doc:'Care at the Hollywood Smiles practice',a_map:'Map of Hollywood Smiles Family Dentistry',
+      h1:'Your smile, cared for <em>like family.</em>',sub:'General, family and cosmetic dentistry in Hollywood, FL, with Dr. Marcela Newman.',
+      st_google:'Rating on Google',st_reviews:'Patient reviews on Google',st_lang:'Dr. Newman sees patients in English and Spanish',
+      svc_h:'Everything your smile needs, under one roof.',svc_lead:'From a routine check-up to a full-mouth rehabilitation, for adults and children.',
+      g_est:'Smile aesthetics',g_est_p:'Changes in shape, color and proportion, made to measure.',
+      s_veneers:'Veneers and laminates',s_veneers_d:'Thin layers over the tooth to change its shape, size or color.',s_lumi_d:'Very thin veneers. Your dentist tells you if they suit your case.',
+      s_design:'Smile design',s_design_d:'A plan to balance the shape, color and proportion of your smile.',s_whiten:'Whitening',s_whiten_d:'Brighter teeth, under professional supervision.',s_invis_d:'Clear aligners to straighten your teeth.',
+      g_res:'Restorative care',g_res_p:'Giving your teeth their function and appearance back.',
+      s_crowns:'Crowns and bridges',s_crowns_d:'Restore damaged teeth or replace missing ones.',s_implants:'Implants',s_implants_d:'An artificial root that holds a replacement tooth.',
+      s_rehab:'Full-mouth rehabilitation',s_rehab_d:'A plan to restore the function and appearance of your whole mouth.',s_root:'Root canal treatment',s_root_d:'To save a tooth whose pulp is damaged or infected.',
+      s_dent:'Dentures and partials',s_dent_d:'Replace several teeth or all of them, to eat and smile comfortably.',
+      g_fam:'Family care',g_fam_p:'So everyone at home has their dentist.',s_check:'Dental check-up',s_check_d:'Regular exams to catch problems early.',s_kids:'Pediatric dentistry',s_kids_d:'Dental care for children.',
+      urg_h:'In pain, or a broken tooth?',urg_p:'Emergency dental care. Call us and we will confirm availability.',
+      doc_h:'Dr. Marcela Newman',doc_p:'A dentist trained in two countries, with her own practice in Hollywood, FL. Her approach: treat every patient like family.',
+      tl1:'Degree from Universidad Central de Venezuela',tl2:'DDS from the University of Michigan',tl3:'First years of practice in Michigan',tl4:'Moves to Florida',chip_lang:'We speak Spanish',chip_fam:'Family dentistry',
+      rev_score:'171 reviews on Google',rev_src:'Google review, as written',rev_btn:'See reviews on Google',
+      faq_h:'Frequently asked questions',faq_lead:'The basics before your first visit. For anything else, call us.',
+      q1:'Are you accepting new patients?',a1:'Yes. Call (954) 983-3992 or message us on WhatsApp and we will give you the next available appointment.',
+      q2:'Do you see patients in Spanish?',a2:'Yes. Dr. Newman sees patients in Spanish and English, and this site is available in both languages.',
+      q3:'Do you treat children?',a3:'Yes. We offer pediatric dentistry and care for the whole family in one practice.',
+      q4:'Do you handle dental emergencies?',a4:'Yes, emergency care is one of our services. Call us and we will confirm availability.',
+      q5:'Do you accept my insurance? How much does it cost?',a5:'Call us and we will confirm. It depends on your plan and the treatment you need.',
+      vis_h:'Visit us in Hollywood',v_addr:'Address',v_dir:'Get directions',v_phone:'Phone and WhatsApp',v_hours:'Hours',d_mt:'Monday to Thursday',d_f:'Friday',d_ss:'Saturday and Sunday',closed:'Closed',v_appt:'By appointment.',
+      f_h:'Book your visit',f_p:'Fill in your details and WhatsApp opens with your message ready to send.',f_name:'Name',f_phone:'Phone',f_err:'Please fill in this field.',f_reason:'Reason',f_day:'Preferred day',
+      r_check:'Dental check-up',r_est:'Smile aesthetics',r_res:'Restorative care or implants',r_kids:'Appointment for a child',r_urg:'Emergency',r_other:'Other',
+      d1:'Monday',d2:'Tuesday',d3:'Wednesday',d4:'Thursday',d5:'Friday (morning)',f_send:'Send via WhatsApp',ok_h:'Almost done',ok_p:'WhatsApp opened with your message. Send it and we will reply to confirm your visit.',
+      f_about:'General, family and cosmetic dentistry in Hollywood, FL.',f_contact:'Contact',f_h1:'Mon to Thu: 9:00 AM - 5:00 PM',f_h2:'Friday: 9:00 AM - 1:00 PM',f_h3:'Saturday and Sunday: closed',f_lic:'FL license DN18470',f_demo:'Demo site',
+      open_now:'Open now · closes at ',closed_open:'Closed · opens ',at:' at ',wd:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],today:'today',tomorrow:'tomorrow',
+      msg:'Hello, I’m {n}. I would like to book an appointment at Hollywood Smiles. Reason: {r}. Preferred day: {d}. My phone: {p}.'
+    }
+  };
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  function safe(f){try{f()}catch(e){}}
+  var lang='es';
+
+  // horario: [apertura, cierre] en minutos, por dia (0=domingo)
+  var HRS={0:null,1:[540,1020],2:[540,1020],3:[540,1020],4:[540,1020],5:[540,780],6:null};
+  function fmt(m){var h=Math.floor(m/60),mm=m%60,ap=h>=12?'PM':'AM';h=h%12||12;return h+':'+(mm<10?'0':'')+mm+' '+ap}
+  function miami(){
+    var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date()),o={};
+    p.forEach(function(x){o[x.type]=x.value});
+    var d={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
+    return {d:d,m:(parseInt(o.hour,10)%24)*60+parseInt(o.minute,10)};
+  }
+  function status(){
+    var el=document.getElementById('status'),tx=document.getElementById('statusTxt'),t=T[lang],n=miami(),h=HRS[n.d],s;
+    if(h&&n.m>=h[0]&&n.m<h[1]){el.classList.add('open');s=t.open_now+fmt(h[1])}
+    else{
+      el.classList.remove('open');
+      var k=0,d=n.d,when;
+      if(h&&n.m<h[0]){when=t.today}
+      else{do{k++;d=(n.d+k)%7}while(!HRS[d]&&k<7);when=k===1?t.tomorrow:t.wd[d]}
+      var nh=HRS[(n.d+(h&&n.m<h[0]?0:k))%7];
+      s=t.closed_open+when+t.at+fmt(nh[0]);
+    }
+    tx.textContent=s;
+  }
+
+  function setLang(l){
+    lang=l;document.documentElement.lang=l;var t=T[l];
+    document.querySelectorAll('[data-t]').forEach(function(el){var v=t[el.getAttribute('data-t')];if(v!=null)el.textContent=v});
+    document.querySelectorAll('[data-th]').forEach(function(el){var v=t[el.getAttribute('data-th')];if(v!=null)el.innerHTML=v});
+    document.querySelectorAll('[data-ta]').forEach(function(el){el.getAttribute('data-ta').split(',').forEach(function(p){var kv=p.split(':'),v=t[kv[1]];if(v!=null)el.setAttribute(kv[0],v)})});
+    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-lang')===l?'true':'false')});
+    document.title=t.title;
+    var md=document.querySelector('meta[name=description]');if(md)md.setAttribute('content',t.meta);
+    status();
+    safe(function(){localStorage.setItem('hss-lang',l)});
+  }
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-lang'))})});
+  safe(function(){var s=localStorage.getItem('hss-lang');if(s==='en')setLang('en')});
+  status();setInterval(status,60000);
+
+  // splash
+  var splash=document.getElementById('splash');
+  function hideSplash(){if(splash){splash.classList.add('out');setTimeout(function(){splash&&splash.remove();splash=null},600)}}
+  var seen=false;safe(function(){seen=sessionStorage.getItem('hss-splash')==='1';sessionStorage.setItem('hss-splash','1')});
+  if(reduce||seen){document.body.classList.add('no-splash');hideSplash()}
+  else{window.addEventListener('load',function(){setTimeout(hideSplash,750)});setTimeout(hideSplash,2200)}
+
+  // nav
+  var nav=document.getElementById('nav');
+  safe(function(){var s=document.createElement('div');s.style.cssText='position:absolute;top:0;height:60px;width:1px;pointer-events:none';document.body.prepend(s);
+    new IntersectionObserver(function(e){nav.classList.toggle('solid',!e[0].isIntersecting)}).observe(s)});
+  var menu=document.getElementById('menu'),burger=document.getElementById('burger');
+  function toggleMenu(o){menu.classList.toggle('open',o);menu.setAttribute('aria-hidden',o?'false':'true');burger.setAttribute('aria-expanded',o?'true':'false');document.body.style.overflow=o?'hidden':''}
+  burger.addEventListener('click',function(){toggleMenu(true)});
+  document.getElementById('menux').addEventListener('click',function(){toggleMenu(false)});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){toggleMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')toggleMenu(false)});
+
+  // reveal
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.05,rootMargin:'0px 0px -4% 0px'});
+    rv.forEach(function(el){io.observe(el)});
+    setTimeout(function(){rv.forEach(function(el){el.classList.add('in')})},6000);
+  }else rv.forEach(function(el){el.classList.add('in')});
+
+  // contadores
+  function count(el,to,dec,ms){if(reduce)return;var t0=null;function f(t){if(t0===null)t0=t;var p=Math.min((t-t0)/ms,1),e=1-Math.pow(1-p,4);el.textContent=(to*e).toFixed(dec);if(p<1)requestAnimationFrame(f);else el.textContent=to.toFixed(dec)}requestAnimationFrame(f)}
+  safe(function(){var r=document.getElementById('cRating'),c=document.getElementById('cCount');
+    new IntersectionObserver(function(es,o){if(es[0].isIntersecting){count(r,4.8,1,1200);count(c,171,0,1400);o.disconnect()}},{threshold:.4}).observe(r)});
+
+  // tilt + magnetic (solo puntero fino)
+  if(fine&&!reduce){
+    function tilt(el,max){el.addEventListener('pointermove',function(e){var b=el.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;el.style.transform='perspective(900px) rotateY('+(x*max)+'deg) rotateX('+(-y*max)+'deg) translateY(-4px)'});el.addEventListener('pointerleave',function(){el.style.transform=''})}
+    safe(function(){tilt(document.getElementById('heroFrame'),6);tilt(document.getElementById('portrait'),6)});
+    document.querySelectorAll('.mag').forEach(function(b){b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.16)+'px,'+((e.clientY-r.top-r.height/2)*.26)+'px)'});b.addEventListener('pointerleave',function(){b.style.transform=''})});
+  }
+
+  // un solo FAQ abierto
+  var ds=document.querySelectorAll('details');
+  ds.forEach(function(d){d.addEventListener('toggle',function(){if(d.open)ds.forEach(function(o){if(o!==d)o.open=false})})});
+
+  // formulario -> WhatsApp
+  var form=document.getElementById('form');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=form.name.value.trim(),p=form.phone.value.trim(),bad=false;
+    document.getElementById('fn').classList.toggle('bad',!n);document.getElementById('fp').classList.toggle('bad',!p);
+    if(!n||!p)return;
+    var t=T[lang],r=document.getElementById('reason'),d=document.getElementById('day');
+    var txt=t.msg.replace('{n}',n).replace('{r}',t[r.value]).replace('{d}',t[d.value]).replace('{p}',p);
+    window.open('https://wa.me/19546650352?text='+encodeURIComponent(txt),'_blank','noopener');
+    document.getElementById('ok').classList.add('show');
+    setTimeout(function(){document.getElementById('ok').classList.remove('show');form.reset()},6000);
+  });
+})();
+</script>
+</body>
+</html>
