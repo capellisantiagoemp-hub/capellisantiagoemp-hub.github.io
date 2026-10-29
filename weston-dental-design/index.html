@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weston Dental Design | Odontología cosmética y familiar en Weston, FL</title>
+<meta name="description" content="Weston Dental Design, con el Dr. Javier Bonilla y la Dra. Claudia Izquierdo. Odontología cosmética y familiar en 17140 Royal Palm Blvd, Weston, FL. Llame al 954-217-8411.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#205D99">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23205D99'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' text-anchor='middle' fill='white'%3EW%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --blue:#205D99; --blue-d:#174A7C; --navy:#0C2A47; --navy-2:#081E34;
+  --sage:#82AF9A; --sage-d:#3F7A64; --sage-l:#E6F0EB; --mist:#F3F8F5; --paper:#fff;
+  --ink:#10263D; --ink-2:#3B5066; --ink-3:#566B7F;
+  --line:rgba(16,38,61,.12);
+  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Playfair Display",Georgia,serif;
+  --r-card:22px; --r-in:12px;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --shadow:0 26px 50px -30px rgba(12,42,71,.5);
+  --wrap:1180px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:96px}
+body{font:400 17px/1.65 var(--sans);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,svg,iframe{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+h1,h2,h3{font-family:var(--serif);font-weight:600;text-wrap:balance;letter-spacing:-.01em;line-height:1.12}
+h2{font-size:clamp(2rem,4.4vw,3.2rem)}
+h2 em,h1 em{font-style:italic;font-weight:500;padding-bottom:.08em}
+p{text-wrap:pretty}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
+.dark :focus-visible{outline-color:var(--sage)}
+.wrap{width:min(var(--wrap),100% - 2.4rem);margin-inline:auto}
+.skip{position:fixed;left:1rem;top:-80px;background:#fff;padding:.6rem 1rem;border-radius:10px;z-index:200;font-weight:700}
+.skip:focus{top:1rem}
+.eyebrow{display:inline-block;font:700 14px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--sage-d);margin-bottom:.9rem}
+.dark .eyebrow{color:var(--sage)}
+section{position:relative}
+.pad{padding:clamp(4.5rem,9vw,8rem) 0}
+
+/* splash */
+#splash{position:fixed;inset:0;z-index:100;background:var(--navy);display:grid;place-items:center;transition:opacity .5s var(--ease),visibility .5s}
+#splash span{background:#fff;border-radius:18px;padding:14px 22px;animation:pop .7s var(--ease) both}
+#splash img{height:72px;width:auto}
+#splash.hide{opacity:0;visibility:hidden}
+@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+
+/* nav */
+.nav{position:fixed;inset:12px 0 auto 0;z-index:50;pointer-events:none}
+.nav-in{pointer-events:auto;width:min(1120px,100% - 1.2rem);margin-inline:auto;display:flex;align-items:center;gap:.6rem;padding:7px 8px 7px 16px;border-radius:999px;background:rgba(255,255,255,.94);backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%);border:1px solid rgba(255,255,255,.9);box-shadow:0 14px 40px -22px rgba(12,42,71,.55);transition:box-shadow .3s var(--ease)}
+.nav.scrolled .nav-in{box-shadow:0 18px 44px -20px rgba(12,42,71,.7)}
+.brand img{height:60px;width:auto;object-fit:contain}
+.links{display:none;margin-left:auto;gap:.1rem}
+.links a{padding:.55rem .85rem;border-radius:999px;font-weight:600;font-size:16px;color:var(--ink-2);transition:background .2s,color .2s}
+.links a.act{background:var(--sage-l);color:var(--blue-d)}
+@media(hover:hover){.links a:hover{background:var(--sage-l);color:var(--blue-d)}}
+.nav-tools{margin-left:auto;display:flex;align-items:center;gap:.5rem}
+@media(min-width:960px){.links{display:flex}.nav-tools{margin-left:.4rem}}
+.lang{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;padding:3px}
+.lang button{min-width:44px;min-height:36px;border-radius:999px;font-weight:700;font-size:15px;color:var(--ink-2);transition:background .2s,color .2s}
+.lang button[aria-pressed="true"]{background:var(--blue);color:#fff}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.7rem 1.5rem;border-radius:999px;font-weight:700;font-size:16px;white-space:nowrap;transition:transform .2s var(--ease),box-shadow .25s var(--ease),background .2s,color .2s,border-color .2s}
+.btn:active{transform:scale(.97)}
+.btn-p{background:var(--blue);color:#fff;box-shadow:0 12px 26px -12px rgba(32,93,153,.8)}
+.btn-s{background:#fff;color:var(--blue-d);border:1.5px solid rgba(255,255,255,.9)}
+.btn-o{border:1.5px solid var(--blue);color:var(--blue-d)}
+.btn-sage{background:var(--sage);color:var(--navy)}
+.nav .btn{min-height:44px;padding:.55rem 1.1rem}
+@media(hover:hover){
+  .btn-p:hover{transform:translateY(-2px);box-shadow:0 18px 30px -14px rgba(32,93,153,.9);background:var(--blue-d)}
+  .btn-s:hover{transform:translateY(-2px);background:var(--sage-l)}
+  .btn-o:hover{background:var(--blue);color:#fff;transform:translateY(-2px)}
+  .btn-sage:hover{transform:translateY(-2px);background:#fff}
+}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* hero */
+.hero{min-height:100dvh;display:grid;align-items:center;padding:7.5rem 0 4rem;color:#fff;background:linear-gradient(135deg,var(--navy-2) 0%,var(--navy) 38%,var(--blue-d) 100%);overflow:hidden;isolation:isolate}
+.mesh{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.mesh i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;will-change:transform}
+.mesh i:nth-child(1){width:46vmax;height:46vmax;background:var(--sage);left:-14vmax;top:-12vmax;opacity:.32;animation:drift 22s ease-in-out infinite alternate}
+.mesh i:nth-child(2){width:38vmax;height:38vmax;background:var(--blue);right:-10vmax;bottom:-14vmax;opacity:.7;animation:drift 26s ease-in-out infinite alternate-reverse}
+.mesh i:nth-child(3){width:22vmax;height:22vmax;background:var(--sage);right:26%;top:8%;opacity:.18;animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(5vmax,4vmax,0) scale(1.12)}}
+.hero-grid{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr;gap:4rem}}
+.hero h1{font-size:clamp(2.7rem,6.6vw,5.2rem);line-height:1.04}
+.hero h1 em{color:var(--sage)}
+.hero p.lead{margin-top:1.4rem;font-size:clamp(1.08rem,1.7vw,1.25rem);color:rgba(255,255,255,.88);max-width:34ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.arch{position:relative;max-width:440px;margin-inline:auto;width:100%}
+.arch .frame{aspect-ratio:4/5;border-radius:999px 999px 28px 28px;overflow:hidden;border:6px solid rgba(255,255,255,.14);box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.arch .frame img{width:100%;height:100%;object-fit:cover;object-position:62% 50%;transform:scale(1.04);animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.12) translateY(-1%)}}
+.arch::before{content:"";position:absolute;inset:-18px -18px auto auto;width:62%;aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(130,175,154,.55);z-index:-1}
+.glass{position:absolute;left:-6%;bottom:9%;display:flex;align-items:center;gap:.8rem;padding:.8rem 1.1rem;border-radius:18px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.34);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 18px 40px -20px rgba(0,0,0,.6)}
+.glass b{font:600 2rem/1 var(--serif)}
+.glass small{display:block;font-size:15px;line-height:1.25;color:rgba(255,255,255,.92)}
+.stars{color:#F4C95D;letter-spacing:2px;font-size:15px}
+@media(max-width:899px){.glass{left:4%}}
+
+/* proof */
+.proof{background:var(--paper);padding:2.6rem 0;border-bottom:1px solid var(--line)}
+.proof ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem 1rem}
+@media(min-width:800px){.proof ul{grid-template-columns:repeat(4,1fr)}}
+.proof li{display:flex;flex-direction:column;gap:.15rem;padding-left:1rem;border-left:3px solid var(--sage)}
+.proof strong{font:600 clamp(1.7rem,3vw,2.3rem)/1.1 var(--serif);color:var(--blue-d)}
+.proof span{font-size:16px;color:var(--ink-2);line-height:1.35}
+
+/* services */
+.services{background:var(--mist)}
+.sec-head{max-width:46rem}
+.sec-head p{margin-top:1rem;color:var(--ink-2);font-size:1.1rem;max-width:56ch}
+.bento{display:grid;gap:1.1rem;margin-top:3rem}
+@media(min-width:900px){.bento{grid-template-columns:repeat(6,1fr)}.b4{grid-column:span 4}.b2{grid-column:span 2}.b3{grid-column:span 3}}
+.card{position:relative;border-radius:var(--r-card);padding:1.8rem;background:#fff;border:1px solid var(--line);box-shadow:0 1px 0 rgba(12,42,71,.04);transition:transform .35s var(--ease),box-shadow .35s var(--ease);overflow:hidden}
+@media(hover:hover){.card:hover{box-shadow:var(--shadow)}}
+.card .ico{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:var(--sage-l);color:var(--blue);margin-bottom:1.2rem;transition:transform .35s var(--ease),background .25s,color .25s}
+.card .ico svg{width:28px;height:28px}
+@media(hover:hover){.card:hover .ico{transform:scale(1.08) rotate(-4deg);background:var(--blue);color:#fff}}
+.card h3{font-size:1.55rem;margin-bottom:.55rem}
+.card p{color:var(--ink-2);font-size:16.5px}
+.card.feat{background:linear-gradient(150deg,var(--blue) 0%,var(--navy) 100%);color:#fff;border:0}
+.card.feat p{color:rgba(255,255,255,.86)}
+.card.feat .ico{background:rgba(255,255,255,.14);color:#fff}
+.card.sage{background:var(--sage-l);border-color:transparent}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.2rem;list-style:none;padding:0}
+.tags li{font-size:15px;font-weight:600;padding:.3rem .8rem;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3)}
+.card:not(.feat) .tags li{background:var(--sage-l);border-color:transparent;color:var(--blue-d)}
+.card.sage .tags li{background:#fff}
+
+/* doctors */
+.doctors{background:var(--paper)}
+.docs{display:grid;gap:2.4rem;margin-top:3rem}
+@media(min-width:860px){.docs{grid-template-columns:1fr 1fr;gap:3.5rem}.docs .doc:nth-child(2){margin-top:3.5rem}}
+.doc{display:grid;gap:1.2rem;align-content:start}
+.doc .ph{width:132px;height:132px;border-radius:50%;overflow:hidden;border:4px solid var(--sage-l);box-shadow:0 18px 34px -20px rgba(12,42,71,.6)}
+.doc .ph img{width:100%;height:100%;object-fit:cover}
+.doc h3{font-size:1.9rem}
+.doc .role{color:var(--sage-d);font-weight:700;font-size:16px;margin:.2rem 0 .8rem}
+.doc p{color:var(--ink-2)}
+
+/* cerec */
+.cerec{background:var(--navy);color:#fff;overflow:hidden}
+.cerec-grid{display:grid;gap:2.6rem;align-items:center}
+@media(min-width:900px){.cerec-grid{grid-template-columns:.95fr 1.05fr;gap:4.5rem}}
+.cerec .shot{border-radius:var(--r-card);overflow:hidden;box-shadow:0 40px 70px -34px rgba(0,0,0,.7);aspect-ratio:4/3.2}
+.cerec .shot img{width:100%;height:100%;object-fit:cover}
+.cerec p{margin-top:1.1rem;color:rgba(255,255,255,.86);max-width:48ch}
+.cerec .btn{margin-top:1.8rem}
+.cerec .glowline{position:absolute;right:-12%;top:-20%;width:44vmax;height:44vmax;border-radius:50%;border:1.5px solid rgba(130,175,154,.25)}
+
+/* reviews */
+.reviews{background:var(--sage-l)}
+.rv-head{display:flex;flex-wrap:wrap;gap:1.4rem 3rem;align-items:flex-end;justify-content:space-between}
+.big{display:flex;align-items:center;gap:1rem}
+.big b{font:600 4.4rem/1 var(--serif);color:var(--blue-d)}
+.big small{font-size:16px;line-height:1.3;color:var(--ink-2)}
+.car-wrap{position:relative;margin-top:2.6rem}
+.car{display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:.4rem .2rem 1rem;scroll-padding-inline:.2rem}
+.car::-webkit-scrollbar{display:none}
+.rc{flex:0 0 min(86%,420px);scroll-snap-align:start;background:#fff;border-radius:var(--r-card);padding:1.9rem;display:flex;flex-direction:column;gap:1rem;box-shadow:0 20px 40px -30px rgba(12,42,71,.5);border:1px solid rgba(16,38,61,.06)}
+.rc .qm{font:700 3.4rem/.6 var(--serif);color:var(--sage)}
+.rc blockquote{font-size:1.12rem;line-height:1.6;color:var(--ink)}
+.rc footer{margin-top:auto;font-size:16px;color:var(--ink-2)}
+.rc footer b{display:block;color:var(--ink)}
+.rc .orig{font-size:14px;color:var(--ink-3)}
+.car-ctl{display:flex;align-items:center;gap:1rem;margin-top:.8rem}
+.car-ctl button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--blue);color:var(--blue-d);display:grid;place-items:center;transition:background .2s,color .2s,transform .2s var(--ease)}
+.car-ctl button:active{transform:scale(.94)}
+@media(hover:hover){.car-ctl button:hover{background:var(--blue);color:#fff}}
+.car-ctl svg{width:20px;height:20px}
+.dots{display:flex;gap:.45rem;margin-left:.4rem}
+.dots i{width:9px;height:9px;border-radius:50%;background:rgba(32,93,153,.25);transition:background .2s,transform .2s}
+.dots i.on{background:var(--blue);transform:scale(1.25)}
+.gl{margin-left:auto;font-weight:700;color:var(--blue-d);text-decoration:underline;text-underline-offset:4px}
+
+/* family */
+.family{background:var(--paper)}
+.fam-grid{display:grid;gap:2.4rem;align-items:center}
+@media(min-width:900px){.fam-grid{grid-template-columns:1.05fr .95fr;gap:4.5rem}}
+.fam-grid .shot{border-radius:var(--r-card) var(--r-card) var(--r-card) 120px;overflow:hidden;aspect-ratio:4/3.2;box-shadow:var(--shadow)}
+.fam-grid .shot img{width:100%;height:100%;object-fit:cover;object-position:35% 50%}
+.fam-grid p{margin-top:1.1rem;color:var(--ink-2);max-width:50ch}
+.fam-grid .tags{margin-top:1.5rem}
+.fam-grid .tags li{background:var(--sage-l);color:var(--blue-d);border:0;font-size:16px;padding:.4rem 1rem}
+
+/* faq */
+.faq{background:var(--mist)}
+.faq-grid{display:grid;gap:2.2rem}
+@media(min-width:900px){.faq-grid{grid-template-columns:.8fr 1.2fr;gap:4.5rem}}
+.q{border-bottom:1px solid var(--line)}
+.q button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.25rem 0;text-align:left;font:600 1.12rem/1.35 var(--sans);min-height:56px}
+.q button i{flex:none;width:30px;height:30px;border-radius:50%;background:var(--sage-l);position:relative;transition:transform .3s var(--ease),background .2s}
+.q button i::before,.q button i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:var(--blue);transform:translate(-50%,-50%)}
+.q button i::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s var(--ease)}
+.q[data-open="true"] button i{background:var(--blue)}
+.q[data-open="true"] button i::before,.q[data-open="true"] button i::after{background:#fff}
+.q[data-open="true"] button i::after{transform:translate(-50%,-50%) rotate(0)}
+.q .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}
+.q[data-open="true"] .a{grid-template-rows:1fr}
+.q .a>div{overflow:hidden}
+.q .a p{padding:0 2.6rem 1.3rem 0;color:var(--ink-2)}
+
+/* visit */
+.visit{background:var(--paper)}
+.visit-grid{display:grid;gap:2.4rem;margin-top:2.6rem}
+@media(min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr;gap:3.5rem}}
+.open{display:inline-flex;align-items:center;gap:.6rem;padding:.5rem 1rem;border-radius:999px;background:var(--mist);font-weight:700;font-size:16px;margin-bottom:1.4rem}
+.open i{width:10px;height:10px;border-radius:50%;background:#9AA7B2}
+.open i.open{background:#2E9B63}
+#hours{list-style:none;padding:0;margin:0 0 1.6rem}
+#hours li{display:flex;justify-content:space-between;gap:1rem;padding:.65rem .9rem;border-radius:12px;font-size:16.5px}
+#hours li.today{background:var(--sage-l);font-weight:700}
+#hours li span:last-child{color:var(--ink-2)}
+.addr{font-style:normal;margin-bottom:1.4rem;color:var(--ink-2)}
+.addr b{display:block;color:var(--ink)}
+.map{border-radius:var(--r-card);overflow:hidden;min-height:340px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0}
+
+/* cta */
+.book{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-d) 55%,var(--navy) 100%);color:#fff;overflow:hidden;isolation:isolate}
+.book::before{content:"";position:absolute;z-index:-1;left:-12vmax;bottom:-18vmax;width:40vmax;height:40vmax;border-radius:50%;background:var(--sage);opacity:.22;filter:blur(60px)}
+.book-grid{display:grid;gap:2.6rem;align-items:start}
+@media(min-width:900px){.book-grid{grid-template-columns:.9fr 1.1fr;gap:4.5rem}}
+.book p.sub{margin-top:1rem;color:rgba(255,255,255,.88);max-width:42ch}
+.alt{margin-top:1.6rem;display:grid;gap:.7rem;font-weight:600}
+.alt a{display:inline-flex;align-items:center;gap:.7rem;min-height:44px}
+.alt svg{width:22px;height:22px;color:var(--sage)}
+form{background:#fff;color:var(--ink);border-radius:var(--r-card);padding:clamp(1.4rem,3vw,2.2rem);display:grid;gap:1.1rem;box-shadow:0 40px 70px -40px rgba(0,0,0,.6)}
+.f{display:grid;gap:.4rem}
+.f label{font-weight:700;font-size:16px}
+.f input,.f select{min-height:50px;padding:.7rem .95rem;border:1.5px solid #8696A6;border-radius:var(--r-in);background:#fff;transition:border-color .2s,box-shadow .2s}
+.f input:focus,.f select:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 4px rgba(32,93,153,.18)}
+.f .err{display:none;font-size:15px;color:#B3261E;font-weight:600}
+.f.bad .err{display:block}
+.f.bad input{border-color:#B3261E}
+.row2{display:grid;gap:1.1rem}
+@media(min-width:560px){.row2{grid-template-columns:1fr 1fr}}
+form .btn{width:100%;min-height:54px}
+.ok{display:none;text-align:center;padding:1rem 0;gap:1rem}
+form.sent>:not(.ok){display:none}
+form.sent .ok{display:grid;justify-items:center}
+.ok svg{width:76px;height:76px}
+.ok circle{stroke-dasharray:190;stroke-dashoffset:190;animation:dr .7s var(--ease) .1s forwards}
+.ok path{stroke-dasharray:50;stroke-dashoffset:50;animation:dr .5s var(--ease) .65s forwards}
+@keyframes dr{to{stroke-dashoffset:0}}
+.ok h3{font-size:1.8rem}
+.ok p{color:var(--ink-2)}
+.ok .acts{display:grid;gap:.7rem;width:100%;margin-top:.4rem}
+
+/* footer */
+footer.site{background:var(--navy-2);color:rgba(255,255,255,.82);padding:4.5rem 0 7.5rem}
+.ft{display:grid;gap:2.4rem}
+@media(min-width:860px){.ft{grid-template-columns:1.3fr 1fr 1fr 1fr}}
+.ft .lg{display:inline-block;background:#fff;border-radius:14px;padding:10px 16px}
+.ft .lg img{height:64px;width:auto}
+.ft h4{font:700 14px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--sage);margin-bottom:1rem}
+.ft p,.ft li,.ft a{font-size:16px}
+.ft ul{list-style:none;padding:0;display:grid;gap:.5rem}
+.ft a{transition:color .2s}
+@media(hover:hover){.ft a:hover{color:#fff}}
+.ft .about{margin-top:1.2rem;max-width:32ch}
+.copy{margin-top:3rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.14);font-size:15px;color:rgba(255,255,255,.66)}
+
+/* mobile bar */
+.bar{position:fixed;inset:auto 0 0 0;z-index:60;display:flex;gap:.6rem;padding:.6rem .8rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.bar .btn{flex:1}
+@media(min-width:900px){.bar{display:none}footer.site{padding-bottom:4.5rem}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .mesh i,.arch .frame img{animation:none}
+  *{scroll-behavior:auto!important}
+}
+@media(max-width:480px){.cta-row .btn{flex:1}.hero p.lead{max-width:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-t="skip">Saltar al contenido</a>
+<div id="splash" aria-hidden="true"><span><img src="images/logo.webp" alt=""></span></div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" data-ta="aria-label:brand_aria" aria-label="Weston Dental Design, inicio"><img src="images/logo.webp" width="150" height="60" alt="Weston Dental Design Group" data-ta="alt:logo_alt"></a>
+    <nav class="links" aria-label="Principal" data-ta="aria-label:nav_aria">
+      <a href="#servicios" data-t="n_serv">Servicios</a>
+      <a href="#doctores" data-t="n_doc">Doctores</a>
+      <a href="#resenas" data-t="n_rev">Reseñas</a>
+      <a href="#visitenos" data-t="n_vis">Visítenos</a>
+    </nav>
+    <div class="nav-tools">
+      <div class="lang" role="group" aria-label="Idioma" data-ta="aria-label:lang_aria">
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      </div>
+      <a class="btn btn-p" href="tel:9542178411" data-mag data-ta="aria-label:call_aria" aria-label="Llamar al 954-217-8411"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-t="call">Llamar</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero dark" id="top">
+  <div class="mesh" style="overflow:hidden" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero-grid">
+    <div>
+      <h1 class="rv" data-t="h1">Su sonrisa, diseñada con <em>cuidado.</em></h1>
+      <p class="lead rv" data-t="h_sub">Odontología cosmética y familiar en Weston, con el Dr. Javier Bonilla y la Dra. Claudia Izquierdo.</p>
+      <div class="cta-row rv">
+        <a class="btn btn-s" href="#cita" data-mag data-t="req">Pedir cita</a>
+        <a class="btn btn-o" style="color:#fff;border-color:rgba(255,255,255,.7)" href="tel:9542178411" data-mag><span data-t="call_num">Llamar al 954-217-8411</span></a>
+      </div>
+    </div>
+    <div class="arch rv">
+      <div class="frame"><img src="images/hero.webp" width="1600" height="1068" alt="Primer plano de una sonrisa con dientes blancos" data-ta="alt:hero_alt" fetchpriority="high"></div>
+      <div class="glass" data-ta="aria-label:rate_aria" aria-label="Calificación de Google: 4,9 de 5, con 167 reseñas">
+        <b data-t="r_num">4,9</b>
+        <span><span class="stars" aria-hidden="true">★★★★★</span><small data-t="r_lbl">167 reseñas en Google</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof" aria-label="Datos del consultorio">
+  <div class="wrap">
+    <ul>
+      <li class="rv"><strong><span data-count-to="4.9" data-decimals="1" data-t="p1n">4,9</span></strong><span data-t="p1">Calificación en Google con 167 reseñas</span></li>
+      <li class="rv"><strong data-t="p2n">EN y ES</strong><span data-t="p2">Atención en inglés y en español</span></li>
+      <li class="rv"><strong data-t="p3n">Lun a vie</strong><span data-t="p3">De 8:00 am a 5:30 pm</span></li>
+      <li class="rv"><strong data-t="p4n">I-75</strong><span data-t="p4">Fácil acceso desde el norte o el sur</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="services pad" id="servicios">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2 data-t="s_h2">Todo lo que su sonrisa necesita, en un <em>solo lugar.</em></h2>
+      <p data-t="s_sub">Estos son los tratamientos que el consultorio ofrece hoy, desde limpiezas hasta carillas e implantes.</p>
+    </div>
+    <div class="bento">
+      <article class="card feat b4 rv" data-tilt>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 4.6L18.5 9l-4.6 1.9L12 15.5l-1.9-4.6L5.5 9l4.6-1.4z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></div>
+        <h3 data-t="c1h">Odontología cosmética</h3>
+        <p data-t="c1p">Carillas de porcelana, Lumineers, levantamiento de encías y blanqueamiento Zoom o con láser.</p>
+        <ul class="tags"><li data-t="c1a">Carillas</li><li data-t="c1b">Lumineers</li><li data-t="c1c">Levantamiento de encías</li><li data-t="c1d">Blanqueamiento Zoom y láser</li></ul>
+      </article>
+      <article class="card b2 rv" data-tilt>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2 0-3.5 1.6-3.5 3.8 0 2.5 1.3 3.7 1.6 6 .3 2.4.6 7.2 2.4 7.2 1.5 0 1.3-4.2 2.5-4.2s1 4.2 2.5 4.2c1.8 0 2.1-4.800 2.400-7.200.3-2.300 1.600-3.500 1.600-6C18.500 4.600 17 3 15 3c-1.500 0-2.200.8-4 .8S8.500 3 7 3z"/></svg></div>
+        <h3 data-t="c2h">Implantes y restauración</h3>
+        <p data-t="c2p">Implantes, coronas, puentes, dentaduras y restauraciones para recuperar función y apariencia.</p>
+      </article>
+      <article class="card sage b2 rv" data-tilt>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18"/><rect x="5" y="8" width="5" height="8" rx="1.500"/><rect x="14" y="8" width="5" height="8" rx="1.500"/></svg></div>
+        <h3 data-t="c3h">Invisalign y ortodoncia</h3>
+        <p data-t="c3p">Alineadores Invisalign y ortodoncia, con una doctora con maestría en ortodoncia.</p>
+      </article>
+      <article class="card b4 rv" data-tilt>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9.500" r="2.200"/><path d="M3 20c0-3.300 2.700-6 6-6s6 2.700 6 6"/><path d="M15.500 14.200c.5-.1 1-.2 1.500-.2 2.200 0 4 1.800 4 4"/></svg></div>
+        <h3 data-t="c4h">Odontología familiar</h3>
+        <p data-t="c4p">Limpiezas, prevención, odontopediatría y cuidado dental para toda la familia, en una sola consulta.</p>
+        <ul class="tags"><li data-t="c4a">Limpiezas</li><li data-t="c4b">Prevención</li><li data-t="c4c">Odontopediatría</li></ul>
+      </article>
+      <article class="card b3 rv" data-tilt>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="M7 10l2 2 4-4"/></svg></div>
+        <h3 data-t="c5h">CEREC en una visita</h3>
+        <p data-t="c5p">Restauraciones diseñadas y colocadas en una sola cita.</p>
+      </article>
+      <article class="card b3 rv" data-tilt>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 12h18"/><rect x="4" y="4" width="16" height="16" rx="4"/></svg></div>
+        <h3 data-t="c6h">Urgencias y cirugía</h3>
+        <p data-t="c6p">Atención de urgencias, endodoncia, extracción de muelas del juicio y sedación oral.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="doctors pad" id="doctores">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow" data-t="d_eye">Los doctores</span>
+      <h2 data-t="d_h2">Conozca a quienes cuidarán su <em>sonrisa.</em></h2>
+    </div>
+    <div class="docs">
+      <article class="doc rv">
+        <div class="ph"><img src="images/dr-bonilla.webp" width="360" height="360" alt="Retrato del Dr. Javier Bonilla" data-ta="alt:bon_alt" loading="lazy"></div>
+        <div>
+          <h3>Dr. Javier E. Bonilla, DDS</h3>
+          <p class="role" data-t="d1r">Odontología cosmética y reconstructiva</p>
+          <p data-t="d1p">Se graduó en Bogotá, Colombia, y completó un programa de tres años en prostodoncia y odontología cosmética, donde ejerció como prostodoncista. Tras recibir un reconocimiento de la University of Florida por logro sobresaliente, abrió su práctica privada en Weston. Disfruta especialmente la reconstrucción completa de la boca.</p>
+        </div>
+      </article>
+      <article class="doc rv">
+        <div class="ph"><img src="images/dra-izquierdo.webp" width="360" height="360" alt="Retrato de la Dra. Claudia Izquierdo" data-ta="alt:izq_alt" loading="lazy"></div>
+        <div>
+          <h3>Dra. Claudia E. Izquierdo, DDS</h3>
+          <p class="role" data-t="d2r">Ortodoncia y odontopediatría</p>
+          <p data-t="d2p">Nació en Chicago y estudió odontología en la Universidad Javeriana de Bogotá. Obtuvo una maestría en ortodoncia y una certificación de la University of Florida College of Dentistry, donde fue reconocida como Estudiante Sobresaliente en 2002. Vive en Weston desde 2004 y disfruta atender a niños y jóvenes.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cerec pad dark" id="cerec" style="overflow:hidden">
+  <div class="glowline" aria-hidden="true"></div>
+  <div class="wrap cerec-grid">
+    <div class="rv">
+      <h2 data-t="e_h2">Su restauración, en una <em>sola visita.</em></h2>
+      <p data-t="e_p">Con CEREC, la restauración se diseña y se coloca en la misma cita. Pregunte si es una opción para su caso.</p>
+      <a class="btn btn-sage" href="#cita" data-mag data-t="req">Pedir cita</a>
+    </div>
+    <div class="shot rv"><img src="images/consulta.webp" width="1400" height="934" alt="Una doctora atiende a una paciente en un consultorio dental luminoso" data-ta="alt:cons_alt" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="reviews pad" id="resenas">
+  <div class="wrap">
+    <div class="rv-head rv">
+      <div class="sec-head">
+        <span class="eyebrow" data-t="v_eye">Reseñas</span>
+        <h2 data-t="v_h2">Lo que dicen sus <em>pacientes.</em></h2>
+      </div>
+      <div class="big" data-ta="aria-label:rate_aria" aria-label="Calificación de Google: 4,9 de 5, con 167 reseñas"><b data-t="r_num2">4,9</b><div><span class="stars" aria-hidden="true">★★★★★</span><small data-t="r_lbl2">167 reseñas en Google</small></div></div>
+    </div>
+    <div class="car-wrap rv">
+      <div class="car carousel" id="car" tabindex="0" role="region" aria-label="Reseñas de pacientes, deslice hacia los lados" data-ta="aria-label:car_aria">
+        <figure class="rc"><span class="qm" aria-hidden="true">“</span><blockquote lang="es">Excelente experiencia con la Dra. Izquierdo. Muy profesional, explica todo con claridad y amabilidad. El servicio es muy bueno y su equipo de trabajo es amable y servicial. La recomiendo totalmente.</blockquote><footer><b>Edna P.</b><span data-t="src_g">Reseña en Google</span> <span class="orig" data-t="o_es"></span></footer></figure>
+        <figure class="rc"><span class="qm" aria-hidden="true">“</span><blockquote lang="es">Excelente experiencia en esta oficina dental. Gabby en recepción fue muy amable y eficiente, Elena hizo una limpieza súper cuidadosa y profesional, y el doctor Javier explicó todo claramente y con mucha atención. Definitivamente recomiendo este lugar.</blockquote><footer><b>Jessica A.</b><span data-t="src_g2">Reseña en Google</span> <span class="orig" data-t="o_es2"></span></footer></figure>
+        <figure class="rc"><span class="qm" aria-hidden="true">“</span><blockquote lang="en">I had a great experience! I am very happy with the work done by Dr. Bonilla, excellent work at an affordable price. Dr. Bonilla and his staff are very friendly and make me feel welcome.</blockquote><footer><b>Sandra M.</b><span data-t="src_w">Testimonio en el sitio del consultorio</span> <span class="orig" data-t="o_en"></span></footer></figure>
+      </div>
+      <div class="car-ctl">
+        <button type="button" id="prev" aria-label="Reseña anterior" data-ta="aria-label:prev_aria"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" id="next" aria-label="Reseña siguiente" data-ta="aria-label:next_aria"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="dots" id="dots" aria-hidden="true"></div>
+        <a class="gl" href="https://www.google.com/maps/search/Weston+Dental+Design+Group+17140+Royal+Palm+Blvd+Weston+FL" target="_blank" rel="noopener" data-t="gl">Ver todas en Google</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="family pad" id="familia">
+  <div class="wrap fam-grid">
+    <div class="shot rv"><img src="images/familia.webp" width="1400" height="934" alt="Una niña en una revisión dental con la doctora" data-ta="alt:fam_alt" loading="lazy"></div>
+    <div class="rv">
+      <h2 data-t="f_h2">Una consulta cómoda para toda la <em>familia.</em></h2>
+      <p data-t="f_p">Limpiezas, prevención y odontología pediátrica, con la Dra. Izquierdo atendiendo a niños y jóvenes.</p>
+      <ul class="tags"><li data-t="f_a">Limpiezas</li><li data-t="f_b">Odontología preventiva</li><li data-t="f_c">Odontología pediátrica</li><li data-t="f_d">Rayos X</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="faq pad" id="faq">
+  <div class="wrap faq-grid">
+    <div class="rv"><h2 data-t="q_h2">Preguntas <em>frecuentes.</em></h2></div>
+    <div class="rv">
+      <div class="q" data-open="false"><button type="button" aria-expanded="false"><span data-t="q1">¿Hablan español?</span><i></i></button><div class="a"><div><p data-t="a1">Sí. El consultorio atiende en inglés y en español.</p></div></div></div>
+      <div class="q" data-open="false"><button type="button" aria-expanded="false"><span data-t="q2">¿Aceptan mi seguro dental?</span><i></i></button><div class="a"><div><p data-t="a2">Llámenos al 954-217-8411 y le confirmamos.</p></div></div></div>
+      <div class="q" data-open="false"><button type="button" aria-expanded="false"><span data-t="q3">¿Cuánto costará mi tratamiento?</span><i></i></button><div class="a"><div><p data-t="a3">Depende del tratamiento que necesite. Llámenos al 954-217-8411 y lo repasamos con usted.</p></div></div></div>
+      <div class="q" data-open="false"><button type="button" aria-expanded="false"><span data-t="q4">¿Hay opciones de financiación?</span><i></i></button><div class="a"><div><p data-t="a4">Llámenos al 954-217-8411 y le confirmamos las opciones disponibles.</p></div></div></div>
+      <div class="q" data-open="false"><button type="button" aria-expanded="false"><span data-t="q5">¿Atienden urgencias?</span><i></i></button><div class="a"><div><p data-t="a5">Las urgencias figuran entre los servicios del consultorio. Llámenos al 954-217-8411 y le indicamos cómo atenderle.</p></div></div></div>
+      <div class="q" data-open="false"><button type="button" aria-expanded="false"><span data-t="q6">¿Qué es CEREC?</span><i></i></button><div class="a"><div><p data-t="a6">Es una tecnología para diseñar y colocar la restauración en una sola visita. Pregunte si es una opción para su caso.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit pad" id="visitenos">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow" data-t="vi_eye">Visítenos</span>
+      <h2 data-t="vi_h2">En Royal Palm Boulevard, a un paso de la <em>I-75.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="rv">
+        <div class="open"><i id="opendot"></i><span id="opentext">…</span></div>
+        <ul id="hours">
+          <li data-d="1"><span data-t="day1">Lunes</span><span data-t="hrs">8:00 am a 5:30 pm</span></li>
+          <li data-d="2"><span data-t="day2">Martes</span><span data-t="hrs2">8:00 am a 5:30 pm</span></li>
+          <li data-d="3"><span data-t="day3">Miércoles</span><span data-t="hrs3">8:00 am a 5:30 pm</span></li>
+          <li data-d="4"><span data-t="day4">Jueves</span><span data-t="hrs4">8:00 am a 5:30 pm</span></li>
+          <li data-d="5"><span data-t="day5">Viernes</span><span data-t="hrs5">8:00 am a 5:30 pm</span></li>
+          <li data-d="6"><span data-t="day6">Sábado</span><span data-t="closed">Cerrado</span></li>
+          <li data-d="0"><span data-t="day0">Domingo</span><span data-t="closed2">Cerrado</span></li>
+        </ul>
+        <address class="addr"><b>Weston Dental Design Group</b>17140 Royal Palm Blvd #2<br>Weston, FL 33326</address>
+        <a class="btn btn-p" href="https://www.google.com/maps/dir/?api=1&destination=17140+Royal+Palm+Blvd+%232+Weston+FL+33326" target="_blank" rel="noopener" data-mag data-t="dir">Cómo llegar</a>
+      </div>
+      <div class="map rv"><iframe title="Mapa de Weston Dental Design, 17140 Royal Palm Blvd, Weston, FL" data-ta="title:map_title" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=17140+Royal+Palm+Blvd+%232+Weston+FL+33326&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="book pad dark" id="cita">
+  <div class="wrap book-grid">
+    <div class="rv">
+      <h2 data-t="b_h2">Pida su cita, estamos listos cuando <em>usted lo esté.</em></h2>
+      <p class="sub" data-t="b_sub">Cuéntenos qué necesita y qué día le conviene. Le confirmamos por teléfono.</p>
+      <div class="alt">
+        <a href="tel:9542178411"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-t="alt_call">Llamadas: 954-217-8411</span></a>
+        <a href="sms:9545049812"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.600 7.100L3 21l1.900-5.600A8 8 0 1 1 21 12z"/></svg><span data-t="alt_sms">Mensajes de texto: 954-504-9812</span></a>
+        <a href="mailto:contact@westondentaldesign.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>contact@westondentaldesign.com</span></a>
+      </div>
+    </div>
+    <form id="form" class="rv" novalidate>
+      <div class="row2">
+        <div class="f"><label for="fn" data-t="b_name">Su nombre</label><input id="fn" name="name" autocomplete="name" required><span class="err" data-t="b_err_n">Por favor escriba su nombre.</span></div>
+        <div class="f"><label for="fp" data-t="b_phone">Teléfono</label><input id="fp" name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span class="err" data-t="b_err_p">Por favor escriba un teléfono al que podamos llamarle.</span></div>
+      </div>
+      <div class="row2">
+        <div class="f"><label for="fr" data-t="b_reason">Motivo de su visita</label>
+          <select id="fr" name="reason">
+            <option value="r1" data-t="r1">Revisión y limpieza</option>
+            <option value="r2" data-t="r2">Carillas o blanqueamiento</option>
+            <option value="r3" data-t="r3">Implantes, coronas o puentes</option>
+            <option value="r4" data-t="r4">Invisalign u ortodoncia</option>
+            <option value="r5" data-t="r5">Urgencia dental</option>
+            <option value="r6" data-t="r6">Otro motivo</option>
+          </select></div>
+        <div class="f"><label for="fd" data-t="b_day">Día preferido</label>
+          <select id="fd" name="day">
+            <option value="p0" data-t="p0">Cualquier día de semana</option>
+            <option value="p1" data-t="p1d">Lunes</option>
+            <option value="p2" data-t="p2d">Martes</option>
+            <option value="p3" data-t="p3d">Miércoles</option>
+            <option value="p4" data-t="p4d">Jueves</option>
+            <option value="p5" data-t="p5d">Viernes</option>
+          </select></div>
+      </div>
+      <button class="btn btn-p" type="submit" data-t="b_submit">Pedir mi cita</button>
+      <div class="ok" aria-live="polite">
+        <svg viewBox="0 0 80 80" fill="none" aria-hidden="true"><circle cx="40" cy="40" r="30" stroke="#3F7A64" stroke-width="4"/><path d="M28 41l8 8 16-17" stroke="#3F7A64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3><span data-t="b_thanks">Gracias,</span> <span id="who"></span></h3>
+        <p id="sum"></p>
+        <div class="acts"><a class="btn btn-p" id="mail" href="#" data-t="b_mail">Enviar por email</a><a class="btn btn-o" href="tel:9542178411" data-t="call_num2">Llamar al 954-217-8411</a></div>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="site dark">
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a class="lg" href="#top"><img src="images/logo.webp" width="160" height="64" alt="Weston Dental Design Group" data-ta="alt:logo_alt" loading="lazy"></a>
+        <p class="about" data-t="ft_tag">Odontología cosmética y familiar en Weston, Florida.</p>
+      </div>
+      <div>
+        <h4 data-t="ft_contact">Contacto</h4>
+        <ul><li><a href="tel:9542178411">954-217-8411</a></li><li><a href="sms:9545049812"><span data-t="ft_text">Texto:</span> 954-504-9812</a></li><li><a href="mailto:contact@westondentaldesign.com">contact@westondentaldesign.com</a></li></ul>
+      </div>
+      <div>
+        <h4 data-t="ft_hours">Horario</h4>
+        <ul><li data-t="ft_h1">Lun a vie, 8:00 am a 5:30 pm</li><li>17140 Royal Palm Blvd #2<br>Weston, FL 33326</li></ul>
+      </div>
+      <div>
+        <h4 data-t="ft_explore">Explorar</h4>
+        <ul><li><a href="#servicios" data-t="n_serv2">Servicios</a></li><li><a href="#doctores" data-t="n_doc2">Doctores</a></li><li><a href="#resenas" data-t="n_rev2">Reseñas</a></li><li><a href="https://instagram.com/westondentaldesign/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/WestonDentalDesign" target="_blank" rel="noopener">Facebook</a></li></ul>
+      </div>
+    </div>
+    <p class="copy" data-t="ft_copy">Weston Dental Design Group. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="bar" role="group" aria-label="Acciones rápidas" data-ta="aria-label:bar_aria">
+  <a class="btn btn-o" href="tel:9542178411" data-t="call">Llamar</a>
+  <a class="btn btn-p" href="#cita" data-t="req">Pedir cita</a>
+</div>
+
+<script>
+(function(){
+"use strict";
+function $(s,r){return (r||document).querySelector(s)}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+function safe(f,n){try{f()}catch(e){if(window.console)console.warn("init "+n,e)}}
+var reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var fine=matchMedia("(hover:hover) and (pointer:fine)").matches;
+
+var T={es:{},en:{
+ skip:"Skip to content",n_serv:"Services",n_doc:"Doctors",n_rev:"Reviews",n_vis:"Visit us",call:"Call",call_num:"Call 954-217-8411",call_num2:"Call 954-217-8411",req:"Book a visit",
+ h1:"Your smile, designed with <em>care.</em>",h_sub:"Cosmetic and family dentistry in Weston, with Dr. Javier Bonilla and Dr. Claudia Izquierdo.",
+ r_num:"4.9",r_lbl:"167 Google reviews",r_num2:"4.9",r_lbl2:"167 Google reviews",
+ p1n:"4.9",p1:"Google rating from 167 reviews",p2n:"EN and ES",p2:"Care in English and Spanish",p3n:"Mon to Fri",p3:"8:00 am to 5:30 pm",p4n:"I-75",p4:"Easy access from the north or the south",
+ s_h2:"Everything your smile needs, in <em>one place.</em>",s_sub:"These are the treatments the practice offers today, from cleanings to veneers and implants.",
+ c1h:"Cosmetic dentistry",c1p:"Porcelain veneers, Lumineers, gum lift and Zoom or laser whitening.",c1a:"Veneers",c1b:"Lumineers",c1c:"Gum lift",c1d:"Zoom and laser whitening",
+ c2h:"Implants and restoration",c2p:"Implants, crowns, bridges, dentures and restorations to bring back function and appearance.",
+ c3h:"Invisalign and orthodontics",c3p:"Invisalign aligners and orthodontics, with a doctor who holds a master's degree in orthodontics.",
+ c4h:"Family dentistry",c4p:"Cleanings, prevention, pediatric dentistry and dental care for the whole family, in one office.",c4a:"Cleanings",c4b:"Prevention",c4c:"Pediatric dentistry",
+ c5h:"CEREC in one visit",c5p:"Restorations designed and placed in a single appointment.",
+ c6h:"Emergencies and surgery",c6p:"Emergency care, root canals, wisdom tooth extraction and oral sedation.",
+ d_eye:"The doctors",d_h2:"Meet the doctors who will care for your <em>smile.</em>",
+ d1r:"Cosmetic and reconstructive dentistry",d1p:"Dr. Bonilla graduated in Bogotá, Colombia, and completed a three-year program in prosthodontics and cosmetic dentistry, where he practiced as a prosthodontist. After recognition from the University of Florida for outstanding achievement, he opened his private practice in Weston. He especially enjoys full mouth reconstruction.",
+ d2r:"Orthodontics and pediatric dentistry",d2p:"Dr. Izquierdo was born in Chicago and earned her dental degree at the Universidad Javeriana in Bogotá. She holds a master's degree in orthodontics and a certification from the University of Florida College of Dentistry, where she was named Outstanding Student in 2002. She has lived in Weston since 2004 and enjoys treating children and young patients.",
+ e_h2:"Your restoration, in a <em>single visit.</em>",e_p:"With CEREC, the restoration is designed and placed in the same appointment. Ask whether it is an option for your case.",
+ v_eye:"Reviews",v_h2:"What patients <em>say.</em>",src_g:"Google review",src_g2:"Google review",src_w:"Testimonial on the practice's website",o_es:"Original review in Spanish",o_es2:"Original review in Spanish",o_en:"",gl:"See all on Google",
+ f_h2:"A comfortable office for the whole <em>family.</em>",f_p:"Cleanings, prevention and pediatric dentistry, with Dr. Izquierdo treating children and young patients.",f_a:"Cleanings",f_b:"Preventive dentistry",f_c:"Pediatric dentistry",f_d:"X-rays",
+ q_h2:"Frequently asked <em>questions.</em>",
+ q1:"Do you speak Spanish?",a1:"Yes. The practice sees patients in English and in Spanish.",
+ q2:"Do you accept my dental insurance?",a2:"Call us at 954-217-8411 and we will confirm.",
+ q3:"How much will my treatment cost?",a3:"It depends on the treatment you need. Call us at 954-217-8411 and we will go over it with you.",
+ q4:"Are there financing options?",a4:"Call us at 954-217-8411 and we will confirm the options available.",
+ q5:"Do you see dental emergencies?",a5:"Emergencies are among the services the practice lists. Call us at 954-217-8411 and we will tell you how we can help.",
+ q6:"What is CEREC?",a6:"It is a technology to design and place a restoration in a single visit. Ask whether it is an option for your case.",
+ vi_eye:"Visit us",vi_h2:"On Royal Palm Boulevard, steps from <em>I-75.</em>",
+ day1:"Monday",day2:"Tuesday",day3:"Wednesday",day4:"Thursday",day5:"Friday",day6:"Saturday",day0:"Sunday",hrs:"8:00 am to 5:30 pm",hrs2:"8:00 am to 5:30 pm",hrs3:"8:00 am to 5:30 pm",hrs4:"8:00 am to 5:30 pm",hrs5:"8:00 am to 5:30 pm",closed:"Closed",closed2:"Closed",dir:"Get directions",
+ b_h2:"Request your appointment, we are ready when <em>you are.</em>",b_sub:"Tell us what you need and which day suits you. We will confirm by phone.",
+ alt_call:"Calls: 954-217-8411",alt_sms:"Text messages: 954-504-9812",
+ b_name:"Your name",b_err_n:"Please enter your name.",b_phone:"Phone",b_err_p:"Please enter a phone number where we can reach you.",b_reason:"Reason for your visit",b_day:"Preferred day",
+ r1:"Checkup and cleaning",r2:"Veneers or whitening",r3:"Implants, crowns or bridges",r4:"Invisalign or orthodontics",r5:"Dental emergency",r6:"Another reason",
+ p0:"Any weekday",p1d:"Monday",p2d:"Tuesday",p3d:"Wednesday",p4d:"Thursday",p5d:"Friday",
+ b_submit:"Request my appointment",b_thanks:"Thank you,",b_mail:"Send by email",
+ ft_tag:"Cosmetic and family dentistry in Weston, Florida.",ft_contact:"Contact",ft_text:"Text:",ft_hours:"Hours",ft_h1:"Mon to Fri, 8:00 am to 5:30 pm",ft_explore:"Explore",n_serv2:"Services",n_doc2:"Doctors",n_rev2:"Reviews",ft_copy:"Weston Dental Design Group. All rights reserved."
+},esA:{},enA:{
+ brand_aria:"Weston Dental Design, home",logo_alt:"Weston Dental Design Group",nav_aria:"Main",lang_aria:"Language",call_aria:"Call 954-217-8411",
+ hero_alt:"Close-up of a smile with white teeth",rate_aria:"Google rating: 4.9 out of 5, from 167 reviews",
+ bon_alt:"Portrait of Dr. Javier Bonilla",izq_alt:"Portrait of Dr. Claudia Izquierdo",cons_alt:"A doctor treats a patient in a bright dental office",fam_alt:"A young girl at a dental checkup with the doctor",
+ car_aria:"Patient reviews, swipe sideways",prev_aria:"Previous review",next_aria:"Next review",map_title:"Map of Weston Dental Design, 17140 Royal Palm Blvd, Weston, FL",bar_aria:"Quick actions"}};
+var D={
+ es:{title:"Weston Dental Design | Odontología cosmética y familiar en Weston, FL",desc:"Weston Dental Design, con el Dr. Javier Bonilla y la Dra. Claudia Izquierdo. Odontología cosmética y familiar en 17140 Royal Palm Blvd, Weston, FL. Llame al 954-217-8411.",
+  open:"Abierto ahora, cierra a las ",closedToday:"Cerrado, abre hoy a las ",closedTom:"Cerrado, abre mañana a las ",closedDay:"Cerrado, abre el ",at:" a las ",days:["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],
+  reasons:{r1:"Revisión y limpieza",r2:"Carillas o blanqueamiento",r3:"Implantes, coronas o puentes",r4:"Invisalign u ortodoncia",r5:"Urgencia dental",r6:"Otro motivo"},
+  sum:function(r,d){return "Su solicitud está lista: "+r+", "+d+". Llame al 954-217-8411 o envíela por email y el consultorio le confirmará un horario."},
+  mail:function(n,p,r,d){return "Hola, quisiera pedir una cita.%0D%0ANombre: "+n+"%0D%0ATeléfono: "+p+"%0D%0AMotivo: "+r+"%0D%0ADía preferido: "+d},subj:"Solicitud de cita"},
+ en:{title:"Weston Dental Design | Cosmetic and Family Dentistry in Weston, FL",desc:"Weston Dental Design, with Dr. Javier Bonilla and Dr. Claudia Izquierdo. Cosmetic and family dentistry at 17140 Royal Palm Blvd, Weston, FL. Call 954-217-8411.",
+  open:"Open now, closes ",closedToday:"Closed, opens today at ",closedTom:"Closed, opens tomorrow at ",closedDay:"Closed, opens ",at:" at ",days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+  sum:function(r,d){return "Your request is ready: "+r+", "+d+". Call 954-217-8411 or send it by email and the practice will confirm a time."},
+  mail:function(n,p,r,d){return "Hello, I would like to request an appointment.%0D%0AName: "+n+"%0D%0APhone: "+p+"%0D%0AReason: "+r+"%0D%0APreferred day: "+d},subj:"Appointment request"}
+};
+var lang="es";
+
+safe(function(){
+  $$("[data-t]").forEach(function(el){T.es[el.getAttribute("data-t")]=el.innerHTML});
+  $$("[data-ta]").forEach(function(el){el.getAttribute("data-ta").split(",").forEach(function(p){var a=p.split(":");T.esA[a[1]]=el.getAttribute(a[0])})});
+},"capture");
+
+function setLang(l,persist){
+  lang=l;document.documentElement.lang=l;
+  $$("[data-t]").forEach(function(el){var k=el.getAttribute("data-t"),v=T[l][k];if(v!==undefined)el.innerHTML=v});
+  $$("[data-ta]").forEach(function(el){el.getAttribute("data-ta").split(",").forEach(function(p){var a=p.split(":"),v=(l==="es"?T.esA:T.enA)[a[1]];if(v!==undefined)el.setAttribute(a[0],v)})});
+  $$(".lang button").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-lang")===l))});
+  document.title=D[l].title;
+  var m=$('meta[name="description"]');if(m)m.setAttribute("content",D[l].desc);
+  var c=$("[data-count-to]");if(c)c.textContent=l==="es"?"4,9":"4.9";
+  renderOpen();
+  var f=$("#form");if(f&&f.classList.contains("sent"))renderSum();
+  if(persist){try{localStorage.setItem("lang",l)}catch(e){}}
+}
+safe(function(){$$(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-lang"),true)})})},"lang");
+
+safe(function(){
+  var s=$("#splash");if(!s)return;
+  var hide=function(){s.classList.add("hide")};
+  if(document.readyState==="complete")setTimeout(hide,600);else addEventListener("load",function(){setTimeout(hide,600)});
+  setTimeout(hide,1700);
+},"splash");
+
+safe(function(){
+  var nav=$("#nav"),sent=document.createElement("div");
+  sent.style.cssText="position:absolute;top:0;left:0;height:24px;width:1px;pointer-events:none";
+  document.body.prepend(sent);
+  new IntersectionObserver(function(e){nav.classList.toggle("scrolled",!e[0].isIntersecting)}).observe(sent);
+  var links=$$(".links a"),map={};
+  links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a});
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.classList.remove("act")});var a=map[en.target.id];if(a)a.classList.add("act")}})},{rootMargin:"-45% 0px -50% 0px"});
+  Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el)});
+},"nav");
+
+safe(function(){
+  var els=$$(".rv");
+  if(!("IntersectionObserver" in window)||reduced){els.forEach(function(e){e.classList.add("in")});return}
+  els.forEach(function(e,i){e.style.setProperty("--d",(i%4)*0.07+"s")});
+  var io=new IntersectionObserver(function(es,o){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");o.unobserve(en.target)}})},{threshold:.04,rootMargin:"0px 0px -6% 0px"});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.add("in")})},3500);
+},"reveal");
+
+safe(function(){
+  var el=$("[data-count-to]");if(!el||reduced)return;
+  var to=4.9,done=false;
+  new IntersectionObserver(function(es,o){es.forEach(function(en){if(en.isIntersecting&&!done){done=true;o.disconnect();var t0=performance.now();(function tick(n){var p=Math.min(1,(n-t0)/1300),e=1-Math.pow(1-p,3),v=(to*e).toFixed(1);el.textContent=lang==="es"?v.replace(".",","):v;if(p<1)requestAnimationFrame(tick)})(t0)}})},{threshold:.6}).observe(el);
+},"count");
+
+safe(function(){
+  if(!fine||reduced)return;
+  $$("[data-tilt]").forEach(function(c){
+    c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="perspective(900px) rotateX("+(-y*4)+"deg) rotateY("+(x*4)+"deg) translateY(-4px)"});
+    c.addEventListener("mouseleave",function(){c.style.transform=""});
+  });
+  $$("[data-mag]").forEach(function(b){
+    b.addEventListener("mousemove",function(e){var r=b.getBoundingClientRect();b.style.translate=((e.clientX-r.left-r.width/2)*.12)+"px "+((e.clientY-r.top-r.height/2)*.2)+"px"});
+    b.addEventListener("mouseleave",function(){b.style.translate=""});
+  });
+},"fx");
+
+var H={0:null,1:[8,17.5],2:[8,17.5],3:[8,17.5],4:[8,17.5],5:[8,17.5],6:null};
+function fmtT(h){var hh=Math.floor(h),m=Math.round((h-hh)*60),ap=hh>=12?"pm":"am",h12=hh%12||12;return h12+(m?":"+(m<10?"0":"")+m:"")+" "+ap}
+function nowMiami(){
+  var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date()),o={};
+  p.forEach(function(x){o[x.type]=x.value});
+  return{d:{Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday],t:(parseInt(o.hour,10)%24)+parseInt(o.minute,10)/60};
+}
+function renderOpen(){
+  safe(function(){
+    var n=nowMiami(),h=H[n.d],t=D[lang],txt,open=false;
+    if(h&&n.t>=h[0]&&n.t<h[1]){open=true;txt=t.open+fmtT(h[1])}
+    else{
+      var d=n.d,off=0;
+      if(h&&n.t<h[0]){txt=t.closedToday+fmtT(h[0])}
+      else{do{d=(d+1)%7;off++}while(!H[d]);txt=(off===1?t.closedTom+fmtT(H[d][0]):t.closedDay+t.days[d]+t.at+fmtT(H[d][0]))}
+    }
+    $("#opentext").textContent=txt;$("#opendot").classList.toggle("open",open);
+    $$("#hours li").forEach(function(li){li.classList.toggle("today",parseInt(li.getAttribute("data-d"),10)===n.d)});
+  },"open");
+}
+
+safe(function(){
+  var car=$("#car"),dots=$("#dots"),cards=$$(".rc",car);
+  cards.forEach(function(){dots.appendChild(document.createElement("i"))});
+  var di=$$("i",dots);if(di[0])di[0].classList.add("on");
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){var i=cards.indexOf(en.target);di.forEach(function(d,k){d.classList.toggle("on",k===i)})}})},{root:car,threshold:.6});
+  cards.forEach(function(c){io.observe(c)});
+  function step(dir){var w=cards[0].getBoundingClientRect().width+18;car.scrollBy({left:dir*w,behavior:reduced?"auto":"smooth"})}
+  $("#prev").addEventListener("click",function(){step(-1)});
+  $("#next").addEventListener("click",function(){step(1)});
+  car.addEventListener("keydown",function(e){if(e.key==="ArrowRight"){e.preventDefault();step(1)}if(e.key==="ArrowLeft"){e.preventDefault();step(-1)}});
+},"carousel");
+
+safe(function(){
+  $$(".q").forEach(function(q){
+    var b=$("button",q);
+    b.addEventListener("click",function(){var o=q.getAttribute("data-open")==="true";q.setAttribute("data-open",String(!o));b.setAttribute("aria-expanded",String(!o))});
+  });
+},"faq");
+
+function renderSum(){
+  var f=$("#form"),t=D[lang],rv=$("#fr").value,dv=$("#fd").value;
+  var rTxt=$("#fr").selectedOptions[0].textContent,dTxt=$("#fd").selectedOptions[0].textContent;
+  $("#sum").textContent=t.sum(rTxt,dTxt);
+  $("#mail").setAttribute("href","mailto:contact@westondentaldesign.com?subject="+encodeURIComponent(t.subj)+"&body="+t.mail(encodeURIComponent(f.name.value.trim()),encodeURIComponent(f.phone.value.trim()),encodeURIComponent(rTxt),encodeURIComponent(dTxt)));
+}
+safe(function(){
+  var f=$("#form");if(!f)return;
+  function chk(i){var w=i.closest(".f"),bad=!i.value.trim()||(i.name==="phone"&&i.value.replace(/\D/g,"").length<7);w.classList.toggle("bad",bad);return !bad}
+  $$("input[required]",f).forEach(function(i){i.addEventListener("input",function(){if(i.closest(".f").classList.contains("bad"))chk(i)})});
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var ok=$$("input[required]",f).map(chk).every(Boolean);
+    if(!ok){var b=$(".f.bad input",f);if(b)b.focus();return}
+    $("#who").textContent=f.name.value.trim().split(" ")[0];
+    renderSum();f.classList.add("sent");
+  });
+},"form");
+
+var saved=null;try{saved=localStorage.getItem("lang")}catch(e){}
+if(saved==="en")setLang("en",false);else renderOpen();
+})();
+</script>
+</body>
+</html>
