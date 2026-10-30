@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Best Smile 4 All | Family Dentist in Plantation, FL</title>
+<meta name="description" content="Family and pediatric dentistry, cosmetic dentistry, emergencies and Invisalign in Plantation, FL. Dr. Paola Piñeros and Dr. Javier Servigna." data-ta="content:meta_desc">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#082a4d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230c5493'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='38' text-anchor='middle' fill='white'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --navy:#082a4d;--navy-2:#0b3a68;--blue:#0c5493;--blue-2:#195fad;--sky:#2b99d4;--sky-l:#dcedf8;
+  --orange:#f37d07;--orange-d:#b45500;--peach:#fff1e0;
+  --paper:#f3f8fd;--white:#fff;--ink:#0d2238;--ink-2:#43576b;--line:#d5e3ef;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;--body:"Nunito",system-ui,sans-serif;
+  --r-card:24px;--r-in:14px;--r-pill:999px;
+  --out:cubic-bezier(.23,1,.32,1);--io:cubic-bezier(.77,0,.175,1);
+  --sh:0 18px 40px -18px rgba(8,42,77,.35);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{margin:0;font:400 17px/1.6 var(--body);color:var(--ink);background:var(--white);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.08;letter-spacing:-.02em}
+p{margin:0}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:var(--navy);padding:.6rem 1rem;border-radius:var(--r-pill);z-index:200}
+.skip:focus{left:8px}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+section{position:relative;padding:clamp(64px,9vw,120px) 0}
+em{font-style:italic;font-weight:inherit}
+h1 em,h2 em{display:inline-block;padding-bottom:.08em;color:var(--orange)}
+
+/* splash */
+#splash{position:fixed;inset:0;z-index:300;background:var(--navy);display:grid;place-items:center;transition:opacity .5s var(--out),visibility .5s}
+#splash.hide{opacity:0;visibility:hidden}
+#splash img{width:96px;height:96px;border-radius:50%;animation:pop .9s var(--out) both}
+@keyframes pop{from{transform:scale(.85);opacity:0}to{transform:none;opacity:1}}
+
+/* nav */
+.nav{position:fixed;top:12px;left:0;right:0;z-index:100;pointer-events:none}
+.nav-in{pointer-events:auto;width:min(1200px,100% - 24px);margin-inline:auto;display:flex;align-items:center;gap:10px;justify-content:space-between;padding:8px 10px 8px 10px;border-radius:var(--r-pill);background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border:1px solid rgba(255,255,255,.7);box-shadow:0 10px 30px -12px rgba(8,42,77,.45);transition:box-shadow .3s var(--out),background .3s}
+.nav.scrolled .nav-in{background:rgba(255,255,255,.96);box-shadow:0 14px 34px -12px rgba(8,42,77,.55)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 15px/1.1 var(--display);letter-spacing:.01em;color:var(--navy)}
+.brand img{flex:none;width:60px;height:60px;object-fit:contain;border-radius:50%}
+.brand span{display:none}
+.nav-links{display:none;gap:2px;align-items:center}
+.nav-links a{text-decoration:none;font-weight:700;font-size:15px;padding:10px 14px;border-radius:var(--r-pill);color:var(--ink);transition:background .2s,color .2s}
+.nav-cta{display:flex;align-items:center;gap:8px}
+.lang{display:inline-flex;padding:3px;border-radius:var(--r-pill);background:var(--sky-l);border:1px solid var(--line)}
+.lang button{min-width:44px;min-height:40px;padding:0 .7rem;border-radius:var(--r-pill);font:800 14px var(--display);color:var(--ink-2);transition:background .2s,color .2s}
+.lang button[aria-pressed="true"]{background:var(--blue);color:#fff}
+.btn.call-n{display:none}
+.burger{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--sky-l)}
+.burger svg{width:22px;height:22px}
+.menu{position:fixed;top:84px;left:12px;right:12px;z-index:99;background:#fff;border-radius:var(--r-card);padding:10px;box-shadow:var(--sh);display:grid;gap:2px;transform:translateY(-8px) scale(.98);opacity:0;visibility:hidden;transition:transform .22s var(--out),opacity .22s var(--out),visibility .22s;transform-origin:top right}
+.menu.open{transform:none;opacity:1;visibility:visible}
+.menu a{text-decoration:none;font-weight:700;padding:14px 16px;border-radius:14px;min-height:48px;display:flex;align-items:center}
+.menu a:active{background:var(--sky-l)}
+@media(min-width:1000px){
+  .brand span{display:block}
+  .nav-links{display:flex}.burger,.menu{display:none}
+  .btn.call-n{display:inline-flex}
+}
+@media(hover:hover){.nav-links a:hover{background:var(--sky-l);color:var(--blue)}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:52px;padding:0 1.6rem;border-radius:var(--r-pill);font:800 16px var(--display);text-decoration:none;white-space:nowrap;transition:transform .2s var(--out),box-shadow .25s var(--out),background .2s,color .2s;will-change:transform}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:active{transform:scale(.97)}
+.btn-o{background:var(--orange);color:var(--navy);box-shadow:0 12px 26px -10px rgba(243,125,7,.7)}
+.btn-w{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+.btn-b{background:var(--blue);color:#fff;box-shadow:0 12px 26px -12px rgba(12,84,147,.8)}
+.btn-n{background:var(--navy);color:#fff}
+.btn-sm{min-height:44px;padding:0 1.1rem;font-size:15px}
+@media(hover:hover) and (pointer:fine){
+  .btn-o:hover{box-shadow:0 18px 32px -10px rgba(243,125,7,.85);background:#ff8a1a}
+  .btn-w:hover{background:#fff;color:var(--navy)}
+  .btn-b:hover{background:var(--blue-2);box-shadow:0 18px 32px -12px rgba(12,84,147,.9)}
+  .btn-n:hover{background:var(--blue)}
+}
+
+/* hero */
+.hero{min-height:100dvh;display:flex;align-items:center;padding:132px 0 72px;color:#fff;background:linear-gradient(150deg,var(--navy) 0%,#0a3f78 55%,var(--blue) 100%);overflow:hidden;isolation:isolate}
+.mesh{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.mesh i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:drift 18s ease-in-out infinite alternate}
+.mesh i:nth-child(1){width:46vw;height:46vw;max-width:560px;max-height:560px;background:var(--sky);top:-12%;right:-6%}
+.mesh i:nth-child(2){width:36vw;height:36vw;max-width:440px;max-height:440px;background:var(--orange);bottom:-14%;left:-8%;opacity:.32;animation-duration:22s;animation-delay:-6s}
+.mesh i:nth-child(3){width:30vw;height:30vw;max-width:360px;max-height:360px;background:#3b82d6;top:40%;left:38%;opacity:.3;animation-duration:26s;animation-delay:-12s}
+@keyframes drift{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(4vw,3vw,0) scale(1.12)}}
+.hero-g{display:grid;gap:44px;align-items:center}
+.hero h1{font-size:clamp(40px,6.2vw,76px);font-weight:800;max-width:14ch}
+.hero .lead{margin-top:20px;font-size:clamp(17px,2vw,20px);color:#d8e8f6;max-width:34ch}
+.hero .cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.hero-fig{position:relative;max-width:560px;width:100%;margin-inline:auto}
+.hero-fig::before{content:"";position:absolute;inset:6% -4% -5% 8%;border-radius:36px;background:var(--orange);transform:rotate(4deg);opacity:.95}
+.hero-fig>img{position:relative;width:100%;aspect-ratio:4/3.5;object-fit:cover;object-position:76% 70%;border-radius:32px;box-shadow:0 30px 60px -24px rgba(0,0,0,.6)}
+.glass{position:absolute;display:flex;align-items:center;gap:12px;padding:12px 18px 12px 14px;border-radius:20px;background:rgba(8,42,77,.62);-webkit-backdrop-filter:blur(16px) saturate(170%);backdrop-filter:blur(16px) saturate(170%);border:1px solid rgba(255,255,255,.4);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 16px 36px -14px rgba(0,0,0,.5);color:#fff}
+.glass.g1{left:-10px;bottom:9%;animation:float 6s ease-in-out infinite}
+.glass.g2{right:-6px;top:7%;animation:float 7s ease-in-out -3s infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.glass b{font:800 28px/1 var(--display)}
+.glass small{display:block;font-size:13px;font-weight:700;color:#eaf4fc;line-height:1.25}
+.glass .dot{width:12px;height:12px;border-radius:50%;background:#7dffb0;box-shadow:0 0 0 4px rgba(125,255,176,.3)}
+.glass .dot.off{background:#ffb27a;box-shadow:0 0 0 4px rgba(255,178,122,.28)}
+.stars{display:flex;gap:2px;color:#ffc861}
+.stars svg{width:15px;height:15px}
+@media(min-width:900px){.hero-fig>img{aspect-ratio:1/1.02;max-height:72vh;object-position:62% 45%}.hero-g{grid-template-columns:1.05fr .95fr;gap:56px}.glass.g1{left:-34px}.glass.g2{right:-22px}}
+
+/* proof strip */
+.proof{background:var(--paper);padding:48px 0}
+.proof-g{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pk{background:#fff;border-radius:var(--r-card);padding:22px 20px;border:1px solid var(--line);text-align:left}
+.pk b{display:block;font:800 clamp(34px,5vw,52px)/1 var(--display);color:var(--blue)}
+.pk span{display:block;margin-top:8px;font-weight:700;font-size:15px;color:var(--ink-2)}
+@media(min-width:800px){.proof-g{grid-template-columns:repeat(4,1fr);gap:16px}}
+
+/* headings */
+.sec-h{max-width:640px;margin-bottom:44px}
+.sec-h h2{font-size:clamp(32px,4.6vw,54px);font-weight:800}
+.sec-h p{margin-top:16px;color:var(--ink-2);max-width:54ch}
+.eyebrow{display:inline-block;margin-bottom:14px;font:800 13px var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--orange-d)}
+.dark .eyebrow{color:#ffb35c}
+
+/* services */
+.services{background:#fff}
+.bento{display:grid;gap:16px;grid-template-columns:1fr}
+.sv{position:relative;border-radius:var(--r-card);padding:28px;overflow:hidden;min-height:240px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .35s var(--out),box-shadow .35s var(--out);transform-style:preserve-3d}
+.sv .ic{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;margin-bottom:auto;transition:transform .35s var(--out)}
+.sv .ic svg{width:30px;height:30px}
+.sv h3{font-size:clamp(24px,3vw,32px);font-weight:800;margin-top:20px}
+.sv p{margin-top:10px;max-width:38ch;font-size:16.5px}
+.sv.a{background:linear-gradient(160deg,rgba(8,42,77,.25),rgba(8,42,77,.92)),url(images/equipo.webp) center/cover;color:#fff}
+.sv.a .ic{background:rgba(255,255,255,.2);color:#fff;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.sv.b{background:var(--sky-l);color:var(--navy)}
+.sv.b .ic{background:var(--blue);color:#fff}
+.sv.c{background:linear-gradient(150deg,var(--orange),#ff9a3d);color:var(--navy)}
+.sv.c .ic{background:var(--navy);color:#fff}
+.sv.d{background:var(--navy);color:#fff}
+.sv.d .ic{background:var(--sky);color:var(--navy)}
+.sv a.more{margin-top:18px;font-weight:800;text-decoration:none;display:inline-flex;gap:8px;align-items:center;min-height:44px}
+@media(hover:hover) and (pointer:fine){.sv:hover{box-shadow:0 26px 50px -22px rgba(8,42,77,.55);transform:translateY(-6px)}.sv:hover .ic{transform:scale(1.08) rotate(-4deg)}}
+@media(min-width:760px){.bento{grid-template-columns:repeat(6,1fr)}.sv.a{grid-column:span 4;min-height:340px}.sv.b{grid-column:span 2}.sv.c{grid-column:span 2}.sv.d{grid-column:span 4}}
+.also{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.also b{font:800 16px var(--display);margin-right:6px}
+.chip{padding:9px 16px;border-radius:var(--r-pill);background:var(--paper);border:1px solid var(--line);font-weight:700;font-size:15px;color:var(--ink)}
+
+/* doctors */
+.dark{background:linear-gradient(180deg,var(--navy) 0%,#0a3560 100%);color:#fff}
+.dark .sec-h p{color:#c9dbec}
+.docs{display:grid;gap:20px}
+.doc{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start;padding:22px;border-radius:var(--r-card);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:inset 0 1px 0 rgba(255,255,255,.14);transition:transform .25s var(--out),background .25s;transform-style:preserve-3d}
+.doc img{width:120px;aspect-ratio:3/4;object-fit:cover;object-position:50% 12%;border-radius:20px;background:var(--navy-2)}
+.doc h3{font-size:clamp(22px,2.6vw,28px);font-weight:800}
+.doc .role{margin-top:4px;color:#ffb35c;font-weight:800;font-size:15px}
+.doc ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px;color:#d4e3f1;font-size:16px}
+.doc li{padding-left:22px;position:relative}
+.doc li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:50%;background:var(--orange)}
+@media(min-width:900px){.docs{grid-template-columns:1fr 1fr}.doc{grid-template-columns:1fr;padding:26px}.doc img{width:100%;max-width:230px;aspect-ratio:3/4}}
+@media(hover:hover) and (pointer:fine){.doc:hover{background:rgba(255,255,255,.11)}}
+
+/* reviews */
+.reviews{background:var(--peach)}
+.rv-g{display:grid;gap:24px;align-items:center}
+.rv-card{position:relative;background:#fff;border-radius:32px;padding:clamp(28px,4vw,52px);box-shadow:var(--sh)}
+.rv-card::before{content:"\201C";position:absolute;top:-8px;left:26px;font:800 120px/1 var(--display);color:var(--orange);opacity:.9}
+.rv-card .stars{margin-top:46px}
+.rv-card blockquote{margin:16px 0 0;font:700 clamp(21px,2.8vw,30px)/1.35 var(--display);letter-spacing:-.01em;color:var(--navy)}
+.rv-card footer{margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.rv-card footer b{font:800 17px var(--display)}
+.rv-card footer span{font-size:14px;font-weight:700;color:var(--ink-2)}
+.rv-card .stars{color:#e8860a}
+.rating-cards{display:grid;gap:14px}
+.rc{background:var(--navy);color:#fff;border-radius:var(--r-card);padding:24px 26px;display:flex;align-items:center;gap:18px}
+.rc.y{background:var(--blue)}
+.rc b{font:800 48px/1 var(--display)}
+.rc small{display:block;font-weight:700;color:#cfe1f1;font-size:15px}
+.rc .stars{margin-bottom:4px}
+@media(min-width:900px){.rv-g{grid-template-columns:1.5fr .8fr;gap:36px}}
+
+/* technology */
+.tech{background:#fff}
+.tech-g{display:grid;gap:40px;align-items:center}
+.tech-fig{position:relative;max-width:480px;margin-inline:auto;width:100%}
+.tech-fig img{width:100%;aspect-ratio:1/1.06;object-fit:cover;border-radius:32px;box-shadow:var(--sh)}
+.tech-fig::after{content:"";position:absolute;right:-14px;bottom:-14px;width:46%;height:46%;border-radius:28px;background:var(--sky);z-index:-1}
+.tech-l{display:grid;gap:14px;margin-top:26px}
+.tl{display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:var(--r-card);background:var(--paper);border:1px solid var(--line)}
+.tl .ic{flex:none;width:48px;height:48px;border-radius:16px;background:var(--blue);color:#fff;display:grid;place-items:center}
+.tl svg{width:26px;height:26px}
+.tl h3{font-size:20px;font-weight:800}
+.tl p{margin-top:4px;color:var(--ink-2);font-size:16px}
+@media(min-width:900px){.tech-g{grid-template-columns:.85fr 1.15fr;gap:72px}}
+
+/* specials */
+.specials{background:linear-gradient(120deg,var(--orange) 0%,#ff9e45 100%);color:var(--navy);overflow:hidden}
+.specials::before{content:"";position:absolute;right:-8%;top:-40%;width:520px;height:520px;border-radius:50%;background:rgba(255,255,255,.22)}
+.sp-g{position:relative;display:grid;gap:26px;align-items:center}
+.specials h2{font-size:clamp(32px,4.8vw,56px);font-weight:800;max-width:16ch}
+.specials p{margin-top:14px;font-size:18px;max-width:46ch;font-weight:600}
+.sp-btns{display:flex;flex-wrap:wrap;gap:12px}
+@media(min-width:900px){.sp-g{grid-template-columns:1.3fr .7fr}.sp-btns{justify-content:flex-end}}
+
+/* contact */
+.contact{background:var(--paper)}
+.ct-g{display:grid;gap:28px}
+.card{background:#fff;border-radius:var(--r-card);padding:clamp(22px,3vw,36px);border:1px solid var(--line)}
+.card h3{font-size:24px;font-weight:800;margin-bottom:16px}
+.info{display:grid;gap:14px;font-size:17px}
+.info a{text-decoration:none;font-weight:800;color:var(--blue)}
+.info .row{display:flex;gap:12px;align-items:flex-start}
+.info svg{width:24px;height:24px;color:var(--blue);flex:none;margin-top:2px}
+.hrs{width:100%;border-collapse:collapse;margin-top:6px;font-size:16px}
+.hrs td{padding:9px 0;border-bottom:1px solid var(--line)}
+.hrs tr:last-child td{border:0}
+.hrs td:last-child{text-align:right;font-weight:700}
+.hrs tr.today td{color:var(--blue);font-weight:800}
+.status{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:var(--r-pill);background:var(--sky-l);font-weight:800;color:var(--navy);margin-bottom:10px;font-size:15px}
+.status i{width:11px;height:11px;border-radius:50%;background:#1aa05a}
+.status.off i{background:var(--orange-d)}
+.map{margin-top:16px;border:0;width:100%;height:260px;border-radius:20px;filter:saturate(.9)}
+form{display:grid;gap:16px}
+label{display:grid;gap:7px;font-weight:800;font-size:15px;color:var(--navy)}
+input,select,textarea{font:600 17px var(--body);min-height:52px;padding:12px 16px;border-radius:var(--r-in);border:1.5px solid #9fb6cb;background:#fff;color:var(--ink);width:100%;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(43,153,212,.3)}
+.err{display:none;color:#b3261e;font-size:14px;font-weight:700}
+.bad+.err{display:block}.bad{border-color:#b3261e}
+.fine{font-size:14px;color:var(--ink-2)}
+.ok{display:none;text-align:center;padding:20px 0}
+.ok.show{display:block}
+.ok svg{width:96px;height:96px}
+.ok circle,.ok path{stroke-dasharray:240;stroke-dashoffset:240;animation:draw .8s var(--out) forwards}
+.ok path{animation-delay:.35s;stroke-dasharray:60;stroke-dashoffset:60}
+@keyframes draw{to{stroke-dashoffset:0}}
+.ok h3{margin-top:12px}
+.ok p{margin:8px 0 18px;color:var(--ink-2)}
+@media(min-width:900px){.ct-g{grid-template-columns:.9fr 1.1fr;gap:28px}}
+
+/* footer */
+footer.site{background:var(--navy);color:#cfe1f1;padding:64px 0 110px}
+.f-g{display:grid;gap:36px}
+.f-brand{display:flex;gap:16px;align-items:center}
+.f-brand img{width:64px;height:64px;border-radius:50%;background:#fff}
+.f-brand b{font:800 22px var(--display);color:#fff}
+footer.site h4{margin:0 0 12px;font:800 15px var(--display);color:#fff;letter-spacing:.06em;text-transform:uppercase}
+footer.site a{text-decoration:none;display:block;padding:6px 0}
+footer.site p{margin-top:12px;max-width:34ch}
+.f-bar{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.15);font-size:14px;color:#9fb8cf}
+@media(min-width:900px){.f-g{grid-template-columns:1.4fr 1fr 1fr 1fr}footer.site{padding-bottom:64px}}
+@media(hover:hover){footer.site a:hover{color:#fff}}
+
+/* mobile bar */
+.mbar{position:fixed;left:10px;right:10px;bottom:10px;z-index:90;display:grid;grid-template-columns:1fr 1.3fr;gap:8px;padding:8px;border-radius:var(--r-pill);background:rgba(8,42,77,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 16px 36px -10px rgba(0,0,0,.6)}
+.mbar .btn{min-height:48px;padding:0 .8rem;font-size:15px}
+@media(min-width:900px){.mbar{display:none}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--out),transform .7s var(--out);transition-delay:calc(var(--i,0)*70ms)}
+.js .rv.in{opacity:1;transform:none}
+.js .hero .rv{transition-delay:calc(var(--i,0)*90ms + 450ms)}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .mesh i,.glass{animation:none}
+  .js .rv{opacity:1;transform:none;transition:none}
+  #splash{display:none}
+  .ok circle,.ok path{animation:none;stroke-dashoffset:0}
+  *{transition-duration:.01ms!important}
+}
+@media(max-width:480px){body{font-size:16px}.hero{padding-top:116px}.doc{grid-template-columns:96px 1fr;gap:16px}.doc img{width:96px}.glass.g2{top:2%}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.200 7-11.500A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-smile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.500 14a4.500 4.500 0 0 0 7 0M9 9.500v.5M15 9.500v.5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800zM19 16l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2.500 20h19z"/><path d="M12 10v4.500M12 17.500v.1"/></symbol>
+  <symbol id="i-align" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c0-4 4-6 9-6s9 2 9 6-4 6-9 6-9-2-9-6z"/><path d="M7 11.500c3 1.500 7 1.500 10 0"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M4 12h16"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4.500v9L12 21l-8-4.500v-9zM4 7.500l8 4.500 8-4.500M12 12v9"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.900 7.500.7-5.600 5 1.700 7.400L12 18l-6.600 4 1.700-7.400-5.600-5L9 8.900z"/></symbol>
+</svg>
+
+<div id="splash" aria-hidden="true"><img src="images/logo.png" alt=""></div>
+<a class="skip" href="#main" data-t="skip">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Best Smile 4 All" data-ta="aria-label:brand_aria"><img src="images/logo.png" width="60" height="60" alt="Best Smile 4 All logo" data-ta="alt:logo_alt"><span>Best Smile 4 All</span></a>
+    <nav class="nav-links" aria-label="Main" data-ta="aria-label:nav_aria">
+      <a href="#pineros" data-t="nav_pin">Dr. Piñeros</a>
+      <a href="#servigna" data-t="nav_ser">Dr. Servigna</a>
+      <a href="#services" data-t="nav_svc">Services</a>
+      <a href="#specials" data-t="nav_spe">Specials</a>
+      <a href="#contact" data-t="nav_con">Contact Us</a>
+    </nav>
+    <div class="nav-cta">
+      <div class="lang" role="group" aria-label="Language" data-ta="aria-label:lang_aria">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="btn btn-o btn-sm call-n" href="tel:+19545778736" data-mag><svg><use href="#i-phone"/></svg>(954) 577-8736</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu" data-ta="aria-label:menu_aria"><svg><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="menu" id="menu" aria-label="Menu" data-ta="aria-label:menu_aria">
+  <a href="#pineros" data-t="nav_pin">Dr. Piñeros</a>
+  <a href="#servigna" data-t="nav_ser">Dr. Servigna</a>
+  <a href="#services" data-t="nav_svc">Services</a>
+  <a href="#specials" data-t="nav_spe">Specials</a>
+  <a href="#contact" data-t="nav_con">Contact Us</a>
+</nav>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="mesh" style="overflow:hidden" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero-g">
+    <div>
+      <h1 class="rv" style="--i:0" data-t="hero_h1">Smiles for the whole family in <em>Plantation.</em></h1>
+      <p class="lead rv" style="--i:1" data-t="hero_lead">Dr. Paola Piñeros, Dr. Javier Servigna and their team care for patients of every age.</p>
+      <div class="cta rv" style="--i:2">
+        <a class="btn btn-o" href="#contact" data-mag><svg><use href="#i-cal"/></svg><span data-t="cta_req">Request an appointment</span></a>
+        <a class="btn btn-w" href="tel:+19545778736" data-mag><svg><use href="#i-phone"/></svg><span data-t="cta_call">Call (954) 577-8736</span></a>
+      </div>
+    </div>
+    <div class="hero-fig rv" style="--i:2">
+      <img src="images/hero.webp" width="1600" height="1067" alt="A dentist examining a young girl in a blue dental chair" data-ta="alt:hero_alt" fetchpriority="high">
+      <div class="glass g2"><div><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><small data-t="chip_g">5.0 on Google, 166 reviews</small></div></div>
+      <div class="glass g1"><i class="dot" id="hdot"></i><small id="hstat">&nbsp;</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="proof" aria-label="Reputation" data-ta="aria-label:proof_aria">
+  <div class="wrap proof-g">
+    <div class="pk rv" style="--i:0"><b><span data-count-to="5.0" data-decimals="1">5.0</span></b><span data-t="pk1">Google rating</span></div>
+    <div class="pk rv" style="--i:1"><b><span data-count-to="166">166</span></b><span data-t="pk2">Google reviews</span></div>
+    <div class="pk rv" style="--i:2"><b><span data-count-to="4.6" data-decimals="1">4.6</span></b><span data-t="pk3">Yelp rating</span></div>
+    <div class="pk rv" style="--i:3"><b><span data-count-to="9">9</span></b><span data-t="pk4">Yelp reviews</span></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="eyebrow" data-t="s_eye">Services</span>
+      <h2 data-t="s_h2">Care for every age, <em>all in one office.</em></h2>
+      <p data-t="s_p">From a child's first checkup to a full smile makeover, you can book it with the same friendly team.</p>
+    </div>
+    <div class="bento">
+      <article class="sv a rv" style="--i:0" data-tilt>
+        <div class="ic"><svg><use href="#i-smile"/></svg></div>
+        <h3 data-t="sv1_h">Pediatric and family dentistry</h3>
+        <p data-t="sv1_p">Checkups and cleanings for kids, parents and grandparents, so the whole family can come to one place.</p>
+      </article>
+      <article class="sv b rv" style="--i:1" data-tilt>
+        <div class="ic"><svg><use href="#i-spark"/></svg></div>
+        <h3 data-t="sv2_h">Cosmetic dentistry</h3>
+        <p data-t="sv2_p">Treatments to make your smile look the way you want it to.</p>
+      </article>
+      <article class="sv c rv" style="--i:2" data-tilt>
+        <div class="ic"><svg><use href="#i-alert"/></svg></div>
+        <h3 data-t="sv3_h">Dental emergencies</h3>
+        <p data-t="sv3_p">In pain or something broke? Call us and we will help you as soon as possible.</p>
+        <a class="more" href="tel:+19545778736"><span data-t="sv3_a">Call now</span><svg width="20" height="20"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="sv d rv" style="--i:3" data-tilt>
+        <div class="ic"><svg><use href="#i-align"/></svg></div>
+        <h3 data-t="sv4_h">Invisalign</h3>
+        <p data-t="sv4_p">Clear aligners to straighten your teeth. Ask us if they are right for you.</p>
+      </article>
+    </div>
+    <div class="also rv">
+      <b data-t="also">Also available:</b>
+      <span class="chip" data-t="a1">Dental implants</span><span class="chip" data-t="a2">Veneers</span><span class="chip" data-t="a3">Whitening</span><span class="chip" data-t="a4">Crowns and bridges</span><span class="chip" data-t="a5">Root canals</span><span class="chip" data-t="a6">Fillings</span><span class="chip" data-t="a7">Extractions</span><span class="chip" data-t="a8">Dentures</span>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="doctors">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="eyebrow" data-t="d_eye">Your dentists</span>
+      <h2 data-t="d_h2">Meet the doctors <em>behind the smiles.</em></h2>
+    </div>
+    <div class="docs">
+      <article class="doc rv" id="pineros" style="--i:0" data-tilt>
+        <img src="images/dra-pineros.webp" width="209" height="400" alt="Dr. Paola Piñeros" data-ta="alt:pin_alt" loading="lazy">
+        <div>
+          <h3 data-t="pin_h">Dr. Paola Andrea Piñeros, DDS</h3>
+          <div class="role" data-t="pin_role">Owner dentist · English and Spanish</div>
+          <ul>
+            <li data-t="pin_1">Dental degree from Universidad del Bosque in Bogotá, Colombia.</li>
+            <li data-t="pin_2">Completed the Advanced Education in General Dentistry program at the University of Florida.</li>
+            <li data-t="pin_3">Trained in oral surgery, restorative and implant dentistry, root canals, cosmetic dentistry and Invisalign.</li>
+            <li data-t="pin_4">Member of the American Dental Association, the Florida Dental Association, the Academy of General Dentistry and the American Academy of Implant Dentistry.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="doc rv" id="servigna" style="--i:1" data-tilt>
+        <img src="images/dr-servigna.webp" width="237" height="400" alt="Dr. Javier Servigna" data-ta="alt:ser_alt" loading="lazy">
+        <div>
+          <h3 data-t="ser_h">Dr. Javier Servigna, DDS</h3>
+          <div class="role" data-t="ser_role">Owner dentist</div>
+          <ul>
+            <li data-t="ser_1">Born and raised in Venezuela. Dental degree from Zulia State University.</li>
+            <li data-t="ser_2">Moved to the United States in 2005 and completed the Advanced Education in General Dentistry program at the University of Florida.</li>
+            <li data-t="ser_3">Keeps training to stay current with the latest in dentistry and technology.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap rv-g">
+    <figure class="rv-card rv" style="margin:0">
+      <div class="stars" aria-hidden="true"><svg width="22" height="22"><use href="#i-star"/></svg><svg width="22" height="22"><use href="#i-star"/></svg><svg width="22" height="22"><use href="#i-star"/></svg><svg width="22" height="22"><use href="#i-star"/></svg><svg width="22" height="22"><use href="#i-star"/></svg></div>
+      <blockquote lang="en">This is a great Dental Office! Everyone is upbeat and friendly. They are very thorough and really care about each patient.</blockquote>
+      <footer><b>Tom Lewis</b><span data-t="rv_src">Google review, Local Guide</span></footer>
+    </figure>
+    <div class="rating-cards">
+      <div class="rc rv" style="--i:1"><b>5.0</b><div><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><small data-t="rc1">Google reviews: 166</small></div></div>
+      <div class="rc y rv" style="--i:2"><b>4.6</b><div><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><small data-t="rc2">Yelp reviews: 9</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tech" id="office">
+  <div class="wrap tech-g">
+    <div class="tech-fig rv"><img src="images/consultorio.webp" width="450" height="480" alt="Treatment room at Best Smile 4 All with the practice logo on the wall screen" data-ta="alt:off_alt" loading="lazy"></div>
+    <div>
+      <div class="sec-h rv" style="margin-bottom:0">
+        <span class="eyebrow" data-t="t_eye">Our office</span>
+        <h2 data-t="t_h2">Modern technology, <em>a relaxed setting.</em></h2>
+      </div>
+      <div class="tech-l">
+        <div class="tl rv" style="--i:0"><div class="ic"><svg><use href="#i-scan"/></svg></div><div><h3 data-t="t1_h">iTero intraoral scanner</h3><p data-t="t1_p">A digital scanner that captures your teeth for restorative treatment.</p></div></div>
+        <div class="tl rv" style="--i:1"><div class="ic"><svg><use href="#i-cube"/></svg></div><div><h3 data-t="t2_h">3D imaging (CBCT)</h3><p data-t="t2_p">Three-dimensional images that let the doctors see your anatomy in detail.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="specials" id="specials">
+  <div class="wrap sp-g">
+    <div class="rv">
+      <h2 data-t="sp_h2">New patient? Ask about our specials.</h2>
+      <p data-t="sp_p">Tell us you are a new patient and we will confirm the offers available when you call or send your request.</p>
+    </div>
+    <div class="sp-btns rv" style="--i:1">
+      <a class="btn btn-n" href="#contact" data-mag><svg><use href="#i-cal"/></svg><span data-t="cta_req2">Request an appointment</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="eyebrow" data-t="c_eye">Contact us</span>
+      <h2 data-t="c_h2">Come say hello. <em>We are ready for you.</em></h2>
+    </div>
+    <div class="ct-g">
+      <div class="card rv">
+        <div class="status" id="status"><i></i><span id="stat">&nbsp;</span></div>
+        <h3 data-t="c_visit">Visit us</h3>
+        <div class="info">
+          <div class="row"><svg><use href="#i-pin"/></svg><div>10187 Cleary Blvd, Suite 101<br>Plantation, FL 33324<br><a href="https://www.google.com/maps/place/Best+Smile+4+All/@26.134085,-80.28584,15z" target="_blank" rel="noopener" data-t="c_dir">Get directions</a></div></div>
+          <div class="row"><svg><use href="#i-phone"/></svg><a href="tel:+19545778736">(954) 577-8736</a></div>
+          <div class="row"><svg><use href="#i-mail"/></svg><a href="mailto:info@bestsmile4all.com">info@bestsmile4all.com</a></div>
+        </div>
+        <table class="hrs" id="hrs" aria-label="Hours" data-ta="aria-label:hrs_aria">
+          <tr data-d="1"><td data-t="d1">Monday</td><td data-t="h_a">8:30 AM to 5:30 PM</td></tr>
+          <tr data-d="2"><td data-t="d2">Tuesday</td><td data-t="h_a">8:30 AM to 5:30 PM</td></tr>
+          <tr data-d="3"><td data-t="d3">Wednesday</td><td data-t="h_b">7:30 AM to 5:30 PM</td></tr>
+          <tr data-d="4"><td data-t="d4">Thursday</td><td data-t="h_a">8:30 AM to 5:30 PM</td></tr>
+          <tr data-d="5"><td data-t="d5">Friday</td><td data-t="h_c">Closed</td></tr>
+          <tr data-d="6"><td data-t="d6">Saturday</td><td data-t="h_c">Closed</td></tr>
+          <tr data-d="0"><td data-t="d0">Sunday</td><td data-t="h_c">Closed</td></tr>
+        </table>
+        <iframe class="map" title="Map" data-ta="title:map_title" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=10187+Cleary+Blvd+Suite+101+Plantation+FL+33324&amp;output=embed"></iframe>
+      </div>
+      <div class="card rv" style="--i:1">
+        <h3 data-t="f_h">Request an appointment</h3>
+        <form id="form" novalidate>
+          <label><span data-t="f_name">Full name</span><input id="fn" name="name" autocomplete="name" required><span class="err" data-t="f_err">Please complete this field.</span></label>
+          <label><span data-t="f_phone">Phone</span><input id="fp" name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span class="err" data-t="f_err">Please complete this field.</span></label>
+          <label><span data-t="f_reason">Reason for your visit</span>
+            <select id="fr"><option value="r1" data-t="r1">Checkup and cleaning</option><option value="r2" data-t="r2">Child or family visit</option><option value="r3" data-t="r3">Cosmetic dentistry</option><option value="r4" data-t="r4">Dental emergency</option><option value="r5" data-t="r5">Invisalign</option><option value="r6" data-t="r6">Something else</option></select></label>
+          <label><span data-t="f_day">Preferred day</span>
+            <select id="fd"><option value="d1" data-t="d1">Monday</option><option value="d2" data-t="d2">Tuesday</option><option value="d3" data-t="d3">Wednesday</option><option value="d4" data-t="d4">Thursday</option></select></label>
+          <button class="btn btn-b" type="submit" data-mag><svg><use href="#i-mail"/></svg><span data-t="f_send">Send request</span></button>
+          <p class="fine" data-t="f_fine">This opens an email to the office with your details. You can also call us at (954) 577-8736.</p>
+        </form>
+        <div class="ok" id="ok" role="status">
+          <svg viewBox="0 0 96 96" fill="none" stroke="#1aa05a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><circle cx="48" cy="48" r="38"/><path d="M30 49l13 13 24-26"/></svg>
+          <h3 data-t="ok_h">Your email is ready</h3>
+          <p data-t="ok_p">Send it from your email app and the office will confirm your visit. If you prefer, call us now.</p>
+          <a class="btn btn-b" href="tel:+19545778736"><svg><use href="#i-phone"/></svg>(954) 577-8736</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="f-g">
+      <div>
+        <div class="f-brand"><img src="images/logo.png" width="64" height="64" alt="" aria-hidden="true"><b>Best Smile 4 All</b></div>
+        <p data-t="f_about">Family dentistry for patients of all ages in Plantation, Florida.</p>
+      </div>
+      <div><h4 data-t="f_nav">Explore</h4><a href="#pineros" data-t="nav_pin">Dr. Piñeros</a><a href="#servigna" data-t="nav_ser">Dr. Servigna</a><a href="#services" data-t="nav_svc">Services</a><a href="#specials" data-t="nav_spe">Specials</a><a href="#contact" data-t="nav_con">Contact Us</a></div>
+      <div><h4 data-t="f_vis">Visit</h4><a href="https://www.google.com/maps/place/Best+Smile+4+All/@26.134085,-80.28584,15z" target="_blank" rel="noopener">10187 Cleary Blvd, Suite 101<br>Plantation, FL 33324</a></div>
+      <div><h4 data-t="f_con">Contact</h4><a href="tel:+19545778736">(954) 577-8736</a><a href="mailto:info@bestsmile4all.com">info@bestsmile4all.com</a></div>
+    </div>
+    <div class="f-bar"><span data-t="f_copy">Best Smile 4 All LLC. All rights reserved.</span></div>
+  </div>
+</footer>
+
+<div class="mbar"><a class="btn btn-w" href="tel:+19545778736"><svg><use href="#i-phone"/></svg><span data-t="m_call">Call</span></a><a class="btn btn-o" href="#contact"><svg><use href="#i-cal"/></svg><span data-t="m_req">Request visit</span></a></div>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,c){return(c||document).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var reduced=matchMedia("(prefers-reduced-motion: reduce)").matches,fine=matchMedia("(hover: hover) and (pointer: fine)").matches;
+function safe(f,n){try{f()}catch(e){console.warn(n,e)}}
+
+var T={en:{},es:{
+skip:"Saltar al contenido",brand_aria:"Best Smile 4 All, inicio",logo_alt:"Logo de Best Smile 4 All",nav_aria:"Principal",lang_aria:"Idioma",menu_aria:"Menú",
+meta_desc:"Odontología familiar y pediátrica, estética, emergencias e Invisalign en Plantation, FL. Dra. Paola Piñeros y Dr. Javier Servigna.",
+nav_pin:"Dra. Piñeros",nav_ser:"Dr. Servigna",nav_svc:"Servicios",nav_spe:"Ofertas",nav_con:"Contacto",
+hero_h1:"Sonrisas para toda la familia en <em>Plantation.</em>",hero_lead:"La Dra. Paola Piñeros, el Dr. Javier Servigna y su equipo atienden a pacientes de todas las edades.",
+cta_req:"Pedir una cita",cta_call:"Llamar al (954) 577-8736",hero_alt:"Una dentista examinando a una niña en un sillón dental azul",chip_g:"5,0 en Google, 166 reseñas",
+proof_aria:"Reputación",pk1:"Calificación en Google",pk2:"Reseñas en Google",pk3:"Calificación en Yelp",pk4:"Reseñas en Yelp",
+s_eye:"Servicios",s_h2:"Atención para todas las edades, <em>en un solo consultorio.</em>",s_p:"Desde la primera revisión de un niño hasta un cambio completo de sonrisa, todo con el mismo equipo amable.",
+sv1_h:"Odontología pediátrica y familiar",sv1_p:"Revisiones y limpiezas para niños, padres y abuelos, para que toda la familia venga a un solo lugar.",
+sv2_h:"Odontología estética",sv2_p:"Tratamientos para que su sonrisa se vea como usted quiere.",
+sv3_h:"Emergencias dentales",sv3_p:"¿Tiene dolor o se le rompió algo? Llámenos y le ayudamos lo antes posible.",sv3_a:"Llamar ahora",
+sv4_h:"Invisalign",sv4_p:"Alineadores transparentes para enderezar sus dientes. Pregúntenos si son para usted.",
+also:"También ofrecemos:",a1:"Implantes dentales",a2:"Carillas",a3:"Blanqueamiento",a4:"Coronas y puentes",a5:"Endodoncias",a6:"Empastes",a7:"Extracciones",a8:"Prótesis dentales",
+d_eye:"Sus dentistas",d_h2:"Conozca a los doctores <em>detrás de las sonrisas.</em>",
+pin_alt:"Dra. Paola Piñeros",pin_h:"Dra. Paola Andrea Piñeros, DDS",pin_role:"Dentista y dueña · Inglés y español",
+pin_1:"Título dental de la Universidad del Bosque, en Bogotá, Colombia.",pin_2:"Completó el programa de Educación Avanzada en Odontología General de la Universidad de Florida.",pin_3:"Capacitada en cirugía oral, odontología restauradora e implantes, endodoncia, odontología estética e Invisalign.",pin_4:"Miembro de la Asociación Dental Americana, la Asociación Dental de Florida, la Academia de Odontología General y la Academia Americana de Implantología Dental.",
+ser_alt:"Dr. Javier Servigna",ser_h:"Dr. Javier Servigna, DDS",ser_role:"Dentista y dueño",
+ser_1:"Nació y creció en Venezuela. Título dental de la Universidad del Zulia.",ser_2:"Se mudó a Estados Unidos en 2005 y completó el programa de Educación Avanzada en Odontología General de la Universidad de Florida.",ser_3:"Sigue capacitándose para estar al día con lo último en odontología y tecnología.",
+rv_src:"Reseña de Google, Local Guide",rc1:"Reseñas en Google: 166",rc2:"Reseñas en Yelp: 9",
+off_alt:"Sala de tratamiento de Best Smile 4 All con el logo del consultorio en la pantalla",t_eye:"Nuestro consultorio",t_h2:"Tecnología moderna, <em>un ambiente tranquilo.</em>",
+t1_h:"Escáner intraoral iTero",t1_p:"Un escáner digital que captura sus dientes para tratamientos restauradores.",t2_h:"Imágenes 3D (CBCT)",t2_p:"Imágenes tridimensionales que permiten a los doctores ver su anatomía en detalle.",
+sp_h2:"¿Paciente nuevo? Pregunte por nuestras ofertas.",sp_p:"Díganos que es paciente nuevo y le confirmamos las ofertas disponibles al llamar o al enviar su solicitud.",cta_req2:"Pedir una cita",
+c_eye:"Contacto",c_h2:"Venga a saludarnos. <em>Lo esperamos.</em>",c_visit:"Visítenos",c_dir:"Cómo llegar",hrs_aria:"Horarios",map_title:"Mapa",
+d1:"Lunes",d2:"Martes",d3:"Miércoles",d4:"Jueves",d5:"Viernes",d6:"Sábado",d0:"Domingo",h_a:"8:30 a. m. a 5:30 p. m.",h_b:"7:30 a. m. a 5:30 p. m.",h_c:"Cerrado",
+f_h:"Pedir una cita",f_name:"Nombre completo",f_phone:"Teléfono",f_err:"Por favor complete este campo.",f_reason:"Motivo de la visita",f_day:"Día preferido",
+r1:"Revisión y limpieza",r2:"Visita de un niño o la familia",r3:"Odontología estética",r4:"Emergencia dental",r5:"Invisalign",r6:"Otro motivo",
+f_send:"Enviar solicitud",f_fine:"Esto abre un correo al consultorio con sus datos. También puede llamarnos al (954) 577-8736.",
+ok_h:"Su correo está listo",ok_p:"Envíelo desde su aplicación de correo y el consultorio le confirmará la cita. Si prefiere, llámenos ahora.",
+f_about:"Odontología familiar para pacientes de todas las edades en Plantation, Florida.",f_nav:"Explorar",f_vis:"Visítenos",f_con:"Contacto",f_copy:"Best Smile 4 All LLC. Todos los derechos reservados.",m_call:"Llamar",m_req:"Pedir cita"
+}};
+
+var lang="en",enAttr={};
+function setLang(l,persist){
+  lang=l;document.documentElement.lang=l;
+  $$("[data-t]").forEach(function(el){var k=el.getAttribute("data-t");if(T.en[k]===undefined)T.en[k]=el.innerHTML;var v=T[l][k];if(v!==undefined)el.innerHTML=v;});
+  $$("[data-ta]").forEach(function(el){el.getAttribute("data-ta").split(",").forEach(function(p){var a=p.split(":"),at=a[0],k=a[1];var key=k+"|"+at;if(T.en[key]===undefined)T.en[key]=(el.getAttribute(at)||"");var v=T[l][k];el.setAttribute(at,l==="en"?T.en[key]:(v!==undefined?v:T.en[key]))})});
+  var md=$('meta[name=description]');if(md){md.setAttribute("content",l==="en"?T.en["meta_desc|content"]:T.es.meta_desc)}
+  $$(".lang button").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-lang")===l))});
+  $$("[data-count-to]").forEach(function(e){e.textContent=fmt(parseFloat(e.getAttribute("data-count-to")),parseInt(e.getAttribute("data-decimals")||"0",10))});
+  $$("select option").forEach(function(){});
+  safe(status,"status");
+  if(persist){try{localStorage.setItem("bs4a-lang",l)}catch(e){}}
+}
+function fmt(v,d){var s=d>0?v.toFixed(d):String(Math.round(v));return lang==="es"?s.replace(".",","):s}
+
+/* hours, Miami time */
+var H={1:[8.5,17.5],2:[8.5,17.5],3:[7.5,17.5],4:[8.5,17.5]};
+var DN={en:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],es:["domingo","lunes","martes","miércoles","jueves","viernes","sábado"]};
+var WD={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+function nowMiami(){var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date()),o={};p.forEach(function(x){o[x.type]=x.value});return{d:WD[o.weekday],t:(parseInt(o.hour,10)%24)+parseInt(o.minute,10)/60}}
+function clock(h){var hh=Math.floor(h),m=Math.round((h-hh)*60),ap=hh>=12?"PM":"AM",h12=((hh+11)%12)+1,mm=m?":"+(m<10?"0":"")+m:":00";return lang==="es"?h12+mm+(ap==="PM"?" p. m.":" a. m."):h12+mm+" "+ap}
+function status(){
+  var n=nowMiami(),h=H[n.d],txt,open=false;
+  if(h&&n.t>=h[0]&&n.t<h[1]){open=true;txt=lang==="es"?"Abierto ahora · cierra a las "+clock(h[1]):"Open now · closes at "+clock(h[1])}
+  else{
+    var d=n.d,add=0,nx=null;
+    if(h&&n.t<h[0]){nx=n.d;add=0}else{for(var i=1;i<=7;i++){var dd=(n.d+i)%7;if(H[dd]){nx=dd;add=i;break}}}
+    var when=add===0?(lang==="es"?"hoy":"today"):(add===1?(lang==="es"?"mañana":"tomorrow"):DN[lang][nx]);
+    txt=lang==="es"?"Cerrado · abre "+when+" a las "+clock(H[nx][0]):"Closed · opens "+when+" at "+clock(H[nx][0]);
+  }
+  var s=$("#status");if(s){s.classList.toggle("off",!open);$("#stat").textContent=txt}
+  var hs=$("#hstat");if(hs){hs.textContent=txt;$("#hdot").classList.toggle("off",!open)}
+  $$("#hrs tr").forEach(function(r){r.classList.toggle("today",parseInt(r.getAttribute("data-d"),10)===n.d)});
+}
+
+safe(function(){
+  var nav=$("#nav");var on=function(){nav.classList.toggle("scrolled",window.scrollY>12)};on();window.addEventListener("scroll",on,{passive:true});
+  var b=$("#burger"),m=$("#menu");
+  b.addEventListener("click",function(){var o=m.classList.toggle("open");b.setAttribute("aria-expanded",String(o))});
+  m.addEventListener("click",function(e){if(e.target.closest("a")){m.classList.remove("open");b.setAttribute("aria-expanded","false")}});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"){m.classList.remove("open");b.setAttribute("aria-expanded","false")}});
+},"nav");
+
+safe(function(){
+  var s=$("#splash"),hide=function(){s.classList.add("hide")};
+  if(document.readyState==="complete")setTimeout(hide,500);else window.addEventListener("load",function(){setTimeout(hide,500)});
+  setTimeout(hide,2200);
+},"splash");
+
+safe(function(){
+  var els=$$(".rv");
+  if(!("IntersectionObserver" in window)||reduced){els.forEach(function(e){e.classList.add("in")});return}
+  var io=new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");o.unobserve(x.target)}})},{threshold:.04,rootMargin:"0px 0px -6% 0px"});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.add("in")})},3000);
+},"reveal");
+
+safe(function(){
+  var els=$$("[data-count-to]");
+  function run(el){
+    var t=parseFloat(el.getAttribute("data-count-to")),d=parseInt(el.getAttribute("data-decimals")||"0",10);
+    if(reduced||isNaN(t)){el.textContent=fmt(t,d);return}
+    var s=performance.now();(function tick(n){var p=Math.min(1,(n-s)/1400),e=1-Math.pow(1-p,3);el.textContent=fmt(t*e,d);if(p<1)requestAnimationFrame(tick);else el.textContent=fmt(t,d)})(s);
+  }
+  if(!("IntersectionObserver" in window)){return}
+  var io=new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){run(x.target);o.unobserve(x.target)}})},{threshold:.6});
+  els.forEach(function(e){io.observe(e)});
+},"counts");
+
+safe(function(){
+  if(!fine||reduced)return;
+  $$("[data-tilt]").forEach(function(c){
+    var MAX=5;
+    c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="perspective(900px) rotateX("+(-y*MAX).toFixed(2)+"deg) rotateY("+(x*MAX).toFixed(2)+"deg) translateY(-4px)"});
+    c.addEventListener("pointerleave",function(){c.style.transform=""});
+  });
+  $$("[data-mag]").forEach(function(b){
+    b.addEventListener("pointermove",function(e){var r=b.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;b.style.transform="translate("+(x*.14).toFixed(1)+"px,"+(y*.22).toFixed(1)+"px)"});
+    b.addEventListener("pointerleave",function(){b.style.transform=""});
+  });
+},"fx");
+
+safe(function(){
+  var f=$("#form");
+  var D={en:{sub:"Appointment request",hi:"Hello, I would like to request an appointment at Best Smile 4 All.",n:"Name",p:"Phone",r:"Reason",d:"Preferred day"},es:{sub:"Solicitud de cita",hi:"Hola, quisiera pedir una cita en Best Smile 4 All.",n:"Nombre",p:"Teléfono",r:"Motivo",d:"Día preferido"}};
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var fn=$("#fn"),fp=$("#fp"),bad=false;
+    [fn,fp].forEach(function(i){var no=!i.value.trim();i.classList.toggle("bad",no);if(no)bad=true});
+    if(bad){(fn.classList.contains("bad")?fn:fp).focus();return}
+    var t=D[lang],body=t.hi+"\n\n"+t.n+": "+fn.value.trim()+"\n"+t.p+": "+fp.value.trim()+"\n"+t.r+": "+$("#fr").selectedOptions[0].textContent+"\n"+t.d+": "+$("#fd").selectedOptions[0].textContent;
+    f.style.display="none";$("#ok").classList.add("show");
+    window.location.href="mailto:info@bestsmile4all.com?subject="+encodeURIComponent(t.sub)+"&body="+encodeURIComponent(body);
+  });
+  [$("#fn"),$("#fp")].forEach(function(i){i.addEventListener("input",function(){i.classList.remove("bad")})});
+},"form");
+
+$$(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-lang"),true)})});
+var saved=null;try{saved=localStorage.getItem("bs4a-lang")}catch(e){}
+setLang("en",false);
+if(saved==="es")setLang("es",false);
+setInterval(function(){safe(status,"status")},60000);
+})();
+</script>
+</body>
+</html>
