@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fort Lauderdale Family Dental | Fort Lauderdale, FL</title>
+<meta name="description" content="Odontología general y cosmética para toda la familia en Fort Lauderdale, FL. Dra. Ileana Arias y Dr. Styl Perez, DDS.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0E1112">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230E1112'/%3E%3Ctext x='32' y='43' font-size='30' font-family='Arial,sans-serif' font-weight='700' text-anchor='middle' fill='white'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Schibsted+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E1112; --ink2:#182022; --teal:#1F6B73; --teal-d:#0F3F45; --teal-l:#8ED0D6;
+  --mist:#E3EEEE; --paper:#F4F8F8; --white:#fff; --dim:#46585B; --line:#D3E0E1; --gold:#E7B84B;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --gutter:clamp(18px,4vw,52px);
+  --r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{font-family:"Instrument Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--ink);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4,.btn,.chip b{font-family:"Schibsted Grotesk","Instrument Sans",system-ui,sans-serif}
+.wrap{width:min(1200px,100% - var(--gutter)*2);margin-inline:auto}
+section{position:relative;padding:clamp(64px,8vw,112px) 0}
+h2{font-weight:700;font-size:clamp(30px,4.2vw,50px);line-height:1.08;letter-spacing:-.025em;text-wrap:balance}
+.sub{margin-top:14px;max-width:56ch;color:var(--dim);font-size:clamp(16px,1.5vw,19px)}
+::selection{background:var(--teal);color:#fff}
+:focus-visible{outline:3px solid var(--teal-l);outline-offset:3px;border-radius:6px}
+html{scrollbar-color:var(--teal) var(--ink)}
+
+/* botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:99px;font-weight:700;font-size:16.5px;text-decoration:none;border:2px solid transparent;cursor:pointer;white-space:nowrap;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background-color .25s,color .25s,border-color .25s}
+.btn:active{transform:scale(.97)}
+.btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.btn-w{background:#fff;color:var(--ink)}
+.btn-t{background:var(--teal);color:#fff}
+.btn-o{border-color:rgba(255,255,255,.5);color:#fff;background:transparent}
+.btn-k{background:var(--ink);color:#fff}
+@media (hover:hover) and (pointer:fine){
+  .btn-w:hover{transform:translateY(-2px);box-shadow:0 18px 34px -16px rgba(0,0,0,.6);background:var(--mist)}
+  .btn-t:hover{transform:translateY(-2px);box-shadow:0 18px 34px -14px rgba(31,107,115,.9);background:#185861}
+  .btn-o:hover{transform:translateY(-2px);background:rgba(255,255,255,.12);border-color:#fff}
+  .btn-k:hover{transform:translateY(-2px);box-shadow:0 18px 34px -16px rgba(14,17,18,.7);background:var(--teal-d)}
+}
+
+/* splash */
+#splash{position:fixed;inset:0;z-index:200;background:var(--ink);display:grid;place-items:center;transition:opacity .6s var(--ease),visibility .6s}
+#splash img{width:min(300px,64vw);height:auto;animation:sp 1.2s var(--ease) both}
+#splash.hide{opacity:0;visibility:hidden}
+@keyframes sp{from{opacity:0;transform:translateY(10px) scale(.96);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+
+/* nav pill */
+.nav{position:fixed;top:12px;left:0;right:0;z-index:80;pointer-events:none}
+.nav .pill{pointer-events:auto;width:min(1200px,100% - 24px);margin-inline:auto;display:flex;align-items:center;gap:14px;height:76px;padding:0 12px 0 22px;border-radius:99px;background:rgba(14,17,18,.78);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border:1px solid rgba(255,255,255,.1);box-shadow:0 14px 40px -22px rgba(0,0,0,.8);transition:background-color .3s,box-shadow .3s}
+.nav.scrolled .pill{background:rgba(14,17,18,.94)}
+.brand img{height:60px;width:auto;object-fit:contain}
+.links{display:flex;gap:2px;margin-left:auto}
+.links a{color:#cfdcdd;text-decoration:none;font-weight:600;font-size:15px;padding:10px 14px;border-radius:99px;min-height:44px;display:inline-flex;align-items:center;transition:background-color .2s,color .2s}
+@media (hover:hover){.links a:hover{background:rgba(255,255,255,.1);color:#fff}}
+.lang{display:inline-flex;background:rgba(255,255,255,.1);border-radius:99px;padding:3px}
+.lang button{all:unset;cursor:pointer;min-width:44px;min-height:40px;text-align:center;font:700 14px "Schibsted Grotesk",sans-serif;color:#cfdcdd;border-radius:99px;transition:background-color .2s,color .2s}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--ink)}
+.lang button:focus-visible{outline:3px solid var(--teal-l);outline-offset:2px}
+.nav .btn{min-height:48px;padding:10px 20px;font-size:15px}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;padding:0;min-height:min(100dvh,860px);display:flex;align-items:center;overflow:hidden;isolation:isolate}
+.mesh{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.mesh i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:drift 16s ease-in-out infinite alternate}
+.mesh .m1{width:620px;height:620px;background:#1F6B73;right:-120px;top:-160px}
+.mesh .m2{width:420px;height:420px;background:#17454B;left:-120px;bottom:-140px;animation-duration:12s;animation-direction:alternate-reverse}
+.mesh .m3{width:260px;height:260px;background:#2B8F99;left:42%;top:58%;opacity:.28;animation-duration:19s}
+@keyframes drift{to{transform:translate(40px,36px) scale(1.08)}}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,80px);align-items:center;padding:clamp(120px,14vw,150px) 0 clamp(56px,7vw,90px)}
+.hero h1{font-weight:800;font-size:clamp(36px,4.7vw,62px);line-height:1.04;letter-spacing:-.03em;text-wrap:balance;max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--teal-l)}
+.hero p.lead{margin-top:22px;max-width:44ch;font-size:clamp(17px,1.7vw,20px);color:#c4d3d5}
+.ctas{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
+.photo{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 70px -34px rgba(0,0,0,.9)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:46% 50%;transform:scale(1.04);transition:transform 1.4s var(--ease)}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,17,18,.55))}
+@media (hover:hover){.photo:hover img{transform:scale(1.09)}}
+.chip{position:absolute;z-index:2;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.96);color:var(--ink);border-radius:14px;padding:12px 16px;box-shadow:0 18px 36px -18px rgba(0,0,0,.7)}
+.chip b{font-size:24px;line-height:1}
+.chip small{display:block;font-size:13.5px;color:var(--dim);line-height:1.25}
+.chip .st{color:var(--gold);letter-spacing:2px;font-size:14px;line-height:1}
+.c1{left:16px;bottom:18px;animation:float 6s ease-in-out infinite alternate}
+.c2{right:16px;top:16px}
+@keyframes float{to{transform:translateY(-8px)}}
+.open i{width:10px;height:10px;border-radius:50%;background:#2FB574;display:inline-block;flex:none}
+.open.closed i{background:#D98A3D}
+.open{font:700 15px "Schibsted Grotesk",sans-serif;display:flex;align-items:center;gap:9px}
+
+/* cifras */
+.facts{background:var(--paper);padding:clamp(34px,5vw,56px) 0;border-bottom:1px solid var(--line)}
+.facts .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,3vw,40px)}
+.fact{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.fact .n{font:800 clamp(40px,5vw,62px)/1 "Schibsted Grotesk",sans-serif;letter-spacing:-.03em;color:var(--teal)}
+.fact p{color:var(--dim);font-size:16px;max-width:20ch;line-height:1.35}
+
+/* servicios */
+#servicios{background:var(--white)}
+.bento{margin-top:clamp(30px,4vw,52px);display:grid;grid-template-columns:1.15fr 1fr;grid-template-rows:auto auto;gap:18px}
+.svc{border-radius:var(--r);padding:clamp(24px,3vw,36px);background:var(--paper);border:1px solid var(--line);transition:transform .35s var(--ease),box-shadow .35s var(--ease);will-change:transform}
+.svc.big{grid-row:span 2;display:flex;flex-direction:column}
+.big .tags{margin-top:auto;padding-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.big .tags span{font-size:17px;padding:14px 18px;border-radius:12px;font-weight:600}
+.svc.dark{background:var(--teal-d);color:#fff;border-color:transparent}
+.svc.ink{background:var(--ink);color:#fff;border-color:transparent}
+@media (hover:hover) and (pointer:fine){.svc:hover{box-shadow:0 30px 56px -30px rgba(14,17,18,.5)}}
+.ic{width:56px;height:56px;border-radius:14px;display:grid;place-items:center;background:var(--teal);margin-bottom:20px;transition:transform .35s var(--ease)}
+.dark .ic,.ink .ic{background:rgba(255,255,255,.12)}
+.ic svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media (hover:hover){.svc:hover .ic{transform:rotate(-6deg) scale(1.08)}}
+.svc h3{font-size:clamp(22px,2.2vw,28px);letter-spacing:-.015em;line-height:1.15}
+.svc>p{margin-top:8px;color:var(--dim);max-width:40ch}
+.dark>p,.ink>p{color:#bdd2d4}
+.tags{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
+.tags span{padding:8px 14px;border-radius:99px;font-size:15px;font-weight:500;background:#fff;border:1px solid var(--line);transition:background-color .2s,transform .2s var(--ease)}
+.dark .tags span,.ink .tags span{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18)}
+@media (hover:hover){.tags span:hover{transform:translateY(-2px);background:var(--mist)}.dark .tags span:hover,.ink .tags span:hover{background:rgba(255,255,255,.16)}}
+
+/* doctores */
+#doctores{background:var(--ink);color:#fff;overflow:hidden}
+#doctores .sub{color:#b4c7c9}
+.docs{margin-top:clamp(30px,4vw,52px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3vw,34px)}
+.doc{position:relative;border-radius:var(--r);overflow:hidden;background:var(--ink2);display:grid;grid-template-rows:auto 1fr}
+.doc img{width:100%;aspect-ratio:1;object-fit:cover;object-position:center 22%;transition:transform 1s var(--ease)}
+@media (hover:hover){.doc:hover img{transform:scale(1.04)}}
+.doc div{padding:22px 24px 26px}
+.doc h3{font-size:clamp(24px,2.4vw,30px);letter-spacing:-.015em}
+.doc p{margin-top:4px;color:#b4c7c9}
+.doc .rol{display:inline-block;margin-top:12px;padding:6px 14px;border-radius:99px;background:rgba(142,208,214,.14);color:var(--teal-l);font-weight:600;font-size:14.5px}
+.docs .doc:nth-child(2){margin-top:clamp(0px,4vw,48px)}
+
+/* resenas */
+#resenas{background:var(--mist)}
+.rhead{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px}
+.arrows{display:flex;gap:10px}
+.arrows button{width:52px;height:52px;border-radius:50%;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:background-color .2s,color .2s,transform .2s var(--ease)}
+.arrows button:active{transform:scale(.94)}
+@media (hover:hover){.arrows button:hover{background:var(--ink);color:#fff}}
+.arrows svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.track{margin-top:30px;display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 18px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.rev{flex:0 0 min(440px,86%);scroll-snap-align:start;background:#fff;border-radius:var(--r);padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;gap:16px;border:1px solid var(--line)}
+.rev.main{background:var(--ink);color:#fff;border-color:transparent}
+.rev .st{color:var(--gold);letter-spacing:3px;font-size:19px;line-height:1}
+.rev blockquote{font:600 clamp(19px,1.9vw,23px)/1.38 "Schibsted Grotesk",sans-serif;letter-spacing:-.01em}
+.rev cite{font-style:normal;margin-top:auto;font-size:15px;color:var(--dim)}
+.rev.main cite{color:#b4c7c9}
+.dots{display:flex;gap:8px;margin-top:6px}
+.dots i{width:9px;height:9px;border-radius:99px;background:#9bb4b6;transition:width .3s var(--ease),background-color .3s}
+.dots i.on{width:28px;background:var(--teal)}
+.note{margin-top:14px;font-size:14.5px;color:var(--dim)}
+
+/* visita */
+#visita{background:var(--white)}
+.vis{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,80px);align-items:start}
+.steps{margin-top:28px;display:grid;gap:12px;counter-reset:s;list-style:none}
+.steps li{counter-increment:s;display:flex;gap:16px;align-items:flex-start;padding:18px 20px;border-radius:var(--r);background:var(--paper);border:1px solid var(--line)}
+.steps li::before{content:counter(s);flex:none;width:40px;height:40px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font:700 18px "Schibsted Grotesk",sans-serif}
+.steps b{display:block;font:700 18px "Schibsted Grotesk",sans-serif}
+.steps span{font-size:16px;color:var(--dim)}
+details{border-radius:var(--r);border:1px solid var(--line);background:var(--paper);margin-bottom:12px;transition:background-color .2s,border-color .2s}
+details[open]{background:#fff;border-color:var(--teal)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:60px;padding:16px 22px;font:700 18px "Schibsted Grotesk",sans-serif}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:28px;line-height:1;color:var(--teal);transition:transform .25s var(--ease);flex:none}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 22px 20px;color:var(--dim);font-size:16.5px}
+
+/* consultorio */
+#consultorio{background:var(--paper);padding:0}
+.showroom{display:grid;grid-template-columns:1.25fr .75fr;min-height:560px}
+.showroom img{width:100%;height:100%;object-fit:cover;min-height:380px}
+.showroom .tx{padding:clamp(34px,5vw,72px);display:flex;flex-direction:column;justify-content:center;background:var(--teal-d);color:#fff}
+.showroom .tx p{margin-top:16px;color:#c2d8da;max-width:34ch;font-size:18px}
+.showroom .tx .btn{margin-top:28px;align-self:flex-start}
+
+/* contacto */
+#contacto{background:var(--white)}
+.loc{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(24px,4vw,56px);margin-top:clamp(28px,4vw,48px);align-items:stretch}
+.info{display:grid;gap:12px;align-content:start}
+.row{display:flex;gap:16px;align-items:flex-start;padding:18px 20px;background:var(--paper);border-radius:var(--r);border:1px solid var(--line)}
+.row>svg{width:24px;height:24px;stroke:var(--teal);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none;margin-top:3px}
+.row b{display:block;font:700 17px "Schibsted Grotesk",sans-serif}
+.row span,.row a{font-size:16.5px;color:var(--dim)}
+.row a{text-decoration:none;font-weight:600;color:var(--ink)}
+.hrs{margin-top:6px;display:grid;grid-template-columns:auto 1fr;gap:3px 22px;font-size:16px;color:var(--dim)}
+.hrs .today{color:var(--teal);font-weight:700}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:400px;background:var(--mist)}
+.map iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+form{margin-top:clamp(28px,4vw,44px);background:var(--ink);color:#fff;border-radius:var(--r);padding:clamp(24px,4vw,44px);display:grid;gap:18px;position:relative;overflow:hidden}
+form h3{font-size:clamp(24px,2.6vw,32px)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:7px;font:600 15px "Schibsted Grotesk",sans-serif;color:#d6e4e5}
+input,select{font:500 16px "Instrument Sans",sans-serif;padding:14px 16px;border-radius:12px;border:2px solid transparent;background:#fff;color:var(--ink);min-height:52px;width:100%}
+input:focus,select:focus{outline:none;border-color:var(--teal-l)}
+.field.invalid input,.field.invalid select{border-color:#FF8A7A}
+.err{display:none;color:#FFB3A8;font-size:14.5px}
+.field.invalid .err{display:block}
+.fnote{font-size:14.5px;color:#a9bfc1}
+.ok{position:absolute;inset:0;background:var(--teal-d);display:grid;place-content:center;justify-items:center;text-align:center;gap:14px;padding:30px;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.ok.show{opacity:1;visibility:visible}
+.ok svg{width:84px;height:84px}
+.ok circle,.ok path{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:180;stroke-dashoffset:180}
+.ok.show circle{animation:dash .7s .1s var(--ease) forwards}
+.ok.show path{animation:dash .5s .55s var(--ease) forwards}
+@keyframes dash{to{stroke-dashoffset:0}}
+
+/* cta + footer */
+.cta{background:linear-gradient(140deg,var(--teal) 0%,var(--teal-d) 100%);color:#fff;text-align:center;overflow:hidden}
+.cta h2{max-width:20ch;margin-inline:auto}
+.cta .sub{color:#d3e6e8;margin-inline:auto}
+.cta .ctas{justify-content:center}
+footer{background:var(--ink);color:#aebfc1;padding:60px 0 104px}
+.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px}
+footer img{height:64px;width:auto;margin-bottom:16px}
+footer h4{color:#fff;font-size:16px;margin-bottom:10px}
+footer p,footer a{font-size:15.5px;line-height:1.75;text-decoration:none;display:block}
+@media (hover:hover){footer a:hover{color:#fff}}
+footer .hrs{color:#aebfc1}footer .hrs .today{color:var(--teal-l)}
+.legal{margin-top:36px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:14px}
+
+/* barra movil */
+.bar{display:none}
+@media (max-width:760px){
+  .bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:70;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(14,17,18,.96);backdrop-filter:blur(8px)}
+  .bar .btn{min-height:48px;padding:10px;font-size:16px}
+}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1020px){
+  .links{display:none}
+  .lang{margin-left:auto}
+  .hero .wrap,.vis,.loc,.showroom{grid-template-columns:1fr}
+  .photo{aspect-ratio:4/3;max-width:560px}
+  .bento{grid-template-columns:1fr}
+  .svc.big{grid-row:auto}
+  .docs{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  body{font-size:16.5px}
+  .nav .pill{height:68px;padding:0 8px 0 16px;gap:8px}
+  .brand img{height:48px}
+  .nav .btn{display:none}
+  .lang{margin-left:auto}
+  .hero{min-height:auto}
+  .hero .wrap{padding-top:112px}
+  .facts .wrap{grid-template-columns:1fr;gap:18px}
+  .docs{grid-template-columns:1fr}
+  .docs .doc:nth-child(2){margin-top:0}
+  .fgrid{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+  .btn{white-space:normal;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+  #splash{display:none}
+  .ok circle,.ok path{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+
+<div id="splash" aria-hidden="true"><img src="images/logo.webp" alt="" width="700" height="150"></div>
+
+<header class="nav" id="nav">
+  <div class="pill">
+    <a class="brand" href="#inicio" data-t-aria="aria_home" aria-label="Inicio"><img src="images/logo.webp" alt="Fort Lauderdale Family Dental" width="280" height="60"></a>
+    <nav class="links" aria-label="Principal">
+      <a href="#servicios" data-t="nav_services">Servicios</a>
+      <a href="#doctores" data-t="nav_doctors">Doctores</a>
+      <a href="#resenas" data-t="nav_reviews">Opiniones</a>
+      <a href="#visita" data-t="nav_visit">Su visita</a>
+      <a href="#contacto" data-t="nav_contact">Contacto</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-w" href="tel:+19545656335" data-t-aria="aria_call" aria-label="Llamar al (954) 565-6335" data-magnetic>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+      <span>(954) 565-6335</span>
+    </a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="mesh" aria-hidden="true" style="overflow:hidden"><i class="m1"></i><i class="m2"></i><i class="m3"></i></div>
+    <div class="wrap">
+      <div>
+        <h1 class="rv"><span data-t="h1a">Odontología familiar en el</span> <em data-t="h1b">corazón de Fort Lauderdale.</em></h1>
+        <p class="lead rv" style="--d:.08s" data-t="hero_p">Dra. Ileana Arias y Dr. Styl Perez. Odontología general y cosmética para pacientes de todas las edades.</p>
+        <div class="ctas rv" style="--d:.16s">
+          <a class="btn btn-w" href="#contacto" data-t="cta_book" data-magnetic>Pedir cita</a>
+          <a class="btn btn-o" href="tel:+19545656335"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>(954) 565-6335</a>
+        </div>
+      </div>
+      <div class="rv" style="--d:.12s">
+        <div class="photo">
+          <img src="images/consultorio.webp" alt="Sala de espera del consultorio, con paneles de madera y un sillón azul" data-t-alt="alt_room" width="1600" height="1200">
+          <div class="chip c2"><div class="open" id="openNow" hidden><i></i><span id="openTxt"></span></div></div>
+          <div class="chip c1"><b data-count="5" data-dec="1">5,0</b><div><div class="st" aria-hidden="true">★★★★★</div><small data-t="chip_g">60 opiniones en Google</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div class="wrap">
+      <div class="fact rv"><span class="n" data-count="5" data-dec="1">5,0</span><p data-t="f1">calificación en Google</p></div>
+      <div class="fact rv" style="--d:.08s"><span class="n" data-count="60">60</span><p data-t="f2">opiniones de pacientes en Google</p></div>
+      <div class="fact rv" style="--d:.16s"><span class="n" data-count="4.92" data-dec="2">4,92</span><p data-t="f3">en Zocdoc, con 89 opiniones</p></div>
+    </div>
+  </div>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="rv"><h2 data-t="srv_h">Todo lo que su familia necesita</h2><p class="sub" data-t="srv_sub">Cuidado preventivo, tratamientos restauradores y odontología cosmética en un solo consultorio.</p></div>
+      <div class="bento">
+        <article class="svc big rv" data-tilt>
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3 data-t="g1">Cuidado preventivo</h3>
+          <p data-t="g1d">Revisiones y cuidado de rutina para mantener su sonrisa sana.</p>
+          <div class="tags"><span data-t="p1">Limpieza dental</span><span data-t="p2">Examen dental</span><span data-t="p3">Higiene oral</span><span data-t="p4">Screening de cáncer oral</span><span data-t="p5">Selladores</span><span data-t="p6">Tratamiento con flúor</span><span>Arestin</span><span data-t="p8">Cuidado periodontal</span></div>
+        </article>
+        <article class="svc dark rv" style="--d:.08s" data-tilt>
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3c-2.5 0-4 2-4 4.5 0 2 1 3.200 1.500 5.500.5 2.500.8 8 3 8 1.700 0 1.800-4 4.500-4s2.800 4 4.500 4c2.200 0 2.500-5.500 3-8 .5-2.300 1.500-3.500 1.500-5.500C21 5 19.500 3 17 3c-2 0-3 1-5 1S9 3 7 3z"/></svg></div>
+          <h3 data-t="g2">Odontología restauradora</h3>
+          <p data-t="g2d">Soluciones para reparar o reemplazar dientes dañados o ausentes.</p>
+          <div class="tags"><span data-t="r1">Empastes</span><span data-t="r2">Implantes dentales</span><span data-t="r3">Puentes</span><span data-t="r4">Coronas</span><span data-t="r5">Extracciones</span><span data-t="r6">Endodoncia</span><span data-t="r7">Dentaduras</span></div>
+        </article>
+        <article class="svc ink rv" style="--d:.16s" data-tilt>
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 1.800 4.600L18.500 9l-4.700 1.500L12 15l-1.800-4.500L5.500 9l4.700-1.400L12 3z"/><path d="M19 15l.8 2.200L22 18l-2.200.8L19 21l-.8-2.200L16 18l2.200-.8L19 15z"/></svg></div>
+          <h3 data-t="g3">Odontología cosmética</h3>
+          <p data-t="g3d">Opciones para mejorar el aspecto de su sonrisa.</p>
+          <div class="tags"><span data-t="c1">Bonding dental</span><span data-t="c2">Carillas de porcelana</span><span data-t="c3">Blanqueamiento</span><span data-t="c4">Invisalign</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="doctores">
+    <div class="wrap">
+      <div class="rv"><h2 data-t="doc_h">Conozca a sus doctores</h2><p class="sub" data-t="doc_sub">Un consultorio familiar, atendido por sus dueños.</p></div>
+      <div class="docs">
+        <article class="doc rv"><img src="images/dra-arias.webp" alt="Dra. Ileana Arias, DDS" width="900" height="900" loading="lazy"><div><h3>Dra. Ileana Arias, DDS</h3><p data-t="doc_a">Odontología general y cosmética.</p><span class="rol" data-t="rol">Co-propietaria</span></div></article>
+        <article class="doc rv" style="--d:.1s"><img src="images/dr-perez.webp" alt="Dr. Styl Perez, DDS" width="900" height="900" loading="lazy"><div><h3>Dr. Styl Perez, DDS</h3><p data-t="doc_p">Odontología general y cosmética.</p><span class="rol" data-t="rol2">Co-propietario</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="resenas">
+    <div class="wrap">
+      <div class="rhead rv">
+        <div><h2 data-t="rev_h">Lo que dicen sus pacientes</h2><p class="sub" data-t="rev_sub">Opiniones reales de Google, con 5,0 de calificación.</p></div>
+        <div class="arrows"><button type="button" id="prev" data-t-aria="aria_prev" aria-label="Anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><button type="button" id="next" data-t-aria="aria_next" aria-label="Siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></div>
+      </div>
+      <div class="track" id="track" tabindex="0" data-t-aria="aria_track" aria-label="Opiniones de pacientes">
+        <figure class="rev main"><div class="st" aria-label="5 estrellas">★★★★★</div><blockquote>“By far the best dentist I have ever been to!”</blockquote><cite>desiree m., <span data-t="cite">opinión en Google</span></cite></figure>
+        <figure class="rev"><div class="st" aria-label="5 estrellas">★★★★★</div><blockquote>“Everyone here is just amazing! From the front desk to the hygienists to the dentists, really exceptional care. They made me feel so comfortable! Highly recommended.”</blockquote><cite>Jenni S., <span data-t="cite">opinión en Google</span></cite></figure>
+        <figure class="rev"><div class="st" aria-label="5 estrellas">★★★★★</div><blockquote>“Can’t say enough good things about this dental office. They are the best! So friendly and cheerful.”</blockquote><cite>joseph t., <span data-t="cite">opinión en Google</span></cite></figure>
+      </div>
+      <div class="dots" id="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+      <p class="note" data-t="rev_note">Opiniones en su idioma original, tal como figuran en Google.</p>
+    </div>
+  </section>
+
+  <section id="visita">
+    <div class="wrap vis">
+      <div class="rv">
+        <h2 data-t="vis_h">Su primera visita</h2>
+        <p class="sub" data-t="vis_sub">Así empieza, en términos generales, su atención con nosotros.</p>
+        <ol class="steps">
+          <li><div><b data-t="v1">Llámenos o pida su cita aquí</b><span data-t="v1d">Elija un día y una hora que le convengan.</span></div></li>
+          <li><div><b data-t="v2">Conózcanos</b><span data-t="v2d">Los doctores lo escuchan y revisan su caso.</span></div></li>
+          <li><div><b data-t="v3">Su plan, con claridad</b><span data-t="v3d">Le explicamos sus opciones de tratamiento para que decida con tranquilidad.</span></div></li>
+        </ol>
+      </div>
+      <div class="rv" style="--d:.1s">
+        <h2 style="font-size:clamp(26px,3.2vw,38px);margin-bottom:22px" data-t="faq_h">Preguntas frecuentes</h2>
+        <details><summary data-t="q1">¿Aceptan mi seguro dental?</summary><p data-t="a1">Llámenos al (954) 565-6335 y le confirmamos.</p></details>
+        <details><summary data-t="q2">¿Cuánto cuesta una consulta o un tratamiento?</summary><p data-t="a2">Llámenos y le confirmamos.</p></details>
+        <details><summary data-t="q3">¿Hay opciones de financiamiento?</summary><p data-t="a3">Llámenos y le confirmamos.</p></details>
+        <details><summary data-t="q4">¿Atienden a niños y a adultos?</summary><p data-t="a4">Somos un consultorio familiar y atendemos pacientes de todas las edades.</p></details>
+        <details><summary data-t="q5">¿Dónde puedo conseguir los formularios del paciente?</summary><p><span data-t="a5">Llámenos y le indicamos cómo recibirlos antes de su visita.</span></p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="consultorio">
+    <div class="showroom">
+      <img class="rv" src="images/consultorio.webp" alt="Sala de espera con paneles de madera, un sillón azul y cuadros de playa" data-t-alt="alt_room2" width="1600" height="1200" loading="lazy">
+      <div class="tx rv" style="--d:.1s">
+        <h2 data-t="show_h">Un espacio tranquilo, a su medida.</h2>
+        <p data-t="show_p">Nuestra sala de espera es el primer paso de una visita cómoda, en el corazón de Fort Lauderdale.</p>
+        <a class="btn btn-w" href="#contacto" data-t="cta_book2" data-magnetic>Pedir cita</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap">
+      <div class="rv"><h2 data-t="con_h">Visítenos en Fort Lauderdale</h2><p class="sub" data-t="con_sub">Pida su cita por teléfono o con el formulario.</p></div>
+      <div class="loc">
+        <div class="info rv">
+          <div class="row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b data-t="addr">Dirección</b><span>4800 NE 20th Terrace, Suite 302-C<br>Fort Lauderdale, FL 33308</span><br><a href="https://goo.gl/maps/KfMauebWH7koXmoj9" target="_blank" rel="noopener" data-t="directions">Cómo llegar</a></div></div>
+          <div class="row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div><b data-t="phone">Teléfono</b><a href="tel:+19545656335">(954) 565-6335</a></div></div>
+          <div class="row"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b data-t="hours">Horario</b><div class="hrs" id="hrs"></div></div></div>
+        </div>
+        <div class="map rv" style="--d:.1s"><iframe title="Mapa del consultorio" data-t-title="map_title" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=4800+NE+20th+Terrace+Suite+302-C,+Fort+Lauderdale,+FL+33308&amp;output=embed"></iframe></div>
+      </div>
+
+      <form id="cita" class="rv" novalidate>
+        <h3 data-t="f_h">Pida su cita</h3>
+        <div class="fgrid">
+          <div class="field"><label><span data-t="f_name">Nombre</span><input id="fn" name="nombre" autocomplete="name" required></label><span class="err" data-t="f_req">Este campo es obligatorio.</span></div>
+          <div class="field"><label><span data-t="f_phone">Teléfono</span><input id="fp" name="tel" type="tel" autocomplete="tel" required></label><span class="err" data-t="f_req">Este campo es obligatorio.</span></div>
+          <div class="field"><label><span data-t="f_reason">Motivo de la visita</span>
+            <select id="fr"><option value="" data-t="f_opt0">Elija una opción</option><option data-t="f_o1">Revisión y limpieza</option><option data-t="f_o2">Odontología restauradora</option><option data-t="f_o3">Odontología cosmética</option><option data-t="f_o4">Invisalign</option><option data-t="f_o5">Otro</option></select></label></div>
+          <div class="field"><label><span data-t="f_day">Día preferido</span><input id="fd" name="dia"></label></div>
+        </div>
+        <button class="btn btn-w" type="submit" data-t="f_send" data-magnetic>Enviar solicitud</button>
+        <p class="fnote" data-t="f_note">Se abrirá su correo con el mensaje listo para enviar. También puede llamarnos al (954) 565-6335.</p>
+        <div class="ok" id="ok" role="status"><svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="28"/><path d="m30 43 9 9 17-19"/></svg><h3 data-t="ok_h">Gracias.</h3><p data-t="ok_p">Su solicitud está lista en su correo. Si prefiere, llámenos al (954) 565-6335.</p><button class="btn btn-o" type="button" id="okx" data-t="ok_back">Volver al formulario</button></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap rv">
+      <h2 data-t="cta_h">Una sonrisa sana empieza con una llamada.</h2>
+      <p class="sub" data-t="cta_sub">Con gusto lo atendemos a usted y a su familia.</p>
+      <div class="ctas"><a class="btn btn-w" href="tel:+19545656335" data-magnetic>(954) 565-6335</a><a class="btn btn-o" href="#contacto" data-t="cta_book3">Pedir cita</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="images/logo.webp" alt="Fort Lauderdale Family Dental" width="300" height="64" loading="lazy"><p data-t="foot_p">Consultorio odontológico familiar en Fort Lauderdale, FL.</p></div>
+      <div><h4 data-t="foot_contact">Contacto</h4><p>4800 NE 20th Terrace, Suite 302-C<br>Fort Lauderdale, FL 33308</p><a href="tel:+19545656335">(954) 565-6335</a><a href="mailto:ftlauderdalefamdental@gmail.com">ftlauderdalefamdental@gmail.com</a></div>
+      <div><h4 data-t="hours">Horario</h4><div class="hrs" id="hrsF"></div></div>
+    </div>
+    <div class="legal">© Fort Lauderdale Family Dental</div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-w" href="tel:+19545656335" data-t="cta_call">Llamar</a>
+  <a class="btn btn-t" href="#contacto" data-t="cta_bar">Pedir cita</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  function safe(fn,n){try{fn()}catch(e){if(window.console)console.warn('['+n+']',e)}}
+  var $=function(s,c){return (c||document).querySelector(s)}, $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+  var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine=matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  var T={es:{},en:{
+    meta:"General and cosmetic dentistry for the whole family in Fort Lauderdale, FL. Dr. Ileana Arias and Dr. Styl Perez, DDS.",
+    aria_home:"Home",aria_call:"Call (954) 565-6335",aria_prev:"Previous",aria_next:"Next",aria_track:"Patient reviews",
+    nav_services:"Services",nav_doctors:"Doctors",nav_reviews:"Reviews",nav_visit:"Your visit",nav_contact:"Contact",
+    h1a:"Family dentistry in the",h1b:"heart of Fort Lauderdale.",
+    hero_p:"Dr. Ileana Arias and Dr. Styl Perez. General and cosmetic dentistry for patients of all ages.",
+    cta_book:"Book an appointment",cta_book2:"Book an appointment",cta_book3:"Book an appointment",cta_call:"Call",cta_bar:"Book now",
+    alt_room:"Waiting room with wood paneling and a blue armchair",alt_room2:"Waiting room with wood paneling, a blue armchair and beach paintings",
+    chip_g:"60 reviews on Google",
+    f1:"rating on Google",f2:"patient reviews on Google",f3:"on Zocdoc, with 89 reviews",
+    srv_h:"Everything your family needs",srv_sub:"Preventive care, restorative treatments and cosmetic dentistry in one office.",
+    g1:"Preventive care",g1d:"Routine care to keep your smile healthy.",
+    p1:"Teeth cleaning",p2:"Dental exam",p3:"Oral hygiene",p4:"Oral cancer screening",p5:"Dental sealants",p6:"Fluoride treatment",p8:"Periodontal care",
+    g2:"Restorative dentistry",g2d:"Solutions to repair or replace damaged or missing teeth.",
+    r1:"Fillings",r2:"Dental implants",r3:"Bridges",r4:"Crowns",r5:"Extractions",r6:"Root canal therapy",r7:"Dentures",
+    g3:"Cosmetic dentistry",g3d:"Options to improve the look of your smile.",
+    c1:"Dental bonding",c2:"Porcelain veneers",c3:"Teeth whitening",c4:"Invisalign",
+    doc_h:"Meet your doctors",doc_sub:"A family-owned practice, run by its owners.",
+    doc_a:"General and cosmetic dentistry.",doc_p:"General and cosmetic dentistry.",rol:"Co-owner",rol2:"Co-owner",
+    rev_h:"What patients say",rev_sub:"Real Google reviews, with a 5.0 rating.",cite:"Google review",rev_note:"Reviews in their original language, as they appear on Google.",
+    vis_h:"Your first visit",vis_sub:"In general terms, this is how your care with us begins.",
+    v1:"Call us or book here",v1d:"Pick a day and time that work for you.",
+    v2:"Get to know us",v2d:"The doctors listen to you and review your case.",
+    v3:"Your plan, made clear",v3d:"We explain your treatment options so you can decide with peace of mind.",
+    faq_h:"Frequently asked questions",
+    q1:"Do you accept my dental insurance?",a1:"Call us at (954) 565-6335 and we will confirm.",
+    q2:"How much does a visit or treatment cost?",a2:"Call us and we will confirm.",
+    q3:"Are there financing options?",a3:"Call us and we will confirm.",
+    q4:"Do you see children and adults?",a4:"We are a family practice and see patients of all ages.",
+    q5:"Where can I get the patient forms?",a5:"Call us and we will tell you how to receive them before your visit.",
+    show_h:"A calm space, made for you.",show_p:"Our waiting room is the first step of a comfortable visit, in the heart of Fort Lauderdale.",
+    con_h:"Visit us in Fort Lauderdale",con_sub:"Book by phone or with the form.",
+    addr:"Address",directions:"Get directions",phone:"Phone",hours:"Hours",map_title:"Map of the office",
+    f_h:"Book an appointment",f_name:"Name",f_phone:"Phone",f_reason:"Reason for visit",f_opt0:"Choose an option",
+    f_o1:"Checkup and cleaning",f_o2:"Restorative dentistry",f_o3:"Cosmetic dentistry",f_o4:"Invisalign",f_o5:"Other",
+    f_day:"Preferred day",f_req:"This field is required.",f_send:"Send request",
+    f_note:"Your email app will open with the message ready to send. You can also call us at (954) 565-6335.",
+    ok_h:"Thank you.",ok_p:"Your request is ready in your email app. If you prefer, call us at (954) 565-6335.",ok_back:"Back to the form",
+    cta_h:"A healthy smile starts with a phone call.",cta_sub:"We would be glad to see you and your family.",
+    foot_p:"Family dental office in Fort Lauderdale, FL.",foot_contact:"Contact"
+  }};
+  var D={
+    es:{days:["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"],closed:"Cerrado",open:"Abierto ahora",closes:"Cierra a las ",opens:"Cerrado · abre ",today:"hoy",tomorrow:"mañana",
+        mail_s:"Solicitud de cita",mail_h:"Hola, quisiera pedir una cita.",mail_n:"Nombre",mail_p:"Teléfono",mail_r:"Motivo",mail_d:"Día preferido"},
+    en:{days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],closed:"Closed",open:"Open now",closes:"Closes at ",opens:"Closed · opens ",today:"today",tomorrow:"tomorrow",
+        mail_s:"Appointment request",mail_h:"Hello, I would like to book an appointment.",mail_n:"Name",mail_p:"Phone",mail_r:"Reason",mail_d:"Preferred day"}
+  };
+  /* horarios del sitio actual (lun y dom cerrado) */
+  /* indice 0=dom ... 6=sab */
+  var H=[null,null,[8.5,17],[8.5,17],[8.5,17],[9,14],[8.5,13]];
+  var lang='es';
+  try{var sv=localStorage.getItem('ffd-lang');if(sv==='en'||sv==='es')lang=sv}catch(e){}
+
+  /* capturar el espanol del HTML para poder volver */
+  safe(function(){
+    $$('[data-t]').forEach(function(el){var k=el.dataset.t;if(!(k in T.es))T.es[k]=el.textContent});
+    $$('[data-t-alt]').forEach(function(el){var k=el.dataset.tAlt;if(!(k in T.es))T.es[k]=el.getAttribute('alt')});
+    $$('[data-t-aria]').forEach(function(el){var k=el.dataset.tAria;if(!(k in T.es))T.es[k]=el.getAttribute('aria-label')});
+    $$('[data-t-title]').forEach(function(el){var k=el.dataset.tTitle;if(!(k in T.es))T.es[k]=el.getAttribute('title')});
+    T.es.meta=$('meta[name=description]').content;
+  },'capture');
+  function t(k){return (T[lang]&&T[lang][k])||T.es[k]||''}
+  var fmt=function(n,dec){var s=(dec?n.toFixed(dec):String(Math.round(n)));return lang==='es'?s.replace('.',','):s};
+  function hm(v){var h=Math.floor(v),m=Math.round((v-h)*60),ap=h>=12?'pm':'am',hh=h%12||12;return hh+':'+(m<10?'0':'')+m+' '+ap}
+
+  function miami(){
+    var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    var o={};p.forEach(function(x){o[x.type]=x.value});
+    var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
+    return {d:wd,h:(parseInt(o.hour,10)%24)+parseInt(o.minute,10)/60};
+  }
+  function hours(){
+    var now=miami(),L=D[lang],tbl='';
+    [2,3,4,5,6,1,0].forEach(function(d){
+      var r=H[d],cls=d===now.d?' class="today"':'';
+      tbl+='<span'+cls+'>'+L.days[d]+'</span><span'+cls+'>'+(r?hm(r[0])+' - '+hm(r[1]):L.closed)+'</span>';
+    });
+    ['hrs','hrsF'].forEach(function(id){var e=document.getElementById(id);if(e)e.innerHTML=tbl});
+    var box=$('#openNow'),txt=$('#openTxt');if(!box)return;
+    var r=H[now.d],msg,isOpen=false;
+    if(r&&now.h>=r[0]&&now.h<r[1]){isOpen=true;msg=L.open+' · '+L.closes+hm(r[1])}
+    else{
+      var k=r&&now.h<r[0]?0:1,nd=(now.d+k)%7,guard=0;
+      while(!H[nd]&&guard++<7){k++;nd=(now.d+k)%7}
+      msg=L.opens+(k===0?L.today:k===1?L.tomorrow:L.days[nd])+' '+(lang==='es'?'a las ':'at ')+hm(H[nd][0]);
+    }
+    txt.textContent=msg;box.classList.toggle('closed',!isOpen);box.hidden=false;
+  }
+  function counts(){
+    $$('[data-count]').forEach(function(n){
+      var v=parseFloat(n.dataset.count),dec=parseInt(n.dataset.dec||'0',10);
+      if(n.dataset.done)n.textContent=fmt(v,dec);
+    });
+  }
+  function apply(){
+    document.documentElement.lang=lang;
+    $$('[data-t]').forEach(function(el){el.textContent=t(el.dataset.t)});
+    $$('[data-t-alt]').forEach(function(el){el.setAttribute('alt',t(el.dataset.tAlt))});
+    $$('[data-t-aria]').forEach(function(el){el.setAttribute('aria-label',t(el.dataset.tAria))});
+    $$('[data-t-title]').forEach(function(el){el.setAttribute('title',t(el.dataset.tTitle))});
+    var m=$('meta[name=description]');if(m)m.content=t('meta');
+    $$('.lang button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.lang===lang))});
+    $$('[data-count]').forEach(function(n){var dec=parseInt(n.dataset.dec||'0',10);if(!n.dataset.anim||n.dataset.done)n.textContent=fmt(parseFloat(n.dataset.count),dec)});
+    hours();
+  }
+  safe(function(){
+    $$('.lang button').forEach(function(b){b.addEventListener('click',function(){lang=b.dataset.lang;try{localStorage.setItem('ffd-lang',lang)}catch(e){}apply()})});
+  },'lang');
+
+  safe(function(){
+    var s=$('#splash');if(!s)return;var hide=function(){s.classList.add('hide')};
+    if(document.readyState==='complete')setTimeout(hide,700);else window.addEventListener('load',function(){setTimeout(hide,700)});
+    setTimeout(hide,2200);
+  },'splash');
+
+  safe(function(){
+    var nav=$('#nav');if(!nav||!('IntersectionObserver' in window))return;
+    var sent=document.createElement('i');sent.style.cssText='position:absolute;top:60px;height:1px;width:1px';document.body.prepend(sent);
+    new IntersectionObserver(function(e){nav.classList.toggle('scrolled',!e[0].isIntersecting)}).observe(sent);
+  },'nav');
+
+  safe(function(){
+    var els=$$('.rv');
+    var all=function(){els.forEach(function(e){e.classList.add('in')})};
+    if(!('IntersectionObserver' in window)||reduced){all();return}
+    var io=new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');o.unobserve(x.target)}})},{threshold:.04,rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(e){io.observe(e)});
+    setTimeout(all,3200);
+  },'reveal');
+
+  safe(function(){
+    var els=$$('[data-count]');
+    function run(n){
+      var v=parseFloat(n.dataset.count),dec=parseInt(n.dataset.dec||'0',10);n.dataset.anim='1';
+      if(reduced){n.dataset.done='1';n.textContent=fmt(v,dec);return}
+      var st=performance.now();
+      (function tick(now){var p=Math.min(1,(now-st)/1300),e=1-Math.pow(1-p,3);n.textContent=fmt(v*e,dec);if(p<1)requestAnimationFrame(tick);else{n.dataset.done='1';n.textContent=fmt(v,dec)}})(st);
+    }
+    if(!('IntersectionObserver' in window)){els.forEach(run);return}
+    var io=new IntersectionObserver(function(en,o){en.forEach(function(x){if(x.isIntersecting){run(x.target);o.unobserve(x.target)}})},{threshold:.4});
+    els.forEach(function(e){io.observe(e)});
+    setTimeout(function(){els.forEach(function(n){if(!n.dataset.anim){n.dataset.done='1';n.textContent=fmt(parseFloat(n.dataset.count),parseInt(n.dataset.dec||'0',10))}})},4500);
+  },'counts');
+
+  safe(function(){
+    if(!fine||reduced)return;
+    $$('[data-tilt]').forEach(function(c){
+      c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(900px) rotateY('+(x*5)+'deg) rotateX('+(-y*5)+'deg) translateY(-4px)'});
+      c.addEventListener('mouseleave',function(){c.style.transform=''});
+    });
+    $$('[data-magnetic]').forEach(function(b){
+      b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.2)+'px,'+((e.clientY-r.top-r.height/2)*.2)+'px)'});
+      b.addEventListener('mouseleave',function(){b.style.transform=''});
+    });
+  },'fx');
+
+  safe(function(){
+    var tr=$('#track'),dots=$$('#dots i'),cards=$$('.rev',tr),raf=0;
+    function step(dir){var w=cards[0].getBoundingClientRect().width+18;tr.scrollBy({left:dir*w,behavior:reduced?'auto':'smooth'})}
+    $('#prev').addEventListener('click',function(){step(-1)});
+    $('#next').addEventListener('click',function(){step(1)});
+    tr.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();step(1)}if(e.key==='ArrowLeft'){e.preventDefault();step(-1)}});
+    tr.addEventListener('scroll',function(){cancelAnimationFrame(raf);raf=requestAnimationFrame(function(){
+      var w=cards[0].getBoundingClientRect().width+18,i=Math.min(cards.length-1,Math.round(tr.scrollLeft/w));
+      if(tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4)i=cards.length-1;
+      dots.forEach(function(d,k){d.classList.toggle('on',k===i)});
+    })},{passive:true});
+  },'carousel');
+
+  safe(function(){
+    var f=$('#cita'),ok=$('#ok');
+    function mark(el,bad){var w=el.closest('.field');if(w)w.classList.toggle('invalid',bad)}
+    f.addEventListener('input',function(e){if(e.target.required)mark(e.target,!e.target.value.trim())});
+    f.addEventListener('submit',function(e){
+      e.preventDefault();var bad=null;
+      $$('[required]',f).forEach(function(i){var b=!i.value.trim();mark(i,b);if(b&&!bad)bad=i});
+      if(bad){bad.focus();return}
+      var L=D[lang],sel=$('#fr'),r=sel.value?sel.options[sel.selectedIndex].text:'';
+      var body=L.mail_h+'\n\n'+L.mail_n+': '+$('#fn').value.trim()+'\n'+L.mail_p+': '+$('#fp').value.trim()+(r?'\n'+L.mail_r+': '+r:'')+($('#fd').value.trim()?'\n'+L.mail_d+': '+$('#fd').value.trim():'');
+      ok.classList.add('show');
+      window.location.href='mailto:ftlauderdalefamdental@gmail.com?subject='+encodeURIComponent(L.mail_s)+'&body='+encodeURIComponent(body);
+    });
+    $('#okx').addEventListener('click',function(){ok.classList.remove('show');f.reset()});
+  },'form');
+
+  safe(apply,'apply');
+  setInterval(function(){safe(hours,'hours')},60000);
+})();
+</script>
+</body>
+</html>
